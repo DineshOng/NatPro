@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>Working Title - Upload</title>
+        <title>Working Title - Add</title>
 
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,8 +15,8 @@
             <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo grey-text text-darken-3">NatPro</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="../1_MainPage/index.html" class="grey-text text-darken-2">Home</a></li><!--Home-->
-                    <li><a href="#" class="green darken-2">Upload</a></li><!--Upload-->
-                    <li><a href="../2_Upload/8_Add.html" class="grey-text text-darken-2">Add</a></li><!--Add-->
+                    <li><a href="../2_Upload/index.html" class="grey-text text-darken-2">Upload</a></li><!--Upload-->
+                    <li><a href="#" class="green darken-2">Add</a></li><!--Add-->
                     <li><a href="../3_Validation/index.html" class="grey-text text-darken-2">Validation</a></li><!--Validation-->
                     <li><a href="../4_Search/index.html" class="grey-text text-darken-2">Search</a></li><!--Search-->
                     <li><a href="../7_View/index.html" class="grey-text text-darken-2">View</a></li><!--View-->
@@ -34,18 +34,62 @@
         <div class="section no-pad-bot" id="index-banner">
             <div class="container">
             <br><br>
-            <h1 class="header center green-text text-lighten-1">Upload</h1>
+            <h1 class="header center green-text text-lighten-1">Add</h1>
             <div class="row center align-center">
-                <h5 class="header col s12 light">upload your document here</h5>
+                <h5 class="header col s12 light">Add a plant</h5>
             </div>
-            <div class="row center">
-                    <form action="complete.html">
-                            Select files: <input type="file" name="myFile" multiple><br><br>
+                
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6 offset-s3">
+                            <input placeholder="Write your field here" id="taxonomic_information" type="text" class="validate">
+                            <label for="one">Taxonomic Information</label>
+                        </div>
+                        <div class="input-field col s6 offset-s3">
+                            <input placeholder="Write your field here" id="scientific_names" type="text" class="validate">
+                            <label for="scientific_names">Scientific Name</label>
+                        </div>
+                        <div class="input-field col s6 offset-s3">
+                            <input placeholder="Write your field here" id="common_plant_names" type="text" class="validate">
+                            <label for="common_plant_names">Common Plant Name</label>
+                        </div>
+                        <div class="input-field col s6 offset-s3">
+                            <input placeholder="Write your field here" id="locations" type="text" class="validate">
+                            <label for="locations">Location</label>
+                        </div>
+                        <div class="input-field col s6 offset-s3">
+                            <input placeholder="Write your field here" id="biological_activities" type="text" class="validate">
+                            <label for="biological_activities">Biological Activities</label>
+                        </div>
+                        <div class="input-field col s6 offset-s3">
+                            <input placeholder="Write your field here" id="preparations" type="text" class="validate">
+                            <label for="preparations">Preparations</label>
+                        </div>
+                        <div class="input-field col s6 offset-s3">
+                            <input placeholder="Write your field here" id="compounds" type="text" class="validate">
+                            <label for="compounds">Compounds</label>
+                        </div>
+                        
+                        <a class="waves-effect waves-light btn green col s2 offset-s5" href="complete-add.html">Add</a>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+                
+                
+            <!--<div class="row center">
+                        
+                <div class="row">
+                </div>
+                
+                
+                            <!--Select files: <input type="file" name="myFile" multiple><br><br>
                       
                 <!--<a href="#" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Submit</a>-->
-                <input type="submit" id="download-button" class="btn-large waves-effect waves-light green lighten-1" value="Upload" style="color: white;">
-            </form>
-            </div>
+                <!--<input type="submit" id="download-button" class="btn-large waves-effect waves-light green lighten-1" value="Add" style="color: white;">-->
+           <!-- </div>-->
             <br><br>
 
             </div>
