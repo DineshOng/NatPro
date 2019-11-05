@@ -36,15 +36,27 @@
                 <div class="row">
                     <div class="col s12">
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s9">
                                 <input type="text" id="autocomplete-input" class="autocomplete">
                                 <label for="autocomplete-input">Search</label>
+                            </div>
+                            <div class="input-field col s3">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">plant common name</option>
+                                    <option value="2">plant scientific name</option>
+                                    <option value="3">genus</option>
+                                    <option value="4">family</option>
+                                    <option value="5">chemical compound</option>
+                                    <option value="6">location</option>
+                                    <option value="7">biological activites</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row center">
-                    <h5 class="header col s12 light">Search blah blah</h5>
+                    <h5 class="header col s12 light">Search for plants, chemical compound, etc.</h5>
                 </div>
                 <div class="row center">
                     <a href="../5_SearchResults/index.html" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Search</a>
@@ -133,6 +145,11 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/init.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('select').formSelect();
+              });
+        </script>
 
     </body>
 </html>
