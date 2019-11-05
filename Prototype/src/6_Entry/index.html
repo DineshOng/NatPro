@@ -36,6 +36,14 @@
             </div>
         </div>
         
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <embed src="../3_Validation/am.pdf" width=100% height=375px>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
         
         <!-- Testing grounds -->
         <div class="container">
@@ -232,21 +240,15 @@
                             <tbody>
                                 <tr>
                                     <td><a href="">Document 5</a></td>
-                                    <td><button class="btn btn-large blue">View PDF/TXT Document</button></td>
+                                    <td><button class="btn btn-large blue modal-trigger" href="#modal1">View PDF/TXT Document</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="">Document 63</a></td>
-                                    <td><button class="btn btn-large blue">View PDF/TXT Document</button></td>
+                                    <td><button class="btn btn-large blue modal-trigger" href="#modal1">View PDF/TXT Document</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="">Document 12</a></td>
-                                    <td><button class="btn btn-large blue">View PDF/TXT Document</button></td>
-                                </tr>
-                                <tr>
-                                    <td><a href="">Document 74</a></td>
-                                    <td><button class="btn btn-large blue">View PDF/TXT Document</button></td>
-                                    <td><a href="#modal1" class="btn waves-effect">Modal 1</a></td>
-                                    
+                                    <td><button class="btn btn-large blue modal-trigger" href="#modal1">View PDF/TXT Document</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -352,8 +354,13 @@
                 
                 var elem = document.querySelector('.collapsible.expandable');
                 var instance = M.Collapsible.init(elem, {accordion: false})
-                $('.modal').modal();
             });
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                $('.modal').modal();
+              });
         </script>
         
 
