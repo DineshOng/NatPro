@@ -91,6 +91,17 @@
                     </div>
                 </li>
                 <li>
+                        <div class="collapsible-header">
+                            <h6><b>Biological Activities:</b><i class="right material-icons">edit</i></h6>
+                        </div>
+                        <div class="collapsible-body">
+                            <p>Anti-venom</p>
+                            <p>Antioxidant</p>
+                            <p>Free radical scavenging activity</p>
+                            <p>anti-inflammatory</p>
+                        </div>
+                    </li>
+                <li>
                     <div class="collapsible-header">
                         <h6><b>Preparations:</b><i class="right material-icons">edit</i></h6>
                     </div>
@@ -213,21 +224,28 @@
                             <thead>
                                 <tr>
                                     <th>Document</th>
+                                    <th></th>
                                 </tr>
                             </thead>
             
                             <tbody>
                                 <tr>
                                     <td><a href="">Document 5</a></td>
+                                    <td><button class="btn btn-large blue">View PDF/TXT Document</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="">Document 63</a></td>
+                                    <td><button class="btn btn-large blue">View PDF/TXT Document</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="">Document 12</a></td>
+                                    <td><button class="btn btn-large blue">View PDF/TXT Document</button></td>
                                 </tr>
                                 <tr>
                                     <td><a href="">Document 74</a></td>
+                                    <td><button class="btn btn-large blue">View PDF/TXT Document</button></td>
+                                    <td><a href="#modal1" class="btn waves-effect">Modal 1</a></td>
+                                    
                                 </tr>
                             </tbody>
                         </table>
@@ -235,7 +253,15 @@
                 </li>
             </ul>
         </div>
-
+        <div id="modal1" class="modal" style="z-index: 1003; display: none; opacity: 0; transform: scaleX(0.7); top: 195.815px;">
+                <div class="modal-content">
+                  <h4>Modal Header</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
+                </div>
+              </div>
 
         <!--        <div class="container">
 <div class="section">
@@ -325,6 +351,7 @@
                 
                 var elem = document.querySelector('.collapsible.expandable');
                 var instance = M.Collapsible.init(elem, {accordion: false})
+                $('.modal').modal();
             });
         </script>
         
