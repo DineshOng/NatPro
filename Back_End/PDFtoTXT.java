@@ -8,7 +8,7 @@ public class PDFtoTXT {
     private String text = "";
 
     public PDFtoTXT(String filename){
-        System.out.println("Converting PDT to TEXT...");
+        System.out.println("Converting PDF to TEXT...");
         long startTime, endTime;
         startTime = System.nanoTime ();
 
@@ -29,7 +29,7 @@ public class PDFtoTXT {
         }
 
         endTime = System.nanoTime ();
-        System.out.println("[PDT to TXT Converter] Duration: "+ ((double)(endTime - startTime)) / 10000000 + " ms");
+        System.err.println("[PDF to TXT Converter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
     }
 
     public String convertedText() {

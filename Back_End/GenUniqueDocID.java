@@ -26,7 +26,7 @@ public class GenUniqueDocID {
         digestInputStream.close();
 
         endTime = System.nanoTime ();
-        System.out.println("[Generate Unique Doc ID] Duration: "+ ((double)(endTime - startTime)) / 10000000 + " ms");
+        System.err.println("[Generate Unique Doc ID] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
         System.out.println("id: " + id);
     }
 

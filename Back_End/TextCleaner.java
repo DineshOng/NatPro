@@ -5,11 +5,13 @@ public class TextCleaner {
     String text = "";
 
     public TextCleaner(String text) {
+        this.text = text;
+    }
+
+    public TextCleaner cleanText() {
         System.out.println("Cleaning TEXT...");
         long startTime, endTime;
         startTime = System.nanoTime ();
-
-        this.text = text;
 
         //text = text.replaceAll("[A-Za-z]+\n", "").replaceAll("[0-9]+\n", "");
         text = text.replaceAll("\\s\n"," ");
@@ -38,11 +40,9 @@ public class TextCleaner {
         }
 
         endTime = System.nanoTime ();
-        System.out.println("[Text Cleaner] Duration: "+ ((double)(endTime - startTime)) / 10000000 + " ms");
-    }
+        System.err.println("[Text Cleaner] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 
-    public String cleanedText() {
-        return text.trim();
+        return this;
     }
 
     public String getText() {

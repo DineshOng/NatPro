@@ -36,7 +36,7 @@ public class SentenceSplitter {
         }
 
         endTime = System.nanoTime ();
-        System.out.println("[Sentence Splitter] Duration: "+ ((double)(endTime - startTime)) / 10000000 + " ms");
+        System.err.println("[Sentence Splitter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
     }
 
     public String getText() {
