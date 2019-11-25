@@ -86,10 +86,22 @@
             </div>
             
             
-            <ul class="collapsible">
+            <ul class="collapsible expandable">
                 <li>
                     <div class="collapsible-header"><b>Taxonomic Information</b><i class="small material-icons right">expand_more</i></div>
                     <div class="collapsible-body row">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Select All/None</a>
+                                </td>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Edit Selected</a>
+                                    <a class="waves-effect wave-light btn">Delete Selected</a>
+                                </td>
+                            </tr>
+                        </table>
+                        
                         <table class="col s10 offset-s1">
                             <tr>
                                 <th>
@@ -121,6 +133,18 @@
                 <li>
                     <div class="collapsible-header"><b>Scientific Names</b><i class="small material-icons right">expand_more</i></div>
                     <div class="collapsible-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Select All/None</a>
+                                </td>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Edit Selected</a>
+                                    <a class="waves-effect wave-light btn">Delete Selected</a>
+                                </td>
+                            </tr>
+                        </table>
+                        
                         <table>
                             <tr>
                                 <th>
@@ -227,6 +251,19 @@
                 <li>
                     <div class="collapsible-header"><b>Common Plant Names</b><i class="small material-icons right">expand_more</i></div>
                     <div class="collapsible-body">
+                        
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Select All/None</a>
+                                </td>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Edit Selected</a>
+                                    <a class="waves-effect wave-light btn">Delete Selected</a>
+                                </td>
+                            </tr>
+                        </table>
+                        
                         <table>
                             <tr>
                                 <th>
@@ -313,6 +350,17 @@
                     <div class="collapsible-body">
                         <table>
                             <tr>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Select All/None</a>
+                                </td>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Edit Selected</a>
+                                    <a class="waves-effect wave-light btn">Delete Selected</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
                                 <th>
                                     <form action="#">
                                         <label>
@@ -351,6 +399,17 @@
                 <li>
                     <div class="collapsible-header"><b>Biological Activities</b><i class="small material-icons right">expand_more</i></div>
                     <div class="collapsible-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Select All/None</a>
+                                </td>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Edit Selected</a>
+                                    <a class="waves-effect wave-light btn">Delete Selected</a>
+                                </td>
+                            </tr>
+                        </table>
                         <table>
                             <tr>
                                 <th>
@@ -402,6 +461,17 @@
                 <li>
                     <div class="collapsible-header"><b>Preparations</b><i class="small material-icons right">expand_more</i></div>
                     <div class="collapsible-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Select All/None</a>
+                                </td>
+                                <td>
+                                    <a class="waves-effect wave-light btn">Edit Selected</a>
+                                    <a class="waves-effect wave-light btn">Delete Selected</a>
+                                </td>
+                            </tr>
+                        </table>
                         <table class="striped highlight">
                             <thead>
                             <tr>
@@ -560,6 +630,12 @@
                     </div>
                 </li>
             </ul>
+                
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large red tooltipped" data-position="left" data-tooltip="Approve Entry">
+                    <i class="large material-icons">check</i>
+                </a>
+            </div>
 
             </div>
         </div>
@@ -616,8 +692,17 @@
         <script>
             $(document).ready(function(){
                 $('.collapsible').collapsible();
+                
+                var elem = document.querySelector('.collapsible.expandable');
+                var instance = M.Collapsible.init(elem, {accordion: false})
               });
         </script>
-
+        
+        <script>
+            $(document).ready(function(){
+            $('.fixed-action-btn').floatingActionButton();     
+            $('.tooltipped').tooltip();
+            });
+        </script>
     </body>
 </html>
