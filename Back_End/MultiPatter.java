@@ -23,7 +23,8 @@ public class MultiPatter {
         long startTime, endTime;
         startTime = System.nanoTime ();
 
-        String uniqueID = new GenUniqueDocID(filename).getUniqueID();
+        //String uniqueID = new GenUniqueDocID(filename).getUniqueID();
+        String uniqueID1 = new GenUniqueDocID2(filename).getUniqueID();
         String text = new PDFtoTXT(filename).convertedText();
         String cleanTxt = new TextCleaner(text).cleanText().getText();
         String txt = new SentenceSplitter(cleanTxt).getSentenceSplitText();
