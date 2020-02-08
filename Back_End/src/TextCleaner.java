@@ -19,6 +19,8 @@ public class TextCleaner {
         //text = text.replaceAll("-@-@","");
         //text = text.replaceAll("@-@"," ");
 
+        
+        
         //text = text.replaceAll("-\\s","");
         //text = text.replaceAll("\\s\n"," ");
         text = text.replaceAll("α","alpha");
@@ -33,7 +35,8 @@ public class TextCleaner {
 
         text = text.replaceAll("(References?|REFERENCES?).*", "");
 
-        Pattern p = Pattern.compile("(\\.[0-9]+(,[0-9]+)?) ([A-Z]+)");
+        //Pattern p = Pattern.compile("(\\.[0-9]+(,[0-9]+)?) ([A-Z]+)");
+        Pattern p = Pattern.compile("(\\.[0-9]+(,[0-9]+)?)\\s?([A-Z]+)");
         Matcher m = p.matcher(text);
         while(m.find()) {
             text = text.replace(m.group(), ". " + m.group(3));
@@ -44,6 +47,20 @@ public class TextCleaner {
         while(m.find()) {
             System.err.println(m.group());
             text = text.replace(m.group(), m.group().replaceAll("\\.", ""));
+        }
+        
+        p = Pattern.compile("([A-Za-z]+\\.)[0-9]+\\s?([A-Za-z]+)");
+        m = p.matcher(text);
+        while(m.find()) {
+            System.err.println(m.group());
+            text = text.replace(m.group(), m.group(1) + m.group(2) + " ");
+        }
+        
+        p = Pattern.compile("\\([A-Z][a-z]+\\s?(et\\s?al\\.)?,\\s?[0-9]{4,}\\)");
+        m = p.matcher(text);
+        while(m.find()) {
+            System.err.println(m.group());
+            text = text.replace(m.group(), "");
         }
 
         endTime = System.nanoTime ();

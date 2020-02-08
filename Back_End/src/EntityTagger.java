@@ -15,7 +15,7 @@ import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.sequences.DocumentReaderAndWriter;
 import edu.stanford.nlp.util.Triple;
 
-public class MultiPatter {
+public class EntityTagger  {
     private static int MIN_FREQ = 5;
     private static int NAME_MIN_FREQ = 1;
     private static int NAME_MAX_FREQ = 4;
@@ -30,7 +30,7 @@ public class MultiPatter {
         return false;
     }
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchAlgorithmException {
+    public EntityTagger (String filename) throws NoSuchAlgorithmException, IOException, ClassCastException, ClassNotFoundException  {
     	long startTime, endTime;
         startTime = System.nanoTime();
         
@@ -39,7 +39,7 @@ public class MultiPatter {
         new SortbyStringLength("cell-lines.txt");
         new SortbyStringLength("orgpart.txt");
         
-        String filename = "ap.pdf";
+        //String filename = "ap.pdf";
 
         String uniqueID = new GenUniqueDocID2(filename).getUniqueID();
         
