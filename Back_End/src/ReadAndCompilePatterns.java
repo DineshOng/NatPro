@@ -2,13 +2,16 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
+import java.util.TreeSet;
 import java.util.regex.Pattern;
 
 public class ReadAndCompilePatterns {
     private String filename = "";
-    private HashSet<String> dictionary;
-    private HashSet<Pattern> patterns;
+    private List<String> dictionary;
+    private List<Pattern> patterns;
     private String prefix_regex = "";
     private String suffix_regex = "";
 
@@ -25,11 +28,11 @@ public class ReadAndCompilePatterns {
     public ReadAndCompilePatterns readFile() throws IOException {
         System.out.println("Reading " + filename + "...");
         long startTime, endTime;
-        startTime = System.nanoTime ();
+        startTime = System.nanoTime();
 
         BufferedReader reader;
 
-        dictionary = new HashSet<>();
+        dictionary = new ArrayList<>();
 
         reader = new BufferedReader(new FileReader(filename));
         String line = reader.readLine();
@@ -47,7 +50,7 @@ public class ReadAndCompilePatterns {
 
         reader.close();
 
-        endTime = System.nanoTime ();
+        endTime = System.nanoTime();
         System.err.println("[Read "+filename+"] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 
         return this;
@@ -56,15 +59,15 @@ public class ReadAndCompilePatterns {
     public ReadAndCompilePatterns compilePatterns() throws IOException {
         System.out.println("Compiling " + filename + " Patterns...");
         long startTime, endTime;
-        startTime = System.nanoTime ();
+        startTime = System.nanoTime();
 
-        patterns = new HashSet<>();
+        patterns = new ArrayList<>();
 
         for(String d : dictionary) {
             patterns.add(Pattern.compile(prefix_regex + d + suffix_regex));
         }
 
-        endTime = System.nanoTime ();
+        endTime = System.nanoTime();
         System.err.println("[Compiled "+filename+" Patterns] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 
         return this;
@@ -73,25 +76,25 @@ public class ReadAndCompilePatterns {
     public ReadAndCompilePatterns compilePatternsInsensitive() throws IOException {
         System.out.println("Compiling " + filename + " Patterns...");
         long startTime, endTime;
-        startTime = System.nanoTime ();
+        startTime = System.nanoTime();
 
-        patterns = new HashSet<>();
+        patterns = new ArrayList<>();
 
         for(String d : dictionary) {
             patterns.add(Pattern.compile(prefix_regex + d + suffix_regex, Pattern.CASE_INSENSITIVE));
         }
 
-        endTime = System.nanoTime ();
+        endTime = System.nanoTime();
         System.err.println("[Compiled "+filename+" Patterns] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 
         return this;
     }
 
-    public HashSet<String> getDictionary() {
+    public List<String> getDictionary() {
         return dictionary;
     }
 
-    public void setDictionary(HashSet<String> dictionary) {
+    public void setDictionary(List<String> dictionary) {
         this.dictionary = dictionary;
     }
 
@@ -111,11 +114,11 @@ public class ReadAndCompilePatterns {
         patterns.add(Pattern.compile(p, Pattern.CASE_INSENSITIVE));
     }
 
-    public HashSet<Pattern> getPatterns() {
+    public List<Pattern> getPatterns() {
         return patterns;
     }
 
-    public void setPatterns(HashSet<Pattern> patterns) {
+    public void setPatterns(List<Pattern> patterns) {
         this.patterns = patterns;
     }
 

@@ -47,7 +47,7 @@ public class SentenceSplitter {
 
         this.text = text;
 
-        String paragraph = "My 1st sentence. “Does it work for questions?” My third sentence.";
+        String paragraph = "My 1st sentence. â€œDoes it work for questions?â€� My third sentence.";
         Reader reader = new StringReader(paragraph);
         DocumentPreprocessor dp = new DocumentPreprocessor(reader);
         List<String> sentenceList = new ArrayList<String>();

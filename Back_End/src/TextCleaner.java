@@ -38,6 +38,13 @@ public class TextCleaner {
         while(m.find()) {
             text = text.replace(m.group(), ". " + m.group(3));
         }
+        
+        p = Pattern.compile("([A-Za-z]{2,}\\.\\s[a-z])");
+        m = p.matcher(text);
+        while(m.find()) {
+            System.err.println(m.group());
+            text = text.replace(m.group(), m.group().replaceAll("\\.", ""));
+        }
 
         endTime = System.nanoTime ();
         System.err.println("[Text Cleaner] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
