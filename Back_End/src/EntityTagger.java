@@ -339,6 +339,8 @@ public class EntityTagger  {
 	        }*/
 	
 	
+	       
+	        
 	        for (String i : ent.keySet()) {
 	            //System.out.println("key: " + i + " value: " + ent.get(i));
 	            String []tag = i.split(" ");
@@ -346,8 +348,9 @@ public class EntityTagger  {
 	        }
 	
 	        txt = txt.replaceAll("</loc>,?\\s?<loc>", ", ");
-	
-	/*
+	        
+	        /*
+	        
 	        String e = triples.get(0).first;
 	        for(int i=0; i<triples.size(); i++) {
 	            if(triples.get(i).first.equals(e)){

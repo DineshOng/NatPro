@@ -55,21 +55,21 @@ public class MultiPatter {
 	        stopwords.add("and");
 	        stopwords.add("from");
 	
-	        List<Pattern> bioact_patterns = new ReadAndCompilePatterns("bioact.txt").readFile().compilePatternsInsensitive().getPatterns();
+	        List<Pattern> bioact_patterns = new ReadAndCompilePatterns("bioact.txt", "[\\.\\(\\)\\s]", "[\\.\\(\\)\\s]").readFile().compilePatternsInsensitive().getPatterns();
 	        
-	        List<Pattern> family_patterns = new ReadAndCompilePatterns("family.txt").readFile().compilePatternsInsensitive().getPatterns();
+	        List<Pattern> family_patterns = new ReadAndCompilePatterns("family.txt", "[\\.\\(\\)\\s]", "[\\.\\(\\)\\s]").readFile().compilePatternsInsensitive().getPatterns();
 	
 	        List<Pattern> genus_patterns = new ReadAndCompilePatterns("genus.txt", "", "\\s(\\b[a-z]*)").readFile().compilePatterns().getPatterns();
 	        genus_patterns.add(Pattern.compile("[A-Z]\\.\\s([a-z])+"));
 	        genus_patterns.add(Pattern.compile("\\s([A-Z]{2})\\s"));
 	
-	        List<Pattern> orgpart_patterns = new ReadAndCompilePatterns("orgpart.txt").readFile().compilePatternsInsensitive().getPatterns();
+	        List<Pattern> orgpart_patterns = new ReadAndCompilePatterns("orgpart.txt", "[\\.\\(\\)\\s]", "[\\.\\(\\)\\s]").readFile().compilePatternsInsensitive().getPatterns();
 	
-	        List<Pattern> cell_patterns = new ReadAndCompilePatterns("cell-lines.txt").readFile().compilePatterns().getPatterns();
+	        List<Pattern> cell_patterns = new ReadAndCompilePatterns("cell-lines.txt", "[\\.\\(\\)\\s]", "[\\.\\(\\)\\s]").readFile().compilePatterns().getPatterns();
 	
 	        List<Pattern> aka_patterns = new ArrayList<>();
 	
-	        List<Pattern> class_patterns = new ReadAndCompilePatterns("compound-class.txt").readFile().compilePatternsInsensitive().getPatterns();
+	        List<Pattern> class_patterns = new ReadAndCompilePatterns("compound-class.txt", "[\\.\\(\\)\\s]", "[\\.\\(\\)\\s]").readFile().compilePatternsInsensitive().getPatterns();
 	
 	
 	        List<String> bioact_found = new ArrayList<>();
