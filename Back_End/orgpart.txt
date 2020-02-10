@@ -10,15 +10,23 @@ sclerotesta
 stem bark
 cone base
 endotesta
-flowers?
-fruits?
+flowers
 leaflet
-trunks?
-seeds?
+flower
+fruits
+trunks
 leaves
-roots?
-twigs?
-stems?
-pods?
+fruit
+trunk
+seeds
+roots
+twigs
+stems
+seed
+root
+twig
+stem
+pods
 leaf
 bark
+pod

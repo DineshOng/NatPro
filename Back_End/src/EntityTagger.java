@@ -75,6 +75,7 @@ public class EntityTagger  {
 	        List<String> bioact_found = new ArrayList<>();
 	        List<String> family_found = new ArrayList<>();
 	        HashSet<String> genus_found = new HashSet<>();
+	        HashSet<String> genus1_found = new HashSet<>();
 	        List<String> orgpart_found = new ArrayList<>();
 	        List<String> cell_found = new ArrayList<>();
 	        List<String> aka_found = new ArrayList<>();
@@ -146,6 +147,18 @@ public class EntityTagger  {
 	                }
 	                //System.out.println(">>> "+matcher.group());
 	
+	            }
+	        }
+	        
+	        //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	        
+	        genus_patterns = new ReadAndCompilePatterns("genus.txt").readFile().compilePatterns().getPatterns();
+	        
+	        System.out.println("finding genus");
+	        for(Pattern pattern : genus_patterns) {
+	            Matcher matcher = pattern.matcher(txt);
+	            while(matcher.find()) {
+	            	System.out.println(">>> "+matcher.group());
 	            }
 	        }
 	
@@ -337,9 +350,6 @@ public class EntityTagger  {
 	        for(String ra : e){
 	            System.out.println(ra);
 	        }*/
-	
-	
-	       
 	        
 	        for (String i : ent.keySet()) {
 	            //System.out.println("key: " + i + " value: " + ent.get(i));
@@ -348,6 +358,27 @@ public class EntityTagger  {
 	        }
 	
 	        txt = txt.replaceAll("</loc>,?\\s?<loc>", ", ");
+	        
+	        // Remove inside tags - Left hand side
+	        Pattern pattern = Pattern.compile("([-\\w\\d\\.]+)<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>");
+		    Matcher matcher = pattern.matcher(txt);
+		    while(matcher.find()) {
+		    	 txt = txt.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
+            }
+		    
+		    // Remove inside tags - Right hand side
+	        pattern = Pattern.compile("<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>([-\\w\\d]+)");
+		    matcher = pattern.matcher(txt);
+		    while(matcher.find()) {
+		    	 txt = txt.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
+            }
+		    
+		    // Remove reference ex. </tag>23
+		    pattern = Pattern.compile("(<\\/\\w+>)\\d+");
+		    matcher = pattern.matcher(txt);
+		    while(matcher.find()) {
+		    	 txt = txt.replaceAll(matcher.group(), matcher.group(1));
+            }
 	        
 	        /*
 	        

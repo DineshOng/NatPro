@@ -26,7 +26,12 @@ public class TextCleaner {
         text = text.replaceAll("α","alpha");
         text = text.replaceAll("β","beta");
         text = text.replaceAll("γ","gamma");
-
+        
+        text = text.replaceAll("Ñ","N");
+        text = text.replaceAll("ñ","n");
+        
+        text = text.replaceAll("′","'");
+        
         text = text.replaceAll("[^\\x00-\\x7F]", "");
         text = text.replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");
         text = text.replaceAll("\\p{C}", "");
@@ -62,7 +67,15 @@ public class TextCleaner {
             System.err.println(m.group());
             text = text.replace(m.group(), "");
         }
-
+        
+        // Remove reference referencing ex. anti-microbial3,3
+        p = Pattern.compile("([A-Za-z]+)(,[\\d]+)+");
+        m = p.matcher(text);
+        while(m.find()) {
+            System.err.println(m.group());
+            text = text.replace(m.group(), m.group(1)+",");
+        }
+        
         endTime = System.nanoTime ();
         System.err.println("[Text Cleaner] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 

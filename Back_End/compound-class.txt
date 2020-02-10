@@ -11,16 +11,20 @@ triterpenoid
 biflavonoids
 monoterpenes
 diterpenoids
+phytosterols
 biflavonoid
 monoterpene
 diterpenoid
 isoflavones
 triterpenes
+phytosterol
+sitosterols
 isoflavone
 triterpene
 flavonoids
 flavanones
 diterpenes
+sitosterol
 flavonoid
 flavanone
 diterpene
@@ -32,3 +36,5 @@ flavones
 terpenes
 flavone
 terpene
+sterols
+sterol
