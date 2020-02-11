@@ -43,7 +43,7 @@
         
         <div class="section no-pad-bot" id="index-banner">
             <div class="container">
-                <h3 class="header center green-text">Plant Name: Alstonia macrophylla<a href="index-edit.html"><i class="material-icons small">edit</i></a></h3>
+                <h3 class="header center green-text">Plant Name: Alstonia macrophylla<a href="index-edit.html"><i class="material-icons small"></i></a></h3>
             </div>
         </div>
         
@@ -62,7 +62,7 @@
                 
                 <li>
                     <div class="collapsible-header">
-                        <h6><b>Taxonomic Information:</b><i class="right material-icons">edit</i></h6>
+                        <h6><b>Taxonomic Information:</b><i class="right material-icons">expand_less</i></h6>
                     </div>
                     <div class="collapsible-body">
                         <!--<p><u>Plant ID:</u> NPO13433</p>-->
@@ -72,7 +72,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <h6><b>Scientific Names:</b><i class="right material-icons">edit</i></h6>
+                        <h6><b>Scientific Names:</b><i class="right material-icons">expand_less</i></h6>
                     </div>
                     <div class="collapsible-body">
                         <p>Alstonia acuminata Miq.</p>
@@ -88,7 +88,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <h6><b>Common Plant Names:</b><i class="right material-icons">edit</i></h6>
+                        <h6><b>Common Plant Names:</b><i class="right material-icons">expand_less</i></h6>
                     </div>
                     <div class="collapsible-body">
                         <p>Devil tree (Engl.) </p>
@@ -102,7 +102,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <h6><b>Locations:</b><i class="right material-icons">edit</i></h6>
+                        <h6><b>Locations:</b><i class="right material-icons">expand_less</i></h6>
                     </div>
                     <div class="collapsible-body">
                         <p>Marivales, Bataan, Philippines</p>
@@ -112,7 +112,7 @@
                 </li>
                 <li>
                         <div class="collapsible-header">
-                            <h6><b>Biological Activities:</b><i class="right material-icons">edit</i></h6>
+                            <h6><b>Biological Activities:</b><i class="right material-icons">expand_less</i></h6>
                         </div>
                         <div class="collapsible-body">
                             <p>Anti-venom</p>
@@ -123,7 +123,7 @@
                     </li>
                 <li>
                     <div class="collapsible-header">
-                        <h6><b>Preparations:</b><i class="right material-icons">edit</i></h6>
+                        <h6><b>Preparations:</b><i class="right material-icons">expand_less</i></h6>
                     </div>
                     <div class="collapsible-body">
                         <table class="striped highlight">
@@ -168,7 +168,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <h6><b>Compounds:</b><i class="right material-icons">edit</i></h6>
+                        <h6><b>Compounds:</b><i class="right material-icons">expand_less</i></h6>
                     </div>
                     <div class="collapsible-body">
                         <table class="striped highlight">
@@ -237,7 +237,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <h6><b>References:</b></h6>
+                        <h6><b>References:</b><i class="right material-icons">expand_less</i></h6>
                     </div>
                     <div class="collapsible-body">
                         <table class="striped highlight">
@@ -364,7 +364,9 @@
                 $('.collapsible').collapsible();
                 
                 var elem = document.querySelector('.collapsible.expandable');
-                var instance = M.Collapsible.init(elem, {accordion: false})
+                    var instance = M.Collapsible.init(elem, {
+                      accordion: false
+                 });
             });
         </script>
         
