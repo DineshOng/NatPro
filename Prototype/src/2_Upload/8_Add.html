@@ -62,10 +62,18 @@
                             <input placeholder="Write your field here" id="biological_activities" type="text" class="validate">
                             <label for="biological_activities">Biological Activities</label>
                         </div>
-                        <div class="input-field col s6 offset-s3">
-                            <input placeholder="Write your field here" id="preparations" type="text" class="validate">
-                            <label for="preparations">Preparations</label>
-                        </div>
+                            <div class="input-field col s4 offset-s3">
+                                <input placeholder="Write your field here" id="preparations" type="text" class="validate">
+                                <label for="preparations">Preparations</label>
+                            </div>
+                            <div class="input-field col s2">
+                                <select multiple>
+                                        <option value="0" disabled selected>select a part</option>
+                                        <option value="1" >leaves</option>
+                                        <option value="2" >stem</option>
+                                        <option value="3" >bark</option>
+                                    </select>
+                            </div>
                         <div class="input-field col s6 offset-s3">
                             <input placeholder="Write your field here" id="compounds" type="text" class="validate">
                             <label for="compounds">Compounds</label>
@@ -174,6 +182,11 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/init.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('select').formSelect();
+              });
+        </script>
 
     </body>
 </html>
