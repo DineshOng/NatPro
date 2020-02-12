@@ -169,6 +169,32 @@ public class LookUpEntityTagger {
         
         return this;
     }
+    
+    public LookUpEntityTagger removeTags() {
+    	// Remove inside tags - Left hand side
+        Pattern pattern = Pattern.compile("([-\\w\\d\\.]+)<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>");
+	    Matcher matcher = pattern.matcher(text);
+	    while(matcher.find()) {
+	    	text = text.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
+        }
+	    
+	    // Remove inside tags - Right hand side
+        pattern = Pattern.compile("<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>([-\\w\\d]+)");
+	    matcher = pattern.matcher(text);
+	    while(matcher.find()) {
+	    	text = text.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
+        }
+        
+	    
+	    // Remove reference ex. </tag>23
+	    pattern = Pattern.compile("(<\\/\\w+>)\\d+");
+	    matcher = pattern.matcher(text);
+	    while(matcher.find()) {
+	    	text = text.replaceAll(matcher.group(), matcher.group(1));
+        }
+	    
+	    return this;
+    }
 
 	public List<String> getLexicon() {
 		return lexicon;
@@ -220,6 +246,10 @@ public class LookUpEntityTagger {
 
 	public List<String> getFound_entities() {
 		return found_entities;
+	}
+	
+	public void addFound_entities(String e) {
+		found_entities.add(e);
 	}
 
 	public void setFound_entities(List<String> found_entities) {

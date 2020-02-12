@@ -1,6 +1,12 @@
 import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
+
+import edu.stanford.nlp.ie.AbstractSequenceClassifier;
+import edu.stanford.nlp.ie.crf.CRFClassifier;
+import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.util.Triple;
 
 public class EntityTagger {
 	public static boolean checkDocument(String uniqueID, String filename) throws IOException {
@@ -13,7 +19,7 @@ public class EntityTagger {
         return false;
     }
 	
-	public EntityTagger(String filename) throws IOException, NoSuchAlgorithmException {
+	public EntityTagger(String filename) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException {
 		String uniqueID = new GenUniqueDocID2(filename).getUniqueID();
         
         if(checkDocument(uniqueID, filename) || true) {
@@ -127,10 +133,45 @@ public class EntityTagger {
             
             tagger.printEntityFrequencyCount();
             
+            tagger = LocationTagger(tagger);
             
-            java.io.FileWriter fw = new java.io.FileWriter("abc.xml");
+            tagger.removeTags();
+            
+            java.io.FileWriter fw = new java.io.FileWriter(uniqueID+".xml");
 	        fw.write(tagger.getText());
-	        fw.close();	   
+	        fw.close();	
         }
+	}
+	
+	public LookUpEntityTagger LocationTagger(LookUpEntityTagger tagger) throws ClassCastException, ClassNotFoundException, IOException {
+		tagger = new LookUpEntityTagger()
+				 .setText(tagger.getText())
+				 .setTag_name("location")
+				 .hideTaggedEntities();
+		
+		String serializedClassifier = "classifiers/english.all.3class.distsim.crf.ser.gz";
+        AbstractSequenceClassifier<CoreLabel> classifier = CRFClassifier.getClassifier(serializedClassifier);
+        List<Triple<String,Integer,Integer>> triples = classifier.classifyToCharacterOffsets(tagger.getText());
+        
+        for (Triple<String,Integer,Integer> trip : triples) {
+            if(trip.first.equals("LOCATION")) {
+                //System.out.println(trip.first + " - " + txt.substring(trip.second, trip.third));
+            	tagger.getFound_entities().add(tagger.getText().substring(trip.second, trip.third));
+                Integer n = tagger.getMap().get(tagger.getText().substring(trip.second, trip.third));
+                n = (n == null) ? 1 : ++n;
+                tagger.getMap().put(tagger.getText().substring(trip.second, trip.third), n);
+            } else {
+            	//System.out.println(txt.substring(trip.second, trip.third));
+            }
+        }
+        
+        tagger.tagEntities();
+        tagger.resolveHiddenEntities();
+        
+        tagger.printEntityFrequencyCount();
+        
+        tagger.setText(tagger.getText().replaceAll("</location>,?\\s?<location>", ", "));
+        
+        return tagger;
 	}
 }
