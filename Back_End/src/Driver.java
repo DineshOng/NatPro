@@ -11,7 +11,7 @@ public class Driver {
 		new EntityTagger("am.pdf");
 		new EntityTagger("ap.pdf");
 		new EntityTagger("hm.pdf");
-		
+        
 		endTime = System.nanoTime();
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000000 + " s");
