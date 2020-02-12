@@ -59,9 +59,11 @@ public class EntityTagger  {
 	        
 	        List<Pattern> family_patterns = new ReadAndCompilePatterns("family.txt").readFile().compilePatternsInsensitive().getPatterns();
 	
-	        List<Pattern> genus_patterns = new ReadAndCompilePatterns("genus.txt", "", "\\s(\\b[a-z]*)").readFile().compilePatterns().getPatterns();
-	        genus_patterns.add(Pattern.compile("[A-Z]\\.\\s([a-z])+"));
-	        genus_patterns.add(Pattern.compile("\\s([A-Z]{2})\\s"));
+	        List<Pattern> species_patterns = new ReadAndCompilePatterns("genus.txt", "", "\\s(\\b[a-z]*)").readFile().compilePatterns().getPatterns();
+	        species_patterns.add(Pattern.compile("[A-Z]\\.\\s([a-z])+"));
+	        species_patterns.add(Pattern.compile("\\s([A-Z]{2})\\s"));
+	        
+	        //List<Pattern> genus_patterns = new ReadAndCompilePatterns("genus.txt").readFile().compilePatterns().getPatterns();
 	
 	        List<Pattern> orgpart_patterns = new ReadAndCompilePatterns("orgpart.txt").readFile().compilePatternsInsensitive().getPatterns();
 	
@@ -74,8 +76,8 @@ public class EntityTagger  {
 	
 	        List<String> bioact_found = new ArrayList<>();
 	        List<String> family_found = new ArrayList<>();
-	        HashSet<String> genus_found = new HashSet<>();
-	        HashSet<String> genus1_found = new HashSet<>();
+	        HashSet<String> species_found = new HashSet<>();
+	        List<String> genus_found = new ArrayList<>();
 	        List<String> orgpart_found = new ArrayList<>();
 	        List<String> cell_found = new ArrayList<>();
 	        List<String> aka_found = new ArrayList<>();
@@ -131,46 +133,36 @@ public class EntityTagger  {
 	        }
 	
 	        map.clear();
+	        
+	        
 	
 	        System.out.println("finding species");
-	        for(Pattern pattern : genus_patterns) {
+	        for(Pattern pattern : species_patterns) {
 	            Matcher matcher = pattern.matcher(txt);
 	            while(matcher.find()) {
-	                if(!matcher.group().contains("family")) {
-	                    if(matcher.group().split(" ").length==2 && !stopwords.contains(matcher.group().split(" ")[1])) {
+	                //if(!matcher.group().contains("family")) {
+	                    if(matcher.group().split(" ").length==2 && !stopwords.contains(matcher.group().split(" ")[1]) && !matcher.group().contains("species")) {
 	                    //if(matcher.group().split(" ").length==2) {
-	                        genus_found.add(matcher.group().trim());
+	                    	species_found.add(matcher.group().trim());
 	                        Integer n = map.get(matcher.group().trim());
 	                        n = (n == null) ? 1 : ++n;
 	                        map.put(matcher.group().trim(), n);
 	                    }
-	                }
+	                //}
 	                //System.out.println(">>> "+matcher.group());
 	
 	            }
 	        }
-	        
-	        //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-	        
-	        genus_patterns = new ReadAndCompilePatterns("genus.txt").readFile().compilePatterns().getPatterns();
-	        
-	        System.out.println("finding genus");
-	        for(Pattern pattern : genus_patterns) {
-	            Matcher matcher = pattern.matcher(txt);
-	            while(matcher.find()) {
-	            	System.out.println(">>> "+matcher.group());
-	            }
-	        }
-	
+	       
 	        //map.forEach((key, value) -> System.out.println(key + ":" + value));
 	        for (String i : map.keySet()) {
 	            System.out.println("value: " + map.get(i) + "\tkey: " + i);
 	            //if(map.get(i)<MIN_FREQ && (i.length()==2 || i.contains("."))) {
 	            if(map.get(i)<MIN_FREQ && i.length()==2) {
-	                genus_found.remove(i);
+	            	species_found.remove(i);
 	                System.out.println("Removed: "+ i);
 	            } else if(i.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") && i.length()==2) {
-	            	genus_found.remove(i);
+	            	species_found.remove(i);
 		            System.out.println("Removed: "+ i);
 	            }
 	        }
@@ -183,7 +175,19 @@ public class EntityTagger  {
 	            while(matcher.find()) {
 	                orgpart_found.add(matcher.group());
 	                //System.out.println(matcher.group());
+	                Integer n = map.get(matcher.group().trim());
+	                n = (n == null) ? 1 : ++n;
+	                map.put(matcher.group().trim(), n);
 	            }
+	        }
+	        
+	        for (String i : map.keySet()) {
+	            System.out.println("value: " + map.get(i) + "\tkey: " + i);
+	            //if(map.get(i)<MIN_FREQ && (i.length()==2 || i.contains("."))) {
+	            //if(map.get(i)<MIN_FREQ && i.length()==2) {
+	            //    genus_found.remove(i);
+	            //    System.out.println("Removed: "+ i);
+	            //}
 	        }
 	
 	        map.clear();
@@ -215,13 +219,16 @@ public class EntityTagger  {
 	        for(Pattern pattern : class_patterns) {
 	            Matcher matcher = pattern.matcher(txt);
 	            while(matcher.find()) {
-	                class_found.add(matcher.group());
+	            	if(!class_found.contains(matcher.group()))
+	            		class_found.add(matcher.group());
 	                //System.out.println(matcher.group());
 	                Integer n = map.get(matcher.group().trim());
 	                n = (n == null) ? 1 : ++n;
 	                map.put(matcher.group().trim(), n);
 	            }
 	        }
+	        
+	        System.err.println(">>>>>>>>>>>>>>>" + class_found.size());
 	
 	        for (String i : map.keySet()) {
 	            System.out.println("value: " + map.get(i) + "\tkey: " + i);
@@ -246,6 +253,8 @@ public class EntityTagger  {
 	                Integer n = map.get(txt.substring(trip.second, trip.third));
 	                n = (n == null) ? 1 : ++n;
 	                map.put(txt.substring(trip.second, trip.third), n);
+	            } else {
+	            	//System.out.println(txt.substring(trip.second, trip.third));
 	            }
 	        }
 	
@@ -267,6 +276,8 @@ public class EntityTagger  {
 	                //System.out.println(matcher.group(3));
 	            }
 	        }
+	        
+	        
 	
 	        // pattern for known as "(known\sas)(\s.*?\s(or\s.*?\s)?)" g2  "(commonly\scalled)(\s.*?\s((or\s.*?\s)?|(.*?)\.)?)" g2
 	        // pattern for organism 2 capital letters with ()? "\s?(\(?[A-Z][A-Z]\)?)\s" g1
@@ -289,13 +300,32 @@ public class EntityTagger  {
 	            ent_idx++;
 	        }
 	
-	        for(String species : genus_found) {
+	        for(String species : species_found) {
 	            //System.out.println(species);
 	            ent.put("species "+ent_idx, species);
 	            //txt = txt.replaceAll(species, "<species>" + species + "</species>");
 	            txt = txt.replaceAll(species, "<< species "+ent_idx+" >>");
 	            ent_idx++;
 	        }
+	        
+	        for(String cclass : class_found) {
+	            //System.out.println(cclass);
+	            ent.put("class "+ent_idx, cclass);
+	            //txt = txt.replaceAll(cell, "<cell>" + cell + "</cell>");
+	            txt = txt.replaceAll(cclass, "<< class "+ent_idx+" >>");
+	            ent_idx++;
+	        }
+	        
+	        /*
+	        for(String genus : genus_found) {
+	            //System.out.println(species);
+	            ent.put("genus "+ent_idx, genus);
+	            //txt = txt.replaceAll(species, "<species>" + species + "</species>");
+	            txt = txt.replaceAll(genus, "<< genus "+ent_idx+" >>");
+	            ent_idx++;
+	        }*/
+	        
+	        
 	
 	        for(String part : orgpart_found) {
 	            //System.out.println(part);
@@ -313,13 +343,7 @@ public class EntityTagger  {
 	            ent_idx++;
 	        }
 	
-	        for(String cclass : class_found) {
-	            //System.out.println(cclass);
-	            ent.put("class "+ent_idx, cclass);
-	            //txt = txt.replaceAll(cell, "<cell>" + cell + "</cell>");
-	            txt = txt.replaceAll(cclass, "<< class "+ent_idx+" >>");
-	            ent_idx++;
-	        }
+	        
 	
 	        for(String aka : aka_found) {
 	            //System.out.println(aka);
@@ -349,7 +373,9 @@ public class EntityTagger  {
 	
 	        for(String ra : e){
 	            System.out.println(ra);
-	        }*/
+	        }
+	        
+	        */
 	        
 	        for (String i : ent.keySet()) {
 	            //System.out.println("key: " + i + " value: " + ent.get(i));
@@ -358,6 +384,8 @@ public class EntityTagger  {
 	        }
 	
 	        txt = txt.replaceAll("</loc>,?\\s?<loc>", ", ");
+	        
+	        
 	        
 	        // Remove inside tags - Left hand side
 	        Pattern pattern = Pattern.compile("([-\\w\\d\\.]+)<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>");
@@ -372,6 +400,7 @@ public class EntityTagger  {
 		    while(matcher.find()) {
 		    	 txt = txt.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
             }
+            
 		    
 		    // Remove reference ex. </tag>23
 		    pattern = Pattern.compile("(<\\/\\w+>)\\d+");

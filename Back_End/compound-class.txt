@@ -1,4 +1,5 @@
 indole alkaloids
+steroid alcohols
 indole alkaloid
 flavonolignans
 flavonolignans
@@ -19,6 +20,8 @@ isoflavones
 triterpenes
 phytosterol
 sitosterols
+polyphenols
+isoprenoids
 isoflavone
 triterpene
 flavonoids
