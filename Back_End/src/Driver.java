@@ -1,5 +1,17 @@
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Properties;
+
+import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.ling.HasWord;
+import edu.stanford.nlp.pipeline.Annotation;
+import edu.stanford.nlp.pipeline.StanfordCoreNLP;
+import edu.stanford.nlp.tagger.maxent.MaxentTagger;
+import edu.stanford.nlp.util.CoreMap;
 
 public class Driver {
 
@@ -15,6 +27,8 @@ public class Driver {
 		endTime = System.nanoTime();
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000000 + " s");
+        
+        
 	}
 
 }

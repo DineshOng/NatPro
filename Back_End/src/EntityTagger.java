@@ -1,11 +1,13 @@
 import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 import java.util.List;
 
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import edu.stanford.nlp.util.Triple;
 
 public class EntityTagger {
@@ -26,6 +28,11 @@ public class EntityTagger {
         	String text = new PDFtoTXT(filename).convertedText();
             String cleanTxt = new TextCleaner(text).cleanText().getText();
             String txt = new SentenceSplitter(cleanTxt).getSentenceSplitText();
+            
+            txt = new CommonNameTagger()
+            		.setText(txt)
+            		.setTag_name("aka")
+            		.run();
 		
             LookUpEntityTagger tagger;
             
@@ -48,30 +55,7 @@ public class EntityTagger {
             
             tagger.printEntityFrequencyCount();
             
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("species")
-            		.readLexiconFile("genus.txt")
-            		.setSuffix_regex("\\s(\\b[a-z]+)")
-            		.compilePatterns()
-            		.addPattern("[A-Z]\\.\\s([a-z])+")
-            		.addPattern("\\s([A-Z]{2})\\s")
-            		.hideTaggedEntities()
-            		.findEntities();
-            
-            for (String i : tagger.getMap().keySet()) {
-	            System.out.println("value: " + tagger.getMap().get(i) + "\tkey: " + i);
-	            if(tagger.getMap().get(i)<5 && i.length()==2) {
-	            	tagger.getFound_entities().remove(i);
-	                System.out.println("Removed: "+ i);
-	            } else if(i.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") && i.length()==2) {
-	            	tagger.getFound_entities().remove(i);
-		            System.out.println("Removed: "+ i);
-	            }
-	        }
-            
-            tagger.tagEntities();
-            tagger.resolveHiddenEntities();
+            tagger = SpeciesTagger(tagger);
             
             tagger = new LookUpEntityTagger()
             		.setText(tagger.getText())
@@ -135,12 +119,42 @@ public class EntityTagger {
             
             tagger = LocationTagger(tagger);
             
-            tagger.removeTags();
-            
             java.io.FileWriter fw = new java.io.FileWriter(uniqueID+".xml");
 	        fw.write(tagger.getText());
 	        fw.close();	
         }
+	}
+	
+	public LookUpEntityTagger SpeciesTagger (LookUpEntityTagger tagger) throws IOException {
+		tagger = new LookUpEntityTagger()
+        		.setText(tagger.getText())
+        		.setTag_name("species")
+        		.readLexiconFile("genus.txt")
+        		.setSuffix_regex("\\s(\\b[a-z]+)")
+        		.compilePatterns()
+        		.addPattern("[A-Z]\\.\\s([a-z])+")
+        		.addPattern("\\s([A-Z]{2})\\s")
+        		.hideTaggedEntities()
+        		.findEntities();
+        
+        for (String i : tagger.getMap().keySet()) {
+            System.out.println("value: " + tagger.getMap().get(i) + "\tkey: " + i);
+            if(tagger.getMap().get(i)<5 && i.length()==2) {
+            	tagger.getFound_entities().remove(i);
+                System.out.println("Removed: "+ i);
+            } else if(i.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") && i.length()==2) {
+            	tagger.getFound_entities().remove(i);
+	            System.out.println("Removed: "+ i);
+            }
+        }
+        
+        tagger.tagEntities();
+        tagger.resolveHiddenEntities();
+        tagger.resolveHiddenEntities();
+        
+        tagger.printEntityFrequencyCount();
+        
+        return tagger;
 	}
 	
 	public LookUpEntityTagger LocationTagger(LookUpEntityTagger tagger) throws ClassCastException, ClassNotFoundException, IOException {
@@ -167,6 +181,7 @@ public class EntityTagger {
         
         tagger.tagEntities();
         tagger.resolveHiddenEntities();
+        tagger.removeOverlappingTags();
         
         tagger.printEntityFrequencyCount();
         

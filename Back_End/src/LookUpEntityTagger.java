@@ -54,6 +54,7 @@ public class LookUpEntityTagger {
 		findEntities();
 		tagEntities();
 		resolveHiddenEntities();
+		removeOverlappingTags();
 		
 		return this;
 	}
@@ -170,7 +171,7 @@ public class LookUpEntityTagger {
         return this;
     }
     
-    public LookUpEntityTagger removeTags() {
+    public LookUpEntityTagger removeOverlappingTags() {
     	// Remove inside tags - Left hand side
         Pattern pattern = Pattern.compile("([-\\w\\d\\.]+)<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>");
 	    Matcher matcher = pattern.matcher(text);

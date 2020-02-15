@@ -32,6 +32,8 @@ public class TextCleaner {
         
         text = text.replaceAll("′","'");
         text = text.replaceAll("–","-");
+        text = text.replaceAll("”","");
+        text = text.replaceAll("“","");
         
         
         text = text.replaceAll("[^\\x00-\\x7F]", "");
@@ -53,14 +55,14 @@ public class TextCleaner {
         p = Pattern.compile("([A-Za-z]{2,}\\.\\s[a-z])");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+            //System.err.println(m.group());
             text = text.replace(m.group(), m.group().replaceAll("\\.", ""));
         }
         
         p = Pattern.compile("([A-Za-z]+\\.)[0-9]+\\s?([A-Za-z]+)");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+            //System.err.println(m.group());
             text = text.replace(m.group(), m.group(1) + m.group(2) + " ");
         }
         
@@ -68,7 +70,7 @@ public class TextCleaner {
         p = Pattern.compile("\\([A-Z][a-z]+\\s?(et\\s?al\\.)?,\\s?[0-9]{4,}\\)");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+            //System.err.println(m.group());
             text = text.replace(m.group(), "");
         }
         
@@ -76,21 +78,21 @@ public class TextCleaner {
         p = Pattern.compile("([A-Za-z]+)(,[\\d]+)+");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+        	//System.err.println(m.group());
             text = text.replace(m.group(), m.group(1)+",");
         }
         
         p = Pattern.compile("([A-Za-z]{4,})[0-9]+");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+        	//System.err.println(m.group());
             text = text.replace(m.group(), m.group(1));
         }
         
         p = Pattern.compile("\\(([A-Za-z.]{4,})\\)(\\s[A-Z])");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+        	//System.err.println(m.group());
             text = text.replace(m.group(), m.group(1).replaceAll("\\.", "") + m.group(2));
         }
         
