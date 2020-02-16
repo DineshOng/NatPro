@@ -20,9 +20,10 @@ public class Driver {
 		long startTime, endTime;
         startTime = System.nanoTime();
 		
+        //new EntityTagger("de.pdf");
 		new EntityTagger("am.pdf");
-		new EntityTagger("ap.pdf");
-		new EntityTagger("hm.pdf");
+		//new EntityTagger("ap.pdf");
+		//new EntityTagger("hm.pdf");
         
 		endTime = System.nanoTime();
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");

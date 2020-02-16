@@ -36,9 +36,6 @@ public class LookUpEntityTagger {
 	}
 	
 	public LookUpEntityTagger() {
-		this.tag_name = tag_name;
-		this.filename = filename;
-		this.text = text;
 		map = new HashMap<>();
 		prev_ent = new HashMap<String, String>();
 		patterns = new ArrayList<Pattern>();
@@ -189,6 +186,13 @@ public class LookUpEntityTagger {
 	    
 	    // Remove reference ex. </tag>23
 	    pattern = Pattern.compile("(<\\/\\w+>)\\d+");
+	    matcher = pattern.matcher(text);
+	    while(matcher.find()) {
+	    	text = text.replaceAll(matcher.group(), matcher.group(1));
+        }
+	    
+	    // Remove reference ex. </tag>,2,3
+	    pattern = Pattern.compile("(<\\/\\w+>,)(\\d+)+");
 	    matcher = pattern.matcher(text);
 	    while(matcher.find()) {
 	    	text = text.replaceAll(matcher.group(), matcher.group(1));

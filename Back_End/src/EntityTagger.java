@@ -119,6 +119,9 @@ public class EntityTagger {
             
             tagger = LocationTagger(tagger);
             
+            new SortbyStringLength("compound-suffix.txt");
+            new CompoundTagger(tagger.hideTaggedEntities().getText(), "compound");
+            
             java.io.FileWriter fw = new java.io.FileWriter(uniqueID+".xml");
 	        fw.write(tagger.getText());
 	        fw.close();	
@@ -149,7 +152,6 @@ public class EntityTagger {
         }
         
         tagger.tagEntities();
-        tagger.resolveHiddenEntities();
         tagger.resolveHiddenEntities();
         
         tagger.printEntityFrequencyCount();

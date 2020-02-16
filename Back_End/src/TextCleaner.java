@@ -40,8 +40,11 @@ public class TextCleaner {
         text = text.replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");
         text = text.replaceAll("\\p{C}", "");
         
-
+        // Replaces double or more spaces into single space
         text = text.replaceAll("\\s{2,}", " ");
+        
+        // Remove references in brackets hello[20,22].
+        text = text.replaceAll("\\[[0-9,]+\\]", "");
 
         text = text.replaceAll("(References?|REFERENCES?).*", "");
 
@@ -74,12 +77,23 @@ public class TextCleaner {
             text = text.replace(m.group(), "");
         }
         
+        /*
+        
         // Remove reference referencing ex. anti-microbial3,3
         p = Pattern.compile("([A-Za-z]+)(,[\\d]+)+");
         m = p.matcher(text);
         while(m.find()) {
         	//System.err.println(m.group());
             text = text.replace(m.group(), m.group(1)+",");
+        }
+        
+        */
+        
+        p = Pattern.compile("([A-Za-z]+)(,[\\d]+)+\\s");
+        m = p.matcher(text);
+        while(m.find()) {
+        	//System.err.println(m.group());
+            text = text.replace(m.group(), m.group(1)+", ");
         }
         
         p = Pattern.compile("([A-Za-z]{4,})[0-9]+");
