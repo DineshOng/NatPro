@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.List;
  
 public class SortbyStringLength {
+	private List<String> list;
     
     public SortbyStringLength (String fileName) throws IOException {
     	List<String> list = new ArrayList<String>();
@@ -43,6 +44,30 @@ public class SortbyStringLength {
 		writer.close();
         
         //Printing out the sorted array     
-   		System.out.println(Arrays.deepToString(words));
+   		//System.out.println(Arrays.deepToString(words));
     }
+    
+    public SortbyStringLength (List<String> list) throws IOException {
+    	this.list = list;
+        
+        String[] words = list.toArray(new String[0]);
+		
+        //Sort the array by supplying the lamba expression to compare two strings in the array        
+		Arrays.sort(words, (x,y) -> Integer.compare(y.length(), x.length()));
+        
+		list = Arrays.asList(words);
+		
+        //Printing out the sorted array     
+   		//System.out.println(Arrays.deepToString(words));
+    }
+
+	public List<String> getList() {
+		return list;
+	}
+
+	public void setList(List<String> list) {
+		this.list = list;
+	}
+    
+    
 }

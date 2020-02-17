@@ -4,11 +4,14 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.commons.math.util.OpenIntToDoubleHashMap.Iterator;
+
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import edu.stanford.nlp.util.Triple;
+import net.didion.jwnl.JWNLException;
 
 public class EntityTagger {
 	public static boolean checkDocument(String uniqueID, String filename) throws IOException {
@@ -21,7 +24,7 @@ public class EntityTagger {
         return false;
     }
 	
-	public EntityTagger(String filename) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException {
+	public EntityTagger(String filename) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, JWNLException {
 		String uniqueID = new GenUniqueDocID2(filename).getUniqueID();
         
         if(checkDocument(uniqueID, filename) || true) {
@@ -120,7 +123,26 @@ public class EntityTagger {
             tagger = LocationTagger(tagger);
             
             new SortbyStringLength("compound-suffix.txt");
-            new CompoundTagger(tagger.hideTaggedEntities().getText(), "compound");
+            
+            tagger = new LookUpEntityTagger()
+            		.setText(tagger.getText())
+            		.setTag_name("compound")
+            		.readLexiconFile("compound-suffix.txt")
+            		.sortLexiconFile()
+            		.hideTaggedEntities();
+            
+            CompoundTagger ct = new CompoundTagger().setText(tagger.getText());
+            
+            List<String> cc = ct.findEntities().sortEntities().getCompounds();
+            
+            for(int i=0; i<cc.size(); i++) {
+            	tagger.getFound_entities().add(cc.get(i));
+            }
+            
+            tagger.tagEntities();
+            tagger.resolveHiddenEntities();
+            
+            //new CompoundTagger(tagger.hideTaggedEntities().getText(), "compound");
             
             java.io.FileWriter fw = new java.io.FileWriter(uniqueID+".xml");
 	        fw.write(tagger.getText());

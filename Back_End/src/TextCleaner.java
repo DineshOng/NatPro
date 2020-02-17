@@ -31,6 +31,7 @@ public class TextCleaner {
         text = text.replaceAll("ñ","n");
         
         text = text.replaceAll("′","'");
+        
         text = text.replaceAll("–","-");
         text = text.replaceAll("”","");
         text = text.replaceAll("“","");

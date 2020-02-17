@@ -120,6 +120,8 @@ public class LookUpEntityTagger {
 		for(String e : found_entities) {
             //text = text.replaceAll(e, "<" + tag_name + ">" + e + "</" + tag_name + ">");
 			//prev_ent.add(tag_name + " " + e + " " + idx);
+			e = e.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
+            e = e.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
 			prev_ent.put(tag_name + " " + idx, e);
 			text = text.replaceAll(e, "<<" + tag_name + "@" + idx + ">>");
 			idx++;

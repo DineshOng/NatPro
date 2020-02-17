@@ -7,6 +7,7 @@
  fatty acids
  fatty acid
  cinnamate
+ benzoate
  acetate
 phylline
 phyllal
@@ -21,7 +22,12 @@ zoate
 ethyl
  acid
 erols
+enols
 rides
+namic
+solic
+mitin
+enol
 nate
 mate
 enol
@@ -29,6 +35,10 @@ none
 side
 lide
 erol
+ytyl
+tate
+late
+oate
 one
 bin
 ene
@@ -37,16 +47,13 @@ min
 eol
 ryl
 ein
-ate
 rin
 nyl
 oic
 nin
 ide
 sid
-mic
 syl
 lin
-ol
 tyl
-ytyl
+ol

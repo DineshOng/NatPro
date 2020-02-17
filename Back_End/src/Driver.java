@@ -12,10 +12,11 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import edu.stanford.nlp.util.CoreMap;
+import net.didion.jwnl.JWNLException;
 
 public class Driver {
 
-	public static void main(String[] args) throws NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, IOException {
+	public static void main(String[] args) throws NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, IOException, JWNLException {
 		// TODO Auto-generated method stub
 		long startTime, endTime;
         startTime = System.nanoTime();
