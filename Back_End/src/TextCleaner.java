@@ -32,11 +32,20 @@ public class TextCleaner {
         
         text = text.replaceAll("′","'");
         
+        text = text.replaceAll("–","-");
+        text = text.replaceAll("”","");
+        text = text.replaceAll("“","");
+        
+        
         text = text.replaceAll("[^\\x00-\\x7F]", "");
         text = text.replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");
         text = text.replaceAll("\\p{C}", "");
-
+        
+        // Replaces double or more spaces into single space
         text = text.replaceAll("\\s{2,}", " ");
+        
+        // Remove references in brackets hello[20,22].
+        text = text.replaceAll("\\[[0-9,]+\\]", "");
 
         text = text.replaceAll("(References?|REFERENCES?).*", "");
 
@@ -50,30 +59,56 @@ public class TextCleaner {
         p = Pattern.compile("([A-Za-z]{2,}\\.\\s[a-z])");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+            //System.err.println(m.group());
             text = text.replace(m.group(), m.group().replaceAll("\\.", ""));
         }
         
         p = Pattern.compile("([A-Za-z]+\\.)[0-9]+\\s?([A-Za-z]+)");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+            //System.err.println(m.group());
             text = text.replace(m.group(), m.group(1) + m.group(2) + " ");
         }
         
+        // Remove references ex. (Hauert et al., 1974), (Naeem, 2017)
         p = Pattern.compile("\\([A-Z][a-z]+\\s?(et\\s?al\\.)?,\\s?[0-9]{4,}\\)");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+            //System.err.println(m.group());
             text = text.replace(m.group(), "");
         }
+        
+        /*
         
         // Remove reference referencing ex. anti-microbial3,3
         p = Pattern.compile("([A-Za-z]+)(,[\\d]+)+");
         m = p.matcher(text);
         while(m.find()) {
-            System.err.println(m.group());
+        	//System.err.println(m.group());
             text = text.replace(m.group(), m.group(1)+",");
+        }
+        
+        */
+        
+        p = Pattern.compile("([A-Za-z]+)(,[\\d]+)+\\s");
+        m = p.matcher(text);
+        while(m.find()) {
+        	//System.err.println(m.group());
+            text = text.replace(m.group(), m.group(1)+", ");
+        }
+        
+        p = Pattern.compile("([A-Za-z]{4,})[0-9]+");
+        m = p.matcher(text);
+        while(m.find()) {
+        	//System.err.println(m.group());
+            text = text.replace(m.group(), m.group(1));
+        }
+        
+        p = Pattern.compile("\\(([A-Za-z.]{4,})\\)(\\s[A-Z])");
+        m = p.matcher(text);
+        while(m.find()) {
+        	//System.err.println(m.group());
+            text = text.replace(m.group(), m.group(1).replaceAll("\\.", "") + m.group(2));
         }
         
         endTime = System.nanoTime ();
