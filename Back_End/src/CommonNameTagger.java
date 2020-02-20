@@ -6,20 +6,13 @@ import java.util.TreeSet;
 
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
-public class CommonNameTagger {
+public class CommonNameTagger extends EntityTagger {
 	private TreeSet<String> phrases;
-	private String text;
-	private String tag_name;
 	private MaxentTagger mt;
 	
-	public CommonNameTagger(String text, String tag_name) {
-		this.text = text;
-		this.tag_name = tag_name;
+	public CommonNameTagger(String tag, String text) {
+		super(tag, text);
 		
-		mt = new MaxentTagger("english-left3words-distsim.tagger");
-	}
-	
-	public CommonNameTagger() {
 		mt = new MaxentTagger("english-left3words-distsim.tagger");
 		phrases = new TreeSet<String>();
 	}
@@ -59,7 +52,7 @@ public class CommonNameTagger {
 		}
 		
 		for(String p: phrases) {
-			text = text.replaceAll(p, "<" + tag_name + ">" + p + "</" + tag_name + ">");
+			text = text.replaceAll(p, "<" + tag + ">" + p + "</" + tag + ">");
 		}
 		
 		return text;
@@ -76,22 +69,4 @@ public class CommonNameTagger {
 	public String getText() {
 		return text;
 	}
-
-	public CommonNameTagger setText(String text) {
-		this.text = text;
-		
-		return this;
-	}
-
-	public String getTag_name() {
-		return tag_name;
-	}
-
-	public CommonNameTagger setTag_name(String tag_name) {
-		this.tag_name = tag_name;
-		
-		return this;
-	}
-	
-	
 }

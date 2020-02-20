@@ -8,45 +8,26 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LookUpEntityTagger {
-	private List<String> lexicon;
-	private String filename;
-	private List<Pattern> patterns;
-	private String text;
-	private List<String> found_entities;
-	private Map<String, Integer> map;
-	HashMap<String, String> prev_ent;
-	private String prefix_regex;
-	private String suffix_regex;
-	private String tag_name;
-	private int idx;
+public class LookUpEntityTagger extends EntityTagger {
+	protected String filename;
+	protected List<String> lexicon;
+	protected List<Pattern> patterns;
+	protected String prefix_regex;
+	protected String suffix_regex;
+	
 
-	public LookUpEntityTagger (String tag_name, String filename, String text) {
-		this.tag_name = tag_name;
+	public LookUpEntityTagger (String tag, String text, String filename) {
+		super(tag, text);
+	
 		this.filename = filename;
-		this.text = text;
-		map = new HashMap<>();
-		prev_ent = new HashMap<String, String>();
-		patterns = new ArrayList<Pattern>();
-		found_entities = new ArrayList<String>();
+		
 		lexicon = new ArrayList<String>();
+		patterns = new ArrayList<Pattern>();
 		prefix_regex = "";
 		suffix_regex = "";
-		idx = 0;
 	}
 	
-	public LookUpEntityTagger() {
-		map = new HashMap<>();
-		prev_ent = new HashMap<String, String>();
-		patterns = new ArrayList<Pattern>();
-		found_entities = new ArrayList<String>();
-		lexicon = new ArrayList<String>();
-		prefix_regex = "";
-		suffix_regex = "";
-		idx = 0;
-	}
-	
-	public LookUpEntityTagger run() throws IOException {
+	/*public LookUpEntityTagger run() throws IOException {
 		hideTaggedEntities();
 		findEntities();
 		tagEntities();
@@ -54,20 +35,21 @@ public class LookUpEntityTagger {
 		removeOverlappingTags();
 		
 		return this;
-	}
+	}*/
 	
-	/*public LookUpEntityTagger readLexiconFile() throws IOException {
+	public LookUpEntityTagger readLexiconFile() throws IOException {
 		lexicon = new ReadLexiconFile(filename).getContents();
 		
 		return this;
-	}*/
+	}
 	
+	/*
 	public LookUpEntityTagger readLexiconFile(String filename) throws IOException {
 		this.filename = filename;
 		lexicon = new ReadLexiconFile(filename).getContents();
 		
 		return this;
-	}
+	}*/
 	
 	public LookUpEntityTagger sortLexiconFile() throws IOException {
 		new SortbyStringLength(filename);
@@ -75,30 +57,7 @@ public class LookUpEntityTagger {
 		return this;
 	}
 	
-	public LookUpEntityTagger hideTaggedEntities() {
-		Pattern pattern = Pattern.compile("<([a-z]+)>([a-zA-Z\\s.-]+)<\\/[a-z]+>");
-		Matcher matcher = pattern.matcher(text);
-		idx = 0;
-		while(matcher.find()) {
-        	prev_ent.put(matcher.group(1) + " " + idx, matcher.group(2));
-        	text = text.replaceAll(matcher.group(), "<<" + matcher.group(1) + "@" + idx + ">>");
-        	//text = text.replaceAll(matcher.group(), "hi");
-        	idx++;
-        }
-		
-		//System.out.println(text);
-		
-		return this;
-	}
 	
-	public LookUpEntityTagger resolveHiddenEntities() {
-		for (String e : prev_ent.keySet()) {
-            String []tag = e.split(" ");
-            text = text.replaceAll("<<"+ tag[0] + "@" + tag[1] + ">>", "<"+tag[0]+">"+prev_ent.get(e)+"</"+tag[0]+">");
-        }
-		
-		return this;
-	}
 	
 	public LookUpEntityTagger findEntities() {
 		for(Pattern pattern : patterns) {
@@ -116,25 +75,23 @@ public class LookUpEntityTagger {
 		return this;
 	}
 	
-	public LookUpEntityTagger tagEntities() {
-		for(String e : found_entities) {
-            //text = text.replaceAll(e, "<" + tag_name + ">" + e + "</" + tag_name + ">");
-			//prev_ent.add(tag_name + " " + e + " " + idx);
-			e = e.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
-            e = e.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
-			prev_ent.put(tag_name + " " + idx, e);
-			text = text.replaceAll(e, "<<" + tag_name + "@" + idx + ">>");
-			idx++;
+	public LookUpEntityTagger findEntities_Insensitive() {
+		for(Pattern pattern : patterns) {
+            Matcher matcher = pattern.matcher(text);
+            while(matcher.find()) {
+            	if(!found_entities.contains(matcher.group().toLowerCase().trim())) {
+            		found_entities.add(matcher.group().toLowerCase().trim());
+            	}
+                Integer n = map.get(matcher.group().toLowerCase().trim());
+                n = (n == null) ? 1 : ++n;
+                map.put(matcher.group().trim().toLowerCase(), n);
+            }
         }
 		
 		return this;
 	}
 	
-	public void printEntityFrequencyCount() {
-		for(String i : map.keySet()) {
-			System.out.println("value: " + map.get(i) + "\tkey: " + i);
-	     }
-	}
+	
 	
 	public LookUpEntityTagger compilePatterns() throws IOException {
         System.out.println("Compiling " + filename + " Patterns...");
@@ -169,39 +126,14 @@ public class LookUpEntityTagger {
         
         return this;
     }
-    
-    public LookUpEntityTagger removeOverlappingTags() {
-    	// Remove inside tags - Left hand side
-        Pattern pattern = Pattern.compile("([-\\w\\d\\.]+)<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>");
-	    Matcher matcher = pattern.matcher(text);
-	    while(matcher.find()) {
-	    	text = text.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
-        }
-	    
-	    // Remove inside tags - Right hand side
-        pattern = Pattern.compile("<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>([-\\w\\d]+)");
-	    matcher = pattern.matcher(text);
-	    while(matcher.find()) {
-	    	text = text.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
-        }
-        
-	    
-	    // Remove reference ex. </tag>23
-	    pattern = Pattern.compile("(<\\/\\w+>)\\d+");
-	    matcher = pattern.matcher(text);
-	    while(matcher.find()) {
-	    	text = text.replaceAll(matcher.group(), matcher.group(1));
-        }
-	    
-	    // Remove reference ex. </tag>,2,3
-	    pattern = Pattern.compile("(<\\/\\w+>,)(\\d+)+");
-	    matcher = pattern.matcher(text);
-	    while(matcher.find()) {
-	    	text = text.replaceAll(matcher.group(), matcher.group(1));
-        }
-	    
-	    return this;
-    }
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
 
 	public List<String> getLexicon() {
 		return lexicon;
@@ -210,103 +142,29 @@ public class LookUpEntityTagger {
 	public void setLexicon(List<String> lexicon) {
 		this.lexicon = lexicon;
 	}
-	
-	public LookUpEntityTagger addLexicon(String s) {
-		lexicon.add(s);
-		
-		return this;
-	}
-
-	public String getFilename() {
-		return filename;
-	}
-
-	public LookUpEntityTagger setFilename(String filename) {
-		this.filename = filename;
-		
-		return this;
-	}
 
 	public List<Pattern> getPatterns() {
 		return patterns;
-	}
-	
-	public LookUpEntityTagger addPattern(String s) {
-		patterns.add(Pattern.compile(s));
-		
-		return this;
 	}
 
 	public void setPatterns(List<Pattern> patterns) {
 		this.patterns = patterns;
 	}
 
-	public String getText() {
-		return text;
-	}
-
-	public LookUpEntityTagger setText(String text) {
-		this.text = text;
-		
-		return this;
-	}
-
-	public List<String> getFound_entities() {
-		return found_entities;
-	}
-	
-	public void addFound_entities(String e) {
-		found_entities.add(e);
-	}
-
-	public void setFound_entities(List<String> found_entities) {
-		this.found_entities = found_entities;
-	}
-
-	public Map<String, Integer> getMap() {
-		return map;
-	}
-
-	public void setMap(Map<String, Integer> map) {
-		this.map = map;
-	}
-
-	public HashMap<String, String> getPrev_ent() {
-		return prev_ent;
-	}
-
-	public void setPrev_ent(HashMap<String, String> prev_ent) {
-		this.prev_ent = prev_ent;
-	}
-
 	public String getPrefix_regex() {
 		return prefix_regex;
 	}
 
-	public LookUpEntityTagger setPrefix_regex(String prefix_regex) {
+	public void setPrefix_regex(String prefix_regex) {
 		this.prefix_regex = prefix_regex;
-		
-		return this;
 	}
 
 	public String getSuffix_regex() {
 		return suffix_regex;
 	}
 
-	public LookUpEntityTagger setSuffix_regex(String suffix_regex) {
+	public void setSuffix_regex(String suffix_regex) {
 		this.suffix_regex = suffix_regex;
-		
-		return this;
-	}
-
-	public String getTag_name() {
-		return tag_name;
-	}
-
-	public LookUpEntityTagger setTag_name(String tag_name) {
-		this.tag_name = tag_name;
-		
-		return this;
 	}
     
     

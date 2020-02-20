@@ -1,216 +1,169 @@
-import java.io.File;
-import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
-import org.apache.commons.math.util.OpenIntToDoubleHashMap.Iterator;
-
-import edu.stanford.nlp.ie.AbstractSequenceClassifier;
-import edu.stanford.nlp.ie.crf.CRFClassifier;
-import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.tagger.maxent.MaxentTagger;
-import edu.stanford.nlp.util.Triple;
-import net.didion.jwnl.JWNLException;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EntityTagger {
-	public static boolean checkDocument(String uniqueID, String filename) throws IOException {
-    	File dir = new File("texts\\");
-        File[] files = dir.listFiles((dir1, name) -> name.startsWith(uniqueID) && name.endsWith(".pdf"));
-        if(files.length == 0) {
-        	new SaveFile(new File(filename), new File("texts\\"+uniqueID+".pdf"));
-        	return true;
+	protected String tag;
+	protected String text;
+	protected List<String> found_entities;
+	protected Map<String, Integer> map;
+	protected HashMap<String, String> prev_ent;
+	private int idx;
+	
+	public EntityTagger(String tag, String text) {
+		this.tag = tag;
+		this.text = text;
+		
+		found_entities = new ArrayList<String>();
+		map = new HashMap<>();
+		prev_ent = new HashMap<String, String>();
+		idx = 0;
+	}
+	
+	public EntityTagger hideTaggedEntities() {
+		Pattern pattern = Pattern.compile("<([a-z]+)>([a-zA-Z\\s.-]+)<\\/[a-z]+>");
+		Matcher matcher = pattern.matcher(text);
+		idx = 0;
+		while(matcher.find()) {
+        	prev_ent.put(matcher.group(1) + " " + idx, matcher.group(2));
+        	text = text.replaceAll(matcher.group(), "<<" + matcher.group(1) + "@" + idx + ">>");
+        	//text = text.replaceAll(matcher.group(), "hi");
+        	idx++;
         }
-        return false;
+		
+		//System.out.println(text);
+		
+		return this;
+	}
+	
+	public EntityTagger tagEntities() {
+		for(String e : found_entities) {
+            //text = text.replaceAll(e, "<" + tag_name + ">" + e + "</" + tag_name + ">");
+			//prev_ent.add(tag_name + " " + e + " " + idx);
+			e = e.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
+            e = e.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
+			prev_ent.put(tag + " " + idx, e);
+			text = text.replaceAll(e, "<<" + tag + "@" + idx + ">>");
+			idx++;
+        }
+		
+		return this;
+	}
+	
+	
+	
+	public EntityTagger tagEntities_Insensitive() {
+		for(String e : found_entities) {
+            //text = text.replaceAll(e, "<" + tag_name + ">" + e + "</" + tag_name + ">");
+			//prev_ent.add(tag_name + " " + e + " " + idx);
+			e = e.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
+            e = e.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
+			prev_ent.put(tag + " " + idx, e.toLowerCase());
+			text = text.replaceAll("(?i)"+e, "<<" + tag + "@" + idx + ">>");
+			idx++;
+        }
+		
+		return this;
+	}
+	
+	public void printEntityFrequencyCount() {
+		for(String i : map.keySet()) {
+			System.out.println("value: " + map.get(i) + "\tkey: " + i);
+	     }
+	}
+	
+	public EntityTagger resolveHiddenEntities() {
+		for (String e : prev_ent.keySet()) {
+            String []tag = e.split(" ");
+            text = text.replaceAll("<<"+ tag[0] + "@" + tag[1] + ">>", "<"+tag[0]+">"+prev_ent.get(e)+"</"+tag[0]+">");
+        }
+		
+		return this;
+	}
+	
+	public EntityTagger removeOverlappingTags() {
+    	// Remove inside tags - Left hand side
+        Pattern pattern = Pattern.compile("([-\\w\\d\\.]+)<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>");
+	    Matcher matcher = pattern.matcher(text);
+	    while(matcher.find()) {
+	    	text = text.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
+        }
+	    
+	    // Remove inside tags - Right hand side
+        pattern = Pattern.compile("<[\\w\\d]+>([\\w\\d\\s]+)<\\/[\\w\\d]+>([-\\w\\d]+)");
+	    matcher = pattern.matcher(text);
+	    while(matcher.find()) {
+	    	text = text.replaceAll(matcher.group(), matcher.group(1) + matcher.group(2));
+        }
+        
+	    
+	    // Remove reference ex. </tag>23
+	    pattern = Pattern.compile("(<\\/\\w+>)\\d+");
+	    matcher = pattern.matcher(text);
+	    while(matcher.find()) {
+	    	text = text.replaceAll(matcher.group(), matcher.group(1));
+        }
+	    
+	    // Remove reference ex. </tag>,2,3
+	    pattern = Pattern.compile("(<\\/\\w+>,)(\\d+)+");
+	    matcher = pattern.matcher(text);
+	    while(matcher.find()) {
+	    	text = text.replaceAll(matcher.group(), matcher.group(1));
+        }
+	    
+	    return this;
     }
-	
-	public EntityTagger(String filename) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, JWNLException {
-		String uniqueID = new GenUniqueDocID2(filename).getUniqueID();
-        
-        if(checkDocument(uniqueID, filename) || true) {
-        	String text = new PDFtoTXT(filename).convertedText();
-            String cleanTxt = new TextCleaner(text).cleanText().getText();
-            String txt = new SentenceSplitter(cleanTxt).getSentenceSplitText();
-            
-            txt = new CommonNameTagger()
-            		.setText(txt)
-            		.setTag_name("aka")
-            		.run();
-		
-            LookUpEntityTagger tagger;
-            
-            tagger = new LookUpEntityTagger()
-        			.setText(txt)
-        			.setTag_name("bioact")
-        			.readLexiconFile("bioact.txt")
-        			.sortLexiconFile()
-        			.compilePatternsInsensitive()
-        			.run();
-            
-            tagger.printEntityFrequencyCount();
 
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("family")
-            		.readLexiconFile("family.txt")
-            		.compilePatternsInsensitive()
-            		.run();
-            
-            tagger.printEntityFrequencyCount();
-            
-            tagger = SpeciesTagger(tagger);
-            
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("orgpart")
-            		.readLexiconFile("orgpart.txt")
-            		.sortLexiconFile()
-            		.compilePatternsInsensitive()
-            		.run();
-            
-            tagger.printEntityFrequencyCount();
-            
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("cell")
-            		.readLexiconFile("cell-lines.txt")
-            		.sortLexiconFile()
-            		.compilePatterns()
-            		.run();
-            
-            tagger.printEntityFrequencyCount();
-            
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("class")
-            		.readLexiconFile("compound-class.txt")
-            		.sortLexiconFile()
-            		.compilePatternsInsensitive()
-            		.run();
-            
-            tagger.printEntityFrequencyCount();
-            
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("bodypart")
-            		.readLexiconFile("bodypart.txt")
-            		.sortLexiconFile()
-            		.compilePatternsInsensitive()
-            		.run();
-            
-            tagger.printEntityFrequencyCount();
-            
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("prep")
-            		.readLexiconFile("prep.txt")
-            		.sortLexiconFile()
-            		.compilePatternsInsensitive()
-            		.run();
-            
-            tagger.printEntityFrequencyCount();
-            
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("illness")
-            		.readLexiconFile("illness.txt")
-            		.sortLexiconFile()
-            		.compilePatternsInsensitive()
-            		.run();
-            
-            tagger.printEntityFrequencyCount();
-            
-            tagger = LocationTagger(tagger);
-            
-            new SortbyStringLength("compound-suffix.txt");
-            
-            tagger = new LookUpEntityTagger()
-            		.setText(tagger.getText())
-            		.setTag_name("compound")
-            		.readLexiconFile("compound-suffix.txt")
-            		.sortLexiconFile()
-            		.hideTaggedEntities();
-            
-            CompoundTagger ct = new CompoundTagger().setText(tagger.getText());
-            
-            List<String> cc = ct.findEntities().sortEntities().getCompounds();
-            
-            for(int i=0; i<cc.size(); i++) {
-            	tagger.getFound_entities().add(cc.get(i));
-            }
-            
-            tagger.tagEntities();
-            tagger.resolveHiddenEntities();
-            
-            //new CompoundTagger(tagger.hideTaggedEntities().getText(), "compound");
-            
-            java.io.FileWriter fw = new java.io.FileWriter(uniqueID+".xml");
-	        fw.write(tagger.getText());
-	        fw.close();	
-        }
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public List<String> getFound_entities() {
+		return found_entities;
+	}
+
+	public void setFound_entities(List<String> found_entities) {
+		this.found_entities = found_entities;
+	}
+
+	public Map<String, Integer> getMap() {
+		return map;
+	}
+
+	public void setMap(Map<String, Integer> map) {
+		this.map = map;
+	}
+
+	public HashMap<String, String> getPrev_ent() {
+		return prev_ent;
+	}
+
+	public void setPrev_ent(HashMap<String, String> prev_ent) {
+		this.prev_ent = prev_ent;
+	}
+
+	public String getTag() {
+		return tag;
+	}
+
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+
+	public int getIdx() {
+		return idx;
+	}
+
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
 	
-	public LookUpEntityTagger SpeciesTagger (LookUpEntityTagger tagger) throws IOException {
-		tagger = new LookUpEntityTagger()
-        		.setText(tagger.getText())
-        		.setTag_name("species")
-        		.readLexiconFile("genus.txt")
-        		.setSuffix_regex("\\s(\\b[a-z]+)")
-        		.compilePatterns()
-        		.addPattern("[A-Z]\\.\\s([a-z])+")
-        		.addPattern("\\s([A-Z]{2})\\s")
-        		.hideTaggedEntities()
-        		.findEntities();
-        
-        for (String i : tagger.getMap().keySet()) {
-            System.out.println("value: " + tagger.getMap().get(i) + "\tkey: " + i);
-            if(tagger.getMap().get(i)<5 && i.length()==2) {
-            	tagger.getFound_entities().remove(i);
-                System.out.println("Removed: "+ i);
-            } else if(i.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") && i.length()==2) {
-            	tagger.getFound_entities().remove(i);
-	            System.out.println("Removed: "+ i);
-            }
-        }
-        
-        tagger.tagEntities();
-        tagger.resolveHiddenEntities();
-        
-        tagger.printEntityFrequencyCount();
-        
-        return tagger;
-	}
 	
-	public LookUpEntityTagger LocationTagger(LookUpEntityTagger tagger) throws ClassCastException, ClassNotFoundException, IOException {
-		tagger = new LookUpEntityTagger()
-				 .setText(tagger.getText())
-				 .setTag_name("location")
-				 .hideTaggedEntities();
-		
-		String serializedClassifier = "classifiers/english.all.3class.distsim.crf.ser.gz";
-        AbstractSequenceClassifier<CoreLabel> classifier = CRFClassifier.getClassifier(serializedClassifier);
-        List<Triple<String,Integer,Integer>> triples = classifier.classifyToCharacterOffsets(tagger.getText());
-        
-        for (Triple<String,Integer,Integer> trip : triples) {
-            if(trip.first.equals("LOCATION")) {
-                //System.out.println(trip.first + " - " + txt.substring(trip.second, trip.third));
-            	tagger.getFound_entities().add(tagger.getText().substring(trip.second, trip.third));
-                Integer n = tagger.getMap().get(tagger.getText().substring(trip.second, trip.third));
-                n = (n == null) ? 1 : ++n;
-                tagger.getMap().put(tagger.getText().substring(trip.second, trip.third), n);
-            } else {
-            	//System.out.println(txt.substring(trip.second, trip.third));
-            }
-        }
-        
-        tagger.tagEntities();
-        tagger.resolveHiddenEntities();
-        tagger.removeOverlappingTags();
-        
-        tagger.printEntityFrequencyCount();
-        
-        tagger.setText(tagger.getText().replaceAll("</location>,?\\s?<location>", ", "));
-        
-        return tagger;
-	}
 }
