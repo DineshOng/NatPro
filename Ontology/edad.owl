@@ -523,6 +523,22 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_ester -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_ester">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#alpha-linolenic_acid -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-linolenic_acid">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#alpinia_purpurata -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpinia_purpurata">
@@ -685,6 +701,201 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#arthritis">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Illness"/>
         <datatypeProperty_Illness rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arthritis</datatypeProperty_Illness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+        <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#moraceae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_altilis -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_altilis">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_altilis_leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_altilis_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_altilis_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acids"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lutein"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#polyprenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_altilis"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#friedelinol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#phytol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycloartenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycloartenol_acetate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#polyprenol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_heterophyllus -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_heterophyllus">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_heterophyllus_unripe_fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_heterophyllus_unripe_fruit -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_heterophyllus_unripe_fruit">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycloartenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycloartenone"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#diastereomeric_mixture_of_2,3-butanediols"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_heterophyllus"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#unripe_fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_flesh_of_the_fruit"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_fruit_rind"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_seeds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_flesh_of_the_fruit -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_flesh_of_the_fruit">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acids"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#flesh_of_the_fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_fruit_rind -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_fruit_rind">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acids"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hydrocarbons"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fruit_rind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_seeds -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_seeds">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acids"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#seeds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus_twigs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#chlorophyll_a"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#polyprenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triacylglycerols"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#3beta-friedelinol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus_twigs -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus_twigs">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_ester"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-myrin_fatty_acid_ester"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#betulin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#chlorophyll_a"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_ester"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#oleanolic_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#3beta,28-_dihydroxyolean-12-ene"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#twigs"/>
     </owl:NamedIndividual>
     
 
@@ -876,6 +1087,22 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-carotene -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-carotene">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-myrin_fatty_acid_ester -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-myrin_fatty_acid_ester">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol">
@@ -911,6 +1138,14 @@
         <datatypeProperty_Source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://stuartxchange.org/betis.html</datatypeProperty_Source>
         <datatypeProperty_Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">madhuca betis</datatypeProperty_Synonym>
         <datatypeProperty_Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">payena betis</datatypeProperty_Synonym>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#betulin -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#betulin">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
 
@@ -966,11 +1201,146 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+        <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassicaceae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea_leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-linolenic_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-carotene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lutein"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#trilinolenin"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_stem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_stem -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_stem">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic_stem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic_stem -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic_stem">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra_leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brassicaceae -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassicaceae">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#brazil -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brazil">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
         <datatypeProperty_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brazil</datatypeProperty_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#brocolli -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brocolli">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
+        <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic"/>
     </owl:NamedIndividual>
     
 
@@ -1165,6 +1535,14 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#china">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
         <datatypeProperty_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">china</datatypeProperty_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#chlorophyll_a -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#chlorophyll_a">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
 
@@ -1445,6 +1823,30 @@
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_sancti-lasallei"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#sclerotesta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cycloartenol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycloartenol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cycloartenol_acetate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycloartenol_acetate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cycloartenone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycloartenone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
 
@@ -1898,6 +2300,86 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_A-D -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_A-D">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+        <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#meliaceae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_stem_bark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#polyprenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_stem_bark -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_stem_bark">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_A-D"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#p-hydroxyacetophenone"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stem_bark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum_leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lutein"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#polyprenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#dyspepsia -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dyspepsia">
@@ -2079,6 +2561,22 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#fatty_acid -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#fatty_acids -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fatty_acids">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#fever -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fever">
@@ -2111,6 +2609,14 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#flatworms">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Illness"/>
         <datatypeProperty_Illness rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flatworms</datatypeProperty_Illness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#flesh_of_the_fruit -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#flesh_of_the_fruit">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
     </owl:NamedIndividual>
     
 
@@ -2280,6 +2786,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#friedelinol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#friedelinol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#fruit -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fruit">
@@ -2297,6 +2811,14 @@
         <treats rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#throat_irritation"/>
         <utilizedPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fruit"/>
         <datatypeProperty_Preparation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruit decoction used as soothing demulcent remedy for throat irritations associated with coughing</datatypeProperty_Preparation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#fruit_rind -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fruit_rind">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
     </owl:NamedIndividual>
     
 
@@ -2502,6 +3024,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hydrocarbons -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hydrocarbons">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#ilocos_norte -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ilocos_norte">
@@ -2638,6 +3168,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#isopimaran-19-ol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#ivory_mahogany -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ivory_mahogany">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
+        <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#philippines"/>
     </owl:NamedIndividual>
     
 
@@ -3207,6 +3747,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#loktokong -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#loktokong">
@@ -3236,6 +3784,30 @@
         <datatypeProperty_Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ocimum tenuiflorum</datatypeProperty_Synonym>
         <datatypeProperty_Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plectranthus parviflorus</datatypeProperty_Synonym>
         <datatypeProperty_Synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solanum xanthocarpum</datatypeProperty_Synonym>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#lupeol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_ester -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_ester">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#lutein -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lutein">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
 
@@ -3339,6 +3911,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#meliaceae -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#meliaceae">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#melonmelonan -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#melonmelonan">
@@ -3430,6 +4010,23 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mixed_and_pounded_the_expressed_juice_strained_and_mixed_with_lemon_extract_taken_three_times_daily">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Preparation"/>
         <datatypeProperty_Preparation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mixed and pounded, the expressed juice strained and mixed with lemon extract; taken three times daily.</datatypeProperty_Preparation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#moraceae -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#moraceae">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#mustard -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mustard">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
+        <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea"/>
     </owl:NamedIndividual>
     
 
@@ -3610,6 +4207,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#p-hydroxyacetophenone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#p-hydroxyacetophenone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#pakistan -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#pakistan">
@@ -3725,9 +4330,25 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#phytol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#phytol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#phytyl_fatty_acid_esters -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#phytyl_fatty_acid_esters">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#polyprenol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#polyprenol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
@@ -3862,12 +4483,63 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#radish -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#radish">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
+        <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#rainbow_eucalyptus -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#rainbow_eucalyptus">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus_deglupta"/>
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#philippines"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#raphanus -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#raphanus">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#raphanus"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus_roots"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus_roots">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-linolenic_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#roots"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#red_cabbage -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#red_cabbage">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
+        <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra"/>
     </owl:NamedIndividual>
     
 
@@ -4247,6 +4919,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#stem_bark -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#stem_bark">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#stems -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#stems">
@@ -4451,6 +5131,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#trilinolenin -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#trilinolenin">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#tsaanggubat -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#tsaanggubat">
@@ -4532,6 +5220,14 @@
         <datatypeProperty_LocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ulasimang bato</datatypeProperty_LocalName>
         <datatypeProperty_MedicinalPlant rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ulasimang bato</datatypeProperty_MedicinalPlant>
         <datatypeProperty_Source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://healthmad.com/alternative/edible-plants-that-cure-common-diseases/</datatypeProperty_Source>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#unripe_fruit -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#unripe_fruit">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
     </owl:NamedIndividual>
     
 
@@ -4663,6 +5359,22 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#3beta-friedelinol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#3beta-friedelinol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#3beta,28-_dihydroxyolean-12-ene -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#3beta,28-_dihydroxyolean-12-ene">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7,4&apos;-dimethoxy-6,8-dimethylflavone -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7,4&apos;-dimethoxy-6,8-dimethylflavone">
@@ -4691,6 +5403,23 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7,15-diene">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#diastereomeric_mixture_of_2,3-butanediols -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#diastereomeric_mixture_of_2,3-butanediols">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#green/white_cabbage -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#green/white_cabbage">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
+        <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea"/>
     </owl:NamedIndividual>
     
 
