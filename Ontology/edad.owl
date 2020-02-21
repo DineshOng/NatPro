@@ -2149,6 +2149,86 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_A-D -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_A-D">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+        <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#meliaceae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_stem_bark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#polyprenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_stem_bark -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_stem_bark">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_A-D"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#p-hydroxyacetophenone"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stem_bark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum_leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lutein"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#polyprenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#dyspepsia -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dyspepsia">
@@ -2933,6 +3013,16 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#ivory_mahogany -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ivory_mahogany">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
+        <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#philippines"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#japan -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#japan">
@@ -3498,6 +3588,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#loktokong -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#loktokong">
@@ -3650,6 +3748,14 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#masbate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
         <datatypeProperty_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">masbate</datatypeProperty_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#meliaceae -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#meliaceae">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
     </owl:NamedIndividual>
     
 
@@ -3929,6 +4035,14 @@
         <datatypeProperty_LocalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wintersweet</datatypeProperty_LocalName>
         <datatypeProperty_MedicinalPlant rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oregano</datatypeProperty_MedicinalPlant>
         <datatypeProperty_Source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.philippineherbalmedicine.org/oregano.htm</datatypeProperty_Source>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#p-hydroxyacetophenone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#p-hydroxyacetophenone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
 
@@ -4582,6 +4696,14 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#stem">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
         <datatypeProperty_PlantPart rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stem</datatypeProperty_PlantPart>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#stem_bark -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#stem_bark">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
     </owl:NamedIndividual>
     
 
