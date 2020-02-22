@@ -38,6 +38,15 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#affects -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#affects">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#appliedTo -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#appliedTo">
@@ -61,6 +70,15 @@
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#belongsToGenus">
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <rdfs:range rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hasBiologicalActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hasBiologicalActivity">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
     </owl:ObjectProperty>
     
 
@@ -164,6 +182,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_BiologicalActivity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_BiologicalActivity">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -322,9 +349,21 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#BodyPart -->
 
     <owl:Class rdf:about="http://www.owl-ontologies.com/PMPlants.owl#BodyPart"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#CellLine -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
     
 
 
@@ -396,6 +435,30 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#HT-116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HT-116">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#HT-29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HT-29">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#MCF-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#MCF-7">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
     
 
 
@@ -660,11 +723,39 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_DU-145 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_DU-145">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HT-29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HT-29">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#HT-29"/>
+        <datatypeProperty_BiologicalActivity>anti-proliferative</datatypeProperty_BiologicalActivity>
+        <datatypeProperty_BiologicalActivity>inhibitor</datatypeProperty_BiologicalActivity>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#antilles -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#antilles">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
         <datatypeProperty_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antilles</datatypeProperty_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#antioxidant -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#antioxidant">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <datatypeProperty_BiologicalActivity>antioxidant</datatypeProperty_BiologicalActivity>
     </owl:NamedIndividual>
     
 
@@ -1847,6 +1938,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycloartenone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#HT-29"/>
+        <datatypeProperty_BiologicalActivity>cytotoxic</datatypeProperty_BiologicalActivity>
     </owl:NamedIndividual>
     
 
@@ -3124,6 +3225,15 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#infusion_of_the_bark_is_tonic_and_refreshing">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Preparation"/>
         <datatypeProperty_Preparation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infusion of the bark is tonic and refreshing.</datatypeProperty_Preparation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibitor_of_semen_movability -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibitor_of_semen_movability">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <datatypeProperty_BiologicalActivity>inhibitor</datatypeProperty_BiologicalActivity>
     </owl:NamedIndividual>
     
 
@@ -5127,6 +5237,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#triglycerides">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HT-29"/>
     </owl:NamedIndividual>
     
 
