@@ -438,9 +438,25 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#HT-116 -->
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#DU-145 -->
 
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HT-116">
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#DU-145">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#HCT-116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HCT-116">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#HDFn -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HDFn">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
     </owl:NamedIndividual>
     
@@ -727,6 +743,25 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_DU-145">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#DU-145"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HCT-116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HCT-116">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#HCT-116"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HDFn -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HDFn">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#HDFn"/>
     </owl:NamedIndividual>
     
 
@@ -738,6 +773,15 @@
         <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#HT-29"/>
         <datatypeProperty_BiologicalActivity>anti-proliferative</datatypeProperty_BiologicalActivity>
         <datatypeProperty_BiologicalActivity>inhibitor</datatypeProperty_BiologicalActivity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_MCF-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_MCF-7">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MCF-7"/>
     </owl:NamedIndividual>
     
 
@@ -1198,6 +1242,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_DU-145"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HCT-116"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HDFn"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HT-29"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_MCF-7"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HCT-116"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
     </owl:NamedIndividual>
     
 
@@ -1942,12 +1994,30 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HCT-116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HCT-116">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#HCT-116"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
         <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#HT-29"/>
         <datatypeProperty_BiologicalActivity>cytotoxic</datatypeProperty_BiologicalActivity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MCF-7"/>
     </owl:NamedIndividual>
     
 
@@ -3238,6 +3308,24 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibitory_against_HCT-116 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_against_HCT-116">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#HCT-116"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibitory_against_MCF-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_against_MCF-7">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MCF-7"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#insect_bite -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#insect_bite">
@@ -4460,6 +4548,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#polyprenol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HCT-116"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HDFn"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HT-29"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_MCF-7"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HCT-116"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
     </owl:NamedIndividual>
     
 
@@ -5007,6 +5102,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#squalene">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HCT-116"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HDFn"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HT-29"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_MCF-7"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HCT-116"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
     </owl:NamedIndividual>
     
 
@@ -5237,7 +5339,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#triglycerides">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HCT-116"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HDFn"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HT-29"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_MCF-7"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_against_HCT-116"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_against_MCF-7"/>
     </owl:NamedIndividual>
     
 
