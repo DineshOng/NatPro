@@ -886,7 +886,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycloartenol"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycloartenone"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#diastereomeric_mixture_of_2,3-butanediols"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#2.3-butanediols"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_heterophyllus"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#unripe_fruit"/>
     </owl:NamedIndividual>
@@ -984,7 +984,7 @@
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_ester"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#oleanolic_acid"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#3beta,28-_dihydroxyolean-12-ene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#3beta.28-_dihydroxyolean-12-ene"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#twigs"/>
     </owl:NamedIndividual>
@@ -1729,7 +1729,7 @@
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl_fatty_acid_ester"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7,15-diene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7.15-diene"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_edentata"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#bark"/>
     </owl:NamedIndividual>
@@ -1771,7 +1771,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#isopimaran-19-ol"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triacylglycerols"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7,15-diene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7.15-diene"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_lacrimans"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#bark"/>
     </owl:NamedIndividual>
@@ -1796,7 +1796,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#oleic_acid"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triacylglycerols"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#1,2-dioleylglycerol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#1.2-dioleylglycerol"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_lacrimans"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaflets"/>
     </owl:NamedIndividual>
@@ -2583,8 +2583,8 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#ellagic_acid"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#ellagitannins"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16.18-dione"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#8-methoxyellagic_acid-2-rhamnoside"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16,18-dione"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus_deglupta"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#bark"/>
     </owl:NamedIndividual>
@@ -2613,7 +2613,7 @@
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#oleanolic_acid"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#ursolic_acid"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7,4&apos;-dimethoxy-6,8-dimethylflavone"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7.4&apos;-dimethoxy-6.8-dimethylflavone"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus_deglupta"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#twigs"/>
     </owl:NamedIndividual>
@@ -2626,8 +2626,8 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#ellagic_acid"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#ellagitannins"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16.18-dione"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#8-methoxyellagic_acid-2-rhamnoside"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16,18-dione"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus_deglupta"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#wood"/>
     </owl:NamedIndividual>
@@ -5250,6 +5250,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16.18-dione -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16.18-dione">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#tsaanggubat -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#tsaanggubat">
@@ -5462,9 +5470,17 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#1,2-dioleylglycerol -->
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#1.2-dioleylglycerol -->
 
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#1,2-dioleylglycerol">
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#1.2-dioleylglycerol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#2.3-butanediols -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#2.3-butanediols">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
@@ -5478,17 +5494,17 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#3beta,28-_dihydroxyolean-12-ene -->
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#3beta.28-_dihydroxyolean-12-ene -->
 
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#3beta,28-_dihydroxyolean-12-ene">
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#3beta.28-_dihydroxyolean-12-ene">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7,4&apos;-dimethoxy-6,8-dimethylflavone -->
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7.4&apos;-dimethoxy-6.8-dimethylflavone -->
 
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7,4&apos;-dimethoxy-6,8-dimethylflavone">
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7.4&apos;-dimethoxy-6.8-dimethylflavone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
@@ -5510,17 +5526,9 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7,15-diene -->
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7.15-diene -->
 
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7,15-diene">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#diastereomeric_mixture_of_2,3-butanediols -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#diastereomeric_mixture_of_2,3-butanediols">
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7.15-diene">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
@@ -5531,14 +5539,6 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#green/white_cabbage">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16,18-dione -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16,18-dione">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
