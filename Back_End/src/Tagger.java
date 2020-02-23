@@ -32,7 +32,7 @@ public class Tagger {
             String cleanTxt = new TextCleaner(text).cleanText().getText();
             String txt = new SentenceSplitter(cleanTxt).getSentenceSplitText();
            
-            /*
+            
             txt = new CommonNameTagger("aka", txt).run();
             txt = new SpeciesTagger("plant", txt, "genus.txt").run();
             txt = new LocationTagger("loc", txt).run();
@@ -43,8 +43,19 @@ public class Tagger {
             txt = new CompoundClassTagger("class", txt, "compound-class.txt").run();
             txt = new BodyPartTagger("bodypart", txt, "bodypart.txt").run();
             txt = new PreparationTagger("prep", txt, "prep.txt").run();
-            txt = new IllnessTagger("illness", txt, "illness.txt").run();*/
+            txt = new IllnessTagger("illness", txt, "illness.txt").run();
             txt = new CompoundTagger("compound", txt, "compound-suffix.txt", "20k.txt").run();
+            
+            String taggedTxt = "";
+            String []str = txt.split("\n\n");
+            
+            for(String s: str) {
+            	int count = s.length() - s.replace("</", "").length();
+            	System.out.println(count/2);
+            	if(count/2>=2) {
+            		taggedTxt += s + "\n\n";
+            	}
+            }
             
             /*
             
@@ -71,8 +82,8 @@ public class Tagger {
             //new CompoundTagger(tagger.hideTaggedEntities().getText(), "compound");
              */
             
-            java.io.FileWriter fw = new java.io.FileWriter(uniqueID+".xml");
-	        fw.write(txt);
+            java.io.FileWriter fw = new java.io.FileWriter(filename.replaceAll(".pdf", "-")+uniqueID+".xml");
+	        fw.write(taggedTxt);
 	        fw.close();	
         }
 	}

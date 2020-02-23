@@ -24,7 +24,7 @@ public class SpeciesTagger extends LookUpEntityTagger {
 		compilePatterns();
 		
 		// Gets species with pattern A. macrophylla, A. paniculata
-		patterns.add(Pattern.compile("[A-Z]\\.\\s([a-z])+"));
+		patterns.add(Pattern.compile("[A-Z]\\.\\s([a-z]){4,}"));
 		
 		// Gets species with pattern AM, AP, HM 
 		patterns.add(Pattern.compile("\\s([A-Z]{2})\\s"));

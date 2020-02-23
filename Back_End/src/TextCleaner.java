@@ -36,6 +36,12 @@ public class TextCleaner {
         text = text.replaceAll("”","");
         text = text.replaceAll("“","");
         
+        text = text.replaceAll("_+", " ");
+        
+        text = text.replaceAll("INTRODUCTION", ".\n");
+        text = text.replaceAll("RESUTS AND DISCUSSION", ".\n");
+        text = text.replaceAll("RESULTS AND DISCUSSION", ".\n");
+        text = text.replaceAll("CONCLUSION", ".\n");
         
         text = text.replaceAll("[^\\x00-\\x7F]", "");
         text = text.replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");

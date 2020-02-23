@@ -10,9 +10,11 @@
  benzoate
  acetate
 phylline
+hydrazyl
 phyllal
 flavone
  esters
+methane
 sterol
  ester
 thoxy
@@ -28,6 +30,7 @@ namic
 solic
 mitin
 sides
+phane
 enol
 nate
 mate
@@ -40,6 +43,7 @@ ytyl
 tate
 late
 oate
+llyl
 one
 bin
 ene

@@ -21,10 +21,14 @@ public class Driver {
 		long startTime, endTime;
         startTime = System.nanoTime();
 		
+        
         new Tagger("de.pdf");
-		new Tagger("am.pdf");
-		new Tagger("ap.pdf");
-		new Tagger("hm.pdf");
+		//new Tagger("am.pdf");
+        //new Tagger("ap.pdf");
+        //new Tagger("hm.pdf");
+        
+        
+        //new Tagger("bo.pdf");
         
 		endTime = System.nanoTime();
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");

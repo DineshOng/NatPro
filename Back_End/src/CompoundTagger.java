@@ -75,6 +75,10 @@ public class CompoundTagger extends LookUpEntityTagger {
         tagEntities();
         resolveHiddenEntities();
         
+        removeOverlappingTags();
+        
+        text = text.replaceAll("</compound> <compound>", " ");
+        
         return text;
 	}
 	
@@ -89,7 +93,7 @@ public class CompoundTagger extends LookUpEntityTagger {
 		for(Pattern pattern : patterns) {
             Matcher matcher = pattern.matcher(text);
             while(matcher.find()) {
-            	String compound = matcher.group().replaceAll("^and ", "").replaceAll("^a ", "").replaceAll("^[0-9]+ ", "").trim();
+            	String compound = matcher.group().replaceAll("^and ", "").replaceAll("^the ", "").replaceAll("^a ", "").replaceAll("^[0-9]+ ", "").trim();
             	if(!compounds.contains(compound)) {
             		compounds.add(compound);
             	}
@@ -140,6 +144,9 @@ public class CompoundTagger extends LookUpEntityTagger {
 		
 		System.out.println(compounds.size());*/
 		
+		
+		//Oscar();
+		
 		return this;
 	}
 	
@@ -158,8 +165,8 @@ public class CompoundTagger extends LookUpEntityTagger {
 		TreeSet<String> e = new TreeSet<>();
 		for (NamedEntity ne : entities) {
 			if(ne.getSurface().length()>3 && !ne.getSurface().matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") && !ne.getSurface().matches("^[A-Z0-9]+$")) {
-				if(!compounds.contains(ne.getSurface().toLowerCase()))
-					e.add(ne.getSurface().toLowerCase());
+				if(!compounds.contains(ne.getSurface()))
+					e.add(ne.getSurface());
 			}
 		}
 		
