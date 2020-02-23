@@ -46,16 +46,20 @@ public class Tagger {
             txt = new IllnessTagger("illness", txt, "illness.txt").run();
             txt = new CompoundTagger("compound", txt, "compound-suffix.txt", "20k.txt").run();
             
+            txt = new CompoundNameExpander("compound", txt).run();
+            
             String taggedTxt = "";
             String []str = txt.split("\n\n");
             
             for(String s: str) {
             	int count = s.length() - s.replace("</", "").length();
-            	System.out.println(count/2);
+            	//System.out.println(count/2);
             	if(count/2>=2) {
             		taggedTxt += s + "\n\n";
             	}
             }
+            
+             
             
             /*
             
