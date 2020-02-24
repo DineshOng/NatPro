@@ -958,6 +958,22 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#antimutagenic -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#antimutagenic">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#antiosteoarthritic -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#antiosteoarthritic">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#antioxidant -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#antioxidant">
@@ -2234,6 +2250,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycloartenone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cytostatic_against_hep-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cytostatic_against_hep-2">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cytostatic_against_mccoy_cells -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cytostatic_against_mccoy_cells">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
     </owl:NamedIndividual>
     
 
@@ -4182,6 +4214,14 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_MDA-MB-231">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
         <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MDA-MB-231"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibited_tumour_promotion_in_two_stage_carcinogenesis -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibited_tumour_promotion_in_two_stage_carcinogenesis">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
     </owl:NamedIndividual>
     
 
@@ -6178,7 +6218,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_DU-145"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#antimutagenic"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#antiosteoarthritic"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#antioxidant"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytostatic_against_hep-2"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytostatic_against_mccoy_cells"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibited_tumour_promotion_in_two_stage_carcinogenesis"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#therapeutic_efficacy_against_Ehrlich"/>
     </owl:NamedIndividual>
     
 
