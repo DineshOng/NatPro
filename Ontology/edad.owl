@@ -147,6 +147,15 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#includesCompound -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#includesCompound">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#isLocatedIn -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#isLocatedIn">
@@ -438,6 +447,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#ACF -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ACF">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#COLO_320_DM -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#COLO_320_DM">
@@ -449,6 +466,22 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#DU-145 -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#DU-145">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#Ehrlich -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#Ehrlich">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#Epstein-Barr_virus_early_antigen -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#Epstein-Barr_virus_early_antigen">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
     </owl:NamedIndividual>
     
@@ -518,10 +551,26 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#SMMC7721 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#SMMC7721">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#abdominal_pain -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#abdominal_pain">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Illness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#adipocyte_differentiatio -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#adipocyte_differentiatio">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
     </owl:NamedIndividual>
     
 
@@ -638,6 +687,26 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#analgesic"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_acetate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_acetate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_cinnamate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_cinnamate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibit_TPAS-induced_inflammation"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effects_on_Epstein-Barr_virus_early_antigen"/>
     </owl:NamedIndividual>
     
 
@@ -645,6 +714,14 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_ester -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_ester">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_esters -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
@@ -762,6 +839,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#analgesic -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#analgesic">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata">
@@ -775,6 +860,30 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#annam">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
         <datatypeProperty_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annam</datatypeProperty_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-fungal_activity_against_a.rabiei -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-fungal_activity_against_a.rabiei">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-fungal_activity_against_fusarium_oxysporum_and_penicillium_notatum -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-fungal_activity_against_fusarium_oxysporum_and_penicillium_notatum">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
     </owl:NamedIndividual>
     
 
@@ -832,6 +941,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_effects_on_breast_cancer_cells -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_effects_on_breast_cancer_cells">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#antilles -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#antilles">
@@ -854,6 +971,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#antitumor">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#antiurolithiatic -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#antiurolithiatic">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#apayao -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#apayao">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
     </owl:NamedIndividual>
     
 
@@ -1259,6 +1392,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#bauerenol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#bauerenol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#benguet -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#benguet">
@@ -1271,6 +1412,35 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#analgesic"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-fungal_activity_against_a.rabiei"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_acetate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_acetate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_cinnamate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_cinnamate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibit_TPAS-induced_inflammation"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effects_on_Epstein-Barr_virus_early_antigen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_fatty_acid_esters -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
@@ -1304,6 +1474,8 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HCT-116"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibitory_effect_MDA-_MB-231"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibitory_effect_on_MCF-7"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_COLO_320_DM"/>
     </owl:NamedIndividual>
     
@@ -1750,6 +1922,15 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#chronic_cough">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Illness"/>
         <datatypeProperty_Illness rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chronic cough</datatypeProperty_Illness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#coenzyme_Q10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#coenzyme_Q10">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_effects_on_breast_cancer_cells"/>
     </owl:NamedIndividual>
     
 
@@ -2461,6 +2642,22 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#dihydrocanaric_acid -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dihydrocanaric_acid">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#diuretic -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#diuretic">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#drink_as_tea_daily_for_general_good_health -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#drink_as_tea_daily_for_general_good_health">
@@ -2872,6 +3069,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#fatty_acid_methyl_esters -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid_methyl_esters">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#fatty_acids -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fatty_acids">
@@ -3271,6 +3476,31 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#growth_inhibition_and_apoptosis_in_SMMC7721 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibition_and_apoptosis_in_SMMC7721">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SMMC7721"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#growth_inhibitory_effect_MDA-_MB-231 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibitory_effect_MDA-_MB-231">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#growth_inhibitory_effect_on_MCF-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibitory_effect_on_MCF-7">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#guava -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#guava">
@@ -3348,10 +3578,486 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+        <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#apocynaceae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_flowers"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_roots"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_flowers -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_flowers">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_cinnamate"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#flowers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#saturated_hydrocarbons"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_roots">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerone"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#roots"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerone"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#2-hydroxyethyl_benzoate"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dihydrocanaric_acid"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupenone"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#saturated_hydrocarbons"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#bauerenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#saturated_hydrocarbons"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#chlorophyll_a"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#saturated_hydrocarbons"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#saturated_hydrocarbons"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_meliflua -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_meliflua">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_meliflua_leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_meliflua_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_meliflua_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-amyrin.alpha-amyrin.lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-amyrin_cinnamate.alpha-amyrin_cinnamate.lupenyl_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-sitosterol.stigmasterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_oleanone.ursenone.lupenone"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_meliflua"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_roots"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_roots">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupenone"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#roots"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#betulin"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#bauerenol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lutein"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#squalene"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_acetate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_acetate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol_acetate"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_esters"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_fatty_acid_esters"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_esters"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_acetate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_acetate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxeryl_acetate"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid_methyl_esters"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupenone"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#2-hydroxyethylbenzoate"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#chlorophyll_a"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol_acetate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triglycerides"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_cinnamate"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#taraxerol"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#hydrocarbons -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hydrocarbons">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#hypotensive -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hypotensive">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
     </owl:NamedIndividual>
     
 
@@ -3452,6 +4158,15 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibit_TPAS-induced_inflammation -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibit_TPAS-induced_inflammation">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <datatypeProperty_BiologicalActivity>anti-inflammatory activity</datatypeProperty_BiologicalActivity>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_COLO_320_DM -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_COLO_320_DM">
@@ -3462,11 +4177,37 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_MDA-MB-231 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_MDA-MB-231">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MDA-MB-231"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibitor_of_semen_movability -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibitor_of_semen_movability">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
         <datatypeProperty_BiologicalActivity>inhibitor</datatypeProperty_BiologicalActivity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effect_on_skin_tumor_promotion -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effect_on_skin_tumor_promotion">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effects_on_Epstein-Barr_virus_early_antigen -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effects_on_Epstein-Barr_virus_early_antigen">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Epstein-Barr_virus_early_antigen"/>
     </owl:NamedIndividual>
     
 
@@ -4131,10 +4872,54 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#lupenone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupenone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#adipocyte_differentiatio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#lupenyl_cinnamate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupenyl_cinnamate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#lupeol -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-fungal_activity_against_fusarium_oxysporum_and_penicillium_notatum"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#antiurolithiatic"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#diuretic"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibition_and_apoptosis_in_SMMC7721"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hypotensive"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_MDA-MB-231"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#lupeol_acetate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol_acetate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hypotensive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#lupeol_cinnamate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol_cinnamate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibit_TPAS-induced_inflammation"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effect_on_skin_tumor_promotion"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effects_on_Epstein-Barr_virus_early_antigen"/>
     </owl:NamedIndividual>
     
 
@@ -4142,6 +4927,14 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_ester -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_ester">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_esters -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
@@ -4348,11 +5141,62 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#mindoro -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mindoro">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#mixed_and_pounded_the_expressed_juice_strained_and_mixed_with_lemon_extract_taken_three_times_daily -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mixed_and_pounded_the_expressed_juice_strained_and_mixed_with_lemon_extract_taken_three_times_daily">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Preparation"/>
         <datatypeProperty_Preparation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mixed and pounded, the expressed juice strained and mixed with lemon extract; taken three times daily.</datatypeProperty_Preparation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-amyrin.alpha-amyrin.lupeol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-amyrin.alpha-amyrin.lupeol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-amyrin_cinnamate.alpha-amyrin_cinnamate.lupenyl_cinnamate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-amyrin_cinnamate.alpha-amyrin_cinnamate.lupenyl_cinnamate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_cinnamate"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_cinnamate"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupenyl_cinnamate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-sitosterol.stigmasterol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_beta-sitosterol.stigmasterol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_oleanone.ursenone.lupenone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mixtures_of_oleanone.ursenone.lupenone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupenone"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#oleanone"/>
+        <includesCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#ursenone"/>
     </owl:NamedIndividual>
     
 
@@ -4403,6 +5247,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#myrtaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#negros -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#negros">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
     </owl:NamedIndividual>
     
 
@@ -4520,6 +5372,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#oleanone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#oleanone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#oleic_acid -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#oleic_acid">
@@ -4632,6 +5492,14 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#pampanga">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
         <datatypeProperty_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pampanga</datatypeProperty_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#panay_islands -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#panay_islands">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
     </owl:NamedIndividual>
     
 
@@ -5136,6 +6004,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#saturated_hydrocarbons -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#saturated_hydrocarbons">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#scalp_ointment_to_improve_hair_growth -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#scalp_ointment_to_improve_hair_growth">
@@ -5253,11 +6129,13 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HDFn"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HT-29"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_MCF-7"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_effects_on_breast_cancer_cells"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#antitumor"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#control_colonic_aberrant_crypt_foci_formation"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HCT-116"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#suppress_colonic_ACF_formation_and_crypt_multiplicity"/>
     </owl:NamedIndividual>
     
 
@@ -5340,6 +6218,15 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#suppress_colonic_ACF_formation_and_crypt_multiplicity -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#suppress_colonic_ACF_formation_and_crypt_multiplicity">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#ACF"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#swelling -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#swelling">
@@ -5379,6 +6266,30 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#taraxerol -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#taraxerol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#taraxerone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#taraxerone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#taraxeryl_acetate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#taraxeryl_acetate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#thailand -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#thailand">
@@ -5406,6 +6317,15 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#the_treatment">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Illness"/>
         <datatypeProperty_Illness rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the treatment</datatypeProperty_Illness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#therapeutic_efficacy_against_Ehrlich -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#therapeutic_efficacy_against_Ehrlich">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#BiologicalActivity"/>
+        <affects rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Ehrlich"/>
     </owl:NamedIndividual>
     
 
@@ -5464,6 +6384,15 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Preparation"/>
         <treats rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#degenerative_arthritis"/>
         <datatypeProperty_Preparation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to prevent degenerative arthritis &amp; for general good health drink oregano decoction daily</datatypeProperty_Preparation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#tocotrienols -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#tocotrienols">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_effects_on_breast_cancer_cells"/>
     </owl:NamedIndividual>
     
 
@@ -5629,6 +6558,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#ursenone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ursenone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#ursolic_acid -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ursolic_acid">
@@ -5659,6 +6596,23 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#verbascoside">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#wax_plant -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#wax_plant">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
+        <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_meliflua"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#apayao"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#bataan"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#la_union"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#laguna"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leyte"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#negros"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#palawan"/>
+        <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#rizal"/>
     </owl:NamedIndividual>
     
 
@@ -5733,6 +6687,22 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#1.2-dioleylglycerol -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#1.2-dioleylglycerol">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#2-hydroxyethyl_benzoate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#2-hydroxyethyl_benzoate">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#2-hydroxyethylbenzoate -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#2-hydroxyethylbenzoate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
