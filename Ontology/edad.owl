@@ -567,6 +567,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#acanthaceae -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#acanthaceae">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#adipocyte_differentiatio -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#adipocyte_differentiatio">
@@ -926,10 +934,89 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#andrographis -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+        <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#acanthaceae"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_leaves"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_pods"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_roots"/>
+        <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_leaves">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographolide"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#chlorophyll_a"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#14-deoxy-11.12-dihydroandrographolide"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#14-deoxy-12-hydroxyandrographolide"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#14-deoxyandrographolide"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#leaves"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_pods -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_pods">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#lupeol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#monogalactosyl_diacylglycerols"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#triacylglycerols"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#pods"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_roots">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl_fatty_acid_esters"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#trans-cinnamate_esters"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#5.2&apos;-dihydroxy-7.8-dimethoxyflavone"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#roots"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_stems -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_stems">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#14-deoxyandrographolide"/>
+        <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata"/>
+        <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#andrographolide -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographolide">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
 
@@ -1591,6 +1678,14 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl_fatty_acid_ester -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl_fatty_acid_ester">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl_fatty_acid_esters -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
@@ -5372,6 +5467,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#monogalactosyl_diacylglycerols -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#monogalactosyl_diacylglycerols">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#moraceae -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#moraceae">
@@ -5731,6 +5834,14 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#plant -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#plant">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#pods -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#pods">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
     </owl:NamedIndividual>
     
@@ -6592,6 +6703,14 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#trans-cinnamate_esters -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#trans-cinnamate_esters">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#treatment -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#treatment">
@@ -6904,6 +7023,30 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#14-deoxy-11.12-dihydroandrographolide -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#14-deoxy-11.12-dihydroandrographolide">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#14-deoxy-12-hydroxyandrographolide -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#14-deoxy-12-hydroxyandrographolide">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#14-deoxyandrographolide -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#14-deoxyandrographolide">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#16-hydroxy-N4-demethylalstophyllal_oxindole -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#16-hydroxy-N4-demethylalstophyllal_oxindole">
@@ -6979,6 +7122,14 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7.4&apos;-dimethoxy-6.8-dimethylflavone -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7.4&apos;-dimethoxy-6.8-dimethylflavone">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#5.2&apos;-dihydroxy-7.8-dimethoxyflavone -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#5.2&apos;-dihydroxy-7.8-dimethoxyflavone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
     </owl:NamedIndividual>
     
