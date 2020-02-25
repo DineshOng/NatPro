@@ -33,6 +33,8 @@ public class TextCleaner {
         text = text.replaceAll("′","'");
         
         text = text.replaceAll("–","-");
+        text = text.replaceAll("−","-");
+        
         text = text.replaceAll("”","");
         text = text.replaceAll("“","");
         

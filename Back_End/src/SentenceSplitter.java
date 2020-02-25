@@ -30,10 +30,17 @@ public class SentenceSplitter {
 
         annotation = new Annotation(text);
         pipeline.annotate(annotation);
+        
+        //String []sent = text.split("\\. [A-Z][a-z]{2,}");
 
         for (CoreMap sentence : annotation.get(CoreAnnotations.SentencesAnnotation.class)) {
             sstext +=  sentence + "\n\n";
         }
+        
+        /*
+        for(String s : sent) {
+        	sstext +=  s + "\n\n";
+        }*/
 
         endTime = System.nanoTime ();
         System.err.println("[Sentence Splitter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");

@@ -17,6 +17,7 @@ flavone
 methane
 sterol
  ester
+xylins
 thoxy
 dione
 phyll
@@ -31,6 +32,7 @@ solic
 mitin
 sides
 phane
+solin
 enol
 nate
 mate
