@@ -18,8 +18,8 @@
                     <li><a href="2upload.html">Upload</a></li>
                     <li><a href="3add.html">Add</a></li>
                     <li><a href="4validation.html">Validation</a></li>
-                    <li><a href="5search.html" class="white-text green darken-3">Search</a></li>
-                    <li><a href="6view.html">View</a></li>
+                    <li><a href="5search.html">Search</a></li>
+                    <li><a href="6view.html" class="white-text green darken-3">View</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="sidenav">
@@ -27,39 +27,45 @@
                     <li><a href="2upload.html">Upload</a></li>
                     <li><a href="3add.html">Add</a></li>
                     <li><a href="4validation.html">Validation</a></li>
-                    <li><a href="5search.html" class="white-text green darken-3">Search</a></li>
-                    <li><a href="6view.html">View</a></li>
+                    <li><a href="5search.html">Search</a></li>
+                    <li><a href="6view.html" class="white-text green darken-3">View</a></li>
                 </ul>
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
         </nav>
-        <div class="section no-pad-bot" id="index-banner">
+        <div class="section no-pad-bot green darken-1" id="index-banner">
             <div class="container">
                 <!--<br><br>-->
-                <h1 class="header center green-text text-darken-3">Search</h1>
-                <div class="row center">
-                    <h6>Search for plants, chemical compound, etc.</h6>
+                <div class="center">
+                    <span class="white-text" style="padding-right:100px">(view by)</span>
+                    <h1 class="header center white-text" id="noMarginTop">Genus</h1>
                 </div>
-                <br><br>
-                <form class="row" action="#">
-                    <div class="input-field col s9">
-                        <i class="material-icons prefix">search</i>
-                        <input id="searchInput" class="materialize-textarea" type="text">
-                        <label for="searchInput">Search</label>
+                <div class="row center white-text">
+                    <table class="stripped highlight">
+                        <thead>
+                            <tr>
+                                <th>Genus</th>
+                                <th>Family</th>
+                                <th>Species</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Genus</td>
+                                <td>Family</td>
+                                <td>Species</td>
+                                <td><i class="material-icons right">edit</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--
+                    <div class="row center">
+                        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light green darken-3">Get Started</a>
                     </div>
-                    <div class="input-field col s3">
-                        <select class="browser-default">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">plant common name</option>
-                            <option value="2">plant scientific name</option>
-                            <option value="3">genus</option>
-                            <option value="4">family</option>
-                            <option value="5">chemical compound</option>
-                            <option value="6">location</option>
-                            <option value="7">biological activites</option>
-                        </select>
-                    </div>
-                </form>
+                    <br><br>
+                -->
             </div>
         </div>
 
@@ -133,10 +139,6 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/init.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('select').formSelect();
-            })
-        </script>
+
     </body>
 </html>

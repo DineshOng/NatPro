@@ -59,3 +59,7 @@ footer.page-footer {
 #btnSubmit {
     color: white;
 }
+
+#noMarginTop {
+    margin-top: 0;
+}
