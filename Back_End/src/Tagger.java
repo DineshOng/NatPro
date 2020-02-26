@@ -48,6 +48,7 @@ public class Tagger {
             
             txt = new CompoundNameExpander("compound", txt).run();
             
+            /*
             String taggedTxt = "";
             String []str = txt.split("\n\n");
             
@@ -87,7 +88,7 @@ public class Tagger {
              */
             
             java.io.FileWriter fw = new java.io.FileWriter(filename.replaceAll(".pdf", "-")+uniqueID+".xml");
-	        fw.write(taggedTxt);
+	        fw.write(txt);
 	        fw.close();	
         }
 	}

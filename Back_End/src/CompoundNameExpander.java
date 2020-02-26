@@ -15,7 +15,7 @@ public class CompoundNameExpander {
 	}
 	
 	public String run() {
-		pattern = Pattern.compile("(<compound>([A-Za-z0-9\\[\\(\\]\\),':-]+)<\\/compound>) (([XIV]{1,3},? ?)+(and [XIV]{1,3})?)\\b");
+		pattern = Pattern.compile("(<compound>([A-Za-z0-9\\[\\(\\]\\),':-]+)<\\/compound>) (([XIV]{1,3},? ?)+(and [XIV]{1,3})?)\\b[^-]");
 		matcher = pattern.matcher(text);
 		
 		while(matcher.find()) {
@@ -45,7 +45,7 @@ public class CompoundNameExpander {
 			text = text.replaceAll(temp, out);
 		}
 		
-		pattern = Pattern.compile("(<compound>([A-Za-z0-9\\[\\(\\]\\),':-]+)<\\/compound>) (([A-Da-d],? ?)+(and [A-Da-d])?)\\b");
+		pattern = Pattern.compile("(<compound>([A-Za-z0-9\\[\\(\\]\\),':-]+)<\\/compound>) (([A-Da-d],? ?)+(and [A-Da-d])?)\\b[^-]");
 		matcher = pattern.matcher(text);
 		
 		while(matcher.find()) {
@@ -71,6 +71,39 @@ public class CompoundNameExpander {
 			if(temp.charAt(temp.length() - 1) == ',') {
 				out += ", ";
 			}
+			
+			text = text.replaceAll(temp, out);
+		}
+		
+		pattern = Pattern.compile("(<compound>([A-Za-z0-9\\[\\(\\]\\),':-]+)<\\/compound>) ([A-Z]-[A-Z])\\b");
+		matcher = pattern.matcher(text);
+		
+		while(matcher.find()) {
+			System.out.println(matcher.group()+">>"+matcher.group(2)+">>"+matcher.group(3));
+			String []letters = matcher.group(3).split("-");
+			char start = (char)letters[0].charAt(0);
+			char end = (char)letters[1].charAt(0);
+			
+			int diff = end-start;
+			
+			for(int i=0; i<=diff; i++) {
+				System.out.println(matcher.group(2) + " " + (char)(start+i));
+			}
+			
+			String out = "";
+			
+			for(int i=0; i<=diff; i++) {
+				if(i!=diff)
+					out += "<" + tag + ">" + matcher.group(2) + " " + (char)(start+i) + "</" + tag + ">, ";
+				else
+					out += "<" + tag + ">" + matcher.group(2) + " " + (char)(start+i) + "</" + tag + ">";
+				if(i==diff-1)
+					out += " and ";
+			}
+			
+			System.err.println(out);
+			
+			String temp = matcher.group();
 			
 			text = text.replaceAll(temp, out);
 		}

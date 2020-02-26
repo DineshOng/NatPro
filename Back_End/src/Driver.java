@@ -22,12 +22,12 @@ public class Driver {
         startTime = System.nanoTime();
 		
         
-        new Tagger("de.pdf");
+        //new Tagger("de.pdf");
 		//new Tagger("am.pdf");
         //new Tagger("ap.pdf");
-        //new Tagger("hm.pdf");
+        new Tagger("hm.pdf");
         
-        
+        //new Tagger("dg.pdf");
         //new Tagger("bo.pdf");
         
 		endTime = System.nanoTime();
