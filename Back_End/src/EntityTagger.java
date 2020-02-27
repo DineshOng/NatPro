@@ -72,7 +72,7 @@ public class EntityTagger {
 	public void printEntityFrequencyCount() {
 		for(String i : map.keySet()) {
 			System.out.println("value: " + map.get(i) + "\tkey: " + i);
-	     }
+		}
 	}
 	
 	public EntityTagger resolveHiddenEntities() {
