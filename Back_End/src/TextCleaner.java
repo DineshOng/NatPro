@@ -83,7 +83,7 @@ public class TextCleaner {
             text = text.replace(m.group(), m.group().replaceAll("\\.", " "));
         }
         
-        p = Pattern.compile("([A-Za-z]+\\.)[0-9]+\\s?([A-Za-z-]+)");
+        p = Pattern.compile("([A-Za-z]+\\.)[0-9]+\\s?([A-Za-z]+)");
         m = p.matcher(text);
         while(m.find()) {
             //System.err.println(m.group());
@@ -133,6 +133,16 @@ public class TextCleaner {
         	//System.err.println(m.group());
             text = text.replace(m.group(), m.group(1).replaceAll("\\.", "") + m.group(2));
         }
+        
+        
+        // word.1-5
+        p = Pattern.compile("([a-z\\)]+\\.) ?[0-9]-[0-9]");
+        m = p.matcher(text);
+        while(m.find()) {
+        	//System.err.println(m.group());
+            text = text.replace(m.group(), m.group(1));
+        }
+        
         
         // word. 28
         p = Pattern.compile("([a-z\\)]+\\.) ?[0-9]+");
