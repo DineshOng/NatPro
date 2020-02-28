@@ -52,14 +52,15 @@ public class SentenceSplitter {
         
         sstext = text;
         
-        
-        Pattern pattern = Pattern.compile("[a-z]+\\. ?([A-Z][a-z]+|[0-9])");
+        Pattern pattern = Pattern.compile("[A-Za-z\\)]{2,}\\. ([A-Z][a-z]+|[0-9])");
         Matcher matcher = pattern.matcher(sstext);
         while(matcher.find()) {
         	//System.err.println(m.group());
         	String str = matcher.group().replaceAll("\\.", "\\.\n\n");
-        	sstext = sstext.replaceAll(matcher.group(), str);
+        	sstext = sstext.replaceAll(matcher.group().replaceAll("\\)", "\\\\)"), str);
         }
+        
+        sstext = sstext.replaceAll(" \\. ", ".\n\n");
         
 
         endTime = System.nanoTime ();

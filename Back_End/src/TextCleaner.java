@@ -42,16 +42,20 @@ public class TextCleaner {
         
         text = text.replaceAll("_+", " ");
         
-        text = text.replaceAll("INTRODUCTION", ".\n");
-        text = text.replaceAll("Introduction", ".\n");
-        text = text.replaceAll("RESUTS AND DISCUSSION", ".\n");
-        text = text.replaceAll("RESULTS AND DISCUSSION", ".\n");
-        text = text.replaceAll("Results and Discussion", ".\n");
-        text = text.replaceAll("CONCLUSION", ".\n");
-        text = text.replaceAll("Conclusion", ".\n");
-        text = text.replaceAll("ACKNOWLEDGEMENT", ".\n");
-        text = text.replaceAll("Acknowledgement", ".\n");
         
+        text = text.replaceAll("ABSTRACT", "\\.\n");
+        text = text.replaceAll("Abstract", "\\.\n");
+        text = text.replaceAll("INTRODUCTION", "\\.\n");
+        text = text.replaceAll("Introduction", "\\.\n");
+        text = text.replaceAll("RESUTS AND DISCUSSION", "\\.\n");
+        text = text.replaceAll("RESULTS AND DISCUSSION", "\\.\n");
+        text = text.replaceAll("Results and Discussion", "\\.\n");
+        text = text.replaceAll("CONCLUSION", "\\.\n");
+        text = text.replaceAll("Conclusion", "\\.\n");
+        text = text.replaceAll("ACKNOWLEDGEMENT", "\\.\n");
+        text = text.replaceAll("Acknowledgement", "\\.\n");
+        
+       
         text = text.replaceAll("(References?|REFERENCES?).*", "");
         
         text = text.replaceAll("[^\\x00-\\x7F]", "");
@@ -140,6 +144,8 @@ public class TextCleaner {
         
         // Replaces double or more spaces into single space
         text = text.replaceAll("\\s{2,}", " ");
+        
+        //text = text.replaceAll("\\s\\.\\s", "\n");
         
         endTime = System.nanoTime ();
         System.err.println("[Text Cleaner] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");

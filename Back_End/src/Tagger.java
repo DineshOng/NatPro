@@ -32,7 +32,10 @@ public class Tagger {
             String cleanTxt = new TextCleaner(text).cleanText().getText();
             String txt = new SentenceSplitter(cleanTxt).getSentenceSplitText();
             
-            java.io.FileWriter fw = new java.io.FileWriter(filename.replaceAll(".pdf", "-")+uniqueID+".txt");
+            java.io.FileWriter fw = new java.io.FileWriter("texts\\txt" + filename.replaceAll(".pdf", "-")+uniqueID+".txt");
+	        fw.write(text);
+	        
+	        fw = new java.io.FileWriter("texts\\clean" + filename.replaceAll(".pdf", "-")+uniqueID+".txt");
 	        fw.write(cleanTxt);
            
             

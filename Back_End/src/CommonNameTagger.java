@@ -52,7 +52,9 @@ public class CommonNameTagger extends EntityTagger {
 		}
 		
 		for(String p: phrases) {
-			text = text.replaceAll(p, "<" + tag + ">" + p + "</" + tag + ">");
+			String ps[] = p.split("(and)|(or)");
+			for(String s : ps)
+				text = text.replaceAll(s.trim(), "<" + tag + ">" + s.trim() + "</" + tag + ">");
 		}
 		
 		return text;
