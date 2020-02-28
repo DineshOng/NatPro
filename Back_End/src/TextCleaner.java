@@ -1,6 +1,8 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import edu.stanford.nlp.ling.Word;
+
 public class TextCleaner {
     String text = "";
 
@@ -41,21 +43,27 @@ public class TextCleaner {
         text = text.replaceAll("_+", " ");
         
         text = text.replaceAll("INTRODUCTION", ".\n");
+        text = text.replaceAll("Introduction", ".\n");
         text = text.replaceAll("RESUTS AND DISCUSSION", ".\n");
         text = text.replaceAll("RESULTS AND DISCUSSION", ".\n");
+        text = text.replaceAll("Results and Discussion", ".\n");
         text = text.replaceAll("CONCLUSION", ".\n");
+        text = text.replaceAll("Conclusion", ".\n");
+        text = text.replaceAll("ACKNOWLEDGEMENT", ".\n");
+        text = text.replaceAll("Acknowledgement", ".\n");
+        
+        text = text.replaceAll("(References?|REFERENCES?).*", "");
         
         text = text.replaceAll("[^\\x00-\\x7F]", "");
         text = text.replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");
         text = text.replaceAll("\\p{C}", "");
         
-        // Replaces double or more spaces into single space
-        text = text.replaceAll("\\s{2,}", " ");
+        
         
         // Remove references in brackets hello[20,22].
         text = text.replaceAll("\\[[0-9,]+\\]", "");
 
-        text = text.replaceAll("(References?|REFERENCES?).*", "");
+        
 
         //Pattern p = Pattern.compile("(\\.[0-9]+(,[0-9]+)?) ([A-Z]+)");
         Pattern p = Pattern.compile("(\\.[0-9]+(,[0-9]+)?)\\s?([A-Z]+)");
@@ -68,14 +76,17 @@ public class TextCleaner {
         m = p.matcher(text);
         while(m.find()) {
             //System.err.println(m.group());
-            text = text.replace(m.group(), m.group().replaceAll("\\.", ""));
+            text = text.replace(m.group(), m.group().replaceAll("\\.", " "));
         }
         
-        p = Pattern.compile("([A-Za-z]+\\.)[0-9]+\\s?([A-Za-z]+)");
+        p = Pattern.compile("([A-Za-z]+\\.)[0-9]+\\s?([A-Za-z-]+)");
         m = p.matcher(text);
         while(m.find()) {
             //System.err.println(m.group());
-            text = text.replace(m.group(), m.group(1) + m.group(2) + " ");
+        	String str = m.group(2);
+        	String cap = str.substring(0, 1).toUpperCase() + str.substring(1);
+        	
+            text = text.replace(m.group(), m.group(1) + " " + cap + " ");
         }
         
         // Remove references ex. (Hauert et al., 1974), (Naeem, 2017)
@@ -118,6 +129,17 @@ public class TextCleaner {
         	//System.err.println(m.group());
             text = text.replace(m.group(), m.group(1).replaceAll("\\.", "") + m.group(2));
         }
+        
+        // word. 28
+        p = Pattern.compile("([a-z\\)]+\\.) ?[0-9]+");
+        m = p.matcher(text);
+        while(m.find()) {
+        	//System.err.println(m.group());
+            text = text.replace(m.group(), m.group(1)+" ");
+        }
+        
+        // Replaces double or more spaces into single space
+        text = text.replaceAll("\\s{2,}", " ");
         
         endTime = System.nanoTime ();
         System.err.println("[Text Cleaner] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");

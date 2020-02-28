@@ -1,5 +1,10 @@
 import edu.stanford.nlp.pipeline.*;
+
+import java.util.Arrays;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import edu.stanford.nlp.util.CoreMap;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreAnnotations;
@@ -23,6 +28,7 @@ public class SentenceSplitter {
 
         this.text = text;
 
+        /*
         Properties props=new Properties();
         props.put("annotators", "tokenize, ssplit");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
@@ -32,15 +38,29 @@ public class SentenceSplitter {
         pipeline.annotate(annotation);
         
         //String []sent = text.split("\\. [A-Z][a-z]{2,}");
+        
+        //System.out.println(Arrays.toString("text".split("(?<=[A-Z]?[a-z]+\\. ?")));
 
         for (CoreMap sentence : annotation.get(CoreAnnotations.SentencesAnnotation.class)) {
             sstext +=  sentence + "\n\n";
         }
         
-        /*
+        
         for(String s : sent) {
         	sstext +=  s + "\n\n";
         }*/
+        
+        sstext = text;
+        
+        
+        Pattern pattern = Pattern.compile("[a-z]+\\. ?([A-Z][a-z]+|[0-9])");
+        Matcher matcher = pattern.matcher(sstext);
+        while(matcher.find()) {
+        	//System.err.println(m.group());
+        	String str = matcher.group().replaceAll("\\.", "\\.\n\n");
+        	sstext = sstext.replaceAll(matcher.group(), str);
+        }
+        
 
         endTime = System.nanoTime ();
         System.err.println("[Sentence Splitter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");

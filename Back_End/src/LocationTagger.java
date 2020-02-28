@@ -28,8 +28,8 @@ public class LocationTagger extends EntityTagger {
                 n = (n == null) ? 1 : ++n;
                 map.put(text.substring(trip.second, trip.third), n);
                 
-            } else {
-            	//System.out.println(text.substring(trip.second, trip.third));
+            } else if(trip.first.equals("PERSON")) {
+            	System.err.println(text.substring(trip.second, trip.third));
             }
         }
         

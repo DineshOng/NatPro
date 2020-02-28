@@ -23,9 +23,9 @@ public class Driver {
 		
         
         //new Tagger("de.pdf");
-		//new Tagger("am.pdf");
+		new Tagger("am.pdf");
         //new Tagger("ap.pdf");
-        new Tagger("hm.pdf");
+        //new Tagger("hm.pdf");
         
         //new Tagger("dg.pdf");
         //new Tagger("bo.pdf");

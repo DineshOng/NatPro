@@ -31,6 +31,9 @@ public class Tagger {
         	String text = new PDFtoTXT(filename).convertedText();
             String cleanTxt = new TextCleaner(text).cleanText().getText();
             String txt = new SentenceSplitter(cleanTxt).getSentenceSplitText();
+            
+            java.io.FileWriter fw = new java.io.FileWriter(filename.replaceAll(".pdf", "-")+uniqueID+".txt");
+	        fw.write(cleanTxt);
            
             
             txt = new CommonNameTagger("aka", txt).run();
@@ -88,7 +91,7 @@ public class Tagger {
             //new CompoundTagger(tagger.hideTaggedEntities().getText(), "compound");
              */
             
-            java.io.FileWriter fw = new java.io.FileWriter(filename.replaceAll(".pdf", "-")+uniqueID+".xml");
+            fw = new java.io.FileWriter(filename.replaceAll(".pdf", "-")+uniqueID+".xml");
 	        fw.write(txt);
 	        fw.close();	
         }

@@ -33,7 +33,7 @@ public class CompoundNameResolution {
 			String compound = "";
 			if(matcher.group(3)!=null) {
 				//compound = matcher.group(7)+":\t"+matcher.group(2)+" "+matcher.group(3);
-				compound = matcher.group(2)+" "+matcher.group(3);
+				compound = matcher.group(2).trim()+" "+matcher.group(3).trim();
 				System.out.println(matcher.group(7)+":\t"+compound);
 				compoundsByName.put(compound, matcher.group(7));
 				compoundsByCode.put(matcher.group(7), compound);
@@ -43,7 +43,7 @@ public class CompoundNameResolution {
                 map.put(matcher.group(7).trim(), n);
                 
                 //text = text.replaceAll(matcher.group(6).trim(), "");
-                System.out.println(matcher.group(6).trim());
+                //System.out.println(matcher.group(6).trim());
 			} else {
 				//compound = matcher.group(7)+":\t"+matcher.group(2);
 				compound = matcher.group(2);
@@ -56,7 +56,7 @@ public class CompoundNameResolution {
                 map.put(matcher.group(7).trim(), n);
                 
                 //text = text.replaceAll(matcher.group(6).trim(), "");
-                System.out.println(matcher.group(6).trim());
+                //System.out.println(matcher.group(6).trim());
 			}
 		}
 		
@@ -65,8 +65,10 @@ public class CompoundNameResolution {
 		for(String i : map.keySet()) {
 			System.out.println("value: " + map.get(i) + "\tkey: " + i);
 			
-			text = text.replaceAll("\\b" + i + "\\b", "<" + tag + ">" + compoundsByCode.get(i) + "</" + tag + ">");
+			text = text.replaceAll("[^-]\\b" + i + "\\b[^-]", " <" + tag + ">" + compoundsByCode.get(i) + "</" + tag + "> ");
 		}
+		
+		text = text.replaceAll(" {2}", " ");
 		
 		return text;
 	}
