@@ -47,6 +47,7 @@ public class Tagger {
             txt = new CompoundTagger("compound", txt, "compound-suffix.txt", "20k.txt").run();
             
             txt = new CompoundNameExpander("compound", txt).run();
+            txt = new CompoundNameResolution("compound", txt).run();
             
             /*
             String taggedTxt = "";
