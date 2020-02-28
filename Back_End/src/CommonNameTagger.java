@@ -53,8 +53,9 @@ public class CommonNameTagger extends EntityTagger {
 		
 		for(String p: phrases) {
 			String ps[] = p.split("(and)|(or)");
-			for(String s : ps)
+			for(String s : ps) {
 				text = text.replaceAll(s.trim(), "<" + tag + ">" + s.trim() + "</" + tag + ">");
+			}
 		}
 		
 		return text;

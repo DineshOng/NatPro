@@ -4,7 +4,10 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.apache.commons.math.util.OpenIntToDoubleHashMap.Iterator;
+import org.xml.sax.SAXException;
 
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
@@ -24,7 +27,7 @@ public class Tagger {
         return false;
     }
 	
-	public Tagger(String filename) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, JWNLException {
+	public Tagger(String filename) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, JWNLException, ParserConfigurationException, SAXException {
 		String uniqueID = new GenUniqueDocID2(filename).getUniqueID();
         
         if(checkDocument(uniqueID, filename) || true) {
@@ -32,11 +35,17 @@ public class Tagger {
             String cleanTxt = new TextCleaner(text).cleanText().getText();
             String txt = new SentenceSplitter(cleanTxt).getSentenceSplitText();
             
-            java.io.FileWriter fw = new java.io.FileWriter("texts\\txt" + filename.replaceAll(".pdf", "-")+uniqueID+".txt");
+            java.io.FileWriter fw = new java.io.FileWriter("texts\\txt " + filename.replaceAll(".pdf", "-")+uniqueID+".txt");
 	        fw.write(text);
+	        fw.close();
 	        
-	        fw = new java.io.FileWriter("texts\\clean" + filename.replaceAll(".pdf", "-")+uniqueID+".txt");
-	        fw.write(cleanTxt);
+	        java.io.FileWriter fw1 = new java.io.FileWriter("texts\\clean " + filename.replaceAll(".pdf", "-")+uniqueID+".txt");
+	        fw1.write(cleanTxt);
+	        fw1.close();
+	        
+	        java.io.FileWriter fw2 = new java.io.FileWriter("texts\\ssplit " + filename.replaceAll(".pdf", "-")+uniqueID+".txt");
+	        fw2.write(txt);
+	        fw2.close();
            
             
             txt = new CommonNameTagger("aka", txt).run();
@@ -54,6 +63,8 @@ public class Tagger {
             
             txt = new CompoundNameExpander("compound", txt).run();
             txt = new CompoundNameResolution("compound", txt).run();
+            
+            txt = new Coref(txt).run();
             
             /*
             String taggedTxt = "";
@@ -94,9 +105,15 @@ public class Tagger {
             //new CompoundTagger(tagger.hideTaggedEntities().getText(), "compound");
              */
             
-            fw = new java.io.FileWriter(filename.replaceAll(".pdf", "-")+uniqueID+".xml");
-	        fw.write(txt);
-	        fw.close();	
+            String notag = txt.replaceAll("<\\/?[a-z]+>", "");
+            
+            java.io.FileWriter fw3 = new java.io.FileWriter("texts\\notag " + filename.replaceAll(".pdf", "-")+uniqueID+".txt");
+	        fw3.write(notag);
+	        fw3.close();	
+            
+	        java.io.FileWriter fw4 = new java.io.FileWriter(filename.replaceAll(".pdf", "-")+uniqueID+".xml");
+	        fw4.write(txt);
+	        fw4.close();	
         }
 	}
 }

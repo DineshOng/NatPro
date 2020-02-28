@@ -25,8 +25,11 @@ public class TextCleaner {
         
         //text = text.replaceAll("-\\s","");
         //text = text.replaceAll("\\s\n"," ");
+        text = text.replaceAll(". α"," Alpha");
         text = text.replaceAll("α","alpha");
+        text = text.replaceAll(". β"," Beta");
         text = text.replaceAll("β","beta");
+        text = text.replaceAll(". γ"," Gamma");
         text = text.replaceAll("γ","gamma");
         
         text = text.replaceAll("Ñ","N");
@@ -90,7 +93,7 @@ public class TextCleaner {
         	String str = m.group(2);
         	String cap = str.substring(0, 1).toUpperCase() + str.substring(1);
         	
-            text = text.replace(m.group(), m.group(1) + " " + cap + " ");
+            text = text.replace(m.group(), m.group(1) + " " + cap);
         }
         
         // Remove references ex. (Hauert et al., 1974), (Naeem, 2017)
