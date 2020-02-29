@@ -3,7 +3,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ReadLexiconFile {
 	private List<String> contents;
@@ -42,6 +44,11 @@ public class ReadLexiconFile {
 
 	public List<String> getContents() {
 		return (ArrayList<String>) contents;
+	}
+	
+	public HashSet<String> getContentsInHash() {
+		Set<String> hSet = new HashSet<String>(contents); 
+		return (HashSet<String>) hSet;
 	}
 
 	public void setContents(List<String> contents) {

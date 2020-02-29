@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,7 +21,7 @@ public class CompoundTagger extends LookUpEntityTagger {
 	private List<String> compounds;
 	private Map<String, Integer> map;
 	private Oscar oscar;
-	private HashSet<String> words;
+	private Set<String> words;
 	//private List<String> final_compounds;
 	
 	public CompoundTagger(String tag, String text, String filename, String commonWords) throws IOException {
@@ -28,23 +29,8 @@ public class CompoundTagger extends LookUpEntityTagger {
         
         map = new HashMap<>();
         compounds = new ArrayList<String>();
-        words = new HashSet<String>();
+        words = new ReadLexiconFile(commonWords).getContentsInHash();
         oscar = new Oscar();
-        
-        BufferedReader reader;
-
-        reader = new BufferedReader(new FileReader(commonWords));
-        String line = reader.readLine();
-        while (line != null) {
-
-            if(!line.equals("")) {
-            	words.add(line);
-            }
-
-            line = reader.readLine();
-        }
-
-        reader.close();
         //findEntities();
         
         //sortEntities();
@@ -108,7 +94,7 @@ public class CompoundTagger extends LookUpEntityTagger {
 		for(String i : map.keySet()) {
 			if(oscar.findNamedEntities(i).size()!=0 || !words.contains(i.toLowerCase()) ) {
 				if(oscar.findNamedEntities(i).size()!=0) {
-					if(!words.contains(i.toLowerCase())) {
+					if(!words.contains(i.toLowerCase()) && !i.matches("^[A-Z]+$")) {
 						//System.err.print("TRUE ");
 						System.err.print("value: " + map.get(i) + "\tkey: " + i + "\n");
 						c++;

@@ -2,12 +2,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 public class SpeciesTagger extends LookUpEntityTagger {
+	private Set<String> words;
 	
 	public SpeciesTagger(String tag, String text, String filename) throws IOException {
 		super(tag, text, filename);
+		
+		words = new ReadLexiconFile("google-10k.txt").getContentsInHash();
 	}
 	
 	public String run() throws IOException {
@@ -34,13 +38,10 @@ public class SpeciesTagger extends LookUpEntityTagger {
 		
 		for (String i : map.keySet()) {
             //System.out.println("value: " + map.get(i) + "\tkey: " + i);
-            if(map.get(i)<5 && i.length()==2) {	// Removes species with 2 capital letters that has less than 5 frequency count
-            	getFound_entities().remove(i);
-                System.out.println("Removed: "+ i);
-            } else if(i.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") && i.length()==2) { // Removes Roman Numeral found as species
+            if(i.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$") && i.length()==2) { // Removes Roman Numeral found as species
             	getFound_entities().remove(i);
 	            System.out.println("Removed: "+ i);
-            } else if(i.split(" ").length==2 && stopwords.contains(i.split(" ")[1])) {
+            } else if(i.split(" ").length==2 && (stopwords.contains(i.split(" ")[1]) || words.contains(i.split(" ")[1]))) {
             	getFound_entities().remove(i);
 	            System.out.println("Removed: "+ i);
             }

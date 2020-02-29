@@ -29,11 +29,11 @@ public class Driver {
         //new Tagger("de.pdf");
 		//new Tagger("am.pdf");
         //new Tagger("ap.pdf");
-        new Tagger("hm.pdf");
+        //new Tagger("hm.pdf");
         
         //new Tagger("dg.pdf");
         //new Tagger("pn.pdf");
-        //new Tagger("bo.pdf");
+        new Tagger("bo.pdf");
         
 		endTime = System.nanoTime();
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
