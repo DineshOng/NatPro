@@ -25,11 +25,11 @@ public class TextCleaner {
         
         //text = text.replaceAll("-\\s","");
         //text = text.replaceAll("\\s\n"," ");
-        text = text.replaceAll(". α"," Alpha");
+        text = text.replaceAll("\\. α"," Alpha");
         text = text.replaceAll("α","alpha");
-        text = text.replaceAll(". β"," Beta");
+        text = text.replaceAll("\\. β"," Beta");
         text = text.replaceAll("β","beta");
-        text = text.replaceAll(". γ"," Gamma");
+        text = text.replaceAll("\\. γ"," Gamma");
         text = text.replaceAll("γ","gamma");
         
         text = text.replaceAll("Ñ","N");

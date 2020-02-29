@@ -49,7 +49,10 @@ public class Tagger {
            
             
             txt = new CommonNameTagger("aka", txt).run();
+            
             txt = new SpeciesTagger("plant", txt, "genus.txt").run();
+            txt = new SpeciesNameResolution(txt).run();
+            
             txt = new LocationTagger("loc", txt).run();
             txt = new BioActivityTagger("bioact", txt, "bioact.txt").run();
             txt = new SpeciesFamilyTagger("family", txt, "family.txt").run();
@@ -59,12 +62,14 @@ public class Tagger {
             txt = new BodyPartTagger("bodypart", txt, "bodypart.txt").run();
             txt = new PreparationTagger("prep", txt, "prep.txt").run();
             txt = new IllnessTagger("illness", txt, "illness.txt").run();
-            txt = new CompoundTagger("compound", txt, "compound-suffix.txt", "20k.txt").run();
             
+            txt = new CompoundTagger("compound", txt, "compound-suffix.txt", "20k.txt").run();
             txt = new CompoundNameExpander("compound", txt).run();
             txt = new CompoundNameResolution("compound", txt).run();
             
             txt = new Coref(txt).run();
+            
+            
             
             /*
             String taggedTxt = "";
