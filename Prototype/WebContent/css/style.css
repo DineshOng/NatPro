@@ -63,3 +63,7 @@ footer.page-footer {
 #noMarginTop {
     margin-top: 0;
 }
+
+#tableSmallWidth {
+    width: 50%;
+}
