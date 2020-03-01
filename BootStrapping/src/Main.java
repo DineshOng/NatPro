@@ -1,3 +1,9 @@
+import net.didion.jwnl.JWNL;
+import net.didion.jwnl.data.IndexWord;
+import net.didion.jwnl.data.POS;
+import net.didion.jwnl.data.Synset;
+import net.didion.jwnl.data.Word;
+import net.didion.jwnl.dictionary.Dictionary;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -10,6 +16,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -80,15 +87,37 @@ public class Main {
         try {
             Scanner scan = new Scanner(verbFile);
             while(scan.hasNextLine()){
-                if(relation.contains(scan.nextLine())) {
-                    relation = scan.nextLine();
+                String currLine = scan.nextLine();
+                if(relation.contains(currLine)) {
+                    relation = currLine;
                     System.out.println(relation);
                 }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        ArrayList<String> matches = new ArrayList<String>();
+        //==========================
+        try {
+            // initialize JWNL (this must be done before JWNL can be used)
+            JWNL.initialize(new FileInputStream("file_properties.xml"));
+            IndexWord word = Dictionary.getInstance().lookupIndexWord(POS.VERB, relation);
 
+            Synset synset[] = word.getSenses();
+
+            for(int i=0;i<synset.length;i++){
+                //System.out.println(word.getSenses());
+                for(Word synonym : synset[i].getWords())
+                {
+                    matches.add(synonym.getLemma());
+                }
+                //System.out.println(" ");
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        //===========================
 
         try {
             bufReader.close();
@@ -101,20 +130,22 @@ public class Main {
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document = documentBuilder.newDocument();
 
-            Element element = document.createElement("Seed");
-            document.appendChild(element);
 
-            Element A = document.createElement("Tag1");
-            A.appendChild(document.createTextNode(temp[1]));
-            element.appendChild(A);
+                Element element = document.createElement("Seed");
+                document.appendChild(element);
+            for(String ms: matches) {
+                Element A = document.createElement("Tag1");
+                A.appendChild(document.createTextNode(temp[1]));
+                element.appendChild(A);
 
-            Element B = document.createElement("Tag2");
-            B.appendChild(document.createTextNode(temp[3]));
-            element.appendChild(B);
+                Element B = document.createElement("Tag2");
+                B.appendChild(document.createTextNode(temp[3]));
+                element.appendChild(B);
 
-            Element C = document.createElement("Relation");
-            C.appendChild(document.createTextNode(relation));
-            element.appendChild(C);
+                Element C = document.createElement("Relation");
+                C.appendChild(document.createTextNode(ms));
+                element.appendChild(C);
+            }
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
