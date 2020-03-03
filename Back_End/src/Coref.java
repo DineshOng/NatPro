@@ -36,7 +36,7 @@ public class Coref {
 			Pattern p = Pattern.compile("<([a-z]+)>([^<]+)<\\/[a-z]+>");
 			Matcher m = p.matcher(sentences[i]);
 			
-			if(!sentences[i].contains("It")) {
+			if(!sentences[i].contains("It") || !sentences[i].matches("[Tt]he plant") || !sentences[i].matches("[Tt]he tree") || !sentences[i].matches("[Tt]he sample")) {
 				while(m.find()) {
 					if(m.group(1).equals("compound") || m.group(1).equals("plant")) {
 						subject = m.group();
@@ -47,7 +47,15 @@ public class Coref {
 					
 				}
 			} else {
-				sentences[i] = sentences[i].replaceAll("It", subject);
+				if(sentences[i].contains("It")) {
+					sentences[i] = sentences[i].replaceAll("It", subject);
+				} else {
+					if(subject.contains("plant")) {
+						sentences[i] = sentences[i].replaceAll("[Tt]he plant", subject);
+						sentences[i] = sentences[i].replaceAll("[Tt]he tree", subject);
+						sentences[i] = sentences[i].replaceAll("[Tt]he sample", subject);
+					}
+				}
 			}
 			System.out.println(sentences[i].trim());
 		}

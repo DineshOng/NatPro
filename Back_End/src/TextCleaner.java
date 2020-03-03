@@ -43,7 +43,7 @@ public class TextCleaner {
         text = text.replaceAll("”","");
         text = text.replaceAll("“","");
         
-        text = text.replaceAll("_+", " ");
+        text = text.replaceAll("_+", "\\.\n");
         
         
         text = text.replaceAll("ABSTRACT", "\\.\n");

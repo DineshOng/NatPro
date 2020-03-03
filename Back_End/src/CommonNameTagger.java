@@ -23,7 +23,7 @@ public class CommonNameTagger extends EntityTagger {
 		String phrase = "";
 		for(String word: words) {
 			//System.out.println(word);
-        	if(word.endsWith("VBN") && (word.contains("known") || word.contains("called"))) {
+        	if(word.endsWith("VBN") && (word.contains("known") || word.contains("called")  || word.contains("marketed"))) {
         		phrase += " ";
         	} else if(phrase.length()!=0  && word.endsWith("JJ") && (phrase.trim().endsWith("NN") || phrase.trim().endsWith("NNS"))) {
         		continue;
