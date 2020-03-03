@@ -7,6 +7,7 @@
  fatty acids
  fatty acid
  cinnamate
+cinnamate
  benzoate
  acetate
 phylline
@@ -33,6 +34,7 @@ mitin
 sides
 phane
 solin
+diene
 enol
 nate
 mate
@@ -46,6 +48,7 @@ tate
 late
 oate
 llyl
+diol
 one
 bin
 ene
