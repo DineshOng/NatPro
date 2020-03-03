@@ -1571,6 +1571,7 @@
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#indonesia"/>
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#malaysia"/>
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#philippines"/>
+        <datatypeProperty_MedicinalPlant>batino</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
     
 
@@ -1913,6 +1914,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brocolli">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic"/>
+        <datatypeProperty_MedicinalPlant>brocolli</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
     
 
@@ -4528,6 +4530,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum"/>
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#philippines"/>
+        <datatypeProperty_MedicinalPlant>ivory mahogany</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
     
 
@@ -5488,6 +5491,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mustard">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea"/>
+        <datatypeProperty_MedicinalPlant>mustard</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
     
 
@@ -5998,6 +6002,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#radish">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus"/>
+        <datatypeProperty_MedicinalPlant>radish</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
     
 
@@ -6008,6 +6013,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus_deglupta"/>
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#philippines"/>
+        <datatypeProperty_MedicinalPlant>rainbow eucalyptus</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
     
 
@@ -6058,6 +6064,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#red_cabbage">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra"/>
+        <datatypeProperty_MedicinalPlant>red cabbage</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
     
 
@@ -6936,6 +6943,7 @@
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#negros"/>
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#palawan"/>
         <isLocatedIn rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#rizal"/>
+        <datatypeProperty_MedicinalPlant>wax plant</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
     
 
@@ -7172,6 +7180,9 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#green/white_cabbage">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea"/>
+        <datatypeProperty_MedicinalPlant>green cabbage</datatypeProperty_MedicinalPlant>
+        <datatypeProperty_MedicinalPlant>green/white cabbage</datatypeProperty_MedicinalPlant>
+        <datatypeProperty_MedicinalPlant>white cabbage</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
 </rdf:RDF>
 
