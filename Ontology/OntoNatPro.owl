@@ -819,6 +819,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alstonia_macrophylla_bark"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alstonia_macrophylla_leaf"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alstonia_macrophylla_plant"/>
+        <datatypeProperty_Synonym>Alstonia macrophylla</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -884,6 +885,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alstonia"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alstonia_scholaris_plant"/>
+        <datatypeProperty_Synonym>Alstonia scholaris</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -952,6 +954,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_pods"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_roots"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#andrographis_paniculata_stems"/>
+        <datatypeProperty_Synonym>Andrographis paniculata</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1169,6 +1172,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#apayao">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
+        <datatypeProperty_Location>Apayao</datatypeProperty_Location>
     </owl:NamedIndividual>
     
 
@@ -1817,6 +1821,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_stem"/>
+        <datatypeProperty_Synonym>Brassica oleracea</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1851,6 +1856,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var._italic_stem"/>
+        <datatypeProperty_Synonym>Brassica oleracea var. Italic</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -5414,6 +5420,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#mindoro">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
+        <datatypeProperty_Location>Mindoro</datatypeProperty_Location>
     </owl:NamedIndividual>
     
 
@@ -5517,6 +5524,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#myanmar">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
+        <datatypeProperty_Location>Myanmar</datatypeProperty_Location>
     </owl:NamedIndividual>
     
 
@@ -5533,6 +5541,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#negros">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
+        <datatypeProperty_Location>Negros</datatypeProperty_Location>
     </owl:NamedIndividual>
     
 
@@ -5778,6 +5787,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#panay_islands">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
+        <datatypeProperty_Location>Panay Islands</datatypeProperty_Location>
     </owl:NamedIndividual>
     
 
@@ -7180,9 +7190,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#green/white_cabbage">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <hasScientificName rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea"/>
-        <datatypeProperty_MedicinalPlant>green cabbage</datatypeProperty_MedicinalPlant>
         <datatypeProperty_MedicinalPlant>green/white cabbage</datatypeProperty_MedicinalPlant>
-        <datatypeProperty_MedicinalPlant>white cabbage</datatypeProperty_MedicinalPlant>
     </owl:NamedIndividual>
 </rdf:RDF>
 
