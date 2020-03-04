@@ -1,4 +1,6 @@
-Journal of Applied Pharmaceutical Science Vol. (03), pp 073-081, March, 2019 Available online at http://www.japsonline.com DOI: 10.7324/JAPS.2019. ISSN 2231-3354 The anti-venom potential of Andrographis paniculata (Burm.f.) Nees roots and its constituent skullcapflavone I Maria Carmen S. Tan1*, Raymond S. Malabed,2, Francisco C. Franco Jr. , Yves Ira A. Reyes, Daisylyn Senna Tan1, Glenn G. Oyong, Chien-Chang Shen, Consolacion Y. Ragasa,5 1Chemistry Department, De La Salle University, Manila, Philippines.
+Journal of Applied Pharmaceutical Science Vol. (03), pp 073-081, March, 2019 Available online at http://www.japsonline.com DOI: 10.7324/JAPS.2019.
+
+ ISSN 2231-3354 The anti-venom potential of Andrographis paniculata Burmf Nees roots and its constituent skullcapflavone I Maria Carmen S. Tan1*, Raymond S. Malabed,2, Francisco C. Franco Jr. , Yves Ira A. Reyes, Daisylyn Senna Tan1, Glenn G. Oyong, Chien-Chang Shen, Consolacion Y. Ragasa,5 1Chemistry Department, De La Salle University, Manila, Philippines.
 
  Department of Chemistry, Graduate School of Science, Osaka University, 1-1 Machikaneyama, Toyonaka, Osaka, Japan.
 
@@ -14,7 +16,11 @@ The anti-venom activity of Andrographis paniculata Burmf Nees roots (APR) dichlo
 
  Gas chromatographymass spectrometry was used for the characterization of extracts, while molecular docking was utilized to understand anti-venom properties.
 
- Chromatographic analyses primarily revealed the presence of methoxylated flavones. NPV was found to have sPLA activity (0.0796 0.0018 mol/minutes/ml) that has been attributed to the poisonous effects. SKI (IC50: 51.1 3.5 g/ml), isolated from APR showed strong inhibitory effect on phospholipase activity compared with dichloromethane extracts of APR (IC50: 192.7 10.9 g/ml) indicating that SKI was the cause of the bioactivity in APR.
+ Chromatographic analyses primarily revealed the presence of methoxylated flavones.
+
+ NPV was found to have sPLA activity (0.0796 0.0018 mol/minutes/ml) that has been attributed to the poisonous effects.
+
+ SKI (IC50: 51.1 3.5 g/ml), isolated from APR showed strong inhibitory effect on phospholipase activity compared with dichloromethane extracts of APR (IC50: 192.7 10.9 g/ml) indicating that SKI was the cause of the bioactivity in APR.
 
  Molecular docking simulations showed corresponding results with highly negative binding energies (-6.59 to -8.72 kcal/mol) predicted for the binding of SKI to PLA2 proteins.
 
@@ -28,21 +34,31 @@ It was estimated that 5.4 million snake bites result annually with subsequent 1.
 
 Mortality rates due to snake bite poisoning is from 81,410 to 137,880 yearly and the incidence of permanent disabilities and limb amputations are three times as much as morbidity.
 
-Highly affected are those in communities where access to medical health care and production of anti-venom immunoglobulins (ASVS) with appropriate immunogens is difficult, especially in marginalized rural areas in lowand middle-income households (Gutirrez et al., 2017). Cytotoxins of snake venom comprise nucleases, which hydrolyze and modify the activity of membrane-bound phosphodiester bonds of DNA, phospholipases, and enzymes.
+Highly affected are those in communities where access to medical health care and production of anti-venom immunoglobulins (ASVS) with appropriate immunogens is difficult, especially in marginalized rural areas in lowand middle-income households.
+
+Cytotoxins of snake venom comprise nucleases, which hydrolyze and modify the activity of membrane-bound phosphodiester bonds of DNA, phospholipases, and enzymes.
 
 The multiplex of venom components is able to depolarize excitable membranes which in turn hydrolyze phosphodiester bonds, heart cells, and neurons which manifests as hemolysis, cytotoxicity, and of disruption of the nervous system.
 
-Venom proteases can degrade physiological substrates such as casein, hemoglobin, and fibrinogen which can manifest neurotoxic, myotoxic, cytolytic, edematic, cardiotoxic, *Corresponding Author Maria Carmen S. Tan, De La Salle University, Manila, Philippines. E-mail: maria.carmen.tan @ dlsu.edu.ph 2019 Maria Carmen S. Tan et al.
+Venom proteases can degrade physiological substrates such as casein, hemoglobin, and fibrinogen which can manifest neurotoxic, myotoxic, cytolytic, edematic, cardiotoxic, *Corresponding Author Maria Carmen S. Tan, De La Salle University, Manila, Philippines.
 
- This is an open access article distributed under the terms of the Creative Commons Attribution 4. International License (https://creativecommons.org/licenses/by/4.0/). Legend: Organism (family, genus, species) Organism common name Oraganism part Natural Products Location Biological Activity Inhibitors Illness Compound class Tan et al. / Journal of Applied Pharmaceutical Science 9 (03); 2019: 073-081 074 and anticoagulant effects (Fatima and Fatah, 2014). Short neurotoxin 1 was isolated from and found to be the major lethal component of Naja philippinensis Taylor or the Philippine spitting cobra.
+ E-mail: maria.carmen.tan @ dlsu.edu.ph 2019 Maria Carmen S. Tan et al.
+
+ This is an open access article distributed under the terms of the Creative Commons Attribution 4. International License (https://creativecommons.org/licenses/by/4.0/). Legend: Organism (family, genus, species) Organism common name Oraganism part Natural Products Location Biological Activity Inhibitors Illness Compound class Tan et al. / Journal of Applied Pharmaceutical Science 9 (03); 2019: 073-081 074 and anticoagulant effects (Fatima and Fatah, 2014).
+
+ Short neurotoxin 1 was isolated from and found to be the major lethal component of Naja philippinensis Taylor or the Philippine spitting cobra.
 
 Since ASVS is not readily available in all hospitals whether private or public, victims would sometimes require transportation to specific facilities such as the Research Institute of Tropical Medicine (RITM) in the Philippines.
 
- In such case, an immediate response is hampered which is essential since neurotoxicity can occur after 60 minutes after incidence depending on the virility and inoculation of envenomation (Brunda and Sashidhar, 2007). Plant inhibitors of snake venom have been reported to behave as antitoxins in envenomings.
+ In such case, an immediate response is hampered which is essential since neurotoxicity can occur after 60 minutes after incidence depending on the virility and inoculation of envenomation (Brunda and Sashidhar, 2007).
+
+ Plant inhibitors of snake venom have been reported to behave as antitoxins in envenomings.
 
 The king of bitters, Andrographis paniculata Burmf Nees, has been used for centuries to treat a variety of diseases such as respiratory infections, fever, herpes, sore throat and a variety of other chronic and infectious diseases.
 
-Its major constituents are diterpenoids, flavonoids, and polyphenols (Chao and Lin, 2010). Our earlier research reported the isolation of 14-deoxy-12-hydroxyandrographolide, 14-deoxyandrographolide, and 14-deoxy-11,12-dihydroandrographolide from the leaves of A. paniculata.
+Its major constituents are diterpenoids, flavonoids, and polyphenols (Chao and Lin, 2010).
+
+ Our earlier research reported the isolation of 14-deoxy-12-hydroxyandrographolide, 14-deoxyandrographolide, and 14-deoxy-11,12-dihydroandrographolide from the leaves of A. paniculata.
 
 We also reported the isolation of andrographolide, 14-deoxyandrographolide, 14-deoxy-12-hydroxyandrographolide, beta-sitosterol, stigmasterol, and chlorophyll a from the leaves; beta-sitosterol, stigmasterol, 5,2'-dihydroxy-7,8-dimethoxyflavone, long chain trans-cinnamate esters, and beta-sitosteryl fatty acid esters from the roots; beta-sitosterol, monogalactosyl diacylglycerols, lupeol, and triacylglycerols from the pods; and 14-deoxyandrographolide from the stems of A. paniculata.
 
@@ -52,7 +68,9 @@ In this work, we established the phospholipase activity of N. philippinensis ven
 
  Molecular docking simulations were performed between SKI to a phospholipase structure (PLA2) from Naja sp acquired from the protein data bank (PDB) to analyze binding affinities and possible stereochemical noncovalent bonding.
 
- To the best of our knowledge, this is the first reported study using this methodology of gas chromatographic analyses, secretory phospholipase A2 (sPLA) activity, and docking and cluster analyses (PLA2 with SKI) against the aforementioned venom. MATERIALS AND METHODS Plant material Andrographis paniculata family Acanthaceae plants were grown and harvested from Bataan, Philippines.
+ To the best of our knowledge, this is the first reported study using this methodology of gas chromatographic analyses, secretory phospholipase A2 (sPLA) activity, and docking and cluster analyses (PLA2 with SKI) against the aforementioned venom.
+
+ MATERIALS AND METHODS Plant material Andrographis paniculata family Acanthaceae plants were grown and harvested from Bataan, Philippines.
 
  The plant was authenticated at the Botany Division, Philippine National Museum.
 
@@ -62,13 +80,17 @@ In this work, we established the phospholipase activity of N. philippinensis ven
 
  The dried extracts were dissolved in 1 ml of DCM for GC-EI-MS analyses.
 
- Structures derived were analyzed for peak area from the percent total of the sum of corrected areas. SKI was previously isolated as reported in a prior work.
+ Structures derived were analyzed for peak area from the percent total of the sum of corrected areas.
+
+ SKI was previously isolated as reported in a prior work.
 
 An Agilent GC MS 7890B with a HP-5 ms (5% phenyl methyl siloxane) Ultra Inert column (30 m 250 mm 0.25 mm) with helium as a gas carrier was used for the triplicate analyses of the volatile constituents.
 
  The flow rate of the helium gas was set at 1.0587 ml/minutes, pressure was made to be at 9.4889 psi, with an average velocity of 37.862 cm/second and hold time of 1.3206 minutes.
 
- The initial set point temperature was at 70C. The program was as followed: first ramp was set at 2C/minutes to 135C and held for 10 minutes, second ramp had a rate of 4C/ minutes to 220C and held for 10 minutes, and finall , the last ramp had a rate of 3. C/minutes to 270C and held for 37 minutes.
+ The initial set point temperature was at 70C.
+
+ The program was as followed: first ramp was set at 2C/minutes to 135C and held for 10 minutes, second ramp had a rate of 4C/ minutes to 220C and held for 10 minutes, and finall , the last ramp had a rate of 3. C/minutes to 270C and held for 37 minutes.
 
  Compound identification was done using the National Institute of Standards and Technology (NIST) library, 2.0 and peak areas (% of total) was processed from the resultant total ion chromatograms.
 
@@ -76,7 +98,9 @@ An Agilent GC MS 7890B with a HP-5 ms (5% phenyl methyl siloxane) Ultra Inert co
 
  The retention indices were computed for all the volatile constituents utilzing a homologous series of n-alkanes sPLA activity of N. philippinensis venom The secretory phospholipase A2 (sPLA) activity of NPV was assessed using a commercially available kit (Secretory Phospholipase A2 Assay Kit Cat.
 
- No ab133089) purchased from Abcam (Cambridge, UK). PLA2 (EC 3.1.1.4) is responsible for the hydrolysis at the sn-2 position of phospholipids producing a lysophospholipid and a free fatty acid.
+ No ab133089) purchased from Abcam (Cambridge, UK).
+
+ PLA2 (EC 3.1.1.4) is responsible for the hydrolysis at the sn-2 position of phospholipids producing a lysophospholipid and a free fatty acid.
 
  The PLA-induced release of arachidonic acid from membrane phospholipids is believed to have a major role in the control of eicosanoid production in cells.
 
@@ -140,11 +164,17 @@ An Agilent GC MS 7890B with a HP-5 ms (5% phenyl methyl siloxane) Ultra Inert co
 
  Ltd., Ibaraki, Japan) at an absorbance of 414 nm.
 
- The inhibitory effect was determined by calculating the sPLA activity as described earlier using Eq. (1). In addition, the %inhibition was determined as shown in Eq. (2), based on the calculated sPLA activities.
+ The inhibitory effect was determined by calculating the sPLA activity as described earlier using Eq. (1).
+
+ In addition, the %inhibition was determined as shown in Eq. (2), based on the calculated sPLA activities.
 
  The concentration of extracts inducing 50% inhibition (IC50) was also reported. - X X X % inhibition = 100CONTROL SAMPLE CONTROL (2) XCONTROL sPLA Activity of positive control (100 g/l NPV) XSAMPLE sPLA Activity in the presence of inhibitor (plant extracts) *The absorbance values were corrected against the blank sample (DMSO).
 
- Computational methods Several protein candidates which are known to be present in the venom of N. philippinensis: phospholipases, neurotoxins, and cardiotoxins were initially screened using Autodock Vina (Trott and Olsen, 2009). Top protein target candidates (PDB IDs: 1LN8, 1S6B, 1PSH, and 1A3F) from the screening were further analyzed using AutoDock 4.0 (Morris et al., 2009). The structure of SKI was docked into the candidates using Lamarkian Genetic Search algorithm.
+ Computational methods Several protein candidates which are known to be present in the venom of N. philippinensis: phospholipases, neurotoxins, and cardiotoxins were initially screened using Autodock Vina (Trott and Olsen, 2009).
+
+ Top protein target candidates (PDB IDs: 1LN8, 1S6B, 1PSH, and 1A3F) from the screening were further analyzed using AutoDock 4.0.
+
+The structure of SKI was docked into the candidates using Lamarkian Genetic Search algorithm.
 
  Blind docking was done by defining a grid box that encompasses the entire protein structure for each target.
 
@@ -158,7 +188,9 @@ Characterization of dichloromethane extracts GC-EI-MS analyses of the dichlorome
 
  The results are listed in Table 1 according to their elution order on a HP-5ms column, as visualized on Figure 1. The sample consisted primarily of methoxylated flavones: 5,2'-dihydroxy-7,8-dimethoxyflavone (4.85%), 4H-1-benzopyran-4-one, 2-(3,4-dimethoxyphenyl)-5,6-dihydroxy-7,8-dimethoxy-(3.21%), and 4H-1-benzopyran-4-one, 2-(3,4-dimethoxyphenyl)-5-hydroxy-3,6,7-trimethoxy-(0.79%); a flavonoid glycoside [4H-1-benzopyran-4-one, 7-(beta-D-glucopyranosyloxy)-5-hydroxy-2-(3-hydroxy-4-methoxyphenyl)-] which was the base peak (10.11%); fatty acids: n-hexadecanoic acid (3.08 %) and 9,12-octadecadienoic acid (Z,Z)(1.06%); sterols: androst-4-ene-3,17-dione (0.94%), stigmasterol (4.51%), and gamma-sitosterol (3.08%); a diarylethene ether, 3,3',4,4'-tetramethoxystilbene (4.91%); a polyprenol, 1,6,10,14,18,22-tetracosahexaen-3-ol, 2,6,10,15,19,23-hexamethyl-, (all-E)(1.32%); a lignan, yangambin (0.71%); an aryl isocyanate, 3,5-dimethylphenyl isocyanate (0.86%); an alkyl ester, propanoic acid, 2-methyl-, 1-(1,1-dimethylethyl)-2-methyl-1,3-propanediyl ester (0.35%); and two constituents with diverse functional groups: benzaldehyde, 4-hydroxy-3,5-dimethoxy-, [(4-hydroxy-3,5-dimethoxyphenyl)methylene]hydrazine (5.30%) and 2H,8H-benzo[1,2-b:5,4-b'] Tan et al. / Journal of Applied Pharmaceutical Science 9 (03); 2019: 073-081 076 Table 1. The chemical composition of APR DCM extracts.
 
- Peak number RT (minute) X SD Compoundb RIa % peak area Functionality 1 21.10 0.054 3,5-Dimethylphenyl isocyanate 1333 0. Aryl isocyanate 2 36.78 0. Propanoic acid, 2-methyl-, 1-(1,1-dimethylethyl)-2-methyl-1,3-propanediyl ester 1597 0. Alkyl ester 3 57.78 0.074 n-Hexadecanoic acid 1953 3. Saturated fatty acid 4 61.34 0.83 9,12-Octadecadienoic acid (Z,Z)2135 1.06 polyunsaturated fatty acid 5 74.07 0.0039 4H-1-Benzopyran-4-one, 7-(beta-D-glucopyranosyloxy)-5-hydroxy-2-(3-hydroxy-4-methoxyphenyl)2524 10. Flavonoid glycoside 6 75.46 1.03 3,3',4,4'-Tetramethoxystilbene 2542 4. Diarylethene ether 7 81.59 0.0033 5,2'-Dihydroxy-7,8-dimethoxyflavone 2748 4. Methoxyflavone 8 85.52 0. Androst-4-ene-3,17-dione, 12-hydroxy-, bis(O-methyloxime), (12beta)2893 0. Androsterone 9 87.40 0. Benzaldehyde, 4-hydroxy-3,5-dimethoxy-, [(4-hydroxy-3,5-dimethoxyphenyl)methylene]hydrazone 2975 5. Diverse functional groups 10 88.32 0.056 1,6,10,14,18,22-Tetracosahexaen-3-ol, 2,6,10,15,19,23-hexamethyl-, (all-E)3014 1. Polyprenol 11 92.91 0.15 2H,8H-Benzo[1,2-b:5,4-b]dipyran-10-propanoic acid, 5-methoxy-2,2,8,8-tetramethyl-, methyl ester 3188 1. Diverse functional groups 12 94.05 0.095 4H-1-Benzopyran-4-one, 2-(3,4-dimethoxyphenyl)-5,6-dihydroxy-7,8-dimethoxy 3. Methoxyflavone 13 95.53 0. Stigmasterol 3261 4. Phytosterol 14 95.73 0.27 4H-1-Benzopyran-4-one, 2-(3,4-dimethoxyphenyl)-5-hydroxy-3,6,7-trimethoxy 0. Methoxyflavone 15 97.64 0.16 gamma-Sitosterol 3319 3. Phytosterol 16 113.62 0. Yangambin 3548 0. Furofuran lignan aRetention index (HP-5ms column). bCompounds listed in order of elution from a HP-5ms column.
+ Peak number RT minute X SD Compoundb RIa % peak area Functionality 1 21.10 0.054 3,5-Dimethylphenyl isocyanate 1333 0. Aryl isocyanate 2 36.78 0. Propanoic acid, 2-methyl-, 1-(1,1-dimethylethyl)-2-methyl-1,3-propanediyl ester 1597 0. Alkyl ester 3 57.78 0.074 n-Hexadecanoic acid 1953 3. Saturated fatty acid 4 61.34 0.83 9,12-Octadecadienoic acid (Z,Z)2135 1.06 polyunsaturated fatty acid 5 74.07 0.0039 4H-1-Benzopyran-4-one, 7-(beta-D-glucopyranosyloxy)-5-hydroxy-2-(3-hydroxy-4-methoxyphenyl)2524 10.
+
+ Flavonoid glycoside 6 75.46 1.03 3,3',4,4'-Tetramethoxystilbene 2542 4. Diarylethene ether 7 81.59 0.0033 5,2'-Dihydroxy-7,8-dimethoxyflavone 2748 4. Methoxyflavone 8 85.52 0. Androst-4-ene-3,17-dione, 12-hydroxy-, bis(O-methyloxime), (12beta)2893 0. Androsterone 9 87.40 0. Benzaldehyde, 4-hydroxy-3,5-dimethoxy-, [(4-hydroxy-3,5-dimethoxyphenyl)methylene]hydrazone 2975 5. Diverse functional groups 10 88.32 0.056 1,6,10,14,18,22-Tetracosahexaen-3-ol, 2,6,10,15,19,23-hexamethyl-, (all-E)3014 1. Polyprenol 11 92.91 0.15 2H,8H-Benzo[1,2-b:5,4-b']dipyran-10-propanoic acid, 5-methoxy-2,2,8,8-tetramethyl-, methyl ester 3188 1. Diverse functional groups 12 94.05 0.095 4H-1-Benzopyran-4-one, 2-(3,4-dimethoxyphenyl)-5,6-dihydroxy-7,8-dimethoxy 3. Methoxyflavone 13 95.53 0. Stigmasterol 3261 4. Phytosterol 14 95.73 0.27 4H-1-Benzopyran-4-one, 2-(3,4-dimethoxyphenyl)-5-hydroxy-3,6,7-trimethoxy 0. Methoxyflavone 15 97.64 0.16 gamma-Sitosterol 3319 3. Phytosterol 16 113.62 0. Yangambin 3548 0. Furofuran lignan aRetention index (HP-5ms column). bCompounds listed in order of elution from a HP-5ms column.
 
  Figure 1. Total ion chromatogram of dichloromethane extract of APR with numbered constituents.
 
@@ -192,21 +224,29 @@ However, the amount of sPLA responsible for the hydrolysis of the substrate cann
 
  Inhibitory sPLA activity of APR and SKI The sPLA activities in the presence of inhibitors were determined similarly using Eq. (1) and compared with that of NPV in the absence of inhibitors (0.0837 0.0017 mol/minutes/ml).
 
- The roots showed the high activity as exhibited by the IC50 value at 192.7 10.9 g/ml. SKI, isolated from APR, also displayed strong inhibitory effect on phospholipase activity with an IC50 value of 51.1 3.5 g/ml (Fig. ). Due to the low IC50 concentration, it can be presumed that SKI induced the perceived bioactivity.
+ The roots showed the high activity as exhibited by the IC50 value at 192.7 10.9 g/ml.
 
- Flavones have been found to have anti-venom activity such as that of the flavonoid extract of the root bark of Parinari curatellifolia which was indicated to offer significant protection (p < 0.05) against Echis carinatus venom at a dose of 237 mg/kg (Omale et al., 2012). Pure compounds such as aristolochic acid from herbal sources have been found to increase the immune response and decrease lytic and edematose action of some phospholipases of snake venoms.
+ SKI, isolated from APR, also displayed strong inhibitory effect on phospholipase activity with an IC50 value of 51.1 3.5 g/ml (Fig. ). Due to the low IC50 concentration, it can be presumed that SKI induced the perceived bioactivity.
+
+ Flavones have been found to have anti-venom activity such as that of the flavonoid extract of the root bark of Parinari curatellifolia which was indicated to offer significant protection (p < 0.05) against Echis carinatus venom at a dose of 237 mg/kg.
+
+Pure compounds such as aristolochic acid from herbal sources have been found to increase the immune response and decrease lytic and edematose action of some phospholipases of snake venoms.
 
 Coumestan and steroids such as beta-sitosterol and stigmasterol (derived from the methanolic root extract of Pluchea indica) circumvented lipid peroxidation and superoxide dismutase activity induced by venom inoculation.
 
 Catequines, flavones, anthocyanines, and condensed tannins were observed to inhibit hemorrhage induced by Bothrops asper venom and was correlated to the chelation of the zinc in metalloproteinases.
 
-The leaf powder of A. paniculata along with other plants is traditionally used in Tamil Nadu, India as an oral concoction in envenomings (Srivastava and Pandey, 2006). In the Khamti tribe of Arunachal Pradesh, India, A. paniculata seed powder is administered orally as Figure 2. A hierarchically clustered heat map of the components found in dichloromethane extracts of APR.
+The leaf powder of A. paniculata along with other plants is traditionally used in Tamil Nadu, India as an oral concoction in envenomings (Srivastava and Pandey, 2006).
+
+ In the Khamti tribe of Arunachal Pradesh, India, A. paniculata seed powder is administered orally as Figure 2. A hierarchically clustered heat map of the components found in dichloromethane extracts of APR.
 
  Each column represents a compound in Table 1 labeled with its corresponding peak number.
 
  Rows represent the RI and the percent peak area.
 
- Tan et al. / Journal of Applied Pharmaceutical Science 9 (03); 2019: 073-081 078 an antidote for snake bites (Das and Hui, 2006). Ethanolic extract of A. paniculata has been reported to exhibit anti-inflammatory activity and inhibitory/neutralizing effect on sPLA, however, only few attempts have been done to determine the potent compound responsible for this activity.
+ Tan et al. / Journal of Applied Pharmaceutical Science 9 (03); 2019: 073-081 078 an antidote for snake bites (Das and Hui, 2006).
+
+ Ethanolic extract of A. paniculata has been reported to exhibit anti-inflammatory activity and inhibitory/neutralizing effect on sPLA, however, only few attempts have been done to determine the potent compound responsible for this activity.
 
 In this work, SKI and APR have shown inhibitory activities against sPLA although there were no previous reports of the aforementioned.
 
@@ -216,7 +256,9 @@ The snake venom neutralization by constituents of plants like A. paniculata root
 
  Molecular docking of SKI with PLA2 The summary of docking and cluster analysis using AutoDock 4.0 is shown in Table 2. The best candidates after the screening are the phospholipase A2 (PLA2) homologues.
 
- Four structures (1LN8, 1S6B, 1PSH, and 1A3F) were chosen for further docking analysis and the best-docked conformation of SKI for each target is shown in Figure 6. These are all crystal structures of PLA2 proteins found in the venom of Napa sp. LN8 and 1S6B are different isoforms of PLA2 from Naja sagittifera.
+ Four structures (1LN8, 1S6B, 1PSH, and 1A3F) were chosen for further docking analysis and the best-docked conformation of SKI for each target is shown in Figure 6. These are all crystal structures of PLA2 proteins found in the venom of Napa sp.
+
+ LN8 and 1S6B are different isoforms of PLA2 from Naja sagittifera.
 
  While 1LN8 was crystallized as a monomer Figure 3. The chemical structure of SKI (a) with assigned atom numbers and (b) 3-D molecule.
 
@@ -224,15 +266,25 @@ The snake venom neutralization by constituents of plants like A. paniculata root
 
  Linear regression analysis gave the value of change in absorbance (A414) as the slope.
 
- Tan et al. / Journal of Applied Pharmaceutical Science 9 (03); 2019: 073-081 079 with free bound Ca2+, 1S6B was crystallized as a dimer where the bound calcium ions (Ca2+) of the monomers are relocated from the calcium binding domain to the intermolecular space where they are supposed to be responsible for dimerization (Jabeen et al., 2005) and thus, the Ca2+ ions are not able to interact with a ligand.
+ Tan et al. / Journal of Applied Pharmaceutical Science 9 (03); 2019: 073-081 079 with free bound Ca2+, 1S6B was crystallized as a dimer where the bound calcium ions (Ca2+) of the monomers are relocated from the calcium binding domain to the intermolecular space where they are supposed to be responsible for dimerization and thus, the Ca2+ ions are not able to interact with a ligand.
 
- 1PSH and 1A3F are the crystal structures of PLA2 from N. naja.
+ PSH and 1A3F are the crystal structures of PLA2 from N. naja.
 
- 1PSH was crystallized with the bound Ca2+ intact, while 1A3F was crystallized independently under Ca2+-free conditions (Fremont et al., 1993; Segelke et al., 1998). As seen in Table 2, highly negative binding energies are predicted for the binding of skullcapflavone to PLA2 proteins.
+ PSH was crystallized with the bound Ca2+ intact, while 1A3F was crystallized independently under Ca2+-free conditions (Fremont et al., 1993; Segelke et al., 1998).
+
+ As seen in Table 2, highly negative binding energies are predicted for the binding of skullcapflavone to PLA2 proteins.
 
  The negative binding energies are due to the various non-bonding interactions of SKI with the active site residues of the four proteins.
 
- For SKI-1LN8, H14 interacted with the carbonyl carbon of Leu2 and H7 interacted with the carbonyl of Phe22. For SKI-1S6B, O3 interacted with the side chain NH3 + of Lys64 and H14 interacted with the carbonyl of Thr2. For SKI1PSH, H14 interacted with the carbonyl of Asp148, O6 interacted with the imidazole group of His47, O4 interacted with the amino H of Gly31. Finally, for SKI-1A3F, H14 interacted with the carbonyl group of Gly29 and O1 interacted with the phenol OH of Tyr63. The strong non-bonding interactions between SKI and the proteins suggested that it is highly likely for SKI to inhibit PLA2 proteins.
+ For SKI-1LN8, H14 interacted with the carbonyl carbon of Leu2 and H7 interacted with the carbonyl of Phe22.
+
+ For SKI-1S6B, O3 interacted with the side chain NH3 + of Lys64 and H14 interacted with the carbonyl of Thr2.
+
+ For SKI1PSH, H14 interacted with the carbonyl of Asp148, O6 interacted with the imidazole group of His47, O4 interacted with the amino H of Gly31.
+
+ Finally, for SKI-1A3F, H14 interacted with the carbonyl group of Gly29 and O1 interacted with the phenol OH of Tyr63.
+
+ The strong non-bonding interactions between SKI and the proteins suggested that it is highly likely for SKI to inhibit PLA2 proteins.
 
  Thus, the observed experimental anti-venom properties of the compound could be attributed to the inhibition of PLA2 of Figure 5. Inhibitory effect of APR and SKI against sPLA activity.
 
@@ -240,7 +292,9 @@ The snake venom neutralization by constituents of plants like A. paniculata root
 
  Species PLA2 homologues No of conformations Highest binding energy (kcal/mol) 1LN8 Cluster 1 101 -8. Cluster 2 6 -7. Naja sagittifera Cluster 3 14 -7.50 1S6B Cluster 1 16 -7. Cluster 2 3 -6. Cluster 3 2 -6.59 1PSH Cluster 1 74 -8. Cluster 2 44 -8. Naja naja Cluster 3 39 -7.86 1A3F Cluster 1 70 -7. Cluster 2 69 -7. Cluster 3 38 -7. Tan et al. / Journal of Applied Pharmaceutical Science 9 (03); 2019: 073-081 080 N. philippinensis.
 
- It is known that PLA2 are critical compounds for snake venoms, as they facilitate the lysis of cell membranes of prey cells (Gutirrez and Lomonte, 1995). Therefore, the inhibition of PLA2 proteins can reasonably explain the decreased venomous activity of the snake venom in the presence of SKI.
+ It is known that PLA2 are critical compounds for snake venoms, as they facilitate the lysis of cell membranes of prey cells (Gutirrez and Lomonte, 1995).
+
+ Therefore, the inhibition of PLA2 proteins can reasonably explain the decreased venomous activity of the snake venom in the presence of SKI.
 
  From Table 2, it can be observed that proteins which contain a free bound Ca2+ (1LN8 and 1PSH) have a higher binding energy compared to proteins with no free bound Ca2+ (1S6B and 1A3F) available to interact with the ligand.
 
@@ -254,7 +308,9 @@ In summation, NPV sPLA activity was confirme with a calculated activity of 0.079
 
  This was typical for venoms extracted from related Naja species.
 
-Antivenom activity was proved through the inhibition of sPLA activity by APR (IC50: 192.7 10.9 g/ml) and SKI isolated from APR (IC50: 51.1 3.5 g/ml). SKI had a lower IC50 suggesting that SKI was the active component of APRs anti-venom effects.
+Antivenom activity was proved through the inhibition of sPLA activity by APR (IC50: 192.7 10.9 g/ml) and SKI isolated from APR (IC50: 51.1 3.5 g/ml).
+
+ SKI had a lower IC50 suggesting that SKI was the active component of APR's anti-venom effects.
 
  Further molecular docking analysis showed highly negative binding energies for the binding of SKI to PLA2 proteins which suggested the inhibitory potential of SKI.
 

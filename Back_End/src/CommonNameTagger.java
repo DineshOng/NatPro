@@ -23,7 +23,7 @@ public class CommonNameTagger extends EntityTagger {
 		String phrase = "";
 		for(String word: words) {
 			//System.out.println(word);
-        	if(word.endsWith("VBN") && (word.contains("known") || word.contains("called")  || word.contains("marketed"))) {
+        	if(word.endsWith("VBN") && ((word.contains("known") || word.contains("called")  || word.contains("marketed")))) {
         		phrase += " ";
         	} else if(phrase.length()!=0  && word.endsWith("JJ") && (phrase.trim().endsWith("NN") || phrase.trim().endsWith("NNS"))) {
         		continue;
@@ -33,6 +33,8 @@ public class CommonNameTagger extends EntityTagger {
         	} else if(phrase.length()!=0 && word.endsWith("IN")) {
         		continue;
         	} else {
+        		if(!phrase.equals(""))
+        			System.out.println(phrase);
         		if(phrase.split(" ").length>1)
         			phrases.add(phrase.trim().replaceAll("_[A-Z]+", ""));
         		phrase = "";
@@ -44,6 +46,17 @@ public class CommonNameTagger extends EntityTagger {
 		return phrases.toArray(new String[phrases.size()]);
 	}
 	
+	public String putPOS() {
+		String[] sentences = text.split("\n\n");
+		String text = "";
+		
+		for(String sentence: sentences) {
+			text += mt.tagString(sentence) + "\n\n";
+		}
+		
+		return text;
+	}
+	
 	public String run() {
 		String[] sentences = text.split("\n\n");
 		
@@ -51,9 +64,13 @@ public class CommonNameTagger extends EntityTagger {
 			find(mt.tagString(sentence));
 		}
 		
+		System.out.println(phrases.toString());
+		
 		for(String p: phrases) {
-			String ps[] = p.split("(and)|(or)");
+			System.out.println(p);
+			String ps[] = p.split("( and )|( or )");
 			for(String s : ps) {
+				System.out.println(s);
 				text = text.replaceAll(s.trim(), "<" + tag + ">" + s.trim() + "</" + tag + ">");
 			}
 		}

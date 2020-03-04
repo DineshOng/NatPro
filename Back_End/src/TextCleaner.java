@@ -21,15 +21,16 @@ public class TextCleaner {
         //text = text.replaceAll("-@-@","");
         //text = text.replaceAll("@-@"," ");
 
-        
+        // Replaces double or more spaces into single space
+        text = text.replaceAll("\\s{2,}", " ");
         
         //text = text.replaceAll("-\\s","");
         //text = text.replaceAll("\\s\n"," ");
-        text = text.replaceAll("\\. α"," Alpha");
+        text = text.replaceAll("\\. α",". Alpha");
         text = text.replaceAll("α","alpha");
-        text = text.replaceAll("\\. β"," Beta");
+        text = text.replaceAll("\\. β",". Beta");
         text = text.replaceAll("β","beta");
-        text = text.replaceAll("\\. γ"," Gamma");
+        text = text.replaceAll("\\. γ",". Gamma");
         text = text.replaceAll("γ","gamma");
         
         text = text.replaceAll("Ñ","N");
@@ -40,6 +41,8 @@ public class TextCleaner {
         text = text.replaceAll("–","-");
         text = text.replaceAll("−","-");
         
+        
+        text = text.replaceAll("’","'");
         text = text.replaceAll("”","");
         text = text.replaceAll("“","");
         
@@ -59,7 +62,7 @@ public class TextCleaner {
         text = text.replaceAll("Acknowledgement", "\\.\n");
         
        
-        text = text.replaceAll("(References?|REFERENCES?).*", "");
+        
         
         text = text.replaceAll("[^\\x00-\\x7F]", "");
         text = text.replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");
@@ -154,6 +157,8 @@ public class TextCleaner {
         	//System.err.println(m.group());
             text = text.replace(m.group(), m.group(1)+" ");
         }
+        
+        text = text.replaceAll("((References)|(REFERENCES)).*", "");
         
         // Replaces double or more spaces into single space
         text = text.replaceAll("\\s{2,}", " ");

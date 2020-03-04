@@ -65,7 +65,7 @@ public class CompoundNameResolution {
 		for(String i : map.keySet()) {
 			System.out.println("value: " + map.get(i) + "\tkey: " + i);
 			
-			text = text.replaceAll("[^->'%,:]\\b" + i + "\\b[^->'%,:]", " <" + tag + ">" + compoundsByCode.get(i) + "</" + tag + "> ");
+			text = text.replaceAll("[^->'%,:]\\b" + i + "\\b[^->'%:]", " <" + tag + ">" + compoundsByCode.get(i) + "</" + tag + "> ");
 		}
 		
 		text = text.replaceAll(" {2}", " ");

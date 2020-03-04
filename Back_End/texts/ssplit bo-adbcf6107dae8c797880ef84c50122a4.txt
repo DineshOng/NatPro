@@ -2,7 +2,13 @@ Available online www.jocpr.com Journal of Chemical and Pharmaceutical Research, 
 
  Carmen S. Tan2, Marissa G. Noel and Chien-Chang Shen 1Chemistry Department, De La Salle University Science & Technology Complex Leandro V. Locsin Campus, Binan City, Laguna, Philippines 2Chemistry Department De La Salle University, 2401 Taft Avenue, Manila, Philippines 3National Research Institute of Chinese Medicine, 155-1, Li-Nong St., Sec. , Taipei 112, Taiwan.
 
-. The dichloromethane extracts of the leaves of Brassica oleracea var capitata f. rubra L (red cabbage) and Brassica oleracea L (green/white cabbage) and the stem of Brassica oleracea L var italic (broccoli) afforded beta-sitosterol (1) and unsaturated triglycerides (2). The red cabbage also afforded stigmasterol (3), while the green/white cabbage and broccoli stem also yielded the essential fatty acid, linoleic acid (4). Brassica juncea (mustard) leaves and Raphanus sativus (radish) roots afforded 1, and the essential fatty acids 4 and alpha-linolenic acid (6). Mustard leaves also yielded trilinolenin (5), lutein (7) and beta-carotene (8), while radish roots also afforded 2. These compounds were reported to exhibit anticancer properties.
+. The dichloromethane extracts of the leaves of Brassica oleracea var capitata f. rubra L (red cabbage) and Brassica oleracea L (green/white cabbage) and the stem of Brassica oleracea L var italic (broccoli) afforded beta-sitosterol (1) and unsaturated triglycerides (2).
+
+ The red cabbage also afforded stigmasterol (3), while the green/white cabbage and broccoli stem also yielded the essential fatty acid, linoleic acid (4).
+
+ Brassica juncea (mustard) leaves and Raphanus sativus (radish) roots afforded 1, and the essential fatty acids 4 and alpha-linolenic acid (6).
+
+ Mustard leaves also yielded trilinolenin (5), lutein (7) and beta-carotene (8), while radish roots also afforded 2. These compounds were reported to exhibit anticancer properties.
 
  Keywords: Brassica oleracea var capitata f. rubra L, red cabbage, Brassica oleracea L., green/white cabbage, Brassica oleracea L var italic, broccoli, Brassica juncea, mustard, Raphanus sativus, radish, beta-sitosterol, triglycerides, linoleic acid, trilinolenin, linolenic acid, stigmasterol, lutein, beta-carotene.
 
@@ -50,7 +56,7 @@ Raphanus sativus (radish) sprouts and mature radish taproot contained glucosinol
 
 The major fatty acids in seed lipids of radish were erucic, oleic, linoleic, and linolenic acids, while the major fatty acids in radish family lipids were linolenic acid (52-55%), erucic acid (30-33%), and palmitic acid (20-22%).
 
- This study was conducted on the dichloromethane extracts of the Brassica vegetables red cabbage (Brassica oleracea var capitata f. rubra L), green/white cabbage (Brassica oleracea L.), broccoli (Brassica oleracea L var. italic), mustard (Brassica juncea) and radish (Raphanus sativus).
+ This study was conducted on the dichloromethane extracts of the Brassica vegetables red cabbage (Brassica oleracea var capitata f. rubra L), green/white cabbage (Brassica oleracea L.), broccoli (Brassica oleracea L var italic), mustard (Brassica juncea) and radish (Raphanus sativus).
 
  Results of this study identified the relatively nonpolar constituents which may contribute to the anticancer properties of these vegetables.
 
@@ -58,17 +64,25 @@ The major fatty acids in seed lipids of radish were erucic, oleic, linoleic, and
 
  Carotenoids were also isolated as the major constituents of Brassica juncea.
 
- These compounds have been reported to exhibit anticancer properties. EXPERIMENTAL SECTION General Experimental Procedures NMR spectra were recorded on a Varian VNMRS spectrometer in CDCl at 600 MHz for 1H NMR and 150 MHz for 13C NMR spectra.
+ These compounds have been reported to exhibit anticancer properties.
+
+ EXPERIMENTAL SECTION General Experimental Procedures NMR spectra were recorded on a Varian VNMRS spectrometer in CDCl at 600 MHz for 1H NMR and 150 MHz for 13C NMR spectra.
 
  Column chromatography was performed with silica gel 60 (70-230 mesh).
 
  Thin layer chromatography was performed with plastic backed plates coated with silica gel F254 and the plates were visualized by spraying with vanillin/H2SO4 solution followed by warming.
 
- Plant Materials Five (5) kg each of red and green cabbage and broccoli were purchased from Arranque market in September 2011. The samples were authenticated as Brassica oleracea var capitata f. rubra L (red cabbage), Brassica oleracea L (green/white cabbage) and Brassica oleracea L var italica (broccoli) at the Bureau of Plant industry, Quirino Avenue, Manila, Philippines.
+ Plant Materials Five (5) kg each of red and green cabbage and broccoli were purchased from Arranque market in September 2011.
 
- One (1) kg of mustard was collected from a private farm in Sitio Usiwan, Barangay Palola, Lucban, Quezon in March 2013. It was identified as Brassica juncea at the Bureau of Plant industry, Quirino Avenue, Manila, Philippines.
+ The samples were authenticated as Brassica oleracea var capitata f. rubra L (red cabbage), Brassica oleracea L (green/white cabbage) and Brassica oleracea L var italica (broccoli) at the Bureau of Plant industry, Quirino Avenue, Manila, Philippines.
 
- One (1) kg of radish roots was bought from Arranque market in March 2013. It was identified as Raphanus sativus at the Botany Division, Philippine National Museum.
+ One (1) kg of mustard was collected from a private farm in Sitio Usiwan, Barangay Palola, Lucban, Quezon in March 2013.
+
+ It was identified as Brassica juncea at the Bureau of Plant industry, Quirino Avenue, Manila, Philippines.
+
+ One (1) kg of radish roots was bought from Arranque market in March 2013.
+
+ It was identified as Raphanus sativus at the Botany Division, Philippine National Museum.
 
  Extraction and Isolation The air-dried leaves of Brassica oleracea var capitata f. rubra L (red cabbage) (480 g), Brassica oleracea L (green/white cabbage) (515.5 g) and the freeze-dried stems of Brassica oleracea L var italic (broccoli) (87.5 g) were separately ground in a blender, soaked in CH2Cl2 for three days, and then filtered.
 
@@ -138,7 +152,9 @@ The major fatty acids in seed lipids of radish were erucic, oleic, linoleic, and
 
 The dichloromethane extracts from the leaves of Brassica oleracea var capitata f. rubra L (red cabbage) and Brassica oleracea L (green/white cabbage) and the stem of Brassica oleracea L var itali (broccoli) afforded 1 and 2. The red cabbage also yielded 3, while the green/white cabbage and broccoli stem also yielded 4. The structures of 1, 2, 3 and 4 were identified by comparison of their 13C NMR data with those reported in the literature for betasitosterol , unsaturated triglyceride , stigmasterol and linoleic acid , respectively.
 
- The dichloromethane extracts of the leaves of Brassica juncea (mustard) and the roots of Raphanus sativus (radish) yielded 1 and the essential fatty acids, 4 and alpha-linolenic acid (6). Mustard leaves also afforded trilinolenin (5), lutein (7) and beta-carotene (8), while radish roots also yielded 2. The structures of 5, 6, 7 and 8 were identified by comparison of their 13C NMR data with those reported in the literature for trilinolenin , alpha-linolenic acid , lutein and beta-carotene , respectively.
+ The dichloromethane extracts of the leaves of Brassica juncea (mustard) and the roots of Raphanus sativus (radish) yielded 1 and the essential fatty acids, 4 and alpha-linolenic acid (6).
+
+ Mustard leaves also afforded trilinolenin (5), lutein (7) and beta-carotene (8), while radish roots also yielded 2. The structures of 5, 6, 7 and 8 were identified by comparison of their 13C NMR data with those reported in the literature for trilinolenin , alpha-linolenic acid , lutein and beta-carotene , respectively.
 
  The presence of alpha-linolenic acid (6) in the triglyceride was deduced from the methyl triplet at 0.96 (t, J = 7. Hz), the double allylic methylenes at 2.78 and the olefinic protons at 5.34 (m).
 
@@ -146,19 +162,21 @@ The presence linoleic acid (4) Consolacion Y. Ragasa et al J. Chem.
 
  Pharm. Res., 2013, 5(12):1237-1243.
 
-1241 was deduced from the methyl triplet at 0.86 (t, J = 6.6 Hz), the double allylic methylene at 2.8 and the olefinic protons at 5.34 (m).
+1241 was deduced from the methyl triplet at 0.86 (t, J = 6. Hz), the double allylic methylene at 2.8 and the olefinic protons at 5.34 (m).
 
-Based on integrations of the triglyceride methyls at 0.96 (t, J = 7.8 Hz) and 0.86 (t, J = 6.6 Hz), the ratio of linolenic acid and linoleic acid in the triglycerides (2) of red cabbage and radish is about 1:1. On the other hand, the triglyceride in mustard is trilinolenin (5) based on the methyl resonance at 0.96 (t, J = 7.8 Hz).
+Based on integrations of the triglyceride methyls at 0.96 (t, J = 7. Hz) and 0.86 (t, J = 6. Hz), the ratio of linolenic acid and linoleic acid in the triglycerides (2) of red cabbage and radish is about 1:1. On the other hand, the triglyceride in mustard is trilinolenin (5) based on the methyl resonance at 0.96 (t, J = 7. Hz).
 
 No other methyl resonance in the shielded region of the spectrum was detected for the triglyceride in mustard.
 
- A mixture of alpha-linolenic acid (6) and linoleic acid (4) in a 1:1 ratio was deduced from the integrals of the methyl triplets at 0.96 (t, J = 7.8 Hz) and 0.86 (t, J = 7.2 Hz) for the fatty acids in red cabbage and radish.
+ A mixture of alpha-linolenic acid (6) and linoleic acid (4) in a 1:1 ratio was deduced from the integrals of the methyl triplets at 0.96 (t, J = 7. Hz) and 0.86 (t, J = 7. Hz) for the fatty acids in red cabbage and radish.
 
- In mustard, a mixture of alpha-linolenic acid (6) and linoleic acid (4) in a 2:1 ratio was deduced from the integrals of the methyl triplets at 0.96 (t, J = 7.8 Hz) and 0.86 (t, J = 7.2 Hz) for the fatty acids.
+ In mustard, a mixture of alpha-linolenic acid (6) and linoleic acid (4) in a 2:1 ratio was deduced from the integrals of the methyl triplets at 0.96 (t, J = 7. Hz) and 0.86 (t, J = 7. Hz) for the fatty acids.
 
  Although no biological activity tests were conducted on the isolated compounds, literature search revealed that these have several known bioactivities.
 
- It is interesting to note that 1-8 were all reported as anticancer compounds. beta-Sitosterol (1) was observed to have growth inhibitory effects on human breast MCF-7 and MDA-MB-231 adenocarcinoma cells.
+ It is interesting to note that 1-8 were all reported as anticancer compounds.
+
+ Beta-Sitosterol (1) was observed to have growth inhibitory effects on human breast MCF-7 and MDA-MB-231 adenocarcinoma cells.
 
 It was shown to be effective for the treatment of benign prostatic hyperplasia.
 
@@ -194,7 +212,9 @@ Peroxisome proliferator-activated receptor-gamma (PPAR-gamma) and cyclooxygenase
 
 Another study reported that apoptosis of hepatoma cells was induced by the alpha-linolenic acidenriched diet which correlated with a decrease in arachidonate content in hepatoma cells and decreased cyclooxygenase-2 expression.
 
-gamma-Linolenic acid (GLA) and alpha-linolenic acid (ALA) exhibited greater than 90% cytotoxicity between 500 M and 1 mM against all but two malignant micro-organ cultures tested in 5-10% serum. GLA and ALA killed tumor at concentrations of 2 mM and above in tests using 30-40% serum.
+Gamma-Linolenic acid (GLA) and alpha-linolenic acid (ALA) exhibited greater than 90% cytotoxicity between 500 M and 1 mM against all but two malignant micro-organ cultures tested in 5-10% serum.
+
+ GLA and ALA killed tumor at concentrations of 2 mM and above in tests using 30-40% serum.
 
 Dietary lutein (7), especially at 0.002%, inhibited tumor growth by selectively modulating apoptosis, and by inhibiting angiogenesis.
 
@@ -202,7 +222,7 @@ Another study reported that the chemopreventive properties of all-trans retinoic
 
 A previous study reported that very low amounts of dietary lutein (0.002%) can efficiently decrease mammary tumor development and growth in mice.
 
-beta-carotene (8) dose-dependently induced apoptosis and cell differentiation in cultured leukemia cells, but not in normal cells.
+Beta-carotene (8) dose-dependently induced apoptosis and cell differentiation in cultured leukemia cells, but not in normal cells.
 
 Another study reported that beta-carotene could reduce damage caused by radiation therapy and decrease local cancer recurrence.
 
@@ -218,46 +238,4 @@ The dichloromethane extracts of Brassica vegetables (red cabbage, green cabbage,
 
  Thus, the anticancer properties of Brassica vegetables and radish are not only attributed to the high content of glucosinolates, but also to the presence of sterols, unsaturated triglycerides and essential fatty acids.
 
- Acknowledgment A research grant from the De La Salle University Challenge Grant through the Office of the Vice Chancellor for Research and Innovation of is gratefully acknowledged. one.d/1471 on Nov. , 2013. Human Metabolome Database.
-
- Linoleic acid.
-
- Downloaded from http://www.hmdb.ca/spectra/ nmr.one.d/1471 on Nov. , 2013. AB Awad; M Chinnman; CS Fink; PG Bradford, Phytomed., 2007, 14, 747-754. GK Jayaprakasha; KK Mandadi; SM Poulose; Y Jadegoud; GA Gowda; BS Patil, Bioorg.
-
- Med. Chem., 2007, 15, 4923-4932. AA Baskar; S Ignacimuthu; G Paulraj; K Numair, BMC Comp.
-
- Alt.
-
- Med., 2010. 10, 24. Consolacion Y. Ragasa et al J. Chem.
-
- Pharm. Res., 2013, 5(12):1237-1243.
-
-1243 ED Jesch; JM Seo; TP Carr; JY Lee, Nutr.
-
- Res., 2009, 29(12), 859-66. DO Moon; L Kyeong-Jun; HC Yung; K Gi-Young, Int.
-
- Immunopharmacol., 2007, 7, 1044-1053. T Ghosh; TK Maity; J Singh, Orient Pharm.
-
- Exp. Med., 2011, 11, 41-49. P Chan; GN Thomas; B Tomlinson, Acta Pharmacol.
-
- Sin., 2002, 23(12), 1157-1162. P Chan; PF Kao; B Tomilson, Acta Cardio Sin., 2005, 21, 71-76. PY Chou; GJ Huang; CH Pan; YC Chien; YY Chen; CH Wu; MJ Sheu; HC Cheng, Amer. J. Chin.
-
- Med., 2011, 39(4), 803-15. SJ Hardwick; KH Carpenter; NS Law; C Van Der Veen; CE Marchant; R Hird; MJ Mitchinson, Free Radic.
-
- Res., 1997, 26 (4), 351-362. P Chan; GN Thomas; B Tomlinson, Acta Pharmacol.
-
- Sin., 2002, 23(12), 1157-1162. J Whelan, Prostaglandins, Leukotrienes and Essential Fatty Acids, 2008, 79(3-5), 165-167. CB Huang; JL Ebersole, Mol.
-
- Oral Microbiol., 2010, 25(1), 75-80. L Yang; J Yuan; L Liu; C Shi; L Wang; F Tian; F Liu F; H Wang; C Shao; Q Zhang; Z Chen; W Qin; W Wen, Oncol.
-
- Lett., 2013, 197-202. A Vecchini; V Ceccarelli; F Susta; P Caligiana; P Orvietani; L Binaglia; G Nocentini; C Riccardi; G Calviello; P Palozza; N Maggiano; P Di Nardo, J. Lipid Res., 2004, 45, 308-316. DE Scheim, Lipids in Health and Disease, 2009, 8, 54. Chew BP, Brown CM, Park JS, Mixter PF.
-
- Anticancer Res., 2003, 23(4), 3333-3339. VN Sumantran; R Zhang; DS Lee; MS Wicha, Cancer Epidemiol.
-
- Biomarkers Prev., 2000, 9, 257. JS Park; BP Chew; TS Wong, J. Nutr., 1998, 128(10), 1650-1656. KR Upadhyaya; KS Radha; HK Madhyastha, J. Biochem.
-
- Mol. Biol., 2007, 40(6), 1009-1015. F Meyer; I Bairati; E Jobin; M Glinas; A Fortin; A Nabid; B Ttu, Nutr.
-
- Cancer, 2007, 59(1), 29-35. C Guruvayoorappan; G Kuttan, Integr.
-
- Cancer Ther., 2007, 6(3), 258-70.
+ Acknowledgment A research grant from the De La Salle University Challenge Grant through the Office of the Vice Chancellor for Research and Innovation of is gratefully acknowledged.
