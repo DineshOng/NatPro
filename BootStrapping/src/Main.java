@@ -17,8 +17,10 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class Main {
@@ -29,7 +31,7 @@ public class Main {
                             String Builder
          =============================================================*/
 
-        File xmlFile = new File("e71bd7f8bf891b0d55b5183fae88e027.xml");
+        File xmlFile = new File("376734970d0a87a0c6077dc10de28ceb.xml");
         Reader fileReader = null;
         try {
             fileReader = new FileReader(xmlFile);
@@ -55,12 +57,15 @@ public class Main {
         String xml2String = sb.toString();
         int count=1;
         int tcnt=0;
-        String[] temp = new String[4];
-        File tagFile = new File("sample.txt");
+
+        File tagFile = new File("Synonym-Locations.txt");
+        System.out.println(tagFile.length());
+        String[] temp = new String[(int)tagFile.length()];
         try {
             Scanner scan = new Scanner(tagFile);
             while(scan.hasNextLine()){
                 temp[tcnt] = scan.nextLine();
+
                 tcnt++;
             }
         } catch (FileNotFoundException e) {
@@ -68,21 +73,72 @@ public class Main {
         }
 
 
-        String class1 = temp[0];
-        String class2 = temp[2];
-        String tag1 = "</"+temp[1]+">";
-        String tag2 = "<"+temp[3]+">";
+
+        String tag1 = temp[0].substring(temp[0].indexOf(":")+1);
+        String tag2 = temp[1].substring(temp[1].indexOf(":")+1);
+
+        //System.out.println(temp[3]);
+        HashMap<String, String> map = new HashMap<String, String>();
+
+        int tempctr = 3;
+        while(temp[tempctr] != null){
+            //System.out.println(temp[tempctr]);
+            String[] classes = temp[tempctr].split(";", 2);
+            if(classes.length >=2){
+                String class1 = classes[0];
+                String class2 = classes[1];
+                map.put(class1,class2);
+            }else{
+                System.out.println("ignoring line: " + tempctr);
+            }
+            tempctr++;
+        }
+
         String relation = "";
         String[] lines = xml2String.split("\\r?\\n");
-        for(String ling: lines){
-            count++;
-            if(ling.contains(class1) && ling.contains(class2)) {
-                System.out.println("line " + count + " : " + ling);
-                relation = ling.substring(ling.indexOf(tag1) + tag1.length(), ling.indexOf(tag2));
-                System.out.println(relation);
+
+        for(String class1 : map.keySet()){
+            String class2 = map.get(class1);
+            class1 = class1.toLowerCase();
+            class2 = class2.toLowerCase();
+            //System.out.println(class1 + ":" + class2);
+            //System.err.println("title");
+            for(String ling: lines){
+                ling= ling.toLowerCase();
+                //System.out.println("body");
+                count++;
+                if(ling.contains(class1) && ling.contains(class2)) {
+                    //System.out.println(class1 + ":" + class2);
+                    //System.out.println("line " + count + " : " + ling);
+                    //String[] phrase = ling.split("<\\/location>.+<species>");
+                    //System.out.println(phrase[0]);
+                    Pattern p = Pattern.compile("<\\/["+tag1+"*"+tag2+"]+>.+<["+tag1+"*"+tag2+"]+>");
+                    Matcher m = p.matcher(ling);
+                    while(m.find()) {
+                        //System.out.println(m.group());
+                        relation= m.group();
+                    }
+
+                    //System.out.println(relation);
+
+                }
             }
         }
 
+        relation = relation.replaceAll("<\\/?[a-z]+>", "");
+        System.out.println(relation);
+        //String class1 = temp[0];
+        //String class2 = temp[2];
+
+
+
+
+
+
+
+
+
+        //brute force searching
         File verbFile = new File("verbs.txt");
         try {
             Scanner scan = new Scanner(verbFile);
@@ -97,6 +153,7 @@ public class Main {
             e.printStackTrace();
         }
         ArrayList<String> matches = new ArrayList<String>();
+        matches.add(relation);
         //==========================
         try {
             // initialize JWNL (this must be done before JWNL can be used)
@@ -110,6 +167,7 @@ public class Main {
                 for(Word synonym : synset[i].getWords())
                 {
                     matches.add(synonym.getLemma());
+                    //System.out.println(synonym.getLemma());
                 }
                 //System.out.println(" ");
             }
@@ -118,6 +176,19 @@ public class Main {
             ex.printStackTrace();
         }
         //===========================
+
+        //remove duplicates
+        ArrayList<String> unique = new ArrayList<String>();
+        for(String uL : matches){
+            if(!unique.contains(uL)){
+                unique.add(uL);
+            }
+        }
+
+        //for(String Test : unique)
+          //  System.out.println(Test);
+
+
 
         try {
             bufReader.close();
@@ -133,18 +204,22 @@ public class Main {
 
                 Element element = document.createElement("Seed");
                 document.appendChild(element);
-            for(String ms: matches) {
+
                 Element A = document.createElement("Tag1");
-                A.appendChild(document.createTextNode(temp[1]));
+                A.appendChild(document.createTextNode(tag1));
                 element.appendChild(A);
 
                 Element B = document.createElement("Tag2");
-                B.appendChild(document.createTextNode(temp[3]));
+                B.appendChild(document.createTextNode(tag2));
                 element.appendChild(B);
 
                 Element C = document.createElement("Relation");
-                C.appendChild(document.createTextNode(ms));
+                //C.appendChild(document.createTextNode(ms));
                 element.appendChild(C);
+            for(String ms: unique) {
+                Element D = document.createElement("Pattern");
+                D.appendChild(document.createTextNode(ms));
+                C.appendChild(D);
             }
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
