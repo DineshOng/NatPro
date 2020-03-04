@@ -35,6 +35,7 @@ public class Coref {
 			if(word.endsWith("_PRP")) {
 				//System.err.println("changed");
 				str = str.replaceAll(word, lastEnt);
+				System.err.println("changed " + lastEnt);
 				//System.err.println(str.trim().replaceAll("_[A-Z$,.]+", ""));
 			}
 		}
