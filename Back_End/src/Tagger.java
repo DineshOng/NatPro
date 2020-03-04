@@ -67,9 +67,9 @@ public class Tagger {
             txt = new CompoundNameExpander("compound", txt).run();
             txt = new CompoundNameResolution("compound", txt).run();
             
-            txt = new Coref(txt).run();
+            txt = new Coref(txt).run2();
             
-            
+            //System.out.println(new CommonNameTagger("", txt).putPOS());
             
             /*
             String taggedTxt = "";

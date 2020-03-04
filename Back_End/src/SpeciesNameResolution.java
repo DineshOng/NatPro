@@ -9,14 +9,24 @@ import java.util.regex.Pattern;
 
 public class SpeciesNameResolution {
 	private String text;
+	private String mainGenus;
 	
 	public SpeciesNameResolution(String text) {
 		this.text = text;
 	}
 	
 	public String run() {
-		Pattern p = Pattern.compile("<(plant)>([^<]+)<\\/[a-z]+>");
+		Pattern p = Pattern.compile("<plant>(([A-Z][a-z]+) [a-z-]+[^<]+)<\\/[a-z]+>");
 		Matcher m = p.matcher(text);
+		
+		while(m.find()) {
+			mainGenus = m.group(2);
+			break;
+		}
+		
+		
+		p = Pattern.compile("<(plant)>([^<]+)<\\/[a-z]+>");
+		m = p.matcher(text);
 		
 		while(m.find()) {
 			//System.out.println(m.group(2));
@@ -34,6 +44,15 @@ public class SpeciesNameResolution {
 		
 		while(m.find()) {
 			text = text.replaceAll(m.group(), m.group(1));
+		}
+		
+		p = Pattern.compile("<plant>(([A-Z]\\.) ([a-z-]+[^<]+))<\\/[a-z]+>");
+		m = p.matcher(text);
+		System.out.println(mainGenus);
+		while(m.find()) {
+			if(m.group(2).toUpperCase().charAt(0) == mainGenus.toUpperCase().charAt(0)) {
+				text = text.replaceAll(m.group(), "<plant>" + mainGenus + " " + m.group(3) + "</plant>");
+			}
 		}
 		
 		return text;

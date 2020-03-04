@@ -1,6 +1,8 @@
 Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Bark Maria Carmen S. Tan,*, Mary Stephanie S. Carranza, Virgilio C. Linis, Raymond S. Malabed,, and Glenn G. Oyong Chemistry Department, Biology Department, and Molecular Science Unit Laboratory Center for Natural Sciences and Environmental Research, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines Department of Chemistry, Graduate School of Science, Osaka University, 1-1 Machikaneyama, Toyonaka, Osaka 560-0043, Japan. .: The objective of this research was to find the possible pharmacognosy of the bark of the Philippine Alstonia macrophylla Wall ex G.Don (AM).
 
- Gas chromatographic-mass spectral (GC-EI-MS) characterization and energy dispersive X-ray spectroscopy (EDX) were performed to detect the bioactive constituents. EDX analysis of AM bark displayed a high content of potassium (3.26%) and calcium (2.96%).
+ Gas chromatographic-mass spectral (GC-EI-MS) characterization and energy dispersive X-ray spectroscopy (EDX) were performed to detect the bioactive constituents.
+
+ EDX analysis of AM bark displayed a high content of potassium (3.26%) and calcium (2.96%).
 
  Eight constituents were detected in AM crude dichloromethane (DCM) extracts, which consisted of a long-chain unsaturated fatty acid (17:0) and fatty acid esters such as ethyl hexadecanoate and methyl hexadecanoate.
 
@@ -10,7 +12,7 @@ Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Ba
 
  The samples exhibited efficient free radical scavenging activity (IC50 = 0.71 mg/mL) and were noncytotoxic to normal HDFn (IC50 > 100 g/mL) and neoplastic THP-1 cell lines (IC50 = 67.22 g/mL) while highly degenerative to MCF-7 (IC50 = 6.34 g/mL), H69PR (IC50 = 7.05 g/mL), and HT-29 (IC50 = 9.10 g/mL).
 
- Most interestingly, the AM samples inhibited the northern Philippine Cobras (Naja philippinensis Taylor) venom (IC50 = 297.27 9.33 g/mL) through a secretory phospholipase A2 assay..
+ Most interestingly, the AM samples inhibited the northern Philippine Cobra's (Naja philippinensis Taylor) venom (IC50 = 297.27 9.33 g/mL) through a secretory phospholipase A2 assay..
 
 . Medicinal plants are still widely used in nonindustrialized societies such as in many parts of Southeast Asia because they are readily available and cheaper than modern medicines.
 
@@ -24,7 +26,7 @@ Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Ba
 
  It was also found to relieve anxietyand stress-related incidences through stabilization of distress-induced physiological deviations seen in mice plasma.
 
- In its powdered form, the bark of A. macrophylla (AM), also known as hard milkwood or batino, is used in wine preparation and as an antipyretic, traditional remedy and preventive concoction, medicine for dysentery, an aid in the menstrual cycle, treatment in Alzheimers disease through down regulation of acetylcholine, and in wound healing.
+ In its powdered form, the bark of A. macrophylla (AM), also known as hard milkwood or batino, is used in wine preparation and as an antipyretic, traditional remedy and preventive concoction, medicine for dysentery, an aid in the menstrual cycle, treatment in Alzheimer's disease through down regulation of acetylcholine, and in wound healing.
 
  When mixed with water, the powdered bark can be used as an astringent and for treating skin diseases.
 
@@ -32,7 +34,9 @@ Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Ba
 
  Moreover, decoctions of its undeveloped aerial plant parts were ingested as a curative for respiratory and auditory obstructions.
 
- Mixed preparations of leaves and stem bark of AM were used in the Republic of India to treat upset stomachs, Received: January 10, 2019 Accepted: May 17, 2019 Published: May 30, 2019 2019 American Chemical Society 9488 DOI: 10.1021/acsomega. B00082 ACS Omega 2019, 4, 9488-9496 D ow nl oa de d vi a 12 4. 83 .1 21 .1 68 o n O ct ob er 3 , 2 01 9 at 1 3: 08 :2 0 (U T C ). Se e ht tp s: //p ub s. ac s. or g/ sh ar in gg ui de lin es f or o pt io ns o n ho w to le gi tim at el y sh ar e pu bl is he d ar tic le s. Compound class Legend: Organism (family, genus, species) Organism common name Oraganism part Natural Products Location Biological Activity Cell lines Illness Preparation dermal conditions, and bacterial infections of the urinary tract.
+ Mixed preparations of leaves and stem bark of AM were used in the Republic of India to treat upset stomachs, Received: January 10, 2019 Accepted: May 17, 2019 Published: May 30, 2019 2019 American Chemical Society 9488 DOI: 10.1021/acsomega.
+
+ B00082 ACS Omega 2019, 4, 9488-9496 D ow nl oa de d vi a 12 4. 83 .1 21 .1 68 o n O ct ob er 3 , 2 01 9 at 1 3: 08 :2 0 (U T C ). Se e ht tp s: //p ub s. ac s. or g/ sh ar in gg ui de lin es f or o pt io ns o n ho w to le gi tim at el y sh ar e pu bl is he d ar tic le s. Compound class Legend: Organism (family, genus, species) Organism common name Oraganism part Natural Products Location Biological Activity Cell lines Illness Preparation dermal conditions, and bacterial infections of the urinary tract.
 
  Similar to A. scholaris, AM leaves extracted with methanol similarly exhibited antimicrobial properties.
 
@@ -72,7 +76,9 @@ Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Ba
 
  Since more bioactive phytochemicals were found in the MEOH/ DMSO crude AM extracts, extracts using this solvent extraction technique were used in all the subsequent bioassays. .2. EDX Analysis of AM.
 
- The chemical compositions of the adsorbents were found to have an elemental percentage (<ppm) of K (3.26%), Ca (2.96%), Cl (0.93%), S (0.60%), Si (0.47%), P (0.30%), Fe (0.05%), Mn (0.03%), and Zn (0.04%) with glucose, C6H10O5, making up 91.36%. Elevated percentages of potassium (K) and calcium (Ca) suggest that the plant metabolized high consumption of mineral nutrients absorbed from the soil of the sample as demonstrated in Figure 2. Assessments linking calcium ingestion in healthy elderly women were determined to ameliorate lipid panels, sugar metabolic rate, and normalization of hypertension.
+ The chemical compositions of the adsorbents were found to have an elemental percentage (<ppm) of K (3.26%), Ca (2.96%), Cl (0.93%), S (0.60%), Si (0.47%), P (0.30%), Fe (0.05%), Mn (0.03%), and Zn (0.04%) with glucose, C6H10O5, making up 91.36%.
+
+ Elevated percentages of potassium (K) and calcium (Ca) suggest that the plant metabolized high consumption of mineral nutrients absorbed from the soil of the sample as demonstrated in Figure 2. Assessments linking calcium ingestion in healthy elderly women were determined to ameliorate lipid panels, sugar metabolic rate, and normalization of hypertension.
 
  The increase in the consumption of potassium-rich foods has been well established to regulate cardiovascular anomalies, alleviate orthopedic and renal diseases, and prevent strokes.
 
@@ -88,13 +94,17 @@ Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Ba
 
  2.3. Antioxidant Activity of AM.
 
- AM crude extracts were found to be effective free radical scavengers given that the IC50 value was low at 0.71 mg/mL (Figure 3). A previous report showed that three chief constituents purified from the methanolic fraction of A. macrophylla leaf, specifically betasitosterol, ursolic acid, and beta-sitosteryl-beta-D-glucoside, as well as a minor fraction found to have alkaloid and fatty acids were the entities that induced antioxidant activity at an effective concentration of 200 mg/kg (DPPH protocol evaluations, superoxide anion quenching experiments, and DNA cleavage assay).
+ AM crude extracts were found to be effective free radical scavengers given that the IC50 value was low at 0.71 mg/mL (Figure 3).
+
+ A previous report showed that three chief constituents purified from the methanolic fraction of A. macrophylla leaf, specifically betasitosterol, ursolic acid, and beta-sitosteryl-beta-D-glucoside, as well as a minor fraction found to have alkaloid and fatty acids were the entities that induced antioxidant activity at an effective concentration of 200 mg/kg (DPPH protocol evaluations, superoxide anion quenching experiments, and DNA cleavage assay).
 
  2.4. Cytotoxicity Assays.
 
  The cytotoxicity of the crude extract of AM was investigated on MCF-7, H69PR, HT-29, Table 1. Volatile Constituents of DCM Extracts of AM compound RT (min) RIa % peak area functionality 2-ethenyl-2-butenal 8.07 890 6.17 aldehyde 3-ethylpyridine 11.38 956 1.21 diverse functional group nonanoic acid 31.72 1277 0.92 carboxylic acid cyclohexylbenzene 33.81 1309 4.96 hydrocarbon 3-hydroxy-4methoxybenzyl alcohol 42.38 1445 8.41 alcohol hexadecanonic acid methyl ester 68.37 1927 10.46 ester hexadecanoic acid ethyl ester 71.40 1990 12.21 ester heptadecanoic acid 74.80 2065 16.61 carboxylic acid aRetention index (HP-5 ms column).
 
- ACS Omega Article DOI: 10.1021/acsomega. B00082 ACS Omega 2019, 4, 9488-9496 9489 Missing in text-> THP-1 immortalized cell lines, and normal HDFn primary culture cells.
+ ACS Omega Article DOI: 10.1021/acsomega.
+
+ B00082 ACS Omega 2019, 4, 9488-9496 9489 Missing in text-> THP-1 immortalized cell lines, and normal HDFn primary culture cells.
 
  Analyses of the cytotoxicity of AM done on normal HDFn resulted in IC50 values exceeding 100 g/mL.
 
@@ -104,25 +114,51 @@ Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Ba
 
  Plots comparing the cytotoxic properties of AM and Zeocin on the viability of each specific cell line are found in Figure 4. IC50 values of the isolates and the positive control are synopsized in Table 3. Crude extracts of AM gave the highest cytotoxic efficacy toward MCF-7 with a half maximal inhibitory concentration of 6.34 g/mL, which was followed by H69PR, HT-29, and THP-1 with IC50 values of 7.05, 9.10, and 67.22 g/mL, respectively.
 
- Significant differences for the degree of potency, as found in Tukeys post hoc multiple comparison, were found between almost all cell lines (p < 0.05) except for the paired treatment of MCF-7 versus H69PR, which was displayed to be statistically similar (p > 0.05). Data subsets of aforementioned cancer cell lines and Zeocin exhibited that the paired treatments were comparable (p > 0.05). There were no perceivable variances as found in the unpaired t test between the paired trials of AM versus Zeocin (p > 0.05) in MCF-7 trials.
+ Significant differences for the degree of potency, as found in Tukey's post hoc multiple comparison, were found between almost all cell lines (p < 0.05) except for the paired treatment of MCF-7 versus H69PR, which was displayed to be statistically similar (p > 0.05).
 
- In fact, there was no significant difference in the scores for mean values of AM (M = 53.02, SD = 5.71) and mean values for Zeocin (M = 58.69, SD = 5.67) conditions; t (14) = 0.7047, p = 0.4925. These results exhibited that the antiproliferative actions of both AM and Zeocin were comparable.
+ Data subsets of aforementioned cancer cell lines and Zeocin exhibited that the paired treatments were comparable (p > 0.05).
+
+ There were no perceivable variances as found in the unpaired t test between the paired trials of AM versus Zeocin (p > 0.05) in MCF-7 trials.
+
+ In fact, there was no significant difference in the scores for mean values of AM (M = 53.02, SD = 5.71) and mean values for Zeocin (M = 58.69, SD = 5.67) conditions; t (14) = 0.7047, p = 0.4925.
+
+ These results exhibited that the antiproliferative actions of both AM and Zeocin were comparable.
 
  Trials using H69PR showed that the AM cytotoxic activity was comparable to Zeocin displaying no significant differences between the two inhibitors (p > 0.05) as found through an independent sample t test comparison.
 
- Results for the unpaired t test exhibited the mean values of AM (M = 52.02, SD = 5.44) and mean values for Zeocin (M = 58.22, SD = 6.54) conditions (t (14) = 0.7285, p = 0.4783). Post hoc analysis revealed that there were no significant differences between the paired treatments (p > 0.05) of HT-29 of AM and Zeocin.
+ Results for the unpaired t test exhibited the mean values of AM (M = 52.02, SD = 5.44) and mean values for Zeocin (M = 58.22, SD = 6.54) conditions (t (14) = 0.7285, p = 0.4783).
+
+ Post hoc analysis revealed that there were no significant differences between the paired treatments (p > 0.05) of HT-29 of AM and Zeocin.
 
  The mean IC50 values of HT-29 cells Figure 1. Total ion GC-MS chromatogram of (a) DCM and (b) MeOH/DMSO extract of AM with n-alkanes.
 
  Table 2. Volatile Constituents of MeOH:DMSO Extracts of AM compound RT (min) RIa % peak area functionality 2,5-dimethyl-4-hydroxy-3(2H)-furanone 7.20 1026 1.16 trihydroxybenzene 2-methoxy-4-vinylphenol 19.96 1355 5.37 diterpenoid 2,6-dimethoxyphenol 22.13 1375 1.83 diverse functional group 2,6-dimethoxy-4-(2-propenyl)-phenol 45.43 1660 3.69 diverse functional group 3,5-dimethoxy-4-hydroxyphenylacetic acid 49.60 1690 1.66 phenolic acid strictamin 77.42 2519 5.23 alkaloid rauvomitin 84.82 2522 4.29 alkaloid alstonerine 86.66 2544 34.38 alkaloid brucine 86.85 2545 3.66 alkaloid burnamicine 87.94 2561 1.71 alkaloid campesterol 93.35 2643 2.71 triterpenoid stigmasterol 94.44 2663 2.13 triterpenoid gamma-sitosterol 96.48 2701 3.85 triterpenoid beta-amyrin 97.27 2716 2.30 triterpenoid lupeol 98.43 2738 3.00 triterpenoid 24-methylenecycloartanol 101.84 2802 2.81 triterpenoid aRetention index (HP-5 ms column).
 
- ACS Omega Article DOI: 10.1021/acsomega. B00082 ACS Omega 2019, 4, 9488-9496 9490 Missing in text-> treated with AM (M = 49.16, SD = 7.27) and mean IC50 values of HT-29 cells treated with Zeocin (M = 60.38, SD = 7.75) were found not to have significant variance (t(14) = 1.056, p = 0.3090). The global or shared results of THP-1 with inhibitor trials reject the null hypothesis and exemplifies that both data subsets are unique (p < 0.05). Significant differences were seen between the two inhibitors (p < 0.05), and the results for the unpaired t test disclosed the values of AM (M = 32.31, SD = 5.10) and for Zeocin (M = 61.67, SD = 9.17) conditions (t (14) = 2.798, p = 0.0142). AM was established to be noncytotoxic to normal HDFn, with an IC50 value substantially surpassing concentrations of 100 g/mL.
+ ACS Omega Article DOI: 10.1021/acsomega.
 
- Multiple comparisons of AM and immortalized cell line examinations confirmed that there were significant differences and, the null hypothesis (one curve for all datasets) was rejected (log IC50 the same for all datasets) as verified by the goodness of fit of the two alternative nested models (IC50) between separate experiments, F (4, 80) = 445.2, p < 0.0001, and to the discrepancies amid the dose-response diagrams F (4, 35) = 4.176, p = 0.0072. Similarly, pertaining to their respective IC50 results, trials with aberrant cell lines treated with Zeocin were found to not be significantly disparate (p > 0.05). Zeocin, a known cytotoxic agent, gave IC50 values of 3.37, 3.83, 3.78, 3.59, and 4.08 ppm in MCF-7, H69PR, HT29, THP-1, and HDFn, respectively.
+ B00082 ACS Omega 2019, 4, 9488-9496 9490 Missing in text-> treated with AM (M = 49.16, SD = 7.27) and mean IC50 values of HT-29 cells treated with Zeocin (M = 60.38, SD = 7.75) were found not to have significant variance (t(14) = 1.056, p = 0.3090).
 
- Multiple comparisons showed negative noteworthy variances in the trials (p > 0.05). Post hoc comparison of the dose-response curve fits for the aberrant cell line treatments exhibited no significant differences (Figures 4 and 5). At present, only the sulforhodamine B (SRB) colorimetric assays for cytotoxicity screening were done on the bark or outer covering of roots but not on A. macrophylla tree bark.
+ The global or shared results of THP-1 with inhibitor trials reject the null hypothesis and exemplifies that both data subsets are unique (p < 0.05).
 
- Results from the literature stated that indole derivatives found in the rhizome outer covering of A. macrophylla had antiproliferative action (using the SRB assay) on MOR-P and COR-L23 carcinomas because of the bisindole component. O-Acetylmacralstonine, villalstonine, and macrocarpamine were also established to influence definite actions on normal mammary fibroblasts, as well as on these specific immortalized cancers: StMl 1a (skin cancer), Caki-2 (kidney cancer), MCF-7 (breast cancer), and LS174T (colon cancer) with IC50 values ranging 2-10 M. Another work showed that methanolic extracts of root barks containing Omethylmacralstonine, talcarpine, villalstonine, pleiocarpamine, and macraistonine exhibited high cytotoxicity on MOR-P and COR-L23.27 2.5. Inhibitory sPLA Activity of AM.
+ Significant differences were seen between the two inhibitors (p < 0.05), and the results for the unpaired t test disclosed the values of AM (M = 32.31, SD = 5.10) and for Zeocin (M = 61.67, SD = 9.17) conditions (t (14) = 2.798, p = 0.0142).
+
+ AM was established to be noncytotoxic to normal HDFn, with an IC50 value substantially surpassing concentrations of 100 g/mL.
+
+ Multiple comparisons of AM and immortalized cell line examinations confirmed that there were significant differences and, the null hypothesis (one curve for all datasets) was rejected (log IC50 the same for all datasets) as verified by the goodness of fit of the two alternative nested models (IC50) between separate experiments, F (4, 80) = 445.2, p < 0.0001, and to the discrepancies amid the dose-response diagrams F (4, 35) = 4.176, p = 0.0072.
+
+ Similarly, pertaining to their respective IC50 results, trials with aberrant cell lines treated with Zeocin were found to not be significantly disparate (p > 0.05).
+
+ Zeocin, a known cytotoxic agent, gave IC50 values of 3.37, 3.83, 3.78, 3.59, and 4.08 ppm in MCF-7, H69PR, HT29, THP-1, and HDFn, respectively.
+
+ Multiple comparisons showed negative noteworthy variances in the trials (p > 0.05).
+
+ Post hoc comparison of the dose-response curve fits for the aberrant cell line treatments exhibited no significant differences (Figures 4 and 5).
+
+ At present, only the sulforhodamine B (SRB) colorimetric assays for cytotoxicity screening were done on the bark or outer covering of roots but not on A. macrophylla tree bark.
+
+ Results from the literature stated that indole derivatives found in the rhizome outer covering of A. macrophylla had antiproliferative action (using the SRB assay) on MOR-P and COR-L23 carcinomas because of the bisindole component.
+
+ O-Acetylmacralstonine, villalstonine, and macrocarpamine were also established to influence definite actions on normal mammary fibroblasts, as well as on these specific immortalized cancers: StMl 1a (skin cancer), Caki-2 (kidney cancer), MCF-7 (breast cancer), and LS174T (colon cancer) with IC50 values ranging 2-10 M. Another work showed that methanolic extracts of root barks containing Omethylmacralstonine, talcarpine, villalstonine, pleiocarpamine, and macraistonine exhibited high cytotoxicity on MOR-P and COR-L23.27 2.5. Inhibitory sPLA Activity of AM.
 
  The sPLA action of 100 ppm N. philippinensis (NPV) was examined with the potential inhibitor AM.
 
@@ -134,7 +170,11 @@ Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Ba
 
  Figure 3. Free radical scavenging analyses of AM.
 
- ACS Omega Article DOI: 10.1021/acsomega. B00082 ACS Omega 2019, 4, 9488-9496 9491 (Figure 6). An alkaloid found in the Solanaceae family, atropine, was discovered to impede the venom of Daboia russelli.
+ ACS Omega Article DOI: 10.1021/acsomega.
+
+ B00082 ACS Omega 2019, 4, 9488-9496 9491 (Figure 6).
+
+ An alkaloid found in the Solanaceae family, atropine, was discovered to impede the venom of Daboia russelli.
 
  Phytochemical compounds, coumestan and steroids (beta-sitosterol and stigmasterol) extracted from the alcoholic rhizome preparations of Pluchea indica bypassed oxidative degradation of lipids and superoxide dismutase action stimulated through envenoming.
 
@@ -150,11 +190,21 @@ Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Ba
 
  For the most part, trials observed in the mutant cell lines indicated low half maximal inhibitory concentrations (<7 g/mL), which were acquired for all of the Figure 4. Cytotoxic activities of AM, Zeocin, and DMSO on the cytotoxicity index (CI%) of immortalized cell lines (dose-response curves with data points as mean SEM).
 
- GraphPad Prism 7.01 (GraphPad Software, Inc., USA) was employed for extra sum-of-squares F test calculations to (A) appraise the implication of the best-fit-parameter (half maximal inhibitory concentration) between selected trials and to (B) assess the variances amid the dose-response curve fits. MCF-7 F (Dfn, DFd) = (A) F (2, 48) = 3192, p < 0.0001 and (B) F (2, 21) = 34.37, p < 0.0001; H69PR (A) F (2, 48) = 5205, p < 0.0001and (B) F (2, 21) = 29.45, p < 0.0001; HT-29 (A) F (2, 46) = 4892, p < 0.0001 and (B) F (2, 21) = 18.81, p < 0.0001; THP-1 (A) F (2, 48) = 3511, p < 0.0001 and (B) F (2, 21) = 12.41, p = 0.0003; HDFn (A) F (2, 48) = 1577, p < 0.0001 and (B) F (2, 21) = 27.70, p < 0.0001. ACS Omega Article DOI: 10.1021/acsomega. B00082 ACS Omega 2019, 4, 9488-9496 9492 trials. MCF-7 was highly responsive to AM, while the least responsive to AM was THP-1. Wild-type HDFn trials incubated with AM were substantiated to be noncytotoxic and gave half maximal inhibitory concentrations of greater than 100 g/mL, whereas Zeocin-treated normal cells reached their half maximal inhibitory concentrations at less than 5.00 g/ mL.
+ GraphPad Prism 7.01 (GraphPad Software, Inc., USA) was employed for extra sum-of-squares F test calculations to (A) appraise the implication of the best-fit-parameter (half maximal inhibitory concentration) between selected trials and to (B) assess the variances amid the dose-response curve fits.
+
+ MCF-7 F (Dfn, DFd) = (A) F (2, 48) = 3192, p < 0.0001 and (B) F (2, 21) = 34.37, p < 0.0001; H69PR (A) F (2, 48) = 5205, p < 0.0001and (B) F (2, 21) = 29.45, p < 0.0001; HT-29 (A) F (2, 46) = 4892, p < 0.0001 and (B) F (2, 21) = 18.81, p < 0.0001; THP-1 (A) F (2, 48) = 3511, p < 0.0001 and (B) F (2, 21) = 12.41, p = 0.0003; HDFn (A) F (2, 48) = 1577, p < 0.0001 and (B) F (2, 21) = 27.70, p < 0.0001.
+
+ ACS Omega Article DOI: 10.1021/acsomega.
+
+ B00082 ACS Omega 2019, 4, 9488-9496 9492 trials.
+
+ MCF-7 was highly responsive to AM, while the least responsive to AM was THP-1. Wild-type HDFn trials incubated with AM were substantiated to be noncytotoxic and gave half maximal inhibitory concentrations of greater than 100 g/mL, whereas Zeocin-treated normal cells reached their half maximal inhibitory concentrations at less than 5.00 g/ mL.
 
  The results of this work on the crude MEOH/DMSO extracts from A. macrophylla, which consisted primarily of alkaloids and triterpenoids, could be the rationale for further development of this preparation, through additional bioassays, as a candidate for chemotherapeutic drugs or as a supplementation in the management of human colorectal cancer, human breast adenocarcinoma, and human small cell lung carcinoma.
 
- AM bark has shown in vitro prohibitory events against sPLA granting that there has been no preceding information of this phenomenon. NPV neutralization by constituents of AM bark or in combination therapy with antivenom serum could be suitable inhibitors to the enzymatic toxins from snake envenoming..
+ AM bark has shown in vitro prohibitory events against sPLA granting that there has been no preceding information of this phenomenon.
+
+ NPV neutralization by constituents of AM bark or in combination therapy with antivenom serum could be suitable inhibitors to the enzymatic toxins from snake envenoming..
 
 MATERIALS AND METHODS 3.1. Sample Preparation Protocol.
 
@@ -192,11 +242,17 @@ MATERIALS AND METHODS 3.1. Sample Preparation Protocol.
 
  The GraphPad Prism 7.01 software was applied to perform the extra sum-of-squares F test to (A) gauge the implication of the best-fit-parameter of IC50 values between separate treatments and to (B) ascertain the variances amid the dose-response curve congruency.
 
- AM, (A) F (4, 80) = 445.2, p < 0.0001 (B) F (4, 35) = 4.176, p = 0.0072. Table 3. Cytotoxic Activities (IC50) of the AM Crude Extract and Zeocin against Cell Lines IC50 a (g/mL) sample MCF-7 H69PR HT-29 THP-1 HDFn AM 6.34 7.05 9.10 67.22 >100 Zeocin 3.37 3.83 3.78 3.59 4.08 aIC50 data were deduced from dose-response graphs extrapolated from nonlinear regression analysis by means of GraphPad Prism 7. The unpaired two-tailed t test was the treatment employed for each cell line to evaluate the significant variances among the data groups.
+ AM, (A) F (4, 80) = 445.2, p < 0.0001 (B) F (4, 35) = 4.176, p = 0.0072.
 
- The statistical data were as follows: MCF-7, t (14) = 0.7047, p = 0.4925; H69PR, t (14) = 0.7285, p = 0.4783; HT-29, t (14) = 1.056, p = 0.3090; THP-1, t (14) = 2.798, p = 0.0142; HDFn, t (14) = 3.761, p = 0.0021. Figure 6. Linear regression analysis of the variation in absorbance (A414) as the slope (top) and inhibitory outcome of AM in contradiction of sPLA activity from NPV (bottom).
+ Table 3. Cytotoxic Activities (IC50) of the AM Crude Extract and Zeocin against Cell Lines IC50 a (g/mL) sample MCF-7 H69PR HT-29 THP-1 HDFn AM 6.34 7.05 9.10 67.22 >100 Zeocin 3.37 3.83 3.78 3.59 4.08 aIC50 data were deduced from dose-response graphs extrapolated from nonlinear regression analysis by means of GraphPad Prism 7. The unpaired two-tailed t test was the treatment employed for each cell line to evaluate the significant variances among the data groups.
 
- ACS Omega Article DOI: 10.1021/acsomega. B00082 ACS Omega 2019, 4, 9488-9496 9493 indices were processed for the identified analytes utilizing a sequence of n-alkanes.
+ The statistical data were as follows: MCF-7, t (14) = 0.7047, p = 0.4925; H69PR, t (14) = 0.7285, p = 0.4783; HT-29, t (14) = 1.056, p = 0.3090; THP-1, t (14) = 2.798, p = 0.0142; HDFn, t (14) = 3.761, p = 0.0021.
+
+ Figure 6. Linear regression analysis of the variation in absorbance (A414) as the slope (top) and inhibitory outcome of AM in contradiction of sPLA activity from NPV (bottom).
+
+ ACS Omega Article DOI: 10.1021/acsomega.
+
+ B00082 ACS Omega 2019, 4, 9488-9496 9493 indices were processed for the identified analytes utilizing a sequence of n-alkanes.
 
  All tests were performed in triplicate. .3. EDX Analysis.
 
@@ -218,7 +274,9 @@ MATERIALS AND METHODS 3.1. Sample Preparation Protocol.
 
  A total of eight concentrations from 17.5 to 0.27 mg/mL were made by serial dilution.
 
- The absorbances were read at 515 nm (UV-vis Shimadzu 2900) after samples were incubated at room temperature for 30 min. IC50 is defined as the sample concentration at which 50% of the free radicals are removed.
+ The absorbances were read at 515 nm (UV-vis Shimadzu 2900) after samples were incubated at room temperature for 30 min.
+
+ IC50 is defined as the sample concentration at which 50% of the free radicals are removed.
 
  This is determined by calculating the DPPH free radical scavenging percentages.
 
@@ -226,7 +284,7 @@ MATERIALS AND METHODS 3.1. Sample Preparation Protocol.
 
  The pharmacognosy of the dichloromethane (CH2Cl2) extracts from AM was tested on the succeeding immortalized cell lines purchased from ATCC, Manassas, Virginia, USA (breast cancer (MCF-7), colon cancer (HT29), small cell lung carcinoma (H69PR), human acute monocytic leukemia (THP-1)) and a primary culture of normal human dermal fibroblast neonatal (HDFn) (Thermo Fisher Scientific, Gibco, USA).
 
- Culture and maintenance were done in DMEM (Dulbeccos modified Eagle medium and 10% fetal bovine serum with 1 antibiotic- antimycotic) (Thermo Fisher, Invitrogen, USA) and were incubated at 37 C with 5% CO2 and 95% humidity.
+ Culture and maintenance were done in DMEM (Dulbecco's modified Eagle medium and 10% fetal bovine serum with 1 antibiotic- antimycotic) (Thermo Fisher, Invitrogen, USA) and were incubated at 37 C with 5% CO2 and 95% humidity.
 
  The cytotoxic activities of the AM extracts were determined using the PrestoBlue viability assay.
 
@@ -246,17 +304,21 @@ MATERIALS AND METHODS 3.1. Sample Preparation Protocol.
 
  Zeocin, which is a DNA intercalating antibiotic of the bleomycin/phleomycin family, is cytotoxic to cells growing aerobically from 0.5 to 1000 g/mL.
 
- Spectrophotometry was carried out using a BioTek ELx800. Optical density (O.D.) values were ascertained to derive percent cell viability following the equation below: cell viability(%) (O. D. O. D. ) (O. D. O. D. ) 100570nm,treated sample 570nm,blank 570nm,negative control 570nm,blank = - - (2) Nonlinear regression and statistical analyses were achieved using the software GraphPad Prism 7. The IC50 (inhibitor concentration leading to 50% reduction of cell viability) was also inferred from nonlinear regression analysis.
+ Spectrophotometry was carried out using a BioTek ELx800.
+
+ Optical density (O.D.) values were ascertained to derive percent cell viability following the equation below: cell viability(%) (O. D. O. D. ) (O. D. O. D. ) 100570nm,treated sample 570nm,blank 570nm,negative control 570nm,blank = - - (2) Nonlinear regression and statistical analyses were achieved using the software GraphPad Prism 7. The IC50 (inhibitor concentration leading to 50% reduction of cell viability) was also inferred from nonlinear regression analysis.
 
  All trials were performed in three replicates and are shown as mean SEM.
 
  The Brown-Forsythe analysis (F test) was utilized to discern the variances in the best-fit parameters and dose-response curve fits.
 
- One-way ANOVA (p < 0.05) was accomplished to clarify disparities between datasets, in conjunction with Tukeys post hoc test (p < 0.05). .6. In Vitro Inhibitory sPLA Activity.
+ One-way ANOVA (p < 0.05) was accomplished to clarify disparities between datasets, in conjunction with Tukey's post hoc test (p < 0.05). .6. In Vitro Inhibitory sPLA Activity.
 
  The inhibitory effects of AM (MeOH/DMSO) extracts were determined against northern Philippine Cobra or Naja philippinensis Taylor (NPV) venom sPLA using the Secretory Phospholipase A2 Assay Kit (Cat.
 
- No ab133089). The following reagents were used and formulated according to the manufacturers instructions: assay buffer (10), 5,5'-dithio-bis-(2-nitrobenzoic acid) (DTNB), diheptanoyl thio-PC substrate, bee venom (control), and a 96 well polystyrene F-bottom clear microplate.
+ No ab133089).
+
+ The following reagents were used and formulated according to the manufacturer's instructions: assay buffer (10), 5,5'-dithio-bis-(2-nitrobenzoic acid) (DTNB), diheptanoyl thio-PC substrate, bee venom (control), and a 96 well polystyrene F-bottom clear microplate.
 
  The venoms and AM were reconstituted in methanol or DMSO to achieve a 100 mg/mL concentration, which was serially diluted to1000 to 1 ppm.
 
@@ -264,15 +326,21 @@ MATERIALS AND METHODS 3.1. Sample Preparation Protocol.
 
  The experimental wells included 5 L of AM inhibitor in DMSO, 10 L of DTNB, and 10 L of NPV.
 
- After addition of 200 L of diheptanoyl thio-PC substrate into each well, absorbance was read at 414 nm using a Corona Electric Multimode Microplate Reader (MTP-800). Percent inhibition was verified based on the determined sPLA inhibition.
+ After addition of 200 L of diheptanoyl thio-PC substrate into each well, absorbance was read at 414 nm using a Corona Electric Multimode Microplate Reader (MTP-800).
 
- In addition, the concentration of AM generating 50% inhibition (IC50) was stated. X X X %inhibition 100control sample control = - (3) Here, Xcontrol is the sPLA activity of positive control (100 g/L NPV) and Xsample is the sPLA activity in the presence of inhibitor (AM).
+ Percent inhibition was verified based on the determined sPLA inhibition.
+
+ In addition, the concentration of AM generating 50% inhibition (IC50) was stated.
+
+ X X X %inhibition 100control sample control = - (3) Here, Xcontrol is the sPLA activity of positive control (100 g/L NPV) and Xsample is the sPLA activity in the presence of inhibitor (AM).
 
  The absorbance values were corrected against the blank sample (DMSO).
 
  AUTHOR INFORMATION Corresponding Author *E-mail: maria.carmen.tan@dlsu.edu.ph ORCID Maria Carmen S. Tan: 0000-0003-4413-5460 Notes The authors declare no competing financial interest.
 
- ACKNOWLEDGMENTS The authors are respectfully grateful to the De La Salle University Science Foundation and the University Research ACS Omega Article DOI: 10.1021/acsomega. B00082 ACS Omega 2019, 4, 9488-9496 9494 Coordination Office for the research grant given for the completion of this project.
+ ACKNOWLEDGMENTS The authors are respectfully grateful to the De La Salle University Science Foundation and the University Research ACS Omega Article DOI: 10.1021/acsomega.
+
+ B00082 ACS Omega 2019, 4, 9488-9496 9494 Coordination Office for the research grant given for the completion of this project.
 
  Also, the authors greatly appreciate the indispensable assistance and support that Professor Michio Murata of the Department of Chemistry, Graduate School of Science, Osaka University generously gave us.
 

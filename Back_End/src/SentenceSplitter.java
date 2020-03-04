@@ -53,7 +53,8 @@ public class SentenceSplitter {
         sstext = text;
         
         //[A-Za-z\\)]{2,}\\. ([A-Z][a-z]+|[0-9])
-        Pattern pattern = Pattern.compile("[A-Za-z\\)%]{2,}\\. (A|[A-Z][a-z]+|[0-9])");
+        //Pattern pattern = Pattern.compile("[A-Za-z0-9\\)%]{2,}\\. (A|[A-Z][a-z]+|[0-9]|[A-Z]+)");
+        Pattern pattern = Pattern.compile("[A-Za-z0-9\\)%]{2,}\\. (A|[A-Z][a-z]+|[0-9]|[A-Z]+)");
         Matcher matcher = pattern.matcher(sstext);
         while(matcher.find()) {
         	//System.err.println(m.group());

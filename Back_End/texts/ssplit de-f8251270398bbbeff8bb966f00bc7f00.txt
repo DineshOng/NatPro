@@ -4,7 +4,9 @@ www.scholarsresearchlibrary.comt Available online a Scholars Research Library De
 
  Keywords: Duranta erecta, Verbenaceae, oleanolic acid, phytyl fatty acid esters, alpha-amyrin, beta-amyrin, triacylglycerols.
 
-. Duranta erecta L. (syn. D. repens L.) of the family Verbenaceae is an ornamental plant which originated fom South America.
+. Duranta erecta L. (syn.
+
+ D. repens L.) of the family Verbenaceae is an ornamental plant which originated fom South America.
 
 In Chinese medicine, the fruits were used for treatment of malaria and the leaves are employed for the treatment of abscesses.
 
@@ -46,7 +48,9 @@ Chemical structures of oleanolic acid (1), alpha-amyrin (2a) and beta-amyrin (2b
 
  Thin layer chromatography was performed with plastic backed plates coated with silica gel F254 and the plates were visualized by spraying with vanillin/H2SO4 solution followed by warming.
 
- Sample Collection Samples of the flowers of Duranta erecta were collected from Sta Rosa, Laguna, Plippines in January 2015. The samples were authenticated at the Botany Division, Philippine National Museum.
+ Sample Collection Samples of the flowers of Duranta erecta were collected from Sta Rosa, Laguna, Plippines in January 2015.
+
+ The samples were authenticated at the Botany Division, Philippine National Museum.
 
  General Isolation Procedure A glass column 12 inches in height and 0.5 inch internal diameter was used for the chromatography.
 
@@ -78,7 +82,9 @@ Chemical structures of oleanolic acid (1), alpha-amyrin (2a) and beta-amyrin (2b
 
  The 90% acetone in CH2Cl2 fraction was rechromatographed (2 ) using CH3CN:Et2O:CH2Cl2 (0.5:0.5:9, v/v) to afford 1 (3 mg) after washing with petroleum ether..
 
-Silica gel chromatography of the dichloromethane extract of the leaves of D. erecta yielded 1-4b. The NMR spectra of 1 are in accordance with data reported in the literature for olenolic acid ; 2a for alpha-amyrin ; and 2b for betaamyrin ; 3 for phytyl fatty acid esters ; and 4 for triacylglycerols.
+Silica gel chromatography of the dichloromethane extract of the leaves of D. erecta yielded 1-4b.
+
+ The NMR spectra of 1 are in accordance with data reported in the literature for olenolic acid ; 2a for alpha-amyrin ; and 2b for betaamyrin ; 3 for phytyl fatty acid esters ; and 4 for triacylglycerols.
 
 The 3:1 ratio of the mixture of alphaamyrin (2a) and beta-amyrin (2b) was deduced from the integrations and intensities of the 1H NMR resonances for the olefinic protons of 2a at 5.24 (t, J = 3. Hz, H-12) and 2b at 5.27 (t, J = 3. Hz, H-12).
 
