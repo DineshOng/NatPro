@@ -94,6 +94,8 @@ public class Coref {
 			Pattern p = Pattern.compile("<([a-z]+)>([^<]+)<\\/[a-z]+>");
 			Matcher m = p.matcher(sentences[i]);
 			
+			sentences[i] = sentences[i].trim();
+			
 			if(!sentences[i].contains("It")) {
 				while(m.find()) {
 					if(m.group(1).equals("compound") || m.group(1).equals("plant")) {

@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -65,7 +67,70 @@ public class CompoundNameResolution {
 		for(String i : map.keySet()) {
 			System.out.println("value: " + map.get(i) + "\tkey: " + i);
 			
-			text = text.replaceAll("[^->'%,:]\\b" + i + "\\b[^->'%:]", " <" + tag + ">" + compoundsByCode.get(i) + "</" + tag + "> ");
+			text = text.replaceAll("[^->'%:]\\b" + i + "\\b[^->'%:]", " <" + tag + ">" + compoundsByCode.get(i) + "</" + tag + "> ");
+		}
+		
+		pattern = Pattern.compile("\\b(([1-9][a-z])|([XIV]+)|([1-9]))-(([1-9][a-z])|([XIV]+)|([1-9]))\\b");
+		matcher = pattern.matcher(text);
+		
+		while(matcher.find()) {
+			String start = matcher.group(1);
+			String end = matcher.group(5);
+			
+			List<String> range = new ArrayList<String>();
+			String compounds = "";
+			
+			if(start.matches("^[1-9]$")) {
+				int s = Integer.parseInt(start);
+				int e = Integer.parseInt(end);
+				
+				for(int i=s; i<e; i++) {
+					range.add(i+"");
+				}
+				
+				System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>> " + start + " " + end);
+			} else if(start.matches("^[1-9][a-z]$")) {
+				int sn = Integer.parseInt(start.charAt(0)+"");
+				char sl = (char)start.charAt(1);
+		
+				int en = Integer.parseInt(end.charAt(0)+"");
+				char el = (char)end.charAt(1);
+				
+				//sn = 1; sl = 'c';
+				//en = 2; el = 'b';
+				
+				int diff = el - sl;
+				
+				int flag = 0;
+				
+				char letter = sl;
+				
+				String code = sn+""+sl;
+				
+				for(int i=sn; i<=en; i++) {
+					flag = 0;
+					for(int j=letter; flag == 0 && (code.charAt(0)!=en && code.charAt(1)!=el); j++) {
+						code =  i+""+(char)j;
+						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>> " + code);
+						System.out.println(compoundsByCode.get(code));
+						if(compoundsByCode.get(code)!=null) {
+							range.add(code);
+							System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>> " + code);
+						} else {
+							flag = 1;
+							letter = 97;
+						
+					}
+				}
+			}
+			
+			
+			
+			for(String code: range) {
+				compounds += "<" + tag + ">" + compoundsByCode.get(code) + "</" + tag + ">, ";
+			}
+			
+			text = text.replaceAll(matcher.group(), compounds);
 		}
 		
 		text = text.replaceAll(" {2}", " ");
