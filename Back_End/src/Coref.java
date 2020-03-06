@@ -28,14 +28,14 @@ public class Coref {
 	}
 	
 	public String findPronoun(String str, String lastEnt) {
-		System.out.println(str);
+		//System.out.println(str);
 		
 		String[] words = str.split(" ");
 		for(String word: words) {
 			if(word.endsWith("_PRP")) {
 				//System.err.println("changed");
 				str = str.replaceAll(word, lastEnt);
-				System.err.println("changed " + lastEnt);
+				//System.err.println("changed " + lastEnt);
 				//System.err.println(str.trim().replaceAll("_[A-Z$,.]+", ""));
 			}
 		}
@@ -101,7 +101,7 @@ public class Coref {
 					if(m.group(1).equals("compound") || m.group(1).equals("plant")) {
 						subject = m.group();
 						
-						System.err.println(subject);
+						//System.err.println(subject);
 						break;
 					} 
 					
@@ -111,7 +111,7 @@ public class Coref {
 					sentences[i] = sentences[i].replaceAll("It", subject);
 				
 			}
-			System.out.println(sentences[i].trim());
+			//System.out.println(sentences[i].trim());
 		}
 		
 		

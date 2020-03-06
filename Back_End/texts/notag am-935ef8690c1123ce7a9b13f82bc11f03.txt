@@ -1,4 +1,4 @@
-Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Bark Maria Carmen S. Tan,*, Mary Stephanie S. Carranza, Virgilio C. Linis, Raymond S. Malabed,, and Glenn G. Oyong Chemistry Department, Biology Department, and Molecular Science Unit Laboratory Center for Natural Sciences and Environmental Research, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines Department of Chemistry, Graduate School of Science, Osaka University, 1-1 Machikaneyama, Toyonaka, Osaka 560-0043, Japan. .: The objective of this research was to find the possible pharmacognosy of the bark of the Philippine Alstonia macrophylla Wall ex G.Don (Alstonia macrophylla).
+Antioxidant, Cytotoxicity, and Antiophidian Potential of Alstonia macrophylla Bark Maria Carmen S. Tan,*, Mary Stephanie S. Carranza, Virgilio C. Linis, Raymond S. Malabed,, and Glenn G. Oyong Chemistry Department, Biology Department, and Molecular Science Unit Laboratory Center for Natural Sciences and Environmental Research, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines Department of Chemistry, Graduate School of Science, Osaka University, Machikaneyama, Toyonaka, Osaka 560-0043, Japan. .: The objective of this research was to find the possible pharmacognosy of the bark of the Philippine Alstonia macrophylla Wall ex G.Don (Alstonia macrophylla).
 
 Gas chromatographic-mass spectral (GC-EI-MS) characterization and energy dispersive X-ray spectroscopy (EDX) were performed to detect the bioactive constituents.
 
@@ -14,7 +14,7 @@ The samples exhibited efficient free radical scavenging activity (IC50 = 0.71 mg
 
 Most interestingly, the Alstonia macrophylla samples inhibited the northern Philippine Cobra's (Naja philippinensis Taylor) venom (IC50 = 297.27 9.33 g/mL) through a secretory phospholipase A2 assay..
 
-. Medicinal plants are still widely used in nonindustrialized societies such as in many parts of Southeast Asia because Alstonia macrophylla are readily available and cheaper than modern medicines.
+. Medicinal plants are still widely used in nonindustrialized societies such as in many parts of Southeast Asia because they are readily available and cheaper than modern medicines.
 
 In the Philippines, some of the most important and highly recognized medicinal plants belong to genus Alstonia in the family Apocynaceae.
 
@@ -36,7 +36,7 @@ Moreover, decoctions of its undeveloped aerial plant parts were ingested as a cu
 
 Mixed preparations of leaves and stem bark of Alstonia macrophylla were used in the Republic of India to treat upset stomachs, Received: January 10, 2019 Accepted: May 17, 2019 Published: May 30, 2019 2019 American Chemical Society 9488 DOI: 10.1021/acsomega.
 
-B00082 ACS Omega 2019, 4, 9488-9496 D ow nl oa de d vi a 12 4. 83 .1 21 .1 68 o n O ct ob er 3 , 2 01 9 at 1 3: 08 :2 0 (U T C ). Se e ht tp s: //p ub s. ac s. or g/ sh ar in gg ui de lin es f or o pt io ns o n ho w to le gi tim at el y sh ar e pu bl is Alstonia macrophylla d ar tic le s. Compound class Legend: Organism (family, genus, species) Organism common name Oraganism part Natural Products Location Biological Activity Cell lines Illness Preparation dermal conditions, and bacterial infections of the urinary tract.
+B00082 ACS Omega 2019, 4, 9488-9496 D ow nl oa de d vi a 12 4. 83 .1 21 .1 68 o n O ct ob er 3 , 2 01 9 at 1 3: 08 :2 0 (U T C ). Se e ht tp s: //p ub s. ac s. or g/ sh ar in gg ui de lin es f or o pt io ns o n ho w to le gi tim at el y sh ar e pu bl is he d ar tic le s. Compound class Legend: Organism (family, genus, species) Organism common name Oraganism part Natural Products Location Biological Activity Cell lines Illness Preparation dermal conditions, and bacterial infections of the urinary tract.
 
 Similar to Alstonia scholaris, Alstonia macrophylla leaves extracted with methanol similarly exhibited antimicrobial properties.
 
@@ -52,13 +52,13 @@ In another study, also using leaf extracts yielded 10 undiscovered indole alkalo
 
 Like Alstonia scholaris, Alstonia macrophylla also has abundant alkaloids.
 
-To date, nearly 70 dissimilar categories of alkaloid derivatives have been described in various organs of Alstonia macrophylla, and a majority of Alstonia scholaris were isolated from the stem bark.
+To date, nearly 70 dissimilar categories of alkaloid derivatives have been described in various organs of Alstonia macrophylla, and a majority of them were isolated from the stem bark.
 
-In this work, Alstonia scholaris established the antioxidant (by a modified assay using 1,1-diphenyl-2-picrylhydrazyl (DPPH)), cytotoxic (HT-29, H69PR, MCF-7, THP-1 immortalized cell lines, and normal HDFn primary culture cells), and antivenom activities of crude Alstonia macrophylla extracts.
+In this work, we established the antioxidant (by a modified assay using 1,1-diphenyl-2-picrylhydrazyl (DPPH)), cytotoxic (HT-29, H69PR, MCF-7, THP-1 immortalized cell lines, and normal HDFn primary culture cells), and antivenom activities of crude Alstonia macrophylla extracts.
 
 Chemical characterization was achieved utilizing gas chromatography in tandem with mass spectrometry and energy dispersive X-ray spectroscopy.
 
-After our thorough investigation, Alstonia scholaris believe that this original work is the first to describe the research of these selected bioassay experiments of crude Alstonia macrophylla extracts using a MeOH/DMSO solvent extraction protocol of Alstonia macrophylla bark..
+After our thorough investigation, we believe that this original work is the first to describe the research of these selected bioassay experiments of crude Alstonia macrophylla extracts using a MeOH/DMSO solvent extraction protocol of Alstonia macrophylla bark..
 
 . 2.1. GC-EI-MS Assessments of Alstonia macrophylla.
 
@@ -280,7 +280,7 @@ IC50 is defined as the sample concentration at which 50% of the free radicals ar
 
 This is determined by calculating the DPPH free radical scavenging percentages.
 
-This is computed by the formula: A A A DPPH scavenging effect (%) or percent inhibition ( /_: ) 1000 1 0= -_: 3.5. Cell Viability Assay.
+This is computed by the formula: A A A DPPH scavenging effect (%) or percent inhibition ( / ) 1000 1 0= - 3.5. Cell Viability Assay.
 
 The pharmacognosy of the dichloromethane (CH2Cl2) extracts from Alstonia macrophylla was tested on the succeeding immortalized cell lines purchased from ATCC, Manassas, Virginia, USA (breast cancer (MCF-7), colon cancer (HT29), small cell lung carcinoma (H69PR), human acute monocytic leukemia (THP-1)) and a primary culture of normal human dermal fibroblast neonatal (HDFn) (Thermo Fisher Scientific, Gibco, USA).
 
@@ -306,7 +306,7 @@ Zeocin, which is a DNA intercalating antibiotic of the bleomycin/phleomycin fami
 
 Spectrophotometry was carried out using a BioTek ELx800.
 
-Optical density (O.D.) values were ascertained to derive percent cell viability following the equation below: cell viability(%) (O. D. O. D. ) (O. D. O. D. ) 100570nm,treated sample 570nm,blank 570nm,negative control 570nm,blank = -_: -_: Nonlinear regression and statistical analyses were achieved using the software GraphPad Prism 7. The IC50 (inhibitor concentration leading to 50% reduction of cell viability) was also inferred from nonlinear regression analysis.
+Optical density (O.D.) values were ascertained to derive percent cell viability following the equation below: cell viability(%) (O. D. O. D. ) (O. D. O. D. ) 100570nm,treated sample 570nm,blank 570nm,negative control 570nm,blank = - - Nonlinear regression and statistical analyses were achieved using the software GraphPad Prism 7. The IC50 (inhibitor concentration leading to 50% reduction of cell viability) was also inferred from nonlinear regression analysis.
 
 All trials were performed in three replicates and are shown as mean SEM.
 
@@ -332,7 +332,7 @@ Percent inhibition was verified based on the determined sPLA inhibition.
 
 In addition, the concentration of Alstonia macrophylla generating 50% inhibition (IC50) was stated.
 
-X X X %inhibition 100control sample control = -_: Here, Xcontrol is the sPLA activity of positive control (100 g/L NPV) and Xsample is the sPLA activity in the presence of inhibitor (Alstonia macrophylla).
+X X X %inhibition 100control sample control = - Here, Xcontrol is the sPLA activity of positive control (100 g/L NPV) and Xsample is the sPLA activity in the presence of inhibitor (Alstonia macrophylla).
 
 The absorbance values were corrected against the blank sample (DMSO).
 
@@ -345,4 +345,3 @@ B00082 ACS Omega 2019, 4, 9488-9496 9494 Coordination Office for the research gr
 Also, the authors greatly appreciate the indispensable assistance and support that Professor Michio Murata of the Department of Chemistry, Graduate School of Science, Osaka University generously gave us.
 
 ABBREVIATIONS Alstonia macrophylla Alstonia macrophylla bark DCM dichloromethane DMSO dimethylsulfoxide EDX energy dispersive X-ray spectroscopy GC-EI-MS gas chromatography-electron ionization-mass spectrometry IC50 half maximal inhibitory concentration Immortalized cell lines MCF-7 human breast adenocarcinoma cell line HT-29 human colorectal adenocarcinoma cell line H69PR Homo sapiens small cell lung carcinoma THP-1 human acute monocytic leukemia cell line HDFn primary culture of normal human dermal fibroblast neonatal MeOH methanol NPV Naja philippinensis Taylor venom sPLA secretory phospholipase A2 ppm parts per million
-

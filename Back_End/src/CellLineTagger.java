@@ -12,7 +12,7 @@ public class CellLineTagger extends LookUpEntityTagger {
 		sortLexiconFile();
 		readLexiconFile();
 		
-		compilePatterns();
+		compilePatternsInsensitive();
 		
 		findEntities();
 		tagEntities();
