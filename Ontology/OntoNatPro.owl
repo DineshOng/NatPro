@@ -767,6 +767,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstohentine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Alstohentine</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -775,6 +776,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstomaline">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Alstomaline</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -783,6 +785,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstomicine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Alstomicine</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -791,7 +794,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstonerine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
-        <datatypeProperty_CompoundSynonym>Alstonerin</datatypeProperty_CompoundSynonym>
+        <datatypeProperty_CompoundSynonym>Alstonerine</datatypeProperty_CompoundSynonym>
         <datatypeProperty_CompoundSynonym>Alstophyllan-19-one</datatypeProperty_CompoundSynonym>
         <datatypeProperty_CompoundSynonym>Alstophylline, demethoxy-</datatypeProperty_CompoundSynonym>
         <datatypeProperty_IUPACName>1-[(1S,12S,13R,18R)-3,20-dimethyl-15-oxa-3,20-diazapentacyclo[10.7.1.02,10.04,9.013,18]icosa-2(10),4,6,8,16-pentaen-17-yl]ethanone</datatypeProperty_IUPACName>
@@ -907,6 +910,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstophyllal">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Alstophyllal</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1604,6 +1608,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#analgesic"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-fungal_activity_against_a.rabiei"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory"/>
+        <datatypeProperty_CompoundSynonym>Beta-Amyrin</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1667,6 +1672,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibitory_effect_on_MCF-7"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_COLO_320_DM"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitor_of_semen_movability"/>
+        <datatypeProperty_CompoundSynonym>Beta-Sitosterol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1676,6 +1682,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl-beta-D-glucoside">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#antioxidant"/>
+        <datatypeProperty_CompoundSynonym>Beta-Sitosteryl-Beta-D-Glucoside</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1947,6 +1954,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brucine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Brucine</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -2046,6 +2054,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#campesterol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Campesterol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3630,6 +3639,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#gamma-sitosterol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Gamma-Sitosterol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5175,6 +5185,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibition_and_apoptosis_in_SMMC7721"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hypotensive"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_MDA-MB-231"/>
+        <datatypeProperty_CompoundSynonym>Lupeol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5849,6 +5860,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#plant">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>plant</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -6065,6 +6077,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#rauvomitin">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Rauvomitin</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6502,6 +6515,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytostatic_against_mccoy_cells"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibited_tumour_promotion_in_two_stage_carcinogenesis"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#therapeutic_efficacy_against_Ehrlich"/>
+        <datatypeProperty_CompoundSynonym>Stigmasterol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6528,6 +6542,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#strictamin">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Strictamin</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7037,6 +7052,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#10.11-dimethoxynareline">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>10,11-dimethoxynareline</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7069,6 +7085,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#16-hydroxy-N4-demethylalstophyllal_oxindole">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>16-hydroxy-N4-demethylalstophyllal Oxindole</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7077,6 +7094,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#16-hydroxyalstonal">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>16-hydroxyalstonal</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7085,6 +7103,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#16-hydroxyalstonisine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>16-hydroxyalstonisine</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7117,6 +7136,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#24-methylenecycloartanol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>24-methylenecycloartanol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7157,6 +7177,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#6-oxoalstophyllal">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>6-oxoalstophyllal</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7165,6 +7186,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#6-oxoalstophylline">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>6-oxoalstophylline</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
