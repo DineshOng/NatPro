@@ -23,9 +23,9 @@ import javax.servlet.http.HttpServlet;
 // Decompiled by Procyon v0.5.36
 // 
 
-@WebServlet({ "/registerSERVLET" })
+@WebServlet({ "/uploadSERVLET" })
 @MultipartConfig(maxFileSize = 16177215L)
-public class registerSERVLET extends HttpServlet
+public class uploadSERVLET extends HttpServlet
 {
     private static final long serialVersionUID = 1L;
     
@@ -48,9 +48,9 @@ public class registerSERVLET extends HttpServlet
 				if(checkDocument(uniqueID)) {
 					System.out.println(fileName);
 					if(fileName.endsWith(".pdf")) {
-						new SaveFile(fileContent1, new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\PDF\\"+uniqueID+".pdf"));
+						new SaveFile(fileContent1, new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\UploadedDocuments\\"+uniqueID+".pdf"));
 					} else if(fileName.endsWith(".txt")) {
-						new SaveFile(fileContent1, new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\PDF\\"+uniqueID+".txt"));
+						new SaveFile(fileContent1, new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\UploadedDocuments\\"+uniqueID+".txt"));
 					}
 				} else {
 					System.out.println("file duplicate: "+fileName);
@@ -69,7 +69,7 @@ public class registerSERVLET extends HttpServlet
     }
     
     public static boolean checkDocument(String uniqueID) throws IOException {
-    	File dir = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\PDF\\");
+    	File dir = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\UploadedDocuments\\");
         File[] files = dir.listFiles((dir1, name) -> name.startsWith(uniqueID) && name.endsWith(".pdf"));
         if(files.length == 0) {
         	return true;

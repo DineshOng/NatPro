@@ -40,13 +40,13 @@
                 <div class="row center">
                     <h6>Upload your document here</h6>
                     <br>
-                    <form action="/NatPro/registerSERVLET"  method="POST" enctype="multipart/form-data" autocomplete="off">
+                    <form action="/NatPro/uploadSERVLET"  method="POST" enctype="multipart/form-data" autocomplete="off">
                         <div class="file-field" input field>
                             <div class="col s6 offset-s3">
                                 <div class="waves-effect waves-light btn green darken-1">
                                 <span>File</span>
                                    	<!--   <input type="file" multiple>-->
-                                    <input id="upload"  type="file" name="file-upload"  value="" multiple="multiple">
+                                    <input id="upload"  type="file" name="file-upload"  value="" multiple="multiple" accept=".txt,.pdf">
                                 </div>
                                 <div class="file-path-wrapper">
                                     <input class="file-path validate" type="text" placeholder="Upload your document(s) here">
