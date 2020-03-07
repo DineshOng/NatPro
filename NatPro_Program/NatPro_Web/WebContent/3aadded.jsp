@@ -16,21 +16,21 @@
         <nav class="white" role="navigation">
             <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NatPro</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="1mainpage.html">Home</a></li>
-                    <li><a href="2upload.html">Upload</a></li>
-                    <li><a href="3add.html" class="white-text green darken-3">Add</a></li>
-                    <li><a href="4validation.html">Validation</a></li>
-                    <li><a href="5search.html">Search</a></li>
-                    <li><a href="6view.html">View</a></li>
+                    <li><a href="1mainpage.jsp">Home</a></li>
+                    <li><a href="2upload.jsp">Upload</a></li>
+                    <li><a href="3add.jsp" class="white-text green darken-3">Add</a></li>
+                    <li><a href="4validation.jsp">Validation</a></li>
+                    <li><a href="5search.jsp">Search</a></li>
+                    <li><a href="6view.jsp">View</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="sidenav">
-                    <li><a href="1mainpage.html">Home</a></li>
-                    <li><a href="2upload.html">Upload</a></li>
-                    <li><a href="3add.html" class="white-text green darken-3">Add</a></li>
-                    <li><a href="4validation.html">Validation</a></li>
-                    <li><a href="5search.html">Search</a></li>
-                    <li><a href="6view.html">View</a></li>
+                    <li><a href="1mainpage.jsp">Home</a></li>
+                    <li><a href="2upload.jsp">Upload</a></li>
+                    <li><a href="3add.jsp" class="white-text green darken-3">Add</a></li>
+                    <li><a href="4validation.jsp">Validation</a></li>
+                    <li><a href="5search.jsp">Search</a></li>
+                    <li><a href="6view.jsp">View</a></li>
                 </ul>
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
@@ -41,8 +41,8 @@
                 <h1 class="header center white-text">Add</h1>
                 <div class="row center white-text">
                     <h6>Successfully added a plant</h6>
-                    <a class="btn waves-effect waves-light green accent-4" href="4validation.html">Validate added data</a>
-                    <a class="btn waves-effect waves-light green accent-4" href="3add.html">add another entry</a>
+                    <a class="btn waves-effect waves-light green accent-4" href="4validation.jsp">Validate added data</a>
+                    <a class="btn waves-effect waves-light green accent-4" href="3add.jsp">add another entry</a>
                 </div>
                 <br><br>
 

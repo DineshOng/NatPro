@@ -16,21 +16,21 @@
         <nav class="white" role="navigation">
             <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NatPro</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="1mainpage.html">Home</a></li>
-                    <li><a href="2upload.html" class="white-text green darken-3">Upload</a></li>
-                    <li><a href="3add.html">Add</a></li>
-                    <li><a href="4validation.html">Validation</a></li>
-                    <li><a href="5search.html">Search</a></li>
-                    <li><a href="6view.html">View</a></li>
+                    <li><a href="1mainpage.jsp">Home</a></li>
+                    <li><a href="2upload.jsp" class="white-text green darken-3">Upload</a></li>
+                    <li><a href="3add.jsp">Add</a></li>
+                    <li><a href="4validation.jsp">Validation</a></li>
+                    <li><a href="5search.jsp">Search</a></li>
+                    <li><a href="6view.jsp">View</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="sidenav">
-                    <li><a href="1mainpage.html">Home</a></li>
-                    <li><a href="2upload.html" class="white-text green darken-3">Upload</a></li>
-                    <li><a href="3add.html">Add</a></li>
-                    <li><a href="4validation.html">Validation</a></li>
-                    <li><a href="5search.html">Search</a></li>
-                    <li><a href="6view.html">View</a></li>
+                    <li><a href="1mainpage.jsp">Home</a></li>
+                    <li><a href="2upload.jsp" class="white-text green darken-3">Upload</a></li>
+                    <li><a href="3add.jsp">Add</a></li>
+                    <li><a href="4validation.jsp">Validation</a></li>
+                    <li><a href="5search.jsp">Search</a></li>
+                    <li><a href="6view.jsp">View</a></li>
                 </ul>
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
@@ -42,7 +42,7 @@
                 <div class="row center">
                     <h6>Upload your document here</h6>
                     <br>
-                    <form action="2acomplete.html">
+                    <form action="2acomplete.jsp">
                         <div class="file-field" input field>
                             <div class="col s6 offset-s3">
                                 <div class="waves-effect waves-light btn green darken-1">
