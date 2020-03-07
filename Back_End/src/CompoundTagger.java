@@ -48,7 +48,7 @@ public class CompoundTagger extends LookUpEntityTagger {
 		//compilePatterns();
 		
 		for(String s: lexicon) {
-			patterns.add(Pattern.compile("\\b([A-Za-z0-9\\[\\(\\]\\),':-]+" + s + ")\\b", Pattern.CASE_INSENSITIVE));
+			patterns.add(Pattern.compile("\\b([A-Za-z0-9\\[\\(\\]\\),':-]{2,}" + s + ")\\b", Pattern.CASE_INSENSITIVE));
 		}
 		
 		findCompounds();

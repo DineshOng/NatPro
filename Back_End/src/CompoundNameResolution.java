@@ -67,7 +67,7 @@ public class CompoundNameResolution {
 		for(String i : map.keySet()) {
 			System.out.println("value: " + map.get(i) + "\tkey: " + i);
 			
-			text = text.replaceAll("[^->'%:]\\b" + i + "\\b[^->'%:]", " <" + tag + ">" + compoundsByCode.get(i) + "</" + tag + "> ");
+			text = text.replaceAll("[^->'%:]\\b" + i + "\\b[^->'%:]", " <" + tag + ">" + compoundsByCode.get(i) + "</" + tag + ">, ");
 		}
 		
 		pattern = Pattern.compile("\\b(([1-9][a-z])|([XIV]+)|([1-9]))-(([1-9][a-z])|([XIV]+)|([1-9]))\\b");
@@ -81,8 +81,14 @@ public class CompoundNameResolution {
 			String compounds = "";
 			
 			if(start.matches("^[1-9]$")) {
-				int s = Integer.parseInt(start);
-				int e = Integer.parseInt(end);
+				int s;
+				int e;
+				try {
+					s = Integer.parseInt(start);
+					e = Integer.parseInt(end);
+				} catch (Exception eee) {
+					break;
+				}
 				
 				for(int i=s; i<e; i++) {
 					range.add(i+"");
@@ -119,6 +125,7 @@ public class CompoundNameResolution {
 						} else {
 							flag = 1;
 							letter = 97;
+						}
 						
 					}
 				}
@@ -126,8 +133,8 @@ public class CompoundNameResolution {
 			
 			
 			
-			for(String code: range) {
-				compounds += "<" + tag + ">" + compoundsByCode.get(code) + "</" + tag + ">, ";
+			for(String cod: range) {
+				compounds += "<" + tag + ">" + compoundsByCode.get(cod) + "</" + tag + ">, ";
 			}
 			
 			text = text.replaceAll(matcher.group(), compounds);

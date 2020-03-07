@@ -57,7 +57,7 @@ public class Tagger {
             txt = new BioActivityTagger("bioact", txt, "bioact.txt").run();
             txt = new SpeciesFamilyTagger("family", txt, "family.txt").run();
             txt = new OrgPartTagger("plantpart", txt, "orgpart.txt").run();
-            txt = new CellLineTagger("cell", txt, "cell-lines.txt").run();
+            txt = new CellLineTagger("cell", txt, "cl.txt").run();
             txt = new CompoundClassTagger("class", txt, "compound-class.txt").run();
             txt = new BodyPartTagger("bodypart", txt, "bodypart.txt").run();
             txt = new PreparationTagger("prep", txt, "prep.txt").run();
