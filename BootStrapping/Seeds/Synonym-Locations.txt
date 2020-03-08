@@ -1,6 +1,8 @@
-e1:species
-e2:location
+e1:plant
+e2:loc
 
+Duranta erecta; sta rosa
+Duranta erecta; Laguna
 mirabilis dichotoma;brazil
 mirabilis dichotoma;china
 mirabilis dichotoma;india
@@ -81,7 +83,7 @@ Alstonia macrophylla;bataan
 Alstonia macrophylla;china
 Alstonia macrophylla;indonesia
 Alstonia macrophylla;malaysia
-Alstonia;philippines
+Alstonia macrophylla;philippines
 madhuca betis;cagayan
 madhuca betis;cavite
 madhuca betis;indonesia
