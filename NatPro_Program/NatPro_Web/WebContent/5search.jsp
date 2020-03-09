@@ -63,6 +63,9 @@
                     </div>
                     <input type="submit" class="waves-effect waves-light btn center green darken-3 col s4 offset-s4" id="btnSubmit" value="search">
                 </form>
+                <form id="advSearch" hidden action="">
+                	
+                </form>
             </div>
         </div>
 
@@ -140,6 +143,10 @@
             $(document).ready(function() {
                 $('select').formSelect();
             })
+            
+            document.getElementById("advSearch").onclick = function() {
+            	document.getElementById("advSearch").style.display = "none";
+            }
         </script>
     </body>
 </html>
