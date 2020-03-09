@@ -14,21 +14,21 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="lib/commons-fileupload-1.3.3.jar"/>
-	<classpathentry kind="lib" path="lib/json-20140107.jar"/>
-	<classpathentry kind="lib" path="lib/openbabel.jar"/>
-	<classpathentry kind="lib" path="lib/oscar4-all-4.2.2-with-dependencies.jar"/>
-	<classpathentry kind="lib" path="lib/pdfbox-app-2.0.17.jar"/>
-	<classpathentry kind="lib" path="lib/protege-owl.jar"/>
-	<classpathentry kind="lib" path="lib/protege.jar"/>
-	<classpathentry kind="lib" path="lib/slf4j-api-1.7.9.jar"/>
-	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.9.jar"/>
-	<classpathentry kind="lib" path="lib/stanford-corenlp-3.9.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/stanford-corenlp-3.9.2-models.jar"/>
-	<classpathentry kind="lib" path="lib/stanford-corenlp-3.9.2-sources.jar"/>
-	<classpathentry kind="lib" path="lib/stanford-corenlp-3.9.2.jar"/>
-	<classpathentry kind="lib" path="lib/stanford-english-kbp-corenlp-2018-10-05-models.jar"/>
-	<classpathentry kind="lib" path="lib/stanford-parser-3.9.2-sources.jar"/>
-	<classpathentry kind="lib" path="lib/stanford-parser.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/commons-fileupload-1.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/json-20140107.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/openbabel.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/oscar4-all-4.2.2-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/pdfbox-app-2.0.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/protege.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/protege-owl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/slf4j-api-1.7.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/slf4j-simple-1.7.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/stanford-corenlp-3.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/stanford-corenlp-3.9.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/stanford-corenlp-3.9.2-models.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/stanford-corenlp-3.9.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/stanford-english-kbp-corenlp-2018-10-05-models.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/stanford-parser.jar"/>
+	<classpathentry kind="lib" path="C:/Users/eduar/Documents/workspace/NatPro/lib/stanford-parser-3.9.2-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
