@@ -47,7 +47,7 @@
                             <div class="col s6 offset-s3">
                                 <div class="waves-effect waves-light btn green darken-1">
                                 <span>File</span>
-                                    <input type="file" multiple>
+                                    <input type="file" id="file" name="file" accept=".doc,.docx,.pdf"multiple>
                                 </div>
                                 <div class="file-path-wrapper">
                                     <input class="file-path validate" type="text" placeholder="Upload your document(s) here">
