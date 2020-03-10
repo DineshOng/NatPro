@@ -1,11 +1,17 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import edu.stanford.smi.protege.exception.OntologyLoadException;
+import model.MedicinalPlant;
+import service.OntoQuery;
 
 /**
  * Servlet implementation class SearchServlet
@@ -41,18 +47,32 @@ public class SearchServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		switch (request.getServletPath()) {
 		case "/SearchServlet":
-			performSearch(request, response);
+			try {
+				performSearch(request, response);
+			} catch (OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			break;
 		default:
 			System.out.println("ERROR(Inside userServlet *doPost*): url pattern doesn't match existing patterns.");
 		}
-		response.sendRedirect("5asearchresults.jsp");
+//		response.sendRedirect("5asearchresults.jsp");
 		doGet(request, response);
 	}
 
-	private void performSearch(HttpServletRequest request, HttpServletResponse response) {
+	private void performSearch(HttpServletRequest request, HttpServletResponse response) throws OntologyLoadException, ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println(request.getParameter("searchKey"));
+		String searchKey = request.getParameter("searchKey");
+		System.out.println(request.getParameter("searchCategory"));
+		OntoQuery q = new OntoQuery("C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\Ontology\\OntoNatPro.owl");
+		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
+//		for(MedicinalPlant m: medPlants) {
+//			System.out.println(m.getMedicinalPlant().toString());
+//		}
+		request.setAttribute("medPlantsList", medPlants);
+		request.getRequestDispatcher("5asearchresults.jsp").forward(request, response);
+//		System.out.println(medPlants.get(0));
 	}
 
 }
