@@ -47,9 +47,9 @@ public class SearchSeeds {
 		}
 	}
 	
-	public SearchSeeds(String []text) {
+	public SearchSeeds(String []text , Set<String> seeds) {
 		this.text = text;
-		//this.seeds = seeds;
+		this.seeds = seeds;
 		
 		String allTag = "(.*)<[a-z]+>[^<]+<\\/[a-z]+>(.*)";
 		String plant = "(.*)<plant>[^<]+<\\/plant>(.*)";
