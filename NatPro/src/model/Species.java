@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Species {
 	String specie;
 	ArrayList<SpeciesPart> speciesParts;
+	String genus;
+	String family;
 
 	public Species(String specie) {
 		super();
@@ -26,4 +28,22 @@ public class Species {
 	public void setSpeciesParts(ArrayList<SpeciesPart> speciesParts) {
 		this.speciesParts = speciesParts;
 	}
+
+	public String getGenus() {
+		return genus;
+	}
+
+	public void setGenus(String genus) {
+		this.genus = genus;
+	}
+
+	public String getFamily() {
+		return family;
+	}
+
+	public void setFamily(String family) {
+		this.family = family;
+	}
+	
+	
 }

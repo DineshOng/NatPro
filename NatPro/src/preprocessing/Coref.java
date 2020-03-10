@@ -4,21 +4,6 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.xml.XMLConstants;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
-import javax.xml.validation.Validator;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 public class Coref {
@@ -44,7 +29,7 @@ public class Coref {
 		return str;
 	}
 	
-	public String run2() throws ParserConfigurationException, SAXException, IOException {
+	public String run2() throws IOException {
 		MaxentTagger mt = new MaxentTagger("english-left3words-distsim.tagger");
 		String subject = "";
 		String corefText = "";
@@ -84,7 +69,7 @@ public class Coref {
 		return corefText;
 	}
 
-	public String run() throws ParserConfigurationException, SAXException, IOException {
+	public String run() throws IOException {
 		String[] sentences = text.split("\n\n");
 		String subject = "";
 		

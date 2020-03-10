@@ -97,8 +97,7 @@ public class uploadSERVLET extends HttpServlet
 		    		new Thread(() -> {
 		    			try {
 							new Tagger(folder+ "\\"+listOfFiles[num].getName(), name);
-						} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException
-								| ParserConfigurationException | SAXException e) {
+						} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}

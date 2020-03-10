@@ -25,7 +25,7 @@
 			<h1 class="header center green-text text-darken-3">Search</h1>
 			<div class="row center">
 				<h6>
-					Search results for <span></span>
+					Search results for "${searchKey}"<span></span>
 				</h6>
 			</div>
 			<br> <br>
@@ -62,8 +62,8 @@
 			<tbody>
 				<c:forEach items="${medPlantsList}" var="medPlantsList">
 					<tr>
-						<td>${medPlantsList.getMedicinalPlant()}</td>
-						<td><c:forEach items="${medPlantsList.getSpecies()}" var="speciesList">${speciesList.getSpecie()} , </c:forEach></td>
+						<td><a href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
+						<td><c:forEach items="${medPlantsList.getSpecies()}" var="speciesList"><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()} </a>, </c:forEach></td>
 					</tr>
 				</c:forEach>
 			</tbody>

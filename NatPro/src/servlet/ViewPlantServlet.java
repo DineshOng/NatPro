@@ -1,8 +1,6 @@
 package servlet;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.FileSystems;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -16,41 +14,30 @@ import model.MedicinalPlant;
 import service.OntoQuery;
 
 /**
- * Servlet implementation class SearchServlet
+ * Servlet implementation class ViewPlantServlet
  */
-@WebServlet({ "/SearchServlet" })
-public class SearchServlet extends HttpServlet {
+@WebServlet("/ViewPlantServlet")
+public class ViewPlantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ViewPlantServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
 	/**
-	 * @see HttpServlet#HttpServlet()
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	public SearchServlet() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		switch (request.getServletPath()) {
-		case "/SearchServlet":
+		case "/ViewPlantServlet":
 			try {
-				performSearch(request, response);
+				viewPlant(request, response);
 			} catch (OntologyLoadException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -59,23 +46,28 @@ public class SearchServlet extends HttpServlet {
 		default:
 			System.out.println("ERROR(Inside userServlet *doPost*): url pattern doesn't match existing patterns.");
 		}
-//		response.sendRedirect("5asearchresults.jsp");
-		doGet(request, response);
 	}
 
-	private void performSearch(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+	
+	private void viewPlant(HttpServletRequest request, HttpServletResponse response)
 			throws OntologyLoadException, ServletException, IOException {
 		// TODO Auto-generated method stub
-		String searchKey = request.getParameter("searchKey");
-		System.out.println(request.getParameter("searchCategory"));
+		String searchKey = request.getParameter("medPlant");
+		System.out.println(searchKey);
 		OntoQuery q = new OntoQuery("C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\Ontology\\OntoNatPro.owl");
 		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
 //		for(MedicinalPlant m: medPlants) {
 //			System.out.println(m.getMedicinalPlant().toString());
 //		}
-		request.setAttribute("searchKey", searchKey);
 		request.setAttribute("medPlantsList", medPlants);
-		request.getRequestDispatcher("5asearchresults.jsp").forward(request, response);
+		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
 //		System.out.println(medPlants.get(0));
 	}
 

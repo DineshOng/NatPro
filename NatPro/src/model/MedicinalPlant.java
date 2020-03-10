@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class MedicinalPlant {
 	String medicinalPlant;
 	ArrayList<Species> species;
+	ArrayList<String> locations;
+
 	public MedicinalPlant(String medicinalPlant) {
 		super();
 		this.medicinalPlant = medicinalPlant;
@@ -24,6 +26,14 @@ public class MedicinalPlant {
 	public void setSpecies(ArrayList<Species> species) {
 		this.species = species;
 	}
-	
+
+	public ArrayList<String> getLocations() {
+		return locations;
+	}
+
+	public void setLocations(ArrayList<String> locations) {
+		this.locations = locations;
+	}
+
 
 }

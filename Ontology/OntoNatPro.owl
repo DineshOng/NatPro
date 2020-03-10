@@ -230,6 +230,22 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Family -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Family">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Genus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Genus">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_IUPACName -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_IUPACName">
@@ -810,6 +826,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstonia">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#apocynaceae"/>
+        <datatypeProperty_Genus>Alstonia</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -1185,6 +1202,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#apocynaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Family>Apocynaceae</datatypeProperty_Family>
     </owl:NamedIndividual>
     
 

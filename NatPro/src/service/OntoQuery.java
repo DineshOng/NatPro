@@ -157,8 +157,13 @@ public class OntoQuery {
 						// EDIT THIS CODE FOR EFFICIENT SEARCH FUNCTION
 						if (medPlantIndiv.contains(MedicinalPlant)) {
 							MedicinalPlant mp = new MedicinalPlant(medPlantIndiv);
+							// get scientific name/synonyms
 							ArrayList<Species> species = new ArrayList<Species>();
 							species.addAll(getSpeciesList(individual));
+							// get locations
+							ArrayList<String> locations = new ArrayList<String>();
+							locations.addAll(getLocations(medPlantIndiv));
+							mp.setLocations(locations);
 							mp.setSpecies(species);
 
 							values.add(mp);
@@ -174,8 +179,13 @@ public class OntoQuery {
 
 	public ArrayList<Species> getSpeciesList(OWLIndividual MedicinalPlant) {
 		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
+		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
+		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
+		
 		RDFProperty hasScientificName = owlModel.getRDFProperty("hasScientificName");
-
+		RDFProperty belongsToGenus = owlModel.getRDFProperty("belongsToGenus");
+		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
+		
 		ArrayList<Species> species = new ArrayList<Species>();
 
 		Collection speciesCol = MedicinalPlant.getPropertyValues(datatypeProperty_Synonym);
@@ -194,6 +204,12 @@ public class OntoQuery {
 			if (!sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString().isBlank()) {
 				Species sp = new Species(sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString());
 				sp.setSpeciesParts(getSpeciesPartList(sciNameIndiv));
+				//get genus
+				OWLIndividual genus = (OWLIndividual) sciNameIndiv.getPropertyValue(belongsToGenus);
+				sp.setGenus(genus.getPropertyValue(datatypeProperty_Genus).toString());
+				//get family
+				OWLIndividual family = (OWLIndividual) genus.getPropertyValue(belongsToFamily);
+				sp.setFamily(family.getPropertyValue(datatypeProperty_Family).toString());
 				species.add(sp);
 			}
 		}

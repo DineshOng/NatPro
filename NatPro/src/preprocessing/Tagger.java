@@ -6,11 +6,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
 
-
-import javax.xml.parsers.ParserConfigurationException;
-
 import org.apache.commons.math.util.OpenIntToDoubleHashMap.Iterator;
-import org.xml.sax.SAXException;
 
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
@@ -20,7 +16,7 @@ import edu.stanford.nlp.util.Triple;
 
 public class Tagger {
 	
-	public Tagger(String filename, String uniqueID) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, ParserConfigurationException, SAXException {
+	public Tagger(String filename, String uniqueID) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException{
 		
         	String text = new PDFtoTXT(filename).convertedText();
             String cleanTxt = new TextCleaner(text).cleanText().getText();
