@@ -76,7 +76,7 @@ public class OntoQuery {
 							Collection synonyms = individual.getPropertyValues(datatypeProperty_Synonym);
 							// This is for entities from OntoPHerb, synonyms as datatype prop
 							for (Iterator kt = synonyms.iterator(); kt.hasNext();) {
-								if (!kt.next().toString().isBlank()) {
+								if (!kt.next().toString().isEmpty()) {
 									values.add(kt.next().toString());
 								}
 							}
@@ -86,7 +86,7 @@ public class OntoQuery {
 							for (Iterator lt = synonyms2.iterator(); lt.hasNext();) {
 								OWLIndividual sciNameIndiv = (OWLIndividual) lt.next();
 //								System.out.println(sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString());
-								if (!sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString().isBlank()) {
+								if (!sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString().isEmpty()) {
 									values.add(sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString());
 								}
 							}
@@ -191,7 +191,7 @@ public class OntoQuery {
 		Collection speciesCol = MedicinalPlant.getPropertyValues(datatypeProperty_Synonym);
 		// This is for entities from OntoPHerb, synonyms as datatype prop
 		for (Iterator it = speciesCol.iterator(); it.hasNext();) {
-			if (!it.next().toString().isBlank()) {
+			if (!it.next().toString().isEmpty()) {
 				Species sp = new Species(it.next().toString());
 				species.add(sp);
 			}
@@ -201,7 +201,7 @@ public class OntoQuery {
 		Collection speciesCol2 = MedicinalPlant.getPropertyValues(hasScientificName);
 		for (Iterator it = speciesCol2.iterator(); it.hasNext();) {
 			OWLIndividual sciNameIndiv = (OWLIndividual) it.next();
-			if (!sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString().isBlank()) {
+			if (!sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString().isEmpty()) {
 				Species sp = new Species(sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString());
 				sp.setSpeciesParts(getSpeciesPartList(sciNameIndiv));
 				//get genus
