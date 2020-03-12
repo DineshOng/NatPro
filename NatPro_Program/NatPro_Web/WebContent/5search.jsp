@@ -43,7 +43,10 @@
                     <h6>Search for plants, chemical compound, etc.</h6>
                 </div>
                 <br><br>
-                <form class="row" action="5asearchresults.jsp">
+                <div class="row">
+                	<a class="col s3 offset-s9 waves-effect waves-light btn green darken-3" onclick="switchSearch()" id="switchSearch">Switch to advanced search</a>
+                </div>
+                <form class="row" action="5asearchresults.jsp" id="normSearch">
                     <div class="input-field col s9">
                         <i class="material-icons prefix">search</i>
                         <input id="searchInput" class="materialize-textarea" type="text">
@@ -63,8 +66,59 @@
                     </div>
                     <input type="submit" class="waves-effect waves-light btn center green darken-3 col s4 offset-s4" id="btnSubmit" value="search">
                 </form>
-                <form id="advSearch" hidden action="">
-                	
+                <form id="advSearch" action="" class="row" >
+                	<div class="input-field col s12">
+                        <i class="material-icons prefix">search</i>
+                        <input id="searchInput" class="materialize-textarea" type="text">
+                        <label for="searchInput">Search</label>
+                    </div>
+                    
+                    <div class="row">
+                    	<h6>Search for only:</h6><br>
+                    	<label class="">
+                    		<input type="checkbox" class="filled-in">
+                    		<span>Plant Name</span>
+                    	</label>
+                    	<label class="">
+                    		<input type="checkbox" class="filled-in">
+                    		<span>Common Plant Name</span>
+                    	</label>
+                    	<label class="">
+                    		<input type="checkbox" class="filled-in">
+                    		<span>Genus</span>
+                    	</label>
+                    	<label class="">
+                    		<input type="checkbox" class="filled-in">
+                    		<span>Family</span>
+                    	</label>
+                    	<label class="">
+                    		<input type="checkbox" class="filled-in">
+                    		<span>Chemical Compound</span>
+                    	</label>
+                    </div>
+                    <div class="row">
+                    	<h6>Plant Part Usage</h6><br>
+                    	<div class="input-field col s8">
+	                        <i class="material-icons prefix">search</i>
+	                        <input id="searchInput" class="materialize-textarea" type="text">
+	                        <label for="searchInput">Search</label>
+	                    </div>
+	                    <div class="col s1">
+	                    	<h6>for</h6>
+	                    </div>
+	                    <div class="input-field col s3">
+	                        <select class="browser-default">
+	                            <option value="" disabled selected>Choose plant part</option>
+	                            <option value="1">stem</option>
+	                            <option value="2">bark</option>
+	                            <option value="3">sarcotesta</option>
+	                            <option value="4">endotesta</option>
+	                            <option value="5">roots</option>
+	                            <option value="6">leaf</option>
+	                        </select>
+	                    </div>
+                    </div>
+                    <input type="submit" class="waves-effect waves-light btn center green darken-3 col s4 offset-s4" id="btnSubmit" value="search">
                 </form>
             </div>
         </div>
@@ -144,8 +198,22 @@
                 $('select').formSelect();
             })
             
-            document.getElementById("advSearch").onclick = function() {
-            	document.getElementById("advSearch").style.display = "none";
+            function switchSearch() {
+            	var nSearch = document.getElementById("normSearch");
+            	var aSearch = document.getElementById("advSearch");
+            	var sSearch = document.getElementById("switchSearch");
+            	
+            	if (nSearch.style.display == "none" && aSearch.style.display == "block") {
+            		aSearch.style.display = "none";
+            		nSearch.style.display = "block";
+            		sSearch.textContent = "switch to advanced search";
+            	}
+            	else {
+            		aSearch.style.display = "block";
+            		nSearch.style.display = "none";
+            		sSearch.textContent = "switch to normal search";
+            	}
+            	
             }
         </script>
     </body>
