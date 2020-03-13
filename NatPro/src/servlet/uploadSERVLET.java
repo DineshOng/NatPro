@@ -1,4 +1,5 @@
 package servlet;
+
 import java.io.OutputStream;
 import java.io.InputStream;
 import javax.servlet.http.Part;
@@ -32,10 +33,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
-
-// 
-// Decompiled by Procyon v0.5.36
-// 
 
 @WebServlet({ "/uploadSERVLET" })
 @MultipartConfig(maxFileSize = 16177215L)
