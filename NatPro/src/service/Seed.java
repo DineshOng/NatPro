@@ -1,4 +1,5 @@
 package service;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -7,13 +8,16 @@ import java.util.List;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
+import model.MedicinalPlant;
 
 public class Seed {
 
-	public void generateSeed(OntoQuery q) throws OntologyLoadException, SQWRLException {		
-		genMPWithSyn(q);
-		genMPWithLoc(q);
-		genSynWithLoc(q);
+	public void generateSeed(OntoQuery q) throws OntologyLoadException, SQWRLException {
+//		genMPWithSyn(q);
+//		genMPWithLoc(q);
+//		genSynWithLoc(q);
+//		genMPWithLoc(q);
+		genMPWithComp(q);
 	}
 
 	public void genMPWithSyn(OntoQuery q) throws SQWRLException {
@@ -30,8 +34,8 @@ public class Seed {
 				for (int j = 0; j < Synonyms.size(); j++) {
 					String medPlant = removePar(MedPlantNames.get(i));
 					String synonym = removePar(Synonyms.get(j));
-						writer.write(medPlant + ";" + synonym);
-						writer.write("\r\n"); // write new line
+					writer.write(medPlant + ";" + synonym);
+					writer.write("\r\n"); // write new line
 				}
 			}
 			writer.close();
@@ -57,8 +61,8 @@ public class Seed {
 				for (int j = 0; j < Locs.size(); j++) {
 					String medPlant = removePar(MedPlantNames.get(i));
 					String loc = removePar(Locs.get(j));
-						writer.write(removePar(MedPlantNames.get(i)) + ";" + removePar(Locs.get(j)));
-						writer.write("\r\n"); // write new line
+					writer.write(removePar(MedPlantNames.get(i)) + ";" + removePar(Locs.get(j)));
+					writer.write("\r\n"); // write new line
 				}
 			}
 			writer.close();
@@ -66,7 +70,7 @@ public class Seed {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void genSynWithLoc(OntoQuery q) throws SQWRLException {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Locs = new ArrayList<String>();
@@ -84,13 +88,49 @@ public class Seed {
 					for (int k = 0; k < Locs.size(); k++) {
 						String synonym = removePar(Synonyms.get(j));
 						String loc = removePar(Synonyms.get(j));
-							writer.write(removePar(Synonyms.get(j)) + ";" + removePar(Locs.get(k)));
-							writer.write("\r\n"); // write new line
+						writer.write(removePar(Synonyms.get(j)) + ";" + removePar(Locs.get(k)));
+						writer.write("\r\n"); // write new line
 					}
 				}
 			}
 			writer.close();
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void genMPWithComp(OntoQuery q) throws SQWRLException {
+		List<String> MedPlantNames = q.getAllMedPlantNames();
+		List<MedicinalPlant> MedPlantsList = new ArrayList<MedicinalPlant>();
+		List<String> CompoundsList = new ArrayList<String>();
+		try {
+			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Compound.txt");
+			writer.print("");
+			writer.print("e1:MedicinalPlant\r\n");
+			writer.print("e2:Compound\r\n");
+			writer.write("\r\n"); // write new line
+//			for (int i = 0; i < MedPlantNames.size(); i++) {
+//				Synonyms = q.getSynonyms(MedPlantNames.get(i));
+//				for (int j = 0; j < Synonyms.size(); j++) {
+//					String medPlant = removePar(MedPlantNames.get(i));
+//					String synonym = removePar(Synonyms.get(j));
+//						writer.write(medPlant + ";" + synonym);
+//						writer.write("\r\n"); // write new line
+//				}
+//			}
+			for (int i = 0; i < MedPlantNames.size(); i++) {
+				CompoundsList = q.getCompounds(MedPlantNames.get(i));
+//				System.out.println(MedPlantNames.get(i)+">"+CompoundsList);
+				for(int j = 0; j<CompoundsList.size(); j++) {
+					writer.write(MedPlantNames.get(i) + ";" +CompoundsList.get(j));
+					writer.write("\r\n"); // write new line
+				}
+				
+			}
+			writer.close();
+		} catch (
+
+		IOException e) {
 			e.printStackTrace();
 		}
 	}

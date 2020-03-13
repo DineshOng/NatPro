@@ -24,20 +24,19 @@
 			<!--<br><br>-->
 			<h1 class="header center green-text text-darken-3">Search</h1>
 			<div class="row center">
-				<h6>
-					Search results for "${searchKey}"<span></span>
-				</h6>
+				<h6>Search for plants, chemical compound, etc.</h6>
 			</div>
-			<br> <br>
-			<form class="row" action="#">
+			<br>
+			<br>
+			<form class="row" action="SearchServlet" method="POST">
 				<div class="input-field col s9">
 					<i class="material-icons prefix">search</i> <input id="searchInput"
-						class="materialize-textarea" type="text"> <label
-						for="searchInput">Search</label>
+						class="materialize-textarea" type="text" name="searchKey">
+					<label for="searchInput">Search</label>
 				</div>
 				<div class="input-field col s3">
-					<select class="browser-default">
-						<option value="" disabled selected>Choose your option</option>
+					<select class="browser-default" name="searchCategory">
+						<option value="0" disabled selected>Choose your option</option>
 						<option value="1">plant common name</option>
 						<option value="2">plant scientific name</option>
 						<option value="3">genus</option>
@@ -47,6 +46,9 @@
 						<option value="7">biological activites</option>
 					</select>
 				</div>
+				<input type="submit"
+					class="waves-effect waves-light btn center green darken-3 col s4 offset-s4"
+					id="btnSubmit" value="search">
 			</form>
 		</div>
 	</div>
@@ -60,10 +62,16 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${medPlantsList}" var="medPlantsList">
+				<c:forEach items="${medPlantsList}" var="medPlantsList" >
 					<tr>
-						<td><a href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
-						<td><c:forEach items="${medPlantsList.getSpecies()}" var="speciesList"><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()} </a>, </c:forEach></td>
+						<td><a
+							href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
+						<td><c:forEach items="${medPlantsList.getSpecies()}" var="speciesList" varStatus="loop">
+								<c:if test="${not empty speciesList.getSpecie()}">
+									<a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a>
+									<c:if test="${!loop.last}">,</c:if>
+								</c:if>
+							</c:forEach></td>
 					</tr>
 				</c:forEach>
 			</tbody>

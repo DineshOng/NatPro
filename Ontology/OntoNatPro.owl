@@ -587,6 +587,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#acanthaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Acanthaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -713,6 +714,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#analgesic"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory"/>
+        <datatypeProperty_CompoundSynonym>alpha-amyrin</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -721,6 +723,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_acetate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>alpha-amyrin acetate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -731,6 +734,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibit_TPAS-induced_inflammation"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effects_on_Epstein-Barr_virus_early_antigen"/>
+        <datatypeProperty_CompoundSynonym>alpha-amyrin cinnamate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -739,6 +743,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_ester">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>alpha-amyrin fatty acid ester</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -747,6 +752,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-amyrin_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>alpha-amyrin fatty acid esters</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -755,6 +761,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alpha-linolenic_acid">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>alpha-linolenic acid</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -962,6 +969,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#acanthaceae"/>
+        <datatypeProperty_Genus>Andrographis</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -1041,6 +1049,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographolide">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Andrographolide</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1240,6 +1249,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#moraceae"/>
+        <datatypeProperty_Genus>Artocarpus</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -1250,6 +1260,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_altilis_leaves"/>
+        <datatypeProperty_Synonym>Artocarpus altilis</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1277,6 +1288,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_camansi_stems"/>
+        <datatypeProperty_Synonym>Artocarpus camansi</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1315,6 +1327,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_heterophyllus_unripe_fruit"/>
+        <datatypeProperty_Synonym>Artocarpus heterophyllus</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1340,6 +1353,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_flesh_of_the_fruit"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_fruit_rind"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_odoratissimus_seeds"/>
+        <datatypeProperty_Synonym>Artocarpus odoratissimus</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1390,6 +1404,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#artocarpus_ovatus_twigs"/>
+        <datatypeProperty_Synonym>Artocarpus ovatus</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1606,6 +1621,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#bauerenol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Bauerenol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1626,7 +1642,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#analgesic"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-fungal_activity_against_a.rabiei"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-inflammatory"/>
-        <datatypeProperty_CompoundSynonym>Beta-Amyrin</datatypeProperty_CompoundSynonym>
+        <datatypeProperty_CompoundSynonym>beta-Amyrin</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1635,6 +1651,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_acetate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>beta-amyrin acetate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1645,6 +1662,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibit_TPAS-induced_inflammation"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effects_on_Epstein-Barr_virus_early_antigen"/>
+        <datatypeProperty_CompoundSynonym>beta-amyrin cinnamate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1653,6 +1671,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>beta-amyrin fatty acid esters</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1661,6 +1680,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-carotene">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>beta-carotene</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1669,6 +1689,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-myrin_fatty_acid_ester">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>beta-myrin fatty acid ester</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1690,7 +1711,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#growth_inhibitory_effect_on_MCF-7"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibited_the_proliferation_of_COLO_320_DM"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitor_of_semen_movability"/>
-        <datatypeProperty_CompoundSynonym>Beta-Sitosterol</datatypeProperty_CompoundSynonym>
+        <datatypeProperty_CompoundSynonym>beta-Sitosterol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1700,7 +1721,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl-beta-D-glucoside">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#antioxidant"/>
-        <datatypeProperty_CompoundSynonym>Beta-Sitosteryl-Beta-D-Glucoside</datatypeProperty_CompoundSynonym>
+        <datatypeProperty_CompoundSynonym>beta-Sitosteryl-beta-D-Glucoside</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1709,6 +1730,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl_fatty_acid_ester">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>beta-sitosteryl fatty acid ester</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1717,6 +1739,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosteryl_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>beta-sitosteryl fatty acid esters</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1748,6 +1771,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#betulin">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Betulin</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -1808,6 +1832,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassicaceae"/>
+        <datatypeProperty_Genus>Brassica</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -1818,6 +1843,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_juncea_leaves"/>
+        <datatypeProperty_Synonym>Brassica juncea</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1906,6 +1932,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassica_oleracea_var_capitata_f._rubra_leaves"/>
+        <datatypeProperty_Synonym>Brassica oleracea var capitata f. rubra</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -1927,6 +1954,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassicaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Brassicaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -2166,6 +2194,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#chlorophyll_a">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Chlorophyll a</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -2184,6 +2213,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#coenzyme_Q10">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_effects_on_breast_cancer_cells"/>
+        <datatypeProperty_CompoundSynonym>Coenzyme Q10</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -2247,6 +2277,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycadaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Cycadaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -2256,6 +2287,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycas">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycadaceae"/>
+        <datatypeProperty_Genus>Cycas</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -2267,6 +2299,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_edentata_bark"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_edentata_sclerotesta"/>
+        <datatypeProperty_Synonym>Cycas edentata</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -2310,6 +2343,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_lacrimans_rachis"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_lacrimans_roots"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_lacrimans_sclerotesta"/>
+        <datatypeProperty_Synonym>Cycas lacrimans</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -2410,6 +2444,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_sancti-lasallei_endotesta"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_sancti-lasallei_sarcotesta"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycas_sancti-lasallei_sclerotesta"/>
+        <datatypeProperty_Synonym>Cycas sancti-lasallei</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -2471,6 +2506,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycloartenol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Cycloartenol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -2479,6 +2515,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycloartenol_acetate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Cycloartenol acetate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -2487,6 +2524,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycloartenone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Cycloartenone</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -2915,6 +2953,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dihydrocanaric_acid">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Dihydrocanaric acid</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -2952,6 +2991,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#duranta_erecta_flowers"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#duranta_erecta_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#duranta_erecta_stems"/>
+        <datatypeProperty_Synonym>Duranta erecta</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -3002,6 +3042,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#duranterectoside">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Duranterectoside</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3010,6 +3051,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#durantoside">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Durantoside</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3045,6 +3087,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_a">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Dysoxylins a</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3053,6 +3096,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_b">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Dysoxylins b</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3061,6 +3105,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_c">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Dysoxylins c</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3069,6 +3114,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylins_d">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Dysoxylins d</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3078,6 +3124,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#meliaceae"/>
+        <datatypeProperty_Genus>Dysoxylum</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -3089,6 +3136,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_gaudichaudianum_stem_bark"/>
+        <datatypeProperty_Synonym>Dysoxylum gaudichaudianum</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -3131,6 +3179,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum_mollissimum_leaves"/>
+        <datatypeProperty_Synonym>Dysoxylum mollissimum</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -3182,6 +3231,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#echitamine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Echitamine</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3190,6 +3240,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#echitovenidine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Echitovenidine</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3198,6 +3249,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ellagic_acid">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Ellagic acid</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3206,6 +3258,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ellagitannins">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Ellagitannins</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3214,6 +3267,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#endotesta">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>endotesta</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -3244,6 +3298,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#myrtaceae"/>
+        <datatypeProperty_Genus>Eucalyptus</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -3257,6 +3312,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus_deglupta_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus_deglupta_twigs"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus_deglupta_wood"/>
+        <datatypeProperty_Synonym>Eucalyptus deglupta</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -3350,6 +3406,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Fatty acid</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3358,6 +3415,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fatty_acid_methyl_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Fatty acid methyl esters</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3366,6 +3424,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fatty_acids">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Fatty acids</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3410,6 +3469,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#flesh_of_the_fruit">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>flesh of the fruit</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -3583,6 +3643,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#friedelinol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Friedelinol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3612,6 +3673,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#fruit_rind">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>fruit rind</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -3657,7 +3719,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#gamma-sitosterol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
-        <datatypeProperty_CompoundSynonym>Gamma-Sitosterol</datatypeProperty_CompoundSynonym>
+        <datatypeProperty_CompoundSynonym>gamma-Sitosterol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3710,6 +3772,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_NCI-H226"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_RPMI8226"/>
+        <datatypeProperty_CompoundSynonym>Gaudichaudysolin a</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -3877,6 +3940,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#apocynaceae"/>
+        <datatypeProperty_Genus>Hoya</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -3890,6 +3954,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_roots"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_buotii_stems"/>
+        <datatypeProperty_Synonym>Hoya buotii</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -3955,6 +4020,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cagayanensis_stems"/>
+        <datatypeProperty_Synonym>Hoya cagayanensis</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -3993,6 +4059,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_cumingiana_stems"/>
+        <datatypeProperty_Synonym>Hoya cumingiana</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4031,6 +4098,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_diversifolia_stems"/>
+        <datatypeProperty_Synonym>Hoya diversifolia</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4071,6 +4139,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya_madulidii">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
+        <datatypeProperty_Synonym>Hoya madulidii</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4113,6 +4182,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_meliflua_leaves"/>
+        <datatypeProperty_Synonym>Hoya meliflua</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4140,6 +4210,7 @@
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_roots"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_mindorensis_schlechter_stems"/>
+        <datatypeProperty_Synonym>Hoya mindorensis</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4187,6 +4258,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_multiflora_stems"/>
+        <datatypeProperty_Synonym>Hoya multiflora</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4229,6 +4301,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_paziae_stems"/>
+        <datatypeProperty_Synonym>Hoya paziae</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4270,6 +4343,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_pubicalyx_stems"/>
+        <datatypeProperty_Synonym>Hoya pubicalyx</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4309,6 +4383,7 @@
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii_leaves"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hoya_wayetii_stems"/>
+        <datatypeProperty_Synonym>Hoya wayetii</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -4344,6 +4419,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hydrocarbons">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Hydrocarbons</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -4554,6 +4630,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#isopimaran-19-ol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Isopimaran-19-ol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -4858,6 +4935,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lamiide">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Lamiide</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -4866,6 +4944,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lamiidoside">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Lamiidoside</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5019,6 +5098,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#leaflets">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>leaflets</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -5138,6 +5218,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#linoleic_acid">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Linoleic acid</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5180,6 +5261,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupenone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#adipocyte_differentiatio"/>
+        <datatypeProperty_CompoundSynonym>Lupenone</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5188,6 +5270,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupenyl_cinnamate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>lupenyl cinnamate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5213,6 +5296,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol_acetate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hypotensive"/>
+        <datatypeProperty_CompoundSynonym>Lupeol acetate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5224,6 +5308,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibit_TPAS-induced_inflammation"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effect_on_skin_tumor_promotion"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#inhibitory_effects_on_Epstein-Barr_virus_early_antigen"/>
+        <datatypeProperty_CompoundSynonym>Lupeol cinnamate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5232,6 +5317,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_ester">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Lupeol fatty acid ester</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5240,6 +5326,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lupeol_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Lupeol fatty acid esters</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5248,6 +5335,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#lutein">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Lutein</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5355,6 +5443,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#meliaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Meliaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -5510,6 +5599,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#monogalactosyl_diacylglycerols">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Monogalactosyl diacylglycerols</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5518,6 +5608,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#moraceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Moraceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -5562,6 +5653,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#myrtaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Myrtaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -5588,6 +5680,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#nerolidol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Nerolidol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5684,6 +5777,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#oleanolic_acid">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Oleanolic acid</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5692,6 +5786,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#oleanone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Oleanone</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5700,6 +5795,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#oleic_acid">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Oleic acid</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5730,6 +5826,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#p-hydroxyacetophenone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>p-hydroxyacetophenone</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5845,6 +5942,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#petiole">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>petiole</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -5862,6 +5960,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#phytol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Phytol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5870,6 +5969,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#phytyl_fatty_acid_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Phytyl fatty acid esters</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -5887,6 +5987,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#pods">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>pods</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -5904,6 +6005,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#hepatoprotective"/>
+        <datatypeProperty_CompoundSynonym>Polyprenol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6033,6 +6135,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#rachis">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>rachis</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -6062,6 +6165,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#raphanus">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+        <datatypeProperty_Genus>Raphanus</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -6072,6 +6176,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
         <belongsToGenus rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#raphanus"/>
         <hasChildPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#raphanus_sativus_roots"/>
+        <datatypeProperty_Synonym>Raphanus sativus</datatypeProperty_Synonym>
     </owl:NamedIndividual>
     
 
@@ -6346,6 +6451,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#sarcotesta">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>sarcotesta</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -6354,6 +6460,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#saturated_hydrocarbons">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Saturated hydrocarbons</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6371,6 +6478,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#sclerotesta">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>sclerotesta</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -6482,6 +6590,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#suppress_colonic_ACF_formation_and_crypt_multiplicity"/>
+        <datatypeProperty_CompoundSynonym>Squalene</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6508,6 +6617,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#stem_bark">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>stem bark</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -6516,6 +6626,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#stems">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>stems</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -6626,6 +6737,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#taraxerol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Taraxerol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6634,6 +6746,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#taraxerone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Taraxerone</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6642,6 +6755,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#taraxeryl_acetate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Taraxeryl acetate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6749,6 +6863,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#tocotrienols">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_effects_on_breast_cancer_cells"/>
+        <datatypeProperty_CompoundSynonym>Tocotrienols</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6757,6 +6872,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#trans-cinnamate_esters">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Trans-cinnamate esters</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6776,6 +6892,7 @@
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_MCF-7"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#decrease_cell_viability_MDA-MB-231"/>
+        <datatypeProperty_CompoundSynonym>Triacylglycerols</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6791,6 +6908,7 @@
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HCT-116"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_HT-29"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cytotoxic_against_MCF-7"/>
+        <datatypeProperty_CompoundSynonym>Triglycerides</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6799,6 +6917,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#trilinolenin">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Trilinolenin</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6807,6 +6926,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#tritriacontane-16.18-dione">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Tritriacontane-16,18-dione</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6881,6 +7001,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#twigs">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>twigs</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -6900,6 +7021,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#unripe_fruit">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>unripe fruit</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -6926,6 +7048,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ursenone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Ursenone</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6935,6 +7058,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ursolic_acid">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#antioxidant"/>
+        <datatypeProperty_CompoundSynonym>Ursolic acid</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6952,6 +7076,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#venenatine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Venenatine</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -6969,6 +7094,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#verbascoside">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>Verbascoside</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7014,6 +7140,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#wood">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#PlantPart"/>
+        <datatypeProperty_PlantPart>wood</datatypeProperty_PlantPart>
     </owl:NamedIndividual>
     
 
@@ -7062,6 +7189,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#1.2-dioleylglycerol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>1,2-dioleylglycerol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7079,6 +7207,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#14-deoxy-11.12-dihydroandrographolide">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>14-deoxy-11,12-dihydroandrographolide</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7087,6 +7216,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#14-deoxy-12-hydroxyandrographolide">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>14-deoxy-12-hydroxyandrographolide</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7095,6 +7225,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#14-deoxyandrographolide">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>14-deoxyandrographolide</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7130,6 +7261,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#2-hydroxyethyl_benzoate">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>2-hydroxyethyl benzoate</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7146,6 +7278,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#2.3-butanediols">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>2,3-butanediols</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7163,6 +7296,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#3beta-friedelinol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>3beta-friedelinol</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7171,6 +7305,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#3beta.28-_dihydroxyolean-12-ene">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>3beta,28-dihydroxyolean-12-ene</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7179,6 +7314,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#5-hydroxy-7.4&apos;-dimethoxy-6.8-dimethylflavone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>5-hydroxy-7,4&apos;-dimethoxy-6,8-dimethylflavone</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7187,6 +7323,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#5.2&apos;-dihydroxy-7.8-dimethoxyflavone">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>5,2&apos;-dihydroxy-7,8-dimethoxyflavone</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7213,6 +7350,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#8-methoxyellagic_acid-2-rhamnoside">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>8-methoxyellagic acid-2-rhamnoside</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
@@ -7221,6 +7359,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#9alphaH-isopimara-7.15-diene">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CompoundSynonym>9alphaH-isopimara-7,15-diene</datatypeProperty_CompoundSynonym>
     </owl:NamedIndividual>
     
 
