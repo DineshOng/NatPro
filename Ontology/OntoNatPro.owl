@@ -587,6 +587,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#acanthaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Acanthaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -968,6 +969,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#andrographis">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#acanthaceae"/>
+        <datatypeProperty_Genus>Andrographis</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -1247,6 +1249,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#artocarpus">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#moraceae"/>
+        <datatypeProperty_Genus>Artocarpus</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -1829,6 +1832,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassica">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#brassicaceae"/>
+        <datatypeProperty_Genus>Brassica</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -1950,6 +1954,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassicaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Brassicaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -2272,6 +2277,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycadaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Cycadaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -2281,6 +2287,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycas">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#cycadaceae"/>
+        <datatypeProperty_Genus>Cycas</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -3117,6 +3124,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#dysoxylum">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#meliaceae"/>
+        <datatypeProperty_Genus>Dysoxylum</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -3290,6 +3298,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#eucalyptus">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#myrtaceae"/>
+        <datatypeProperty_Genus>Eucalyptus</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -3931,6 +3940,7 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hoya">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
         <belongsToFamily rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#apocynaceae"/>
+        <datatypeProperty_Genus>Hoya</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -5433,6 +5443,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#meliaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Meliaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -5597,6 +5608,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#moraceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Moraceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -5641,6 +5653,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#myrtaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
+        <datatypeProperty_Genus>Myrtaceae</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
@@ -6152,6 +6165,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#raphanus">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Genus"/>
+        <datatypeProperty_Genus>Raphanus</datatypeProperty_Genus>
     </owl:NamedIndividual>
     
 
