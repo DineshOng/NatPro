@@ -61,7 +61,7 @@ public class ViewPlantServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("medPlant");
 		System.out.println(searchKey);
-		OntoQuery q = new OntoQuery("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl");
+		OntoQuery q = new OntoQuery();
 		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
 //		for(MedicinalPlant m: medPlants) {
 //			System.out.println(m.getMedicinalPlant().toString());

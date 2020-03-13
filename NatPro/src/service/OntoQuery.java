@@ -22,7 +22,8 @@ public class OntoQuery {
 	String uri;
 	OWLModel owlModel;
 
-	public OntoQuery(String owlPath) throws OntologyLoadException {
+	public OntoQuery() throws OntologyLoadException {
+		String owlPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\Ontology\\OntoNatPro.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
