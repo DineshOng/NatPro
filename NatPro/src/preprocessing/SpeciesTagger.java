@@ -24,7 +24,7 @@ public class SpeciesTagger extends LookUpEntityTagger {
 		readLexiconFile();
 		
 		// Adds the contents of the lexicon with this suffix ~ Alstonia ......., Andrographis .........
-		setSuffix_regex("\\s(\\b[a-z]+)");
+		setSuffix_regex("\\s(\\b[a-z-]+)");
 		
 		compilePatterns();
 		

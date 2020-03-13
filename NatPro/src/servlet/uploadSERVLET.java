@@ -2,6 +2,9 @@ package servlet;
 import java.io.OutputStream;
 import java.io.InputStream;
 import javax.servlet.http.Part;
+
+import org.apache.commons.io.FileUtils;
+
 //import javax.xml.parsers.ParserConfigurationException;
 //
 //import org.xml.sax.SAXException;
@@ -12,6 +15,7 @@ import service.SaveFile;
 import java.io.Reader;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -92,19 +96,33 @@ public class uploadSERVLET extends HttpServlet
 		for (int i = 0; i < listOfFiles.length; i++) {
 		  if (listOfFiles[i].isFile()) {
 		    	String name = listOfFiles[i].getName().replaceAll(".pdf", "").replaceAll(".txt", "");
-		    	if(!getTaggedDocumentsNames().contains(name)) {
-		    		int num = i;
-		    		new Thread(() -> {
-		    			try {
-							new Tagger(folder+ "\\"+listOfFiles[num].getName(), name);
-						} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-		    		}).start();
-		    	}
-		    	else {
-		    		System.out.println(name + " already tagged");
+		    	if(checkIfProcessing(name)) {
+		    		try {
+						Thread.sleep(5000);
+					} catch (InterruptedException e) {}
+		    		if(!getTaggedDocumentsNames().contains(name)) {
+			    		int num = i;
+			    		System.err.println("bef:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
+			    		new Thread(() -> {
+			    			try {
+			    				writeUniqueID(name);
+								new Tagger(folder+ "\\"+listOfFiles[num].getName(), name);
+								deleteUniqueID(name);
+								System.err.println("aft:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
+							} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException e) {
+								
+								e.printStackTrace();
+							}
+			    		}).start();
+			    		try {
+							Thread.sleep(5000);
+						} catch (InterruptedException e) {}
+		    		} else {
+		    			System.out.println(name + " already tagged");
+		    		}
+		    	} else {
+		    		
+		    		System.out.println(name + " preprocessing ongoing");
 		    	}
 		  } else if (listOfFiles[i].isDirectory()) {
 		    System.out.println("Directory " + listOfFiles[i].getName());
@@ -130,6 +148,38 @@ public class uploadSERVLET extends HttpServlet
         	return true;
         }
         return false;*/
+    }
+    
+    public void deleteUniqueID(String uniqueID) throws IOException {
+    	String content = FileUtils.readFileToString(new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt"), "UTF-8");
+        content = content.replaceAll(uniqueID, "");
+        File tempFile = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt");
+        FileUtils.writeStringToFile(tempFile, content, "UTF-8");
+    }
+    
+    public void writeUniqueID(String uniqueID) throws IOException {
+	    String filename= "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt";
+	    FileWriter fw = new FileWriter(filename, true); //the true will append the new data
+	    fw.write("\n" + uniqueID);//appends the string to the file
+	    fw.close();
+    }
+    
+    public boolean checkIfProcessing(String uniqueID) throws IOException {
+    	BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt"));
+        String line = reader.readLine();
+        while (line != null) {
+            if(!line.equals("")) {
+            	if(line.trim().equals(uniqueID)) {
+            		return false;
+            	}
+            }
+
+            line = reader.readLine();
+        }
+        
+        reader.close();
+        
+        return true;
     }
     
     public boolean checkDocument(String uniqueID) throws IOException {

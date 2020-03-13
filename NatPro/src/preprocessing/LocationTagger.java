@@ -30,7 +30,7 @@ public class LocationTagger extends EntityTagger {
                 map.put(text.substring(trip.second, trip.third), n);
                 
             } else if(trip.first.equals("PERSON")) {
-            	System.err.println(text.substring(trip.second, trip.third));
+            	//System.err.println(text.substring(trip.second, trip.third));
             }
         }
         
