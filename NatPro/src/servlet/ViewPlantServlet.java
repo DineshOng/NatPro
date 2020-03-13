@@ -19,19 +19,21 @@ import service.OntoQuery;
 @WebServlet("/ViewPlantServlet")
 public class ViewPlantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ViewPlantServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ViewPlantServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		switch (request.getServletPath()) {
@@ -49,13 +51,15 @@ public class ViewPlantServlet extends HttpServlet {
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-	
+
 	private void viewPlant(HttpServletRequest request, HttpServletResponse response)
 			throws OntologyLoadException, ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -66,9 +70,9 @@ public class ViewPlantServlet extends HttpServlet {
 //		for(MedicinalPlant m: medPlants) {
 //			System.out.println(m.getMedicinalPlant().toString());
 //		}
+		System.out.println(medPlants.get(0).getSpecies());
 		request.setAttribute("medPlantsList", medPlants);
 		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
-//		System.out.println(medPlants.get(0));
 	}
 
 }

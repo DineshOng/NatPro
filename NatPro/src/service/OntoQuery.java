@@ -3,6 +3,7 @@ package service;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
@@ -142,9 +143,40 @@ public class OntoQuery {
 		return values;
 	}
 
+	public List<String> getCompounds(String MedicinalPlant) throws SQWRLException {
+		List<String> compounds = new ArrayList<String>();
+		LinkedHashSet<String> hashSet = new LinkedHashSet<String>(); // This set will only be used to check for
+																		// duplicate compounds
+		List<MedicinalPlant> medicinalPlantList = searchMedicinalPlant(MedicinalPlant);
+
+		try {
+//			System.out.println(medicinalPlantList.get(0).getMedicinalPlant());
+			for (int i = 0; i < medicinalPlantList.size(); i++) {
+				List<Species> speciesList = medicinalPlantList.get(i).getSpecies();
+				for (int j = 0; j < speciesList.size(); j++) {
+					List<SpeciesPart> speciesPartList = speciesList.get(j).getSpeciesParts();
+					for (int k = 0; k < speciesPartList.size(); k++) {
+						List<Compound> compoundList = speciesPartList.get(k).getCompounds();
+						for (int l = 0; l < compoundList.size(); l++) {
+							List<String> compoundSynList = compoundList.get(l).getCompoundSynonyms();
+							for (int m = 0; m < compoundSynList.size(); m++) {
+								// this is to ensure that no duplicate compounds will be added to the list
+								if (hashSet.add(compoundSynList.get(m).toString()))
+									compounds.add(compoundSynList.get(m).toString());
+							}
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+		}
+
+		return compounds;
+
+	}
+
 	public List<MedicinalPlant> searchMedicinalPlant(String MedicinalPlant) {
 		List<MedicinalPlant> values = new ArrayList<MedicinalPlant>();
-
 		RDFProperty datatypeProperty_MedicinalPlant = owlModel.getRDFProperty("datatypeProperty_MedicinalPlant");
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
 		for (Iterator it = classes.iterator(); it.hasNext();) {
@@ -155,25 +187,30 @@ public class OntoQuery {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						String medPlantIndiv = individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString();
-						// EDIT THIS CODE FOR EFFICIENT SEARCH FUNCTION
-						if (medPlantIndiv.contains(MedicinalPlant)) {
+						// EDIT THIS CODE FOR OPTIMAL SEARCH FUNCTION
+						if (medPlantIndiv.toLowerCase().contains(MedicinalPlant.toLowerCase())) {
+							System.out.println(medPlantIndiv);
 							MedicinalPlant mp = new MedicinalPlant(medPlantIndiv);
-							// get scientific name/synonyms
-							ArrayList<Species> species = new ArrayList<Species>();
-							species.addAll(getSpeciesList(individual));
+//							try {
+								// get scientific name/synonyms
+								ArrayList<Species> species = new ArrayList<Species>();
+								species.addAll(getSpeciesList(individual));
+								mp.setSpecies(species);
+//							} catch (Exception e) {
+//								System.err.println("This specie has no synonym/s");
+//							}
 							// get locations
 							ArrayList<String> locations = new ArrayList<String>();
 							locations.addAll(getLocations(medPlantIndiv));
 							mp.setLocations(locations);
-							mp.setSpecies(species);
 
 							values.add(mp);
 						}
 					} catch (Exception e) {
+						
 					}
 				}
 			}
-
 		}
 		return values;
 	}
@@ -182,18 +219,19 @@ public class OntoQuery {
 		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
 		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
 		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
-		
+
 		RDFProperty hasScientificName = owlModel.getRDFProperty("hasScientificName");
 		RDFProperty belongsToGenus = owlModel.getRDFProperty("belongsToGenus");
 		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
-		
+
 		ArrayList<Species> species = new ArrayList<Species>();
 
 		Collection speciesCol = MedicinalPlant.getPropertyValues(datatypeProperty_Synonym);
 		// This is for entities from OntoPHerb, synonyms as datatype prop
 		for (Iterator it = speciesCol.iterator(); it.hasNext();) {
-			if (!it.next().toString().isEmpty()) {
-				Species sp = new Species(it.next().toString());
+			String synonym = it.next().toString();
+			if (!synonym.isEmpty()) {				
+				Species sp = new Species(synonym);
 				species.add(sp);
 			}
 		}
@@ -205,16 +243,28 @@ public class OntoQuery {
 			if (!sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString().isEmpty()) {
 				Species sp = new Species(sciNameIndiv.getPropertyValue(datatypeProperty_Synonym).toString());
 				sp.setSpeciesParts(getSpeciesPartList(sciNameIndiv));
-				//get genus
-				OWLIndividual genus = (OWLIndividual) sciNameIndiv.getPropertyValue(belongsToGenus);
-				sp.setGenus(genus.getPropertyValue(datatypeProperty_Genus).toString());
-				//get family
-				OWLIndividual family = (OWLIndividual) genus.getPropertyValue(belongsToFamily);
-				sp.setFamily(family.getPropertyValue(datatypeProperty_Family).toString());
+				try {
+					// get genus
+					OWLIndividual genus = (OWLIndividual) sciNameIndiv.getPropertyValue(belongsToGenus);
+					sp.setGenus(genus.getPropertyValue(datatypeProperty_Genus).toString());
+					try {
+						// get family
+						OWLIndividual family = (OWLIndividual) genus.getPropertyValue(belongsToFamily);
+						sp.setFamily(family.getPropertyValue(datatypeProperty_Family).toString());
+					} catch (Exception e) {
+						System.err.println("No Family");
+					}
+				} catch (Exception e) {
+					System.err.println("No Genus");
+				}
+				System.out.println(sp.getSpecie());
 				species.add(sp);
 			}
 		}
-
+		// If there is no synonym, create empty object
+		if (species.size() == 0) {
+			species.add(new Species(""));
+		}
 		return species;
 	}
 
@@ -234,7 +284,6 @@ public class OntoQuery {
 			// Get datatype property from hasPlantPart object
 			SpeciesPart spp = new SpeciesPart(plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString());
 			spp.setCompounds(getCompoundList(speciesPartIndiv));
-			System.out.println("-------------------------------------------------");
 			speciesParts.add(spp);
 		}
 		return speciesParts;
