@@ -51,9 +51,11 @@ public class SpeciesNameResolution {
 		m = p.matcher(text);
 		System.out.println(mainGenus);
 		while(m.find()) {
-			if(m.group(2).toUpperCase().charAt(0) == mainGenus.toUpperCase().charAt(0)) {
-				text = text.replaceAll(m.group(), "<plant>" + mainGenus + " " + m.group(3) + "</plant>");
-			}
+			try {
+				if(m.group(2).toUpperCase().charAt(0) == mainGenus.toUpperCase().charAt(0)) {
+					text = text.replaceAll(m.group(), "<plant>" + mainGenus + " " + m.group(3) + "</plant>");
+				}
+			} catch (Exception e) {}
 		}
 		
 		return text;

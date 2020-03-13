@@ -97,39 +97,41 @@ public class CompoundNameResolution {
 				
 				System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>> " + start + " " + end);
 			} else if(start.matches("^[1-9][a-z]$")) {
-				int sn = Integer.parseInt(start.charAt(0)+"");
-				char sl = (char)start.charAt(1);
-		
-				int en = Integer.parseInt(end.charAt(0)+"");
-				char el = (char)end.charAt(1);
-				
-				//sn = 1; sl = 'c';
-				//en = 2; el = 'b';
-				
-				int diff = el - sl;
-				
-				int flag = 0;
-				
-				char letter = sl;
-				
-				String code = sn+""+sl;
-				
-				for(int i=sn; i<=en; i++) {
-					flag = 0;
-					for(int j=letter; flag == 0 && (code.charAt(0)!=en && code.charAt(1)!=el); j++) {
-						code =  i+""+(char)j;
-						System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>> " + code);
-						System.out.println(compoundsByCode.get(code));
-						if(compoundsByCode.get(code)!=null) {
-							range.add(code);
+				try {
+					int sn = Integer.parseInt(start.charAt(0)+"");
+					char sl = (char)start.charAt(1);
+			
+					int en = Integer.parseInt(end.charAt(0)+"");
+					char el = (char)end.charAt(1);
+					
+					//sn = 1; sl = 'c';
+					//en = 2; el = 'b';
+					
+					int diff = el - sl;
+					
+					int flag = 0;
+					
+					char letter = sl;
+					
+					String code = sn+""+sl;
+					
+					for(int i=sn; i<=en; i++) {
+						flag = 0;
+						for(int j=letter; flag == 0 && (code.charAt(0)!=en && code.charAt(1)!=el); j++) {
+							code =  i+""+(char)j;
 							System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>> " + code);
-						} else {
-							flag = 1;
-							letter = 97;
+							System.out.println(compoundsByCode.get(code));
+							if(compoundsByCode.get(code)!=null) {
+								range.add(code);
+								System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>> " + code);
+							} else {
+								flag = 1;
+								letter = 97;
+							}
+							
 						}
-						
 					}
-				}
+				}catch (Exception e) {}
 			}
 			
 			

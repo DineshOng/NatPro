@@ -96,10 +96,8 @@ public class uploadSERVLET extends HttpServlet
 		for (int i = 0; i < listOfFiles.length; i++) {
 		  if (listOfFiles[i].isFile()) {
 		    	String name = listOfFiles[i].getName().replaceAll(".pdf", "").replaceAll(".txt", "");
+		    	deleteProcessUntagged();
 		    	if(checkIfProcessing(name)) {
-		    		try {
-						Thread.sleep(5000);
-					} catch (InterruptedException e) {}
 		    		if(!getTaggedDocumentsNames().contains(name)) {
 			    		int num = i;
 			    		System.err.println("bef:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
@@ -110,13 +108,10 @@ public class uploadSERVLET extends HttpServlet
 								deleteUniqueID(name);
 								System.err.println("aft:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
 							} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException e) {
-								
 								e.printStackTrace();
 							}
 			    		}).start();
-			    		try {
-							Thread.sleep(5000);
-						} catch (InterruptedException e) {}
+			    		
 		    		} else {
 		    			System.out.println(name + " already tagged");
 		    		}
@@ -148,6 +143,18 @@ public class uploadSERVLET extends HttpServlet
         	return true;
         }
         return false;*/
+    }
+    
+    public void deleteProcessUntagged() throws IOException {
+    	Set<String> tagged = getTaggedDocumentsNames();
+    	String content = FileUtils.readFileToString(new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt"), "UTF-8");
+    	
+    	for(String s: tagged) {
+    		content = content.replaceAll(s, "");
+    	}
+    	
+    	File tempFile = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt");
+        FileUtils.writeStringToFile(tempFile, content, "UTF-8");
     }
     
     public void deleteUniqueID(String uniqueID) throws IOException {
