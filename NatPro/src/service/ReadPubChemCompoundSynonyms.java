@@ -9,26 +9,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadPubChemCompoundSynonyms {
-	private String compound;
 	private URL url;
-	private List<String> synonyms;
+	private List<String> compoundSynonyms;
 	
-	public ReadPubChemCompoundSynonyms(String compound) throws IOException {
-		this.compound = compound;
+	public ReadPubChemCompoundSynonyms(String query) throws IOException {
 		
 		long startTime, endTime;
 	    startTime = System.nanoTime ();
 		
-		url = new URL("https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + compound + "/synonyms/txt");
+		url = new URL("https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + query + "/synonyms/txt");
 		
-		synonyms = new ArrayList<String>();
+		compoundSynonyms = new ArrayList<String>();
 		
 		 // read text returned by server
         BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
          
         String line;
         while ((line = in.readLine()) != null) {
-        	synonyms.add(line.trim());
+        	compoundSynonyms.add(line.trim());
             System.out.println(line);
         }
         
@@ -39,14 +37,6 @@ public class ReadPubChemCompoundSynonyms {
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000000 + " s");
 	}
 
-	public String getCompound() {
-		return compound;
-	}
-
-	public void setCompound(String compound) {
-		this.compound = compound;
-	}
-
 	public URL getUrl() {
 		return url;
 	}
@@ -55,14 +45,11 @@ public class ReadPubChemCompoundSynonyms {
 		this.url = url;
 	}
 
-	public List<String> getSynonyms() {
-		return synonyms;
+	public List<String> getCompoundSynonyms() {
+		return compoundSynonyms;
 	}
 
-	public void setSynonyms(List<String> synonyms) {
-		this.synonyms = synonyms;
+	public void setCompoundSynonyms(List<String> compoundSynonyms) {
+		this.compoundSynonyms = compoundSynonyms;
 	}
-	
-	
-
 }

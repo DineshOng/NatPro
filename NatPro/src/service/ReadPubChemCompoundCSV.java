@@ -8,17 +8,21 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+import model.Compound;
+
 public class ReadPubChemCompoundCSV {
-	private String compound;
 	private URL url;
+	private Compound compound;
 	
-	public ReadPubChemCompoundCSV(String compound) throws IOException {
-		this.compound = compound;
-		
+	public static void main(String[] args) throws IOException {
+		new ReadPubChemCompoundCSV("cocaine");
+	}
+	
+	public ReadPubChemCompoundCSV(String query) throws IOException {
 		long startTime, endTime;
 	    startTime = System.nanoTime ();
 	    
-		url = new URL("https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + compound + "/property/MolecularFormula,MolecularWeight,CanonicalSMILES,InChI,InChIKey,IUPACName,XLogP,ExactMass,TPSA,Complexity,Charge,HBondDonorCount,HBondAcceptorCount,RotatableBondCount/CSV");
+		url = new URL("https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + query + "/property/MolecularFormula,MolecularWeight,CanonicalSMILES,InChI,InChIKey,IUPACName,XLogP,ExactMass,TPSA,Complexity,Charge,HBondDonorCount,HBondAcceptorCount,RotatableBondCount/CSV");
 		
 		String csv = "";
 		
@@ -42,16 +46,35 @@ public class ReadPubChemCompoundCSV {
             System.out.println(s);
         }
         
+        compound = new Compound();
+        /*
+        compound.setPubCID(Integer.parseInt(split[0]));
+        compound.setMolForm(split[1]);
+        compound.setMolWeight(Double.parseDouble(split[2]));
+        compound.setCanSMILES(split[3]);
+        compound.setInchi(split[4]);
+        compound.setInchikey(split[5]);
+        compound.setIupac(split[6]);
+        compound.setXlogp(Double.parseDouble(split[7]));
+        compound.setMass(Double.parseDouble(split[8]));
+        compound.setTpsa(Double.parseDouble(split[9]));
+        compound.setComplexity(Double.parseDouble(split[10]));
+        compound.setCharge(Integer.parseInt(split[11]));
+        compound.sethBondDonor(Integer.parseInt(split[12]));
+        compound.sethBondAcceptor(Integer.parseInt(split[13]));
+        compound.setRotBondCount(Integer.parseInt(split[14]));
+        */
+        
         endTime = System.nanoTime ();
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000000 + " s");
 	}
 
-	public String getCompound() {
+	public Compound getCompound() {
 		return compound;
 	}
 
-	public void setCompound(String compound) {
+	public void setCompound(Compound compound) {
 		this.compound = compound;
 	}
 
