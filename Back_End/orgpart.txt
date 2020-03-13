@@ -1,12 +1,18 @@
-((un)?ripe)? sarcotesta
-aerial plant parts?
+aerial plant parts
 petiole and rachis
+unripe sarcotesta
+aerial plant part
+ripe sarcotesta
 fruiting bodies
-(fe)?male cone
-aerial parts?
 fruiting body
-fruit rinds?
+aerial parts
+female cone
+aerial part
+fruit rinds
 sclerotesta
+sarcotesta
+fruit rind
+male cone
 stem bark
 cone base
 endotesta
