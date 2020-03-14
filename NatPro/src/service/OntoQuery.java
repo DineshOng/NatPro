@@ -306,8 +306,8 @@ public class OntoQuery {
 			Collection compoundSynCol = compoundIndiv.getPropertyValues(datatypeProperty_CompoundSynonym);
 			for (Iterator jt = compoundSynCol.iterator(); jt.hasNext();) {
 				comp = jt.next().toString();
-				if (comp.equalsIgnoreCase(compound.getCompound())) {
-					compound.setCompound(comp);
+				if (comp.equalsIgnoreCase(compound.getCompoundName())) {
+					compound.setCompoundName(comp);
 				}
 				compoundSynonyms.add(comp);
 			}

@@ -1,9 +1,10 @@
 package model;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
 public class Compound {
-	private String compound;
+	private String compoundName;
 	private HashSet<BiologicalActivity> bioActs;
 	private int pubCID;
 	private String molForm;
@@ -24,18 +25,19 @@ public class Compound {
 	private String imgSVG;
 	
 	public Compound() {
+		compoundSynonyms = new ArrayList<String>();
 	}
 	
-	public Compound(String compound) {
-		this.compound = compound;
+	public Compound(String compoundName) {
+		this.compoundName = compoundName;
 	}
 
-	public String getCompound() {
-		return compound;
+	public String getCompoundName() {
+		return compoundName;
 	}
 
-	public void setCompound(String compound) {
-		this.compound = compound;
+	public void setCompoundName(String compoundName) {
+		this.compoundName = compoundName;
 	}
 
 	public HashSet<BiologicalActivity> getBioActs() {

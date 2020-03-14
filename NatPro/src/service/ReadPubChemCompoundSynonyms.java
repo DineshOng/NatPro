@@ -19,18 +19,27 @@ public class ReadPubChemCompoundSynonyms {
 		
 		url = new URL("https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + query + "/synonyms/txt");
 		
-		compoundSynonyms = new ArrayList<String>();
+		
 		
 		 // read text returned by server
-        BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-         
-        String line;
-        while ((line = in.readLine()) != null) {
-        	compoundSynonyms.add(line.trim());
-            System.out.println(line);
-        }
+        BufferedReader in;
         
-        in.close();
+        try {
+        	in = new BufferedReader(new InputStreamReader(url.openStream()));
+        	
+        	compoundSynonyms = new ArrayList<String>();
+        	
+        	String line;
+        	while ((line = in.readLine()) != null) {
+        		compoundSynonyms.add(line.trim());
+        		//System.out.println(line);
+        		
+        	}
+             
+            in.close();
+        } catch (Exception e) {
+        	
+        }
         
         endTime = System.nanoTime ();
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");

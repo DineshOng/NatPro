@@ -26,45 +26,52 @@ public class ReadPubChemCompoundCSV {
 		
 		String csv = "";
 		
-        BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+        BufferedReader in;
         
-        in.readLine();
-        csv = in.readLine();
-        /*while ((line = in.readLine()) != null) {
-        	//synonyms.add(line.trim());
-            System.out.println(line);
-            csv = line;
-        }*/
-        
-        in.close();
-        
-        String regex = ",(?=([^\"]*\"[^\"]*\")*(?![^\"]*\"))";
-        Pattern p = Pattern.compile(regex);
-        String[] split = p.split(csv);
-        
-        for(String s:split) {
-            System.out.println(s);
+        try {
+	        in = new BufferedReader(new InputStreamReader(url.openStream()));
+	        
+	        in.readLine();
+	        csv = in.readLine();
+	        /*while ((line = in.readLine()) != null) {
+	        	//synonyms.add(line.trim());
+	            System.out.println(line);
+	            csv = line;
+	        }*/
+	        
+	        in.close();
+	        
+	        String regex = ",(?=([^\"]*\"[^\"]*\")*(?![^\"]*\"))";
+	        Pattern p = Pattern.compile(regex);
+	        String[] split = p.split(csv);
+	        
+	        /*
+	        for(String s:split) {
+	            System.out.println(s);
+	        }
+	        */
+	        
+	        compound = new Compound();
+	        
+	        compound.setPubCID(Integer.parseInt(split[0]));
+	        compound.setMolForm(split[1].replaceAll("\"", ""));
+	        compound.setMolWeight(Double.parseDouble(split[2]));
+	        compound.setCanSMILES(split[3].replaceAll("\"", ""));
+	        compound.setInchi(split[4].replaceAll("\"", ""));
+	        compound.setInchikey(split[5].replaceAll("\"", ""));
+	        compound.setIupac(split[6].replaceAll("\"", ""));
+	        compound.setXlogp(Double.parseDouble(split[7]));
+	        compound.setMass(Double.parseDouble(split[8]));
+	        compound.setTpsa(Double.parseDouble(split[9]));
+	        compound.setComplexity(Double.parseDouble(split[10]));
+	        compound.setCharge(Integer.parseInt(split[11]));
+	        compound.sethBondDonor(Integer.parseInt(split[12]));
+	        compound.sethBondAcceptor(Integer.parseInt(split[13]));
+	        compound.setRotBondCount(Integer.parseInt(split[14]));
+        } catch (Exception e) {
+        	
         }
-        
-        compound = new Compound();
-        /*
-        compound.setPubCID(Integer.parseInt(split[0]));
-        compound.setMolForm(split[1]);
-        compound.setMolWeight(Double.parseDouble(split[2]));
-        compound.setCanSMILES(split[3]);
-        compound.setInchi(split[4]);
-        compound.setInchikey(split[5]);
-        compound.setIupac(split[6]);
-        compound.setXlogp(Double.parseDouble(split[7]));
-        compound.setMass(Double.parseDouble(split[8]));
-        compound.setTpsa(Double.parseDouble(split[9]));
-        compound.setComplexity(Double.parseDouble(split[10]));
-        compound.setCharge(Integer.parseInt(split[11]));
-        compound.sethBondDonor(Integer.parseInt(split[12]));
-        compound.sethBondAcceptor(Integer.parseInt(split[13]));
-        compound.setRotBondCount(Integer.parseInt(split[14]));
-        */
-        
+	        
         endTime = System.nanoTime ();
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
         System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000000 + " s");
