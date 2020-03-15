@@ -1,2 +1,4 @@
 *.class
 *.jar
+NatPro/Resources/classifiers/
+NatPro/Resources/english-left3words-distsim.tagger
