@@ -8,11 +8,11 @@ import model.Compound;
 public class CompoundInformationRetrieval {
 	private Compound compound;
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		System.out.println(new CompoundInformationRetrieval("aspirin").isCompound());
 	}
 	
-	public CompoundInformationRetrieval(String query) throws IOException {
+	public CompoundInformationRetrieval(String query) throws Exception {
 		//compound = new ReadPubChemCompoundCSV(query).getCompound();
 		
 		compound = new Compound();
