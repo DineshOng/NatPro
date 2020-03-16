@@ -195,8 +195,6 @@ public class OntoQuery {
 		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
 		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
 		
-		
-		
 		Boolean found = false;
 		
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
@@ -217,7 +215,22 @@ public class OntoQuery {
 						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase())) {
 							System.out.println(compoundIndiv);
 							mp = new Compound(compoundIndiv);
+							List<String> synonyms = new ArrayList<String>();
+							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
+								String syno = jtt.next().toString();
+								
+									System.out.println(syno + " " + compoundIndiv);
+									mp = new Compound(compoundIndiv);
+									System.out.println(syno);
+									synonyms.add(syno);
+									
+							
+							
+								
+							}
+							mp.setCompoundSynonyms(synonyms);
 							found = true;
+							values.add(mp);
 						}
 						
 						if(!found) {
@@ -227,8 +240,12 @@ public class OntoQuery {
 								if (syno.toLowerCase().contains(Compound.toLowerCase())) {
 									System.out.println(syno + " " + compoundIndiv);
 									mp = new Compound(compoundIndiv);
+									List<String> synonyms = new ArrayList<String>();
+									synonyms.add(syno);
+									mp.setCompoundSynonyms(synonyms);
 									found = true;
-									break synonym;
+									values.add(mp);
+									//break synonym;
 								}
 								
 							}
@@ -237,7 +254,7 @@ public class OntoQuery {
 						if(found) {
 							// put all properties in the compound object
 							
-							values.add(mp);
+							//values.add(mp);
 						}
 					} catch (Exception e) {
 						

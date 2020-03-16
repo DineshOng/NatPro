@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import model.Compound;
 import model.MedicinalPlant;
 import service.OntoQuery;
 
@@ -67,14 +68,24 @@ public class SearchServlet extends HttpServlet {
 			throws OntologyLoadException, ServletException, IOException {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("searchKey");
-		System.out.println(request.getParameter("searchCategory"));
+		System.out.println("hehe" + request.getParameter("searchCategory"));
 		OntoQuery q = new OntoQuery();
-		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
+		if(request.getParameter("searchCategory").equals("1")) {
+			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
+			request.setAttribute("medPlantsList", medPlants);
+		} else if(request.getParameter("searchCategory").equals("5")) {
+			List<Compound> compoundList = q.searchCompound(searchKey);
+			request.setAttribute("compoundList", compoundList);
+		}
+			
 //		for(MedicinalPlant m: medPlants) {
 //			System.out.println(m.getMedicinalPlant().toString());
 //		}
+		
+		request.setAttribute("searchCategory", request.getParameter("searchCategory"));
+		
 		request.setAttribute("searchKey", searchKey);
-		request.setAttribute("medPlantsList", medPlants);
+		
 		request.getRequestDispatcher("5asearchresults.jsp").forward(request, response);
 //		System.out.println(medPlants.get(0));
 	}
