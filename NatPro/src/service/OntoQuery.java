@@ -1,6 +1,7 @@
 package service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -24,7 +25,7 @@ public class OntoQuery {
 	OWLModel owlModel;
 
 	public OntoQuery() throws OntologyLoadException {
-		String owlPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\Ontology\\OntoNatPro.owl";
+		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -173,6 +174,81 @@ public class OntoQuery {
 
 		return compounds;
 
+	}
+	
+	public static void main(String[] args) throws OntologyLoadException {
+		OntoQuery q = new OntoQuery();
+		List<Compound> compounds = q.searchCompound("d");
+	}
+	
+	public List<Compound> searchCompound(String Compound) {
+		if(Compound.contains("α")) {
+			Compound = Compound.replaceAll("α","alpha");
+		} else if(Compound.contains("β")) {
+			Compound = Compound.replaceAll("β","beta");
+		} else if(Compound.contains("γ")) {
+			Compound = Compound.replaceAll("γ","gamma");
+		} 
+		
+		List<Compound> values = new ArrayList<Compound>();
+		
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
+		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
+		
+		
+		
+		Boolean found = false;
+		
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Compound")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					found = false;
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
+						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
+						
+						Compound mp = null;
+						
+						// EDIT THIS CODE FOR OPTIMAL SEARCH FUNCTION
+						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase())) {
+							System.out.println(compoundIndiv);
+							mp = new Compound(compoundIndiv);
+							found = true;
+						}
+						
+						if(!found) {
+							synonym:
+							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
+								String syno = jtt.next().toString();
+								if (syno.toLowerCase().contains(Compound.toLowerCase())) {
+									System.out.println(syno + " " + compoundIndiv);
+									mp = new Compound(compoundIndiv);
+									found = true;
+									break synonym;
+								}
+								
+							}
+						}
+						
+						if(found) {
+							// put all properties in the compound object
+							
+							values.add(mp);
+						}
+					} catch (Exception e) {
+						
+					}
+				}
+			}
+		}
+		
+		System.out.println(values.size());
+		
+		return values;
 	}
 
 	public List<MedicinalPlant> searchMedicinalPlant(String MedicinalPlant) {
