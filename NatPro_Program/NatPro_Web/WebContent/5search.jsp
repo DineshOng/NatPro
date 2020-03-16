@@ -66,55 +66,183 @@
                     </div>
                     <input type="submit" class="waves-effect waves-light btn center green darken-3 col s4 offset-s4" id="btnSubmit" value="search">
                 </form>
-                <form id="advSearch" action="" class="row" >
+                <form id="advSearch" action="" class="row">
                 	<div class="input-field col s12">
                         <i class="material-icons prefix">search</i>
                         <input id="searchInput" class="materialize-textarea" type="text">
-                        <label for="searchInput">Search</label>
+                        <label for="searchInput">Search for anything</label>
                     </div>
                     
                     <div class="row">
-                    	<h6>Search for only:</h6><br>
+                    	<h6>Limit search for only:</h6><br>
                     	<label class="">
                     		<input type="checkbox" class="filled-in">
-                    		<span>Plant Name</span>
+                    		<span style="padding-right: 20px;">Scientific Plant Name</span>
                     	</label>
                     	<label class="">
                     		<input type="checkbox" class="filled-in">
-                    		<span>Common Plant Name</span>
+                    		<span style="padding-right: 20px;">Common Plant Name</span>
                     	</label>
                     	<label class="">
                     		<input type="checkbox" class="filled-in">
-                    		<span>Genus</span>
+                    		<span style="padding-right: 20px;">Genus</span>
                     	</label>
                     	<label class="">
                     		<input type="checkbox" class="filled-in">
-                    		<span>Family</span>
+                    		<span style="padding-right: 20px;">Family</span>
                     	</label>
                     	<label class="">
                     		<input type="checkbox" class="filled-in">
-                    		<span>Chemical Compound</span>
+                    		<span style="padding-right: 20px;">Chemical Compound</span>
+                    	</label>
+                    	<label class="">
+                    		<input type="checkbox" class="filled-in">
+                    		<span style="padding-right: 20px;">Location</span>
+                    	</label>
+                    	<label class="">
+                    		<input type="checkbox" class="filled-in">
+                    		<span style="padding-right: 20px;">Biological Activites</span>
                     	</label>
                     </div>
                     <div class="row">
-                    	<h6>Plant Part Usage</h6><br>
-                    	<div class="input-field col s8">
-	                        <i class="material-icons prefix">search</i>
-	                        <input id="searchInput" class="materialize-textarea" type="text">
-	                        <label for="searchInput">Search</label>
+                    	<h6>Plant Part Usage: </h6><br>
+                    	
+                    	<!-- 
+	                    	<div class="input-field col s8">
+		                        <i class="material-icons prefix">search</i>
+		                        <input id="searchInput" class="materialize-textarea" type="text">
+		                        <label for="searchInput">Search</label>
+		                    </div>
+		                    <div class="col s1">
+		                    	<h6>for</h6>
+		                    </div>
+	                    -->
+	                    <div class="col s1" style="padding-top: 15px">
+	                    	<h6>Use</h6>
 	                    </div>
-	                    <div class="col s1">
-	                    	<h6>for</h6>
-	                    </div>
-	                    <div class="input-field col s3">
+	                    <!-- should get values from orgpart.text and procedurally generated every time search is called -->
+	                    <div class="input-field col s5">
 	                        <select class="browser-default">
 	                            <option value="" disabled selected>Choose plant part</option>
-	                            <option value="1">stem</option>
-	                            <option value="2">bark</option>
-	                            <option value="3">sarcotesta</option>
-	                            <option value="4">endotesta</option>
-	                            <option value="5">roots</option>
-	                            <option value="6">leaf</option>
+	                            <option value="1">Aerial Plant Parts</option>
+	                            <option value="2">Petiole and Rachis</option>
+	                            <option value="3">Unripe Sarcotesta</option>
+	                            <option value="4">Aerial Plant Part</option>
+	                            <option value="5">Ripe Sarcotesta</option>
+	                            <option value="6">Fruiting Bodies</option>
+	                            <option value="7">Fruiting Body</option>
+	                            <option value="8">Aerial Parts</option>
+	                            <option value="9">Female Cone</option>
+	                            <option value="10">Aerial Part</option>
+	                            <option value="11">Fruit Rinds</option>
+	                            <option value="12">Sclerotesta</option>
+	                            <option value="13">Sarcotesta</option>
+	                            <option value="14">Fruit Rind</option>
+	                            <option value="15">Male Cone</option>
+	                            <option value="16">Stem Bark</option>
+	                            <option value="17">Cone Base</option>
+	                            <option value="18">Endotesta</option>
+	                            <option value="19">Flowers</option>
+	                            <option value="20">Leaflet</option>
+	                            <option value="21">Flower</option>
+	                            <option value="22">Fruits</option>
+	                            <option value="23">Trunks</option>
+	                            <option value="24">Leaves</option>
+	                            <option value="25">Fruit</option>
+	                            <option value="26">Trunk</option>
+	                            <option value="27">Seeds</option>
+	                            <option value="28">Roots</option>
+	                            <option value="29">Twigs</option>
+	                            <option value="30">Stems</option>
+	                            <option value="31">Seed</option>
+	                            <option value="32">Root</option>
+	                            <option value="33">Twig</option>
+	                            <option value="34">Stem</option>
+	                            <option value="35">Pods</option>
+	                            <option value="36">Leaf</option>
+	                            <option value="37">Bark</option>
+	                            <option value="38">Pod</option>
+	                        </select>
+	                    </div>
+	                    <div class="col s1"  style="padding-top: 15px">
+	                    	<h6>to</h6>
+	                    </div>
+	                    <!-- should get values from bodypart.text and procedurally generated every time search is called -->
+	                    <div class="input-field col s5">
+	                        <select class="browser-default">
+	                            <option value="" disabled selected>Choose body part</option>
+	                            <option value="1">Gall Bladder</option>
+	                            <option value="2">Intestines</option>
+	                            <option value="3">Esophagus</option>
+	                            <option value="4">Intestine</option>
+	                            <option value="5">Shoulders</option>
+	                            <option value="6">Buttocks</option>
+	                            <option value="7">Bladder</option>
+	                            <option value="8">Kidneys</option>
+	                            <option value="9">Ovaries</option>
+	                            <option value="10">Stomach</option>
+	                            <option value="11">Thyroid</option>
+	                            <option value="12">Fingers</option>
+	                            <option value="13">Breasts</option>
+	                            <option value="14">Abdomen</option>
+	                            <option value="15">Kidney</option>
+	                            <option value="16">Spleen</option>
+	                            <option value="17">Thymus</option>
+	                            <option value="18">Cheeks</option>
+	                            <option value="19">Tongue</option>
+	                            <option value="20">Throat</option>
+	                            <option value="21">Elbows</option>
+	                            <option value="22">Wrists</option>
+	                            <option value="23">Finger</option>
+	                            <option value="24">Breat</option>
+	                            <option value="25">Thighs</option>
+	                            <option value="26">Calves</option>
+	                            <option value="27">Ankles</option>
+	                            <option value="28">Brain</option>
+	                            <option value="29">Heart</option>
+	                            <option value="30">Liver</option>
+	                            <option value="31">Lungs</option>
+	                            <option value="32">Ovary</option>
+	                            <option value="33">Veins</option>
+	                            <option value="34">Cheek</option>
+	                            <option value="35">Mouth</option>
+	                            <option value="36">Teeth</option>
+	                            <option value="37">Tooth</option>
+	                            <option value="38">Elbow</option>
+	                            <option value="39">Wrist</option>
+	                            <option value="40">Hands</option>
+	                            <option value="41">Spine</option>
+	                            <option value="42">Chest</option>
+	                            <option value="43">Navel</option>
+	                            <option value="44">Thigh</option>
+	                            <option value="45">Knees</option>
+	                            <option value="46">Heels</option>
+	                            <option value="47">Ankle</option>
+	                            <option value="48">Eyes</option>
+	                            <option value="49">Vein</option>
+	                            <option value="50">Head</option>
+	                            <option value="51">Jaw</option>
+	                            <option value="52">Chin</option>
+	                            <option value="53">Ears</option>
+	                            <option value="54">Nose</option>
+	                            <option value="55">Neck</option>
+	                            <option value="56">Arms</option>
+	                            <option value="57">Hand</option>
+	                            <option value="58">Hips</option>
+	                            <option value="59">Legs</option>
+	                            <option value="60">Knee</option>
+	                            <option value="61">Calf</option>
+	                            <option value="62">Heel</option>
+	                            <option value="63">Foot</option>
+	                            <option value="64">Feet</option>
+	                            <option value="65">Toes</option>
+	                            <option value="66">Eye</option>
+	                            <option value="67">Jaw</option>
+	                            <option value="68">Ear</option>
+	                            <option value="69">Arm</option>
+	                            <option value="70">Hip</option>
+	                            <option value="71">Leg</option>
+	                            <option value="72">Toe</option>
 	                        </select>
 	                    </div>
                     </div>

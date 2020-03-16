@@ -67,3 +67,7 @@ footer.page-footer {
 #tableSmallWidth {
     width: 50%;
 }
+
+#checkBoxes {
+	padding-right: 20px;
+}
