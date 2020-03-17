@@ -17,9 +17,12 @@
         <div class="section green darken-1" id="index-banner">
             <div class="container">
                 <!--<br><br>-->
-                <h1 class="header center white-text">Chemical Compound</h1>
+                <h1 class="header center white-text">Chemical Compound ${compound.getCompoundName()}</h1>
                 <div class="row center white-text">
-                    <img class="responsive-img circle" src="media/cocaine.png">
+                    <img class="responsive-img circle" src="media/compound/CN1C2CCC1C(C(C2)OC(=O)C3=CC=CC=C3)C(=O)OC.jpg">
+                    <img class="responsive-img circle" src="media/compound/b.svg">
+                    <img class="responsive-img circle" src="media/a.jpg">
+                    <img class="responsive-img circle" src="media/b.svg">
                     <br><br>
                     <a class="waves-effect waves-light btn green accent-4 white-text">Fill out information from pubchem</a>
                 </div>

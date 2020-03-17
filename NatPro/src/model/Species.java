@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import org.apache.commons.lang.StringUtils;
+
 public class Species {
 	String specie;
 	ArrayList<SpeciesPart> speciesParts;
@@ -10,7 +12,7 @@ public class Species {
 
 	public Species(String specie) {
 		super();
-		this.specie = specie;
+		this.specie = StringUtils.capitalize(specie);
 	}
 
 	public String getSpecie() {

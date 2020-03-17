@@ -29,7 +29,7 @@
 				</h6>
 			</div>
 			<br> <br>
-			<form class="row" action="#">
+			<form class="row" action="SearchServlet" method="POST">
 				<div class="input-field col s9">
 					<i class="material-icons prefix">search</i> <input id="searchInput"
 						class="materialize-textarea" type="text"> <label
@@ -50,7 +50,6 @@
 			</form>
 		</div>
 	</div>
-
 <!--
 	<div>
 		<table class="striped">
@@ -64,14 +63,15 @@
 				<c:forEach items="${medPlantsList}" var="medPlantsList">
 					<tr>
 						<td><a href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
-						<td><c:forEach items="${medPlantsList.getSpecies()}" var="speciesList"><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()} </a>, </c:forEach></td>
+						<td><c:forEach items="${medPlantsList.getSpecies()}" var="speciesList"><i><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a></i>, </c:forEach></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 
 	</div>
-	  -->
+	
+  -->
 	<div>
 		<table class="striped">
 			<thead>
@@ -83,8 +83,8 @@
 			<tbody>
 				<c:forEach items="${compoundList}" var="compoundList">
 					<tr>
-						<td><a href="ViewPlantServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundName()}</a></td>
-						<td><c:forEach items="${compoundList.getCompoundSynonyms()}" var="csList"><a href="6dentry.jsp?specie=${compoundList.getCompoundName()}">${csList} </a>, </c:forEach></td>
+						<td><a href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundName()}</a></td>
+						<td><c:forEach items="${compoundList.getCompoundSynonyms()}" var="csList"><a href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${csList} </a>, </c:forEach></td>
 					</tr>
 				</c:forEach>
 			</tbody>

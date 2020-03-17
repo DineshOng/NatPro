@@ -74,7 +74,7 @@
 								<c:forEach items="${medPlantsList.get(0).getSpecies()}"
 									var="speciesList">
 									<tr>
-										<td>${speciesList.getSpecie()}</td>
+										<td><i>${speciesList.getSpecie()}</i></td>
 									</tr>
 								</c:forEach>
 							</tr>

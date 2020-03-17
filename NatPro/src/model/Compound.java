@@ -5,7 +5,10 @@ import java.util.List;
 
 public class Compound {
 	private String compoundName;
+	
 	private HashSet<BiologicalActivity> bioActs;
+	private List<String> compoundSynonyms;
+	
 	private int pubCID;
 	private String molForm;
 	private double molWeight;
@@ -13,16 +16,18 @@ public class Compound {
 	private String inchi;
 	private String inchikey;
 	private String iupac;
+	
 	private double xlogp;
 	private double mass;
 	private double tpsa;
 	private double complexity;
+	
 	private int charge;
 	private int hBondDonor;
 	private int hBondAcceptor;
 	private int rotBondCount;
-	private List<String> compoundSynonyms;
-	private String imgSVG;
+	
+	
 	
 	public Compound() {
 		compoundSynonyms = new ArrayList<String>();
@@ -55,6 +60,10 @@ public class Compound {
 	public void setPubCID(int pubCID) {
 		this.pubCID = pubCID;
 	}
+	
+	public void setPubCID(String pubCID) {
+		this.pubCID = Integer.parseInt(pubCID);
+	}
 
 	public String getMolForm() {
 		return molForm;
@@ -71,6 +80,11 @@ public class Compound {
 	public void setMolWeight(double molWeight) {
 		this.molWeight = molWeight;
 	}
+	
+	public void setMolWeight(String molWeight) {
+		this.molWeight = Double.parseDouble(molWeight);
+	}
+
 
 	public String getCanSMILES() {
 		return canSMILES;
@@ -111,6 +125,10 @@ public class Compound {
 	public void setXlogp(double xlogp) {
 		this.xlogp = xlogp;
 	}
+	
+	public void setXlogp(String xlogp) {
+		this.xlogp = Double.parseDouble(xlogp);
+	}
 
 	public double getMass() {
 		return mass;
@@ -118,6 +136,10 @@ public class Compound {
 
 	public void setMass(double mass) {
 		this.mass = mass;
+	}
+	
+	public void setMass(String mass) {
+		this.mass = Double.parseDouble(mass);
 	}
 
 	public double getTpsa() {
@@ -127,6 +149,10 @@ public class Compound {
 	public void setTpsa(double tpsa) {
 		this.tpsa = tpsa;
 	}
+	
+	public void setTpsa(String tpsa) {
+		this.tpsa = Double.parseDouble(tpsa);
+	}
 
 	public double getComplexity() {
 		return complexity;
@@ -134,6 +160,10 @@ public class Compound {
 
 	public void setComplexity(double complexity) {
 		this.complexity = complexity;
+	}
+	
+	public void setComplexity(String complexity) {
+		this.complexity = Double.parseDouble(complexity);
 	}
 
 	public int getCharge() {
@@ -143,6 +173,10 @@ public class Compound {
 	public void setCharge(int charge) {
 		this.charge = charge;
 	}
+	
+	public void setCharge(String charge) {
+		this.charge = Integer.parseInt(charge);
+	}
 
 	public int gethBondDonor() {
 		return hBondDonor;
@@ -150,6 +184,10 @@ public class Compound {
 
 	public void sethBondDonor(int hBondDonor) {
 		this.hBondDonor = hBondDonor;
+	}
+	
+	public void sethBondDonor(String hBondDonor) {
+		this.hBondDonor = Integer.parseInt(hBondDonor);
 	}
 
 	public int gethBondAcceptor() {
@@ -159,6 +197,10 @@ public class Compound {
 	public void sethBondAcceptor(int hBondAcceptor) {
 		this.hBondAcceptor = hBondAcceptor;
 	}
+	
+	public void sethBondAcceptor(String hBondAcceptor) {
+		this.hBondAcceptor = Integer.parseInt(hBondAcceptor);
+	}
 
 	public int getRotBondCount() {
 		return rotBondCount;
@@ -166,6 +208,10 @@ public class Compound {
 
 	public void setRotBondCount(int rotBondCount) {
 		this.rotBondCount = rotBondCount;
+	}
+	
+	public void setRotBondCount(String rotBondCount) {
+		this.rotBondCount = Integer.parseInt(rotBondCount);
 	}
 
 	public List<String> getCompoundSynonyms() {
@@ -175,15 +221,4 @@ public class Compound {
 	public void setCompoundSynonyms(List<String> compoundSynonyms) {
 		this.compoundSynonyms = compoundSynonyms;
 	}
-
-	public String getImgSVG() {
-		return imgSVG;
-	}
-
-	public void setImgSVG(String imgSVG) {
-		this.imgSVG = imgSVG;
-	}
-	
-	
-	
 }
