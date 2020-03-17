@@ -227,11 +227,13 @@ public class OntoQuery {
 							}
 							compound.setCompoundSynonyms(synonyms);
 							
+							
 							if(!individual.getPropertyValue(dp_pubCID).toString().isEmpty())
 								compound.setPubCID(individual.getPropertyValue(dp_pubCID).toString());
-							
 							if(!individual.getPropertyValue(dp_molForm).toString().isEmpty())
 								compound.setMolForm(individual.getPropertyValue(dp_molForm).toString());
+								
+							
 							if(!individual.getPropertyValue(dp_molWeight).toString().isEmpty())
 								compound.setMolWeight(individual.getPropertyValue(dp_molWeight).toString());
 							if(!individual.getPropertyValue(dp_canSMILES).toString().isEmpty())
@@ -264,12 +266,11 @@ public class OntoQuery {
 							
 							System.out.println(compound.getMolForm());
 							System.out.println(compound.getCanSMILES());
-							System.out.println(compound.getInchikey());
+							System.out.println(compound.getMolWeight());
 							
 							return compound;
 						}
 					} catch (Exception e) {
-						
 					}
 				}
 			}
@@ -281,7 +282,7 @@ public class OntoQuery {
 	
 	public static void main(String[] args) throws OntologyLoadException {
 		OntoQuery q = new OntoQuery();
-		//List<Compound> compounds = q.searchCompound("d");
+		//List<Compound> compounds = q.searchCompound("pr");
 		Compound c = q.getCompound("alstoNerine");
 	}
 	
@@ -322,13 +323,13 @@ public class OntoQuery {
 							List<String> synonyms = new ArrayList<String>();
 							
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
-								if(!jtt.next().toString().isEmpty()) {
+								//if(!jtt.next().toString().isEmpty()) {
 									String syno = jtt.next().toString();
 									System.out.println(syno + " " + compoundIndiv);
 									mp = new Compound(compoundIndiv);
 									System.out.println(syno);
 									synonyms.add(syno);
-								}
+								//}
 							}
 							
 							mp.setCompoundSynonyms(synonyms);
@@ -339,7 +340,7 @@ public class OntoQuery {
 						if(!found) {
 							synonym:
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
-								if(!jtt.next().toString().isEmpty()) {
+								//if(!jtt.next().toString().isEmpty()) {
 									String syno = jtt.next().toString();
 									if (syno.toLowerCase().contains(Compound.toLowerCase())) {
 										System.out.println(syno + " " + compoundIndiv);
@@ -351,11 +352,11 @@ public class OntoQuery {
 										values.add(mp);
 										//break synonym;
 									}
-								}
+								//}
 							}
 						}
 					} catch (Exception e) {
-						
+						System.out.println("eeeek");
 					}
 				}
 			}

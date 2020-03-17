@@ -212,6 +212,33 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_CanSMILES -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_CanSMILES">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Charge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Charge">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Complexity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Complexity">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Compound -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Compound">
@@ -256,6 +283,24 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_HBondAcceptorCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_HBondAcceptorCount">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_HBondDonorCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_HBondDonorCount">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_IUPACName -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_IUPACName">
@@ -283,6 +328,15 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_InChIkey -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_InChIkey">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_LocalName -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_LocalName">
@@ -298,6 +352,12 @@
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Mass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Mass"/>
     
 
 
@@ -346,6 +406,24 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_PubCID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_PubCID">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_RotatableBondCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_RotatableBondCount">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Source -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Source">
@@ -360,6 +438,24 @@
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Synonym">
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_TPSA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_TPSA">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_XLogP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_XLogP">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
 
@@ -820,13 +916,25 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstonerine">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_CanSMILES>1:[2]:3=4</datatypeProperty_CanSMILES>
+        <datatypeProperty_Charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</datatypeProperty_Charge>
+        <datatypeProperty_Complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</datatypeProperty_Complexity>
+        <datatypeProperty_Compound>alstonerine</datatypeProperty_Compound>
         <datatypeProperty_CompoundSynonym>Alstonerine</datatypeProperty_CompoundSynonym>
         <datatypeProperty_CompoundSynonym>Alstophyllan-19-one</datatypeProperty_CompoundSynonym>
         <datatypeProperty_CompoundSynonym>Alstophylline, demethoxy-</datatypeProperty_CompoundSynonym>
+        <datatypeProperty_HBondAcceptorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</datatypeProperty_HBondAcceptorCount>
+        <datatypeProperty_HBondDonorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</datatypeProperty_HBondDonorCount>
         <datatypeProperty_IUPACName>1-[(1S,12S,13R,18R)-3,20-dimethyl-15-oxa-3,20-diazapentacyclo[10.7.1.02,10.04,9.013,18]icosa-2(10),4,6,8,16-pentaen-17-yl]ethanone</datatypeProperty_IUPACName>
         <datatypeProperty_InChI>InChI=1S/C21H24N2O2/c1-12(24)16-10-25-11-17-14(16)8-20-21-15(9-19(17)22(20)2)13-6-4-5-7-18(13)23(21)3/h4-7,10,14,17,19-20H,8-9,11H2,1-3H3/t14-,17+,19-,20-/m0/s1</datatypeProperty_InChI>
+        <datatypeProperty_InChIkey>14342-NADJIF</datatypeProperty_InChIkey>
+        <datatypeProperty_Mass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">444.44</datatypeProperty_Mass>
         <datatypeProperty_MolForm>C21H24N2O2</datatypeProperty_MolForm>
         <datatypeProperty_MolWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">336.4</datatypeProperty_MolWeight>
+        <datatypeProperty_PubCID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23534</datatypeProperty_PubCID>
+        <datatypeProperty_RotatableBondCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</datatypeProperty_RotatableBondCount>
+        <datatypeProperty_TPSA rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">456</datatypeProperty_TPSA>
+        <datatypeProperty_XLogP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</datatypeProperty_XLogP>
     </owl:NamedIndividual>
     
 
