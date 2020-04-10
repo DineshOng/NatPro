@@ -214,10 +214,19 @@
 	                            <input id="chemicalCompound" type="text" class="validate">
 	                            <label for="chemicalCompound">Chemical Compound</label>
 	                        </div>
-	                        <div class="input-field col s6 offset-s3">
-	                            <input id="biologicalActivity" type="text" class="validate">
-	                            <label for="biologicalActivity">Biological Activity</label>
+	                        <div class="col s12" id="biologicalActivityGroup">
+	                        	<div class="input-field col s6 offset-s1">
+	                        		<input id="biologicalActivity" type="text" class="validate">
+	                            	<label for="biologicalActivity">Biological Activity</label>
+	                            	
+	                            	<a class="btn-small right teal darken-4" id="biologicalActivityAdd" onclick="addBAFields()">Biological Activities<i class="material-icons left">add</i></a>
+	                        	</div>
+	                        	<div class="input-field col s4">
+	                        		<input id="cellLine" type="text" class="validate">
+	                            	<label for="cellLine">CellLine</label>
+	                        	</div>
 	                        </div>
+	                        
                         </div>
                     </div>
                     <input type="submit" id="btnSubmit" class="waves-effect waves-light btn green darken-3 center col s6 offset-s3">
@@ -302,8 +311,8 @@
                 $('select').formSelect();
             });
             
-            var snCtr, lCtr, pCtr, iCtr;
-            snCtr = lCtr = pCtr = iCtr = 0;
+            var snCtr, lCtr, pCtr, iCtr, baCtr, clCtr;
+            snCtr = lCtr = pCtr = iCtr = baCtr = clCtr = 0;
             
             function addSNFields() {
             	$('#scientificNameAdd').remove();
@@ -546,6 +555,38 @@
                    	<a class="btn-small right teal darken-4" id="preparationAdd" onclick="addPFields()">Preparation<i class="material-icons left">add</i></a>
                        		
             	
+            	*/
+            }
+            
+            function addBAFields() {
+				$('#biologicalActivityAdd').remove();
+            	
+            	baCtr++;
+            	clCtr++;
+            	document.getElementById("biologicalActivityGroup").innerHTML +=
+            		
+            		'<div class=\"input-field col s6 offset-s1\">' +
+		           		'<input id=\"biologicalActivity' + baCtr + '\" type=\"text\" class=\"validate\">' +
+		               	'<label for=\"biologicalActivity' + baCtr + '\">Biological Activity' + baCtr + '</label>' +
+		               	
+		               	'<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd\" onclick=\"addBAFields()\">Biological Activities<i class=\"material-icons left\">add</i></a>' +
+		           	'</div>' +
+		           	'<div class=\"input-field col s4\">' +
+		           		'<input id=\"cellLine' + clCtr + '\" type=\"text\" class=\"validate\">' +
+		               	'<label for=\"cellLine' + clCtr + '\">CellLine' + clCtr + '</label>' +
+		           	'</div>';
+            		
+            	/*
+	            	<div class="input-field col s6 offset-s1">
+	               		<input id="biologicalActivity" type="text" class="validate">
+	                   	<label for="biologicalActivity">Biological Activity</label>
+	                   	
+	                   	<a class="btn-small right teal darken-4" id="biologicalActivityAdd" onclick="addBAFields()">Biological Activities<i class="material-icons left">add</i></a>
+	               	</div>
+	               	<div class="input-field col s4">
+	               		<input id="cellLine" type="text" class="validate">
+	                   	<label for="cellLine">CellLine</label>
+	               	</div>
             	*/
             }
         </script>
