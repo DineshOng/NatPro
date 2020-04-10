@@ -7,6 +7,15 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import net.didion.jwnl.JWNL;
+import net.didion.jwnl.data.IndexWord;
+import net.didion.jwnl.data.POS;
+import net.didion.jwnl.data.Synset;
+import net.didion.jwnl.data.Word;
+import net.didion.jwnl.dictionary.Dictionary;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 
 public class Main {
 
@@ -74,8 +83,81 @@ public class Main {
                 //System.out.println(rLine);
                 POSTagger(seedPattern,rLine,V,P,W);
             }
-            for(String test: seedPattern){
-                System.out.println(test);
+
+            ArrayList<String> seedAL = new ArrayList<String>();
+            for(String temp: seedPattern){
+                seedAL.add(temp);
+            }
+
+            TreeSet<String> matches = new TreeSet<String>();
+            TreeSet<String> Vmatches = new TreeSet<String>();
+            TreeSet<String> Pmatches = new TreeSet<String>();
+            TreeSet<String> Wmatches = new TreeSet<String>();
+
+
+            for(String seedWord: seedPattern){
+                try {
+                    MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
+                    String tagged = tagger.tagString(seedWord);
+                    String temp = tagged.substring(tagged.indexOf("_")+1);
+                    //System.out.println(temp);
+
+                    // initialize JWNL (this must be done before JWNL can be used)
+                    JWNL.initialize(new FileInputStream("file_properties.xml"));
+                    IndexWord word = null;
+                    if(tagged.matches(V)){
+                         word = Dictionary.getInstance().lookupIndexWord(POS.VERB, seedWord);  
+                    }else if(tagged.matches(P)){
+                         word = Dictionary.getInstance().lookupIndexWord(POS.ADVERB, seedWord);
+                    }else if(tagged.matches(W)){
+                         word = Dictionary.getInstance().lookupIndexWord(POS.ADJECTIVE, seedWord);
+                    }
+                    Synset synset[] = word.getSenses();
+
+                    for(int i=0;i<synset.length;i++){
+                        //System.out.println(word.getSenses());
+                        for(Word synonym : synset[i].getWords())
+                        {
+                            if(tagged.matches(V)){
+                                Vmatches.add(synonym.getLemma());
+                                
+
+
+                            }else if(tagged.matches(P)){
+                                Pmatches.add(synonym.getLemma());
+
+
+                            }else if(tagged.matches(W)){
+                                Wmatches.add(synonym.getLemma());
+
+
+                            }
+                            //matches.add(synonym.getLemma());
+                            //System.out.println(synonym.getLemma());
+                        }
+                        //System.out.println(" ");
+                    }
+
+
+                    //matches.clear();
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+                //System.out.println(seedWord);
+            }//End of wordnet loop
+
+            for(String temp: Vmatches){
+                System.out.println(temp);
+            }
+
+            System.out.println();
+            for(String temp: Pmatches){
+                System.out.println(temp);
+            }
+
+            for(String temp: Wmatches){
+                System.out.println(temp);
             }
 
         }//End of file[] Loop
@@ -165,10 +247,20 @@ public class Main {
             //System.out.println(tLines[i]);
             if(tLines[i].matches(V)){
                 String temp = tLines[i].substring(0,tLines[i].indexOf("_"));
-                if(tLines[i+1].matches(P)){
-                    temp = temp+" "+tLines[i+1].substring(0,tLines[i+1].indexOf("_"));
-                }
                 seedPattern.add(temp);
+                if(tLines[i+1].matches(W)){
+                    temp = tLines[i+1].substring(0,tLines[i+1].indexOf("_"));
+                    seedPattern.add(temp);
+                    if(tLines[i+2].matches(P)){
+                        temp = tLines[i+2].substring(0,tLines[i+2].indexOf("_"));
+                        seedPattern.add(temp);
+                    }
+                }
+                else if(tLines[i+1].matches(P)){
+                    temp = tLines[i+1].substring(0,tLines[i+1].indexOf("_"));
+                    seedPattern.add(temp);
+                }
+                //seedPattern.add(temp);
             }
         }
     }
