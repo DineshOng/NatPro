@@ -16,6 +16,15 @@ import net.didion.jwnl.dictionary.Dictionary;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
 
 public class Main {
 
@@ -24,7 +33,7 @@ public class Main {
         File Folder = new File("TaggedSample/");
         File[] listFiles = Folder.listFiles();
         Reader fileReader = null;
-        String e1,e2;
+        String e1=null; String e2=null;
         TreeSet<String> relation = new TreeSet<String>();
         String V = "(.*)_VB[A-Z]*(.*)";
         String W = "(.*)_[DJNPR][NJBTR]P*(.*)";
@@ -89,7 +98,7 @@ public class Main {
                 seedAL.add(temp);
             }
 
-            TreeSet<String> matches = new TreeSet<String>();
+
             TreeSet<String> Vmatches = new TreeSet<String>();
             TreeSet<String> Pmatches = new TreeSet<String>();
             TreeSet<String> Wmatches = new TreeSet<String>();
@@ -120,7 +129,7 @@ public class Main {
                         {
                             if(tagged.matches(V)){
                                 Vmatches.add(synonym.getLemma());
-                                
+
 
 
                             }else if(tagged.matches(P)){
@@ -148,16 +157,65 @@ public class Main {
             }//End of wordnet loop
 
             for(String temp: Vmatches){
-                System.out.println(temp);
+                //System.out.println(temp);
             }
 
             System.out.println();
             for(String temp: Pmatches){
-                System.out.println(temp);
+                //System.out.println(temp);
             }
 
             for(String temp: Wmatches){
+                //System.out.println(temp);
+            }
+
+            TreeSet<String> matches = new TreeSet<String>();
+
+            for(String i: Vmatches){
+                for(String j: Pmatches){
+                    matches.add(i+" "+j);
+                }
+            }
+
+            for(String temp: matches){
                 System.out.println(temp);
+            }
+
+            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+            try {
+                DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+                Document document = documentBuilder.newDocument();
+
+
+                Element element = document.createElement("Seed");
+                document.appendChild(element);
+
+                Element A = document.createElement("Tag1");
+                A.appendChild(document.createTextNode(e1));
+                element.appendChild(A);
+
+                Element B = document.createElement("Tag2");
+                B.appendChild(document.createTextNode(e2));
+                element.appendChild(B);
+
+                Element C = document.createElement("Relation");
+                //C.appendChild(document.createTextNode(ms));
+                element.appendChild(C);
+                for(String ms: matches) {
+                    Element D = document.createElement("Pattern");
+                    D.appendChild(document.createTextNode(ms));
+                    C.appendChild(D);
+                }
+
+                TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                Transformer transformer = transformerFactory.newTransformer();
+                DOMSource source = new DOMSource(document);
+
+                StreamResult streamResult = new StreamResult("seedOutput/"+e1+"-"+e2+".xml");
+                transformer.transform(source,streamResult);
+
+            } catch (ParserConfigurationException | TransformerException e) {
+                e.printStackTrace();
             }
 
         }//End of file[] Loop
