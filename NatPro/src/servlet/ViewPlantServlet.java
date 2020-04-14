@@ -46,7 +46,7 @@ public class ViewPlantServlet extends HttpServlet {
 			}
 			break;
 		default:
-			System.out.println("ERROR(Inside userServlet *doPost*): url pattern doesn't match existing patterns.");
+			System.out.println("URL pattern doesn't match existing patterns.");
 		}
 	}
 
