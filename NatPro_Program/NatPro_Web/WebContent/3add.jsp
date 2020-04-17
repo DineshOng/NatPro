@@ -71,8 +71,8 @@
 	                        
 							<a class="btn-small right teal darken-4" id="locationAdd" onclick="addLFields()">Location<i class="material-icons left">add</i></a>
                         </div>
-                        <div class="col s12">
-                        	<h5 class="col s12 center">Preparation</h5>
+                        <div class="row">
+                        	<h5 class="col s12 center" style="padding-top: 50px">Preparation</h5>
                         	<div id="preparationGroup">
                         		<div class="input-field col s6">
 	                        		<input id="preparation" type="text" class="validate">
@@ -161,10 +161,10 @@
                             			<label for="illness">Illness</label>
                             		</div>
                             		
-                            		<a class="btn-small right teal darken-4" id="illnessAdd" onclick="addIFields()">Illness<i class="material-icons left">add</i></a>
+                            		<a class="btn-small right teal darken-4" id="illnessAdd" onclick="addIFields(0)">Illness<i class="material-icons left">add</i></a>
                             	</div>
                             	
-                            	<a class="btn-small right teal darken-4 disabled" id="preparationAdd" onclick="addPFields()">Preparation<i class="material-icons left">add</i></a>
+                            	<a class="btn-small teal darken-4 center col s6 offset-s3" id="preparationAdd" onclick="addPFields(0)">Preparation<i class="material-icons left">add</i></a>
                         	</div>
                         </div>
                         <div class="col s12" id="speciesGroup">
@@ -312,8 +312,8 @@
                 $('select').formSelect();
             });
             
-            var snCtr, lCtr, pCtr, iCtr, baclCtr;
-            snCtr = lCtr = pCtr = iCtr = baclCtr = 0;
+            var snCtr, lCtr, pbpCtr, iCtr, baclCtr;
+            snCtr = lCtr = pbpCtr = iCtr = baclCtr = 0;
             
             function addSNFields() {
             	
@@ -351,8 +351,17 @@
             	$('#locationGroup').append(inputField, buttonAdd);
             }
             
-            function addIFields() {
-            	$('#illnessAdd').remove();
+            function addIFields(pValue) {
+            	var buttonAddText =
+            		"#illnessAdd" + pValue;
+            	
+            	if (pValue == 0) {
+            		$('#illnessAdd').remove();
+            	}
+            	else {
+            		$(buttonAddText).remove();
+            	}
+            	
             	iCtr++;   
             	
             	var inputField =
@@ -360,111 +369,140 @@
 		    			"<input id=\"illness" + iCtr +"\" type=\"text\" class=\"validate\">" +
 		    			"<label for=\"illness" + iCtr +"\">Illness" + " (" + iCtr + ")"+"</label>" +
 					"</div>";
-            	var buttonAdd =
-            		"<a class=\"btn-small right teal darken-4\" id=\"illnessAdd\" onclick=\"addIFields()\">Illness<i class=\"material-icons left\">add</i></a>";  
+            	if (pValue == 0) {
+            		var buttonAdd =
+            			"<a class=\"btn-small right teal darken-4\" id=\"illnessAdd\" onclick=\"addIFields(" + pValue +")\">Illness<i class=\"material-icons left\">add</i></a>";
+            	}
+            	else {
+            		var buttonAdd =
+            			"<a class=\"btn-small right teal darken-4\" id=\"illnessAdd" + pValue +"\" onclick=\"addIFields(" + pValue +")\">Illness<i class=\"material-icons left\">add</i></a>";
+            	}
+					
+					
             	
-            	$('#illnessGroup').append(inputField, buttonAdd);
+            	var groupAddText=
+            		"#illnessGroup" + pValue;
+            	
+            	if (pValue == 0) {
+            		$('#illnessGroup').append(inputField, buttonAdd);
+            	}
+            	else {
+            		$(groupAddText).append(inputField, buttonAdd);
+            	}
             }
             
-            function addPFields() {
-				$('#preparationAdd').remove();
+            function addPFields(pValue) {            	
+				var buttonAddText =
+					"#preparationAdd" +
+					pValue;
             	
-            	pCtr++;            	
-            	document.getElementById("preparationGroup").innerHTML +=
-            		
-            		'<div id=\"preparationGroup\">' +
-		        		'<div class=\"input-field col s6\">' +
-		            		'<input id=\"preparation\" type=\"text\" class=\"validate\">' +
-		                	'<label for=\"preparation\">Preparation</label>' +
-		            	'</div>' +
-		            	'<div class=\"input-field col s2\">' +
-		            		'<select class=\"browser-default\">' +
-		                        '<option value=\"\" disabled selected>Choose body part</option>' +
-		                        '<option value=\"1">Gall Bladder</option>'+ 
-		                        '<option value=\"2">Intestines</option>' +
-		                        '<option value=\"3">Esophagus</option>' +
-		                        '<option value=\"4">Intestine</option>' +
-		                        '<option value=\"5">Shoulders</option>' +
-		                        '<option value=\"6">Buttocks</option>' +
-		                        '<option value=\"7">Bladder</option>' +
-		                        '<option value=\"8">Kidneys</option>' +
-		                        '<option value=\"9">Ovaries</option>' +
-		                        '<option value=\"10">Stomach</option>' +
-		                        '<option value=\"11">Thyroid</option>' +
-		                        '<option value=\"12">Fingers</option>' +
-		                        '<option value=\"13">Breasts</option>' +
-		                        '<option value=\"14">Abdomen</option>' +
-		                        '<option value=\"15">Kidney</option>' +
-		                        '<option value=\"16">Spleen</option>' +
-		                        '<option value=\"17">Thymus</option>' +
-		                        '<option value=\"18">Cheeks</option>' +
-		                        '<option value=\"19">Tongue</option>' +
-		                        '<option value=\"20">Throat</option>' +
-		                        '<option value=\"21">Elbows</option>' +
-		                        '<option value=\"22">Wrists</option>' +
-		                        '<option value=\"23">Finger</option>' +
-		                        '<option value=\"24">Breat</option>' +
-		                        '<option value=\"25">Thighs</option>' +
-		                        '<option value=\"26">Calves</option>' +
-		                        '<option value=\"27">Ankles</option>' +
-		                        '<option value=\"28">Brain</option>' +
-		                        '<option value=\"29">Heart</option>' +
-		                        '<option value=\"30">Liver</option>' +
-		                        '<option value=\"31">Lungs</option>' +
-		                        '<option value=\"32">Ovary</option>' +
-		                        '<option value=\"33">Veins</option>' +
-		                        '<option value=\"34">Cheek</option>' +
-		                        '<option value=\"35">Mouth</option>' +
-		                        '<option value=\"36">Teeth</option>' +
-		                        '<option value=\"37">Tooth</option>' +
-		                        '<option value=\"38">Elbow</option>' +
-		                        '<option value=\"39">Wrist</option>' +
-		                        '<option value=\"40">Hands</option>' +
-		                        '<option value=\"41">Spine</option>' +
-		                        '<option value=\"42">Chest</option>' +
-		                        '<option value=\"43">Navel</option>' +
-		                        '<option value=\"44">Thigh</option>' +
-		                        '<option value=\"45">Knees</option>' +
-		                        '<option value=\"46">Heels</option>' +
-		                        '<option value=\"47">Ankle</option>' +
-		                        '<option value=\"48">Eyes</option>' +
-		                        '<option value=\"49">Vein</option>' +
-		                        '<option value=\"50">Head</option>' +
-		                        '<option value=\"51">Jaw</option>' +
-		                        '<option value=\"52">Chin</option>' +
-		                        '<option value=\"53">Ears</option>' +
-		                        '<option value=\"54">Nose</option>' +
-		                        '<option value=\"55">Neck</option>' +
-		                        '<option value=\"56">Arms</option>' +
-		                        '<option value=\"57">Hand</option>' +
-		                        '<option value=\"58">Hips</option>' +
-		                        '<option value=\"59">Legs</option>' +
-		                        '<option value=\"60">Knee</option>' +
-		                        '<option value=\"61">Calf</option>' +
-		                        '<option value=\"62">Heel</option>' +
-		                        '<option value=\"63">Foot</option>' +
-		                        '<option value=\"64">Feet</option>' +
-		                        '<option value=\"65">Toes</option>' +
-		                        '<option value=\"66">Eye</option>' +
-		                        '<option value=\"67">Jaw</option>' +
-		                        '<option value=\"68">Ear</option>' +
-		                        '<option value=\"69">Arm</option>' +
-		                        '<option value=\"70">Hip</option>' +
-		                        '<option value=\"71">Leg</option>' +
-		                        '<option value=\"72">Toe</option>' +
-		                    '</select>' +
-		            	'</div>' +
-		            	'<div class=\"col s4\" id=\"illnessGroup\">' +
-		            		'<div class=\"input-field\">' +
-		            			'<input id=\"illness\" type=\"text\" class=\"validate\">' +
-		            			'<label for=\"illness\">Illness</label>' +
-		            		'</div>' +
-		            		
-		            		'<a class=\"btn-small right teal darken-4\" id=\"illnessAdd\" onclick=\"addIFields()\">Illness<i class=\"material-icons left\">add</i></a>' +
-		            	'</div>' +
-		            	
-		            	'<a class=\"btn-small right teal darken-4\" id=\"preparationAdd\" onclick=\"addPFields()\">Preparation<i class=\"material-icons left\">add</i></a>' +
-		        	'</div>' ;
+				if (pValue == 0){
+					$('#preparationAdd').remove();
+				}
+				else
+            	$(buttonAddText).remove();
+            	
+            	pbpCtr++;
+            	iCtr++;
+            	
+            	var inputPreparation =
+            		"<div class=\"input-field col s6\">"+
+		        		"<input id=\"preparation" + pbpCtr +"\" type=\"text\" class=\"validate\">" +
+		            	"<label for=\"preparation" + pbpCtr +"\">Preparation" + " (" + pbpCtr + ")"+"</label>" +
+		        	"</div>";
+            	var inputBodyPart =
+            		"<div class=\"input-field col s2\">" +
+		        		"<select class=\"browser-default\">" +
+		                    "<option value=\"\" disabled selected>Choose body part</option>" +
+		                    "<option value=\"1\">Gall Bladder</option>" +
+		                    "<option value=\"2\">Intestines</option>" +
+		                    "<option value=\"3\">Esophagus</option>" +
+		                    "<option value=\"4\">Intestine</option>" +
+		                    "<option value=\"5\">Shoulders</option>" +
+		                    "<option value=\"6\">Buttocks</option>" +
+		                    "<option value=\"7\">Bladder</option>" +
+		                    "<option value=\"8\">Kidneys</option>" +
+		                    "<option value=\"9\">Ovaries</option>" +
+		                    "<option value=\"10\">Stomach</option>" +
+		                    "<option value=\"11\">Thyroid</option>" +
+		                    "<option value=\"12\">Fingers</option>" +
+		                    "<option value=\"13\">Breasts</option>" +
+		                    "<option value=\"14\">Abdomen</option>" +
+		                    "<option value=\"15\">Kidney</option>" +
+		                    "<option value=\"16\">Spleen</option>" +
+		                    "<option value=\"17\">Thymus</option>" +
+		                    "<option value=\"18\">Cheeks</option>" +
+		                    "<option value=\"19\">Tongue</option>" +
+		                    "<option value=\"20\">Throat</option>" +
+		                    "<option value=\"21\">Elbows</option>" +
+		                    "<option value=\"22\">Wrists</option>" +
+		                    "<option value=\"23\">Finger</option>" +
+		                    "<option value=\"24\">Breat</option>" +
+		                    "<option value=\"25\">Thighs</option>" +
+		                    "<option value=\"26\">Calves</option>" +
+		                    "<option value=\"27\">Ankles</option>" +
+		                    "<option value=\"28\">Brain</option>" +
+		                    "<option value=\"29\">Heart</option>" +
+		                    "<option value=\"30\">Liver</option>" +
+		                    "<option value=\"31\">Lungs</option>" +
+		                    "<option value=\"32\">Ovary</option>" +
+		                    "<option value=\"33\">Veins</option>" +
+		                    "<option value=\"34\">Cheek</option>" +
+		                    "<option value=\"35\">Mouth</option>" +
+		                    "<option value=\"36\">Teeth</option>" +
+		                    "<option value=\"37\">Tooth</option>" +
+		                    "<option value=\"38\">Elbow</option>" +
+		                    "<option value=\"39\">Wrist</option>" +
+		                    "<option value=\"40\">Hands</option>" +
+		                    "<option value=\"41\">Spine</option>" +
+		                    "<option value=\"42\">Chest</option>" +
+		                    "<option value=\"43\">Navel</option>" +
+		                    "<option value=\"44\">Thigh</option>" +
+		                    "<option value=\"45\">Knees</option>" +
+		                    "<option value=\"46\">Heels</option>" +
+		                    "<option value=\"47\">Ankle</option>" +
+		                    "<option value=\"48\">Eyes</option>" +
+		                    "<option value=\"49\">Vein</option>" +
+		                    "<option value=\"50\">Head</option>" +
+		                    "<option value=\"51\">Jaw</option>" +
+		                    "<option value=\"52\">Chin</option>" +
+		                    "<option value=\"53\">Ears</option>" +
+		                    "<option value=\"54\">Nose</option>" +
+		                    "<option value=\"55\">Neck</option>" +
+		                    "<option value=\"56\">Arms</option>" +
+		                    "<option value=\"57\">Hand</option>" +
+		                    "<option value=\"58\">Hips</option>" +
+		                    "<option value=\"59\">Legs</option>" +
+		                    "<option value=\"60\">Knee</option>" +
+		                    "<option value=\"61\">Calf</option>" +
+		                    "<option value=\"62\">Heel</option>" +
+		                    "<option value=\"63\">Foot</option>" +
+		                    "<option value=\"64\">Feet</option>" +
+		                    "<option value=\"65\">Toes</option>" +
+		                    "<option value=\"66\">Eye</option>" +
+		                    "<option value=\"67\">Jaw</option>" +
+		                    "<option value=\"68\">Ear</option>" +
+		                    "<option value=\"69\">Arm</option>" +
+		                    "<option value=\"70\">Hip</option>" +
+		                    "<option value=\"71\">Leg</option>" +
+		                    "<option value=\"72\">Toe</option>" +
+		                "</select>" +
+		        	"</div>";
+            	var inputIllness =
+            		"<div class=\"col s4\" id=\"illnessGroup" + pbpCtr +"\">" +
+		        		"<div class=\"input-field\">" +
+		        			"<input id=\"illness" + iCtr +"\" type=\"text\" class=\"validate\">" +
+		        			"<label for=\"illness" + iCtr +"\">Illness" + " (" + iCtr + ")"+"</label>" +
+		        		"</div>" +
+		        		
+		        		"<a class=\"btn-small right teal darken-4\" id=\"illnessAdd" + pbpCtr +"\" onclick=\"addIFields(" + pbpCtr +")\">Illness<i class=\"material-icons left\">add</i></a>" +
+		        	"</div>";
+            	var buttonAdd =
+            		"<a class=\"btn-small teal darken-4 center col s6 offset-s3\" id=\"preparationAdd" + pbpCtr +"\" onclick=\"addPFields(" + pbpCtr +")\">Preparation<i class=\"material-icons left\">add</i></a>";
+            	
+            	
+            	$('#preparationGroup').append(inputPreparation, inputBodyPart, inputIllness, buttonAdd);
+
             }
             
             function addBAFields() {
