@@ -82,7 +82,7 @@ public class Coref {
 			
 			sentences[i] = sentences[i].trim();
 			
-			if(!sentences[i].matches("(.*)It (.*)")) {
+			if(!sentences[i].matches("(.*)\\bIt\\b(.*)")) {
 				while(m.find()) {
 					if(m.group(1).equals("compound") || m.group(1).equals("plant")) {
 						subject = m.group();
@@ -94,7 +94,7 @@ public class Coref {
 				}
 			} else {
 				
-					sentences[i] = sentences[i].replaceAll("\bIt\b", subject);
+					sentences[i] = sentences[i].replaceAll("\\b[Ii]t\\b", subject);
 				
 			}
 			//System.out.println(sentences[i].trim());
