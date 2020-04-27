@@ -25,7 +25,9 @@ public class OntoQuery {
 	OWLModel owlModel;
 
 	public OntoQuery() throws OntologyLoadException {
-		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+		/* Change local path */ 
+//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -174,6 +176,30 @@ public class OntoQuery {
 
 		return compounds;
 
+	}
+	
+	public List<String> getAllSpeciesParts(){
+		List<String> speciesParts = new ArrayList<String>();
+		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("PlantPart")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						speciesParts.add(individual.getPropertyValue(datatypeProperty_PlantPart).toString());
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return speciesParts;
+		
 	}
 	
 	public Compound getCompound(String Compound) {
@@ -509,4 +535,5 @@ public class OntoQuery {
 		return compounds;
 	}
 
+	
 }

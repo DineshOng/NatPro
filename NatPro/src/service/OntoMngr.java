@@ -39,7 +39,7 @@ public class OntoMngr {
 	OWLObjectProperty isLocatedIn, hasScientificName, belongsToGenus, belongsToFamily;
 
 	public OntoMngr() throws OWLOntologyCreationException, OWLOntologyStorageException {
-		//loadOntology();
+		// loadOntology();
 		owlManager = OWLManager.createOWLOntologyManager();
 		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl"); // user defined
 
@@ -61,8 +61,7 @@ public class OntoMngr {
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
 
-	public void addIndiv_Location(String location)
-			throws OWLOntologyCreationException, OWLOntologyStorageException {
+	public void addIndiv_Location(String location) throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// Creating Individual
 		locationClass = owlFact.getOWLClass("#Location", pm);
 		locationIndiv = owlFact.getOWLNamedIndividual("#" + location, pm);
@@ -70,9 +69,8 @@ public class OntoMngr {
 		owlManager.addAxiom(owlOntology, classAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
-	public void addIndiv_Species(String species)
-			throws OWLOntologyCreationException, OWLOntologyStorageException {
+
+	public void addIndiv_Species(String species) throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// Creating Individual
 		speciesClass = owlFact.getOWLClass("#Species", pm);
 		speciesIndiv = owlFact.getOWLNamedIndividual("#" + species, pm);
@@ -80,9 +78,8 @@ public class OntoMngr {
 		owlManager.addAxiom(owlOntology, classAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
-	public void addIndiv_Genus(String genus)
-			throws OWLOntologyCreationException, OWLOntologyStorageException {
+
+	public void addIndiv_Genus(String genus) throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// Creating Individual
 		genusClass = owlFact.getOWLClass("#Genus", pm);
 		genusIndiv = owlFact.getOWLNamedIndividual("#" + genus, pm);
@@ -90,9 +87,8 @@ public class OntoMngr {
 		owlManager.addAxiom(owlOntology, classAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
-	public void addIndiv_Family(String family)
-			throws OWLOntologyCreationException, OWLOntologyStorageException {
+
+	public void addIndiv_Family(String family) throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// Creating Individual
 		familyClass = owlFact.getOWLClass("#Family", pm);
 		familyIndiv = owlFact.getOWLNamedIndividual("#" + family, pm);
@@ -103,7 +99,8 @@ public class OntoMngr {
 
 	// ADD DATATYPE PROPERTY
 	public void addDataPropMedPlant(String medPlantValue) throws OWLOntologyStorageException {
-		//medPlantValue = medPlantValue.replaceAll("\\n+", " ").replaceAll("\\s+", " ").toLowerCase();
+		// medPlantValue = medPlantValue.replaceAll("\\n+", " ").replaceAll("\\s+", "
+		// ").toLowerCase();
 		// Creating Data Property, Range, and Value
 		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_MedicinalPlant", pm);
 		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -117,7 +114,8 @@ public class OntoMngr {
 	}
 
 	public void addDataPropLocation(String locationValue) throws OWLOntologyStorageException {
-		//locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", " ").toLowerCase();
+		// locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", "
+		// ").toLowerCase();
 		// Creating Data Property, Range, and Value
 		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Location", pm);
 		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -129,9 +127,10 @@ public class OntoMngr {
 		owlManager.addAxiom(owlOntology, dataPropAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
+
 	public void addDataPropSpecies(String speciesValue) throws OWLOntologyStorageException {
-		//locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", " ").toLowerCase();
+		// locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", "
+		// ").toLowerCase();
 		// Creating Data Property, Range, and Value
 		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Synoynm", pm);
 		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -143,9 +142,10 @@ public class OntoMngr {
 		owlManager.addAxiom(owlOntology, dataPropAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
+
 	public void addDataPropGenus(String genusValue) throws OWLOntologyStorageException {
-		//locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", " ").toLowerCase();
+		// locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", "
+		// ").toLowerCase();
 		// Creating Data Property, Range, and Value
 		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Genus", pm);
 		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -157,9 +157,10 @@ public class OntoMngr {
 		owlManager.addAxiom(owlOntology, dataPropAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
+
 	public void addDataPropFamily(String familyValue) throws OWLOntologyStorageException {
-		//locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", " ").toLowerCase();
+		// locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", "
+		// ").toLowerCase();
 		// Creating Data Property, Range, and Value
 		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Family", pm);
 		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -182,7 +183,7 @@ public class OntoMngr {
 		owlManager.applyChange(axiomObjectProp);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
+
 	public void addObjectHasScientificName(String medicPlant, String species) throws OWLOntologyStorageException {
 		medPlantIndiv = owlFact.getOWLNamedIndividual("#" + medicPlant, pm);
 		speciesIndiv = owlFact.getOWLNamedIndividual("#" + species, pm);
@@ -192,7 +193,7 @@ public class OntoMngr {
 		owlManager.applyChange(axiomObjectProp);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
+
 	public void addObjectBelongsToGenus(String species, String genus) throws OWLOntologyStorageException {
 		speciesIndiv = owlFact.getOWLNamedIndividual("#" + species, pm);
 		genusIndiv = owlFact.getOWLNamedIndividual("#" + genus, pm);
@@ -202,7 +203,7 @@ public class OntoMngr {
 		owlManager.applyChange(axiomObjectProp);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-	
+
 	public void addObjectBelongsToFamily(String genus, String family) throws OWLOntologyStorageException {
 		genusIndiv = owlFact.getOWLNamedIndividual("#" + genus, pm);
 		familyIndiv = owlFact.getOWLNamedIndividual("#" + family, pm);

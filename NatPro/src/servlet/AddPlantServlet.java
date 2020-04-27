@@ -20,7 +20,7 @@ import service.OntoQuery;
 /**
  * Servlet implementation class AddPlantServlet
  */
-@WebServlet("/AddPlantServlet")
+@WebServlet({ "/AddPlantServlet", "/AddPlantPageServlet" })
 public class AddPlantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -55,6 +55,14 @@ public class AddPlantServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			break;
+		case "/AddPlantPageServlet":
+			try {
+				getOptions(request, response);
+			} catch (OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
 		}
@@ -70,71 +78,83 @@ public class AddPlantServlet extends HttpServlet {
 		doGet(request, response);
 	}
 
+	private void getOptions(HttpServletRequest request, HttpServletResponse response)
+			throws OntologyLoadException, ServletException, IOException {
+		OntoQuery q = new OntoQuery();
+		List<String> speciesParts = q.getAllSpeciesParts();
+		request.setAttribute("speciesPartsList", speciesParts);
+		request.getRequestDispatcher("3add.jsp").forward(request, response);
+
+	}
+
 	private void addPlant(HttpServletRequest request, HttpServletResponse response) throws OntologyLoadException,
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
 
-		if (!request.getParameter("commonPlantName").isBlank()) {
-			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ", "_");
-			m.addIndiv_MedPlant(commonPlantNameIndiv);
-			m.addDataPropMedPlant(request.getParameter("commonPlantName").trim());
-
-			String[] speciesNames;
-			speciesNames = request.getParameterValues("scientificName");
-			for (int i = 0; i < speciesNames.length; i++) {
-				if (!speciesNames[i].isBlank()) {
-					String speciesNameIndiv = speciesNames[i].trim().toLowerCase().replaceAll(" ", "_");
-					m.addIndiv_Species(speciesNameIndiv);
-					m.addDataPropSpecies(speciesNames[i].trim());
-
-					m.addObjectHasScientificName(commonPlantNameIndiv, speciesNameIndiv);
-
-					if (!request.getParameter("genus").isBlank()) {
-						String genusNameIndiv = request.getParameter("genus").trim().toLowerCase().replaceAll(" ", "_");
-						m.addIndiv_Genus(genusNameIndiv);
-						m.addDataPropGenus(request.getParameter("genus").trim());
-						
-						m.addObjectBelongsToGenus(speciesNameIndiv, genusNameIndiv);
-						
-						if (!request.getParameter("family").isBlank()) {
-							String familyNameIndiv = request.getParameter("family").trim().toLowerCase().replaceAll(" ", "_");
-							m.addIndiv_Genus(familyNameIndiv);
-							m.addDataPropGenus(request.getParameter("family").trim());
-							
-							m.addObjectBelongsToFamily(genusNameIndiv, familyNameIndiv);
-						}
-					}
-				}
-			}
-
-			String[] locationNames;
-			locationNames = request.getParameterValues("location");
-			for (int i = 0; i < locationNames.length; i++) {
-				if (!locationNames[i].isBlank()) {
-					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(" ", "_");
-					m.addIndiv_Location(locationNameIndiv);
-					m.addDataPropLocation(locationNames[i].trim());
-
-					m.addObjectIsLocatedIn(commonPlantNameIndiv,locationNameIndiv);
-				}
-			}
-
-		}
-
-		System.out.println("Common Name: " + request.getParameter("commonPlantName").trim());
-		String[] sciNames;
-		sciNames = request.getParameterValues("scientificName");
-		for (int i = 0; i < sciNames.length; i++) {
-			System.out.println("Scientific Name#" + (i + 1) + ": " + sciNames[i]);
-		}
-		System.out.println("Genus: " + request.getParameter("genus"));
-		System.out.println("Family: " + request.getParameter("family"));
-		String[] locs;
-		locs = request.getParameterValues("location");
-		for (int i = 0; i < locs.length; i++) {
-			System.out.println("Location#" + (i + 1) + ": " + locs[i]);
-		}
-
+//		System.out.println(request.getParameter("speciesPart"));
+//		if (!request.getParameter("commonPlantName").isBlank()) {
+//			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
+//					"_");
+//			m.addIndiv_MedPlant(commonPlantNameIndiv);
+//			m.addDataPropMedPlant(request.getParameter("commonPlantName").trim());
+//
+//			String[] speciesNames;
+//			speciesNames = request.getParameterValues("scientificName");
+//			for (int i = 0; i < speciesNames.length; i++) {
+//				if (!speciesNames[i].isBlank()) {
+//					String speciesNameIndiv = speciesNames[i].trim().toLowerCase().replaceAll(" ", "_");
+//					m.addIndiv_Species(speciesNameIndiv);
+//					m.addDataPropSpecies(speciesNames[i].trim());
+//
+//					m.addObjectHasScientificName(commonPlantNameIndiv, speciesNameIndiv);
+//
+//					if (!request.getParameter("genus").isBlank()) {
+//						String genusNameIndiv = request.getParameter("genus").trim().toLowerCase().replaceAll(" ", "_");
+//						m.addIndiv_Genus(genusNameIndiv);
+//						m.addDataPropGenus(request.getParameter("genus").trim());
+//
+//						m.addObjectBelongsToGenus(speciesNameIndiv, genusNameIndiv);
+//
+//						if (!request.getParameter("family").isBlank()) {
+//							String familyNameIndiv = request.getParameter("family").trim().toLowerCase().replaceAll(" ",
+//									"_");
+//							m.addIndiv_Genus(familyNameIndiv);
+//							m.addDataPropGenus(request.getParameter("family").trim());
+//
+//							m.addObjectBelongsToFamily(genusNameIndiv, familyNameIndiv);
+//						}
+//					}
+//				}
+//			}
+//
+//			String[] locationNames;
+//			locationNames = request.getParameterValues("location");
+//			for (int i = 0; i < locationNames.length; i++) {
+//				if (!locationNames[i].isBlank()) {
+//					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(" ", "_");
+//					m.addIndiv_Location(locationNameIndiv);
+//					m.addDataPropLocation(locationNames[i].trim());
+//
+//					m.addObjectIsLocatedIn(commonPlantNameIndiv, locationNameIndiv);
+//				}
+//			}
+//
+//		}
+//
+//		System.out.println("Common Name: " + request.getParameter("commonPlantName").trim());
+//		String[] sciNames;
+//		sciNames = request.getParameterValues("scientificName");
+//		for (int i = 0; i < sciNames.length; i++) {
+//			System.out.println("Scientific Name#" + (i + 1) + ": " + sciNames[i]);
+//		}
+//		System.out.println("Genus: " + request.getParameter("genus"));
+//		System.out.println("Family: " + request.getParameter("family"));
+//		String[] locs;
+//		locs = request.getParameterValues("location");
+//		for (int i = 0; i < locs.length; i++) {
+//			System.out.println("Location#" + (i + 1) + ": " + locs[i]);
+//		}
+		request.getRequestDispatcher("3aadded.jsp").forward(request, response);
 	}
 
 }
