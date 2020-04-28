@@ -178,7 +178,7 @@ public class OntoQuery {
 
 	}
 	
-	public List<String> getAllSpeciesParts(){
+	public List<String> getAllPlantParts(){
 		List<String> speciesParts = new ArrayList<String>();
 		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
 

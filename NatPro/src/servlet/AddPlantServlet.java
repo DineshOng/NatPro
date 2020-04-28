@@ -78,11 +78,23 @@ public class AddPlantServlet extends HttpServlet {
 		doGet(request, response);
 	}
 
+	private String cleanCompoundString(String value) {
+		String cleaned;
+		cleaned = value.trim();
+		cleaned = cleaned.toLowerCase();
+		cleaned = cleaned.replaceAll(" ", "_");
+		cleaned = cleaned.replaceAll(",", ".");
+		cleaned = cleaned.replaceAll("\u03B1", "alpha");
+		cleaned = cleaned.replaceAll("\u03B2", "beta");
+		cleaned = cleaned.replaceAll("\u0393", "gamma");
+		return cleaned;
+	}
+
 	private void getOptions(HttpServletRequest request, HttpServletResponse response)
 			throws OntologyLoadException, ServletException, IOException {
 		OntoQuery q = new OntoQuery();
-		List<String> speciesParts = q.getAllSpeciesParts();
-		request.setAttribute("speciesPartsList", speciesParts);
+		List<String> plantParts = q.getAllPlantParts();
+		request.setAttribute("plantPartsList", plantParts);
 		request.getRequestDispatcher("3add.jsp").forward(request, response);
 
 	}
@@ -91,39 +103,86 @@ public class AddPlantServlet extends HttpServlet {
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
 
+		if (!request.getParameterValues("speciesCtr").equals(null)) {
+			String[] plantPartCtr = request.getParameterValues("speciesCtr");
+			int plantPartCtrMax = Integer.parseInt(plantPartCtr[plantPartCtr.length - 1]); // get maximum number of
+																							// speciesPart
+			plantPartCtrMax++; // add one since incremention starts at 0
+			for (int i = 0; i < plantPartCtrMax; i++) {
+				System.out.println(request.getParameter("plantPart[" + i + "]"));
+				String[] compoundCtr = request.getParameterValues("compound["+i+"]");
+				for(int j=0; j<compoundCtr.length; j++) {
+					System.out.println(compoundCtr[j]);
+				}
+//				System.out.println(request.getParameter("compoundCtr"));
+
+			}
+		}
+
+//		if (request.getParameter("plantPart").equals("-1")) {
+//			System.out.println(request.getParameter("plantPartOther"));
+//		}else {
+//			System.out.println(request.getParameter("plantPart"));
+//		}
+
+//		if (request.getParameter("plantPart") != null) {
+//			String speciesPartIndiv = request.getParameter("plantPart").trim().toLowerCase().replaceAll(" ", "_");
+////			System.out.println(request.getParameter("plantPart"));
+//		} else {
+////			System.out.println("null");
+//		}
 //		System.out.println(request.getParameter("speciesPart"));
+
 //		if (!request.getParameter("commonPlantName").isBlank()) {
 //			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
 //					"_");
 //			m.addIndiv_MedPlant(commonPlantNameIndiv);
 //			m.addDataPropMedPlant(request.getParameter("commonPlantName").trim());
 //
-//			String[] speciesNames;
-//			speciesNames = request.getParameterValues("scientificName");
-//			for (int i = 0; i < speciesNames.length; i++) {
-//				if (!speciesNames[i].isBlank()) {
-//					String speciesNameIndiv = speciesNames[i].trim().toLowerCase().replaceAll(" ", "_");
-//					m.addIndiv_Species(speciesNameIndiv);
-//					m.addDataPropSpecies(speciesNames[i].trim());
+//			if (!request.getParameter("scientificName").isBlank()) {
+//				String speciesNameIndiv = request.getParameter("scientificName").trim().toLowerCase().replaceAll(" ",
+//						"_");
+//				m.addIndiv_Species(speciesNameIndiv);
+//				m.addDataPropSpecies(request.getParameter("scientificName").trim());
 //
-//					m.addObjectHasScientificName(commonPlantNameIndiv, speciesNameIndiv);
+//				m.addObjectHasScientificName(commonPlantNameIndiv, speciesNameIndiv);
 //
-//					if (!request.getParameter("genus").isBlank()) {
-//						String genusNameIndiv = request.getParameter("genus").trim().toLowerCase().replaceAll(" ", "_");
-//						m.addIndiv_Genus(genusNameIndiv);
-//						m.addDataPropGenus(request.getParameter("genus").trim());
+//				if (!request.getParameter("genus").isBlank()) {
+//					String genusNameIndiv = request.getParameter("genus").trim().toLowerCase().replaceAll(" ", "_");
+//					m.addIndiv_Genus(genusNameIndiv);
+//					m.addDataPropGenus(request.getParameter("genus").trim());
 //
-//						m.addObjectBelongsToGenus(speciesNameIndiv, genusNameIndiv);
+//					m.addObjectBelongsToGenus(speciesNameIndiv, genusNameIndiv);
 //
-//						if (!request.getParameter("family").isBlank()) {
-//							String familyNameIndiv = request.getParameter("family").trim().toLowerCase().replaceAll(" ",
-//									"_");
-//							m.addIndiv_Genus(familyNameIndiv);
-//							m.addDataPropGenus(request.getParameter("family").trim());
+//					if (!request.getParameter("family").isBlank()) {
+//						String familyNameIndiv = request.getParameter("family").trim().toLowerCase().replaceAll(" ",
+//								"_");
+//						m.addIndiv_Genus(familyNameIndiv);
+//						m.addDataPropGenus(request.getParameter("family").trim());
 //
-//							m.addObjectBelongsToFamily(genusNameIndiv, familyNameIndiv);
+//						m.addObjectBelongsToFamily(genusNameIndiv, familyNameIndiv);
+//					}
+//				}
+//				if (request.getParameter("plantPart") != null) {
+//					String plantPart = request.getParameter("plantPart").trim().toLowerCase().replaceAll(" ", "_");
+//					String speciesPartIndiv = speciesNameIndiv + "_" + plantPart;
+//					m.addIndiv_SpeciesPart(speciesPartIndiv);
+//
+//					m.addObjectHasChildPlantPart(speciesNameIndiv, speciesPartIndiv);
+//					m.addObjectHasPlantPart(speciesPartIndiv, plantPart);
+//
+//					String[] compounds;
+//					compounds = request.getParameterValues("compound");
+//					for (int i = 0; i < compounds.length; i++) {
+//						if (!compounds[i].isBlank()) {
+//							String compoundIndiv = cleanCompoundString(compounds[i]);
+//							m.addIndiv_Compound(compoundIndiv);
+//							m.addDataPropCompound(compounds[i]);
+//
+////								m.addObjectHasCompound(speciesPart, compound);
 //						}
 //					}
+//
 //				}
 //			}
 //
@@ -154,7 +213,8 @@ public class AddPlantServlet extends HttpServlet {
 //		for (int i = 0; i < locs.length; i++) {
 //			System.out.println("Location#" + (i + 1) + ": " + locs[i]);
 //		}
-		request.getRequestDispatcher("3aadded.jsp").forward(request, response);
+//		request.getRequestDispatcher("3aadded.jsp").forward(request, response);
+
 	}
 
 }

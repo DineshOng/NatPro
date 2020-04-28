@@ -48,9 +48,9 @@
 								name="scientificName"> <label for="scientificName">Scientific
 								Name</label>
 						</div>
-						<a class="btn-small right teal darken-4" id="scientificNameAdd"
+						<!--  <a class="btn-small right teal darken-4" id="scientificNameAdd"
 							onclick="addSNFields()">Scientific Name<i
-							class="material-icons left">add</i></a>
+							class="material-icons left">add</i></a> -->
 					</div>
 					<div class="col s6" id="locationGroup">
 						<div class="input-field">
@@ -164,28 +164,34 @@
 					<div class="col s12" id="speciesGroup">
 						<h5 class="col s12 center" style="padding-top: 50px">Species</h5>
 						<div class="input-field col s6">
-							<select class="browser-default" name="speciesPart" onchange="speciesPartOtherEnable(0)" id="speciesPart">
-								<option value="" selected>Choose plant part</option>
-								<c:forEach items="${speciesPartsList}" var="speciesPartsList">
-									<option value="${speciesPartsList}">${speciesPartsList}</option>
+							<select class="browser-default" name="plantPart[0]"
+								onchange="speciesPartOtherEnable(0)" id="speciesPart">
+								<option value="" selected disabled>Choose plant part</option>
+								<option value="-1">Others (Please write on the right
+									side)</option>
+								<c:forEach items="${plantPartsList}" var="plantPartsList">
+									<option value="${plantPartsList}">${plantPartsList}</option>
 								</c:forEach>
-								<option value="-1">Others (Please write on the right side)</option>
 							</select>
+							<input type='hidden' name='speciesCtr' value='0'>
 						</div>
 						<div class="col s6">
 							<div class="input-field">
-								<input id="speciesPartOther" type="text" class="validate" disabled required>
-								<label for="speciesPartOther">Other Species Part</label>
+								<input id="speciesPartOther" type="text" class="validate"
+									disabled required name="plantPartOther"> <label
+									for="speciesPartOther">Other Plant Part</label>
 							</div>
 						</div>
-						
+
 						<div class="row" id="chemicalCompoundGroup">
 							<div class="input-field col s6 offset-s1">
-								<input id="chemicalCompound" type="text" class="validate">
-								<label for="chemicalCompound">Chemical Compound</label> <a
-									class="btn-small right teal darken-4" id="chemicalCompoundAdd"
-									onclick="addCCFields(0)">Chemical Compound<i
-									class="material-icons left">add</i></a>
+								<input id="chemicalCompound" type="text" class="validate"
+									name="compound[0]"> <label for="chemicalCompound">Chemical
+									Compound</label> <a class="btn-small right teal darken-4"
+									id="chemicalCompoundAdd" onclick="addCCFields(0)">Chemical
+									Compound<i class="material-icons left">add</i>
+								</a>
+								<input type='hidden' name='compoundCtr' value='00'>
 							</div>
 							<div class="col s12" id="biologicalActivityGroup">
 								<div class="input-field col s6 offset-s2">
@@ -307,7 +313,7 @@
 		$(document).ready(function() {
 			$('select').formSelect();
 		});
-		
+
 		var speciestPartsList = "${speciesPartsList}";
 
 		var snCtr, lCtr, pbpCtr, iCtr, baclCtr, ccCtr, sCtr;
@@ -336,7 +342,7 @@
 			lCtr++;
 
 			var inputField = "<div class=\"input-field\">"
-					+ "<input id=\"location" + lCtr +"\" type=\"text\" class=\"validate\">"
+					+ "<input id=\"location" + lCtr +"\" type=\"text\" class=\"validate\" name=\"location\" >"
 					+ "<label for=\"location" + lCtr +"\">Location" + " ("
 					+ lCtr + ")" + "</label>" + "</div>";
 			var buttonAdd = "<a class=\"btn-small right teal darken-4\" id=\"locationAdd\" onclick=\"addLFields()\">Location<i class=\"material-icons left\">add</i></a>";
@@ -558,6 +564,7 @@
 		}
 
 		function addCCFields(pValue) {
+			console.log(pValue);
 			var buttonAddText = "#chemicalCompoundAdd" + pValue;
 
 			if (pValue == 0) {
@@ -571,7 +578,7 @@
 
 			if (pValue == 0) {
 				var inputChemicalCompound = "<div class=\"input-field col s6 offset-s1\">"
-						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\" name=\"compound[0]\"  >"
 						+ "<label for=\"chemicalCompound" + ccCtr +"\">Chemical Compound"
 						+ " ("
 						+ ccCtr
@@ -582,7 +589,8 @@
 						"<a class=\"btn-small right teal darken-4\" id=\"chemicalCompoundAdd\" onclick=\"addCCFields("
 						+ pValue
 						+ ")\">Chemical Compound<i class=\"material-icons left\">add</i></a>"
-						+ "</div>";
+						+ "</div>"
+						+ "<input type='hidden' name='compoundCtr' value='"+ccCtr+"'>";
 				var inputBiologicalActivity = "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
 						+ "<div class=\"input-field col s6 offset-s2\">"
 						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
@@ -613,7 +621,7 @@
 						inputBiologicalActivity);
 			} else {
 				var inputChemicalCompound = "<div class=\"input-field col s6 offset-s1\">"
-						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\" name=\"compound[0]\">"
 						+ "<label for=\"chemicalCompound" + ccCtr +"\">Chemical Compound"
 						+ " ("
 						+ ccCtr
@@ -673,61 +681,29 @@
 			ccCtr++;
 			baclCtr++;
 
-			var inputSpecies = 
-				"<div class=\"input-field col s6\">" +
-	                "<select class=\"browser-default\" onchange=\"speciesPartOtherEnable(" + sCtr +")\" id=\"speciesPart" + sCtr +"\">" +
-	                    "<option value=\"\" disabled selected>Choose plant part</option>" +
-	                    "<option value=\"1\">Aerial Plant Parts</option>" +
-	                    "<option value=\"2\">Petiole and Rachis</option>" +
-	                    "<option value=\"3\">Unripe Sarcotesta</option>" +
-	                    "<option value=\"4\">Aerial Plant Part</option>" +
-	                    "<option value=\"5\">Ripe Sarcotesta</option>" +
-	                    "<option value=\"6\">Fruiting Bodies</option>" +
-	                    "<option value=\"7\">Fruiting Body</option>" +
-	                    "<option value=\"8\">Aerial Parts</option>" +
-	                    "<option value=\"9\">Female Cone</option>" +
-	                    "<option value=\"10\">Aerial Part</option>" +
-	                    "<option value=\"11\">Fruit Rinds</option>" +
-	                    "<option value=\"12\">Sclerotesta</option>" +
-	                    "<option value=\"13\">Sarcotesta</option>" +
-	                    "<option value=\"14\">Fruit Rind</option>" +
-	                    "<option value=\"15\">Male Cone</option>" +
-	                    "<option value=\"16\">Stem Bark</option>" +
-	                    "<option value=\"17\">Cone Base</option>" +
-	                    "<option value=\"18\">Endotesta</option>" +
-	                    "<option value=\"19\">Flowers</option>" +
-	                    "<option value=\"20\">Leaflet</option>" +
-	                    "<option value=\"21\">Flower</option>" +
-	                    "<option value=\"22\">Fruits</option>" +
-	                    "<option value=\"23\">Trunks</option>" +
-	                    "<option value=\"24\">Leaves</option>" +
-	                    "<option value=\"25\">Fruit</option>" +
-	                    "<option value=\"26\">Trunk</option>" +
-	                    "<option value=\"27\">Seeds</option>" +
-	                    "<option value=\"28\">Roots</option>" +
-	                    "<option value=\"29\">Twigs</option>" +
-	                    "<option value=\"30\">Stems</option>" +
-	                    "<option value=\"31\">Seed</option>" +
-	                    "<option value=\"32\">Root</option>" +
-	                    "<option value=\"33\">Twig</option>" +
-	                    "<option value=\"34\">Stem</option>" +
-	                    "<option value=\"35\">Pods</option>" +
-	                    "<option value=\"36\">Leaf</option>" +
-	                    "<option value=\"37\">Bark</option>" +
-	                    "<option value=\"38\">Pod</option>" +
-	                    "<option value=\"-1\">Others (Please write on the right side)</option>" +
-	                "</select>" +
-	            "</div>" +
-				"<div class=\"col s6\">" +
-					"<div class=\"input-field\">" +
-						"<input id=\"speciesPartOther" + sCtr +"\" type=\"text\" class=\"validate\" disabled required>" +
-						"<label for=\"speciesPartOther" + sCtr +"\">Other Species Part"+" (" + sCtr + ")" +"</label>" +
-					"</div>" +
-				"</div>";
-				
+			var inputSpecies = "<div class=\"input-field col s6\">"
+					+ "<select class=\"browser-default\" onchange=\"speciesPartOtherEnable("
+					+ sCtr
+					+ ")\" id=\"speciesPart"
+					+ sCtr
+					+ "\" name=\"plantPart["+sCtr+"]\">"
+					+ "<option value=\"\" disabled selected>Choose plant part</option>"
+					+ "<option value=\"-1\">Others (Please write on the right side)</option>"
+					+ "<c:forEach items='${plantPartsList}' var='plantPartsList'>"
+					+ "<option value=\"${plantPartsList}\">${plantPartsList}</option>"
+					+ "</c:forEach>"
+					+ "</select>"
+					+ "</div>"
+					+ "<div class=\"col s6\">"
+					+ "<div class=\"input-field\">"
+					+ "<input id=\"speciesPartOther" + sCtr +"\" type=\"text\" class=\"validate\" disabled required>"
+					+ "<label for=\"speciesPartOther" + sCtr +"\">Other Species Part"
+					+ " (" + sCtr + ")" + "</label>" + "</div>" + "</div>"
+					+ "<input type='hidden' name='speciesCtr' value='"+sCtr+"'>";
+
 			var inputChemicalCompound = "<div class=\"row\" id=\"chemicalCompoundGroup" + ccCtr + "\">"
 					+ "<div class=\"input-field col s6 offset-s1\">"
-					+ " <input id=\"chemicalCompound" + ccCtr + "\" type=\"text\" class=\"validate\">"
+					+ "<input id=\"chemicalCompound" + ccCtr + "\" type=\"text\" class=\"validate\">"
 					+ "<label for=\"chemicalCompound" + ccCtr + "\">Chemical Compound"
 					+ " ("
 					+ ccCtr
@@ -767,17 +743,17 @@
 					+ "</div>"
 					+ "</div>"
 					+ "</div>";
-					
-			var inputButtonAdd =
-				"<a class=\"btn-small teal darken-4 center col s6 offset-s3\" id=\"speciesAdd\" onclick=\"addSFields(0)\">Species<i class=\"material-icons left\">add</i></a>";
 
-			$('#speciesGroup').append(inputSpecies, inputChemicalCompound, inputButtonAdd);
+			var inputButtonAdd = "<a class=\"btn-small teal darken-4 center col s6 offset-s3\" id=\"speciesAdd\" onclick=\"addSFields(0)\">Species<i class=\"material-icons left\">add</i></a>";
+
+			$('#speciesGroup').append(inputSpecies, inputChemicalCompound,
+					inputButtonAdd);
 		}
-		
+
 		function speciesPartOtherEnable(pValue) {
 			var optionSpeciesPartText = "speciesPart" + pValue;
 			var optionSelected;
-			
+
 			if (pValue == 0) {
 				$('speciesPart').remove();
 				optionSelected = document.getElementById('speciesPart').value;
@@ -785,7 +761,7 @@
 				$(optionSpeciesPartText).remove();
 				optionSelected = document.getElementById(optionSpeciesPartText).value;
 			}
-			
+
 			if (optionSelected == -1) {
 				if (pValue == 0)
 					$('#speciesPartOther').prop("disabled", false);
@@ -793,8 +769,7 @@
 					var speciesPartOtherText = "#speciesPartOther" + pValue;
 					$(speciesPartOtherText).prop("disabled", false);
 				}
-			}
-			else {
+			} else {
 				if (pValue == 0)
 					$('#speciesPartOther').prop("disabled", true);
 				else {

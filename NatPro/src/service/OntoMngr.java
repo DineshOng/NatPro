@@ -30,13 +30,13 @@ public class OntoMngr {
 	private AddAxiom axiomObjectProp;
 
 	// OWL Classes
-	private OWLClass medPlantClass, locationClass, speciesClass, genusClass, familyClass;
+	private OWLClass medPlantClass, locationClass, speciesClass, genusClass, familyClass, speciesPartClass, plantPartClass, compoundClass;
 
 	// OWL Individual
-	private OWLNamedIndividual medPlantIndiv, locationIndiv, speciesIndiv, genusIndiv, familyIndiv;
+	private OWLNamedIndividual medPlantIndiv, locationIndiv, speciesIndiv, genusIndiv, familyIndiv, speciesPartIndiv, plantPartIndiv, compoundIndiv;
 
 	// OWLObjectProperty
-	OWLObjectProperty isLocatedIn, hasScientificName, belongsToGenus, belongsToFamily;
+	OWLObjectProperty isLocatedIn, hasScientificName, belongsToGenus, belongsToFamily, hasChildPlantPart, hasPlantPart, hasCompound;
 
 	public OntoMngr() throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// loadOntology();
@@ -93,6 +93,33 @@ public class OntoMngr {
 		familyClass = owlFact.getOWLClass("#Family", pm);
 		familyIndiv = owlFact.getOWLNamedIndividual("#" + family, pm);
 		classAssertion = owlFact.getOWLClassAssertionAxiom(familyClass, familyIndiv);
+		owlManager.addAxiom(owlOntology, classAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addIndiv_SpeciesPart(String speciesPart) throws OWLOntologyCreationException, OWLOntologyStorageException {
+		// Creating Individual
+		speciesPartClass = owlFact.getOWLClass("#SpeciesPart", pm);
+		speciesPartIndiv = owlFact.getOWLNamedIndividual("#" + speciesPart, pm);
+		classAssertion = owlFact.getOWLClassAssertionAxiom(speciesPartClass, speciesPartIndiv);
+		owlManager.addAxiom(owlOntology, classAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addIndiv_PlantPart(String plantPart) throws OWLOntologyCreationException, OWLOntologyStorageException {
+		// Creating Individual
+		plantPartClass = owlFact.getOWLClass("#PlantPart", pm);
+		plantPartIndiv = owlFact.getOWLNamedIndividual("#" + plantPart, pm);
+		classAssertion = owlFact.getOWLClassAssertionAxiom(plantPartClass, plantPartIndiv);
+		owlManager.addAxiom(owlOntology, classAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addIndiv_Compound(String compound) throws OWLOntologyCreationException, OWLOntologyStorageException {
+		// Creating Individual
+		compoundClass = owlFact.getOWLClass("#Compound", pm);
+		compoundIndiv = owlFact.getOWLNamedIndividual("#" + compound, pm);
+		classAssertion = owlFact.getOWLClassAssertionAxiom(compoundClass, compoundIndiv);
 		owlManager.addAxiom(owlOntology, classAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
@@ -172,6 +199,36 @@ public class OntoMngr {
 		owlManager.addAxiom(owlOntology, dataPropAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
+	
+	public void addDataPropPlantPart(String plantPartValue) throws OWLOntologyStorageException {
+		// locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", "
+		// ").toLowerCase();
+		// Creating Data Property, Range, and Value
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_PlantPart", pm);
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, plantPartIndiv, plantPartValue);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, plantPartClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound(String compoundValue) throws OWLOntologyStorageException {
+		// locationValue = locationValue.replaceAll("\\n+", " ").replaceAll("\\s+", "
+		// ").toLowerCase();
+		// Creating Data Property, Range, and Value
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_CompoundSynonym", pm);
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, compoundValue);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
 
 	// ADD OBJECT PROPERTY
 	public void addObjectIsLocatedIn(String medicPlant, String location) throws OWLOntologyStorageException {
@@ -213,4 +270,36 @@ public class OntoMngr {
 		owlManager.applyChange(axiomObjectProp);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
+
+	public void addObjectHasChildPlantPart(String species, String speciesPart) throws OWLOntologyStorageException {
+		speciesIndiv = owlFact.getOWLNamedIndividual("#" + species, pm);
+		speciesPartIndiv = owlFact.getOWLNamedIndividual("#" + speciesPart, pm);
+		hasChildPlantPart = owlFact.getOWLObjectProperty("#hasChildPlantPart", pm);
+		objectAssertion = owlFact.getOWLObjectPropertyAssertionAxiom(hasChildPlantPart, speciesIndiv, speciesPartIndiv);
+		axiomObjectProp = new AddAxiom(owlOntology, objectAssertion);
+		owlManager.applyChange(axiomObjectProp);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addObjectHasPlantPart(String speciesPart, String plantPart) throws OWLOntologyStorageException {
+		speciesPartIndiv = owlFact.getOWLNamedIndividual("#" + speciesPart, pm);
+		plantPartIndiv = owlFact.getOWLNamedIndividual("#" + plantPart, pm);
+		hasPlantPart = owlFact.getOWLObjectProperty("#hasPlantPart", pm);
+		objectAssertion = owlFact.getOWLObjectPropertyAssertionAxiom(hasPlantPart, speciesPartIndiv, plantPartIndiv);
+		axiomObjectProp = new AddAxiom(owlOntology, objectAssertion);
+		owlManager.applyChange(axiomObjectProp);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addObjectHasCompound(String speciesPart, String compound) throws OWLOntologyStorageException {
+		speciesPartIndiv = owlFact.getOWLNamedIndividual("#" + speciesPart, pm);
+		compoundIndiv = owlFact.getOWLNamedIndividual("#" + compound, pm);
+		hasCompound = owlFact.getOWLObjectProperty("#hasCompound", pm);
+		objectAssertion = owlFact.getOWLObjectPropertyAssertionAxiom(hasCompound, speciesPartIndiv, compoundIndiv);
+		axiomObjectProp = new AddAxiom(owlOntology, objectAssertion);
+		owlManager.applyChange(axiomObjectProp);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	
 }
