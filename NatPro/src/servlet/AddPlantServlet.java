@@ -103,117 +103,113 @@ public class AddPlantServlet extends HttpServlet {
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
 
-		if (!request.getParameterValues("speciesCtr").equals(null)) {
-			String[] plantPartCtr = request.getParameterValues("speciesCtr");
-			int plantPartCtrMax = Integer.parseInt(plantPartCtr[plantPartCtr.length - 1]); // get maximum number of
-																							// speciesPart
-			plantPartCtrMax++; // add one since incremention starts at 0
-			for (int i = 0; i < plantPartCtrMax; i++) {
-				System.out.println(request.getParameter("plantPart[" + i + "]"));
-				String[] compoundCtr = request.getParameterValues("compound["+i+"]");
-				for(int j=0; j<compoundCtr.length; j++) {
-					System.out.println(compoundCtr[j]);
-				}
-//				System.out.println(request.getParameter("compoundCtr"));
+		if (!request.getParameter("commonPlantName").isBlank()) { // check if common plant name is filled
+			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
+					"_");
+			// create individual for MedicinalPlant
+			m.addIndiv_MedPlant(commonPlantNameIndiv);
+			// add data property for MedicinalPlant individual
+			m.addDataPropMedPlant(request.getParameter("commonPlantName").trim());
 
+			if (!request.getParameter("scientificName").isBlank()) { // check if scientific name is filled
+				String speciesNameIndiv = request.getParameter("scientificName").trim().toLowerCase().replaceAll(" ",
+						"_");
+				// create individual for Species
+				m.addIndiv_Species(speciesNameIndiv);
+				// add data property for Species individual
+				m.addDataPropSpecies(request.getParameter("scientificName").trim());
+				// add object property MedicinalPlant -> Species
+				m.addObjectHasScientificName(commonPlantNameIndiv, speciesNameIndiv);
+
+				if (!request.getParameter("genus").isBlank()) { // check if genus is filled
+					String genusNameIndiv = request.getParameter("genus").trim().toLowerCase().replaceAll(" ", "_");
+					// create individual for Genus
+					m.addIndiv_Genus(genusNameIndiv);
+					// add data property for Genus individual
+					m.addDataPropGenus(request.getParameter("genus").trim());
+					// add object property Species -> Genus
+					m.addObjectBelongsToGenus(speciesNameIndiv, genusNameIndiv);
+
+					if (!request.getParameter("family").isBlank()) { // check if family is filled
+						String familyNameIndiv = request.getParameter("family").trim().toLowerCase().replaceAll(" ",
+								"_");
+						// create individual for Family
+						m.addIndiv_Family(familyNameIndiv);
+						// add data property for Family individual
+						m.addDataPropFamily(request.getParameter("family").trim());
+
+						m.addObjectBelongsToFamily(genusNameIndiv, familyNameIndiv);
+					}
+				}
+
+				if (!request.getParameterValues("speciesCtr").equals(null)) { // check if there are any plant parts
+																				// selected
+					String[] plantPartCtr = request.getParameterValues("speciesCtr"); // we will only get the last value
+																						// which is the max
+					int plantPartCtrMax = Integer.parseInt(plantPartCtr[plantPartCtr.length - 1]); // get maximum number
+																									// of
+																									// speciesPart to be
+																									// used for
+																									// iteration later
+					plantPartCtrMax++; // add one since incremention starts at 0 at front end
+					for (int i = 0; i < plantPartCtrMax; i++) { // traverse through the list of all plant parts selected
+						if (request.getParameter("plantPart[" + i + "]") != null) { // check if a plant part is selected
+							String plantPart = request.getParameter("plantPart[" + i + "]").trim().toLowerCase()
+									.replaceAll(" ", "_");
+							String speciesPartIndiv = speciesNameIndiv + "_" + plantPart;
+							// create individual for SpeciesPart
+							m.addIndiv_SpeciesPart(speciesPartIndiv);
+							// add object property Species -> SpeciesPart
+							m.addObjectHasChildPlantPart(speciesNameIndiv, speciesPartIndiv);
+							// add object property SpeciesPart -> PlantPart
+							m.addObjectHasPlantPart(speciesPartIndiv, plantPart);
+							String[] compounds = request.getParameterValues("compound[" + i + "]");
+							for (int j = 0; j < compounds.length; j++) {
+								if (!compounds[j].isBlank()) {
+									String compoundIndiv = cleanCompoundString(compounds[j]);
+									// create individual for Compound
+									m.addIndiv_Compound(compoundIndiv);
+									// add data property for Compound individual
+									m.addDataPropCompound(compounds[j]);
+									// add object property SpeciesPart -> Compound
+									m.addObjectHasCompound(speciesPartIndiv, compoundIndiv);
+
+								}
+							}
+						}
+
+					}
+				}
 			}
+
+			String[] locationNames;
+			locationNames = request.getParameterValues("location");
+			for (int i = 0; i < locationNames.length; i++) {
+				if (!locationNames[i].isBlank()) {
+					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(" ", "_");
+					m.addIndiv_Location(locationNameIndiv);
+					m.addDataPropLocation(locationNames[i].trim());
+
+					m.addObjectIsLocatedIn(commonPlantNameIndiv, locationNameIndiv);
+				}
+			}
+
 		}
 
-//		if (request.getParameter("plantPart").equals("-1")) {
-//			System.out.println(request.getParameter("plantPartOther"));
-//		}else {
-//			System.out.println(request.getParameter("plantPart"));
-//		}
-
-//		if (request.getParameter("plantPart") != null) {
-//			String speciesPartIndiv = request.getParameter("plantPart").trim().toLowerCase().replaceAll(" ", "_");
-////			System.out.println(request.getParameter("plantPart"));
-//		} else {
-////			System.out.println("null");
-//		}
-//		System.out.println(request.getParameter("speciesPart"));
-
-//		if (!request.getParameter("commonPlantName").isBlank()) {
-//			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
-//					"_");
-//			m.addIndiv_MedPlant(commonPlantNameIndiv);
-//			m.addDataPropMedPlant(request.getParameter("commonPlantName").trim());
-//
-//			if (!request.getParameter("scientificName").isBlank()) {
-//				String speciesNameIndiv = request.getParameter("scientificName").trim().toLowerCase().replaceAll(" ",
-//						"_");
-//				m.addIndiv_Species(speciesNameIndiv);
-//				m.addDataPropSpecies(request.getParameter("scientificName").trim());
-//
-//				m.addObjectHasScientificName(commonPlantNameIndiv, speciesNameIndiv);
-//
-//				if (!request.getParameter("genus").isBlank()) {
-//					String genusNameIndiv = request.getParameter("genus").trim().toLowerCase().replaceAll(" ", "_");
-//					m.addIndiv_Genus(genusNameIndiv);
-//					m.addDataPropGenus(request.getParameter("genus").trim());
-//
-//					m.addObjectBelongsToGenus(speciesNameIndiv, genusNameIndiv);
-//
-//					if (!request.getParameter("family").isBlank()) {
-//						String familyNameIndiv = request.getParameter("family").trim().toLowerCase().replaceAll(" ",
-//								"_");
-//						m.addIndiv_Genus(familyNameIndiv);
-//						m.addDataPropGenus(request.getParameter("family").trim());
-//
-//						m.addObjectBelongsToFamily(genusNameIndiv, familyNameIndiv);
-//					}
-//				}
-//				if (request.getParameter("plantPart") != null) {
-//					String plantPart = request.getParameter("plantPart").trim().toLowerCase().replaceAll(" ", "_");
-//					String speciesPartIndiv = speciesNameIndiv + "_" + plantPart;
-//					m.addIndiv_SpeciesPart(speciesPartIndiv);
-//
-//					m.addObjectHasChildPlantPart(speciesNameIndiv, speciesPartIndiv);
-//					m.addObjectHasPlantPart(speciesPartIndiv, plantPart);
-//
-//					String[] compounds;
-//					compounds = request.getParameterValues("compound");
-//					for (int i = 0; i < compounds.length; i++) {
-//						if (!compounds[i].isBlank()) {
-//							String compoundIndiv = cleanCompoundString(compounds[i]);
-//							m.addIndiv_Compound(compoundIndiv);
-//							m.addDataPropCompound(compounds[i]);
-//
-////								m.addObjectHasCompound(speciesPart, compound);
-//						}
-//					}
-//
-//				}
-//			}
-//
-//			String[] locationNames;
-//			locationNames = request.getParameterValues("location");
-//			for (int i = 0; i < locationNames.length; i++) {
-//				if (!locationNames[i].isBlank()) {
-//					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(" ", "_");
-//					m.addIndiv_Location(locationNameIndiv);
-//					m.addDataPropLocation(locationNames[i].trim());
-//
-//					m.addObjectIsLocatedIn(commonPlantNameIndiv, locationNameIndiv);
-//				}
-//			}
-//
-//		}
-//
-//		System.out.println("Common Name: " + request.getParameter("commonPlantName").trim());
-//		String[] sciNames;
-//		sciNames = request.getParameterValues("scientificName");
-//		for (int i = 0; i < sciNames.length; i++) {
-//			System.out.println("Scientific Name#" + (i + 1) + ": " + sciNames[i]);
-//		}
-//		System.out.println("Genus: " + request.getParameter("genus"));
-//		System.out.println("Family: " + request.getParameter("family"));
-//		String[] locs;
-//		locs = request.getParameterValues("location");
-//		for (int i = 0; i < locs.length; i++) {
-//			System.out.println("Location#" + (i + 1) + ": " + locs[i]);
-//		}
-//		request.getRequestDispatcher("3aadded.jsp").forward(request, response);
+		System.out.println("Common Name: " + request.getParameter("commonPlantName").trim());
+		String[] sciNames;
+		sciNames = request.getParameterValues("scientificName");
+		for (int i = 0; i < sciNames.length; i++) {
+			System.out.println("Scientific Name#" + (i + 1) + ": " + sciNames[i]);
+		}
+		System.out.println("Genus: " + request.getParameter("genus"));
+		System.out.println("Family: " + request.getParameter("family"));
+		String[] locs;
+		locs = request.getParameterValues("location");
+		for (int i = 0; i < locs.length; i++) {
+			System.out.println("Location#" + (i + 1) + ": " + locs[i]);
+		}
+		request.getRequestDispatcher("3aadded.jsp").forward(request, response);
 
 	}
 
