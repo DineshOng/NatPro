@@ -595,6 +595,7 @@
 		                "</div>";
 			           	
 					$('#chemicalCompoundGroup').append(inputChemicalCompound, inputBiologicalActivity);
+					//alert("if triggered");
             	} else {
             		var inputChemicalCompound =
             			"<div class=\"input-field col s6 offset-s1\">" +
@@ -621,6 +622,7 @@
     					"#chemicalCompoundGroup" + pValue;
 			           	
 					$(inputGroupText).append(inputChemicalCompound, inputBiologicalActivity);
+					//alert("else triggered");
             	}
             	
             }
@@ -684,7 +686,7 @@
 		                "</select>" +
 		            "</div>";
             	var inputChemicalCompound =
-            		"<div class=\"row\" id=\"chemicalCompoundGroup" + ccCtr + "\">" +
+            		"<div class=\"row\" id=\"chemicalCompoundGroup" + sCtr + "\">" +
 		            	"<div class=\"input-field col s6 offset-s1\">" +
 		                   " <input id=\"chemicalCompound" + ccCtr + "\" type=\"text\" class=\"validate\">" +
 		                    "<label for=\"chemicalCompound" + ccCtr + "\">Chemical Compound" + " (" + ccCtr + ")"+"</label>" +
@@ -704,6 +706,8 @@
 		                	"</div>" +
 		                "</div>" +
 		            "</div>";
+				var inputButtonText =
+					"<a class=\"btn-small teal darken-4 center col s6 offset-s3\" id=\"speciesAdd\" onclick=\"addSFields("+ sCtr +")\">Species<i class=\"material-icons left\">add</i></a>";
             	
             	$('#speciesGroup').append(inputSpecies, inputChemicalCompound);
             }

@@ -718,7 +718,7 @@
 					+ "</div>"
 					+ "<input type='hidden' name='speciesCtr' value='"+sCtr+"'>";
 
-			var inputChemicalCompound = "<div class=\"row\" id=\"chemicalCompoundGroup" + ccCtr + "\">"
+			var inputChemicalCompound = "<div class=\"row\" id=\"chemicalCompoundGroup" + scCtr + "\">"
 					+ "<div class=\"input-field col s6 offset-s1\">"
 					+ "<input id=\"chemicalCompound" + ccCtr + "\" type=\"text\" class=\"validate\" name=\"compound["+sCtr+"]["+speciesArr[pValue]+"]\">"
 					+ "<label for=\"chemicalCompound" + ccCtr + "\">Chemical Compound"
