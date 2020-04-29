@@ -103,31 +103,6 @@ public class AddPlantServlet extends HttpServlet {
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
 
-		if (!request.getParameterValues("speciesCtr").equals(null)) {
-
-			String[] plantPartCtr = request.getParameterValues("speciesCtr");
-
-			int plantPartCtrMax = Integer.parseInt(plantPartCtr[plantPartCtr.length - 1]);
-
-			plantPartCtrMax++;
-			for (int i = 0; i < plantPartCtrMax; i++) {
-				if (request.getParameter("plantPart[" + i + "]") != null) {
-					String plantPart = request.getParameter("plantPart[" + i + "]").trim().toLowerCase().replaceAll(" ",
-							"_");
-					System.out.println(plantPart);
-					String[] compoundCtr = request.getParameterValues("lengthCC" + i);
-					int compoundCtrMax = Integer.parseInt(compoundCtr[compoundCtr.length - 1]);
-					compoundCtrMax++;
-					System.out.println(compoundCtrMax);
-					for (int j = 0; j < compoundCtrMax; j++) {
-						System.out.println("compound[" + i + "][" + j + "]: "
-								+ request.getParameter("compound[" + i + "][" + j + "]"));
-					}
-				}
-
-			}
-		}
-
 		if (!request.getParameter("commonPlantName").isBlank()) { // check if common plant name is filled
 			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
 					"_");
@@ -192,7 +167,7 @@ public class AddPlantServlet extends HttpServlet {
 							String[] compoundCtr = request.getParameterValues("lengthCC" + i);
 							int compoundCtrMax = Integer.parseInt(compoundCtr[compoundCtr.length - 1]);
 							compoundCtrMax++;
-							System.out.println(compoundCtrMax);
+
 							for (int j = 0; j < compoundCtrMax; j++) {
 								String compound = request.getParameter("compound[" + i + "][" + j + "]");
 								if (!compound.isBlank()) {
@@ -203,8 +178,33 @@ public class AddPlantServlet extends HttpServlet {
 									m.addDataPropCompound(compound);
 									// add object property SpeciesPart -> Compound
 									m.addObjectHasCompound(speciesPartIndiv, compoundIndiv);
-									System.out.println("compound[" + i + "][" + j + "]: "
-											+ request.getParameter("compound[" + i + "][" + j + "]"));
+
+									String[] bioCellCtr = request.getParameterValues("lengthBC[" + i + "][" + j + "]");
+									int bioCellMax = Integer.parseInt(bioCellCtr[bioCellCtr.length - 1]);
+									bioCellMax++;
+									for (int k = 0; k < bioCellMax; k++) {
+										String bioAct = request.getParameter("bioAct[" + i + "][" + j + "][" + k + "]");
+										if (!bioAct.isBlank()) {
+											String bioActIndiv = bioAct.trim().toLowerCase().replaceAll(" ", "_");
+											// create individual for BiologicalActivity
+											m.addIndiv_BiologicalActivity(bioActIndiv);
+											// add data property for BiologicalActivity individual
+											m.addDataPropBiologicalActivity(bioAct);
+											// add object property Compound -> BiologicalActivity
+											m.addObjectHasBiologicalActivity(compoundIndiv, bioActIndiv);
+											String cellLine = request.getParameter("cellLine[" + i + "][" + j + "][" + k + "]");
+											if (!cellLine.isBlank()) {
+												String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ", "_");
+												// create individual for CellLine
+												m.addIndiv_CellLine(cellLineIndiv);
+												// add data property for CellLine individual
+												m.addDataPropCellLine(cellLine);
+												// add object property BiologicalActivity -> CellLine
+												m.addObjectAffects(bioActIndiv, cellLineIndiv);
+											}
+										}
+									}
+
 								}
 
 							}
@@ -228,19 +228,19 @@ public class AddPlantServlet extends HttpServlet {
 
 		}
 
-		System.out.println("Common Name: " + request.getParameter("commonPlantName").trim());
-		String[] sciNames;
-		sciNames = request.getParameterValues("scientificName");
-		for (int i = 0; i < sciNames.length; i++) {
-			System.out.println("Scientific Name#" + (i + 1) + ": " + sciNames[i]);
-		}
-		System.out.println("Genus: " + request.getParameter("genus"));
-		System.out.println("Family: " + request.getParameter("family"));
-		String[] locs;
-		locs = request.getParameterValues("location");
-		for (int i = 0; i < locs.length; i++) {
-			System.out.println("Location#" + (i + 1) + ": " + locs[i]);
-		}
+//		System.out.println("Common Name: " + request.getParameter("commonPlantName").trim());
+//		String[] sciNames;
+//		sciNames = request.getParameterValues("scientificName");
+//		for (int i = 0; i < sciNames.length; i++) {
+//			System.out.println("Scientific Name#" + (i + 1) + ": " + sciNames[i]);
+//		}
+//		System.out.println("Genus: " + request.getParameter("genus"));
+//		System.out.println("Family: " + request.getParameter("family"));
+//		String[] locs;
+//		locs = request.getParameterValues("location");
+//		for (int i = 0; i < locs.length; i++) {
+//			System.out.println("Location#" + (i + 1) + ": " + locs[i]);
+//		}
 		request.getRequestDispatcher("3aadded.jsp").forward(request, response);
 
 	}

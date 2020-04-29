@@ -198,7 +198,7 @@
 										name="bioAct[0][0][0]"> <label
 										for="biologicalActivity">Biological Activity</label> <a
 										class="btn-small right teal darken-4"
-										id="biologicalActivityAdd" onclick="addBAFields(0)">Biological
+										id="biologicalActivityAdd" onclick="addBAFields(0,0,0)">Biological
 										Activities<i class="material-icons left">add</i>
 									</a>
 								</div>
@@ -321,6 +321,7 @@
 		snCtr = lCtr = pbpCtr = iCtr = baclCtr = ccCtr = sCtr = 0;
 
 		var speciesArr = [ 0 ];
+		var speciesArr2 = [ [ 0 ] ]
 		var compArr = [ 0 ];
 
 		function addSNFields() {
@@ -509,10 +510,10 @@
 
 		}
 
-		function addBAFields(pValue) {
-			console.log(pValue);
+		function addBAFields(pValue, sVal, cVal) {
 			var buttonAddText = "#biologicalActivityAdd" + pValue;
-
+			speciesArr2[sVal][cVal]++;
+			console.log(speciesArr2);
 			if (pValue == 0) {
 				$('#biologicalActivityAdd').remove();
 			} else {
@@ -523,7 +524,7 @@
 
 			if (pValue == 0) {
 				var inputAppend = "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+pValue+"]["+speciesArr[pValue]+"][0]\">"
+						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+sVal+"]["+cVal+"]["+speciesArr2[sVal][cVal]+"]\">"
 						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
 						+ " ("
 						+ baclCtr
@@ -533,18 +534,26 @@
 
 						"<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd\" onclick=\"addBAFields("
 						+ pValue
+						+ ","
+						+ sVal
+						+ ","
+						+ cVal
 						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
 						+ "</div>"
 						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine[0][0][0]\">"
+						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+sVal+"]["+cVal+"]["+speciesArr2[sVal][cVal]+"]\">"
 						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-						+ " (" + baclCtr + ")" + "</label>" + "</div>"
-						+ "<input type='hidden' name='bioCellCC0' value='0'>";
+						+ " ("
+						+ baclCtr
+						+ ")"
+						+ "</label>"
+						+ "</div>"
+						+ "<input type='hidden' name='lengthBC["+sVal+"]["+cVal+"]' value='"+speciesArr2[sVal][cVal]+"'>";
 
 				$('#biologicalActivityGroup').append(inputAppend);
 			} else {
 				var inputAppend = "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct[0][0][0]\">"
+						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+sVal+"]["+cVal+"]["+speciesArr2[sVal][cVal]+"]\">"
 						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
 						+ " ("
 						+ baclCtr
@@ -556,13 +565,21 @@
 						+ pValue
 						+ "\" onclick=\"addBAFields("
 						+ pValue
+						+ ","
+						+ sVal
+						+ ","
+						+ cVal
 						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
 						+ "</div>"
 						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine[0][0][0]\">"
+						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+sVal+"]["+cVal+"]["+speciesArr2[sVal][cVal]+"]\">"
 						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-						+ " (" + baclCtr + ")" + "</label>" + "</div>"
-						+ "<input type='hidden' name='bioCellCC0' value='0'>";
+						+ " ("
+						+ baclCtr
+						+ ")"
+						+ "</label>"
+						+ "</div>"
+						+ "<input type='hidden' name='lengthBC["+sVal+"]["+cVal+"]' value='"+speciesArr2[sVal][cVal]+"'>";;
 
 				var inputGroupText = "#biologicalActivityGroup" + pValue;
 
@@ -572,6 +589,8 @@
 
 		function addCCFields(pValue) {
 			speciesArr[pValue]++;
+			speciesArr2[pValue].push(0);
+			console.log(speciesArr2);
 			var buttonAddText = "#chemicalCompoundAdd" + pValue;
 
 			if (pValue == 0) {
@@ -579,7 +598,6 @@
 			} else {
 				$(buttonAddText).remove();
 			}
-
 			ccCtr++;
 			baclCtr++;
 
@@ -601,7 +619,7 @@
 						+ "<input type='hidden' name='lengthCC"+pValue+"' value='"+speciesArr[pValue]+"'>";
 				var inputBiologicalActivity = "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
 						+ "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+pValue+"]["+speciesArr[pValue]+"][0]\">"
 						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
 						+ " ("
 						+ baclCtr
@@ -613,16 +631,21 @@
 						+ ccCtr
 						+ "\" onclick=\"addBAFields("
 						+ ccCtr
+						+ ","
+						+ pValue
+						+ ","
+						+ speciesArr[pValue]
 						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
 						+ "</div>"
 						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+pValue+"]["+speciesArr[pValue]+"][0]\">"
 						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
 						+ " ("
 						+ baclCtr
 						+ ")"
 						+ "</label>"
 						+ "</div>"
+						+ "<input type='hidden' name='lengthBC["+pValue+"]["+speciesArr[pValue]+"]' value='"+speciesArr2[pValue][speciesArr[pValue]]+"'>";
 						+ "</div>";
 
 				$('#chemicalCompoundGroup').append(inputChemicalCompound,
@@ -646,7 +669,7 @@
 						+ "<input type='hidden' name='lengthCC"+pValue+"' value='"+speciesArr[pValue]+"'>";
 				var inputBiologicalActivity = "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
 						+ "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+pValue+"]["+speciesArr[pValue]+"][0]\">"
 						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
 						+ " ("
 						+ baclCtr
@@ -658,16 +681,21 @@
 						+ ccCtr
 						+ "\" onclick=\"addBAFields("
 						+ ccCtr
+						+ ","
+						+ pValue
+						+ ","
+						+ speciesArr[pValue]
 						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
 						+ "</div>"
 						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+pValue+"]["+speciesArr[pValue]+"][0]\">"
 						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
 						+ " ("
 						+ baclCtr
 						+ ")"
 						+ "</label>"
 						+ "</div>"
+						+ "<input type='hidden' name='lengthBC["+pValue+"]["+speciesArr[pValue]+"]' value='"+speciesArr2[pValue][speciesArr[pValue]]+"'>";
 						+ "</div>";
 
 				var inputGroupText = "#chemicalCompoundGroup" + pValue;
@@ -679,6 +707,8 @@
 		}
 		function addSFields(pValue) {
 			speciesArr.push(0);
+			speciesArr2.push([ 0 ]);
+			console.log(speciesArr2);
 			var buttonAddText = "#speciesAdd" + pValue;
 
 			if (pValue == 0) {
@@ -737,7 +767,7 @@
 					+ "<input type='hidden' name='lengthCC"+sCtr+"' value='"+speciesArr[pValue]+"'>"
 					+ "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
 					+ "<div class=\"input-field col s6 offset-s2\">"
-					+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
+					+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+sCtr+"]["+speciesArr[pValue]+"][0]\">"
 					+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
 					+ " ("
 					+ baclCtr
@@ -747,20 +777,27 @@
 					+ ccCtr
 					+ "\" onclick=\"addBAFields("
 					+ ccCtr
+					+ ","
+					+ sCtr
+					+ ","
+					+ speciesArr[pValue]
 					+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
 					+ "</div>"
 					+ "<div class=\"input-field col s4\">"
-					+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\">"
+					+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+sCtr+"]["+speciesArr[pValue]+"][0]\">" 
 					+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
 					+ " ("
 					+ baclCtr
 					+ ")"
 					+ "</label>"
 					+ "</div>"
+					+ "<input type='hidden' name='lengthBC["+sCtr+"]["+speciesArr[pValue]+"]' value='"+speciesArr2[sCtr][speciesArr[pValue]]+"'>";
 					+ "</div>"
 					+ "</div>";
 
-			var inputButtonAdd = "<a class=\"btn-small teal darken-4 center col s6 offset-s3\" id=\"speciesAdd\" onclick=\"addSFields(0)\">Species<i class=\"material-icons left\">add</i></a>";
+			var inputButtonAdd = "<a class=\"btn-small teal darken-4 center col s6 offset-s3\" id=\"speciesAdd\" onclick=\"addSFields("
+					+ sCtr
+					+ ")\">Species<i class=\"material-icons left\">add</i></a>";
 
 			$('#speciesGroup').append(inputSpecies, inputChemicalCompound,
 					inputButtonAdd);
