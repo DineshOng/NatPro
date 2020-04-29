@@ -103,6 +103,31 @@ public class AddPlantServlet extends HttpServlet {
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
 
+		if (!request.getParameterValues("speciesCtr").equals(null)) {
+
+			String[] plantPartCtr = request.getParameterValues("speciesCtr");
+
+			int plantPartCtrMax = Integer.parseInt(plantPartCtr[plantPartCtr.length - 1]);
+
+			plantPartCtrMax++;
+			for (int i = 0; i < plantPartCtrMax; i++) {
+				if (request.getParameter("plantPart[" + i + "]") != null) {
+					String plantPart = request.getParameter("plantPart[" + i + "]").trim().toLowerCase().replaceAll(" ",
+							"_");
+					System.out.println(plantPart);
+					String[] compoundCtr = request.getParameterValues("lengthCC" + i);
+					int compoundCtrMax = Integer.parseInt(compoundCtr[compoundCtr.length - 1]);
+					compoundCtrMax++;
+					System.out.println(compoundCtrMax);
+					for (int j = 0; j < compoundCtrMax; j++) {
+						System.out.println("compound[" + i + "][" + j + "]: "
+								+ request.getParameter("compound[" + i + "][" + j + "]"));
+					}
+				}
+
+			}
+		}
+
 		if (!request.getParameter("commonPlantName").isBlank()) { // check if common plant name is filled
 			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
 					"_");
@@ -163,18 +188,25 @@ public class AddPlantServlet extends HttpServlet {
 							m.addObjectHasChildPlantPart(speciesNameIndiv, speciesPartIndiv);
 							// add object property SpeciesPart -> PlantPart
 							m.addObjectHasPlantPart(speciesPartIndiv, plantPart);
-							String[] compounds = request.getParameterValues("compound[" + i + "]");
-							for (int j = 0; j < compounds.length; j++) {
-								if (!compounds[j].isBlank()) {
-									String compoundIndiv = cleanCompoundString(compounds[j]);
+
+							String[] compoundCtr = request.getParameterValues("lengthCC" + i);
+							int compoundCtrMax = Integer.parseInt(compoundCtr[compoundCtr.length - 1]);
+							compoundCtrMax++;
+							System.out.println(compoundCtrMax);
+							for (int j = 0; j < compoundCtrMax; j++) {
+								String compound = request.getParameter("compound[" + i + "][" + j + "]");
+								if (!compound.isBlank()) {
+									String compoundIndiv = cleanCompoundString(compound);
 									// create individual for Compound
 									m.addIndiv_Compound(compoundIndiv);
 									// add data property for Compound individual
-									m.addDataPropCompound(compounds[j]);
+									m.addDataPropCompound(compound);
 									// add object property SpeciesPart -> Compound
 									m.addObjectHasCompound(speciesPartIndiv, compoundIndiv);
-
+									System.out.println("compound[" + i + "][" + j + "]: "
+											+ request.getParameter("compound[" + i + "][" + j + "]"));
 								}
+
 							}
 						}
 

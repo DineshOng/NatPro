@@ -172,8 +172,7 @@
 								<c:forEach items="${plantPartsList}" var="plantPartsList">
 									<option value="${plantPartsList}">${plantPartsList}</option>
 								</c:forEach>
-							</select>
-							<input type='hidden' name='speciesCtr' value='0'>
+							</select> <input type='hidden' name='speciesCtr' value='0'>
 						</div>
 						<div class="col s6">
 							<div class="input-field">
@@ -186,26 +185,28 @@
 						<div class="row" id="chemicalCompoundGroup">
 							<div class="input-field col s6 offset-s1">
 								<input id="chemicalCompound" type="text" class="validate"
-									name="compound[0]"> <label for="chemicalCompound">Chemical
+									name="compound[0][0]"> <label for="chemicalCompound">Chemical
 									Compound</label> <a class="btn-small right teal darken-4"
 									id="chemicalCompoundAdd" onclick="addCCFields(0)">Chemical
 									Compound<i class="material-icons left">add</i>
 								</a>
-								<input type='hidden' name='compoundCtr' value='00'>
 							</div>
+							<input type='hidden' name='lengthCC0' value='0'>
 							<div class="col s12" id="biologicalActivityGroup">
 								<div class="input-field col s6 offset-s2">
-									<input id="biologicalActivity" type="text" class="validate">
-									<label for="biologicalActivity">Biological Activity</label> <a
+									<input id="biologicalActivity" type="text" class="validate"
+										name="bioAct[0][0][0]"> <label
+										for="biologicalActivity">Biological Activity</label> <a
 										class="btn-small right teal darken-4"
 										id="biologicalActivityAdd" onclick="addBAFields(0)">Biological
 										Activities<i class="material-icons left">add</i>
 									</a>
 								</div>
 								<div class="input-field col s4">
-									<input id="cellLine" type="text" class="validate"> <label
-										for="cellLine">CellLine</label>
+									<input id="cellLine" type="text" class="validate"
+										name="cellLine[0][0][0]"> <label for="cellLine">CellLine</label>
 								</div>
+								<input type='hidden' name='bioCellCC0' value='0'>
 							</div>
 						</div>
 						<a class="btn-small teal darken-4 center col s6 offset-s3"
@@ -318,6 +319,9 @@
 
 		var snCtr, lCtr, pbpCtr, iCtr, baclCtr, ccCtr, sCtr;
 		snCtr = lCtr = pbpCtr = iCtr = baclCtr = ccCtr = sCtr = 0;
+
+		var speciesArr = [ 0 ];
+		var compArr = [ 0 ];
 
 		function addSNFields() {
 
@@ -506,6 +510,7 @@
 		}
 
 		function addBAFields(pValue) {
+			console.log(pValue);
 			var buttonAddText = "#biologicalActivityAdd" + pValue;
 
 			if (pValue == 0) {
@@ -518,7 +523,7 @@
 
 			if (pValue == 0) {
 				var inputAppend = "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+pValue+"]["+speciesArr[pValue]+"][0]\">"
 						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
 						+ " ("
 						+ baclCtr
@@ -531,14 +536,15 @@
 						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
 						+ "</div>"
 						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine[0][0][0]\">"
 						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-						+ " (" + baclCtr + ")" + "</label>" + "</div>";
+						+ " (" + baclCtr + ")" + "</label>" + "</div>"
+						+ "<input type='hidden' name='bioCellCC0' value='0'>";
 
 				$('#biologicalActivityGroup').append(inputAppend);
 			} else {
 				var inputAppend = "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct[0][0][0]\">"
 						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
 						+ " ("
 						+ baclCtr
@@ -553,9 +559,10 @@
 						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
 						+ "</div>"
 						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\">"
+						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine[0][0][0]\">"
 						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-						+ " (" + baclCtr + ")" + "</label>" + "</div>";
+						+ " (" + baclCtr + ")" + "</label>" + "</div>"
+						+ "<input type='hidden' name='bioCellCC0' value='0'>";
 
 				var inputGroupText = "#biologicalActivityGroup" + pValue;
 
@@ -564,7 +571,7 @@
 		}
 
 		function addCCFields(pValue) {
-			console.log(pValue);
+			speciesArr[pValue]++;
 			var buttonAddText = "#chemicalCompoundAdd" + pValue;
 
 			if (pValue == 0) {
@@ -578,7 +585,7 @@
 
 			if (pValue == 0) {
 				var inputChemicalCompound = "<div class=\"input-field col s6 offset-s1\">"
-						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\" name=\"compound[0]\"  >"
+						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\" name=\"compound["+pValue+"]["+speciesArr[pValue]+"]\"  >"
 						+ "<label for=\"chemicalCompound" + ccCtr +"\">Chemical Compound"
 						+ " ("
 						+ ccCtr
@@ -590,7 +597,8 @@
 						+ pValue
 						+ ")\">Chemical Compound<i class=\"material-icons left\">add</i></a>"
 						+ "</div>"
-						+ "<input type='hidden' name='compoundCtr' value='"+ccCtr+"'>";
+						+ "<input type='hidden' name='compoundCtr' value='"+ccCtr+"'>"
+						+ "<input type='hidden' name='lengthCC"+pValue+"' value='"+speciesArr[pValue]+"'>";
 				var inputBiologicalActivity = "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
 						+ "<div class=\"input-field col s6 offset-s2\">"
 						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
@@ -621,7 +629,7 @@
 						inputBiologicalActivity);
 			} else {
 				var inputChemicalCompound = "<div class=\"input-field col s6 offset-s1\">"
-						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\" name=\"compound[0]\">"
+						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\" name=\"compound["+pValue+"]["+speciesArr[pValue]+"]\" >"
 						+ "<label for=\"chemicalCompound" + ccCtr +"\">Chemical Compound"
 						+ " ("
 						+ ccCtr
@@ -634,7 +642,8 @@
 						+ "\" onclick=\"addCCFields("
 						+ pValue
 						+ ")\">Chemical Compound<i class=\"material-icons left\">add</i></a>"
-						+ "</div>";
+						+ "</div>"
+						+ "<input type='hidden' name='lengthCC"+pValue+"' value='"+speciesArr[pValue]+"'>";
 				var inputBiologicalActivity = "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
 						+ "<div class=\"input-field col s6 offset-s2\">"
 						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
@@ -669,6 +678,7 @@
 
 		}
 		function addSFields(pValue) {
+			speciesArr.push(0);
 			var buttonAddText = "#speciesAdd" + pValue;
 
 			if (pValue == 0) {
@@ -686,7 +696,9 @@
 					+ sCtr
 					+ ")\" id=\"speciesPart"
 					+ sCtr
-					+ "\" name=\"plantPart["+sCtr+"]\">"
+					+ "\" name=\"plantPart["
+					+ sCtr
+					+ "]\">"
 					+ "<option value=\"\" disabled selected>Choose plant part</option>"
 					+ "<option value=\"-1\">Others (Please write on the right side)</option>"
 					+ "<c:forEach items='${plantPartsList}' var='plantPartsList'>"
@@ -698,12 +710,17 @@
 					+ "<div class=\"input-field\">"
 					+ "<input id=\"speciesPartOther" + sCtr +"\" type=\"text\" class=\"validate\" disabled required>"
 					+ "<label for=\"speciesPartOther" + sCtr +"\">Other Species Part"
-					+ " (" + sCtr + ")" + "</label>" + "</div>" + "</div>"
+					+ " ("
+					+ sCtr
+					+ ")"
+					+ "</label>"
+					+ "</div>"
+					+ "</div>"
 					+ "<input type='hidden' name='speciesCtr' value='"+sCtr+"'>";
 
 			var inputChemicalCompound = "<div class=\"row\" id=\"chemicalCompoundGroup" + ccCtr + "\">"
 					+ "<div class=\"input-field col s6 offset-s1\">"
-					+ "<input id=\"chemicalCompound" + ccCtr + "\" type=\"text\" class=\"validate\">"
+					+ "<input id=\"chemicalCompound" + ccCtr + "\" type=\"text\" class=\"validate\" name=\"compound["+sCtr+"]["+speciesArr[pValue]+"]\">"
 					+ "<label for=\"chemicalCompound" + ccCtr + "\">Chemical Compound"
 					+ " ("
 					+ ccCtr
@@ -717,6 +734,7 @@
 					+ sCtr
 					+ ")\">Chemical Compound<i class=\"material-icons left\">add</i></a>"
 					+ "</div>"
+					+ "<input type='hidden' name='lengthCC"+sCtr+"' value='"+speciesArr[pValue]+"'>"
 					+ "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
 					+ "<div class=\"input-field col s6 offset-s2\">"
 					+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\">"
@@ -725,9 +743,7 @@
 					+ baclCtr
 					+ ")"
 					+ "</label>"
-					+
-
-					"<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd"
+					+ "<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd"
 					+ ccCtr
 					+ "\" onclick=\"addBAFields("
 					+ ccCtr
