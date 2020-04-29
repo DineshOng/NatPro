@@ -7,6 +7,7 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import jdk.internal.org.xml.sax.SAXException;
 import net.didion.jwnl.JWNL;
 import net.didion.jwnl.data.IndexWord;
 import net.didion.jwnl.data.POS;
@@ -15,6 +16,8 @@ import net.didion.jwnl.data.Word;
 import net.didion.jwnl.dictionary.Dictionary;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -115,7 +118,7 @@ public class Main {
                     JWNL.initialize(new FileInputStream("file_properties.xml"));
                     IndexWord word = null;
                     if(tagged.matches(V)){
-                         word = Dictionary.getInstance().lookupIndexWord(POS.VERB, seedWord);  
+                         word = Dictionary.getInstance().lookupIndexWord(POS.VERB, seedWord);
                     }else if(tagged.matches(P)){
                          word = Dictionary.getInstance().lookupIndexWord(POS.ADVERB, seedWord);
                     }else if(tagged.matches(W)){
@@ -169,7 +172,38 @@ public class Main {
                 //System.out.println(temp);
             }
 
+
+
+
+
             TreeSet<String> matches = new TreeSet<String>();
+
+            DocumentBuilderFactory factory=  DocumentBuilderFactory.newInstance();
+            try {
+                DocumentBuilder builder =  factory.newDocumentBuilder();
+                Document doc = builder.parse("seedOutput/"+e1+"-"+e2+".xml");
+                doc.getDocumentElement().normalize();
+                //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+                NodeList nodeList = doc.getElementsByTagName("Seed");
+                for(int i = 0; i< nodeList.getLength();i++) {
+                    Node nNode = nodeList.item(i);
+                    //System.out.println("Node Name: " + nNode.getNodeName());
+                    if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                        //System.out.println("I am here");
+                        Element eElement = (Element) nNode;
+                        int eCount= eElement.getElementsByTagName("Pattern").getLength();
+                        for(int j=0; j<eCount;j++){
+                            //System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                            matches.add(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                        }
+
+                    }
+                }
+            } catch (ParserConfigurationException | IOException e) {
+                e.printStackTrace();
+            } catch (org.xml.sax.SAXException e) {
+                e.printStackTrace();
+            }
 
             for(String i: Vmatches){
                 for(String j: Pmatches){
@@ -178,7 +212,7 @@ public class Main {
             }
 
             for(String temp: matches){
-                System.out.println(temp);
+                //System.out.println(temp);
             }
 
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
