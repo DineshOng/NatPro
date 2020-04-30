@@ -307,8 +307,6 @@ public class OntoQuery {
 		OntoQuery q = new OntoQuery();
 		// List<Compound> compounds = q.searchCompound("pr");
 //		Compound c = q.getCompound("alstoNerine");
-		System.out.println(q.searchGenus("al").get(0).getGenus());
-		System.out.println(q.searchGenus("al").get(0).getFamily().getFamily());
 	}
 
 	public List<Compound> searchCompound(String Compound) {
@@ -557,7 +555,6 @@ public class OntoQuery {
 								Family familyClass = new Family(familyValue);
 								genusClass.setFamily(familyClass);
 							} catch (Exception e) {
-								System.out.println(e);
 							}
 							values.add(genusClass);
 						}
@@ -571,4 +568,33 @@ public class OntoQuery {
 		return values;
 	}
 
+	public List<Family> searchFamily(String family) {
+		List<Family> values = new ArrayList<Family>();
+
+		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
+		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
+		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Family")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual familyIndiv = (OWLIndividual) jt.next();
+						String familyValue = familyIndiv.getPropertyValue(datatypeProperty_Family).toString();
+						if (familyValue.toLowerCase().contains(family.toLowerCase())) {
+								Family familyClass = new Family(familyValue);
+							values.add(familyClass);
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return values;
+	}
 }

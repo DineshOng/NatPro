@@ -90,6 +90,21 @@
 						</c:forEach>
 					</tbody>
 				</c:when>
+				<c:when test="${searchCategory =='4'}">
+					<thead>
+						<tr>
+							<th>Family</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${familyList}" var="familyList">
+							<tr>
+								<td><a
+									href="ViewPlantServlet?genus=${familyList.getFamily()}">${familyList.getFamily()}</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
 				<c:when test="${searchCategory =='5'}">
 					<thead>
 						<tr>
