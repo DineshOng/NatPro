@@ -50,7 +50,53 @@
 			</form>
 		</div>
 	</div>
-<!--
+	<div>
+		<table class="striped">
+			<c:choose>
+				<c:when test="${searchCategory =='1'}">
+					<thead>
+						<tr>
+							<th>Common Name</th>
+							<th>Scientific Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${medPlantsList}" var="medPlantsList">
+							<tr>
+								<td><a
+									href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
+								<td><c:forEach items="${medPlantsList.getSpecies()}"
+										var="speciesList">
+										<i><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a></i>, </c:forEach></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+				<c:when test="${searchCategory =='2'}">
+					<thead>
+						<tr>
+							<th>Compound</th>
+							<th>Compound Synonym</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${compoundList}" var="compoundList">
+							<tr>
+								<td><a
+									href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundName()}</a></td>
+								<td><c:forEach
+										items="${compoundList.getCompoundSynonyms()}" var="csList">
+										<a
+											href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${csList}
+										</a>, </c:forEach></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+			</c:choose>
+		</table>
+	</div>
+	<!--
 	<div>
 		<table class="striped">
 			<thead>
@@ -72,7 +118,7 @@
 	</div>
 	
   -->
-	<div>
+	<%-- 	<div>
 		<table class="striped">
 			<thead>
 				<tr>
@@ -83,14 +129,19 @@
 			<tbody>
 				<c:forEach items="${compoundList}" var="compoundList">
 					<tr>
-						<td><a href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundName()}</a></td>
-						<td><c:forEach items="${compoundList.getCompoundSynonyms()}" var="csList"><a href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${csList} </a>, </c:forEach></td>
+						<td><a
+							href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundName()}</a></td>
+						<td><c:forEach items="${compoundList.getCompoundSynonyms()}"
+								var="csList">
+								<a
+									href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${csList}
+								</a>, </c:forEach></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 
-	</div>
+	</div> --%>
 
 	<div class="container">
 		<div class="section">
