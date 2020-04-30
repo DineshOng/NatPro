@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -103,13 +104,15 @@ public class AddPlantServlet extends HttpServlet {
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
 
+		
 		if (!request.getParameter("commonPlantName").isBlank()) { // check if common plant name is filled
 			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
 					"_");
+			String commonPlantName = request.getParameter("commonPlantName").trim();
 			// create individual for MedicinalPlant
 			m.addIndiv_MedPlant(commonPlantNameIndiv);
 			// add data property for MedicinalPlant individual
-			m.addDataPropMedPlant(request.getParameter("commonPlantName").trim());
+			m.addDataPropMedPlant(commonPlantName);
 
 			if (!request.getParameter("scientificName").isBlank()) { // check if scientific name is filled
 				String speciesNameIndiv = request.getParameter("scientificName").trim().toLowerCase().replaceAll(" ",
@@ -170,7 +173,7 @@ public class AddPlantServlet extends HttpServlet {
 
 							for (int j = 0; j < compoundCtrMax; j++) {
 								String compound = request.getParameter("compound[" + i + "][" + j + "]");
-								if (!compound.isBlank()) {
+								if (compound!=null && !compound.isBlank()) {
 									String compoundIndiv = cleanCompoundString(compound);
 									// create individual for Compound
 									m.addIndiv_Compound(compoundIndiv);
@@ -226,6 +229,59 @@ public class AddPlantServlet extends HttpServlet {
 				}
 			}
 
+			String[] prepCtr = request.getParameterValues("prepCtr");
+			int prepCtrMax = Integer.parseInt(prepCtr[prepCtr.length - 1]);
+			prepCtrMax++;
+			for (int i = 0; i < prepCtrMax; i++) {
+				String allPreparation = "";
+				String allIllness = "";
+				ArrayList <String> illnessIndivs = new ArrayList<>();
+				if (request.getParameter("preparation[" + i + "]") != null && !request.getParameter("preparation[" + i + "]").isBlank()) {
+					String preparation = request.getParameter("preparation[" + i + "]");
+					allPreparation = allPreparation.concat(preparation+" of "+commonPlantNameIndiv+" ");
+					if (request.getParameter("prepPart[" + i + "]") != null) {
+						String prepPart = request.getParameter("prepPart[" + i + "]");
+						allPreparation = allPreparation.concat(prepPart+" ");
+					}
+
+					String[] illnessCtr = request.getParameterValues("illnessCtr[" + i + "]");
+					int illnessCtrMax = Integer.parseInt(illnessCtr[illnessCtr.length - 1]);
+					illnessCtrMax++;
+					for (int j = 0; j < illnessCtrMax; j++) {
+						if (request.getParameter("illness[" + i + "][" + j + "]") != null) {
+							String illness = request.getParameter("illness[" + i + "][" + j + "]");
+							String illnessIndiv = illness.trim().toLowerCase().replaceAll(" ", "_");
+							// create individual for Illness
+							m.addIndiv_Illness(illnessIndiv);
+							// add data property for Illness individual
+							m.addDataPropIllness(illness);
+							illnessIndivs.add(illnessIndiv);
+							if (!allIllness.isBlank()) {
+								allIllness = allIllness.concat(", " + illness);
+							} else {
+								allIllness = allIllness.concat(illness);
+							}
+
+						}
+					}
+					if (!allIllness.isBlank()) {
+						allPreparation = allPreparation.concat("used for " + allIllness);
+					}
+					System.out.println(allPreparation);
+					String allPreparationIndiv = allPreparation.trim().toLowerCase().replaceAll(" ", "_").replaceAll(",", "");
+					// create individual for Preparation
+					m.addIndiv_Preparation(allPreparationIndiv);
+					// add data property for Preparation individual
+					m.addDataPropPreparation(allPreparation);
+					for(int j=0; j<illnessIndivs.size(); j++) {
+						// add object property Preparation -> Illness
+						m.addObjectTreats(allPreparationIndiv, illnessIndivs.get(j));
+					}
+					// add object property MedicinalPlant -> Preparation
+					m.addObjectHasPreparation(commonPlantNameIndiv, allPreparationIndiv);
+					System.out.println(allPreparationIndiv);
+				}
+			}
 		}
 
 //		System.out.println("Common Name: " + request.getParameter("commonPlantName").trim());
