@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import model.Compound;
+import model.Genus;
 import model.MedicinalPlant;
 import service.OntoQuery;
 
@@ -73,7 +74,10 @@ public class SearchServlet extends HttpServlet {
 		if(request.getParameter("searchCategory").equals("1")) {
 			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
 			request.setAttribute("medPlantsList", medPlants);
-		} else if(request.getParameter("searchCategory").equals("5")) {
+		} else if(request.getParameter("searchCategory").equals("3")){
+			List<Genus> genus = q.searchGenus(searchKey);
+			request.setAttribute("genusList", genus);
+		}else if(request.getParameter("searchCategory").equals("5")) {
 			List<Compound> compoundList = q.searchCompound(searchKey);
 			request.setAttribute("compoundList", compoundList);
 		}

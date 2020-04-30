@@ -2343,3 +2343,528 @@
 2020.03.13 15:12:27.153 PST INFO: 0 ms
  -- TriplePostProcessor.processPossiblyTypedResources()
 2020.03.13 15:12:27.153 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:07:37.882 PST INFO: *** SYSTEM START ***
+2020.04.30 18:07:38.335 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:07:38.397 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:07:38.733 PST INFO:     Completed triple loading after 295 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:07:38.736 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:07:38.736 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:07:38.737 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:07:38.737 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:07:38.737 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:07:38.737 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:07:38.737 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:07:38.738 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:07:38.785 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:07:38.785 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:07:38.787 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:07:38.789 PST INFO: 2 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:07:38.789 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:07:38.790 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:07:38.791 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:07:38.791 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:07:38.791 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:07:38.793 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:07:38.793 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:07:38.794 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:07:38.794 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:08:00.075 PST INFO: *** SYSTEM START ***
+2020.04.30 18:08:00.524 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:08:00.598 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:08:00.927 PST INFO:     Completed triple loading after 287 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:08:00.930 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:08:00.930 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:08:00.931 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:08:00.931 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:08:00.931 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:08:00.931 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:08:00.932 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:08:00.932 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:08:00.974 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:08:00.974 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:08:00.976 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:08:00.977 PST INFO: 1 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:08:00.977 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:08:00.978 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:08:00.978 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:08:00.978 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:08:00.979 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:08:00.981 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:08:00.981 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:08:00.981 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:08:00.981 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:10:35.531 PST INFO: *** SYSTEM START ***
+2020.04.30 18:10:35.979 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:10:36.044 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:10:36.373 PST INFO:     Completed triple loading after 288 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:10:36.375 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:10:36.376 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:10:36.376 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:10:36.376 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:10:36.377 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:10:36.377 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:10:36.377 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:10:36.377 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:10:36.421 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:10:36.421 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:10:36.423 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:10:36.424 PST INFO: 1 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:10:36.424 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:10:36.425 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:10:36.425 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:10:36.426 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:10:36.426 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:10:36.428 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:10:36.428 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:10:36.428 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:10:36.429 PST INFO: Updating underlying frames model in 1 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:11:28.272 PST INFO: *** SYSTEM START ***
+2020.04.30 18:11:28.722 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:11:28.784 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:11:29.112 PST INFO:     Completed triple loading after 288 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:11:29.114 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:11:29.115 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:11:29.115 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:11:29.115 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:11:29.115 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:11:29.116 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:11:29.116 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:11:29.116 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:11:29.151 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:11:29.151 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:11:29.153 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:11:29.153 PST INFO: 0 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:11:29.153 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:11:29.155 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:11:29.155 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:11:29.155 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:11:29.155 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:11:29.157 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:11:29.157 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:11:29.157 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:11:29.158 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:11:39.107 PST INFO: *** SYSTEM START ***
+2020.04.30 18:11:39.555 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:11:39.619 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:11:39.954 PST INFO:     Completed triple loading after 294 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:11:39.957 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:11:39.957 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:11:39.958 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:11:39.958 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:11:39.958 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:11:39.958 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:11:39.959 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:11:39.959 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:11:39.997 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:11:39.997 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:11:39.999 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:11:40.000 PST INFO: 1 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:11:40.000 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:11:40.001 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:11:40.001 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:11:40.001 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:11:40.002 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:11:40.003 PST INFO: 1 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:11:40.004 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:11:40.004 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:11:40.004 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:12:14.199 PST INFO: *** SYSTEM START ***
+2020.04.30 18:12:14.646 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:12:14.708 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:12:15.039 PST INFO:     Completed triple loading after 288 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:12:15.042 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:12:15.042 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:12:15.043 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:12:15.043 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:12:15.043 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:12:15.044 PST INFO: 1 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:12:15.044 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:12:15.044 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:12:15.087 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:12:15.087 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:12:15.089 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:12:15.090 PST INFO: 0 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:12:15.090 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:12:15.091 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:12:15.091 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:12:15.092 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:12:15.092 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:12:15.093 PST INFO: 1 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:12:15.094 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:12:15.094 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:12:15.094 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:23:03.143 PST INFO: *** SYSTEM START ***
+2020.04.30 18:23:03.594 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:23:03.657 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:23:03.984 PST INFO:     Completed triple loading after 285 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:23:03.987 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:23:03.987 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:23:03.987 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:23:03.988 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:23:03.988 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:23:03.988 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:23:03.988 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:23:03.989 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:23:04.024 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:23:04.024 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:23:04.026 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:23:04.027 PST INFO: 1 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:23:04.027 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:23:04.028 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:23:04.029 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:23:04.029 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:23:04.029 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:23:04.031 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:23:04.031 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:23:04.031 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:23:04.031 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:23:33.953 PST INFO: *** SYSTEM START ***
+2020.04.30 18:23:34.395 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:23:34.456 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:23:34.786 PST INFO:     Completed triple loading after 288 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:23:34.789 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:23:34.789 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:23:34.789 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:23:34.790 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:23:34.790 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:23:34.790 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:23:34.790 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:23:34.791 PST INFO: 1 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:23:34.829 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:23:34.830 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:23:34.832 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:23:34.832 PST INFO: 0 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:23:34.832 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:23:34.834 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:23:34.834 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:23:34.834 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:23:34.834 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:23:34.836 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:23:34.837 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:23:34.837 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:23:34.837 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:30:58.787 PST INFO: *** SYSTEM START ***
+2020.04.30 18:30:59.239 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:30:59.300 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:30:59.623 PST INFO:     Completed triple loading after 283 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:30:59.626 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:30:59.626 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:30:59.626 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:30:59.627 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:30:59.627 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:30:59.627 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:30:59.627 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:30:59.628 PST INFO: 1 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:30:59.671 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:30:59.671 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:30:59.673 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:30:59.673 PST INFO: 0 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:30:59.673 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:30:59.675 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:30:59.675 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:30:59.675 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:30:59.675 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:30:59.677 PST INFO: 1 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:30:59.677 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:30:59.678 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:30:59.678 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:32:38.779 PST INFO: *** SYSTEM START ***
+2020.04.30 18:32:39.219 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:32:39.280 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:32:39.612 PST INFO:     Completed triple loading after 291 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:32:39.615 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:32:39.615 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:32:39.615 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:32:39.616 PST INFO: 1 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:32:39.616 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:32:39.616 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:32:39.616 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:32:39.617 PST INFO: 1 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:32:39.654 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:32:39.654 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:32:39.656 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:32:39.656 PST INFO: 0 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:32:39.656 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:32:39.658 PST INFO: 2 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:32:39.658 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:32:39.658 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:32:39.658 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:32:39.660 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:32:39.660 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:32:39.660 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:32:39.660 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:32:58.783 PST INFO: *** SYSTEM START ***
+2020.04.30 18:32:59.238 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:32:59.300 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:32:59.631 PST INFO:     Completed triple loading after 291 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:32:59.634 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:32:59.634 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:32:59.634 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:32:59.634 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:32:59.635 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:32:59.635 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:32:59.635 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:32:59.636 PST INFO: 1 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:32:59.672 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:32:59.673 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:32:59.674 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:32:59.675 PST INFO: 1 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:32:59.675 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:32:59.676 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:32:59.676 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:32:59.677 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:32:59.677 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:32:59.679 PST INFO: 1 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:32:59.679 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:32:59.679 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:32:59.679 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:36:27.781 PST INFO: *** SYSTEM START ***
+2020.04.30 18:36:28.230 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:36:28.291 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:36:28.617 PST INFO:     Completed triple loading after 285 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:36:28.620 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:36:28.620 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:36:28.621 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:36:28.621 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:36:28.621 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:36:28.621 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:36:28.622 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:36:28.622 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:36:28.657 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:36:28.657 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:36:28.659 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:36:28.659 PST INFO: 0 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:36:28.660 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:36:28.661 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:36:28.661 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:36:28.661 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:36:28.662 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:36:28.663 PST INFO: 1 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:36:28.664 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:36:28.664 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:36:28.664 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:36:46.262 PST INFO: *** SYSTEM START ***
+2020.04.30 18:36:46.700 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:36:46.762 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:36:47.093 PST INFO:     Completed triple loading after 289 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:36:47.095 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:36:47.096 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:36:47.096 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:36:47.096 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:36:47.097 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:36:47.097 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:36:47.097 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:36:47.097 PST INFO: 0 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:36:47.135 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:36:47.135 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:36:47.137 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:36:47.138 PST INFO: 1 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:36:47.138 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:36:47.139 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:36:47.139 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:36:47.139 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:36:47.140 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:36:47.141 PST INFO: 1 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:36:47.142 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:36:47.142 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:36:47.142 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:37:44.490 PST INFO: *** SYSTEM START ***
+2020.04.30 18:37:44.933 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:37:44.998 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:37:45.332 PST INFO:     Completed triple loading after 291 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:37:45.335 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:37:45.335 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:37:45.335 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:37:45.336 PST INFO: 0 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:37:45.336 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:37:45.336 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:37:45.336 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:37:45.337 PST INFO: 1 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:37:45.382 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:37:45.382 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:37:45.384 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:37:45.385 PST INFO: 1 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:37:45.385 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:37:45.386 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:37:45.386 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:37:45.387 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:37:45.387 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:37:45.389 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:37:45.389 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:37:45.389 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:37:45.389 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()
+2020.04.30 18:39:18.960 PST INFO: *** SYSTEM START ***
+2020.04.30 18:39:19.406 PST WARNING: [Local Folder Repository] The specified file must be a directory. (C:\Users\eduar\Documents\GitHub\NatPro\NatPro\plugins\edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2020.04.30 18:39:19.467 PST INFO: Loading triples for: file:/C:/Users/eduar/Desktop/OntoNatPro2.owl -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:39:19.806 PST INFO:     Completed triple loading after 299 ms -- ProtegeOWLParser.loadTriples()
+2020.04.30 18:39:19.809 PST INFO: Postprocess: Process entities with incorrect Java type (0 entities) ...  -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:39:19.809 PST INFO: 0 ms
+ -- TriplePostProcessor.processFramesWithWrongJavaType()
+2020.04.30 18:39:19.809 PST INFO: Postprocess: Process metaclasses (3 metaclasses) ...  -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:39:19.810 PST INFO: 1 ms
+ -- TriplePostProcessor.processMetaclasses()
+2020.04.30 18:39:19.810 PST INFO: Postprocess: Process subclasses of rdf:List (1 classes) ...  -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:39:19.810 PST INFO: 0 ms
+ -- TriplePostProcessor.processSubclassesOfRdfList()
+2020.04.30 18:39:19.810 PST INFO: Postprocess: Instances with multiple types (1 instances) ...  -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:39:19.811 PST INFO: 1 ms
+ -- TriplePostProcessor.processInstancesWithMultipleTypes()
+2020.04.30 18:39:19.846 PST INFO: Postprocess: Add inferred superclasses ...  -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:39:19.846 PST INFO: 0 ms
+ -- TriplePostProcessor.processInferredSuperclasses()
+2020.04.30 18:39:19.848 PST INFO: Postprocess: Process orphan classes (14 classes) ...  -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:39:19.848 PST INFO: 0 ms
+ -- TriplePostProcessor.processOrphanClses()
+2020.04.30 18:39:19.848 PST INFO: Postprocess: Generalized Concept Inclusion (0 axioms) ...  -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:39:19.849 PST INFO: 1 ms
+ -- TriplePostProcessor.processGeneralizedConceptInclusions()
+2020.04.30 18:39:19.850 PST INFO: Postprocess: Abstract classes...  -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:39:19.850 PST INFO: 0 ms
+ -- TriplePostProcessor.processAbstractClasses()
+2020.04.30 18:39:19.850 PST INFO: Postprocess: Domain and range of properties...  -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:39:19.852 PST INFO: 2 ms
+ -- TriplePostProcessor.processDomainAndRange()
+2020.04.30 18:39:19.852 PST INFO: Postprocess: Possibly typed entities (1 resources) ...  -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:39:19.852 PST INFO: 0 ms
+ -- TriplePostProcessor.processPossiblyTypedResources()
+2020.04.30 18:39:19.852 PST INFO: Updating underlying frames model in 0 ms -- ProtegeOWLParser.doFinalPostProcessing()

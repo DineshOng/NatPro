@@ -72,7 +72,25 @@
 						</c:forEach>
 					</tbody>
 				</c:when>
-				<c:when test="${searchCategory =='2'}">
+				<c:when test="${searchCategory =='3'}">
+					<thead>
+						<tr>
+							<th>Genus</th>
+							<th>Family</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${genusList}" var="genusList">
+							<tr>
+								<td><a
+									href="ViewPlantServlet?genus=${genusList.getGenus()}">${genusList.getGenus()}</a></td>
+								<td><a
+									href="ViewPlantServlet?genus=${genusList.getFamily().getFamily()}">${genusList.getFamily().getFamily()}</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+				<c:when test="${searchCategory =='5'}">
 					<thead>
 						<tr>
 							<th>Compound</th>

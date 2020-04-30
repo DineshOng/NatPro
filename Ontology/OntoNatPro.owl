@@ -587,7 +587,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#acanthaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
-        <datatypeProperty_Genus>Acanthaceae</datatypeProperty_Genus>
+        <datatypeProperty_Family>Acanthaceae</datatypeProperty_Family>
     </owl:NamedIndividual>
     
 
@@ -1954,7 +1954,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#brassicaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
-        <datatypeProperty_Genus>Brassicaceae</datatypeProperty_Genus>
+        <datatypeProperty_Family>Brassicaceae</datatypeProperty_Family>
     </owl:NamedIndividual>
     
 
@@ -2277,7 +2277,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cycadaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
-        <datatypeProperty_Genus>Cycadaceae</datatypeProperty_Genus>
+        <datatypeProperty_Family>Cycadaceae</datatypeProperty_Family>
     </owl:NamedIndividual>
     
 
@@ -5443,7 +5443,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#meliaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
-        <datatypeProperty_Genus>Meliaceae</datatypeProperty_Genus>
+        <datatypeProperty_Family>Meliaceae</datatypeProperty_Family>
     </owl:NamedIndividual>
     
 
@@ -5608,7 +5608,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#moraceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
-        <datatypeProperty_Genus>Moraceae</datatypeProperty_Genus>
+        <datatypeProperty_Family>Moraceae</datatypeProperty_Family>
     </owl:NamedIndividual>
     
 
@@ -5653,7 +5653,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#myrtaceae">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Family"/>
-        <datatypeProperty_Genus>Myrtaceae</datatypeProperty_Genus>
+        <datatypeProperty_Family>Myrtaceae</datatypeProperty_Family>
     </owl:NamedIndividual>
     
 

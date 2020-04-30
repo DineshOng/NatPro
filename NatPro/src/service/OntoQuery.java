@@ -16,6 +16,8 @@ import edu.stanford.smi.protegex.owl.model.OWLObjectProperty;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
 import model.Compound;
+import model.Family;
+import model.Genus;
 import model.MedicinalPlant;
 import model.Species;
 import model.SpeciesPart;
@@ -25,7 +27,7 @@ public class OntoQuery {
 	OWLModel owlModel;
 
 	public OntoQuery() throws OntologyLoadException {
-		/* Change local path */ 
+		/* Change local path */
 //		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
 		owlPath = owlPath.replace("\\", "/");
@@ -177,8 +179,8 @@ public class OntoQuery {
 		return compounds;
 
 	}
-	
-	public List<String> getAllPlantParts(){
+
+	public List<String> getAllPlantParts() {
 		List<String> speciesParts = new ArrayList<String>();
 		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
 
@@ -199,16 +201,16 @@ public class OntoQuery {
 
 		}
 		return speciesParts;
-		
+
 	}
-	
+
 	public Compound getCompound(String Compound) {
-		
+
 		Compound compound = null;
-		
+
 		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
 		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
-		
+
 		RDFProperty dp_pubCID = owlModel.getRDFProperty("datatypeProperty_PubCID");
 		RDFProperty dp_molForm = owlModel.getRDFProperty("datatypeProperty_MolForm");
 		RDFProperty dp_molWeight = owlModel.getRDFProperty("datatypeProperty_MolWeight");
@@ -216,18 +218,17 @@ public class OntoQuery {
 		RDFProperty dp_inchi = owlModel.getRDFProperty("datatypeProperty_InChI");
 		RDFProperty dp_inchikey = owlModel.getRDFProperty("datatypeProperty_InChIkey");
 		RDFProperty dp_iupac = owlModel.getRDFProperty("datatypeProperty_IUPACName");
-		
+
 		RDFProperty dp_xlogp = owlModel.getRDFProperty("datatypeProperty_XLogP");
 		RDFProperty dp_mass = owlModel.getRDFProperty("datatypeProperty_Mass");
 		RDFProperty dp_tpsa = owlModel.getRDFProperty("datatypeProperty_TPSA");
 		RDFProperty dp_complexity = owlModel.getRDFProperty("datatypeProperty_Complexity");
-		
+
 		RDFProperty dp_charge = owlModel.getRDFProperty("datatypeProperty_Charge");
 		RDFProperty dp_donor = owlModel.getRDFProperty("datatypeProperty_HBondDonorCount");
 		RDFProperty dp_accept = owlModel.getRDFProperty("datatypeProperty_HBondAcceptorCount");
 		RDFProperty dp_rotbont = owlModel.getRDFProperty("datatypeProperty_RotatableBondCount");
-		
-		
+
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
 		for (Iterator it = classes.iterator(); it.hasNext();) {
 			OWLNamedClass cls = (OWLNamedClass) it.next();
@@ -238,62 +239,59 @@ public class OntoQuery {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
 						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
-						
+
 						if (compoundIndiv.equalsIgnoreCase(Compound.toLowerCase())) {
 							System.out.println(compoundIndiv);
 							compound = new Compound(compoundIndiv);
-							
+
 							// get compound synonyms
 							List<String> synonyms = new ArrayList<String>();
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
 								String syno = jtt.next().toString();
 								System.out.println(syno);
-								if(!syno.equalsIgnoreCase(compoundIndiv))
+								if (!syno.equalsIgnoreCase(compoundIndiv))
 									synonyms.add(syno);
 							}
 							compound.setCompoundSynonyms(synonyms);
-							
-							
-							if(!individual.getPropertyValue(dp_pubCID).toString().isEmpty())
+
+							if (!individual.getPropertyValue(dp_pubCID).toString().isEmpty())
 								compound.setPubCID(individual.getPropertyValue(dp_pubCID).toString());
-							if(!individual.getPropertyValue(dp_molForm).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_molForm).toString().isEmpty())
 								compound.setMolForm(individual.getPropertyValue(dp_molForm).toString());
-								
-							
-							if(!individual.getPropertyValue(dp_molWeight).toString().isEmpty())
+
+							if (!individual.getPropertyValue(dp_molWeight).toString().isEmpty())
 								compound.setMolWeight(individual.getPropertyValue(dp_molWeight).toString());
-							if(!individual.getPropertyValue(dp_canSMILES).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_canSMILES).toString().isEmpty())
 								compound.setCanSMILES(individual.getPropertyValue(dp_canSMILES).toString());
-							if(!individual.getPropertyValue(dp_inchi).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_inchi).toString().isEmpty())
 								compound.setInchi(individual.getPropertyValue(dp_inchi).toString());
-							if(!individual.getPropertyValue(dp_inchikey).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_inchikey).toString().isEmpty())
 								compound.setInchikey(individual.getPropertyValue(dp_inchikey).toString());
-							if(!individual.getPropertyValue(dp_iupac).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_iupac).toString().isEmpty())
 								compound.setIupac(individual.getPropertyValue(dp_iupac).toString());
-							
-							if(!individual.getPropertyValue(dp_xlogp).toString().isEmpty())
+
+							if (!individual.getPropertyValue(dp_xlogp).toString().isEmpty())
 								compound.setXlogp(individual.getPropertyValue(dp_xlogp).toString());
-							if(!individual.getPropertyValue(dp_mass).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_mass).toString().isEmpty())
 								compound.setMass(individual.getPropertyValue(dp_mass).toString());
-							if(!individual.getPropertyValue(dp_tpsa).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_tpsa).toString().isEmpty())
 								compound.setTpsa(individual.getPropertyValue(dp_tpsa).toString());
-							if(!individual.getPropertyValue(dp_complexity).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_complexity).toString().isEmpty())
 								compound.setComplexity(individual.getPropertyValue(dp_complexity).toString());
-							
-							if(!individual.getPropertyValue(dp_charge).toString().isEmpty())
+
+							if (!individual.getPropertyValue(dp_charge).toString().isEmpty())
 								compound.setCharge(individual.getPropertyValue(dp_charge).toString());
-							if(!individual.getPropertyValue(dp_donor).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_donor).toString().isEmpty())
 								compound.sethBondDonor(individual.getPropertyValue(dp_donor).toString());
-							if(!individual.getPropertyValue(dp_accept).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_accept).toString().isEmpty())
 								compound.sethBondAcceptor(individual.getPropertyValue(dp_accept).toString());
-							if(!individual.getPropertyValue(dp_rotbont).toString().isEmpty())
+							if (!individual.getPropertyValue(dp_rotbont).toString().isEmpty())
 								compound.setRotBondCount(individual.getPropertyValue(dp_rotbont).toString());
-							
-							
+
 							System.out.println(compound.getMolForm());
 							System.out.println(compound.getCanSMILES());
 							System.out.println(compound.getMolWeight());
-							
+
 							return compound;
 						}
 					} catch (Exception e) {
@@ -301,33 +299,34 @@ public class OntoQuery {
 				}
 			}
 		}
-		
+
 		return null;
 	}
-	
-	
+
 	public static void main(String[] args) throws OntologyLoadException {
 		OntoQuery q = new OntoQuery();
-		//List<Compound> compounds = q.searchCompound("pr");
-		Compound c = q.getCompound("alstoNerine");
+		// List<Compound> compounds = q.searchCompound("pr");
+//		Compound c = q.getCompound("alstoNerine");
+		System.out.println(q.searchGenus("al").get(0).getGenus());
+		System.out.println(q.searchGenus("al").get(0).getFamily().getFamily());
 	}
-	
+
 	public List<Compound> searchCompound(String Compound) {
-		if(Compound.contains("α")) {
-			Compound = Compound.replaceAll("α","alpha");
-		} else if(Compound.contains("β")) {
-			Compound = Compound.replaceAll("β","beta");
-		} else if(Compound.contains("γ")) {
-			Compound = Compound.replaceAll("γ","gamma");
-		} 
-		
+		if (Compound.contains("α")) {
+			Compound = Compound.replaceAll("α", "alpha");
+		} else if (Compound.contains("β")) {
+			Compound = Compound.replaceAll("β", "beta");
+		} else if (Compound.contains("γ")) {
+			Compound = Compound.replaceAll("γ", "gamma");
+		}
+
 		List<Compound> values = new ArrayList<Compound>();
-		
+
 		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
 		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
-		
+
 		Boolean found = false;
-		
+
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
 		for (Iterator it = classes.iterator(); it.hasNext();) {
 			OWLNamedClass cls = (OWLNamedClass) it.next();
@@ -339,46 +338,45 @@ public class OntoQuery {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
 						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
-						
+
 						Compound mp = null;
-						
+
 						// EDIT THIS CODE FOR OPTIMAL SEARCH FUNCTION
 						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase())) {
 							System.out.println(compoundIndiv);
 							mp = new Compound(compoundIndiv);
 							List<String> synonyms = new ArrayList<String>();
-							
+
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
-								//if(!jtt.next().toString().isEmpty()) {
-									String syno = jtt.next().toString();
-									System.out.println(syno + " " + compoundIndiv);
-									mp = new Compound(compoundIndiv);
-									System.out.println(syno);
-									synonyms.add(syno);
-								//}
+								// if(!jtt.next().toString().isEmpty()) {
+								String syno = jtt.next().toString();
+								System.out.println(syno + " " + compoundIndiv);
+								mp = new Compound(compoundIndiv);
+								System.out.println(syno);
+								synonyms.add(syno);
+								// }
 							}
-							
+
 							mp.setCompoundSynonyms(synonyms);
 							found = true;
 							values.add(mp);
 						}
-						
-						if(!found) {
-							synonym:
-							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
-								//if(!jtt.next().toString().isEmpty()) {
-									String syno = jtt.next().toString();
-									if (syno.toLowerCase().contains(Compound.toLowerCase())) {
-										System.out.println(syno + " " + compoundIndiv);
-										mp = new Compound(compoundIndiv);
-										List<String> synonyms = new ArrayList<String>();
-										synonyms.add(syno);
-										mp.setCompoundSynonyms(synonyms);
-										found = true;
-										values.add(mp);
-										//break synonym;
-									}
-								//}
+
+						if (!found) {
+							synonym: for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
+								// if(!jtt.next().toString().isEmpty()) {
+								String syno = jtt.next().toString();
+								if (syno.toLowerCase().contains(Compound.toLowerCase())) {
+									System.out.println(syno + " " + compoundIndiv);
+									mp = new Compound(compoundIndiv);
+									List<String> synonyms = new ArrayList<String>();
+									synonyms.add(syno);
+									mp.setCompoundSynonyms(synonyms);
+									found = true;
+									values.add(mp);
+									// break synonym;
+								}
+								// }
 							}
 						}
 					} catch (Exception e) {
@@ -387,9 +385,9 @@ public class OntoQuery {
 				}
 			}
 		}
-		
+
 		System.out.println(values.size());
-		
+
 		return values;
 	}
 
@@ -410,10 +408,10 @@ public class OntoQuery {
 							System.out.println(medPlantIndiv);
 							MedicinalPlant mp = new MedicinalPlant(medPlantIndiv);
 //							try {
-								// get scientific name/synonyms
-								ArrayList<Species> species = new ArrayList<Species>();
-								species.addAll(getSpeciesList(individual));
-								mp.setSpecies(species);
+							// get scientific name/synonyms
+							ArrayList<Species> species = new ArrayList<Species>();
+							species.addAll(getSpeciesList(individual));
+							mp.setSpecies(species);
 //							} catch (Exception e) {
 //								System.err.println("This specie has no synonym/s");
 //							}
@@ -425,7 +423,7 @@ public class OntoQuery {
 							values.add(mp);
 						}
 					} catch (Exception e) {
-						
+
 					}
 				}
 			}
@@ -448,7 +446,7 @@ public class OntoQuery {
 		// This is for entities from OntoPHerb, synonyms as datatype prop
 		for (Iterator it = speciesCol.iterator(); it.hasNext();) {
 			String synonym = it.next().toString();
-			if (!synonym.isEmpty()) {				
+			if (!synonym.isEmpty()) {
 				Species sp = new Species(synonym);
 				species.add(sp);
 			}
@@ -508,7 +506,6 @@ public class OntoQuery {
 	}
 
 	public ArrayList<Compound> getCompoundList(OWLIndividual SpeciesPart) {
-
 		RDFProperty hasCompound = owlModel.getRDFProperty("hasCompound");
 		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
 		ArrayList<Compound> compounds = new ArrayList<Compound>();
@@ -535,5 +532,43 @@ public class OntoQuery {
 		return compounds;
 	}
 
-	
+	public List<Genus> searchGenus(String genus) {
+		List<Genus> values = new ArrayList<Genus>();
+
+		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
+		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
+		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Genus")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual genusIndiv = (OWLIndividual) jt.next();
+						String genusValue = genusIndiv.getPropertyValue(datatypeProperty_Genus).toString();
+						if (genusValue.toLowerCase().contains(genus.toLowerCase())) {
+							Genus genusClass = new Genus(genusValue);
+							try {
+								OWLIndividual familyIndiv = (OWLIndividual) genusIndiv
+										.getPropertyValue(belongsToFamily);
+								String familyValue = familyIndiv.getPropertyValue(datatypeProperty_Family).toString();
+								Family familyClass = new Family(familyValue);
+								genusClass.setFamily(familyClass);
+							} catch (Exception e) {
+								System.out.println(e);
+							}
+							values.add(genusClass);
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return values;
+	}
+
 }
