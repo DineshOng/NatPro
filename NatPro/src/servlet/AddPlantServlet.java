@@ -104,7 +104,6 @@ public class AddPlantServlet extends HttpServlet {
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
 
-		
 		if (!request.getParameter("commonPlantName").isBlank()) { // check if common plant name is filled
 			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
 					"_");
@@ -173,7 +172,7 @@ public class AddPlantServlet extends HttpServlet {
 
 							for (int j = 0; j < compoundCtrMax; j++) {
 								String compound = request.getParameter("compound[" + i + "][" + j + "]");
-								if (compound!=null && !compound.isBlank()) {
+								if (compound != null && !compound.isBlank()) {
 									String compoundIndiv = cleanCompoundString(compound);
 									// create individual for Compound
 									m.addIndiv_Compound(compoundIndiv);
@@ -195,9 +194,11 @@ public class AddPlantServlet extends HttpServlet {
 											m.addDataPropBiologicalActivity(bioAct);
 											// add object property Compound -> BiologicalActivity
 											m.addObjectHasBiologicalActivity(compoundIndiv, bioActIndiv);
-											String cellLine = request.getParameter("cellLine[" + i + "][" + j + "][" + k + "]");
+											String cellLine = request
+													.getParameter("cellLine[" + i + "][" + j + "][" + k + "]");
 											if (!cellLine.isBlank()) {
-												String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ", "_");
+												String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ",
+														"_");
 												// create individual for CellLine
 												m.addIndiv_CellLine(cellLineIndiv);
 												// add data property for CellLine individual
@@ -221,7 +222,7 @@ public class AddPlantServlet extends HttpServlet {
 			locationNames = request.getParameterValues("location");
 			for (int i = 0; i < locationNames.length; i++) {
 				if (!locationNames[i].isBlank()) {
-					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(" ", "_");
+					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(", ", " ").replaceAll(",", " ").replaceAll(" ", "_");
 					m.addIndiv_Location(locationNameIndiv);
 					m.addDataPropLocation(locationNames[i].trim());
 
@@ -235,13 +236,14 @@ public class AddPlantServlet extends HttpServlet {
 			for (int i = 0; i < prepCtrMax; i++) {
 				String allPreparation = "";
 				String allIllness = "";
-				ArrayList <String> illnessIndivs = new ArrayList<>();
-				if (request.getParameter("preparation[" + i + "]") != null && !request.getParameter("preparation[" + i + "]").isBlank()) {
+				ArrayList<String> illnessIndivs = new ArrayList<>();
+				if (request.getParameter("preparation[" + i + "]") != null
+						&& !request.getParameter("preparation[" + i + "]").isBlank()) {
 					String preparation = request.getParameter("preparation[" + i + "]");
-					allPreparation = allPreparation.concat(preparation+" of "+commonPlantNameIndiv+" ");
+					allPreparation = allPreparation.concat(preparation + " of " + commonPlantNameIndiv + " ");
 					if (request.getParameter("prepPart[" + i + "]") != null) {
 						String prepPart = request.getParameter("prepPart[" + i + "]");
-						allPreparation = allPreparation.concat(prepPart+" ");
+						allPreparation = allPreparation.concat(prepPart + " ");
 					}
 
 					String[] illnessCtr = request.getParameterValues("illnessCtr[" + i + "]");
@@ -268,12 +270,13 @@ public class AddPlantServlet extends HttpServlet {
 						allPreparation = allPreparation.concat("used for " + allIllness);
 					}
 					System.out.println(allPreparation);
-					String allPreparationIndiv = allPreparation.trim().toLowerCase().replaceAll(" ", "_").replaceAll(",", "");
+					String allPreparationIndiv = allPreparation.trim().toLowerCase().replaceAll(" ", "_")
+							.replaceAll(",", "");
 					// create individual for Preparation
 					m.addIndiv_Preparation(allPreparationIndiv);
 					// add data property for Preparation individual
 					m.addDataPropPreparation(allPreparation);
-					for(int j=0; j<illnessIndivs.size(); j++) {
+					for (int j = 0; j < illnessIndivs.size(); j++) {
 						// add object property Preparation -> Illness
 						m.addObjectTreats(allPreparationIndiv, illnessIndivs.get(j));
 					}

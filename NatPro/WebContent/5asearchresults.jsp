@@ -66,8 +66,10 @@
 								<td><a
 									href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
 								<td><c:forEach items="${medPlantsList.getSpecies()}"
-										var="speciesList">
-										<i><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a></i>, </c:forEach></td>
+										var="speciesList" varStatus="loop">
+										<i><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a></i>
+										<c:if test="${!loop.last}">, </c:if>
+									</c:forEach></td>
 							</tr>
 						</c:forEach>
 					</tbody>
