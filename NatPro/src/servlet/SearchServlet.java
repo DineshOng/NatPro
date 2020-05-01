@@ -74,6 +74,7 @@ public class SearchServlet extends HttpServlet {
 		OntoQuery q = new OntoQuery();
 		if (request.getParameter("searchCategory").equals("1")) {
 			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
+//			System.out.println(medPlants.get(0).getPreparations().get(0).getIllness());
 			request.setAttribute("medPlantsList", medPlants);
 		} else if (request.getParameter("searchCategory").equals("3")) {
 			List<Genus> genus = q.searchGenus(searchKey);

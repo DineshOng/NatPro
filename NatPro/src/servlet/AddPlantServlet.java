@@ -222,7 +222,8 @@ public class AddPlantServlet extends HttpServlet {
 			locationNames = request.getParameterValues("location");
 			for (int i = 0; i < locationNames.length; i++) {
 				if (!locationNames[i].isBlank()) {
-					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(", ", " ").replaceAll(",", " ").replaceAll(" ", "_");
+					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(", ", " ")
+							.replaceAll(",", " ").replaceAll(" ", "_");
 					m.addIndiv_Location(locationNameIndiv);
 					m.addDataPropLocation(locationNames[i].trim());
 
@@ -236,6 +237,7 @@ public class AddPlantServlet extends HttpServlet {
 			for (int i = 0; i < prepCtrMax; i++) {
 				String allPreparation = "";
 				String allIllness = "";
+				String prepPartIndiv = "";
 				ArrayList<String> illnessIndivs = new ArrayList<>();
 				if (request.getParameter("preparation[" + i + "]") != null
 						&& !request.getParameter("preparation[" + i + "]").isBlank()) {
@@ -243,6 +245,7 @@ public class AddPlantServlet extends HttpServlet {
 					allPreparation = allPreparation.concat(preparation + " of " + commonPlantNameIndiv + " ");
 					if (request.getParameter("prepPart[" + i + "]") != null) {
 						String prepPart = request.getParameter("prepPart[" + i + "]");
+						prepPartIndiv = prepPart.trim().toLowerCase().replaceAll(" ", "_");
 						allPreparation = allPreparation.concat(prepPart + " ");
 					}
 
@@ -282,8 +285,13 @@ public class AddPlantServlet extends HttpServlet {
 					}
 					// add object property MedicinalPlant -> Preparation
 					m.addObjectHasPreparation(commonPlantNameIndiv, allPreparationIndiv);
+					if (!prepPartIndiv.equals("")) {
+						// add object property Preparation -> PlantPart
+						m.addObjectUtilizedPart(allPreparationIndiv, prepPartIndiv);
+					}
 					System.out.println(allPreparationIndiv);
 				}
+
 			}
 		}
 

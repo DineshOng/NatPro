@@ -19,6 +19,7 @@ import model.Compound;
 import model.Family;
 import model.Genus;
 import model.MedicinalPlant;
+import model.Preparation;
 import model.Species;
 import model.SpeciesPart;
 
@@ -30,6 +31,7 @@ public class OntoQuery {
 		/* Change local path */
 //		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+//		String owlPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\Ontology\\OntoNatPro.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -403,20 +405,28 @@ public class OntoQuery {
 						String medPlantIndiv = individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString();
 						// EDIT THIS CODE FOR OPTIMAL SEARCH FUNCTION
 						if (medPlantIndiv.toLowerCase().contains(MedicinalPlant.toLowerCase())) {
-							System.out.println(medPlantIndiv);
+//							System.err.println(medPlantIndiv);
+							System.out.println(individual.getBrowserText());
 							MedicinalPlant mp = new MedicinalPlant(medPlantIndiv);
-//							try {
-							// get scientific name/synonyms
+
+////							 get scientific name/synonyms
 							ArrayList<Species> species = new ArrayList<Species>();
-							species.addAll(getSpeciesList(individual));
+							try {
+								species.addAll(getSpeciesList(individual));
+							} catch (Exception e) {
+								System.err.println(e);
+							}
 							mp.setSpecies(species);
-//							} catch (Exception e) {
-//								System.err.println("This specie has no synonym/s");
-//							}
+
 							// get locations
 							ArrayList<String> locations = new ArrayList<String>();
 							locations.addAll(getLocations(medPlantIndiv));
 							mp.setLocations(locations);
+							
+							// get preparations
+							ArrayList<Preparation> preparations = new ArrayList<Preparation>();
+							preparations.addAll(getPreparationList(individual));
+							mp.setPreparations(preparations);;
 
 							values.add(mp);
 						}
@@ -428,6 +438,8 @@ public class OntoQuery {
 		}
 		return values;
 	}
+	
+	
 
 	public ArrayList<Species> getSpeciesList(OWLIndividual MedicinalPlant) {
 		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
@@ -447,6 +459,7 @@ public class OntoQuery {
 			if (!synonym.isEmpty()) {
 				Species sp = new Species(synonym);
 				species.add(sp);
+				System.out.println(synonym);
 			}
 		}
 
@@ -471,7 +484,7 @@ public class OntoQuery {
 				} catch (Exception e) {
 					System.err.println("No Genus");
 				}
-				System.out.println(sp.getSpecie());
+//				System.out.println(sp.getSpecie());
 				species.add(sp);
 			}
 		}
@@ -497,7 +510,11 @@ public class OntoQuery {
 			OWLIndividual plantPartIndiv = (OWLIndividual) speciesPartIndiv.getPropertyValue(hasPlantPart);
 			// Get datatype property from hasPlantPart object
 			SpeciesPart spp = new SpeciesPart(plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString());
-			spp.setCompounds(getCompoundList(speciesPartIndiv));
+			try {
+				spp.setCompounds(getCompoundList(speciesPartIndiv));
+			} catch (Exception e) {
+				System.err.println("no compound");
+			}
 			speciesParts.add(spp);
 		}
 		return speciesParts;
@@ -526,10 +543,41 @@ public class OntoQuery {
 			}
 			compound.setCompoundSynonyms(compoundSynonyms);
 			compounds.add(compound);
+			System.out.println(compound);
 		}
 		return compounds;
 	}
 
+	public ArrayList<Preparation> getPreparationList(OWLIndividual MedicinalPlant) {
+		RDFProperty hasPreparation = owlModel.getRDFProperty("hasPreparation");
+		RDFProperty treats = owlModel.getRDFProperty("treats");
+		RDFProperty utilizedPart = owlModel.getRDFProperty("utilizedPart");
+		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
+		RDFProperty datatypeProperty_Illness = owlModel.getRDFProperty("datatypeProperty_Illness");
+		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
+		ArrayList<Preparation> preparations = new ArrayList<Preparation>();
+
+		Collection prepCol = MedicinalPlant.getPropertyValues(hasPreparation);
+		for (Iterator it = prepCol.iterator(); it.hasNext();) {
+			OWLIndividual prepIndiv = (OWLIndividual) it.next();
+			String prep = prepIndiv.getPropertyValue(datatypeProperty_Preparation).toString();
+			Preparation preparation = new Preparation(prep);
+			OWLIndividual utilizedPartIndiv = (OWLIndividual) prepIndiv.getPropertyValue(utilizedPart);
+			String utilPart = utilizedPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString();
+			preparation.setUtilizedPlantPart(utilPart);
+			ArrayList<String> illnessList = new ArrayList<String>();
+			Collection illnessCol = prepIndiv.getPropertyValues(treats);
+			for (Iterator jt = illnessCol.iterator(); jt.hasNext();) {
+				OWLIndividual illnessIndiv = (OWLIndividual) jt.next();
+				String illness = illnessIndiv.getPropertyValue(datatypeProperty_Illness).toString();
+				illnessList.add(illness);
+			}
+			preparation.setIllness(illnessList);
+			preparations.add(preparation);
+		}
+		return preparations;
+	}
+	
 	public List<Genus> searchGenus(String genus) {
 		List<Genus> values = new ArrayList<Genus>();
 
@@ -585,7 +633,7 @@ public class OntoQuery {
 						OWLIndividual familyIndiv = (OWLIndividual) jt.next();
 						String familyValue = familyIndiv.getPropertyValue(datatypeProperty_Family).toString();
 						if (familyValue.toLowerCase().contains(family.toLowerCase())) {
-								Family familyClass = new Family(familyValue);
+							Family familyClass = new Family(familyValue);
 							values.add(familyClass);
 						}
 					} catch (Exception e) {

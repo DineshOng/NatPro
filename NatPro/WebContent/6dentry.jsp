@@ -144,18 +144,23 @@
 							</tr>
 							<tr>
 								<th>Preparation</th>
-								<th>Illness</th>
-								<th>Body Part</th>
-								<th>Plant Part</th>
+								<th>Utilized Plant Part</th>
+								<th>Illness</th>								
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>preparation</td>
-								<td>illness</td>
-								<td>body part</td>
-								<td>plant part</td>
-							</tr>
+							<!-- medPlants.get(0).getPreparations().get(0).getPreparation() -->
+							<c:forEach items="${medPlantsList.get(0).getPreparations()}"
+								var="prepList">
+								<c:forEach items="${prepList.getIllness()}"
+									var="illnessList">
+									<tr>
+										<td>${prepList.getPreparation()}</td>
+										<td>${prepList.getUtilizedPlantPart()}</td>
+										<td>${illnessList}</td>										
+									</tr>
+								</c:forEach>
+							</c:forEach>
 						</tbody>
 					</table>
 				</div>
@@ -180,17 +185,27 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>Structure</td>
-								<td>Name</td>
-								<td>Formula</td>
-								<td>Molecular Weight</td>
-								<td>XLoGP</td>
-								<td>TPSA</td>
-								<td># HBA</td>
-								<td># HDB</td>
-								<td># Rotatable Bonds</td>
-							</tr>
+							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
+								var="speciesList">
+								<c:forEach items="${speciesList.getSpeciesParts()}"
+									var="speciesPartList">
+									<c:forEach items="${speciesPartList.getCompounds()}"
+										var="compoundsList">
+										<tr>
+											<td></td>
+											<td>${compoundsList.getCompoundName()}</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</c:forEach>
+								</c:forEach>
+							</c:forEach>
+
 						</tbody>
 					</table>
 				</div>

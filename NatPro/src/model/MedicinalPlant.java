@@ -6,6 +6,7 @@ public class MedicinalPlant {
 	String medicinalPlant;
 	ArrayList<Species> species;
 	ArrayList<String> locations;
+	ArrayList<Preparation> preparations;
 
 	public MedicinalPlant(String medicinalPlant) {
 		super();
@@ -35,5 +36,16 @@ public class MedicinalPlant {
 		this.locations = locations;
 	}
 
+	public ArrayList<Preparation> getPreparations() {
+		return preparations;
+	}
+
+	public void setPreparations(ArrayList<Preparation> preparations) {
+		this.preparations = preparations;
+	}
+	
+	
+
+	
 
 }

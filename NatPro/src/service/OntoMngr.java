@@ -39,7 +39,7 @@ public class OntoMngr {
 
 	// OWLObjectProperty
 	OWLObjectProperty isLocatedIn, hasScientificName, belongsToGenus, belongsToFamily, hasChildPlantPart, hasPlantPart,
-			hasCompound, hasBiologicalActivity, affects, hasPreparation, treats;
+			hasCompound, hasBiologicalActivity, affects, hasPreparation, treats, utilizedPart;
 
 	public OntoMngr() throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// loadOntology();
@@ -195,7 +195,7 @@ public class OntoMngr {
 
 	public void addDataPropSpecies(String speciesValue) throws OWLOntologyStorageException {
 		// Creating Data Property, Range, and Value
-		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Synoynm", pm);
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Synonym", pm);
 		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
 		owlManager.addAxiom(owlOntology, rangeAxiom);
 		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, speciesIndiv, speciesValue);
@@ -419,6 +419,16 @@ public class OntoMngr {
 		illnessIndiv = owlFact.getOWLNamedIndividual("#" + illness, pm);
 		treats = owlFact.getOWLObjectProperty("#treats", pm);
 		objectAssertion = owlFact.getOWLObjectPropertyAssertionAxiom(treats, preparationIndiv, illnessIndiv);
+		axiomObjectProp = new AddAxiom(owlOntology, objectAssertion);
+		owlManager.applyChange(axiomObjectProp);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addObjectUtilizedPart(String preparation, String plantPart) throws OWLOntologyStorageException {
+		preparationIndiv = owlFact.getOWLNamedIndividual("#" + preparation, pm);
+		plantPartIndiv = owlFact.getOWLNamedIndividual("#" + plantPart, pm);
+		utilizedPart = owlFact.getOWLObjectProperty("#utilizedPart", pm);
+		objectAssertion = owlFact.getOWLObjectPropertyAssertionAxiom(utilizedPart, preparationIndiv, plantPartIndiv);
 		axiomObjectProp = new AddAxiom(owlOntology, objectAssertion);
 		owlManager.applyChange(axiomObjectProp);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
