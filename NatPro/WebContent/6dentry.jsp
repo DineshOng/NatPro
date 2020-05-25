@@ -27,16 +27,17 @@
 		<div class="row">
 			<div class="col s12">
 				<ul class="tabs">
-					<li class="tab col s2"><a href="#taxInfo">Taxonomic
+					<li class="tab col"><a href="#taxInfo">Taxonomic
 							Information</a></li>
-					<li class="tab col s2"><a href="#plantName">Scientific/Common
+					<li class="tab col"><a href="#plantName">Scientific/Common
 							Name(s)</a></li>
-					<li class="tab col s2"><a href="#location">Location(s)</a></li>
-					<li class="tab col s2"><a href="#bioAct">Biological
+					<li class="tab col"><a href="#location">Location(s)</a></li>
+					<li class="tab col"><a href="#bioAct">Biological
 							Activities</a></li>
-					<li class="tab col s2"><a href="#prep">Preparation(s)</a></li>
-					<li class="tab col s2"><a href="#chemComp">Chemical
+					<li class="tab col"><a href="#prep">Preparation(s)</a></li>
+					<li class="tab col"><a href="#chemComp">Chemical
 							Compound(s)</a></li>
+					<li class="tab col"><a href="#photos">Photos</a></li>
 				</ul>
 			</div>
 			<div id="taxInfo" class="row center">
@@ -210,6 +211,13 @@
 					</table>
 				</div>
 			</div>
+			<div id="photos" class="row center">
+				<div class="col s6 offset-s3">
+					<c:forEach items="${photos}" var="item">
+				    	<img src="${item}">
+					</c:forEach>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -234,7 +242,11 @@
 			</div>
 		</div>
 	</div>
-
+	
+	
+	
+	
+	
 	<%@include file="includeFooter.html"%>
 	<%@include file="includeScripts.html"%>
 	<script>
@@ -242,5 +254,7 @@
 			$('.tabs').tabs();
 		});
 	</script>
+	
+	
 </body>
 </html>

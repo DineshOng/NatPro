@@ -29,8 +29,8 @@ public class OntoQuery {
 
 	public OntoQuery() throws OntologyLoadException {
 		/* Change local path */
-//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
-		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+		//String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
 //		String owlPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\Ontology\\OntoNatPro.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
@@ -250,45 +250,74 @@ public class OntoQuery {
 							List<String> synonyms = new ArrayList<String>();
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
 								String syno = jtt.next().toString();
-								System.out.println(syno);
-								if (!syno.equalsIgnoreCase(compoundIndiv))
+								System.out.println("dis>" + syno);
+								//if (!syno.equalsIgnoreCase(compoundIndiv))
 									synonyms.add(syno);
 							}
 							compound.setCompoundSynonyms(synonyms);
-
-							if (!individual.getPropertyValue(dp_pubCID).toString().isEmpty())
-								compound.setPubCID(individual.getPropertyValue(dp_pubCID).toString());
-							if (!individual.getPropertyValue(dp_molForm).toString().isEmpty())
-								compound.setMolForm(individual.getPropertyValue(dp_molForm).toString());
-
-							if (!individual.getPropertyValue(dp_molWeight).toString().isEmpty())
-								compound.setMolWeight(individual.getPropertyValue(dp_molWeight).toString());
-							if (!individual.getPropertyValue(dp_canSMILES).toString().isEmpty())
-								compound.setCanSMILES(individual.getPropertyValue(dp_canSMILES).toString());
-							if (!individual.getPropertyValue(dp_inchi).toString().isEmpty())
-								compound.setInchi(individual.getPropertyValue(dp_inchi).toString());
-							if (!individual.getPropertyValue(dp_inchikey).toString().isEmpty())
-								compound.setInchikey(individual.getPropertyValue(dp_inchikey).toString());
-							if (!individual.getPropertyValue(dp_iupac).toString().isEmpty())
-								compound.setIupac(individual.getPropertyValue(dp_iupac).toString());
-
-							if (!individual.getPropertyValue(dp_xlogp).toString().isEmpty())
-								compound.setXlogp(individual.getPropertyValue(dp_xlogp).toString());
-							if (!individual.getPropertyValue(dp_mass).toString().isEmpty())
-								compound.setMass(individual.getPropertyValue(dp_mass).toString());
-							if (!individual.getPropertyValue(dp_tpsa).toString().isEmpty())
-								compound.setTpsa(individual.getPropertyValue(dp_tpsa).toString());
-							if (!individual.getPropertyValue(dp_complexity).toString().isEmpty())
-								compound.setComplexity(individual.getPropertyValue(dp_complexity).toString());
-
-							if (!individual.getPropertyValue(dp_charge).toString().isEmpty())
-								compound.setCharge(individual.getPropertyValue(dp_charge).toString());
-							if (!individual.getPropertyValue(dp_donor).toString().isEmpty())
-								compound.sethBondDonor(individual.getPropertyValue(dp_donor).toString());
-							if (!individual.getPropertyValue(dp_accept).toString().isEmpty())
-								compound.sethBondAcceptor(individual.getPropertyValue(dp_accept).toString());
-							if (!individual.getPropertyValue(dp_rotbont).toString().isEmpty())
-								compound.setRotBondCount(individual.getPropertyValue(dp_rotbont).toString());
+							
+							try {
+								if (!individual.getPropertyValue(dp_pubCID).toString().isEmpty())
+									compound.setPubCID(individual.getPropertyValue(dp_pubCID).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_molForm).toString().isEmpty())
+									compound.setMolForm(individual.getPropertyValue(dp_molForm).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_molWeight).toString().isEmpty())
+									compound.setMolWeight(individual.getPropertyValue(dp_molWeight).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_canSMILES).toString().isEmpty())
+									compound.setCanSMILES(individual.getPropertyValue(dp_canSMILES).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_inchi).toString().isEmpty())
+									compound.setInchi(individual.getPropertyValue(dp_inchi).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_inchikey).toString().isEmpty())
+									compound.setInchikey(individual.getPropertyValue(dp_inchikey).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_iupac).toString().isEmpty())
+									compound.setIupac(individual.getPropertyValue(dp_iupac).toString());
+							} catch (Exception e) {}
+							
+							try {
+								if (!individual.getPropertyValue(dp_xlogp).toString().isEmpty())
+									compound.setXlogp(individual.getPropertyValue(dp_xlogp).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_mass).toString().isEmpty())
+									compound.setMass(individual.getPropertyValue(dp_mass).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_tpsa).toString().isEmpty())
+									compound.setTpsa(individual.getPropertyValue(dp_tpsa).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_complexity).toString().isEmpty())
+									compound.setComplexity(individual.getPropertyValue(dp_complexity).toString());
+							} catch (Exception e) {}
+							
+							try {
+								if (!individual.getPropertyValue(dp_charge).toString().isEmpty())
+									compound.setCharge(individual.getPropertyValue(dp_charge).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_donor).toString().isEmpty())
+									compound.sethBondDonor(individual.getPropertyValue(dp_donor).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_accept).toString().isEmpty())
+									compound.sethBondAcceptor(individual.getPropertyValue(dp_accept).toString());
+							} catch (Exception e) {}
+							try {
+								if (!individual.getPropertyValue(dp_rotbont).toString().isEmpty())
+									compound.setRotBondCount(individual.getPropertyValue(dp_rotbont).toString());
+							} catch (Exception e) {}
 
 							System.out.println(compound.getMolForm());
 							System.out.println(compound.getCanSMILES());

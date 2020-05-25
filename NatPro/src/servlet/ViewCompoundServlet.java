@@ -33,50 +33,32 @@ public class ViewCompoundServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		switch (request.getServletPath()) {
-		case "/ViewCompoundServlet":
-			try {
-				viewCompound(request, response);
-			} catch (OntologyLoadException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			break;
-		default:
-			System.out.println("ERROR(Inside userServlet *doPost*): url pattern doesn't match existing patterns.");
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String searchKey = request.getParameter("compound");
+		System.out.println(searchKey);
+		OntoQuery q;
+		try {
+			q = new OntoQuery();
+			Compound compound = q.getCompound(searchKey);
+			System.out.println(">>>>"+compound.getCompoundName());
+			request.setAttribute("compound", compound);
+			request.getRequestDispatcher("5dchemicalcompound.jsp").forward(request, response);
+		} catch (OntologyLoadException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		
 	}
 
 	/**
+	 * @throws IOException 
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//response.sendRedirect("5dchemicalcompound.jsp");
 		doGet(request, response);
 	}
 
-	private void viewCompound(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException {
-		// TODO Auto-generated method stub
-		String searchKey = request.getParameter("compound");
-		System.out.println(searchKey);
-		OntoQuery q = new OntoQuery();
-		//List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
-//		for(MedicinalPlant m: medPlants) {
-//			System.out.println(m.getMedicinalPlant().toString());
-//		}
-		//System.out.println(medPlants.get(0).getSpecies());
-		
-		Compound compound = q.getCompound(searchKey);
-		System.out.println(compound.getCompoundName());
-		request.setAttribute("compound", compound);
-		request.getRequestDispatcher("5dchemicalcompound.jsp").forward(request, response);
-	}
 
 }

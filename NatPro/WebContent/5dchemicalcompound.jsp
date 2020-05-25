@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
     <head>
@@ -17,12 +18,9 @@
         <div class="section green darken-1" id="index-banner">
             <div class="container">
                 <!--<br><br>-->
-                <h1 class="header center white-text">Chemical Compound ${compound.getCompoundName()}</h1>
+                <h1 class="header center white-text"><b>${compound.getCompoundName()}</b></h1>
                 <div class="row center white-text">
-                    <img class="responsive-img circle" src="media/compound/CN1C2CCC1C(C(C2)OC(=O)C3=CC=CC=C3)C(=O)OC.jpg">
                     <img class="responsive-img circle" src="media/compound/b.svg">
-                    <img class="responsive-img circle" src="media/a.jpg">
-                    <img class="responsive-img circle" src="media/b.svg">
                     <br><br>
                     <a class="waves-effect waves-light btn green accent-4 white-text">Fill out information from pubchem</a>
                 </div>
@@ -68,37 +66,37 @@
                                 <tbody>
                                     <tr>
                                         <th>Common Name</th>
-                                        <td>Common Name</td>
+                                        <td>${compound.getCompoundName()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>IUPAC Name</th>
-                                        <td>IUPAC Name</td>
+                                        <td>${compound.getIupac()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>Canonical SMILES</th>
-                                        <td>Canonical SMILES</td>
+                                        <td>${compound.getCanSMILES()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>Formula</th>
-                                        <td>Formula</td>
+                                        <td>${compound.getMolForm()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>InChl</th>
-                                        <td>InChl</td>
+                                        <td>${compound.getInchi()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>InChl key</th>
-                                        <td>InChl key</td>
+                                        <td>${compound.getInchikey()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>Chemical Class</th>
-                                        <td>Chemical Class</td>
+                                        <td>////</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                 </tbody>
@@ -118,32 +116,32 @@
                                 <tbody>
                                     <tr>
                                         <th>Molecular Weight</th>
-                                        <td>Molecular Weight</td>
+                                        <td>${compound.getMolWeight()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>XLogP</th>
-                                        <td>XLogP</td>
+                                        <td>${compound.getXlogp()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>TPSA</th>
-                                        <td>TPSA</td>
+                                        <td>${compound.getTpsa()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>H-Bond Acceptors</th>
-                                        <td>H-Bond Acceptors</td>
+                                        <td>${compound.gethBondAcceptor()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>H-Bond Donor</th>
-                                        <td>H-Bond Donor</td>
+                                        <td>${compound.gethBondDonor()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>Rotatable Bonds</th>
-                                        <td>Rotatable Bonds</td>
+                                        <td>${compound.getRotBondCount()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                 </tbody>
@@ -161,9 +159,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Compound Synonyms</td>
-                                    </tr>
+                                   <c:forEach items="${compound.getCompoundSynonyms()}" var="cs">
+										<tr>
+											<td>${cs}</td>
+										</tr>
+									</c:forEach>
                                 </tbody>
                             </table>
                         </div>
