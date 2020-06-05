@@ -22,7 +22,7 @@
                 <div class="row center white-text">
                     <img class="responsive-img circle" src="media/compound/b.svg">
                     <br><br>
-                    <a class="waves-effect waves-light btn green accent-4 white-text">Fill out information from pubchem</a>
+                    <a href="RetrieveCompoundServet?compound=${compound.getCompoundName()}" class="waves-effect waves-light btn green accent-4 white-text">Fill out information from pubchem</a>
                 </div>
                 <!--
                     <div class="row center">

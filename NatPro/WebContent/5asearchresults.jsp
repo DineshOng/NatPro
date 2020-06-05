@@ -32,13 +32,13 @@
 			<form class="row" action="SearchServlet" method="POST">
 				<div class="input-field col s9">
 					<i class="material-icons prefix">search</i> <input id="searchInput"
-						class="materialize-textarea" type="text"> <label
+						class="materialize-textarea" type="text" name="searchKey"> <label
 						for="searchInput">Search</label>
 				</div>
 				<div class="input-field col s3">
-					<select class="browser-default">
-						<option value="" disabled selected>Choose your option</option>
-						<option value="1">plant common name</option>
+					<select class="browser-default" name="searchCategory">
+						<option value="" disabled>Choose your option</option>
+						<option value="1" selected>plant common name</option>
 						<option value="2">plant scientific name</option>
 						<option value="3">genus</option>
 						<option value="4">family</option>
