@@ -12,17 +12,119 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        
+        <style>
+			.lds-ring {
+			  display: inline-block;
+			  position: relative;
+			  width: 80px;
+			  height: 80px;
+			}
+			.lds-ring div {
+			  box-sizing: border-box;
+			  display: block;
+			  position: absolute;
+			  width: 64px;
+			  height: 64px;
+			  margin: 8px;
+			  border: 8px solid #fff;
+			  border-radius: 50%;
+			  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+			  border-color: #fff transparent transparent transparent;
+			}
+			.lds-ring div:nth-child(1) {
+			  animation-delay: -0.45s;
+			}
+			.lds-ring div:nth-child(2) {
+			  animation-delay: -0.3s;
+			}
+			.lds-ring div:nth-child(3) {
+			  animation-delay: -0.15s;
+			}
+			@keyframes lds-ring {
+			  0% {
+			    transform: rotate(0deg);
+			  }
+			  100% {
+			    transform: rotate(360deg);
+			  }
+			}
+			
+			</style>
+     
+        <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="js/loadingoverlay.js"></script>
+        
+        <script>
+       
+	        $(document).ready(function() {
+	        	$('#loading').hide();
+	        	$('#pubchemBT').click(function() {
+	        		$('#loading').show();
+	        		$.ajax({
+	        			url : 'RetrieveCompoundServlet?compound=${compound.getCompoundName()}',
+	        			data : {
+	        				userName : $('#compound').val()
+	        			},
+	        			success : function(obj) {
+	        				if(obj.molForm == null) {
+	        					$('#loading').hide();
+	        					alert("compound not found");
+	        				} else {
+	        				
+		        				$('#compoundIMG').attr("src", "https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid="+obj.pubCID+"&t=l");
+		        				
+		        				$('#molForm').html(obj.molForm);
+		        				$('#canSMILES').html(obj.canSMILES);
+		        				$('#inchi').html(obj.inchi);
+		        				$('#inchikey').html(obj.inchikey);
+		        				$('#iupac').html(obj.iupac);
+		        				
+		        				$('#molWeight').html(obj.molWeight);
+		        				$('#xlogp').html(obj.xlogp);
+		        				$('#mass').html(obj.mass);
+		        				$('#tpsa').html(obj.tpsa);
+		        				$('#complexity').html(obj.complexity);
+		        				
+		        				$('#charge').html(obj.charge);
+		        				$('#hBondDonor').html(obj.hBondDonor);
+		        				$('#hBondAcceptor').html(obj.hBondAcceptor);
+		        				$('#rotBondCount').html(obj.rotBondCount);
+		        				
+		        				var arr = obj.syn;
+		        				var syn = arr.split("@$@");
+		        				var text = "";
+		        				
+		        				var i;
+		        				for (i = 0; i < syn.length; i++) {
+		        				  text += '<tr><td>' + syn[i] + "</td></tr>";
+		        				}
+		        				$('#syn').append(text);
+		        				
+		        				$('#pubchemBT').hide();
+		        				
+		        			}
+	        				$('#loading').hide();
+	        			}
+	        		});
+	        	});
+	        });
+	        
+        </script>
+        
     </head>
     <body>
         <%@include file="includeNavBar.html"%>
         <div class="section green darken-1" id="index-banner">
             <div class="container">
                 <!--<br><br>-->
-                <h1 class="header center white-text"><b>${compound.getCompoundName()}</b></h1>
+                <h1 class="header center white-text" id="compound"><b>${compound.getCompoundName()}</b></h1>
                 <div class="row center white-text">
-                    <img class="responsive-img circle" src="media/compound/b.svg">
+                    <img id="compoundIMG" class="responsive-img circle" src="media/compound/b.svg">
                     <br><br>
-                    <a href="RetrieveCompoundServet?compound=${compound.getCompoundName()}" class="waves-effect waves-light btn green accent-4 white-text">Fill out information from pubchem</a>
+                    <!-- href="RetrieveCompoundServet?compound=${compound.getCompoundName()}"  -->
+                    <a id="pubchemBT" class="waves-effect waves-light btn green accent-4 white-text">Fill out information from pubchem</a>
+                    <div id="loading" class="lds-ring"><div></div><div></div><div></div><div></div></div>
                 </div>
                 <!--
                     <div class="row center">
@@ -71,27 +173,27 @@
                                     </tr>
                                     <tr>
                                         <th>IUPAC Name</th>
-                                        <td>${compound.getIupac()}</td>
+                                        <td id="iupac">${compound.getIupac()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>Canonical SMILES</th>
-                                        <td>${compound.getCanSMILES()}</td>
+                                        <td id="canSMILES">${compound.getCanSMILES()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>Formula</th>
-                                        <td>${compound.getMolForm()}</td>
+                                        <td id="molForm">${compound.getMolForm()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>InChl</th>
-                                        <td>${compound.getInchi()}</td>
+                                        <td id="inchi">${compound.getInchi()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>InChl key</th>
-                                        <td>${compound.getInchikey()}</td>
+                                        <td id="inchikey">${compound.getInchikey()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
@@ -116,32 +218,32 @@
                                 <tbody>
                                     <tr>
                                         <th>Molecular Weight</th>
-                                        <td>${compound.getMolWeight()}</td>
+                                        <td id="molWeight">${compound.getMolWeight()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>XLogP</th>
-                                        <td>${compound.getXlogp()}</td>
+                                        <td id="xlogp">${compound.getXlogp()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>TPSA</th>
-                                        <td>${compound.getTpsa()}</td>
+                                        <td id="tpsa">${compound.getTpsa()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>H-Bond Acceptors</th>
-                                        <td>${compound.gethBondAcceptor()}</td>
+                                        <td id="hBondAcceptor">${compound.gethBondAcceptor()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>H-Bond Donor</th>
-                                        <td>${compound.gethBondDonor()}</td>
+                                        <td id="hBondDonor">${compound.gethBondDonor()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>Rotatable Bonds</th>
-                                        <td>${compound.getRotBondCount()}</td>
+                                        <td id="rotBondCount">${compound.getRotBondCount()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                 </tbody>
@@ -158,7 +260,7 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="syn">
                                    <c:forEach items="${compound.getCompoundSynonyms()}" var="cs">
 										<tr>
 											<td>${cs}</td>
