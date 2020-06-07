@@ -95,6 +95,8 @@ public class RetrieveCompoundServlet extends HttpServlet {
 		obj.put("hBondAcceptor", cir.getCompound().gethBondAcceptor());
 		obj.put("rotBondCount", cir.getCompound().getRotBondCount());
 		
+		
+		
 		String syn = "";
 		
 		for(String str : cir.getCompound().getCompoundSynonyms()) {

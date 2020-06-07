@@ -24,7 +24,7 @@ public class SaveAsJPEG {
         TranscoderInput input = new TranscoderInput(reader);
 
         // Create the transcoder output.
-        OutputStream ostream = new FileOutputStream("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\WebContent\\media\\compound\\"+canSMILES+".jpg");
+        OutputStream ostream = new FileOutputStream("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\compounds\\"+canSMILES+".jpg");
         TranscoderOutput output = new TranscoderOutput(ostream);
 
         // Save the image.

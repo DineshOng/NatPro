@@ -44,7 +44,8 @@ public class OntoMngr {
 	public OntoMngr() throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// loadOntology();
 		owlManager = OWLManager.createOWLOntologyManager();
-		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl"); // user defined
+		//owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl"); // user defined
+		owlFile = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl");
 
 		// load the ontology
 		owlOntology = owlManager.loadOntologyFromOntologyDocument(owlFile);

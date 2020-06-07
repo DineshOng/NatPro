@@ -13,54 +13,16 @@
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         
-        <style>
-			.lds-ring {
-			  display: inline-block;
-			  position: relative;
-			  width: 80px;
-			  height: 80px;
-			}
-			.lds-ring div {
-			  box-sizing: border-box;
-			  display: block;
-			  position: absolute;
-			  width: 64px;
-			  height: 64px;
-			  margin: 8px;
-			  border: 8px solid #fff;
-			  border-radius: 50%;
-			  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-			  border-color: #fff transparent transparent transparent;
-			}
-			.lds-ring div:nth-child(1) {
-			  animation-delay: -0.45s;
-			}
-			.lds-ring div:nth-child(2) {
-			  animation-delay: -0.3s;
-			}
-			.lds-ring div:nth-child(3) {
-			  animation-delay: -0.15s;
-			}
-			@keyframes lds-ring {
-			  0% {
-			    transform: rotate(0deg);
-			  }
-			  100% {
-			    transform: rotate(360deg);
-			  }
-			}
-			
-			</style>
-     
-        <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
-        <script type="text/javascript" src="js/loadingoverlay.js"></script>
+        
+      	<script type="text/javascript" charset="utf8" src="js/jquery-3.5.1.min.js"></script>
+       
         
         <script>
        
 	        $(document).ready(function() {
-	        	$('#loading').hide();
+	        	//$('#loading').hide();
 	        	$('#pubchemBT').click(function() {
-	        		$('#loading').show();
+	        		$.LoadingOverlay("show");
 	        		$.ajax({
 	        			url : 'RetrieveCompoundServlet?compound=${compound.getCompoundName()}',
 	        			data : {
@@ -68,7 +30,9 @@
 	        			},
 	        			success : function(obj) {
 	        				if(obj.molForm == null) {
-	        					$('#loading').hide();
+	        					//$('#loading').hide();
+	        					$.LoadingOverlay("hide");
+	        					
 	        					alert("compound not found");
 	        				} else {
 	        				
@@ -102,9 +66,10 @@
 		        				$('#syn').append(text);
 		        				
 		        				$('#pubchemBT').hide();
-		        				
+		        				$.LoadingOverlay("hide");
 		        			}
-	        				$('#loading').hide();
+	        				//$('#loading').hide();
+	        				
 	        			}
 	        		});
 	        	});
@@ -114,6 +79,7 @@
         
     </head>
     <body>
+    
         <%@include file="includeNavBar.html"%>
         <div class="section green darken-1" id="index-banner">
             <div class="container">
@@ -314,6 +280,11 @@
 
         <%@include file="includeFooter.html"%>
 		<%@include file="includeScripts.html"%>
+		
+		
+		<script type="text/javascript" charset="utf8" src="js/loadingoverlay.min.js"></script>
+		
+		
         <script>
             $(document).ready(function(){
                 $('.tabs').tabs();

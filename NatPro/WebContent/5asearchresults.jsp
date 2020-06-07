@@ -51,7 +51,7 @@
 		</div>
 	</div>
 	<div>
-		<table class="striped">
+		<table id="table_id" class="table table-striped table-bordered" style="width:100%">
 			<c:choose>
 				<c:when test="${searchCategory =='1'}">
 					<thead>
@@ -131,52 +131,6 @@
 			</c:choose>
 		</table>
 	</div>
-	<!--
-	<div>
-		<table class="striped">
-			<thead>
-				<tr>
-					<th>Common Name</th>
-					<th>Scientific Name</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${medPlantsList}" var="medPlantsList">
-					<tr>
-						<td><a href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
-						<td><c:forEach items="${medPlantsList.getSpecies()}" var="speciesList"><i><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a></i>, </c:forEach></td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-
-	</div>
-	
-  -->
-	<%-- 	<div>
-		<table class="striped">
-			<thead>
-				<tr>
-					<th>Compound</th>
-					<th>Compound Synonym</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${compoundList}" var="compoundList">
-					<tr>
-						<td><a
-							href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundName()}</a></td>
-						<td><c:forEach items="${compoundList.getCompoundSynonyms()}"
-								var="csList">
-								<a
-									href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${csList}
-								</a>, </c:forEach></td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-
-	</div> --%>
 
 	<div class="container">
 		<div class="section">
@@ -233,10 +187,28 @@
 
 	<%@include file="includeFooter.html"%>
 	<%@include file="includeScripts.html"%>
+	
+	<link rel="stylesheet" type="text/css" href="DataTables/dt_bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="DataTables/dataTables.bootstrap4.min.css">
+	<script type="text/javascript" charset="utf8" src="js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="DataTables/datatables.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="DataTables/dataTables.bootstrap4.min.js"></script>
+	
+	
+	<style>
+		#table_id_wrapper {
+			margin: 50px;
+		}
+	</style>
+  	
 	<script>
 		$(document).ready(function() {
 			$('select').formSelect();
-		})
+		});
+		
+		$('#table_id').DataTable();
 	</script>
+	
+	
 </body>
 </html>

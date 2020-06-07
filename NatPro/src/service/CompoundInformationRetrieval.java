@@ -23,7 +23,7 @@ public class CompoundInformationRetrieval {
 			compound = new ReadPubChemCompoundCSV(query).getCompound();
 			compound.setCompoundName(query);
 			compound.setCompoundSynonyms(synonyms);
-			new GenerateCompoundSVG(compound.getCanSMILES());
+			//new GenerateCompoundSVG(compound.getCanSMILES());
 		}
 		
 		//System.out.println(compound.getCompoundSynonyms().toString());

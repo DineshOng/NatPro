@@ -102,10 +102,23 @@ public class uploadSERVLET extends HttpServlet
 			    			try {
 			    				writeUniqueID(name);
 								new Tagger(folder+ "\\"+listOfFiles[num].getName(), name);
-								deleteUniqueID(name);
+								
 								System.err.println("aft:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
 							} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException e) {
 								e.printStackTrace();
+								try {
+									deleteUniqueID(name);
+								} catch (IOException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}
+							} finally {
+								try {
+									deleteUniqueID(name);
+								} catch (IOException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
 							}
 			    		}).start();
 			    		

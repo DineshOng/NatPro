@@ -11,12 +11,12 @@ public class Compound {
 	
 	private int pubCID;
 	private String molForm;
-	private double molWeight;
 	private String canSMILES;
 	private String inchi;
 	private String inchikey;
 	private String iupac;
 	
+	private double molWeight;
 	private double xlogp;
 	private double mass;
 	private double tpsa;
@@ -39,6 +39,10 @@ public class Compound {
 
 	public String getCompoundName() {
 		return compoundName;
+	}
+	
+	public String getCompoundNameNorm() {
+		return compoundName.replaceAll("(?i)alpha", "&alpha;").replaceAll("(?i)beta", "&beta;").replaceAll("(?i)gamma", "&gamma;").replaceAll("\\.", ", ");
 	}
 
 	public void setCompoundName(String compoundName) {

@@ -29,9 +29,9 @@ public class GenerateCompoundSVG {
 		
 		//System.out.println(conv.WriteString(mol));
 		
-		//java.io.FileWriter fw2 = new java.io.FileWriter("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\CompoundIMG\\" + cansmiles + ".svg");
-        //fw2.write(conv.WriteString(mol));
-        //fw2.close();
+		java.io.FileWriter fw2 = new java.io.FileWriter("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\compounds\\" + cansmiles + ".svg");
+		fw2.write(conv.WriteString(mol));
+        fw2.close();
 	}
 
 	public String getSvg() {

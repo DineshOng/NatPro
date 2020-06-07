@@ -95,7 +95,7 @@ public class SearchServlet extends HttpServlet {
 
 		request.setAttribute("searchKey", searchKey);
 
-		request.getRequestDispatcher("5asearchresults.jsp").forward(request, response);
+		request.getRequestDispatcher("searchresults.jsp").forward(request, response);
 //		System.out.println(medPlants.get(0));
 	}
 
