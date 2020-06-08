@@ -84,7 +84,7 @@
         <div class="section green darken-1" id="index-banner">
             <div class="container">
                 <!--<br><br>-->
-                <h1 class="header center white-text" id="compound"><b>${compound.getCompoundName()}</b></h1>
+                <h1 class="header center white-text" id="compound"><b>${compound.getCompoundNameNorm()}</b></h1>
                 <div class="row center white-text">
                     <img id="compoundIMG" class="responsive-img circle" src="media/compound/b.svg">
                     <br><br>

@@ -1,0 +1,132 @@
+@charset "ISO-8859-1";
+
+#table_id_wrapper {
+			margin: 50px;
+		}
+		body{
+			font-family: 'Varela Round', sans-serif;
+		}
+		.form-control {
+			box-shadow: none;
+			border-radius: 4px;
+		}
+		.form-control:focus {
+			border-color: #2cb91fb2;
+			box-shadow: 0 0 8px rgba(0,0,0,0.1);
+		}
+		.navbar-header.col {
+			padding: 0 !important;
+		}	
+		.navbar {
+			background: #fff;
+			padding-left: 32px;
+			padding-right: 32px;
+			border-bottom: 1px solid #dfe3e8;
+			border-radius: 0;
+		}
+		.navbar .navbar-brand, .navbar .navbar-brand:focus {
+			padding-left: 0;
+			font-size: 20px;
+			padding-right: 50px;
+		}
+		.navbar .navbar-brand {
+			font-size: 28px;
+		}
+		.navbar .navbar-brand b {
+			font-weight: bold;
+			color: #2cb91fb2;		
+		}
+		.navbar ul.nav li a {
+			
+		}
+		.navbar ul.nav li a:hover, .navbar ul.nav li a:focus {
+			color: #2cb91fb2 !important;
+		}
+		
+		.navbar ul.nav li.active > a, .navbar ul.nav li.open > a {
+			color: #2cb91fb2 !important;
+			background: transparent !important;
+		}
+		.search-box {
+			width: 100%;
+	        position: relative;
+	    }	
+	    .search-box input {		
+			border-color: #dfe3e8;        
+			box-shadow: none
+	    }
+		.search-box input, .search-box .btn {
+			min-height: 38px;
+			border-radius: 2px;
+			height: 42px;
+		}
+		.search-box .input-group-btn .btn {
+			border-color: #2cb91fb2;
+			background: #2cb91fb2;
+			outline: none;
+		}
+		.navbar .nav-item i {
+			font-size: 18px;
+			line-height: 16px;
+		}
+		.navbar .navbar-right .dropdown-toggle::after {
+			display: none;
+		}
+		.navbar .dropdown-menu {
+			border-radius: 1px;
+			border-color: #e5e5e5;
+			box-shadow: 0 2px 8px rgba(0,0,0,.05);
+		}
+		.navbar .dropdown-menu li a {
+			padding: 6px 20px;
+		}
+		.navbar .navbar-right .dropdown-menu {
+			width: 400px;
+			padding: 20px;
+			left: auto;
+			right: 0;
+	        font-size: 14px;
+		}
+		.hide {
+			display: none !important;
+		}
+		@media (max-width: 768px){
+			.navbar .navbar-right .dropdown-menu {
+				width: 100%;
+				background: transparent;
+				padding: 10px 20px;
+			}
+			.navbar .input-group {
+				width: 100%;
+			}
+		}
+		#ddtext {
+			border-radius: 5px 0px 0px 5px;
+	    	border: 1px solid #e5e5e5;
+		}
+		#uploadBT {
+			border: 1px solid #e5e5e5;
+			border-radius: 5px;
+		}
+		.btn-outline-primary {
+		    color: #2cb91fb2;
+		    background-color: transparent;
+		    background-image: none;
+		    border-color: #2cb91fb2;
+		}
+		.btn-outline-primary:hover {
+		    color: white;
+		    background-color: #2cb91fb2;
+		    background-image: none;
+		    border-color: #2cb91fb2;
+		}
+		.btn-outline-success {
+		    color: #2cb91fb2;
+		    background-color: transparent;
+		    background-image: none;
+		    border-color: #2cb91fb2;
+		}
+		.btn-outline-success:hover {
+		    background-color: #2cb91fb2;
+		    background-image: none;
+		}

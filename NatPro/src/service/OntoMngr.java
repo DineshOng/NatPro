@@ -260,6 +260,201 @@ public class OntoMngr {
 		owlManager.addAxiom(owlOntology, dataPropAssertion);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
+	
+	public void addDataPropCompound_PubCID(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_PubCID", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_MolForm(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_MolForm", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_MolWeight(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_MolWeight", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_CanSMILES(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_CanSMILES", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_InChI(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_InChI", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_InChIkey(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_InChIkey", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_IUPACName(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_IUPACName", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_XLogP(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_XLogP", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_Mass(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Mass", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_TPSA(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_TPSA", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_Complexity(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Complexity", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_Charge(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Charge", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+
+	public void addDataPropCompound_HBondDonorCount(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_HBondDonorCount", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_HBondAcceptorCount(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_HBondAcceptorCount", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+	
+	public void addDataPropCompound_RotatableBondCount(String value) throws OWLOntologyStorageException {
+		dataProp = owlFact.getOWLDataProperty("#datatypeProperty_RotatableBondCount", pm);
+		
+		rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+		owlManager.addAxiom(owlOntology, rangeAxiom);
+		dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, compoundIndiv, value);
+		axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, compoundClass);
+		owlManager.addAxiom(owlOntology, axiomDataProp);
+
+		owlManager.addAxiom(owlOntology, dataPropAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
 
 	public void addDataPropBiologicalActivity(String bioActValue) throws OWLOntologyStorageException {
 		// Creating Data Property, Range, and Value

@@ -42,7 +42,13 @@ public class Compound {
 	}
 	
 	public String getCompoundNameNorm() {
-		return compoundName.replaceAll("(?i)alpha", "&alpha;").replaceAll("(?i)beta", "&beta;").replaceAll("(?i)gamma", "&gamma;").replaceAll("\\.", ", ");
+		String str = compoundName.replaceAll("(?i)alpha", "&alpha;").replaceAll("(?i)beta", "&beta;").replaceAll("(?i)gamma", "&gamma;");
+		if(str.contains("mixture")) {
+			str = str.replaceAll("\\.", ", ");
+		} else {
+			str = str.replaceAll("\\.", ",");
+		}
+		return str;
 	}
 
 	public void setCompoundName(String compoundName) {

@@ -85,17 +85,7 @@
 	</div>
 </nav>
     
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  		<h1 class="display-4">Upload</h1>
-  		<p class="lead">Upload Your Documents Here</p>
-	</div>
-	
-	
-    
-    <div class="custom-file">
-	  <input type="file" class="custom-file-input" id="customFile">
-	  <label class="custom-file-label" for="customFile">Choose file</label>
-	</div>
+    <!-- INSERT CODE ---------------------------------------------------------------------------------------------------------------------------->
     
 	<script type="text/javascript" src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
