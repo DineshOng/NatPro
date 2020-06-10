@@ -2,6 +2,8 @@ package model;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Compound {
 	public static String CLASS_Compound = "Compound";
@@ -11,12 +13,12 @@ public class Compound {
 	
 	public static String DP_PubCID = "datatypeProperty_PubCID";
 	public static String DP_MolForm = "datatypeProperty_MolForm";
-	public static String DP_MolWeight = "datatypeProperty_MolWeight";
 	public static String DP_CanSMILES = "datatypeProperty_CanSMILES";
 	public static String DP_InChI = "datatypeProperty_InChI";
 	public static String DP_InChIkey = "datatypeProperty_InChIkey";
 	public static String DP_IUPACName = "datatypeProperty_IUPACName";
 	
+	public static String DP_MolWeight = "datatypeProperty_MolWeight";
 	public static String DP_XLogP = "datatypeProperty_XLogP";
 	public static String DP_Mass = "datatypeProperty_Mass";
 	public static String DP_TPSA = "datatypeProperty_TPSA";
@@ -28,11 +30,12 @@ public class Compound {
 	public static String DP_RotatableBond = "datatypeProperty_RotatableBondCount";
 	
 	private String compoundName;
-	private List<String> compoundSynonyms;
+	private HashSet<String> compoundSynonyms;
 	
 	private HashSet<BiologicalActivity> bioActs;
+	private HashSet<CompoundClass> compoundClasses;
 	
-	private List<String> compounds;
+	private HashSet<String> compounds;
 	
 	private int pubCID;
 	private String molForm;
@@ -55,23 +58,47 @@ public class Compound {
 	private boolean isMixture;
 	
 	public Compound() {
-		compoundSynonyms = new ArrayList<String>();
+		
 	}
 	
 	public Compound(String compoundName) {
 		this.compoundName = compoundName;
+		
+		compoundSynonyms = new HashSet<String>();
+		bioActs = new HashSet<BiologicalActivity>();
+		compoundClasses = new HashSet<CompoundClass>();
+		
 		if(compoundName.toLowerCase().contains("(i?)mixture")) {
 			isMixture = true;
-			compounds = new ArrayList<String>();
+			compounds = new HashSet<String>();
 		}
 		
 	}
+	
+	public static String toOWLString(String str) {
+		str = str.trim();
+		str = str.toLowerCase();
+		str = str.replaceAll(" *", "_");
+		str = str.replaceAll(",*", ".");
+		str = str.replaceAll("\u03B1", "alpha");
+		str = str.replaceAll("\u03B2", "beta");
+		str = str.replaceAll("\u0393", "gamma");
+		
+		return str;
+	}
+	
+	public HashSet<String> getCompoundsHashSet() {
+		HashSet<String> set = new HashSet<String>();
+		set.addAll(compounds);
+		
+		return set;
+	}
 
-	public List<String> getCompounds() {
+	public HashSet<String> getCompounds() {
 		return compounds;
 	}
 
-	public void setCompounds(List<String> compounds) {
+	public void setCompounds(HashSet<String> compounds) {
 		this.compounds = compounds;
 	}
 
@@ -101,7 +128,7 @@ public class Compound {
 		this.compoundName = compoundName;
 	}
 
-	public HashSet<BiologicalActivity> getBioActs() {
+	public Set<BiologicalActivity> getBioActs() {
 		return bioActs;
 	}
 
@@ -234,27 +261,27 @@ public class Compound {
 		this.charge = Integer.parseInt(charge);
 	}
 
-	public int gethBondDonor() {
+	public int getHBondDonor() {
 		return hBondDonor;
 	}
 
-	public void sethBondDonor(int hBondDonor) {
+	public void setHBondDonor(int hBondDonor) {
 		this.hBondDonor = hBondDonor;
 	}
 	
-	public void sethBondDonor(String hBondDonor) {
+	public void setHBondDonor(String hBondDonor) {
 		this.hBondDonor = Integer.parseInt(hBondDonor);
 	}
 
-	public int gethBondAcceptor() {
+	public int getHBondAcceptor() {
 		return hBondAcceptor;
 	}
 
-	public void sethBondAcceptor(int hBondAcceptor) {
+	public void setHBondAcceptor(int hBondAcceptor) {
 		this.hBondAcceptor = hBondAcceptor;
 	}
 	
-	public void sethBondAcceptor(String hBondAcceptor) {
+	public void setHBondAcceptor(String hBondAcceptor) {
 		this.hBondAcceptor = Integer.parseInt(hBondAcceptor);
 	}
 
@@ -270,11 +297,21 @@ public class Compound {
 		this.rotBondCount = Integer.parseInt(rotBondCount);
 	}
 
-	public List<String> getCompoundSynonyms() {
+	public HashSet<String> getCompoundSynonyms() {
 		return compoundSynonyms;
 	}
 
-	public void setCompoundSynonyms(List<String> compoundSynonyms) {
+	public void setCompoundSynonyms(HashSet<String> compoundSynonyms) {
 		this.compoundSynonyms = compoundSynonyms;
 	}
+
+	public Set<CompoundClass> getCompoundClasses() {
+		return compoundClasses;
+	}
+
+	public void setCompoundClasses(HashSet<CompoundClass> compoundClasses) {
+		this.compoundClasses = compoundClasses;
+	}
+	
+	
 }

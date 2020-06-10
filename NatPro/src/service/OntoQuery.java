@@ -3,9 +3,12 @@ package service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import edu.stanford.smi.protegex.owl.ProtegeOWL;
@@ -165,12 +168,14 @@ public class OntoQuery {
 					for (int k = 0; k < speciesPartList.size(); k++) {
 						List<Compound> compoundList = speciesPartList.get(k).getCompounds();
 						for (int l = 0; l < compoundList.size(); l++) {
-							List<String> compoundSynList = compoundList.get(l).getCompoundSynonyms();
-							for (int m = 0; m < compoundSynList.size(); m++) {
+							Set<String> compoundSynList = compoundList.get(l).getCompoundSynonyms();
+							compounds.addAll(compoundSynList);
+							//for (int m = 0; m < compoundSynList.size(); m++) {
 								// this is to ensure that no duplicate compounds will be added to the list
-								if (hashSet.add(compoundSynList.get(m).toString()))
-									compounds.add(compoundSynList.get(m).toString());
-							}
+								//if (hashSet.add(compoundSynList.get(m).toString()))
+									//compounds.add(compoundSynList.get(m).toString());
+								
+							//}
 						}
 					}
 				}
@@ -247,7 +252,7 @@ public class OntoQuery {
 							compound = new Compound(compoundIndiv);
 
 							// get compound synonyms
-							List<String> synonyms = new ArrayList<String>();
+							HashSet<String> synonyms = new HashSet<String>();
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
 								String syno = jtt.next().toString();
 								System.out.println("dis>" + syno);
@@ -308,11 +313,11 @@ public class OntoQuery {
 							} catch (Exception e) {}
 							try {
 								if (!individual.getPropertyValue(dp_donor).toString().isEmpty())
-									compound.sethBondDonor(individual.getPropertyValue(dp_donor).toString());
+									compound.setHBondDonor(individual.getPropertyValue(dp_donor).toString());
 							} catch (Exception e) {}
 							try {
 								if (!individual.getPropertyValue(dp_accept).toString().isEmpty())
-									compound.sethBondAcceptor(individual.getPropertyValue(dp_accept).toString());
+									compound.setHBondAcceptor(individual.getPropertyValue(dp_accept).toString());
 							} catch (Exception e) {}
 							try {
 								if (!individual.getPropertyValue(dp_rotbont).toString().isEmpty())
@@ -374,7 +379,7 @@ public class OntoQuery {
 						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase())) {
 							System.out.println(compoundIndiv);
 							mp = new Compound(compoundIndiv);
-							List<String> synonyms = new ArrayList<String>();
+							HashSet<String> synonyms = new HashSet<String>();
 
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
 								// if(!jtt.next().toString().isEmpty()) {
@@ -398,7 +403,7 @@ public class OntoQuery {
 								if (syno.toLowerCase().contains(Compound.toLowerCase())) {
 									System.out.println(syno + " " + compoundIndiv);
 									mp = new Compound(compoundIndiv);
-									List<String> synonyms = new ArrayList<String>();
+									HashSet<String> synonyms = new HashSet<String>();
 									synonyms.add(syno);
 									mp.setCompoundSynonyms(synonyms);
 									found = true;
@@ -561,7 +566,7 @@ public class OntoQuery {
 			comp = comp.replaceAll("\\.", ",");
 			comp = comp.replaceAll("_", " ");
 			Compound compound = getCompound(comp);
-			ArrayList<String> compoundSynonyms = new ArrayList<String>();
+			HashSet<String> compoundSynonyms = new HashSet<String>();
 			Collection compoundSynCol = compoundIndiv.getPropertyValues(datatypeProperty_CompoundSynonym);
 			for (Iterator jt = compoundSynCol.iterator(); jt.hasNext();) {
 				comp = jt.next().toString();

@@ -79,6 +79,7 @@
 				<c:when test="${searchCategory =='5'}">
 					<thead>
 						<tr>
+							<th class="hid"></th>
 							<th>Compound</th>
 							<th>Compound Synonym</th>
 						</tr>
@@ -86,6 +87,7 @@
 					<tbody>
 						<c:forEach items="${compoundList}" var="compoundList">
 							<tr>
+								<td class="hid"><a>${compoundList.getCompoundName()}</a></td>
 								<td><a
 									href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundNameNorm()}</a></td>
 								<td><c:forEach
@@ -107,7 +109,7 @@
     <script type="text/javascript">
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();
-	        
+	        //$('.hid').css('display', 'none');
 	    } );
 	    
 	    function func_submit() {
@@ -153,7 +155,7 @@
 		}
 		
 		$("#search").val('${searchKey}');
-		
+		$('.hid').css('display', 'none');
 		ddfunc(${searchCategory});
 	</script>
     

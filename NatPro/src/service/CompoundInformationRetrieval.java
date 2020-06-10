@@ -1,7 +1,9 @@
 package service;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.TreeSet;
 
 import model.Compound;
 
@@ -17,7 +19,7 @@ public class CompoundInformationRetrieval {
 		
 		compound = new Compound();
 		
-		List<String> synonyms = new ReadPubChemCompoundSynonyms(query).getCompoundSynonyms();
+		HashSet<String> synonyms = new ReadPubChemCompoundSynonyms(query).getCompoundSynonyms();
 		
 		if(synonyms!=null) {
 			compound = new ReadPubChemCompoundCSV(query).getCompound();

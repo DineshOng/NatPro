@@ -56,9 +56,6 @@ public class RetrieveCompoundServlet extends HttpServlet {
 		/* construct your json */
 		JSONObject obj = new JSONObject();
 		
-		obj.put("pubCID", cir.getCompound().getPubCID());
-		
-		
 		String molForm = cir.getCompound().getMolForm();
 		
 		try {
@@ -77,8 +74,8 @@ public class RetrieveCompoundServlet extends HttpServlet {
 			
 		}
 		
+		obj.put("pubCID", cir.getCompound().getPubCID());     
 		obj.put("molForm", molForm);     
-		
 		obj.put("canSMILES", cir.getCompound().getCanSMILES());
 		obj.put("inchi", cir.getCompound().getInchi());
 		obj.put("inchikey", cir.getCompound().getInchikey());
@@ -91,19 +88,20 @@ public class RetrieveCompoundServlet extends HttpServlet {
 		obj.put("complexity", cir.getCompound().getComplexity());
 		
 		obj.put("charge", cir.getCompound().getCharge());
-		obj.put("hBondDonor", cir.getCompound().gethBondDonor());
-		obj.put("hBondAcceptor", cir.getCompound().gethBondAcceptor());
+		obj.put("hBondDonor", cir.getCompound().getHBondDonor());
+		obj.put("hBondAcceptor", cir.getCompound().getHBondAcceptor());
 		obj.put("rotBondCount", cir.getCompound().getRotBondCount());
 		
 		
 		
-		String syn = "";
+		String synonym = "";
 		
 		for(String str : cir.getCompound().getCompoundSynonyms()) {
-			syn += str + "@$@";
+			if(!str.equals(""))
+				synonym += str + "@$@";
 		}
 		
-		obj.put("syn", syn);
+		obj.put("synonym", synonym);
 		
 		/* send to the client the JSON string */
 		response.getWriter().write(obj.toString());

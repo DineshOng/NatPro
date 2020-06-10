@@ -6,11 +6,13 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.TreeSet;
 
 public class ReadPubChemCompoundSynonyms {
 	private URL url;
-	private List<String> compoundSynonyms;
+	private HashSet<String> compoundSynonyms;
 	
 	public ReadPubChemCompoundSynonyms(String query) throws IOException {
 		
@@ -27,7 +29,7 @@ public class ReadPubChemCompoundSynonyms {
         try {
         	in = new BufferedReader(new InputStreamReader(url.openStream()));
         	
-        	compoundSynonyms = new ArrayList<String>();
+        	compoundSynonyms = new HashSet<String>();
         	
         	String line;
         	while ((line = in.readLine()) != null) {
@@ -54,11 +56,11 @@ public class ReadPubChemCompoundSynonyms {
 		this.url = url;
 	}
 
-	public List<String> getCompoundSynonyms() {
+	public HashSet<String> getCompoundSynonyms() {
 		return compoundSynonyms;
 	}
 
-	public void setCompoundSynonyms(List<String> compoundSynonyms) {
+	public void setCompoundSynonyms(HashSet<String> compoundSynonyms) {
 		this.compoundSynonyms = compoundSynonyms;
 	}
 }

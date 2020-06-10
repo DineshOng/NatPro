@@ -25,7 +25,8 @@ public class EntityTagger {
 	}
 	
 	public EntityTagger hideTaggedEntities() {
-		Pattern pattern = Pattern.compile("<([a-z]+)>([a-zA-Z\\s.-]+)<\\/[a-z]+>");
+		//Pattern pattern = Pattern.compile("<([a-z]+)>([0-9a-zA-Z\\s.-]+)<\\/[a-z]+>"); //<([a-z]+)>([^<]+)<\\/[a-z]+>
+		Pattern pattern = Pattern.compile("<([a-z]+)>([^<]+)<\\/[a-z]+>");
 		Matcher matcher = pattern.matcher(text);
 		idx = 0;
 		while(matcher.find()) {

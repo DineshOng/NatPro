@@ -92,7 +92,7 @@ public class OntoMngr {
 		illnessClass = owlFact.getOWLClass("#Illness", pm);
 	}
 	
-	public void changeNameIndividual(String className, String oldVal, String newVal) throws IOException {
+	public void changeNameIndividual(String oldVal, String newVal) throws IOException {
 		Path path = Paths.get(owlPath);
 		Charset charset = StandardCharsets.UTF_8;
 
@@ -781,6 +781,54 @@ public class OntoMngr {
 
 	public OWLClass getIllnessClass() {
 		return illnessClass;
+	}
+
+	public void setMedPlantIndiv(String medPlantIndiv) {
+		this.medPlantIndiv = owlFact.getOWLNamedIndividual("#" + medPlantIndiv, pm);
+	}
+
+	public void setLocationIndiv(String locationIndiv) {
+		this.locationIndiv = owlFact.getOWLNamedIndividual("#" + locationIndiv, pm);
+	}
+
+	public void setSpeciesIndiv(String speciesIndiv) {
+		this.speciesIndiv = owlFact.getOWLNamedIndividual("#" + speciesIndiv, pm);
+	}
+
+	public void setGenusIndiv(String genusIndiv) {
+		this.genusIndiv = owlFact.getOWLNamedIndividual("#" + genusIndiv, pm);
+	}
+
+	public void setFamilyIndiv(String familyIndiv) {
+		this.familyIndiv = owlFact.getOWLNamedIndividual("#" + familyIndiv, pm);
+	}
+
+	public void setSpeciesPartIndiv(String speciesPartIndiv) {
+		this.speciesPartIndiv = owlFact.getOWLNamedIndividual("#" + speciesPartIndiv, pm);
+	}
+
+	public void setPlantPartIndiv(String plantPartIndiv) {
+		this.plantPartIndiv = owlFact.getOWLNamedIndividual("#" + plantPartIndiv, pm);
+	}
+
+	public void setCompoundIndiv(String compoundIndiv) {
+		this.compoundIndiv = owlFact.getOWLNamedIndividual("#" + compoundIndiv, pm);
+	}
+
+	public void setBiologicalActivityIndiv(String biologicalActivityIndiv) {
+		this.biologicalActivityIndiv = owlFact.getOWLNamedIndividual("#" + biologicalActivityIndiv, pm);
+	}
+
+	public void setCellLineIndiv(String cellLineIndiv) {
+		this.cellLineIndiv = owlFact.getOWLNamedIndividual("#" + cellLineIndiv, pm);
+	}
+
+	public void setPreparationIndiv(String preparationIndiv) {
+		this.preparationIndiv = owlFact.getOWLNamedIndividual("#" + preparationIndiv, pm);
+	}
+
+	public void setIllnessIndiv(String illnessIndiv) {
+		this.illnessIndiv = owlFact.getOWLNamedIndividual("#" + illnessIndiv, pm);
 	}
 	
 	

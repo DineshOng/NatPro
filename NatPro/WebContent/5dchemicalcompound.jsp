@@ -55,20 +55,21 @@
 		        				$('#hBondAcceptor').html(obj.hBondAcceptor);
 		        				$('#rotBondCount').html(obj.rotBondCount);
 		        				
-		        				var arr = obj.syn;
+		        				var arr = obj.synonym;
 		        				var syn = arr.split("@$@");
 		        				var text = "";
 		        				
 		        				var i;
-		        				for (i = 0; i < syn.length; i++) {
+		        				for (i = 0; i < syn.length-1; i++) {
 		        				  text += '<tr><td>' + syn[i] + "</td></tr>";
 		        				}
-		        				$('#syn').append(text);
+		        				$('#synonym').append(text);
 		        				
 		        				$('#pubchemBT').hide();
+		        				
 		        				$.LoadingOverlay("hide");
 		        			}
-	        				//$('#loading').hide();
+	        				//$.LoadingOverlay("hide");
 	        				
 	        			}
 	        		});
@@ -199,12 +200,12 @@
                                     </tr>
                                     <tr>
                                         <th>H-Bond Acceptors</th>
-                                        <td id="hBondAcceptor">${compound.gethBondAcceptor()}</td>
+                                        <td id="hBondAcceptor">${compound.getHBondAcceptor()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
                                         <th>H-Bond Donor</th>
-                                        <td id="hBondDonor">${compound.gethBondDonor()}</td>
+                                        <td id="hBondDonor">${compound.getHBondDonor()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
@@ -226,7 +227,7 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody id="syn">
+                                <tbody id="synonym">
                                    <c:forEach items="${compound.getCompoundSynonyms()}" var="cs">
 										<tr>
 											<td>${cs}</td>

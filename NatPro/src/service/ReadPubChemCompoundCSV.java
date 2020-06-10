@@ -65,8 +65,8 @@ public class ReadPubChemCompoundCSV {
 	        compound.setTpsa(Double.parseDouble(split[9]));
 	        compound.setComplexity(Double.parseDouble(split[10]));
 	        compound.setCharge(Integer.parseInt(split[11]));
-	        compound.sethBondDonor(Integer.parseInt(split[12]));
-	        compound.sethBondAcceptor(Integer.parseInt(split[13]));
+	        compound.setHBondDonor(Integer.parseInt(split[12]));
+	        compound.setHBondAcceptor(Integer.parseInt(split[13]));
 	        compound.setRotBondCount(Integer.parseInt(split[14]));
         } catch (Exception e) {
         	
