@@ -206,30 +206,30 @@ public class OntoQuery {
 
 	}
 
-	public Compound getCompound(String Compound) {
+	public Compound getCompound(String compoundName) {
 
 		Compound compound = null;
 
-		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
-		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty(Compound.DP_Compound);
+		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty(Compound.DP_Synonym);
 
-		RDFProperty dp_pubCID = owlModel.getRDFProperty("datatypeProperty_PubCID");
-		RDFProperty dp_molForm = owlModel.getRDFProperty("datatypeProperty_MolForm");
-		RDFProperty dp_molWeight = owlModel.getRDFProperty("datatypeProperty_MolWeight");
-		RDFProperty dp_canSMILES = owlModel.getRDFProperty("datatypeProperty_CanSMILES");
-		RDFProperty dp_inchi = owlModel.getRDFProperty("datatypeProperty_InChI");
-		RDFProperty dp_inchikey = owlModel.getRDFProperty("datatypeProperty_InChIkey");
-		RDFProperty dp_iupac = owlModel.getRDFProperty("datatypeProperty_IUPACName");
+		RDFProperty dp_pubCID = owlModel.getRDFProperty(Compound.DP_PubCID);
+		RDFProperty dp_molForm = owlModel.getRDFProperty(Compound.DP_MolForm);
+		RDFProperty dp_molWeight = owlModel.getRDFProperty(Compound.DP_MolWeight);
+		RDFProperty dp_canSMILES = owlModel.getRDFProperty(Compound.DP_CanSMILES);
+		RDFProperty dp_inchi = owlModel.getRDFProperty(Compound.DP_InChI);
+		RDFProperty dp_inchikey = owlModel.getRDFProperty(Compound.DP_InChIkey);
+		RDFProperty dp_iupac = owlModel.getRDFProperty(Compound.DP_IUPACName);
 
-		RDFProperty dp_xlogp = owlModel.getRDFProperty("datatypeProperty_XLogP");
-		RDFProperty dp_mass = owlModel.getRDFProperty("datatypeProperty_Mass");
-		RDFProperty dp_tpsa = owlModel.getRDFProperty("datatypeProperty_TPSA");
-		RDFProperty dp_complexity = owlModel.getRDFProperty("datatypeProperty_Complexity");
+		RDFProperty dp_xlogp = owlModel.getRDFProperty(Compound.DP_XLogP);
+		RDFProperty dp_mass = owlModel.getRDFProperty(Compound.DP_Mass);
+		RDFProperty dp_tpsa = owlModel.getRDFProperty(Compound.DP_TPSA);
+		RDFProperty dp_complexity = owlModel.getRDFProperty(Compound.DP_Complexity);
 
-		RDFProperty dp_charge = owlModel.getRDFProperty("datatypeProperty_Charge");
-		RDFProperty dp_donor = owlModel.getRDFProperty("datatypeProperty_HBondDonorCount");
-		RDFProperty dp_accept = owlModel.getRDFProperty("datatypeProperty_HBondAcceptorCount");
-		RDFProperty dp_rotbont = owlModel.getRDFProperty("datatypeProperty_RotatableBondCount");
+		RDFProperty dp_charge = owlModel.getRDFProperty(Compound.DP_Charge);
+		RDFProperty dp_donor = owlModel.getRDFProperty(Compound.DP_HBondDonor);
+		RDFProperty dp_accept = owlModel.getRDFProperty(Compound.DP_HBondAcceptor);
+		RDFProperty dp_rotbont = owlModel.getRDFProperty(Compound.DP_RotatableBond);
 
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
 		for (Iterator it = classes.iterator(); it.hasNext();) {
@@ -242,7 +242,7 @@ public class OntoQuery {
 						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
 						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
 
-						if (compoundIndiv.equalsIgnoreCase(Compound.toLowerCase())) {
+						if (compoundIndiv.equalsIgnoreCase(compoundName.toLowerCase())) {
 							System.out.println(compoundIndiv);
 							compound = new Compound(compoundIndiv);
 
@@ -560,7 +560,7 @@ public class OntoQuery {
 			String comp = compoundIndiv.getBrowserText().replaceAll("http.+#", "");
 			comp = comp.replaceAll("\\.", ",");
 			comp = comp.replaceAll("_", " ");
-			Compound compound = new Compound(comp);
+			Compound compound = getCompound(comp);
 			ArrayList<String> compoundSynonyms = new ArrayList<String>();
 			Collection compoundSynCol = compoundIndiv.getPropertyValues(datatypeProperty_CompoundSynonym);
 			for (Iterator jt = compoundSynCol.iterator(); jt.hasNext();) {
@@ -572,7 +572,7 @@ public class OntoQuery {
 			}
 			compound.setCompoundSynonyms(compoundSynonyms);
 			compounds.add(compound);
-			System.out.println(compound);
+			System.out.println(compound.getCompoundName()+"@");
 		}
 		return compounds;
 	}

@@ -194,9 +194,9 @@
 										var="compoundsList">
 										<tr>
 											<td></td>
-											<td>${compoundsList.getCompoundName()}</td>
-											<td></td>
-											<td></td>
+											<td><a href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameNorm()}</a></td>
+											<td>${compoundsList.getMolForm()}</td>
+											<td>${compoundsList.getMolWeight()}</td>
 											<td></td>
 											<td></td>
 											<td></td>

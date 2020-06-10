@@ -3,11 +3,12 @@ package model;
 import java.util.ArrayList;
 
 public class SpeciesPart {
+	public static String CLASS_SpeciesPart = "SpeciesPart";
+	
 	String plantPart;
 	ArrayList<Compound> compounds;
 
 	public SpeciesPart(String plantPart) {
-		super();
 		this.plantPart = plantPart;
 	}
 

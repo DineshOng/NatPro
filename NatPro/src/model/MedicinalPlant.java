@@ -3,13 +3,14 @@ package model;
 import java.util.ArrayList;
 
 public class MedicinalPlant {
+	public static String CLASS_MedPlant = "MedicinalPlant";
+	
 	String medicinalPlant;
 	ArrayList<Species> species;
 	ArrayList<String> locations;
 	ArrayList<Preparation> preparations;
 
 	public MedicinalPlant(String medicinalPlant) {
-		super();
 		this.medicinalPlant = medicinalPlant;
 	}
 	

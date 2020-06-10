@@ -1,11 +1,11 @@
 package model;
 
 public class Family {
-
+	public static String CLASS_Family = "Family";
+	
 	String family;
 
 	public Family(String family) {
-		super();
 		this.family = family;
 	}
 

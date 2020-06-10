@@ -4,10 +4,35 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Compound {
+	public static String CLASS_Compound = "Compound";
+	
+	public static String DP_Compound = "datatypeProperty_Compound";
+	public static String DP_Synonym = "datatypeProperty_CompoundSynonym";
+	
+	public static String DP_PubCID = "datatypeProperty_PubCID";
+	public static String DP_MolForm = "datatypeProperty_MolForm";
+	public static String DP_MolWeight = "datatypeProperty_MolWeight";
+	public static String DP_CanSMILES = "datatypeProperty_CanSMILES";
+	public static String DP_InChI = "datatypeProperty_InChI";
+	public static String DP_InChIkey = "datatypeProperty_InChIkey";
+	public static String DP_IUPACName = "datatypeProperty_IUPACName";
+	
+	public static String DP_XLogP = "datatypeProperty_XLogP";
+	public static String DP_Mass = "datatypeProperty_Mass";
+	public static String DP_TPSA = "datatypeProperty_TPSA";
+	public static String DP_Complexity = "datatypeProperty_Complexity";
+
+	public static String DP_Charge = "datatypeProperty_Charge";
+	public static String DP_HBondDonor = "datatypeProperty_HBondDonorCount";
+	public static String DP_HBondAcceptor = "datatypeProperty_HBondAcceptorCount";
+	public static String DP_RotatableBond = "datatypeProperty_RotatableBondCount";
+	
 	private String compoundName;
+	private List<String> compoundSynonyms;
 	
 	private HashSet<BiologicalActivity> bioActs;
-	private List<String> compoundSynonyms;
+	
+	private List<String> compounds;
 	
 	private int pubCID;
 	private String molForm;
@@ -27,7 +52,7 @@ public class Compound {
 	private int hBondAcceptor;
 	private int rotBondCount;
 	
-	
+	private boolean isMixture;
 	
 	public Compound() {
 		compoundSynonyms = new ArrayList<String>();
@@ -35,6 +60,27 @@ public class Compound {
 	
 	public Compound(String compoundName) {
 		this.compoundName = compoundName;
+		if(compoundName.toLowerCase().contains("(i?)mixture")) {
+			isMixture = true;
+			compounds = new ArrayList<String>();
+		}
+		
+	}
+
+	public List<String> getCompounds() {
+		return compounds;
+	}
+
+	public void setCompounds(List<String> compounds) {
+		this.compounds = compounds;
+	}
+
+	public boolean isMixture() {
+		return isMixture;
+	}
+
+	public void setMixture(boolean isMixture) {
+		this.isMixture = isMixture;
 	}
 
 	public String getCompoundName() {
@@ -43,7 +89,7 @@ public class Compound {
 	
 	public String getCompoundNameNorm() {
 		String str = compoundName.replaceAll("(?i)alpha", "&alpha;").replaceAll("(?i)beta", "&beta;").replaceAll("(?i)gamma", "&gamma;");
-		if(str.contains("mixture")) {
+		if(str.toLowerCase().contains("mixture")) {
 			str = str.replaceAll("\\.", ", ");
 		} else {
 			str = str.replaceAll("\\.", ",");
