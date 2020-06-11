@@ -48,63 +48,50 @@ public class RetrieveCompoundServlet extends HttpServlet {
 		///response.getWriter().write(cir.getCompound().getIupac());
 		//response.addHeader("smiles", cir.getCompound().getCanSMILES()+"!!");
 		//request.setAttribute("smiles", cir.getCompound().getCanSMILES()+"!!");
+		if(cir.isCompound()) {
 		
-		
-		response.setContentType("application/json");
-		response.setCharacterEncoding("utf-8");
-		
-		/* construct your json */
-		JSONObject obj = new JSONObject();
-		
-		String molForm = cir.getCompound().getMolForm();
-		
-		try {
-		
-			Pattern pattern = Pattern.compile("[0-9]");
-			Matcher matcher = pattern.matcher(molForm);
+			response.setContentType("application/json");
+			response.setCharacterEncoding("utf-8");
 			
-			while(matcher.find()) {
-				molForm = molForm.replace(matcher.group(), "<sub>"+matcher.group()+"</sub>");
+			/* construct your json */
+			JSONObject obj = new JSONObject();
+			
+			obj.put("pubCID", cir.getCompound().getPubCID());     
+			String x = request.getParameter("option");
+			if(x.equals("1"))
+				obj.put("molForm", cir.getCompound().getMolForm());     
+			else
+				obj.put("molForm", cir.getCompound().getMolFormHTML());     
+			obj.put("canSMILES", cir.getCompound().getCanSMILES());
+			obj.put("inchi", cir.getCompound().getInchi());
+			obj.put("inchikey", cir.getCompound().getInchikey());
+			obj.put("iupac", cir.getCompound().getIupac());
+			
+			obj.put("molWeight", cir.getCompound().getMolWeight());
+			obj.put("xlogp", cir.getCompound().getXlogp());
+			obj.put("mass", cir.getCompound().getMass());
+			obj.put("tpsa", cir.getCompound().getTpsa());
+			obj.put("complexity", cir.getCompound().getComplexity());
+			
+			obj.put("charge", cir.getCompound().getCharge());
+			obj.put("hBondDonor", cir.getCompound().getHBondDonor());
+			obj.put("hBondAcceptor", cir.getCompound().getHBondAcceptor());
+			obj.put("rotBondCount", cir.getCompound().getRotBondCount());
+			
+			
+			
+			String synonym = "";
+			
+			for(String str : cir.getCompound().getCompoundSynonyms()) {
+				if(!str.equals(""))
+					synonym += str + "\n";
 			}
-		
-		
-			molForm = molForm.replaceAll("(<sub>)+", "<sub>").replaceAll("(</sub>)+", "</sub>");
-		
-		} catch(Exception e) {
 			
+			obj.put("synonym", synonym.trim());
+			
+			/* send to the client the JSON string */
+			response.getWriter().write(obj.toString());
 		}
-		
-		obj.put("pubCID", cir.getCompound().getPubCID());     
-		obj.put("molForm", molForm);     
-		obj.put("canSMILES", cir.getCompound().getCanSMILES());
-		obj.put("inchi", cir.getCompound().getInchi());
-		obj.put("inchikey", cir.getCompound().getInchikey());
-		obj.put("iupac", cir.getCompound().getIupac());
-		
-		obj.put("molWeight", cir.getCompound().getMolWeight());
-		obj.put("xlogp", cir.getCompound().getXlogp());
-		obj.put("mass", cir.getCompound().getMass());
-		obj.put("tpsa", cir.getCompound().getTpsa());
-		obj.put("complexity", cir.getCompound().getComplexity());
-		
-		obj.put("charge", cir.getCompound().getCharge());
-		obj.put("hBondDonor", cir.getCompound().getHBondDonor());
-		obj.put("hBondAcceptor", cir.getCompound().getHBondAcceptor());
-		obj.put("rotBondCount", cir.getCompound().getRotBondCount());
-		
-		
-		
-		String synonym = "";
-		
-		for(String str : cir.getCompound().getCompoundSynonyms()) {
-			if(!str.equals(""))
-				synonym += str + "@$@";
-		}
-		
-		obj.put("synonym", synonym);
-		
-		/* send to the client the JSON string */
-		response.getWriter().write(obj.toString());
 		
 		//response.sendRedirect("ViewCompoundServlet?compound="+searchKey);
 	}

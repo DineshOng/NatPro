@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Compound {
 	public static String CLASS_Compound = "Compound";
@@ -37,23 +39,23 @@ public class Compound {
 	
 	private HashSet<String> compounds;
 	
-	private int pubCID;
+	private String pubCID;
 	private String molForm;
 	private String canSMILES;
 	private String inchi;
 	private String inchikey;
 	private String iupac;
 	
-	private double molWeight;
-	private double xlogp;
-	private double mass;
-	private double tpsa;
-	private double complexity;
+	private String molWeight;
+	private String xlogp;
+	private String mass;
+	private String tpsa;
+	private String complexity;
 	
-	private int charge;
-	private int hBondDonor;
-	private int hBondAcceptor;
-	private int rotBondCount;
+	private String charge;
+	private String hBondDonor;
+	private String hBondAcceptor;
+	private String rotBondCount;
 	
 	private boolean isMixture;
 	
@@ -75,16 +77,20 @@ public class Compound {
 		
 	}
 	
-	public static String toOWLString(String str) {
+	public static String toOWLIndivString(String str) {
 		str = str.trim();
 		str = str.toLowerCase();
-		str = str.replaceAll(" *", "_");
-		str = str.replaceAll(",*", ".");
-		str = str.replaceAll("\u03B1", "alpha");
-		str = str.replaceAll("\u03B2", "beta");
-		str = str.replaceAll("\u0393", "gamma");
+		str = str.replaceAll(" ", "_");
+		str = str.replaceAll(",", ".");
+		str = str.replaceAll("&#945;", "alpha");
+		str = str.replaceAll("&#946;", "beta");
+		str = str.replaceAll("&#947;", "gamma");
 		
 		return str;
+	}
+	
+	public String getCompoundOWL() {
+		return toOWLIndivString(compoundName);
 	}
 	
 	public HashSet<String> getCompoundsHashSet() {
@@ -92,14 +98,6 @@ public class Compound {
 		set.addAll(compounds);
 		
 		return set;
-	}
-
-	public HashSet<String> getCompounds() {
-		return compounds;
-	}
-
-	public void setCompounds(HashSet<String> compounds) {
-		this.compounds = compounds;
 	}
 
 	public boolean isMixture() {
@@ -110,11 +108,8 @@ public class Compound {
 		this.isMixture = isMixture;
 	}
 
-	public String getCompoundName() {
-		return compoundName;
-	}
 	
-	public String getCompoundNameNorm() {
+	public String getCompoundNameHTML() {
 		String str = compoundName.replaceAll("(?i)alpha", "&alpha;").replaceAll("(?i)beta", "&beta;").replaceAll("(?i)gamma", "&gamma;");
 		if(str.toLowerCase().contains("mixture")) {
 			str = str.replaceAll("\\.", ", ");
@@ -123,12 +118,46 @@ public class Compound {
 		}
 		return str;
 	}
+	
+	public String getMolFormHTML() {
+		String str = molForm;
+		
+		try {
+			
+			Pattern pattern = Pattern.compile("[0-9]");
+			Matcher matcher = pattern.matcher(str);
+			
+			while(matcher.find()) {
+				str = str.replace(matcher.group(), "<sub>"+matcher.group()+"</sub>");
+			}
+		
+		
+			str = str.replaceAll("(<sub>)+", "<sub>").replaceAll("(</sub>)+", "</sub>");
+		
+		} catch(Exception e) {
+			
+		}
+		
+		return str;
+	}
+
+	public String getCompoundName() {
+		return compoundName;
+	}
 
 	public void setCompoundName(String compoundName) {
 		this.compoundName = compoundName;
 	}
 
-	public Set<BiologicalActivity> getBioActs() {
+	public HashSet<String> getCompoundSynonyms() {
+		return compoundSynonyms;
+	}
+
+	public void setCompoundSynonyms(HashSet<String> compoundSynonyms) {
+		this.compoundSynonyms = compoundSynonyms;
+	}
+
+	public HashSet<BiologicalActivity> getBioActs() {
 		return bioActs;
 	}
 
@@ -136,16 +165,28 @@ public class Compound {
 		this.bioActs = bioActs;
 	}
 
-	public int getPubCID() {
+	public HashSet<CompoundClass> getCompoundClasses() {
+		return compoundClasses;
+	}
+
+	public void setCompoundClasses(HashSet<CompoundClass> compoundClasses) {
+		this.compoundClasses = compoundClasses;
+	}
+
+	public HashSet<String> getCompounds() {
+		return compounds;
+	}
+
+	public void setCompounds(HashSet<String> compounds) {
+		this.compounds = compounds;
+	}
+
+	public String getPubCID() {
 		return pubCID;
 	}
 
-	public void setPubCID(int pubCID) {
-		this.pubCID = pubCID;
-	}
-	
 	public void setPubCID(String pubCID) {
-		this.pubCID = Integer.parseInt(pubCID);
+		this.pubCID = pubCID;
 	}
 
 	public String getMolForm() {
@@ -155,19 +196,6 @@ public class Compound {
 	public void setMolForm(String molForm) {
 		this.molForm = molForm;
 	}
-
-	public double getMolWeight() {
-		return molWeight;
-	}
-
-	public void setMolWeight(double molWeight) {
-		this.molWeight = molWeight;
-	}
-	
-	public void setMolWeight(String molWeight) {
-		this.molWeight = Double.parseDouble(molWeight);
-	}
-
 
 	public String getCanSMILES() {
 		return canSMILES;
@@ -201,117 +229,77 @@ public class Compound {
 		this.iupac = iupac;
 	}
 
-	public double getXlogp() {
+	public String getMolWeight() {
+		return molWeight;
+	}
+
+	public void setMolWeight(String molWeight) {
+		this.molWeight = molWeight;
+	}
+
+	public String getXlogp() {
 		return xlogp;
 	}
 
-	public void setXlogp(double xlogp) {
+	public void setXlogp(String xlogp) {
 		this.xlogp = xlogp;
 	}
-	
-	public void setXlogp(String xlogp) {
-		this.xlogp = Double.parseDouble(xlogp);
-	}
 
-	public double getMass() {
+	public String getMass() {
 		return mass;
 	}
 
-	public void setMass(double mass) {
+	public void setMass(String mass) {
 		this.mass = mass;
 	}
-	
-	public void setMass(String mass) {
-		this.mass = Double.parseDouble(mass);
-	}
 
-	public double getTpsa() {
+	public String getTpsa() {
 		return tpsa;
 	}
 
-	public void setTpsa(double tpsa) {
+	public void setTpsa(String tpsa) {
 		this.tpsa = tpsa;
 	}
-	
-	public void setTpsa(String tpsa) {
-		this.tpsa = Double.parseDouble(tpsa);
-	}
 
-	public double getComplexity() {
+	public String getComplexity() {
 		return complexity;
 	}
 
-	public void setComplexity(double complexity) {
+	public void setComplexity(String complexity) {
 		this.complexity = complexity;
 	}
-	
-	public void setComplexity(String complexity) {
-		this.complexity = Double.parseDouble(complexity);
-	}
 
-	public int getCharge() {
+	public String getCharge() {
 		return charge;
 	}
 
-	public void setCharge(int charge) {
+	public void setCharge(String charge) {
 		this.charge = charge;
 	}
-	
-	public void setCharge(String charge) {
-		this.charge = Integer.parseInt(charge);
-	}
 
-	public int getHBondDonor() {
+	public String getHBondDonor() {
 		return hBondDonor;
 	}
 
-	public void setHBondDonor(int hBondDonor) {
+	public void setHBondDonor(String hBondDonor) {
 		this.hBondDonor = hBondDonor;
 	}
-	
-	public void setHBondDonor(String hBondDonor) {
-		this.hBondDonor = Integer.parseInt(hBondDonor);
-	}
 
-	public int getHBondAcceptor() {
+	public String getHBondAcceptor() {
 		return hBondAcceptor;
 	}
 
-	public void setHBondAcceptor(int hBondAcceptor) {
+	public void setHBondAcceptor(String hBondAcceptor) {
 		this.hBondAcceptor = hBondAcceptor;
 	}
-	
-	public void setHBondAcceptor(String hBondAcceptor) {
-		this.hBondAcceptor = Integer.parseInt(hBondAcceptor);
-	}
 
-	public int getRotBondCount() {
+	public String getRotBondCount() {
 		return rotBondCount;
 	}
 
-	public void setRotBondCount(int rotBondCount) {
+	public void setRotBondCount(String rotBondCount) {
 		this.rotBondCount = rotBondCount;
 	}
-	
-	public void setRotBondCount(String rotBondCount) {
-		this.rotBondCount = Integer.parseInt(rotBondCount);
-	}
 
-	public HashSet<String> getCompoundSynonyms() {
-		return compoundSynonyms;
-	}
-
-	public void setCompoundSynonyms(HashSet<String> compoundSynonyms) {
-		this.compoundSynonyms = compoundSynonyms;
-	}
-
-	public Set<CompoundClass> getCompoundClasses() {
-		return compoundClasses;
-	}
-
-	public void setCompoundClasses(HashSet<CompoundClass> compoundClasses) {
-		this.compoundClasses = compoundClasses;
-	}
-	
 	
 }

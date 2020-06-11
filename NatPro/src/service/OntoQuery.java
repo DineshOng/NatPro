@@ -346,13 +346,15 @@ public class OntoQuery {
 	}
 
 	public List<Compound> searchCompound(String Compound) {
-		if (Compound.contains("α")) {
-			Compound = Compound.replaceAll("α", "alpha");
-		} else if (Compound.contains("β")) {
-			Compound = Compound.replaceAll("β", "beta");
-		} else if (Compound.contains("γ")) {
-			Compound = Compound.replaceAll("γ", "gamma");
+		if (Compound.contains("&#945;")) {
+			Compound = Compound.replaceAll("&#945;", "alpha");
+		} else if (Compound.contains("&#946;")) {
+			Compound = Compound.replaceAll("&#946;", "beta");
+		} else if (Compound.contains("&#947;")) {
+			Compound = Compound.replaceAll("&#947;", "gamma");
 		}
+		
+		System.out.println("search " + Compound);
 
 		List<Compound> values = new ArrayList<Compound>();
 
@@ -424,6 +426,42 @@ public class OntoQuery {
 
 		return values;
 	}
+	
+	public HashSet<String> getAllCompoundNames() {
+		HashSet<String> values = new HashSet<String>();
+
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
+		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Compound")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
+						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
+
+						Compound mp = null;
+						values.add(compoundIndiv);
+						for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
+							String syno = jtt.next().toString();
+							values.add(syno);
+						}
+					} catch (Exception e) {
+						//System.out.println("eeeek");
+					}
+				}
+			}
+		}
+
+		System.out.println(values.size());
+
+		return values;
+	}
+
 
 	public List<MedicinalPlant> searchMedicinalPlant(String MedicinalPlant) {
 		List<MedicinalPlant> values = new ArrayList<MedicinalPlant>();

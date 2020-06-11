@@ -21,6 +21,99 @@
        
 	        $(document).ready(function() {
 	        	//$('#loading').hide();
+	        	
+	        	$('#saveBT').click(function() {
+	        		
+	        		$('input[name="compound"]').val($("#compound").text());
+	        		
+	        		$('input[name="pubCID"]').val($("#pubCID").text());
+	        		$('input[name="molForm"]').val($("#molForm").text());
+	        		$('input[name="canSMILES"]').val($("#canSMILES").text());
+	        		$('input[name="inchi"]').val($("#inchi").text());
+	        		$('input[name="inchikey"]').val($("#inchikey").text());
+	        		$('input[name="iupac"]').val($("#iupac").text());
+	        		
+	        		$('input[name="molWeight"]').val($("#molWeight").text());
+	        		$('input[name="xlogp"]').val($("#xlogp").text());
+	        		$('input[name="mass"]').val($("#mass").text());
+	        		$('input[name="tpsa"]').val($("#tpsa").text());
+	        		$('input[name="complexity"]').val($("#complexity").text());
+	        		
+	        		$('input[name="charge"]').val($("#charge").text());
+	        		$('input[name="hBondDonor"]').val($("#hBondDonor").text());
+	        		$('input[name="hBondAcceptor"]').val($("#hBondAcceptor").text());
+	        		$('input[name="rotBondCount"]').val($("#rotBondCount").text());
+	        		
+	        		$("#saveForm").submit();
+	        	});
+	        	
+				$('#editBT').click(function() {
+	        		
+					
+					var strAction = "compound.jsp?";
+					
+					if($("#compound").text() != "")
+						strAction += ("compound="+escape($("#compound").text()));
+					if($("#pubCID").text() != "")
+						strAction += ("&pubCID="+escape($("#pubCID").text()));
+					if($("#molForm").text() != "")
+						strAction += ("&molForm="+escape($("#molForm").text()));
+					if($("#canSMILES").text() != "")
+						strAction += ("&canSMILES="+escape($("#canSMILES").text()));
+					if($("#inchi").text() != "")
+						strAction += ("&inchi="+escape($("#inchi").text()));
+					if($("#inchikey").text() != "")
+						strAction += ("&inchikey="+escape($("#inchikey").text()));
+					if($("#iupac").text() != "")
+						strAction += ("&iupac="+escape($("#iupac").text()));
+					
+					if($("#molWeight").text() != "")
+						strAction += ("&molWeight="+escape($("#molWeight").text()));
+					if($("#xlogp").text() != "")
+						strAction += ("&xlogp="+escape($("#xlogp").text()));
+					if($("#mass").text() != "")
+						strAction += ("&mass="+escape($("#massmass").text()));
+					if($("#tpsa").text() != "")
+						strAction += ("&tpsa="+escape($("#tpsa").text()));
+					if($("#complexity").text() != "")
+						strAction += ("&complexity="+escape($("#complexity").text()));
+					
+					if($("#charge").text() != "")
+						strAction += ("&charge="+escape($("#charge").text()));
+					if($("#hBondDonor").text() != "")
+						strAction += ("&hBondDonor="+escape($("#hBondDonor").text()));
+					if($("#hBondAcceptor").text() != "")
+						strAction += ("&hBondAcceptor="+escape($("#hBondAcceptor").text()));
+					if($("#rotBondCount").text() != "")
+						strAction += ("&rotBondCount="+escape($("#rotBondCount").text()));
+					
+			
+						
+					$("#saveForm").attr("action", strAction);
+					
+	        		$('input[name="compound"]').val($("#compound").text());
+	        		
+	        		$('input[name="pubCID"]').val($("#pubCID").text());
+	        		$('input[name="molForm"]').val($("#molForm").text());
+	        		$('input[name="canSMILES"]').val($("#canSMILES").text());
+	        		$('input[name="inchi"]').val($("#inchi").text());
+	        		$('input[name="inchikey"]').val($("#inchikey").text());
+	        		$('input[name="iupac"]').val($("#iupac").text());
+	        		
+	        		$('input[name="molWeight"]').val($("#molWeight").text());
+	        		$('input[name="xlogp"]').val($("#xlogp").text());
+	        		$('input[name="mass"]').val($("#mass").text());
+	        		$('input[name="tpsa"]').val($("#tpsa").text());
+	        		$('input[name="complexity"]').val($("#complexity").text());
+	        		
+	        		$('input[name="charge"]').val($("#charge").text());
+	        		$('input[name="hBondDonor"]').val($("#hBondDonor").text());
+	        		$('input[name="hBondAcceptor"]').val($("#hBondAcceptor").text());
+	        		$('input[name="rotBondCount"]').val($("#rotBondCount").text());
+	        		
+	        		$("#saveForm").submit();
+	        	});
+	        	
 	        	$('#pubchemBT').click(function() {
 	        		$.LoadingOverlay("show");
 	        		$.ajax({
@@ -38,6 +131,7 @@
 	        				
 		        				$('#compoundIMG').attr("src", "https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid="+obj.pubCID+"&t=l");
 		        				
+		        				$('#pubCID').html(obj.pubCID);
 		        				$('#molForm').html(obj.molForm);
 		        				$('#canSMILES').html(obj.canSMILES);
 		        				$('#inchi').html(obj.inchi);
@@ -56,11 +150,11 @@
 		        				$('#rotBondCount').html(obj.rotBondCount);
 		        				
 		        				var arr = obj.synonym;
-		        				var syn = arr.split("@$@");
+		        				var syn = arr.split("\n");
 		        				var text = "";
 		        				
 		        				var i;
-		        				for (i = 0; i < syn.length-1; i++) {
+		        				for (i = 0; i < syn.length; i++) {
 		        				  text += '<tr><td>' + syn[i] + "</td></tr>";
 		        				}
 		        				$('#synonym').append(text);
@@ -85,12 +179,14 @@
         <div class="section green darken-1" id="index-banner">
             <div class="container">
                 <!--<br><br>-->
-                <h1 class="header center white-text" id="compound"><b>${compound.getCompoundNameNorm()}</b></h1>
+                <h1 class="header center white-text"><b>${compound.getCompoundNameHTML()}</b></h1>
                 <div class="row center white-text">
-                    <img id="compoundIMG" class="responsive-img circle" src="media/compound/b.svg">
+                    <img id="compoundIMG" class="responsive-img circle" src="https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=${compound.getPubCID()}&t=l">
                     <br><br>
                     <!-- href="RetrieveCompoundServet?compound=${compound.getCompoundName()}"  -->
                     <a id="pubchemBT" class="waves-effect waves-light btn green accent-4 white-text">Fill out information from pubchem</a>
+                    <a id="editBT" class="waves-effect waves-light btn green accent-4 white-text">Edit</a>
+                    <a id="saveBT" class="waves-effect waves-light btn green accent-4 white-text">Save</a>
                     <div id="loading" class="lds-ring"><div></div><div></div><div></div><div></div></div>
                 </div>
                 <!--
@@ -135,7 +231,7 @@
                                 <tbody>
                                     <tr>
                                         <th>Common Name</th>
-                                        <td>${compound.getCompoundName()}</td>
+                                        <td id="compound">${compound.getCompoundName()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
@@ -150,7 +246,7 @@
                                     </tr>
                                     <tr>
                                         <th>Formula</th>
-                                        <td id="molForm">${compound.getMolForm()}</td>
+                                        <td id="molForm">${compound.getMolFormHTML()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
@@ -165,7 +261,12 @@
                                     </tr>
                                     <tr>
                                         <th>Chemical Class</th>
-                                        <td>////</td>
+                                        <td id="chemClass"></td>
+                                        <td><i class="material-icons">edit</i></td>
+                                    </tr>
+                                     <tr>
+                                        <th>PubChem CID</th>
+                                        <td id="pubCID">${compound.getPubCID()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                 </tbody>
@@ -194,8 +295,23 @@
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
+                                        <th>Mass</th>
+                                        <td id="mass">${compound.getMass()}</td>
+                                        <td><i class="material-icons">edit</i></td>
+                                    </tr>
+                                    <tr>
                                         <th>TPSA</th>
                                         <td id="tpsa">${compound.getTpsa()}</td>
+                                        <td><i class="material-icons">edit</i></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Complexity</th>
+                                        <td id="complexity">${compound.getComplexity()}</td>
+                                        <td><i class="material-icons">edit</i></td>
+                                    </tr>
+                                     <tr>
+                                        <th>Charge</th>
+                                        <td id="charge">${compound.getCharge()}</td>
                                         <td><i class="material-icons">edit</i></td>
                                     </tr>
                                     <tr>
@@ -278,6 +394,31 @@
             </table>
             </div>
         </div>
+        
+ 
+        
+        <form id="saveForm" action="AddCompoundServlet" method="POST">
+        	<input type="hidden" name="compound">
+        	
+        	<input type="hidden" name="pubCID">
+        	<input type="hidden" name="molForm">
+        	<input type="hidden" name="canSMILES">
+        	<input type="hidden" name="inchi">
+        	<input type="hidden" name="inchikey">
+        	<input type="hidden" name="iupac">
+        	
+        	<input type="hidden" name="molWeight" value=0>
+        	<input type="hidden" name="xlogp" value=0>
+        	<input type="hidden" name="mass" value=0>
+        	<input type="hidden" name="tpsa" value=0>
+        	<input type="hidden" name="complexity" value=0>
+        	
+        	<input type="hidden" name="charge" value=0>
+        	<input type="hidden" name="hBondDonor" value=0>
+        	<input type="hidden" name="hBondAcceptor" value=0>
+        	<input type="hidden" name="rotBondCount" value=0>
+        	
+        </form>
 
         <%@include file="includeFooter.html"%>
 		<%@include file="includeScripts.html"%>

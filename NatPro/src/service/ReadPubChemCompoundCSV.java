@@ -53,21 +53,24 @@ public class ReadPubChemCompoundCSV {
 	        
 	        compound = new Compound();
 	        
-	        compound.setPubCID(Integer.parseInt(split[0]));
+	        compound.setPubCID(split[0]);
 	        compound.setMolForm(split[1].replaceAll("\"", ""));
-	        compound.setMolWeight(Double.parseDouble(split[2]));
 	        compound.setCanSMILES(split[3].replaceAll("\"", ""));
 	        compound.setInchi(split[4].replaceAll("\"", ""));
 	        compound.setInchikey(split[5].replaceAll("\"", ""));
 	        compound.setIupac(split[6].replaceAll("\"", ""));
-	        compound.setXlogp(Double.parseDouble(split[7]));
-	        compound.setMass(Double.parseDouble(split[8]));
-	        compound.setTpsa(Double.parseDouble(split[9]));
-	        compound.setComplexity(Double.parseDouble(split[10]));
-	        compound.setCharge(Integer.parseInt(split[11]));
-	        compound.setHBondDonor(Integer.parseInt(split[12]));
-	        compound.setHBondAcceptor(Integer.parseInt(split[13]));
-	        compound.setRotBondCount(Integer.parseInt(split[14]));
+	        
+	        compound.setMolWeight(split[2]);
+	        compound.setXlogp(split[7]);
+	        compound.setMass(split[8]);
+	        compound.setTpsa(split[9]);
+	        compound.setComplexity(split[10]);
+	        
+	        compound.setCharge(split[11]);
+	        compound.setHBondDonor(split[12]);
+	        compound.setHBondAcceptor(split[13]);
+	        compound.setRotBondCount(split[14]);
+	        
         } catch (Exception e) {
         	
         }

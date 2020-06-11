@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashSet;
 
 import javax.servlet.ServletException;
@@ -42,7 +43,7 @@ public class AddCompoundServlet extends HttpServlet {
 			
 			String compoundName = request.getParameter("compound");
 			
-			compoundName =  Compound.toOWLString(compoundName);
+			compoundName =  Compound.toOWLIndivString(compoundName);
 			
 			ontoMngr.addIndiv_Compound(compoundName);
 			
@@ -87,19 +88,13 @@ public class AddCompoundServlet extends HttpServlet {
 			ontoMngr.addDataPropCompound_HBondAcceptorCount(hBondAcceptor);
 			ontoMngr.addDataPropCompound_RotatableBondCount(rotBondCount);
 			
-			HashSet<String> set = new HashSet<String>();
+			String []synonyms = request.getParameter("synonym").split("\n");
 			
-			int synonymCtr = Integer.parseInt(request.getParameter("synonymCtr").trim());
+			HashSet<String> set = new HashSet<>(Arrays.asList(synonyms));
 			
-			String syn;
-			
-			for(int i=0; i<synonymCtr; i++) {
-				syn = request.getParameter("synonym"+i).trim();
+			for(String syn : set) {
 				if(!syn.equals("")) {
-					if(!set.contains(syn)) {
-						ontoMngr.addDataPropCompound_Synonym(syn);
-						set.add(syn);
-					}
+					ontoMngr.addDataPropCompound_Synonym(syn);
 				}
 			}
 			

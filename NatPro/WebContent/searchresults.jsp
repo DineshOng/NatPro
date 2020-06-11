@@ -19,7 +19,7 @@
   
   	 <%@include file="navbarnix.html"%>
 
-    <div>
+    <div id="firstDiv">
 		<table id="table_id" class="table table-striped table-bordered" style="width:100%">
 			<c:choose>
 				<c:when test="${searchCategory =='1'}">
@@ -89,7 +89,7 @@
 							<tr>
 								<td class="hid"><a>${compoundList.getCompoundName()}</a></td>
 								<td><a
-									href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundNameNorm()}</a></td>
+									href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundNameHTML()}</a></td>
 								<td><c:forEach
 										items="${compoundList.getCompoundSynonyms()}" var="csList" varStatus="loop">
 										<a
@@ -110,7 +110,7 @@
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();
 	        //$('.hid').css('display', 'none');
-	    } );
+	    });
 	    
 	    function func_submit() {
 	    	$("#searchForm").submit();
@@ -129,6 +129,7 @@
 				toogleBtn.first().removeClass("hide");
 			});
 		});
+		
 		function ddfunc(x){
 			if(x==1) {
 				$("#ddtext").html("Plant Name <b class='caret'></b>");
