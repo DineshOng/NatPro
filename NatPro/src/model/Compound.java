@@ -152,6 +152,10 @@ public class Compound {
 	public HashSet<String> getCompoundSynonyms() {
 		return compoundSynonyms;
 	}
+	
+	public String getAllCompoundSynonymsHTML() {
+		return String.join("", compoundSynonyms).trim();
+	}
 
 	public void setCompoundSynonyms(HashSet<String> compoundSynonyms) {
 		this.compoundSynonyms = compoundSynonyms;

@@ -50,7 +50,7 @@
 				$('#editBT').click(function() {
 	        		
 					
-					var strAction = "compound.jsp?";
+					/*var strAction = "compound.jsp?";
 					
 					if($("#compound").text() != "")
 						strAction += ("compound="+escape($("#compound").text()));
@@ -86,8 +86,8 @@
 						strAction += ("&hBondAcceptor="+escape($("#hBondAcceptor").text()));
 					if($("#rotBondCount").text() != "")
 						strAction += ("&rotBondCount="+escape($("#rotBondCount").text()));
-					
-			
+					*/
+					var strAction = "EditCompoundServlet";
 						
 					$("#saveForm").attr("action", strAction);
 					

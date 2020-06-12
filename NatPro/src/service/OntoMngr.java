@@ -120,6 +120,7 @@ public class OntoMngr {
 		str2 = "<datatypeProperty_Compound>"+newVal+"</datatypeProperty_Compound>";
 		content = content.replaceAll(str1, str2);
 		 */
+		
 		str1 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+Compound.toOWLIndivString(oldVal)+"\"/>";
 		str2 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+Compound.toOWLIndivString(newVal)+"\"/>";
 		content = content.replaceAll(str1, str2);

@@ -26,8 +26,8 @@
      xmlns:PMPlants2="http://www.owl-ontologies.com/PMPlants.owl#6-"
      xmlns:PMPlants4="http://www.owl-ontologies.com/PMPlants.owl#3"
      xmlns:PMPlants3="http://www.owl-ontologies.com/PMPlants.owl#1.2-"
-     xmlns:may_be_beneficial_in_the_treatment_of_malignant_growths="http://www.owl-ontologies.com/PMPlants.owl#may_be_beneficial_in_the_treatment_of_malignant_growths,"
      xmlns:PMPlants9="http://www.owl-ontologies.com/PMPlants.owl#2-"
+     xmlns:may_be_beneficial_in_the_treatment_of_malignant_growths="http://www.owl-ontologies.com/PMPlants.owl#may_be_beneficial_in_the_treatment_of_malignant_growths,"
      xmlns:PMPlants6="http://www.owl-ontologies.com/PMPlants.owl#9"
      xmlns:PMPlants12="http://www.owl-ontologies.com/PMPlants.owl#5.2&#39;-"
      xmlns:PMPlants5="http://www.owl-ontologies.com/PMPlants.owl#2.3-"
@@ -1134,19 +1134,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#alstonerine -->
-
-    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#xiongdi">
-        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
-        <datatypeProperty_IUPACName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-[(1S,12S,13R,18R)-3,20-dimethyl-15-oxa-3,20-diazapentacyclo[10.7.1.02,10.04,9.013,18]icosa-2(10),4,6,8,16-pentaen-17-yl]ethanone</datatypeProperty_IUPACName>
-        <datatypeProperty_MolWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69.42</datatypeProperty_MolWeight>
-        <datatypeProperty_InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C21H24N2O2/c1-12(24)16-10-25-11-17-14(16)8-20-21-15(9-19(17)22(20)2)13-6-4-5-7-18(13)23(21)3/h4-7,10,14,17,19-20H,8-9,11H2,1-3H3/t14-,17+,19-,20-/m0/s1</datatypeProperty_InChI>
-        <datatypeProperty_MolForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIX69</datatypeProperty_MolForm>
-        <datatypeProperty_Compound rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xiongdi</datatypeProperty_Compound>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.owl-ontologies.com/PMPlants.owl#alstonia -->
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstonia">
@@ -1175,7 +1162,6 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#alstonia_macrophylla_bark">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#SpeciesPart"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#24-methylenecycloartanol"/>
-        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#xiongdi"/>
         <hasParent rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#alstonia_macrophylla"/>
         <hasPlantPart rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#bark"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#beta-amyrin"/>
@@ -1186,6 +1172,7 @@
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#rauvomitin"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#stigmasterol"/>
         <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#strictamin"/>
+        <hasCompound rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#xiongdi"/>
     </owl:NamedIndividual>
     
 
@@ -2017,6 +2004,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#beta-sitosterol">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_IUPACName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(3S,8S,9S,10R,13R,14S,17R)-17-[(2R,5R)-5-ethyl-6-methylheptan-2-yl]-10,13-dimethyl-2,3,4,7,8,9,11,12,14,15,16,17-dodecahydro-1H-cyclopenta[a]phenanthren-3-ol</datatypeProperty_IUPACName>
+        <datatypeProperty_Charge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</datatypeProperty_Charge>
+        <datatypeProperty_HBondAcceptorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</datatypeProperty_HBondAcceptorCount>
+        <datatypeProperty_HBondDonorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</datatypeProperty_HBondDonorCount>
+        <datatypeProperty_TPSA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20.2</datatypeProperty_TPSA>
+        <datatypeProperty_PubCID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">222284</datatypeProperty_PubCID>
+        <datatypeProperty_Mass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">414.386166</datatypeProperty_Mass>
+        <datatypeProperty_MolWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">414.700000</datatypeProperty_MolWeight>
+        <datatypeProperty_RotatableBondCount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</datatypeProperty_RotatableBondCount>
+        <datatypeProperty_Complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">634.0</datatypeProperty_Complexity>
+        <datatypeProperty_XLogP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9.3</datatypeProperty_XLogP>
+        <datatypeProperty_MolForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C29H50O</datatypeProperty_MolForm>
+        <datatypeProperty_CanSMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCC(CCC(C)C1CCC2C1(CCC3C2CC=C4C3(CCC(C4)O)C)C)C(C)C</datatypeProperty_CanSMILES>
+        <datatypeProperty_InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C29H50O/c1-7-21(19(2)3)9-8-20(4)25-12-13-26-24-11-10-22-18-23(30)14-16-28(22,5)27(24)15-17-29(25,26)6/h10,19-21,23-27,30H,7-9,11-18H2,1-6H3/t20-,21-,23+,24+,25-,26+,27+,28+,29-/m1/s1</datatypeProperty_InChI>
+        <datatypeProperty_InChIkey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KZJWDPNRJALLNS-VJSFXXLFSA-N</datatypeProperty_InChIkey>
         <datatypeProperty_Compound rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beta-Sitosterol</datatypeProperty_Compound>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_DU-145"/>
         <hasBiologicalActivity rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#anti-proliferative_against_HCT-116"/>
@@ -2523,6 +2525,33 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#chronic_cough">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Illness"/>
         <datatypeProperty_Illness rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chronic cough</datatypeProperty_Illness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#cocaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#cocaine">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_HBondAcceptorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</datatypeProperty_HBondAcceptorCount>
+        <datatypeProperty_Charge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</datatypeProperty_Charge>
+        <datatypeProperty_XLogP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.300</datatypeProperty_XLogP>
+        <datatypeProperty_Mass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">303.147058</datatypeProperty_Mass>
+        <datatypeProperty_MolWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">303.350000</datatypeProperty_MolWeight>
+        <datatypeProperty_Complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">432</datatypeProperty_Complexity>
+        <datatypeProperty_PubCID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">446220</datatypeProperty_PubCID>
+        <datatypeProperty_HBondDonorCount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</datatypeProperty_HBondDonorCount>
+        <datatypeProperty_RotatableBondCount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</datatypeProperty_RotatableBondCount>
+        <datatypeProperty_TPSA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">55.8</datatypeProperty_TPSA>
+        <datatypeProperty_Complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">690</datatypeProperty_Complexity>
+        <datatypeProperty_MolForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C17H21NO4</datatypeProperty_MolForm>
+        <datatypeProperty_CanSMILES rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CN1C2CCC1C(C(C2)OC(=O)C3=CC=CC=C3)C(=O)OC</datatypeProperty_CanSMILES>
+        <datatypeProperty_CompoundSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coca-cola</datatypeProperty_CompoundSynonym>
+        <datatypeProperty_InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C17H21NO4/c1-18-12-8-9-13(18)15(17(20)21-2)14(10-12)22-16(19)11-6-4-3-5-7-11/h3-7,12-15H,8-10H2,1-2H3/t12-,13 ,14-,15 /m0/s1</datatypeProperty_InChI>
+        <datatypeProperty_InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C17H21NO4/c1-18-12-8-9-13(18)15(17(20)21-2)14(10-12)22-16(19)11-6-4-3-5-7-11/h3-7,12-15H,8-10H2,1-2H3/t12-,13+,14-,15+/m0/s1</datatypeProperty_InChI>
+        <datatypeProperty_InChIkey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZPUCINDJVBIVPJ-LJISPDSOSA-N</datatypeProperty_InChIkey>
+        <datatypeProperty_Compound rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cocaine</datatypeProperty_Compound>
+        <datatypeProperty_IUPACName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methyl (1R,2R,3S,5S)-3-benzoyloxy-8-methyl-8-azabicyclo[3.2.1]octane-2-carboxylate</datatypeProperty_IUPACName>
     </owl:NamedIndividual>
     
 
@@ -7479,6 +7508,19 @@
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#wound">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Illness"/>
         <datatypeProperty_Illness rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wound</datatypeProperty_Illness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#xiongdi -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#xiongdi">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Compound"/>
+        <datatypeProperty_IUPACName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-[(1S,12S,13R,18R)-3,20-dimethyl-15-oxa-3,20-diazapentacyclo[10.7.1.02,10.04,9.013,18]icosa-2(10),4,6,8,16-pentaen-17-yl]ethanone</datatypeProperty_IUPACName>
+        <datatypeProperty_MolWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69.42</datatypeProperty_MolWeight>
+        <datatypeProperty_InChI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C21H24N2O2/c1-12(24)16-10-25-11-17-14(16)8-20-21-15(9-19(17)22(20)2)13-6-4-5-7-18(13)23(21)3/h4-7,10,14,17,19-20H,8-9,11H2,1-3H3/t14-,17+,19-,20-/m0/s1</datatypeProperty_InChI>
+        <datatypeProperty_MolForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIX69</datatypeProperty_MolForm>
+        <datatypeProperty_Compound rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xiongdi</datatypeProperty_Compound>
     </owl:NamedIndividual>
     
 

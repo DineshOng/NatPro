@@ -50,12 +50,12 @@ public class SaveCompoundServlet extends HttpServlet {
 			//indiv 1.2-dioleylglycerol
 			
 			String oldCompoundName = request.getParameter("oldCompound"); // 1,2-dioleyl glycerol
-			String newCompoundName = request.getParameter("newCompound"); // 1,3-dioleyl glycerol
+			String newCompoundName = request.getParameter("compound"); // 1,3-dioleyl glycerol
 			
 			Compound compound = ontoQry.getCompound(oldCompoundName);
 			
 			String newVal = request.getParameter("pubCID").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_PubCID, compound.getPubCID()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_PubCID, compound.getPubCID(), newVal);
 			
 			newVal = request.getParameter("molForm").trim();
 			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_MolForm, compound.getMolForm(), newVal);
@@ -74,47 +74,56 @@ public class SaveCompoundServlet extends HttpServlet {
 			
 			
 			newVal = request.getParameter("molWeight").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_MolWeight, compound.getMolWeight()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_MolWeight, compound.getMolWeight(), newVal);
 			
 			newVal = request.getParameter("xlogp").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_XLogP, compound.getXlogp()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_XLogP, compound.getXlogp(), newVal);
 			
 			newVal = request.getParameter("mass").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_Mass, compound.getMass()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_Mass, compound.getMass(), newVal);
 			
 			newVal = request.getParameter("tpsa").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_TPSA, compound.getTpsa()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_TPSA, compound.getTpsa(), newVal);
 			
 			newVal = request.getParameter("complexity").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_Complexity, compound.getComplexity()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_Complexity, compound.getComplexity(), newVal);
 			
 			
 			newVal = request.getParameter("charge").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_Charge, compound.getCharge()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_Charge, compound.getCharge(), newVal);
 			
 			newVal = request.getParameter("hBondDonor").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_HBondDonor, compound.getHBondDonor()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_HBondDonor, compound.getHBondDonor(), newVal);
 
 			newVal = request.getParameter("hBondAcceptor").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_HBondAcceptor, compound.getHBondAcceptor()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_HBondAcceptor, compound.getHBondAcceptor(), newVal);
 			
 			newVal = request.getParameter("rotBondCount").trim();
-			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_RotatableBond, compound.getRotBondCount()+"", newVal);
+			ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), compound.getCompoundOWL(), Compound.DP_RotatableBond, compound.getRotBondCount(), newVal);
 			
-			// ToDo
-			// delete all dataproperty compound synonym
 			
 			String []synonyms = request.getParameter("synonym").split("\n");
 			
 			HashSet<String> set = new HashSet<>(Arrays.asList(synonyms));
 			
+			// delete all dataproperty compound synonym
+			if(compound.getCompoundSynonyms() != set) {
+				for(String syn: compound.getCompoundSynonyms()) {
+					ontoMngr.removeDataPropertyValue(compound.getCompoundOWL(), Compound.DP_Synonym, syn);
+				}
+			}
+			
+			
+			ontoMngr.setCompoundIndiv(Compound.toOWLIndivString(oldCompoundName));
+			
+			// add all new dataproperty compound synonym
 			for(String syn : set) {
 				if(!syn.equals("")) {
 					ontoMngr.addDataPropCompound_Synonym(syn);
 				}
 			}
 			
-			
+			// change indiv and dataprop name
 			if(!oldCompoundName.equals(newCompoundName)) {
 				ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), Compound.toOWLIndivString(oldCompoundName), Compound.DP_Compound, compound.getCompoundName(), newCompoundName);
 				ontoMngr.changeNameIndividual(oldCompoundName, newCompoundName);
