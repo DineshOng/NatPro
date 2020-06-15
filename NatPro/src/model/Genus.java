@@ -1,7 +1,6 @@
 package model;
 
 public class Genus {
-	public static String CLASS_Genus = "Genus";
 	
 	String genus;
 	Family family;

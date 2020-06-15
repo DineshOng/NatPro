@@ -3,6 +3,7 @@ package servlet;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -43,7 +44,7 @@ public class AddCompoundServlet extends HttpServlet {
 			
 			String compoundName = request.getParameter("compound");
 			
-			compoundName =  Compound.toOWLIndivString(compoundName);
+			compoundName =  OntoMngr.cleanString(compoundName);
 			
 			ontoMngr.addIndiv_Compound(compoundName);
 			
@@ -88,15 +89,20 @@ public class AddCompoundServlet extends HttpServlet {
 			ontoMngr.addDataPropCompound_HBondAcceptorCount(hBondAcceptor);
 			ontoMngr.addDataPropCompound_RotatableBondCount(rotBondCount);
 			
-			String []synonyms = request.getParameter("synonym").split("\n");
+			String []synonyms = request.getParameter("synonym").trim().split("\n");
 			
 			HashSet<String> set = new HashSet<>(Arrays.asList(synonyms));
 			
-			for(String syn : set) {
+			/*for(String syn : set) {
 				if(!syn.equals("")) {
 					ontoMngr.addDataPropCompound_Synonym(syn);
 				}
-			}
+			}*/
+			
+			 Iterator i = set.iterator(); // get iterator
+			 while(i.hasNext()) {
+				 ontoMngr.addDataPropCompound_Synonym(i.next().toString().trim());
+			 }
 			
 			response.sendRedirect("ViewCompoundServlet?compound=" + compoundName);
 			

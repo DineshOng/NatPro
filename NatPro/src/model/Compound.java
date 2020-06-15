@@ -7,29 +7,9 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Compound {
-	public static String CLASS_Compound = "Compound";
-	
-	public static String DP_Compound = "datatypeProperty_Compound";
-	public static String DP_Synonym = "datatypeProperty_CompoundSynonym";
-	
-	public static String DP_PubCID = "datatypeProperty_PubCID";
-	public static String DP_MolForm = "datatypeProperty_MolForm";
-	public static String DP_CanSMILES = "datatypeProperty_CanSMILES";
-	public static String DP_InChI = "datatypeProperty_InChI";
-	public static String DP_InChIkey = "datatypeProperty_InChIkey";
-	public static String DP_IUPACName = "datatypeProperty_IUPACName";
-	
-	public static String DP_MolWeight = "datatypeProperty_MolWeight";
-	public static String DP_XLogP = "datatypeProperty_XLogP";
-	public static String DP_Mass = "datatypeProperty_Mass";
-	public static String DP_TPSA = "datatypeProperty_TPSA";
-	public static String DP_Complexity = "datatypeProperty_Complexity";
+import service.OntoMngr;
 
-	public static String DP_Charge = "datatypeProperty_Charge";
-	public static String DP_HBondDonor = "datatypeProperty_HBondDonorCount";
-	public static String DP_HBondAcceptor = "datatypeProperty_HBondAcceptorCount";
-	public static String DP_RotatableBond = "datatypeProperty_RotatableBondCount";
+public class Compound {
 	
 	private String compoundName;
 	private HashSet<String> compoundSynonyms;
@@ -75,22 +55,6 @@ public class Compound {
 			compounds = new HashSet<String>();
 		}
 		
-	}
-	
-	public static String toOWLIndivString(String str) {
-		str = str.trim();
-		str = str.toLowerCase();
-		str = str.replaceAll(" ", "_");
-		str = str.replaceAll(",", ".");
-		str = str.replaceAll("&#945;", "alpha");
-		str = str.replaceAll("&#946;", "beta");
-		str = str.replaceAll("&#947;", "gamma");
-		
-		return str;
-	}
-	
-	public String getCompoundOWL() {
-		return toOWLIndivString(compoundName);
 	}
 	
 	public HashSet<String> getCompoundsHashSet() {
@@ -154,7 +118,7 @@ public class Compound {
 	}
 	
 	public String getAllCompoundSynonymsHTML() {
-		return String.join("", compoundSynonyms).trim();
+		return String.join("\n", compoundSynonyms).trim();
 	}
 
 	public void setCompoundSynonyms(HashSet<String> compoundSynonyms) {
@@ -303,6 +267,11 @@ public class Compound {
 
 	public void setRotBondCount(String rotBondCount) {
 		this.rotBondCount = rotBondCount;
+	}
+
+	public String getCompoundOWL() {
+		// TODO Auto-generated method stub
+		return OntoMngr.cleanString(compoundName);
 	}
 
 	

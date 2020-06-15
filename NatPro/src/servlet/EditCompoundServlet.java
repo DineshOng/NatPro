@@ -41,7 +41,8 @@ public class EditCompoundServlet extends HttpServlet {
 			Compound compound = oq.getCompound(cc);
 			
 			//request.setAttribute("compound", compound);
-			request.setAttribute("action", "SaveCompoundServlet");
+			if(compound!=null)
+				request.setAttribute("action", "SaveCompoundServlet");
 			request.setAttribute("compound", compound);
 			
 			request.getRequestDispatcher("add-compound.jsp").forward(request, response);

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.apache.commons.lang.StringUtils;
 
 public class Species {
-	public static String CLASS_Species = "Species";
 	
 	String specie;
 	ArrayList<SpeciesPart> speciesParts;

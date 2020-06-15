@@ -20,6 +20,31 @@
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
 <title>NatPro Compound</title>
+
+<style>
+	@keyframes spinner-border {
+      to { transform: rotate(360deg); }
+    } 
+    .spinner-border {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: text-bottom;
+        border: .25em solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner-border .75s linear infinite;
+        animation: spinner-border .75s linear infinite;
+    }
+    .spinner-border-sm {
+        height: 1rem;
+        border-width: .2em;
+    }
+    #compoundHelp, #compoundAlertFail, #compoundAlertSuccess, #hidSubBT{
+    	display: none;
+    }
+    </style>
+    
 </head>
 <body>
 
@@ -37,19 +62,19 @@
 						<hr class="solid">
 					</div>
 	
-		<form id="compoundForm" action="SaveCompoundServlet" method="POST">
+		<form id="compoundForm" action="SaveCompoundServlet" method="POST" onsubmit="return validateForm()">
 			<div class="card border-success">
 				<div class="card-body">
 					<div id="compoundAlertFail" class="alert alert-danger" role="alert">
 						<a>Compound not found!</a>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    						<span aria-hidden="true">&times;</span>
+						<!--  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    						<span aria-hidden="true">&times;</span>-->
   						</button>
   					</div>
   					<div id="compoundAlertSuccess" class="alert alert-success" role="alert">
 						<a>Compound found!</a>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    						<span aria-hidden="true">&times;</span>
+						<!--<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    						<span aria-hidden="true">&times;</span>-->
   						</button>
   					</div>
 					<div class="form-row">
@@ -190,13 +215,13 @@
 						</div>
 					</div>
 					<div class="form-row">
-						<a id="pubchemBT" class="btn btn-info" href="#" role="button">Auto-fill
-							from PubChem</a>
+						<button id="pubchemBT" class="btn btn-info" role="button">Auto-fill from PubChem</button>
 					</div>
 					&nbsp; 
 					<input type="hidden" name="oldCompound" value="${compound.getCompoundName()}">
 					<input type="hidden" name="pubCID" value="${compound.getPubCID()}">
 					<div class="form-row">
+						<button id="hidSubBT" type="button" class="btn btn-primary"></button>
 						<button id="subBT" type="submit" class="btn btn-primary">Submit</button>
 					</div>
 				</div>
@@ -206,17 +231,26 @@
 
 	<script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+		
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 	<script type="text/javascript" charset="utf8"
 		src="js/loadingoverlay.min.js"></script>
+		
 
 	<script type="text/javascript">
-	$("#compoundAlertFail").hide();
-	$("#compoundAlertSuccess").hide();
+		
 	
 	    $(document).ready(function() {
-	    	$("#compoundHelp").css("display", "none");
 	        $('#table_id').DataTable();
+	        
+	        //$("#compoundHelp").css("display", "none");
+	        //$("#compoundAlertFail").hide();
+			//$("#compoundAlertSuccess").hide();
+			//$("#hidSubBT").hide();
+	        
+			$("#search").val('${searchKey}');
+			$('.hid').css('display', 'none');
+			ddfunc('${searchCategory}');
 	        
 	        var action = '${action}';
 			if(action === "") {
@@ -226,26 +260,37 @@
 			var cc = '${compound.getCompoundName()}';
 			if(cc === "") {
 				$("#cardTitle").html("Add New Compound");
+				$("#loadTitle").html("Adding...");
 			}
 	        
 	        $('#pubchemBT').click(function() {
-	        	//$("#compound").checkValidity();
+	        	
 	       	 	$("#compoundAlertFail").hide();
 		       	$("#compoundAlertSuccess").hide();
-	        	var compound = $('input[name="compound"]').val();
-	        	if(compound != "") {
-	        		$.LoadingOverlay("show");
+		       	
+	        	
+	        	if($('input[name="compound"]')[0].checkValidity()) {
+	        		//$.LoadingOverlay("show");
+	        		
+	        		$("#pubchemBT").show();
+	           		$("#pubchemBT").prop("disabled", true);
+	            	$("#pubchemBT").html('<i class="fa fa-spinner fa-spin"></i>&#32;Retrieving compound...');
+	        		
 	        		$.ajax({
-	        			url : 'RetrieveCompoundServlet?compound='+compound+"&option=1",
+	        			url : 'RetrieveCompoundServlet?compound='+$('#compound').val()+"&option=1",
 	        			data : {
 	        				userName : $('#compound').val()
 	        			},
 	        			success : function(obj) {
 	        				if(obj.molForm == null) {
-	        					$.LoadingOverlay("hide");
+	        					//$.LoadingOverlay("hide");
 	        					
 	        					//alert("compound not found");
 	        					$("#compoundAlertFail").show();
+	        					
+	        					$("#pubchemBT").show();
+		    	           		$("#pubchemBT").prop("disabled", false);
+		    	            	$("#pubchemBT").html('Auto-fill from PubChem');
 	        				} else {
 	        			
 		        				
@@ -271,9 +316,13 @@
 		    	        		
 		    	        		$('textarea[name="synonym"]').val($('textarea[name="synonym"]').val()+"\n"+obj.synonym);
 		        				
+		    	        		
+		    	        		$("#pubchemBT").show();
+		    	           		$("#pubchemBT").prop("disabled", false);
+		    	            	$("#pubchemBT").html('Auto-fill from PubChem');
 		        				
 		        				
-		        				$.LoadingOverlay("hide");
+		        				//$.LoadingOverlay("hide");
 		        				$("#compoundAlertFail").hide();
 		        				$("#compoundAlertSuccess").show();
 		        			}
@@ -333,7 +382,6 @@
 			}
 		}
 		
-		
 		function checkIfNull(){
 			var cc = $("#compound").val();
 			if(cc!=""){
@@ -343,12 +391,34 @@
 			}
 		}
 		
-		$("#search").val('${searchKey}');
-		$('.hid').css('display', 'none');
-		
-		
-		
-		ddfunc('${searchCategory}');
+		function validateForm() {
+			if($('input[name="compound"]')[0].checkValidity())
+    		
+    		if($('input[name="pubCID"]')[0].checkValidity())
+    		if($('input[name="molForm"]')[0].checkValidity())
+    		if($('input[name="canSMILES"]')[0].checkValidity())
+    		if($('input[name="inchi"]')[0].checkValidity())
+    		if($('input[name="inchikey"]')[0].checkValidity())
+    		if($('input[name="iupac"]')[0].checkValidity())
+    		
+    		if($('input[name="molWeight"]')[0].checkValidity())
+    		if($('input[name="xlogp"]')[0].checkValidity())
+    		if($('input[name="mass"]')[0].checkValidity())
+    		if($('input[name="tpsa"]')[0].checkValidity())
+    		if($('input[name="complexity"]')[0].checkValidity())
+    		
+    		if($('input[name="charge"]')[0].checkValidity())
+    		if($('input[name="hBondDonor"]')[0].checkValidity())
+    		if($('input[name="hBondAcceptor"]')[0].checkValidity())
+    		if($('input[name="rotBondCount"]')[0].checkValidity()) {
+	        	//$("#subBT").hide();
+	        	$("#subBT").show();
+	            $("#subBT").prop("disabled", true);
+	            $("#subBT").html(
+	              '<i class="fa fa-spinner fa-spin"></i>&#32;Saving...'
+	            );
+    		}
+		}
 	</script>
 
 </body>

@@ -1,7 +1,6 @@
 package model;
 
 public class BiologicalActivity {
-	public static String CLASS_BioAct = "BiologicalActivity";
 	
 	String biologicalActivity;
 	CellLine cellLine;

@@ -1,7 +1,6 @@
 package model;
 
 public class CellLine {
-	public static String CLASS_CellLine = "CellLine";
 	
 	String cellLine;
 	

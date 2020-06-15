@@ -1,7 +1,9 @@
 @charset "ISO-8859-1";
 
-#table_id_wrapper {
+		#firstDiv {
 			margin: 50px;
+			margin-left: 150px;
+			margin-right: 150px;
 		}
 		body{
 			font-family: 'Varela Round', sans-serif;
@@ -24,9 +26,14 @@
 			border-bottom: 1px solid #dfe3e8;
 			border-radius: 0;
 		}
-		.navbar .navbar-brand, .navbar .navbar-brand:focus {
+		.navbar .navbar-brand{
 			padding-left: 0;
 			font-size: 20px;
+			padding-right: 50px;
+		}
+		.navbar .navbar-brand:focus {
+			padding-left: 0;
+			font-size: 28px;
 			padding-right: 50px;
 		}
 		.navbar .navbar-brand {

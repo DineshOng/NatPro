@@ -69,7 +69,7 @@ public class SearchServlet extends HttpServlet {
 	private void performSearch(HttpServletRequest request, HttpServletResponse response)
 			throws OntologyLoadException, ServletException, IOException {
 		// TODO Auto-generated method stub
-		String searchKey = request.getParameter("searchKey");
+		String searchKey = request.getParameter("searchKey").trim();
 		System.out.println("hehe" + request.getParameter("searchCategory"));
 		OntoQuery q = new OntoQuery();
 		if (request.getParameter("searchCategory").equals("1")) {

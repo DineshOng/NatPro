@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 public class MedicinalPlant {
-	public static String CLASS_MedPlant = "MedicinalPlant";
 	
 	String medicinalPlant;
 	ArrayList<Species> species;

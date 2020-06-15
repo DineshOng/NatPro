@@ -215,26 +215,26 @@ public class OntoQuery {
 
 		Compound compound = null;
 
-		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty(Compound.DP_Compound);
-		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty(Compound.DP_Synonym);
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty(OntoMngr.DP_Compound);
+		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty(OntoMngr.DP_Synonym);
 
-		RDFProperty dp_pubCID = owlModel.getRDFProperty(Compound.DP_PubCID);
-		RDFProperty dp_molForm = owlModel.getRDFProperty(Compound.DP_MolForm);
-		RDFProperty dp_molWeight = owlModel.getRDFProperty(Compound.DP_MolWeight);
-		RDFProperty dp_canSMILES = owlModel.getRDFProperty(Compound.DP_CanSMILES);
-		RDFProperty dp_inchi = owlModel.getRDFProperty(Compound.DP_InChI);
-		RDFProperty dp_inchikey = owlModel.getRDFProperty(Compound.DP_InChIkey);
-		RDFProperty dp_iupac = owlModel.getRDFProperty(Compound.DP_IUPACName);
+		RDFProperty dp_pubCID = owlModel.getRDFProperty(OntoMngr.DP_PubCID);
+		RDFProperty dp_molForm = owlModel.getRDFProperty(OntoMngr.DP_MolForm);
+		RDFProperty dp_molWeight = owlModel.getRDFProperty(OntoMngr.DP_MolWeight);
+		RDFProperty dp_canSMILES = owlModel.getRDFProperty(OntoMngr.DP_CanSMILES);
+		RDFProperty dp_inchi = owlModel.getRDFProperty(OntoMngr.DP_InChI);
+		RDFProperty dp_inchikey = owlModel.getRDFProperty(OntoMngr.DP_InChIkey);
+		RDFProperty dp_iupac = owlModel.getRDFProperty(OntoMngr.DP_IUPACName);
 
-		RDFProperty dp_xlogp = owlModel.getRDFProperty(Compound.DP_XLogP);
-		RDFProperty dp_mass = owlModel.getRDFProperty(Compound.DP_Mass);
-		RDFProperty dp_tpsa = owlModel.getRDFProperty(Compound.DP_TPSA);
-		RDFProperty dp_complexity = owlModel.getRDFProperty(Compound.DP_Complexity);
+		RDFProperty dp_xlogp = owlModel.getRDFProperty(OntoMngr.DP_XLogP);
+		RDFProperty dp_mass = owlModel.getRDFProperty(OntoMngr.DP_Mass);
+		RDFProperty dp_tpsa = owlModel.getRDFProperty(OntoMngr.DP_TPSA);
+		RDFProperty dp_complexity = owlModel.getRDFProperty(OntoMngr.DP_Complexity);
 
-		RDFProperty dp_charge = owlModel.getRDFProperty(Compound.DP_Charge);
-		RDFProperty dp_donor = owlModel.getRDFProperty(Compound.DP_HBondDonor);
-		RDFProperty dp_accept = owlModel.getRDFProperty(Compound.DP_HBondAcceptor);
-		RDFProperty dp_rotbont = owlModel.getRDFProperty(Compound.DP_RotatableBond);
+		RDFProperty dp_charge = owlModel.getRDFProperty(OntoMngr.DP_Charge);
+		RDFProperty dp_donor = owlModel.getRDFProperty(OntoMngr.DP_HBondDonor);
+		RDFProperty dp_accept = owlModel.getRDFProperty(OntoMngr.DP_HBondAcceptor);
+		RDFProperty dp_rotbont = owlModel.getRDFProperty(OntoMngr.DP_RotatableBond);
 
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
 		for (Iterator it = classes.iterator(); it.hasNext();) {
