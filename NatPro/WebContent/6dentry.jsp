@@ -174,6 +174,7 @@
 								<th colspan="9"><h4>Chemical Compounds</h4></th>
 							</tr>
 							<tr>
+								<th>Part</th>
 								<th>Structure</th>
 								<th>Name</th>
 								<th>Formula</th>
@@ -193,8 +194,9 @@
 									<c:forEach items="${speciesPartList.getCompounds()}"
 										var="compoundsList">
 										<tr>
+											<td>${speciesPartList.getPlantPart()}</td>
 											<td></td>
-											<td><a href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameNorm()}</a></td>
+											<td><a href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
 											<td>${compoundsList.getMolForm()}</td>
 											<td>${compoundsList.getMolWeight()}</td>
 											<td></td>

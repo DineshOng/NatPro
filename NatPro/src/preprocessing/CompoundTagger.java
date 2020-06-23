@@ -64,7 +64,7 @@ public class CompoundTagger extends LookUpEntityTagger {
         
         removeOverlappingTags();
         
-        text = text.replaceAll("</compound> <compound>", " ");
+        text = text.replaceAll("</"+tag+"> <"+tag+">", " ");
         
         return text;
 	}

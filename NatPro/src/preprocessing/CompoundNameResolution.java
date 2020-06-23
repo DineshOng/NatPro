@@ -29,7 +29,7 @@ public class CompoundNameResolution {
 	}
 	
 	public String run() {
-		pattern = Pattern.compile("(<compound>([A-Za-z0-9\\[\\(\\]\\),':-]+)(( ([A-Za-z0-9\\[\\(\\]\\),':-]+))+)?<\\/compound>) ?(\\((([1-9][a-z])|([XIV]+)|([1-9]))\\))");
+		pattern = Pattern.compile("(<"+tag+">([A-Za-z0-9\\[\\(\\]\\),':-]+)(( ([A-Za-z0-9\\[\\(\\]\\),':-]+))+)?<\\/"+tag+">) ?(\\((([1-9][a-z])|([XIV]+)|([1-9]))\\))");
 		matcher = pattern.matcher(text);
 		
 		while(matcher.find()) {

@@ -35,28 +35,28 @@ public class Tagger {
 	        fw2.close();
            
             
-            txt = new CommonNameTagger("aka", txt).run();
+            txt = new CommonNameTagger("MedicinalPlant", txt).run();
             
-            txt = new SpeciesTagger("plant", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\genus.txt").run();
-            txt = new SpeciesNameResolution(txt).run();
+            txt = new SpeciesTagger("Synonym", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\genus.txt").run();
+            txt = new SpeciesNameResolution("Synonym", txt).run();
             
-            txt = new LocationTagger("loc", txt).run();
-            txt = new BioActivityTagger("bioact", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bioact.txt").run();
-            txt = new SpeciesFamilyTagger("family", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\family.txt").run();
-            txt = new OrgPartTagger("plantpart", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\orgpart.txt").run();
-            txt = new CellLineTagger("cell", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt").run();
-            txt = new CompoundClassTagger("class", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-class.txt").run();
-            txt = new BodyPartTagger("bodypart", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bodypart.txt").run();
-            txt = new PreparationTagger("prep", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\prep.txt").run();
-            txt = new IllnessTagger("illness", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\illness.txt").run();
+            txt = new LocationTagger("Location", txt).run();
+            txt = new BioActivityTagger("BioAct", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bioact.txt").run();
+            txt = new SpeciesFamilyTagger("Family", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\family.txt").run();
+            txt = new OrgPartTagger("PlantPart", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\orgpart.txt").run();
+            txt = new CellLineTagger("CellLine", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt").run();
+            txt = new CompoundClassTagger("CompoundClass", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-class.txt").run();
+            txt = new BodyPartTagger("BodyPart", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bodypart.txt").run();
+            txt = new PreparationTagger("Preparation", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\prep.txt").run();
+            txt = new IllnessTagger("Illness", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\illness.txt").run();
             
-            txt = new CompoundTagger("compound", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-suffix.txt", "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\20k.txt").run();
-            txt = new CompoundNameExpander("compound", txt).run();
-            txt = new CompoundNameResolution("compound", txt).run();
+            txt = new CompoundTagger("Compound", txt, "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-suffix.txt", "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\20k.txt").run();
+            txt = new CompoundNameExpander("Compound", txt).run();
+            txt = new CompoundNameResolution("Compound", txt).run();
             
             txt = new Coref(txt).run();
             
-            String notag = txt.replaceAll("<\\/?[a-z]+>", "");
+            String notag = txt.replaceAll("<\\/?\\w+>", "");
             
             java.io.FileWriter fw3 = new java.io.FileWriter("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Preprocessed\\" + uniqueID + " notag.txt");
 	        fw3.write(notag);

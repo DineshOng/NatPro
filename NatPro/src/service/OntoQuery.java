@@ -248,14 +248,14 @@ public class OntoQuery {
 						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
 
 						if (compoundIndiv.equalsIgnoreCase(compoundName.toLowerCase())) {
-							System.out.println(compoundIndiv);
+							//System.out.println(compoundIndiv);
 							compound = new Compound(compoundIndiv);
 
 							// get compound synonyms
 							HashSet<String> synonyms = new HashSet<String>();
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
 								String syno = jtt.next().toString();
-								System.out.println("dis>" + syno);
+								//System.out.println("dis>" + syno);
 								//if (!syno.equalsIgnoreCase(compoundIndiv))
 									synonyms.add(syno);
 							}
@@ -324,9 +324,9 @@ public class OntoQuery {
 									compound.setRotBondCount(individual.getPropertyValue(dp_rotbont).toString());
 							} catch (Exception e) {}
 
-							System.out.println(compound.getMolForm());
-							System.out.println(compound.getCanSMILES());
-							System.out.println(compound.getMolWeight());
+							//System.out.println(compound.getMolForm());
+							//System.out.println(compound.getCanSMILES());
+							//System.out.println(compound.getMolWeight());
 
 							return compound;
 						}
@@ -379,16 +379,16 @@ public class OntoQuery {
 
 						// EDIT THIS CODE FOR OPTIMAL SEARCH FUNCTION
 						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase())) {
-							System.out.println(compoundIndiv);
+							//System.out.println(compoundIndiv);
 							mp = new Compound(compoundIndiv);
 							HashSet<String> synonyms = new HashSet<String>();
 
 							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
 								// if(!jtt.next().toString().isEmpty()) {
 								String syno = jtt.next().toString();
-								System.out.println(syno + " " + compoundIndiv);
+								//System.out.println(syno + " " + compoundIndiv);
 								mp = new Compound(compoundIndiv);
-								System.out.println(syno);
+								//System.out.println(syno);
 								synonyms.add(syno);
 								// }
 							}
@@ -403,7 +403,7 @@ public class OntoQuery {
 								// if(!jtt.next().toString().isEmpty()) {
 								String syno = jtt.next().toString();
 								if (syno.toLowerCase().contains(Compound.toLowerCase())) {
-									System.out.println(syno + " " + compoundIndiv);
+									//System.out.println(syno + " " + compoundIndiv);
 									mp = new Compound(compoundIndiv);
 									HashSet<String> synonyms = new HashSet<String>();
 									synonyms.add(syno);
@@ -416,7 +416,7 @@ public class OntoQuery {
 							}
 						}
 					} catch (Exception e) {
-						System.out.println("eeeek");
+						//System.out.println("eeeek");
 					}
 				}
 			}

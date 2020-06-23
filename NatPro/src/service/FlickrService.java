@@ -35,7 +35,7 @@ public class FlickrService {
 	    PhotoURL = new ArrayList<String>();
 	    
 	    for(Photo photo: list) {
-	    	System.out.println(photo.getMediumUrl());
+	    	//System.out.println(photo.getMediumUrl());
 	    	PhotoURL.add(photo.getMediumUrl());
 	    }
 		

@@ -123,7 +123,7 @@
 								placeholder="Enter InChI" value="${compound.getInchi()}">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="">InChl key</label> <input name="inchikey"
+							<label for="">InChI key</label> <input name="inchikey"
 								type="text" class="form-control" id="exampleInputPassword1"
 								placeholder="Enter InChl key" value="${compound.getInchikey()}">
 						</div>
@@ -202,7 +202,7 @@
 								id="exampleInputPassword1" placeholder="Enter H-Bond Acceptors" value="${compound.getHBondAcceptor()}">
 						</div>
 						<div class="form-group col-md-4">
-							<label for="">H-Bond Donor</label> <input
+							<label for="">H-Bond Donors</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="hBondAcceptor" type="text" class="form-control"
 								id="exampleInputPassword1" placeholder="Enter H-Bond Donor" value="${compound.getHBondDonor()}">

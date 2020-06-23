@@ -73,6 +73,7 @@ public class ViewPlantServlet extends HttpServlet {
 		System.out.println(searchKey);
 		OntoQuery q = new OntoQuery();
 		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
+		//System.out.println(medPlants.get(0).getSpecies().get(0).getSpeciesParts().get(0).getCompounds().get(0));
 //		for(MedicinalPlant m: medPlants) {
 //			System.out.println(m.getMedicinalPlant().toString());
 //		}

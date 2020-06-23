@@ -37,14 +37,14 @@ public class Coref {
 		String[] sentences = text.split("\n\n");
 		
 		for(String sentence: sentences) {
-			Pattern p = Pattern.compile("<([a-z]+)>([^<]+)<\\/[a-z]+>");
+			Pattern p = Pattern.compile("<(\\w+)>([^<]+)<\\/\\w+>");
 			Matcher m = p.matcher(sentence);
 			
 			sentence = mt.tagTokenizedString(sentence.trim());
 			
 			if(!sentence.contains("_PRP")) {
 				while(m.find()) {
-					if(m.group(1).equals("compound") || m.group(1).equals("plant") || m.group(1).equals("aka")) {
+					if(m.group(1).equals("Compound") || m.group(1).equals("Synonym") || m.group(1).equals("MedicinalPlant")) {
 						subject = m.group();
 						
 						//System.err.println(subject);
@@ -77,14 +77,14 @@ public class Coref {
 			//String sentence = s.trim();
 			//System.out.println(sentence);
 			
-			Pattern p = Pattern.compile("<([a-z]+)>([^<]+)<\\/[a-z]+>");
+			Pattern p = Pattern.compile("<(\\w+)>([^<]+)<\\/\\w+>");
 			Matcher m = p.matcher(sentences[i]);
 			
 			sentences[i] = sentences[i].trim();
 			
 			if(!sentences[i].matches("(.*)\\bIt\\b(.*)")) {
 				while(m.find()) {
-					if(m.group(1).equals("compound") || m.group(1).equals("plant")) {
+					if(m.group(1).equals("Compound") || m.group(1).equals("Synonym") || m.group(1).equals("MedicinalPlant")) {
 						subject = m.group();
 						
 						//System.err.println(subject);
