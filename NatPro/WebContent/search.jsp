@@ -19,7 +19,7 @@
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
-<title>NatPro Search</title>
+<title>NatPro Advanced Search</title>
 </head>
 <body>
 
@@ -54,13 +54,30 @@
 				</div>
 				
 				<div class="form-group col-md-2">
+					<label for="">Species</label> 
+					
+					<input
+						name="species" type="text" class="form-control"
+						id="exampleInputPassword1" placeholder="">
+				</div>
+				
+				<div class="form-group col-md-2">
 					<label for="">Plant Part</label> 
 					
 					<input
 						name="plantPart" type="text" class="form-control"
 						id="exampleInputPassword1" placeholder="">
 				</div>
-				
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-2">
+					<label for="">Illness</label> 
+					<input
+						name="illness" type="text"
+						class="form-control" aria-describedby="emailHelp"
+						placeholder="">
+				</div>
+
 				<div class="form-group col-md-2">
 					<label for="">Biological Activity</label> 
 					
@@ -100,14 +117,6 @@
 					
 					<input
 						name="compoundClass" type="text" class="form-control"
-						id="exampleInputPassword1" placeholder="">
-				</div>
-				
-				<div class="form-group col-md-2">
-					<label for="">Illness</label> 
-					
-					<input
-						name="illness" type="text" class="form-control"
 						id="exampleInputPassword1" placeholder="">
 				</div>
 			</div>
@@ -326,10 +335,16 @@
 			&nbsp;
 			<div class="form-row">
 				<div class="col-auto">
-					<input class="btn btn-primary " type="submit" value="Search compound">
+					<button class="btn btn-primary " type="submit" >
+						Search compound
+						<i class="fa fa-flask" aria-hidden="true"></i>
+					</button>
 				</div>
 				<div class="col-auto">
-					<input class="btn btn-success " type="button" value="Search plant">
+					<button class="btn btn-success " type="button" >
+						Search plant
+						<i class="fa fa-leaf" aria-hidden="true"></i>
+						</button>
 				</div>
 			</div>
 		</form>
