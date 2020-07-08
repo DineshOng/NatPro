@@ -45,6 +45,17 @@
     }
     </style>
     
+    <script type="text/javascript" language="javascript" src="jsme/jsme.nocache.js"></script>
+
+	<script>
+	    //this function will be called after the JavaScriptApplet code has been loaded.
+	    function jsmeOnLoad() {
+	        jsmeApplet = new JSApplet.JSME("jsme_container", "580px", "340px");
+	        jsmeApplet.options('nocanonize');
+	        generateStructure();
+	   }
+	</script>
+    
 </head>
 <body>
 
@@ -77,6 +88,11 @@
     						<span aria-hidden="true">&times;</span>-->
   						</button>
   					</div>
+  					
+  					<div id="jsme_div" class="form-row">
+						<div id="jsme_container" onmouseover="generateKey()" style="margin-bottom: 1rem"></div>
+					</div>
+  					
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="">Compound Name</label> 
@@ -99,32 +115,32 @@
 							<input
 								pattern="(([A-Z][a-z]?)([1-9]0?)*)+" title="ex. H20, NaCl"
 								name="molForm" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter Molecular Formula" value="${compound.getMolForm()}">
+								 placeholder="Enter Molecular Formula" value="${compound.getMolForm()}">
 						</div>
 
 					</div>
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="">IUPAC Name</label> <input name="iupac" type="text"
-								class="form-control" id="exampleInputPassword1"
+								class="form-control" 
 								placeholder="Enter IUPAC Name" value="${compound.getIupac()}">
 						</div>
 
 						<div class="form-group col-md-6">
-							<label for="">Canonical SMILES</label> <input name="canSMILES"
-								type="text" class="form-control" id="exampleInputPassword1"
+							<label for="">SMILES</label> <input name="canSMILES"
+								type="text" class="form-control" onmouseout="generateStructure()"
 								placeholder="Enter Canonical SMILES" value="${compound.getCanSMILES()}">
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="">InChI</label> <input name="inchi" type="text"
-								class="form-control" id="exampleInputPassword1"
+								class="form-control" 
 								placeholder="Enter InChI" value="${compound.getInchi()}">
 						</div>
 						<div class="form-group col-md-6">
 							<label for="">InChI key</label> <input name="inchikey"
-								type="text" class="form-control" id="exampleInputPassword1"
+								type="text" class="form-control" 
 								placeholder="Enter InChl key" value="${compound.getInchikey()}">
 						</div>
 					</div>
@@ -132,7 +148,7 @@
 						<div class="form-group col-md-6">
 							<label for="exampleFormControlTextarea1">Compound Classes</label>
 							<textarea name="compoundClass" class="form-control"
-								id="exampleFormControlTextarea1" rows="3"
+								rows="3"
 								placeholder="Enter Compound Classes"></textarea>
 							<small id="exampleFormControlTextarea1"
 								class="form-text text-muted">Enter compound classes
@@ -143,7 +159,7 @@
 							<label for="exampleFormControlTextarea1">Compound Synonyms</label>
 							
 							<textarea name="synonym" class="form-control"
-								id="exampleFormControlTextarea1" rows="3"
+								rows="3"
 								placeholder="Enter Compound Synonyms">${compound.getAllCompoundSynonymsHTML()}</textarea>
 								
 								
@@ -165,13 +181,13 @@
 							<label for="">XLogP</label> <input
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="xlogp" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter XLogP" value="${compound.getXlogp()}">
+								 placeholder="Enter XLogP" value="${compound.getXlogp()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">Mass</label> <input
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="mass" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter Mass" value="${compound.getMass()}">
+								 placeholder="Enter Mass" value="${compound.getMass()}">
 						</div>
 					</div>
 					<div class="form-row">
@@ -179,19 +195,19 @@
 							<label for="">TPSA</label> <input
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="tpsa" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter TPSA" value="${compound.getTpsa()}">
+								 placeholder="Enter TPSA" value="${compound.getTpsa()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">Complexity</label> <input
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="complexity" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter Complexity" value="${compound.getComplexity()}">
+								 placeholder="Enter Complexity" value="${compound.getComplexity()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">Charge</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="charge" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter Charge" value="${compound.getCharge()}">
+								 placeholder="Enter Charge" value="${compound.getCharge()}">
 						</div>
 					</div>
 					<div class="form-row">
@@ -199,21 +215,22 @@
 							<label for="">H-Bond Acceptors</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="hBondDonor" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter H-Bond Acceptors" value="${compound.getHBondAcceptor()}">
+								 placeholder="Enter H-Bond Acceptors" value="${compound.getHBondAcceptor()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">H-Bond Donors</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="hBondAcceptor" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter H-Bond Donor" value="${compound.getHBondDonor()}">
+								 placeholder="Enter H-Bond Donor" value="${compound.getHBondDonor()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">Rotatable Bonds</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="rotBondCount" type="text" class="form-control"
-								id="exampleInputPassword1" placeholder="Enter Rotatable Bonds" value="${compound.getRotBondCount()}">
+								 placeholder="Enter Rotatable Bonds" value="${compound.getRotBondCount()}">
 						</div>
 					</div>
+					
 					<div class="form-row">
 						<button id="pubchemBT" class="btn btn-info" role="button">Auto-fill from PubChem</button>
 					</div>
@@ -250,11 +267,13 @@
 	        
 			$("#search").val('${searchKey}');
 			$('.hid').css('display', 'none');
+			//$("#jsme_div").hide();
 			ddfunc('${searchCategory}');
 	        
 	        var action = '${action}';
 			if(action === "") {
 				$("#compoundForm").attr("action", "AddCompoundServlet");
+				//$("#jsme_div").show();
 			}
 			
 			var cc = '${compound.getCompoundName()}';
@@ -314,6 +333,8 @@
 		    	        		$('input[name="hBondAcceptor"]').val(obj.hBondAcceptor);
 		    	        		$('input[name="rotBondCount"]').val(obj.rotBondCount);
 		    	        		
+		    	        		generateStructure();
+		    	        		
 		    	        		$('textarea[name="synonym"]').val($('textarea[name="synonym"]').val()+"\n"+obj.synonym);
 		        				
 		    	        		
@@ -353,9 +374,25 @@
 				toogleBtn.addClass("hide");
 				toogleBtn.first().removeClass("hide");
 			});
-			
-			
 		});
+		
+		function generateKey() {
+			$('input[name="canSMILES"]').val(jsmeApplet.smiles());
+			console.log(jsmeApplet.getWebSearchInchiKeyBaseUrl());
+			
+			jsmeApplet.setCallBack("InchiKeySearch", function(jsmeEvent) {
+				//alert(jsmeEvent.argument.key + "\n" + jsmeEvent.argument.inchi + "\n");
+				$('input[name="inchi"]').val(jsmeEvent.argument.inchi);
+				$('input[name="inchikey"]').val(jsmeEvent.argument.key);
+				});
+			
+		}
+		
+		function generateStructure() {
+	    	  var mol = $('input[name="canSMILES"]').val();
+	    	  jsmeApplet.readGenericMolecularInput(mol); 
+	    }
+
 		
 		function ddfunc(x){
 			if(x==1) {

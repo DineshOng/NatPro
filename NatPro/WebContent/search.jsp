@@ -27,7 +27,7 @@
 
 	<!--  INSERT HTML CODE -->
 	<div id="adSearchDiv">
-		<form action="AdvancedSearchCompoundServlet" method="POST">
+		<form id="advancedSearchForm" action="AdvancedSearchServlet" method="POST">
 			<div class="form-row">
 				<div class="form-group col-md-2">
 					<label for="">Location</label> 
@@ -36,7 +36,25 @@
 						class="form-control" id="compound" aria-describedby="emailHelp"
 						placeholder="">
 				</div>
-
+				
+				<div class="form-group col-md-2">
+					<label for="">Medicinal Plant Name</label> 
+					<input
+						name="medPlantName" type="text"
+						class="form-control" aria-describedby="emailHelp"
+						placeholder="">
+				</div>
+				
+				<div class="form-group col-md-2">
+					<label for="">Plant Part</label> 
+					
+					<input
+						name="plantPart" type="text" class="form-control"
+						id="exampleInputPassword1" placeholder="">
+				</div>
+			</div>
+			
+			<div class="form-row">
 				<div class="form-group col-md-2">
 					<label for="">Family</label> 
 					
@@ -60,15 +78,8 @@
 						name="species" type="text" class="form-control"
 						id="exampleInputPassword1" placeholder="">
 				</div>
-				
-				<div class="form-group col-md-2">
-					<label for="">Plant Part</label> 
-					
-					<input
-						name="plantPart" type="text" class="form-control"
-						id="exampleInputPassword1" placeholder="">
-				</div>
 			</div>
+			
 			<div class="form-row">
 				<div class="form-group col-md-2">
 					<label for="">Illness</label> 
@@ -333,6 +344,7 @@
 			    </div>
 			</div>
 			&nbsp;
+			<input name="category" type="hidden" id="category" value="compound">
 			<div class="form-row">
 				<div class="col-auto">
 					<button class="btn btn-primary " type="submit" >
@@ -341,7 +353,7 @@
 					</button>
 				</div>
 				<div class="col-auto">
-					<button class="btn btn-success " type="button" >
+					<button onclick="setCategory()" class="btn btn-success " type="button" >
 						Search plant
 						<i class="fa fa-leaf" aria-hidden="true"></i>
 						</button>
@@ -364,6 +376,13 @@
 	    function func_submit() {
 	    	$("#searchForm").submit();
 	    }
+	    
+	    function setCategory() {
+	    	$("#category").val("plant");
+	    	
+	    	$("#advancedSearchForm").submit();
+	    }
+	    
 	    
 		$(document).ready(function(){
 			var dropdown = $(".navbar-right .dropdown");
