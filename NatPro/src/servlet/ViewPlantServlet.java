@@ -77,7 +77,7 @@ public class ViewPlantServlet extends HttpServlet {
 //		for(MedicinalPlant m: medPlants) {
 //			System.out.println(m.getMedicinalPlant().toString());
 //		}
-		System.out.println(medPlants.get(0).getSpecies());
+		//System.out.println(medPlants.get(0).getSpecies());
 		List<String> photos = new FlickrService(searchKey).getPhotoURL();
 		//System.err.println(photos.get(0));
 		request.setAttribute("photos", photos);
