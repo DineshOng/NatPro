@@ -27,16 +27,17 @@
 		<div class="row">
 			<div class="col s12">
 				<ul class="tabs">
-					<li class="tab col s2"><a href="#taxInfo">Taxonomic
+					<li class="tab col"><a href="#taxInfo">Taxonomic
 							Information</a></li>
-					<li class="tab col s2"><a href="#plantName">Scientific/Common
+					<li class="tab col"><a href="#plantName">Scientific/Common
 							Name(s)</a></li>
-					<li class="tab col s2"><a href="#location">Location(s)</a></li>
-					<li class="tab col s2"><a href="#bioAct">Biological
+					<li class="tab col"><a href="#location">Location(s)</a></li>
+					<li class="tab col"><a href="#bioAct">Biological
 							Activities</a></li>
-					<li class="tab col s2"><a href="#prep">Preparation(s)</a></li>
-					<li class="tab col s2"><a href="#chemComp">Chemical
+					<li class="tab col"><a href="#prep">Preparation(s)</a></li>
+					<li class="tab col"><a href="#chemComp">Chemical
 							Compound(s)</a></li>
+					<li class="tab col"><a href="#photos">Photos</a></li>
 				</ul>
 			</div>
 			<div id="taxInfo" class="row center">
@@ -74,7 +75,7 @@
 								<c:forEach items="${medPlantsList.get(0).getSpecies()}"
 									var="speciesList">
 									<tr>
-										<td>${speciesList.getSpecie()}</td>
+										<td><i>${speciesList.getSpecie()}</i></td>
 									</tr>
 								</c:forEach>
 							</tr>
@@ -144,18 +145,23 @@
 							</tr>
 							<tr>
 								<th>Preparation</th>
-								<th>Illness</th>
-								<th>Body Part</th>
-								<th>Plant Part</th>
+								<th>Utilized Plant Part</th>
+								<th>Illness</th>								
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>preparation</td>
-								<td>illness</td>
-								<td>body part</td>
-								<td>plant part</td>
-							</tr>
+							<!-- medPlants.get(0).getPreparations().get(0).getPreparation() -->
+							<c:forEach items="${medPlantsList.get(0).getPreparations()}"
+								var="prepList">
+								<c:forEach items="${prepList.getIllness()}"
+									var="illnessList">
+									<tr>
+										<td>${prepList.getPreparation()}</td>
+										<td>${prepList.getUtilizedPlantPart()}</td>
+										<td>${illnessList}</td>										
+									</tr>
+								</c:forEach>
+							</c:forEach>
 						</tbody>
 					</table>
 				</div>
@@ -168,6 +174,7 @@
 								<th colspan="9"><h4>Chemical Compounds</h4></th>
 							</tr>
 							<tr>
+								<th>Part</th>
 								<th>Structure</th>
 								<th>Name</th>
 								<th>Formula</th>
@@ -180,19 +187,37 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>Structure</td>
-								<td>Name</td>
-								<td>Formula</td>
-								<td>Molecular Weight</td>
-								<td>XLoGP</td>
-								<td>TPSA</td>
-								<td># HBA</td>
-								<td># HDB</td>
-								<td># Rotatable Bonds</td>
-							</tr>
+							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
+								var="speciesList">
+								<c:forEach items="${speciesList.getSpeciesParts()}"
+									var="speciesPartList">
+									<c:forEach items="${speciesPartList.getCompounds()}"
+										var="compoundsList">
+										<tr>
+											<td>${speciesPartList.getPlantPart()}</td>
+											<td></td>
+											<td><a href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
+											<td>${compoundsList.getMolForm()}</td>
+											<td>${compoundsList.getMolWeight()}</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</c:forEach>
+								</c:forEach>
+							</c:forEach>
+
 						</tbody>
 					</table>
+				</div>
+			</div>
+			<div id="photos" class="row center">
+				<div class="col s6 offset-s3">
+					<c:forEach items="${photos}" var="item">
+				    	<img src="${item}">
+					</c:forEach>
 				</div>
 			</div>
 		</div>
@@ -219,7 +244,11 @@
 			</div>
 		</div>
 	</div>
-
+	
+	
+	
+	
+	
 	<%@include file="includeFooter.html"%>
 	<%@include file="includeScripts.html"%>
 	<script>
@@ -227,5 +256,7 @@
 			$('.tabs').tabs();
 		});
 	</script>
+	
+	
 </body>
 </html>
