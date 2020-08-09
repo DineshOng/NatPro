@@ -101,16 +101,16 @@ public class Bootstrap {
                         for (String pLine : lines) {
                             pLine = pLine.toLowerCase();
                             addRelation(relation,pLine,class1,class2,e1,e2);
+                            //DisplayText.append(class1+" "+class2+" "+e1+" "+e2+"\n");
                         }//end of pLine loop
                     }//end of class1 loop
 
-            /*for(String test: relation){
-                DisplayText.append(test+"\n");
-            }*/
 
-            DisplayText.append("\n"+Integer.toString(relation.size())+" relationships has been found\n");
-            DisplayText.append("===================================================================================\n");
-
+                    DisplayText.append("\n"+Integer.toString(relation.size())+" relationships has been found :\n");
+                    for(String test: relation){
+                        DisplayText.append(test+"\n");
+                    }
+                    DisplayText.append("===================================================================================\n");
 
                 }//end of seeds loop
 
