@@ -127,8 +127,19 @@ public class Bootstrap {
                 ArrayList<String> seedAL = new ArrayList<String>();
                 for(String temp: seedPattern){
                     seedAL.add(temp);
+                    //DisplayText.append(temp+"\n");
                 }
 
+                String POSrelationship = "";
+                for(int i = seedAL.size()-1;i >= 0;i--){
+                    if(POSrelationship.compareTo("") == 0)
+                        POSrelationship= POSrelationship.concat(seedAL.get(i));
+                    else
+                        POSrelationship= POSrelationship.concat(" "+seedAL.get(i));
+                }
+
+                DisplayText.append(POSrelationship+"\n");
+                DisplayText.append("===================================================================================\n");
 
                 TreeSet<String> Vmatches = new TreeSet<String>();
                 TreeSet<String> Pmatches = new TreeSet<String>();
@@ -141,7 +152,7 @@ public class Bootstrap {
                         MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
                         String tagged = tagger.tagString(seedWord);
                         String temp = tagged.substring(tagged.indexOf("_")+1);
-                        //System.out.println(temp);
+                        //DisplayText.append(seedWord+"\n");
 
                         // initialize JWNL (this must be done before JWNL can be used)
                         JWNL.initialize(new FileInputStream("file_properties.xml"));
@@ -236,6 +247,7 @@ public class Bootstrap {
                     z.printStackTrace();
                 }
 
+                matches.add(POSrelationship);
                 for(String i: Vmatches){
                     for(String j: Pmatches){
                         matches.add(i+" "+j);
