@@ -26,6 +26,56 @@
 		<div class="container">
 			<h1 class="display-4">Upload</h1>
 			<p class="lead">Upload your document/s here</p>
+			<form>
+		  		<div class="input-group">
+				  	<div class="custom-file">
+				   		<input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+				    	<label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+				  	</div>
+				  	<div class="input-group-append">
+				    	<button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload</button>
+				  	</div>
+				</div>
+			</form>
+			<div class="progress">
+			  	<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%" hidden></div>
+			</div>
+			
+			<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;" hidden>
+			  <!-- Position it -->
+			  <div style="position: absolute; top: 0; right: 0;">
+			
+			    <!-- Then put toasts within -->
+			    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+			      <div class="toast-header">
+			        <img src="..." class="rounded mr-2" alt="...">
+			        <strong class="mr-auto">Bootstrap</strong>
+			        <small class="text-muted">just now</small>
+			        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="toast-body">
+			        See? Just like this.
+			      </div>
+			    </div>
+			
+			    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+			      <div class="toast-header">
+			        <img src="..." class="rounded mr-2" alt="...">
+			        <strong class="mr-auto">Bootstrap</strong>
+			        <small class="text-muted">2 seconds ago</small>
+			        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="toast-body">
+			        Heads up, toasts will stack automatically
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
 		</div>
 	</div>
 	
@@ -88,6 +138,9 @@
 		
 		$("#search").val('${searchKey}');
 		ddfunc(${searchCategory});
+	</script>
+	
+	<script>
 	</script>
     
   </body>
