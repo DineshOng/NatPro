@@ -76,7 +76,7 @@
 						</div>
 						<div class="col">
 							<label for="PlantPart">Plant Part</label>
-							<select class="custom-select custom-select-md mb-3" id="PlantPart">
+							<select class="custom-select custom-select-md mb-3" id="PlantPart" onchange="enablePPO(0)">
 							  	<option selected disabled>Open this select menu</option>
 							  	<option value="-1">Others (please write on the right side)</option>
 							  	<c:forEach items="${plantPartsList}" var="plantPartsList">
@@ -85,10 +85,8 @@
 							</select>
 						</div>
 						<div class="col">
-							<fieldset disabled>
-								<label for="PlantPartOther">Plant Part (Other)</label>
-		    					<input type="text" class="form-control" id="Preparation" placeholder="">
-							</fieldset>
+							<label for="PlantPartOther[0]">Plant Part (Other)</label>
+	    					<input type="text" class="form-control" id="PlantPartOther[0]" placeholder="" disabled>
 						</div>
 					</div>
 				
@@ -332,8 +330,8 @@
 			
 			*/
 			
-			var inputPreparation
-			var inputUtilizedPlant = 
+			var inputPreparation;
+			var inputUtilizedPlant; 
 			
 			var inputUtilizedPlant = '<div class="form-group col-md-3">'
 				+'<label for="inputplantpart'+ pbpCtr+'">Plant Part</label>'
@@ -572,6 +570,30 @@
 			var newSpeciesBtn ='<button type="button" class="btn btn-outline-success btn-block" id="speciesAdd" onclick="addSFields('+sCtr+')">Add Species	Part</button>';
 			
 			$('#speciesGroup').append(newSpecies, newChemComp, newBioAct, newSpeciesBtn);
+		}
+		
+		function enablePPO(pValue) {
+			var selectPlantPart = "#PlantPart" + pValue;
+			var selectPlantPartOther = "#PlantPartOther[" + pValue + "]";			
+			
+			if (pValue == 0) {
+				console.log($('#PlantPart').val());
+				
+				if ($('#PlantPart').val() == -1) {
+					document.getElementById("PlantPartOther[0]").disabled = false;
+				} else {
+					document.getElementById("PlantPartOther[0]").disabled = true;
+				}
+			} else {
+				console.log($(selectPlantPart).val());
+				var selectPlantPartOtherTemp = "PlantPartOther[" + pValue + "]";
+				
+				if ($(selectPlantPart).val() == -1) {
+					document.getElementById(selectPlantPartOtherTemp).disabled = false;
+				} else {
+					document.getElementById(selectPlantPartOtherTemp).disabled = true;
+				}
+			}
 		}
 	
 	</script>
