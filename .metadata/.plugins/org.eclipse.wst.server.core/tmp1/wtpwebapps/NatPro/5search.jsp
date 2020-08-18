@@ -35,8 +35,8 @@
 				</div>
 				<div class="input-field col s3">
 					<select class="browser-default" name="searchCategory">
-						<option value="0" disabled selected>Choose your option</option>
-						<option value="1">plant common name</option>
+						<option value="0" disabled>Choose your option</option>
+						<option value="1" selected>plant common name</option>
 						<option value="2">plant scientific name</option>
 						<option value="3">genus</option>
 						<option value="4">family</option>

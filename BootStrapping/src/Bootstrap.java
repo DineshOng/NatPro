@@ -35,266 +35,277 @@ public class Bootstrap {
     private JTextArea DisplayText;
 
     public Bootstrap() {
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //JOptionPane.showMessageDialog(null,"Hello World");
-                //DisplayText.setText("Hello World");
+        startButton.addActionListener(e -> {
+            //JOptionPane.showMessageDialog(null,"Hello World");
+            //DisplayText.setText("Hello World");
 
-                File Folder = new File("TaggedSample/");
-                File[] listFiles = Folder.listFiles();
-                Reader fileReader = null;
-                String e1=null; String e2=null;
-                TreeSet<String> relation = new TreeSet<String>();
-                String V = "(.*)_VB[A-Z]*(.*)";
-                String W = "(.*)_[DJNPR][NJBTR]P*(.*)";
-                String P = "(.*)_[IRT][NPO](.*)";
+            File Folder = new File("TaggedSample/");
+            File[] listFiles = Folder.listFiles();
+            Reader fileReader = null;
+            String e1=null; String e2=null;
+            TreeSet<String> relation = new TreeSet<String>();
+            String V = "(.*)_VB[A-Z]*(.*)";
+            String W = "(.*)_[DJNPR][NJBTR]P*(.*)";
+            String P = "(.*)_[IRT][NPO](.*)";
 
 
 
-                for(File xmlFile : listFiles) {
+            for(File xmlFile : listFiles) {
 
-                    File seedFolder = new File("SeedsPossible/");
-                    File[] seedList = seedFolder.listFiles();
+                File seedFolder = new File("SeedsPossible/");
+                File[] seedList = seedFolder.listFiles();
 
-                    DisplayText.append(xmlFile.getName()+" has been retrieved\n");
+                DisplayText.append(xmlFile.getName()+" has been retrieved from the tagged documents\n");
+                DisplayText.append("===================================================================================\n");
 
-                    for(File seeds: seedList) {
+                for(File seeds: seedList) {
 
-                        DisplayText.append(seeds.getName()+" has been loaded\n");
-
-                        String seedData = readFile(seeds, fileReader).toString();
-                        String[] seedLines = seedData.split("\\r?\\n");
-                        ArrayList<String> seedEntity = new ArrayList<String>();
-                        for(String sling: seedLines){
-                            seedEntity.add(sling);
-                        }
-
-
-
-                        //entity retrieval
-                        e1 = getTag(seedEntity.get(0));
-                        e2 = getTag(seedEntity.get(1));
-
-                        DisplayText.append(e1 + " & "+ e2+ " are found inside the document\n");
-                        DisplayText.append("Searching for possible relationships...\n");
-
-
-                        HashMap<String, String> seedMap = new HashMap<String, String>();
-                        for(int i=3; i<seedEntity.size(); i++){
-                            addMap(seedMap,seedEntity,i);
-                        }
-
-                        //DisplayText.append(Integer.toString(seedMap.size())+" relationships has been found\n");
-
-
-
-                        String xml2String = readFile(xmlFile, fileReader).toString();
-                        String[] lines = xml2String.split("\\r?\\n");
-
-                        //System.out.println("Was here");
-
-
-                        for(String class1 : seedMap.keySet()){
-                            String class2 = seedMap.get(class1);
-                            class1 = class1.toLowerCase();
-                            class2 = class2.toLowerCase();
-                            for (String pLine : lines) {
-                                pLine = pLine.toLowerCase();
-                                addRelation(relation,pLine,class1,class2,e1,e2);
-                            }//end of pLine loop
-                        }//end of class1 loop
-
-                /*for(String test: relation){
-                    DisplayText.append(test+"\n");
-                }*/
-
-                DisplayText.append(Integer.toString(relation.size())+" relationships has been found\n");
-
-
-
-                    }//end of seeds loop
-
-                    TreeSet<String> seedPattern = new TreeSet<String>();
-
-                    // POS TAGGER
-                    for(String rLine: relation){
-                        //System.out.println(rLine);
-                        POSTagger(seedPattern,rLine,V,P,W);
-                    }
-
-                    DisplayText.append("Implementing Stanford POSTagger...\n");
-
-                    ArrayList<String> seedAL = new ArrayList<String>();
-                    for(String temp: seedPattern){
-                        seedAL.add(temp);
-                    }
-
-
-                    TreeSet<String> Vmatches = new TreeSet<String>();
-                    TreeSet<String> Pmatches = new TreeSet<String>();
-                    TreeSet<String> Wmatches = new TreeSet<String>();
-
-
-                    DisplayText.append("Using wordnet to generate seed patterns...\n");
-                    for(String seedWord: seedPattern){
-                        try {
-                            MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
-                            String tagged = tagger.tagString(seedWord);
-                            String temp = tagged.substring(tagged.indexOf("_")+1);
-                            //System.out.println(temp);
-
-                            // initialize JWNL (this must be done before JWNL can be used)
-                            JWNL.initialize(new FileInputStream("file_properties.xml"));
-                            IndexWord word = null;
-                            if(tagged.matches(V)){
-                                word = Dictionary.getInstance().lookupIndexWord(POS.VERB, seedWord);
-                            }else if(tagged.matches(P)){
-                                word = Dictionary.getInstance().lookupIndexWord(POS.ADVERB, seedWord);
-                            }else if(tagged.matches(W)){
-                                word = Dictionary.getInstance().lookupIndexWord(POS.ADJECTIVE, seedWord);
-                            }
-                            Synset synset[] = word.getSenses();
-
-                            for(int i=0;i<synset.length;i++){
-                                //System.out.println(word.getSenses());
-                                for(Word synonym : synset[i].getWords())
-                                {
-                                    if(tagged.matches(V)){
-                                        Vmatches.add(synonym.getLemma());
-
-
-
-                                    }else if(tagged.matches(P)){
-                                        Pmatches.add(synonym.getLemma());
-
-
-                                    }else if(tagged.matches(W)){
-                                        Wmatches.add(synonym.getLemma());
-
-
-                                    }
-                                    //matches.add(synonym.getLemma());
-                                    //System.out.println(synonym.getLemma());
-                                }
-                                //System.out.println(" ");
-                            }
-
-
-                            //matches.clear();
-
-                        } catch (Exception ex) {
-                            ex.printStackTrace();
-                        }
-                        //System.out.println(seedWord);
-                    }//End of wordnet loop
-
-                    DisplayText.append("Generating seed patterns complete\n");
-
-                    for(String temp: Vmatches){
-                        //System.out.println(temp);
-                    }
-
-                    System.out.println();
-                    for(String temp: Pmatches){
-                        //System.out.println(temp);
-                    }
-
-                    for(String temp: Wmatches){
-                        //System.out.println(temp);
+                    DisplayText.append("Seed " +seeds.getName()+" has been loaded on the bootstrap\n");
+                    DisplayText.append("===================================================================================\n");
+                    String seedData = readFile(seeds, fileReader).toString();
+                    String[] seedLines = seedData.split("\\r?\\n");
+                    ArrayList<String> seedEntity = new ArrayList<String>();
+                    for(String sling: seedLines){
+                        seedEntity.add(sling);
                     }
 
 
 
+                    //entity retrieval
+                    e1 = getTag(seedEntity.get(0));
+                    e2 = getTag(seedEntity.get(1));
+
+                    DisplayText.append("Seeds " +e1 + " & "+ e2+ " are found inside " + xmlFile.getName() +"\n");
+                    DisplayText.append("Searching for possible relationships...\n");
 
 
-                    TreeSet<String> matches = new TreeSet<String>();
+                    HashMap<String, String> seedMap = new HashMap<String, String>();
+                    for(int i=3; i<seedEntity.size(); i++){
+                        addMap(seedMap,seedEntity,i);
+                    }
 
-                    DocumentBuilderFactory factory=  DocumentBuilderFactory.newInstance();
+                    //DisplayText.append(Integer.toString(seedMap.size())+" relationships has been found\n");
+
+
+
+                    String xml2String = readFile(xmlFile, fileReader).toString();
+                    String[] lines = xml2String.split("\\r?\\n");
+
+                    //System.out.println("Was here");
+
+
+                    for(String class1 : seedMap.keySet()){
+                        String class2 = seedMap.get(class1);
+                        class1 = class1.toLowerCase();
+                        class2 = class2.toLowerCase();
+                        for (String pLine : lines) {
+                            pLine = pLine.toLowerCase();
+                            addRelation(relation,pLine,class1,class2,e1,e2);
+                            //DisplayText.append(class1+" "+class2+" "+e1+" "+e2+"\n");
+                        }//end of pLine loop
+                    }//end of class1 loop
+
+
+                    DisplayText.append("\n"+Integer.toString(relation.size())+" relationships has been found :\n");
+                    for(String test: relation){
+                        DisplayText.append(test+"\n");
+                    }
+                    DisplayText.append("===================================================================================\n");
+
+                }//end of seeds loop
+
+                TreeSet<String> seedPattern = new TreeSet<String>();
+
+                // POS TAGGER
+                for(String rLine: relation){
+                    //System.out.println(rLine);
+                    POSTagger(seedPattern,rLine,V,P,W);
+                }
+
+                DisplayText.append("Implementing Stanford POSTagger...\n");
+
+                ArrayList<String> seedAL = new ArrayList<String>();
+                for(String temp: seedPattern){
+                    seedAL.add(temp);
+                    //DisplayText.append(temp+"\n");
+                }
+
+                String POSrelationship = "";
+                for(int i = seedAL.size()-1;i >= 0;i--){
+                    if(POSrelationship.compareTo("") == 0)
+                        POSrelationship= POSrelationship.concat(seedAL.get(i));
+                    else
+                        POSrelationship= POSrelationship.concat(" "+seedAL.get(i));
+                }
+
+                DisplayText.append(POSrelationship+"\n");
+                DisplayText.append("===================================================================================\n");
+
+                TreeSet<String> Vmatches = new TreeSet<String>();
+                TreeSet<String> Pmatches = new TreeSet<String>();
+                TreeSet<String> Wmatches = new TreeSet<String>();
+
+
+                DisplayText.append("Using wordnet to generate seed patterns...\n\n");
+                for(String seedWord: seedPattern){
                     try {
-                        DocumentBuilder builder =  factory.newDocumentBuilder();
-                        Document doc = builder.parse("seedOutput/"+e1+"-"+e2+".xml");
-                        doc.getDocumentElement().normalize();
-                        //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
-                        NodeList nodeList = doc.getElementsByTagName("Seed");
-                        for(int i = 0; i< nodeList.getLength();i++) {
-                            Node nNode = nodeList.item(i);
-                            //System.out.println("Node Name: " + nNode.getNodeName());
-                            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                                //System.out.println("I am here");
-                                Element eElement = (Element) nNode;
-                                int eCount= eElement.getElementsByTagName("Pattern").getLength();
-                                for(int j=0; j<eCount;j++){
-                                    //System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
-                                    matches.add(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                        MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
+                        String tagged = tagger.tagString(seedWord);
+                        String temp = tagged.substring(tagged.indexOf("_")+1);
+                        //DisplayText.append(seedWord+"\n");
+
+                        // initialize JWNL (this must be done before JWNL can be used)
+                        JWNL.initialize(new FileInputStream("file_properties.xml"));
+                        IndexWord word = null;
+                        if(tagged.matches(V)){
+                            word = Dictionary.getInstance().lookupIndexWord(POS.VERB, seedWord);
+                        }else if(tagged.matches(P)){
+                            word = Dictionary.getInstance().lookupIndexWord(POS.ADVERB, seedWord);
+                        }else if(tagged.matches(W)){
+                            word = Dictionary.getInstance().lookupIndexWord(POS.ADJECTIVE, seedWord);
+                        }
+                        Synset synset[] = word.getSenses();
+
+                        for(int i=0;i<synset.length;i++){
+                            //System.out.println(word.getSenses());
+                            for(Word synonym : synset[i].getWords())
+                            {
+                                if(tagged.matches(V)){
+                                    Vmatches.add(synonym.getLemma());
+
+
+
+                                }else if(tagged.matches(P)){
+                                    Pmatches.add(synonym.getLemma());
+
+
+                                }else if(tagged.matches(W)){
+                                    Wmatches.add(synonym.getLemma());
+
+
                                 }
-
+                                //matches.add(synonym.getLemma());
+                                //System.out.println(synonym.getLemma());
                             }
-                        }
-                    } catch (ParserConfigurationException | IOException z) {
-                        z.printStackTrace();
-                    } catch (org.xml.sax.SAXException z) {
-                        z.printStackTrace();
-                    }
-
-                    for(String i: Vmatches){
-                        for(String j: Pmatches){
-                            matches.add(i+" "+j);
-                        }
-                    }
-
-
-                    DisplayText.append("\n Generated patterns are: \n");
-                    for(String temp: matches){
-                        //System.out.println(temp);
-                        DisplayText.append(temp+"\n");
-                    }
-
-
-                    DisplayText.append("\nStoring the generated patterns to the database...\n");
-                    DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-                    try {
-                        DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-                        Document document = documentBuilder.newDocument();
-
-
-                        Element element = document.createElement("Seed");
-                        document.appendChild(element);
-
-                        Element A = document.createElement("Tag1");
-                        A.appendChild(document.createTextNode(e1));
-                        element.appendChild(A);
-
-                        Element B = document.createElement("Tag2");
-                        B.appendChild(document.createTextNode(e2));
-                        element.appendChild(B);
-
-                        Element C = document.createElement("Relation");
-                        //C.appendChild(document.createTextNode(ms));
-                        element.appendChild(C);
-                        for(String ms: matches) {
-                            Element D = document.createElement("Pattern");
-                            D.appendChild(document.createTextNode(ms));
-                            C.appendChild(D);
+                            //System.out.println(" ");
                         }
 
-                        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-                        Transformer transformer = transformerFactory.newTransformer();
-                        DOMSource source = new DOMSource(document);
 
-                        StreamResult streamResult = new StreamResult("seedOutput/"+e1+"-"+e2+".xml");
-                        transformer.transform(source,streamResult);
+                        //matches.clear();
 
-                    } catch (ParserConfigurationException | TransformerException z) {
-                        z.printStackTrace();
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                    //System.out.println(seedWord);
+                }//End of wordnet loop
+
+                DisplayText.append("Generating seed patterns complete\n");
+                DisplayText.append("===================================================================================\n");
+                for(String temp: Vmatches){
+                    //System.out.println(temp);
+                }
+
+                System.out.println();
+                for(String temp: Pmatches){
+                    //System.out.println(temp);
+                }
+
+                for(String temp: Wmatches){
+                    //System.out.println(temp);
+                }
+
+
+
+
+
+                TreeSet<String> matches = new TreeSet<String>();
+
+                DocumentBuilderFactory factory=  DocumentBuilderFactory.newInstance();
+                try {
+                    DocumentBuilder builder =  factory.newDocumentBuilder();
+                    Document doc = builder.parse("seedOutput/"+e1+"-"+e2+".xml");
+                    doc.getDocumentElement().normalize();
+                    //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+                    NodeList nodeList = doc.getElementsByTagName("Seed");
+                    for(int i = 0; i< nodeList.getLength();i++) {
+                        Node nNode = nodeList.item(i);
+                        //System.out.println("Node Name: " + nNode.getNodeName());
+                        if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                            //System.out.println("I am here");
+                            Element eElement = (Element) nNode;
+                            int eCount= eElement.getElementsByTagName("Pattern").getLength();
+                            for(int j=0; j<eCount;j++){
+                                //System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                                matches.add(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                            }
+
+                        }
+                    }
+                } catch (ParserConfigurationException | IOException z) {
+                    z.printStackTrace();
+                } catch (org.xml.sax.SAXException z) {
+                    z.printStackTrace();
+                }
+
+                matches.add(POSrelationship);
+                for(String i: Vmatches){
+                    for(String j: Pmatches){
+                        matches.add(i+" "+j);
+                    }
+                }
+
+
+                DisplayText.append("Generated patterns from "+ e1 + " & "+ e2 + " inside " + xmlFile.getName()+" are: \n");
+                for(String temp: matches){
+                    //System.out.println(temp);
+                    DisplayText.append(temp+"\n");
+                    DisplayText.append("---------------------------\n");
+                }
+
+
+                DisplayText.append("Storing the generated patterns as "+ e1+"-"+e2+".xml"+" to the document repository folder...\n");
+                DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+                try {
+                    DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+                    Document document = documentBuilder.newDocument();
+
+
+                    Element element = document.createElement("Seed");
+                    document.appendChild(element);
+
+                    Element A = document.createElement("Tag1");
+                    A.appendChild(document.createTextNode(e1));
+                    element.appendChild(A);
+
+                    Element B = document.createElement("Tag2");
+                    B.appendChild(document.createTextNode(e2));
+                    element.appendChild(B);
+
+                    Element C = document.createElement("Relation");
+                    //C.appendChild(document.createTextNode(ms));
+                    element.appendChild(C);
+                    for(String ms: matches) {
+                        Element D = document.createElement("Pattern");
+                        D.appendChild(document.createTextNode(ms));
+                        C.appendChild(D);
                     }
 
-                }//End of file[] Loop
-                DisplayText.append("Complete");
+                    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                    Transformer transformer = transformerFactory.newTransformer();
+                    DOMSource source = new DOMSource(document);
+
+                    StreamResult streamResult = new StreamResult("seedOutput/"+e1+"-"+e2+".xml");
+                    transformer.transform(source,streamResult);
+
+                } catch (ParserConfigurationException | TransformerException z) {
+                    z.printStackTrace();
+                }
+
+            }//End of file[] Loop
+            DisplayText.append(e1+"-"+e2+".xml has been stored to the document repository folder");
 
 
 
-            }
         });
     }
 

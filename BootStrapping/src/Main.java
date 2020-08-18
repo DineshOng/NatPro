@@ -101,6 +101,15 @@ public class Main {
                 seedAL.add(temp);
             }
 
+            String POSrelationship = "";
+            for(int i = seedAL.size()-1;i >= 0;i--){
+                if(POSrelationship.compareTo("") == 0)
+                    POSrelationship= POSrelationship.concat(seedAL.get(i));
+                else
+                    POSrelationship= POSrelationship.concat(" "+seedAL.get(i));
+            }
+
+
 
             TreeSet<String> Vmatches = new TreeSet<String>();
             TreeSet<String> Pmatches = new TreeSet<String>();
@@ -205,6 +214,7 @@ public class Main {
                 e.printStackTrace();
             }
 
+            matches.add(POSrelationship);//adding the POS Tagged relationship to the generated seed patterns
             for(String i: Vmatches){
                 for(String j: Pmatches){
                     matches.add(i+" "+j);

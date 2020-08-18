@@ -29,16 +29,16 @@
 				</h6>
 			</div>
 			<br> <br>
-			<form class="row" action="#">
+			<form class="row" action="SearchServlet" method="POST">
 				<div class="input-field col s9">
 					<i class="material-icons prefix">search</i> <input id="searchInput"
-						class="materialize-textarea" type="text"> <label
+						class="materialize-textarea" type="text" name="searchKey"> <label
 						for="searchInput">Search</label>
 				</div>
 				<div class="input-field col s3">
-					<select class="browser-default">
-						<option value="" disabled selected>Choose your option</option>
-						<option value="1">plant common name</option>
+					<select class="browser-default" name="searchCategory">
+						<option value="" disabled>Choose your option</option>
+						<option value="1" selected>plant common name</option>
 						<option value="2">plant scientific name</option>
 						<option value="3">genus</option>
 						<option value="4">family</option>
@@ -50,25 +50,86 @@
 			</form>
 		</div>
 	</div>
-
 	<div>
-		<table class="striped">
-			<thead>
-				<tr>
-					<th>Common Name</th>
-					<th>Scientific Name</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${medPlantsList}" var="medPlantsList">
-					<tr>
-						<td><a href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
-						<td><c:forEach items="${medPlantsList.getSpecies()}" var="speciesList"><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()} </a>, </c:forEach></td>
-					</tr>
-				</c:forEach>
-			</tbody>
+		<table id="table_id" class="table table-striped table-bordered" style="width:100%">
+			<c:choose>
+				<c:when test="${searchCategory =='1'}">
+					<thead>
+						<tr>
+							<th>Common Name</th>
+							<th>Scientific Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${medPlantsList}" var="medPlantsList">
+							<tr>
+								<td><a
+									href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
+								<td><c:forEach items="${medPlantsList.getSpecies()}"
+										var="speciesList" varStatus="loop">
+										<i><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a></i>
+										<c:if test="${!loop.last}">, </c:if>
+									</c:forEach></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+				<c:when test="${searchCategory =='3'}">
+					<thead>
+						<tr>
+							<th>Genus</th>
+							<th>Family</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${genusList}" var="genusList">
+							<tr>
+								<td><a
+									href="ViewPlantServlet?genus=${genusList.getGenus()}">${genusList.getGenus()}</a></td>
+								<td><a
+									href="ViewPlantServlet?genus=${genusList.getFamily().getFamily()}">${genusList.getFamily().getFamily()}</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+				<c:when test="${searchCategory =='4'}">
+					<thead>
+						<tr>
+							<th>Family</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${familyList}" var="familyList">
+							<tr>
+								<td><a
+									href="ViewPlantServlet?genus=${familyList.getFamily()}">${familyList.getFamily()}</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+				<c:when test="${searchCategory =='5'}">
+					<thead>
+						<tr>
+							<th>Compound</th>
+							<th>Compound Synonym</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${compoundList}" var="compoundList">
+							<tr>
+								<td><a
+									href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundName()}</a></td>
+								<td><c:forEach
+										items="${compoundList.getCompoundSynonyms()}" var="csList" varStatus="loop">
+										<a
+											href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${csList}
+										</a><c:if test="${!loop.last}">, </c:if></c:forEach></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+			</c:choose>
 		</table>
-
 	</div>
 
 	<div class="container">
@@ -126,10 +187,28 @@
 
 	<%@include file="includeFooter.html"%>
 	<%@include file="includeScripts.html"%>
+	
+	<link rel="stylesheet" type="text/css" href="DataTables/dt_bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="DataTables/dataTables.bootstrap4.min.css">
+	<script type="text/javascript" charset="utf8" src="js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="DataTables/datatables.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="DataTables/dataTables.bootstrap4.min.js"></script>
+	
+	
+	<style>
+		#table_id_wrapper {
+			margin: 50px;
+		}
+	</style>
+  	
 	<script>
 		$(document).ready(function() {
 			$('select').formSelect();
-		})
+		});
+		
+		$('#table_id').DataTable();
 	</script>
+	
+	
 </body>
 </html>
