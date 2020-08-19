@@ -30,52 +30,53 @@
 		
 		<div class="container-fluid" style="text-align: left">
 			<form action="AddPlantServlet" method="POST">
-				<h4 style="padding-bottom: 20px; text-align:center">General</h4>
+				<h4 style="padding-top: 50px; padding-bottom: 20px; text-align:center">General</i>
+				</h4>
 				<div class="form-group form-row">
 					<div class="col-3"> </div>
 					<div class="col-6">
-						<label for="CommonPlantName">Common Plant Name</label>
+						<label for="CommonPlantName"> <i class="fa fa-address-card" aria-hidden="true"></i> Common Plant Name</label>
     					<input type="text" id="CommonPlantName" class="form-control" placeholder="">
 					</div>
 				</div>
 				<div class="form-group form-row">
 					<div class="col-6">
-						<label for="Genus">Genus</label>
+						<label for="Genus"><i class="fa fa-group" aria-hidden="true"></i> Genus</label>
     					<input type="text" class="form-control" id="Genus" placeholder="">
 					</div>
 					<div class="col-6">
-						<label for="Family">Family</label>
+						<label for="Family"><i class="fa fa-group" aria-hidden="true"></i> Family</label>
     					<input type="text" class="form-control" id="Family" placeholder="">
 					</div>
 				</div>
 				
 				<div class="form-group form-row">
 					<div class="col-6">
-						<label for="ScientificName">Scientific Name</label>
+						<label for="ScientificName"><i class="fa fa-drivers-license" aria-hidden="true"></i> Scientific Name</label>
     					<input type="text" class="form-control" id="ScientificName" placeholder="">
 					</div>
 					<div id="locationGroup" class="col-6">
 						<div class="col-13">
-							<label for="Location">Location</label>
+							<label for="Location"><i class="fa fa-map-marker" aria-hidden="true"></i> Location</label>
 	    					<input type="text" class="form-control" id="Location" placeholder="">
 						</div>
 						<div>
-							<button id="locationAdd" type="button" class="btn btn-primary btn-sm" onclick="addLFields()" style="margin-top:5px">Location</button>
+							<button id="locationAdd" type="button" class="btn btn-primary btn-sm" onclick="addLFields()" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button>
 						</div>
 					</div>
 				</div>
 				
 				
-				<h4 style="padding-bottom: 20px; text-align:center">Preparation</h4>
+				<h4 style="padding-top: 50px; padding-bottom: 20px; text-align:center">Preparation</h4>
 				<div id="preparationGroup">
 					<div class="form-group form-row">
 						<div class="col">
-							<label for="Preparation">Preparation</label>
+							<label for="Preparation"><i class="fa fa-cogs" aria-hidden="true"></i> Preparation</label>
 	    					<input type="text" class="form-control" id="Preparation" placeholder="" name="preparation[0]">
 	    					<input type="hidden" name="prepCtr" value="0">
 						</div>
 						<div class="col">
-							<label for="PlantPart">Plant Part</label>
+							<label for="PlantPart"><i class="fa fa-leaf" aria-hidden="true"></i> Plant Part</label>
 							<select name="prepPart[0]" class="custom-select custom-select-md mb-3" id="PlantPart" onchange="enablePPO(0)">
 							  	<option value="" selected disabled>Open this select menu</option>
 							  	<option value="-1">Others (please write on the right side)</option>
@@ -93,14 +94,15 @@
 					<div class="form-group form-row" id="illnessGroup">
 						<div class="col-3"> </div>
 						<div class="col-6">
-								<label for="Illness">Illness</label>
+								<i class="fa fa-viruses"></i>
+								<label for="Illness"><i class="fa fa-thermometer" aria-hidden="true"></i> Illness</label>
 		    					<input type="text" class="form-control" id="Illness" placeholder="" name="illness[0][0]">
 		    					<input type="hidden" name="illnessCtr[0]" value="0">
 						</div>
 						<div class="col-3"> </div>
 						<div class="col-3"> </div>
 						<div class="col-6">
-							<button id="illnessAdd" type="button" class="btn btn-primary btn-sm" style="margin-top:5px" onclick="addIFields(0)">Illness</button>
+							<button id="illnessAdd" type="button" class="btn btn-primary btn-sm" style="margin-top:5px" onclick="addIFields(0)"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button>
 						</div>
 						<div class="col-3"> </div>
 					</div>
@@ -108,18 +110,18 @@
 					<div class="form-group form-row">
 						<div class="col-3"> </div>
 						<div class="col-12" style="text-align: center">
-							<button id="preparationAdd" type="button" class="btn btn-primary btn-lg" style="margin-top:10px" onclick="addPFields(0)">Preparation</button>
+							<button id="preparationAdd" type="button" class="btn btn-primary btn-lg" style="margin-top:10px" onclick="addPFields(0)"><i class="fa fa-plus" aria-hidden="true"></i> Preparation</button>
 						</div>
 						<div class="col-3"> </div>
 					</div>
 				</div>
 				
 				
-				<h4 style="padding-bottom: 20px; text-align:center">Species</h4>
+				<h4 style="padding-top: 50px; padding-bottom: 20px; text-align:center">Species</i></h4>
 				<div id="speciesGroup">
 					<div class="form-group form-row">
 						<div class="col-4">
-							<label for="SpeciesPlantPart">Species Plant Part</label>
+							<label for="SpeciesPlantPart"><i class="fa fa-leaf" aria-hidden="true"></i> Species Plant Part</label>
 							<select name="plantPart[0]" class="custom-select custom-select-md mb-3" id="SpeciesPlantPart" onchange="enableSPPO(0)">
 							  	<option value="" selected disabled>Open this select menu</option>
 							  	<option value="-1">Others (please write on the right side)</option>
@@ -139,13 +141,13 @@
 						<div class="form-group form-row">
 							<div class="col-2"> </div>
 							<div class="col-6">
-								<label for="ChemicalCompound">Chemical Compound</label>
+								<label for="ChemicalCompound"><i class="fa fa-flask" aria-hidden="true"></i> Chemical Compound</label>
 		    					<input type="text" class="form-control" id="ChemicalCompound" placeholder="" name="compound[0][0]">
 							</div>
 							<div class="w-100"></div>
 							<div class="col-2"> </div>
 							<div class="col justify-content-center">
-								<button id="chemicalCompoundAdd" type="button" class="btn btn-primary btn-sm" onclick="addCCFields(0)" style="margin-top:5px">Chemical Compound</button>
+								<button id="chemicalCompoundAdd" type="button" class="btn btn-primary btn-sm" onclick="addCCFields(0)" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>
 								<input type="hidden" name="compoundCtr" value="0">
 								<input type="hidden" name="lengthCC" value="0">
 							</div>
@@ -167,14 +169,14 @@
 								<div class="w-100"></div>
 								<div class="col-4"></div>
 								<div class="col justify-content-center">
-									<button id="biologicalActivityAdd" type="button" class="btn btn-primary btn-sm" onclick="addBAFields(0,0,0)" style="margin-top:5px">Biological Activity</button>
+									<button id="biologicalActivityAdd" type="button" class="btn btn-primary btn-sm" onclick="addBAFields(0,0,0)" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>
 								</div>
 							</div>
 						</div>
 						
 						<div class="form-group form-row">
 							<div class="col-12" style="text-align: center">
-								<button id="speciesAdd" type="button" class="btn btn-primary btn-lg" onclick="addSFields(0)" style="margin-top:10px; margin-bottom: 25px">Species Part</button>
+								<button id="speciesAdd" type="button" class="btn btn-primary btn-lg" onclick="addSFields(0)" style="margin-top:10px; margin-bottom: 25px"><i class="fa fa-plus" aria-hidden="true"></i> Species Part</button>
 							</div>
 						</div>
 					</div>
@@ -265,7 +267,7 @@
 			lCtr++;
 						
 			var inputField = '<div class="col-13"><label for="Location'+ lCtr +'">Location</label><input type="text" class="form-control" id="Location'+ lCtr +'" placeholder="">';
-			var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-primary btn-sm" onclick="addLFields()" style="margin-top:5px">Location</button></div>';
+			var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-primary btn-sm" onclick="addLFields()" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button></div>';
 			
 			$('#locationGroup').append(inputField, buttonAdd);
 			console.log(inputField);
@@ -283,12 +285,12 @@
 	
 			iCtr++;
 						
-			var inputField = '<div class="col-3"> </div><div class="col-6"><label for="Illness'+ iCtr +'">Illness</label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+pValue+']['+prepArr[pValue]+']"><input type="hidden" name="illnessCtr['+pValue+']" value="'+prepArr[pValue]+'"></div><div class="col-3"> </div>';
+			var inputField = '<div class="col-3"> </div><div class="col-6"><label for="Illness'+ iCtr +'">Illness <i class="fa fa-viruses"></i></label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+pValue+']['+prepArr[pValue]+']"><input type="hidden" name="illnessCtr['+pValue+']" value="'+prepArr[pValue]+'"></div><div class="col-3"> </div>';
 			
 			if (pValue == 0) {
-				var buttonAdd = '<div class="col-3"> </div><div class="col-6"><button id="illnessAdd" type="button" class="btn btn-primary btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')">Illness</button></div><div class="col-3"> </div>';
+				var buttonAdd = '<div class="col-3"> </div><div class="col-6"><button id="illnessAdd" type="button" class="btn btn-primary btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-3"> </div>';
 			} else {
-				var buttonAdd = '<div class="col-3"> </div><div class="col-6"><button id="illnessAdd'+pValue+'" type="button" class="btn btn-primary btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')">Illness</button></div><div class="col-3"> </div>';
+				var buttonAdd = '<div class="col-3"> </div><div class="col-6"><button id="illnessAdd'+pValue+'" type="button" class="btn btn-primary btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-3"> </div>';
 			}
 	
 			var groupAddText = "#illnessGroup" + pValue;
@@ -343,14 +345,14 @@
 			
 			
 			var inputIllness = '<div class="form-group form-row" id="illnessGroup'+ pbpCtr +'">'+	
-							   '<div class="col-3"> </div><div class="col-6"><label for="Illness'+ iCtr +'">Illness</label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+(pValue + 1)+'][0]"><input type="hidden" name="illnessCtr['+(pValue + 1)+']" value="'+prepArr[pValue]+'"></div><div class="col-3"> </div>' +
+							   '<div class="col-3"> </div><div class="col-6"><label for="Illness'+ iCtr +'">Illness <i class="fa fa-viruses"></i></label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+(pValue + 1)+'][0]"><input type="hidden" name="illnessCtr['+(pValue + 1)+']" value="'+prepArr[pValue]+'"></div><div class="col-3"> </div>' +
 							   '<div class="col-3"> </div><div class="col-6"><button id="illnessAdd'+pbpCtr+'" type="button" class="btn btn-primary btn-sm" style="margin-top:5px" onclick="addIFields('+pbpCtr+')">Illness</button></div><div class="col-3"> </div>'
 							   '</div>';	
 							   
 			var buttonAdd = '<div class="form-group form-row">'+
 								'<div class="col-3"> </div>'+
 								'<div class="col-12" style="text-align: center">'+
-								'<button id="preparationAdd'+pbpCtr+'" type="button" class="btn btn-primary btn-lg" style="margin-top:10px" onclick="addPFields('+pbpCtr+')">Preparation</button>'+
+								'<button id="preparationAdd'+pbpCtr+'" type="button" class="btn btn-primary btn-lg" style="margin-top:10px" onclick="addPFields('+pbpCtr+')"><i class="fa fa-plus" aria-hidden="true"></i> Preparation <i class="fa fa-cogs" aria-hidden="true"></i></button>'+
 								'<div class="col-3"> </div>'+
 								'</div>'+
 							'</div>';
@@ -396,7 +398,7 @@
 				var buttonAdd = '<div class="w-100"></div>'+
 								'<div class="col-4"></div>'+
 								'<div class="col justify-content-center">'+
-									'<button id="biologicalActivityAdd" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px">Biological Activity</button>'+
+									'<button id="biologicalActivityAdd" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 								'</div>';
 									
   				var endRow = '</div>';
@@ -423,7 +425,7 @@
 				var buttonAdd = '<div class="w-100"></div>'+
 								'<div class="col-4"></div>'+
 								'<div class="col justify-content-center">'+
-									'<button id="biologicalActivityAdd'+pValue+'" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px">Biological Activity</button>'+
+									'<button id="biologicalActivityAdd'+pValue+'" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 								'</div>';
 									
   				var endRow = '</div>';
@@ -461,7 +463,7 @@
 								   '<div class="w-100"></div>'+
 								   '<div class="col-2"> </div>'+
 								   '<div class="col justify-content-center">'+
-									   '<button id="chemicalCompoundAdd" type="button" class="btn btn-primary btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px">Chemical Compound</button>'+
+									   '<button id="chemicalCompoundAdd" type="button" class="btn btn-primary btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
 									   '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
 									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
 								   '</div>'+
@@ -483,14 +485,14 @@
 									 '<div class="w-100"></div>'+
 									 '<div class="col-4"></div>'+
 									 '<div class="col justify-content-center">'+
-										 '<button id="biologicalActivityAdd" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px">Biological Activity</button>'+
+										 '<button id="biologicalActivityAdd" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 									 '</div>'+
 								 '</div>'+
 							 '</div>';
 							 
 				var buttonAdd = '<div class="form-group form-row">'+
 								'<div class="col-12" style="text-align: center">'+
-										'<button id="speciesAdd" type="button" class="btn btn-primary btn-lg" onclick="addSFields(0)" style="margin-top:10px; margin-bottom: 25px">Species Part</button>'+
+										'<button id="speciesAdd" type="button" class="btn btn-primary btn-lg" onclick="addSFields(0)" style="margin-top:10px; margin-bottom: 25px"><i class="fa fa-plus" aria-hidden="true"></i> Species Part</button>'+
 									'</div>'+
 								'</div>';
 								
@@ -507,7 +509,7 @@
 								   '<div class="w-100"></div>'+
 								   '<div class="col-2"> </div>'+
 								   '<div class="col justify-content-center">'+
-									   '<button id="chemicalCompoundAdd" type="button" class="btn btn-primary btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px">Chemical Compound</button>'+
+									   '<button id="chemicalCompoundAdd" type="button" class="btn btn-primary btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
 									   '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
 									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
 								   '</div>'+
@@ -529,14 +531,14 @@
 									 '<div class="w-100"></div>'+
 									 '<div class="col-4"></div>'+
 									 '<div class="col justify-content-center">'+
-										 '<button id="biologicalActivityAdd" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px">Biological Activity</button>'+
+										 '<button id="biologicalActivityAdd" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 									 '</div>'+
 								 '</div>'+
 							 '</div>';							
 							 
 				var buttonAdd = '<div class="form-group form-row">'+
 								'<div class="col-12" style="text-align: center">'+
-										'<button id="speciesAdd" type="button" class="btn btn-primary btn-lg" onclick="addSFields(0)" style="margin-top:10px; margin-bottom: 25px">Species Part</button>'+
+										'<button id="speciesAdd" type="button" class="btn btn-primary btn-lg" onclick="addSFields(0)" style="margin-top:10px; margin-bottom: 25px"><i class="fa fa-plus" aria-hidden="true"></i> Species Part</button>'+
 									'</div>'+
 								'</div>';
 								
@@ -594,7 +596,7 @@
 										  '<div class="w-100"></div>'+
 										  '<div class="col-2"> </div>'+
 										  '<div class="col justify-content-center">'+
-											  '<button id="chemicalCompoundAdd'+sCtr+'" type="button" class="btn btn-primary btn-sm" onclick="addCCFields('+sCtr+')" style="margin-top:5px">Chemical Compound</button>'+
+											  '<button id="chemicalCompoundAdd'+sCtr+'" type="button" class="btn btn-primary btn-sm" onclick="addCCFields('+sCtr+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
 											  '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
 											  '<input type="hidden" name="lengthCC'+sCtr+'" value="'+speciesArr[pValue]+'">'+
 										  '</div>'+
@@ -616,7 +618,7 @@
 											  '<div class="w-100"></div>'+
 											  '<div class="col-4"></div>'+
 											  '<div class="col justify-content-center">'+
-												  '<button id="biologicalActivityAdd'+ccCtr+'" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+ccCtr+','+sCtr+','+speciesArr[pValue]+')" style="margin-top:5px">Biological Activity</button>'+
+												  '<button id="biologicalActivityAdd'+ccCtr+'" type="button" class="btn btn-primary btn-sm" onclick="addBAFields('+ccCtr+','+sCtr+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 											  '</div>'+
 										  '</div>'+
 									  '</div>'+
