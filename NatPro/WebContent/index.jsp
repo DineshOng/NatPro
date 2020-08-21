@@ -1,61 +1,99 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- Based from template.jsp -->
+
+
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>NatPro - Main</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+	
+    <title>NatPro : ${searchKey}</title>
+  </head>
+  <body>
+  	<!-- INCLUDE NAV BAR HTML -->
+ 	<%@include file="navbarnix.html"%>
 
-        <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    </head>
-    <body>       
-    	<%@include file="includeNavBar.html"%>
-        <div id="index-banner" class="parallax-container">
-            <div class="section no-pad-bot">
-                <div class="container">
-                    <br><br>
-                    <h1 class="header center green-text text-accent-4">Welcome to NatPro!</h1>
-                    <div class="row center">
-                        <h5 class="header col s12 light">This is a prototype of the program </h5>
-                    </div>
-                    <br><br>
-
-                </div>
-            </div>
-            <div class="parallax"><img src="media/background1.jpg" alt="Unsplashed background img 1"></div>
-        </div>        
-
-        <div class="container">
-            <div class="section">
-
-                <div class="row">
-                    <div class="col s12 center">
-                    <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4>Contact Us</h4>
-                    <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <div class="parallax-container valign-wrapper">
-            <div class="section no-pad-bot">
-                <div class="container">
-                    <div class="row center">
-                        <h5 class="header col s12 light">Ontology Population of Natural Products from Scientific Literatures</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="parallax"><img src="media/background3.jpg" alt="Unsplashed background img 3"></div>
-        </div>
-
-    	<%@include file="includeFooter.html"%>
-		<%@include file="includeScripts.html"%>
-    </body>
+    <!-- HTML CODE -->
+    <div class="jumbotron jumbotron-fluid" style="text-align:center">
+		<div class="container">
+			<h1 class="display-4">Welcome to NatPro</h1>
+			<p class="lead">This is a prototype of the program</p>
+		</div>
+	</div>
+	<div class="jumbotron jumbotron-fluid" style="text-align:center">
+		<div class="container">
+			<p class="lead">Ontology Population of Natural Products from Scientific Literatures</p>
+		</div>
+	</div>
+	
+    
+    <!-- INCLUDE FOOTER HTML -->
+    <%@include file="_includeFooter.html" %>
+	
+    
+	<script type="text/javascript" src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    
+    <script type="text/javascript">
+	    $(document).ready(function() {
+	        $('#table_id').DataTable();
+	        //$('.hid').css('display', 'none');
+	    });
+	    
+	    function func_submit() {
+	    	$("#searchForm").submit();
+	    }
+	    
+		$(document).ready(function(){
+			var dropdown = $(".navbar-right .dropdown");
+			var toogleBtn = $(".navbar-right .dropdown-toggle");
+			
+			// Toggle search and close icon for search dropdown
+			dropdown.on("show.bs.dropdown", function(e){
+				toogleBtn.toggleClass("hide");
+			});
+			dropdown.on("hide.bs.dropdown", function(e){
+				toogleBtn.addClass("hide");
+				toogleBtn.first().removeClass("hide");
+			});
+		});
+		
+		function ddfunc(x){
+			if(x==1) {
+				$("#ddtext").html("Plant Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(1);
+			} else if(x==2) {
+				$("#ddtext").html("Scientific Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(2);
+			} else if(x==3) {
+				$("#ddtext").html("Genus <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(3);
+			} else if(x==4) {
+				$("#ddtext").html("Family <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(4);
+			} else if(x==5) {
+				$("#ddtext").html("Compound <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(5);
+			} else if(x==6) {
+				$("#ddtext").html("Location <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(6);
+			} else if(x==7) {
+				$("#ddtext").html("Biological Activites <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(7);
+			}
+		}
+		
+		$("#search").val('${searchKey}');
+		ddfunc(${searchCategory});
+	</script>
+    
+  </body>
 </html>

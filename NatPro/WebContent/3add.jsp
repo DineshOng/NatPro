@@ -1,564 +1,434 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Based from template.jsp -->
+
+
+<!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Required meta tags -->
+<meta charset="utf-8">
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-<title>NatPro - Materialize</title>
-
-<!-- CSS  -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Varela+Round"
 	rel="stylesheet">
-<link href="css/materialize.css" type="text/css" rel="stylesheet"
-	media="screen,projection" />
-<link href="css/style.css" type="text/css" rel="stylesheet"
-	media="screen,projection" />
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="DataTables/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="css/navbar.css" />
+
+<title>NatPro : ${searchKey}</title>
 </head>
 <body>
-	<%@include file="includeNavBar.html"%>
-	<div class="section no-pad-bot" id="index-banner">
-		<div class="container">
-			<!--<br><br>-->
-			<h1 class="header center green-text text-darken-3">Add</h1>
-			<div class="row center">
-				<h6>Manually add a plant here</h6>
-			</div>
-			<form action="AddPlantServlet" method="POST" class="row">
-				<div class="col s12">
-					<h5 class="col s12 center" style="padding-top: 50px">General</h5>
-					<div class="input-field col s6 offset-s3">
-						<input id="commonPlantName" type="text" class="validate"
-							name="commonPlantName"> <label for="commonPlantName">Common
-							Plant Name</label>
+	<!-- INCLUDE NAV BAR HTML -->
+	<%@include file="navbarnix.html"%>
+
+	<!-- HTML CODE -->
+	<div class="jumbotron jumbotron-fluid" style="text-align: center">
+		<div class="container" style="padding-bottom: 30px">
+			<h1 class="display-4">Add</h1>
+			<p class="lead">Manually add a plant here</p>
+		</div>
+
+		<div class="container-fluid " style="text-align: left">
+			<form action="AddPlantServlet" method="POST">
+				<div class="card">
+					<div class="card-header text-center">
+						<h4 class="mt-1">General</h4>
 					</div>
-					<div class="input-field col s6">
-						<input id="genus" type="text" class="validate" name="genus">
-						<label for="genus">Genus</label>
-					</div>
-					<div class="input-field col s6">
-						<input id="family" type="text" class="validate" name="family">
-						<label for="family">Family</label>
-					</div>
-					<div class="col s6" id="scientificNameGroup">
-						<div class="input-field">
-							<input id="scientificName" type="text" class="validate"
-								name="scientificName"> <label for="scientificName">Scientific
-								Name</label>
+					<div class="card-body">
+						<div class="form-group form-row">
+							<div class="col-4"></div>
+							<div class="col-4">
+								<label for="CommonPlantName"> <i
+									class="fa fa-address-card" aria-hidden="true"></i> Common Plant
+									Name
+								</label> <input type="text" id="CommonPlantName" name="commonPlantName"
+									class="form-control" placeholder="">
+							</div>
 						</div>
-						<!--  <a class="btn-small right teal darken-4" id="scientificNameAdd"
-							onclick="addSNFields()">Scientific Name<i
-							class="material-icons left">add</i></a> -->
-					</div>
-					<div class="col s6" id="locationGroup">
-						<div class="input-field">
-							<input id="location" type="text" class="validate" name="location">
-							<label for="location">Location</label>
+						<div class="form-group form-row">
+							<div class="col-2"></div>
+							<div class="col-4">
+								<label for="Genus"><i class="fa fa-group"
+									aria-hidden="true"></i> Genus</label> <input type="text"
+									class="form-control" name="genus" id="Genus" placeholder="">
+							</div>
+							<div class="col-4">
+								<label for="Family"><i class="fa fa-group"
+									aria-hidden="true"></i> Family</label> <input type="text"
+									class="form-control" name="family" id="Family" placeholder="">
+							</div>
 						</div>
 
-						<a class="btn-small right teal darken-4" id="locationAdd"
-							onclick="addLFields()">Location<i class="material-icons left">add</i></a>
+						<div class="form-group form-row">
+							<div class="col-2"></div>
+							<div class="col-4">
+								<label for="ScientificName"><i
+									class="fa fa-drivers-license" aria-hidden="true"></i>
+									Scientific Name</label> <input type="text" class="form-control"
+									name="scientificName" id="ScientificName" placeholder="">
+							</div>
+							<div id="locationGroup" class="col-4">
+								<div class="col-13">
+									<label for="Location"><i class="fa fa-map-marker"
+										aria-hidden="true"></i> Location</label> <input type="text"
+										class="form-control" name="location" id="Location"
+										placeholder="">
+								</div>
+								<div>
+									<button id="locationAdd" type="button"
+										class="btn btn-outline-success btn-sm" onclick="addLFields()"
+										style="margin-top: 5px">
+										<i class="fa fa-plus" aria-hidden="true"></i> Location
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="row">
-						<h5 class="col s12 center" style="padding-top: 50px">Preparation</h5>
+				</div>
+
+				<br>
+				<div class="card">
+					<div class="card-header text-center">
+						<h4 class="mt-1">Preparation</h4>
+					</div>
+					<div class="card-body">
 						<div id="preparationGroup">
-							<div class="input-field col s5">
-								<input id="preparation" type="text" class="validate"
-									name="preparation[0]"> <label for="preparation">Preparation</label>
-								<input type='hidden' name='prepCtr' value='0'>
-							</div>
-
-							<div class="input-field col s3">
-								<select class="browser-default" name="prepPart[0]">
-									<option value="" selected disabled>Choose utilized
-										plant part</option>
-									<option value="-1">Others (Please write on the right
-										side)</option>
-									<c:forEach items="${plantPartsList}" var="plantPartsList">
-										<option value="${plantPartsList}">${plantPartsList}</option>
-									</c:forEach>
-								</select>
-
-							</div>
-
-							<div class="col s4" id="illnessGroup">
-								<div class="input-field">
-									<input id="illness" type="text" class="validate"
-										name="illness[0][0]"> <label for="illness">Illness</label>
+							<div class="border-bottom border-secondary mb-3">
+								<div class="form-group form-row">
+									<div class="col-1"></div>
+									<div class="col">
+										<label for="Preparation"><i class="fa fa-cogs"
+											aria-hidden="true"></i> Preparation</label> <input type="text"
+											class="form-control" id="Preparation" placeholder=""
+											name="preparation[0]"> <input type="hidden"
+											name="prepCtr" value="0">
+									</div>
+									<div class="col">
+										<label for="PlantPart"><i class="fa fa-leaf"
+											aria-hidden="true"></i> Plant Part</label> <select name="prepPart[0]"
+											class="custom-select custom-select-md mb-3" id="PlantPart"
+											onchange="enablePPO(0)">
+											<option value="" selected disabled>Open this select
+												menu</option>
+											<option value="-1">Others (please write on the right
+												side)</option>
+											<c:forEach items="${plantPartsList}" var="plantPartsList">
+												<option value="${plantPartsList}">${plantPartsList}</option>
+											</c:forEach>
+										</select>
+									</div>
+									<div class="col">
+										<label for="PlantPartOther[0]">Plant Part (Other)</label> <input
+											type="text" class="form-control" id="PlantPartOther[0]"
+											placeholder="" disabled>
+									</div>
+									<div class="col-1"></div>
 								</div>
 
-								<a class="btn-small right teal darken-4" id="illnessAdd"
-									onclick="addIFields(0)">Illness<i
-									class="material-icons left">add</i></a> <input type='hidden'
-									name='illnessCtr[0]' value='0'>
-							</div>
-
-							<!-- 							<div class="input-field col s2">
-								<select class="browser-default">
-									<option value="" disabled selected>Choose body part</option>
-									<option value="1">Gall Bladder</option>
-									<option value="2">Intestines</option>
-									<option value="3">Esophagus</option>
-									<option value="4">Intestine</option>
-									<option value="5">Shoulders</option>
-									<option value="6">Buttocks</option>
-									<option value="7">Bladder</option>
-									<option value="8">Kidneys</option>
-									<option value="9">Ovaries</option>
-									<option value="10">Stomach</option>
-									<option value="11">Thyroid</option>
-									<option value="12">Fingers</option>
-									<option value="13">Breasts</option>
-									<option value="14">Abdomen</option>
-									<option value="15">Kidney</option>
-									<option value="16">Spleen</option>
-									<option value="17">Thymus</option>
-									<option value="18">Cheeks</option>
-									<option value="19">Tongue</option>
-									<option value="20">Throat</option>
-									<option value="21">Elbows</option>
-									<option value="22">Wrists</option>
-									<option value="23">Finger</option>
-									<option value="24">Breat</option>
-									<option value="25">Thighs</option>
-									<option value="26">Calves</option>
-									<option value="27">Ankles</option>
-									<option value="28">Brain</option>
-									<option value="29">Heart</option>
-									<option value="30">Liver</option>
-									<option value="31">Lungs</option>
-									<option value="32">Ovary</option>
-									<option value="33">Veins</option>
-									<option value="34">Cheek</option>
-									<option value="35">Mouth</option>
-									<option value="36">Teeth</option>
-									<option value="37">Tooth</option>
-									<option value="38">Elbow</option>
-									<option value="39">Wrist</option>
-									<option value="40">Hands</option>
-									<option value="41">Spine</option>
-									<option value="42">Chest</option>
-									<option value="43">Navel</option>
-									<option value="44">Thigh</option>
-									<option value="45">Knees</option>
-									<option value="46">Heels</option>
-									<option value="47">Ankle</option>
-									<option value="48">Eyes</option>
-									<option value="49">Vein</option>
-									<option value="50">Head</option>
-									<option value="51">Jaw</option>
-									<option value="52">Chin</option>
-									<option value="53">Ears</option>
-									<option value="54">Nose</option>
-									<option value="55">Neck</option>
-									<option value="56">Arms</option>
-									<option value="57">Hand</option>
-									<option value="58">Hips</option>
-									<option value="59">Legs</option>
-									<option value="60">Knee</option>
-									<option value="61">Calf</option>
-									<option value="62">Heel</option>
-									<option value="63">Foot</option>
-									<option value="64">Feet</option>
-									<option value="65">Toes</option>
-									<option value="66">Eye</option>
-									<option value="67">Jaw</option>
-									<option value="68">Ear</option>
-									<option value="69">Arm</option>
-									<option value="70">Hip</option>
-									<option value="71">Leg</option>
-									<option value="72">Toe</option>
-								</select>
-							</div> -->
-
-
-							<a class="btn-small teal darken-4 center col s6 offset-s3"
-								id="preparationAdd" onclick="addPFields(0)">Preparation<i
-								class="material-icons left">add</i></a>
-						</div>
-					</div>
-					<div class="col s12" id="speciesGroup">
-						<h5 class="col s12 center" style="padding-top: 50px">Species</h5>
-						<div class="input-field col s6">
-							<select class="browser-default" name="plantPart[0]"
-								onchange="speciesPartOtherEnable(0)" id="speciesPart">
-								<option value="" selected disabled>Choose plant part</option>
-								<option value="-1">Others (Please write on the right
-									side)</option>
-								<c:forEach items="${plantPartsList}" var="plantPartsList">
-									<option value="${plantPartsList}">${plantPartsList}</option>
-								</c:forEach>
-							</select> <input type='hidden' name='speciesCtr' value='0'>
-						</div>
-						<div class="col s6">
-							<div class="input-field">
-								<input id="speciesPartOther" type="text" class="validate"
-									disabled required name="plantPartOther"> <label
-									for="speciesPartOther">Other Plant Part</label>
-							</div>
-						</div>
-
-						<div class="row" id="chemicalCompoundGroup">
-							<div class="input-field col s6 offset-s1">
-								<input id="chemicalCompound" type="text" class="validate"
-									name="compound[0][0]"> <label for="chemicalCompound">Chemical
-									Compound</label> <a class="btn-small right teal darken-4"
-									id="chemicalCompoundAdd" onclick="addCCFields(0)">Chemical
-									Compound<i class="material-icons left">add</i>
-								</a>
-							</div>
-							<input type='hidden' name='lengthCC0' value='0'>
-							<div class="col s12" id="biologicalActivityGroup">
-								<div class="input-field col s6 offset-s2">
-									<input id="biologicalActivity" type="text" class="validate"
-										name="bioAct[0][0][0]"> <label
-										for="biologicalActivity">Biological Activity</label> <a
-										class="btn-small right teal darken-4"
-										id="biologicalActivityAdd" onclick="addBAFields(0,0,0)">Biological
-										Activities<i class="material-icons left">add</i>
-									</a>
+								<div class="form-group form-row" id="illnessGroup">
+									<div class="col-4"></div>
+									<div class="col-4">
+										<i class="fa fa-viruses"></i> <label for="Illness"><i
+											class="fa fa-thermometer" aria-hidden="true"></i> Illness</label> <input
+											type="text" class="form-control" id="Illness" placeholder=""
+											name="illness[0][0]"> <input type="hidden"
+											name="illnessCtr[0]" value="0">
+										<button id="illnessAdd" type="button"
+											class="btn btn-outline-success btn-sm"
+											style="margin-top: 5px" onclick="addIFields(0)">
+											<i class="fa fa-plus" aria-hidden="true"></i> Illness
+										</button>
+									</div>
+									<div class="col-4"></div>
 								</div>
-								<div class="input-field col s4">
-									<input id="cellLine" type="text" class="validate"
-										name="cellLine[0][0][0]"> <label for="cellLine">CellLine</label>
+							</div>
+							<div class="d-flex justify-content-center">
+								<div class="form-row" style="width: 50%">
+									<button type="button" class="btn btn-outline-success btn-block"
+										id="preparationAdd" onclick="addPFields(0)">Add
+										Preparation</button>
 								</div>
-								<input type='hidden' name='bioCellCC0' value='0'>
-								<input type='hidden' name='lengthBC[0][0]' value='0'>
 							</div>
 						</div>
-						<a class="btn-small teal darken-4 center col s6 offset-s3"
-							id="speciesAdd" onclick="addSFields(0)">Species<i
-							class="material-icons left">add</i></a>
 					</div>
 				</div>
-				<input type="submit" id="btnSubmit"
-					class="waves-effect waves-light btn green darken-3 center col s6 offset-s3">
+
+
+				<br>
+				<div class="card">
+					<div class="card-header text-center">
+						<h4 class="mt-1">Species</h4>
+					</div>
+					<div class="card-body">
+						<div id="speciesGroup">
+							<div class="border-bottom border-secondary mb-3">
+								<div class="form-group form-row">
+									<div class="col-1"></div>
+									<div class="col-3">
+										<label for="SpeciesPlantPart"><i class="fa fa-leaf"
+											aria-hidden="true"></i> Species Plant Part</label> <select
+											name="plantPart[0]"
+											class="custom-select custom-select-md mb-3"
+											id="SpeciesPlantPart" onchange="enableSPPO(0)">
+											<option value="" selected disabled>Open this select
+												menu</option>
+											<option value="-1">Others (please write on the right
+												side)</option>
+											<c:forEach items="${plantPartsList}" var="plantPartsList">
+												<option value="${plantPartsList}">${plantPartsList}</option>
+											</c:forEach>
+										</select> <input type="hidden" name="speciesCtr" value="0">
+									</div>
+									<div class="col-3">
+										<label for="SpeciesPlantPartOther[0]">Species Plant
+											Part (Other)</label> <input type="text" class="form-control"
+											id="SpeciesPlantPartOther[0]" placeholder="" disabled>
+									</div>
+								</div>
+
+								<div id="chemicalCompoundGroup">
+									<div class="form-group form-row">
+										<div class="col-2"></div>
+										<div class="col-5">
+											<label for="ChemicalCompound"><i class="fa fa-flask"
+												aria-hidden="true"></i> Chemical Compound</label> <input type="text"
+												class="form-control" id="ChemicalCompound" placeholder=""
+												name="compound[0][0]">
+											<button id="chemicalCompoundAdd" type="button"
+												class="btn btn-outline-success btn-sm"
+												onclick="addCCFields(0)" style="margin-top: 5px">
+												<i class="fa fa-plus" aria-hidden="true"></i> Chemical
+												Compound
+											</button>
+											<input type="hidden" name="lengthCC0" value="0">
+										</div>
+									</div>
+
+									<div id="biologicalActivityGroup">
+										<div class="form-group form-row">
+											<div class="col-3"></div>
+											<div class="col-4">
+												<label for="BiologicalActivity">Biological Activity</label>
+												<input type="text" class="form-control"
+													id="BiologicalActivity" placeholder=""
+													name="bioAct[0][0][0]">
+												<button id="biologicalActivityAdd" type="button"
+													class="btn btn-outline-success btn-sm"
+													onclick="addBAFields(0,0,0)" style="margin-top: 5px">
+													<i class="fa fa-plus" aria-hidden="true"></i> Biological
+													Activity
+												</button>
+											</div>
+											<div class="col-4">
+												<label for="CellLine">Cell Line</label> <input type="text"
+													class="form-control" id="CellLine" placeholder=""
+													name="cellLine[0][0][0]"> <input type="hidden"
+													name="bioCellCC0" value="0"> <input type="hidden"
+													name="lengthBC[0][0]" value="0">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-center">
+								<div class="form-row" style="width: 50%">
+									<button type="button" class="btn btn-outline-success btn-block"
+										id="speciesAdd" onclick="addSFields(0)">Add Species
+										Part</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
 			</form>
-			<br> <br>
-
 		</div>
 	</div>
 
 
-	<div class="container">
-		<div class="section">
-
-			<!--   Icon Section   -->
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="icon-block">
-						<h2 class="center light-blue-text">
-							<i class="material-icons">flash_on</i>
-						</h2>
-						<h5 class="center">Speeds up development</h5>
-
-						<p class="light">We did most of the heavy lifting for you to
-							provide a default stylings that incorporate our custom
-							components. Additionally, we refined animations and transitions
-							to provide a smoother experience for developers.</p>
-					</div>
-				</div>
-
-				<div class="col s12 m4">
-					<div class="icon-block">
-						<h2 class="center light-blue-text">
-							<i class="material-icons">group</i>
-						</h2>
-						<h5 class="center">User Experience Focused</h5>
-
-						<p class="light">By utilizing elements and principles of
-							Material Design, we were able to create a framework that
-							incorporates components and animations that provide more feedback
-							to users. Additionally, a single underlying responsive system
-							across all platforms allow for a more unified user experience.</p>
-					</div>
-				</div>
-
-				<div class="col s12 m4">
-					<div class="icon-block">
-						<h2 class="center light-blue-text">
-							<i class="material-icons">settings</i>
-						</h2>
-						<h5 class="center">Easy to work with</h5>
-
-						<p class="light">We have provided detailed documentation as
-							well as specific code examples to help new users get started. We
-							are also always open to feedback and can answer any questions a
-							user may have about Materialize.</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<br> <br>
-	</div>
-
-	<footer class="page-footer green darken-3">
-	<div class="container">
-		<div class="row">
-			<div class="col l6 s12">
-				<h5 class="white-text">Company Bio</h5>
-				<p class="grey-text text-lighten-4">We are a team of college
-					students who are working on this prototype.</p>
+	<!-- INCLUDE FOOTER HTML -->
+	<%@include file="_includeFooter.html"%>
 
 
-			</div>
-			<div class="col l3 s12">
-				<h5 class="white-text">Team</h5>
-				<ul>
-					<li><a class="white-text" href="#!">Altea</a></li>
-					<li><a class="white-text" href="#!">Dagdag</a></li>
-					<li><a class="white-text" href="#!">Embestro</a></li>
-					<li><a class="white-text" href="#!">Ong</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="footer-copyright green darken-4">
-		<div class="container">
-			Made by <a class="orange-text text-lighten-3"
-				href="http://materializecss.com">Materialize</a>
-		</div>
-	</div>
-	</footer>
+	<script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
-
-	<!--  Scripts-->
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="js/materialize.js"></script>
-	<script src="js/init.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('select').formSelect();
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        $('#table_id').DataTable();
+	        //$('.hid').css('display', 'none');
+	    });
+	    
+	    function func_submit() {
+	    	$("#searchForm").submit();
+	    }
+	    
+		$(document).ready(function(){
+			var dropdown = $(".navbar-right .dropdown");
+			var toogleBtn = $(".navbar-right .dropdown-toggle");
+			
+			// Toggle search and close icon for search dropdown
+			dropdown.on("show.bs.dropdown", function(e){
+				toogleBtn.toggleClass("hide");
+			});
+			dropdown.on("hide.bs.dropdown", function(e){
+				toogleBtn.addClass("hide");
+				toogleBtn.first().removeClass("hide");
+			});
 		});
+		
+		function ddfunc(x){
+			if(x==1) {
+				$("#ddtext").html("Plant Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(1);
+			} else if(x==2) {
+				$("#ddtext").html("Scientific Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(2);
+			} else if(x==3) {
+				$("#ddtext").html("Genus <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(3);
+			} else if(x==4) {
+				$("#ddtext").html("Family <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(4);
+			} else if(x==5) {
+				$("#ddtext").html("Compound <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(5);
+			} else if(x==6) {
+				$("#ddtext").html("Location <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(6);
+			} else if(x==7) {
+				$("#ddtext").html("Biological Activites <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(7);
+			}
+		}
+		
+		$("#search").val('${searchKey}');
+		ddfunc(${searchCategory});
+	</script>
 
+	<!-- form functions -->
+	<script>
+	
 		var speciestPartsList = "${speciesPartsList}";
-
+	
 		var snCtr, lCtr, pbpCtr, iCtr, baclCtr, ccCtr, sCtr;
 		snCtr = lCtr = pbpCtr = iCtr = baclCtr = ccCtr = sCtr = 0;
-
+	
 		var speciesArr = [ 0 ];
 		var speciesArr2 = [ [ 0 ] ]
 		var compArr = [ 0 ];
 		var prepArr = [ 0 ];
-
-		function addSNFields() {
-
-			//remove button add
-			$('#scientificNameAdd').remove();
-
-			//increases counter (para di mag overlap sa ibang names)
-			snCtr++;
-
-			var inputField = "<div class=\"input-field\">"
-					+ "<input id=\"scientificName" + snCtr +"\" type=\"text\" class=\"validate\">"
-					+ "<label for=\"scientificName" + snCtr +"\">Scientific Name"
-					+ " (" + snCtr + ")" + "</label>" + "</div>";
-			var buttonAdd = "<a class=\"btn-small right teal darken-4\" id=\"scientificNameAdd\" onclick=\"addSNFields()\">Scientific Name<i class=\"material-icons left\">add</i></a>";
-
-			//adds new field + button add
-			$('#scientificNameGroup').append(inputField, buttonAdd);
-		}
-
+		
 		function addLFields() {
 			$('#locationAdd').remove();
 			lCtr++;
-
-			var inputField = "<div class=\"input-field\">"
-					+ "<input id=\"location" + lCtr +"\" type=\"text\" class=\"validate\" name=\"location\" >"
-					+ "<label for=\"location" + lCtr +"\">Location" + " ("
-					+ lCtr + ")" + "</label>" + "</div>";
-			var buttonAdd = "<a class=\"btn-small right teal darken-4\" id=\"locationAdd\" onclick=\"addLFields()\">Location<i class=\"material-icons left\">add</i></a>";
-
+						
+			var inputField = '<div class="col-13"><label for="Location'+ lCtr +'">Location</label><input type="text" class="form-control" name="location" id="Location'+ lCtr +'" placeholder="">';
+			var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addLFields()" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button></div>';
+			
 			$('#locationGroup').append(inputField, buttonAdd);
+			console.log(inputField);
 		}
-
+		
 		function addIFields(pValue) {
 			prepArr[pValue]++;
 			var buttonAddText = "#illnessAdd" + pValue;
-
+	
 			if (pValue == 0) {
 				$('#illnessAdd').remove();
 			} else {
 				$(buttonAddText).remove();
 			}
-
+	
 			iCtr++;
-
-			var inputField = "<div class=\"input-field\">"
-					+ "<input id=\"illness" + iCtr +"\" type=\"text\" class=\"validate\" name='illness["+pValue+"]["+prepArr[pValue]+"]'>"
-					+ "<label for=\"illness" + iCtr +"\">Illness"
-					+ " ("
-					+ iCtr
-					+ ")"
-					+ "</label>"
-					+ "</div>"
-					+ "<input type='hidden' name='illnessCtr["+pValue+"]' value='"+prepArr[pValue]+"'>";
+						   
+			var inputField = '<div class="col-4"></div><div class="col-4"><label for="Illness'+ iCtr +'">Illness <i class="fa fa-viruses"></i></label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+pValue+']['+prepArr[pValue]+']"><input type="hidden" name="illnessCtr['+pValue+']" value="'+prepArr[pValue]+'">';
+			
 			if (pValue == 0) {
-				var buttonAdd = "<a class=\"btn-small right teal darken-4\" id=\"illnessAdd\" onclick=\"addIFields("
-						+ pValue
-						+ ")\">Illness<i class=\"material-icons left\">add</i></a>";
+				var buttonAdd = '<button id="illnessAdd" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>';
 			} else {
-				var buttonAdd = "<a class=\"btn-small right teal darken-4\" id=\"illnessAdd"
-						+ pValue
-						+ "\" onclick=\"addIFields("
-						+ pValue
-						+ ")\">Illness<i class=\"material-icons left\">add</i></a>";
+				var buttonAdd = '<button id="illnessAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>';
 			}
-
+	
+			var newIllness = inputField + buttonAdd;
 			var groupAddText = "#illnessGroup" + pValue;
-
+	
 			if (pValue == 0) {
-				$('#illnessGroup').append(inputField, buttonAdd);
+				$('#illnessGroup').append(newIllness);
 			} else {
-				$(groupAddText).append(inputField, buttonAdd);
+				$(groupAddText).append(newIllness);
 			}
 		}
-
+		
 		function addPFields(pValue) {
 			prepArr.push(0);
 			console.log(prepArr);
-			/* console.log(pValue+1); */
 			var buttonAddText = "#preparationAdd" + pValue;
-
+	
 			if (pValue == 0) {
 				$('#preparationAdd').remove();
 			} else
-				$(buttonAddText).remove();
-
+				$(buttonAddText).remove(); 
+	
 			pbpCtr++;
 			iCtr++;
-
-			var inputUtilizedPlant = "<div class=\"input-field col s3\">"
-					+ "<select class=\"browser-default\" name='prepPart["
-					+ (pValue + 1)
-					+ "]'>"
-					+ "<option value=\"\" disabled selected>Choose utilized plant part</option>"
-					+ "<option value=\"-1\">Others (Please write on the right side)</option>"
-					+ "<c:forEach items='${plantPartsList}' var='plantPartsList'>"
-					+ "<option value=\"${plantPartsList}\">${plantPartsList}</option>"
-					+ "</c:forEach>" + "</select>" + "</div>";
-
-			var inputPreparation = "<div class=\"input-field col s5\">"
-					+ "<input id=\"preparation" + pbpCtr
-					+ "\" type=\"text\" class=\"validate\" name=\"preparation["
-					+ (pValue + 1) + "]\">"
-					+ "<label for=\"preparation" + pbpCtr +"\">Preparation"
-					+ " (" + pbpCtr + ")" + "</label>" + "</div>"
-					+ "<input type='hidden' name='prepCtr' value='"+(pValue+1)+"'>";
-			/* var inputBodyPart = "<div class=\"input-field col s2\">"
-					+ "<select class=\"browser-default\">"
-					+ "<option value=\"\" disabled selected>Choose body part</option>"
-					+ "<option value=\"1\">Gall Bladder</option>"
-					+ "<option value=\"2\">Intestines</option>"
-					+ "<option value=\"3\">Esophagus</option>"
-					+ "<option value=\"4\">Intestine</option>"
-					+ "<option value=\"5\">Shoulders</option>"
-					+ "<option value=\"6\">Buttocks</option>"
-					+ "<option value=\"7\">Bladder</option>"
-					+ "<option value=\"8\">Kidneys</option>"
-					+ "<option value=\"9\">Ovaries</option>"
-					+ "<option value=\"10\">Stomach</option>"
-					+ "<option value=\"11\">Thyroid</option>"
-					+ "<option value=\"12\">Fingers</option>"
-					+ "<option value=\"13\">Breasts</option>"
-					+ "<option value=\"14\">Abdomen</option>"
-					+ "<option value=\"15\">Kidney</option>"
-					+ "<option value=\"16\">Spleen</option>"
-					+ "<option value=\"17\">Thymus</option>"
-					+ "<option value=\"18\">Cheeks</option>"
-					+ "<option value=\"19\">Tongue</option>"
-					+ "<option value=\"20\">Throat</option>"
-					+ "<option value=\"21\">Elbows</option>"
-					+ "<option value=\"22\">Wrists</option>"
-					+ "<option value=\"23\">Finger</option>"
-					+ "<option value=\"24\">Breat</option>"
-					+ "<option value=\"25\">Thighs</option>"
-					+ "<option value=\"26\">Calves</option>"
-					+ "<option value=\"27\">Ankles</option>"
-					+ "<option value=\"28\">Brain</option>"
-					+ "<option value=\"29\">Heart</option>"
-					+ "<option value=\"30\">Liver</option>"
-					+ "<option value=\"31\">Lungs</option>"
-					+ "<option value=\"32\">Ovary</option>"
-					+ "<option value=\"33\">Veins</option>"
-					+ "<option value=\"34\">Cheek</option>"
-					+ "<option value=\"35\">Mouth</option>"
-					+ "<option value=\"36\">Teeth</option>"
-					+ "<option value=\"37\">Tooth</option>"
-					+ "<option value=\"38\">Elbow</option>"
-					+ "<option value=\"39\">Wrist</option>"
-					+ "<option value=\"40\">Hands</option>"
-					+ "<option value=\"41\">Spine</option>"
-					+ "<option value=\"42\">Chest</option>"
-					+ "<option value=\"43\">Navel</option>"
-					+ "<option value=\"44\">Thigh</option>"
-					+ "<option value=\"45\">Knees</option>"
-					+ "<option value=\"46\">Heels</option>"
-					+ "<option value=\"47\">Ankle</option>"
-					+ "<option value=\"48\">Eyes</option>"
-					+ "<option value=\"49\">Vein</option>"
-					+ "<option value=\"50\">Head</option>"
-					+ "<option value=\"51\">Jaw</option>"
-					+ "<option value=\"52\">Chin</option>"
-					+ "<option value=\"53\">Ears</option>"
-					+ "<option value=\"54\">Nose</option>"
-					+ "<option value=\"55\">Neck</option>"
-					+ "<option value=\"56\">Arms</option>"
-					+ "<option value=\"57\">Hand</option>"
-					+ "<option value=\"58\">Hips</option>"
-					+ "<option value=\"59\">Legs</option>"
-					+ "<option value=\"60\">Knee</option>"
-					+ "<option value=\"61\">Calf</option>"
-					+ "<option value=\"62\">Heel</option>"
-					+ "<option value=\"63\">Foot</option>"
-					+ "<option value=\"64\">Feet</option>"
-					+ "<option value=\"65\">Toes</option>"
-					+ "<option value=\"66\">Eye</option>"
-					+ "<option value=\"67\">Jaw</option>"
-					+ "<option value=\"68\">Ear</option>"
-					+ "<option value=\"69\">Arm</option>"
-					+ "<option value=\"70\">Hip</option>"
-					+ "<option value=\"71\">Leg</option>"
-					+ "<option value=\"72\">Toe</option>" + "</select>"
-					+ "</div>"; */
-			var inputIllness = "<div class=\"col s4\" id=\"illnessGroup" + pbpCtr +"\">"
-					+ "<div class=\"input-field\">"
-					+ "<input id=\"illness"
-					+ iCtr
-					+ "\" type=\"text\" class=\"validate\" name='illness["
-					+ (pValue + 1)
-					+ "][0]'>"
-					+ "<label for=\"illness" + iCtr +"\">Illness"
-					+ " ("
-					+ iCtr
-					+ ")"
-					+ "</label>"
-					+ "</div>"
-					+ "<input type='hidden' name='illnessCtr["
-					+ (pValue + 1)
-					+ "]' value='"
-					+ prepArr[pValue]
-					+ "'>"
-					+ "<a class=\"btn-small right teal darken-4\" id=\"illnessAdd"
-					+ pbpCtr
-					+ "\" onclick=\"addIFields("
-					+ pbpCtr
-					+ ")\">Illness<i class=\"material-icons left\">add</i></a>"
-					+ "</div>";
-			var buttonAdd = "<a class=\"btn-small teal darken-4 center col s6 offset-s3\" id=\"preparationAdd"
-					+ pbpCtr
-					+ "\" onclick=\"addPFields("
-					+ pbpCtr
-					+ ")\">Preparation<i class=\"material-icons left\">add</i></a>";
-
-			$('#preparationGroup').append(inputPreparation, inputUtilizedPlant,
-			/* inputBodyPart, */inputIllness, buttonAdd);
-
+	
+			var openingDiv = '<div class="border-bottom border-secondary mb-3"><div class="form-group form-row">';
+			
+			var inputPreparation = '<div class="col-1"></div>'+
+									'<div class="col">'+
+									   '<label for="Preparation'+ pbpCtr+'">Preparation</label>'+
+									   '<input type="text" class="form-control" id="Preparation'+ pbpCtr+'" placeholder="" name="preparation['+ (pValue + 1) +']">'+
+									   '<input type="hidden" name="prepCtr" value="'+(pValue+1)+'">'+
+								   '</div>';		
+			
+			var inputUtilizedPlant = '<div class="col">'+
+									  '<label for="PlantPart'+ pbpCtr+'">Plant Part</label>'+
+										'<select name="prepPart['+(pValue + 1)+']" class="custom-select custom-select-md mb-3" id="PlantPart'+ pbpCtr+'" onchange="enablePPO('+ pbpCtr+')">'+
+										  	'<option value="" selected disabled>Open this select menu</option>'+
+										  	'<option value="-1">Others (please write on the right side)</option>'+
+										  	'<c:forEach items="${plantPartsList}" var="plantPartsList">'+
+												'<option value="${plantPartsList}">${plantPartsList}</option>'+
+											'</c:forEach>'+
+										'</select>'+
+									'</div>';
+									
+			var inputPlantPartOther = '<div class="col">'+
+										  '<label for="PlantPartOther['+ pbpCtr+']">Plant Part (Other)</label>'+
+										  '<input type="text" class="form-control" id="PlantPartOther['+ pbpCtr+']" placeholder="" disabled>'+
+									  '</div>'+
+									  '<div class="col-1"> </div>';
+									  
+			var closingDiv = '</div>';
+			
+			
+			var inputIllness = '<div class="form-group form-row" id="illnessGroup'+ pbpCtr +'">'+	
+							   '<div class="col-4"> </div>'+
+							   '<div class="col-4"><label for="Illness'+ iCtr +'">Illness <i class="fa fa-viruses"></i></label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+(pValue + 1)+'][0]"><input type="hidden" name="illnessCtr['+(pValue + 1)+']" value="'+prepArr[pValue]+'">'+
+							   '<button id="illnessAdd'+pbpCtr+'" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pbpCtr+')">Illness</button></div>'+
+							   '<div class="col-4"></div>' +
+							   '</div>';
+							   
+			var buttonAdd = '<div class="d-flex justify-content-center">'+
+								'<div class="form-row" style="width: 50%">'+
+									'<button type="button" class="btn btn-outline-success btn-block btn" id="preparationAdd'+pbpCtr+'" onclick="addPFields('+pbpCtr+')">Add Preparation</button>'
+								'</div>'+
+							'</div>';	 
+			
+			var newPrep = openingDiv + inputPreparation + inputUtilizedPlant + inputPlantPartOther + closingDiv + inputIllness + closingDiv  + buttonAdd ;
+			
+			$('#preparationGroup').append(newPrep);
+	
 		}
-
+		
 		function addBAFields(pValue, sVal, cVal) {
 			var buttonAddText = "#biologicalActivityAdd" + pValue;
 			speciesArr2[sVal][cVal]++;
@@ -568,81 +438,66 @@
 			} else {
 				$(buttonAddText).remove();
 			}
-
+	
 			baclCtr++;
-
+			
+			console.log(pValue);
 			if (pValue == 0) {
-				var inputAppend = "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+sVal+"]["+cVal+"]["+speciesArr2[sVal][cVal]+"]\">"
-						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
-						+ " ("
-						+ baclCtr
-						+ ")"
-						+ "</label>"
-						+
-
-						"<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd\" onclick=\"addBAFields("
-						+ pValue
-						+ ","
-						+ sVal
-						+ ","
-						+ cVal
-						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
-						+ "</div>"
-						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+sVal+"]["+cVal+"]["+speciesArr2[sVal][cVal]+"]\">"
-						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-						+ " ("
-						+ baclCtr
-						+ ")"
-						+ "</label>"
-						+ "</div>"
-						+ "<input type='hidden' name='lengthBC["+sVal+"]["+cVal+"]' value='"+speciesArr2[sVal][cVal]+"'>";
-
-				$('#biologicalActivityGroup').append(inputAppend);
+				
+				var newRow = '<div class="form-group form-row">';
+				
+				var inputBioAct = '<div class="col-3"> </div>'+
+							  '<div class="col-4">'+
+								  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+								  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+								  '<button id="biologicalActivityAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+					  		  '</div>';
+					  		  
+		  		var inputCellLine = '<div class="col-4">'+
+											'<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
+											'<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+											'<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
+											'<input type="hidden" name="lengthBC['+sVal+']['+cVal+']" value="'+speciesArr2[sVal][cVal]+'">'+
+									'</div>';
+																		
+  				var endRow = '</div>';
+				
+				var newBioAct = newRow + inputBioAct + inputCellLine  + endRow;
+	
+				$('#biologicalActivityGroup').append(newBioAct);
 			} else {
-				var inputAppend = "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+sVal+"]["+cVal+"]["+speciesArr2[sVal][cVal]+"]\">"
-						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
-						+ " ("
-						+ baclCtr
-						+ ")"
-						+ "</label>"
-						+
-
-						"<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd"
-						+ pValue
-						+ "\" onclick=\"addBAFields("
-						+ pValue
-						+ ","
-						+ sVal
-						+ ","
-						+ cVal
-						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
-						+ "</div>"
-						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+sVal+"]["+cVal+"]["+speciesArr2[sVal][cVal]+"]\">"
-						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-						+ " ("
-						+ baclCtr
-						+ ")"
-						+ "</label>"
-						+ "</div>"
-						+ "<input type='hidden' name='lengthBC["+sVal+"]["+cVal+"]' value='"+speciesArr2[sVal][cVal]+"'>";
-				;
-
+				var newRow = '<div class="form-group form-row">';
+				
+				var inputBioAct = '<div class="col-3"> </div>'+
+							  	  '<div class="col-4">'+
+									  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+									  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+									  '<button id="biologicalActivityAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+					  		       '</div>';
+					  		  
+		  		var inputCellLine = '<div class="col-4">'+
+											'<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
+											'<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+											'<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
+											'<input type="hidden" name="lengthBC['+sVal+']['+cVal+']" value="'+speciesArr2[sVal][cVal]+'">'+
+									'</div>';
+									
+  				var endRow = '</div>';
+				
+				var newBioAct = newRow + inputBioAct + inputCellLine + endRow;
+					
 				var inputGroupText = "#biologicalActivityGroup" + pValue;
-
-				$(inputGroupText).append(inputAppend);
+	
+				$(inputGroupText).append(newBioAct);
 			}
 		}
-
+		
 		function addCCFields(pValue) {
 			speciesArr[pValue]++;
 			speciesArr2[pValue].push(0);
 			console.log(speciesArr2);
 			var buttonAddText = "#chemicalCompoundAdd" + pValue;
-
+	
 			if (pValue == 0) {
 				$('#chemicalCompoundAdd').remove();
 			} else {
@@ -650,236 +505,206 @@
 			}
 			ccCtr++;
 			baclCtr++;
-
+			
+			
 			if (pValue == 0) {
-				var inputChemicalCompound = "<div class=\"input-field col s6 offset-s1\">"
-						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\" name=\"compound["+pValue+"]["+speciesArr[pValue]+"]\"  >"
-						+ "<label for=\"chemicalCompound" + ccCtr +"\">Chemical Compound"
-						+ " ("
-						+ ccCtr
-						+ ")"
-						+ "</label>"
-						+
-
-						"<a class=\"btn-small right teal darken-4\" id=\"chemicalCompoundAdd\" onclick=\"addCCFields("
-						+ pValue
-						+ ")\">Chemical Compound<i class=\"material-icons left\">add</i></a>"
-						+ "</div>"
-						+ "<input type='hidden' name='compoundCtr' value='"+ccCtr+"'>"
-						+ "<input type='hidden' name='lengthCC"+pValue+"' value='"+speciesArr[pValue]+"'>";
-				var inputBiologicalActivity = "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
-						+ "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+pValue+"]["+speciesArr[pValue]+"][0]\">"
-						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
-						+ " ("
-						+ baclCtr
-						+ ")"
-						+ "</label>"
-						+
-
-						"<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd"
-						+ ccCtr
-						+ "\" onclick=\"addBAFields("
-						+ ccCtr
-						+ ","
-						+ pValue
-						+ ","
-						+ speciesArr[pValue]
-						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
-						+ "</div>"
-						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+pValue+"]["+speciesArr[pValue]+"][0]\">"
-						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-						+ " ("
-						+ baclCtr
-						+ ")"
-						+ "</label>"
-						+ "</div>"
-						+ "<input type='hidden' name='lengthBC["+pValue+"]["+speciesArr[pValue]+"]' value='"+speciesArr2[pValue][speciesArr[pValue]]+"'>";
-				+"</div>";
-
-				$('#chemicalCompoundGroup').append(inputChemicalCompound,
-						inputBiologicalActivity);
+				var chemComp = '<div class="form-group form-row">'+
+								   '<div class="col-2"> </div>'+
+								   '<div class="col-5">'+
+									   '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
+			    					   '<input type="text" class="form-control" id="ChemicalCompound'+ ccCtr +'" placeholder="" name="compound['+pValue+']['+speciesArr[pValue]+']">'+
+			    					   '<button id="chemicalCompoundAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
+									   '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
+									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
+								   '</div>'+
+							   '</div>';
+							   
+				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
+							 	'<div class="form-group form-row">'+
+									 '<div class="col-3"> </div>'+
+									 '<div class="col-4">'+
+										 '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+					  					 '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  				  	 '<button id="biologicalActivityAdd'+ ccCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+					  				 '</div>'+
+									 '<div class="col-4">'+
+										 '<label for="CellLine">Cell Line</label>'+
+					  						 '<input type="text" class="form-control" id="CellLine" placeholder="" name="cellLine[0][0][0]">'+
+					  						 '<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
+					  						 '<input type="hidden" name="lengthBC['+pValue+']['+speciesArr[pValue]+']" value="'+speciesArr2[pValue][speciesArr[pValue]]+'">'+
+									 '</div>'+
+								 '</div>'+
+							 '</div>';
+					
+				var chemCompFields = chemComp + bioAct;
+				
+				$('#chemicalCompoundGroup').append(chemCompFields);
 			} else {
-				var inputChemicalCompound = "<div class=\"input-field col s6 offset-s1\">"
-						+ "<input id=\"chemicalCompound" + ccCtr +"\" type=\"text\" class=\"validate\" name=\"compound["+pValue+"]["+speciesArr[pValue]+"]\" >"
-						+ "<label for=\"chemicalCompound" + ccCtr +"\">Chemical Compound"
-						+ " ("
-						+ ccCtr
-						+ ")"
-						+ "</label>"
-						+
-
-						"<a class=\"btn-small right teal darken-4\" id=\"chemicalCompoundAdd"
-						+ pValue
-						+ "\" onclick=\"addCCFields("
-						+ pValue
-						+ ")\">Chemical Compound<i class=\"material-icons left\">add</i></a>"
-						+ "</div>"
-						+ "<input type='hidden' name='lengthCC"+pValue+"' value='"+speciesArr[pValue]+"'>";
-				var inputBiologicalActivity = "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
-						+ "<div class=\"input-field col s6 offset-s2\">"
-						+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+pValue+"]["+speciesArr[pValue]+"][0]\">"
-						+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
-						+ " ("
-						+ baclCtr
-						+ ")"
-						+ "</label>"
-						+
-
-						"<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd"
-						+ ccCtr
-						+ "\" onclick=\"addBAFields("
-						+ ccCtr
-						+ ","
-						+ pValue
-						+ ","
-						+ speciesArr[pValue]
-						+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
-						+ "</div>"
-						+ "<div class=\"input-field col s4\">"
-						+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+pValue+"]["+speciesArr[pValue]+"][0]\">"
-						+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-						+ " ("
-						+ baclCtr
-						+ ")"
-						+ "</label>"
-						+ "</div>"
-						+ "<input type='hidden' name='lengthBC["+pValue+"]["+speciesArr[pValue]+"]' value='"+speciesArr2[pValue][speciesArr[pValue]]+"'>";
-				+"</div>";
-
+				var chemComp = '<div class="form-group form-row">'+
+								   '<div class="col-2"> </div>'+
+								   '<div class="col-5">'+
+									   '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
+									   '<input type="text" class="form-control" id="ChemicalCompound'+ ccCtr +'" placeholder="" name="compound['+pValue+']['+speciesArr[pValue]+']">'+
+									   '<button id="chemicalCompoundAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
+									   '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
+									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
+								   '</div>'+
+							   '</div>';
+							   
+				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
+							 	'<div class="form-group form-row">'+
+									 '<div class="col-3"> </div>'+
+									 '<div class="col-4">'+
+										 '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+					  					 '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  					 '<button id="biologicalActivityAdd'+ baclCtr +'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+					  				 '</div>'+
+									 '<div class="col-4">'+
+										 '<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
+					  						 '<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  						 '<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
+					  						 '<input type="hidden" name="lengthBC['+pValue+']['+speciesArr[pValue]+']" value="'+speciesArr2[pValue][speciesArr[pValue]]+'">'+
+									 '</div>'+
+								 '</div>'+
+							 '</div>';							
+							 
+								
+				var chemCompFields = chemComp + bioAct;
+	
 				var inputGroupText = "#chemicalCompoundGroup" + pValue;
-
-				$(inputGroupText).append(inputChemicalCompound,
-						inputBiologicalActivity);
+	
+				$(inputGroupText).append(chemCompFields);
 			}
-
+	
 		}
+		
 		function addSFields(pValue) {
 			speciesArr.push(0);
 			speciesArr2.push([ 0 ]);
 			console.log(speciesArr2);
-			var buttonAddText = "#speciesAdd" + pValue;
-
+			var buttonAddText = "#speciesAdd";
+	
 			if (pValue == 0) {
 				$('#speciesAdd').remove();
 			} else {
 				$(buttonAddText).remove();
 			}
-
+	
 			sCtr++;
 			ccCtr++;
 			baclCtr++;
 
-			var inputSpecies = "<div class=\"input-field col s6\">"
-					+ "<select class=\"browser-default\" onchange=\"speciesPartOtherEnable("
-					+ sCtr
-					+ ")\" id=\"speciesPart"
-					+ sCtr
-					+ "\" name=\"plantPart["
-					+ sCtr
-					+ "]\">"
-					+ "<option value=\"\" disabled selected>Choose plant part</option>"
-					+ "<option value=\"-1\">Others (Please write on the right side)</option>"
-					+ "<c:forEach items='${plantPartsList}' var='plantPartsList'>"
-					+ "<option value=\"${plantPartsList}\">${plantPartsList}</option>"
-					+ "</c:forEach>"
-					+ "</select>"
-					+ "</div>"
-					+ "<div class=\"col s6\">"
-					+ "<div class=\"input-field\">"
-					+ "<input id=\"speciesPartOther" + sCtr +"\" type=\"text\" class=\"validate\" disabled required>"
-					+ "<label for=\"speciesPartOther" + sCtr +"\">Other Species Part"
-					+ " ("
-					+ sCtr
-					+ ")"
-					+ "</label>"
-					+ "</div>"
-					+ "</div>"
-					+ "<input type='hidden' name='speciesCtr' value='"+sCtr+"'>";
+			
+			var speciesPPCluster = '<div class="border-bottom border-secondary mb-3"><div class="form-group form-row">'+
+									   '<div class="col-1"></div>'+
+									   '<div class="col-3">'+
+										   '<label for="SpeciesPlantPart'+sCtr+'">Species Plant Part</label>'+
+										   '<select name="plantPart['+sCtr+']" class="custom-select custom-select-md mb-3" id="SpeciesPlantPart'+sCtr+'" onchange="enableSPPO('+sCtr+')">'+
+										  	   '<option value="" selected disabled>Open this select menu</option>'+
+										  	   '<option value="-1">Others (please write on the right side)</option>'+
+										  	   '<c:forEach items="${plantPartsList}" var="plantPartsList">'+
+												   '<option value="${plantPartsList}">${plantPartsList}</option>'+
+											   '</c:forEach>'+
+										   '</select>'+
+										   '<input type="hidden" name="speciesCtr" value="0">'+
+									   '</div>'+
+									   '<div class="col-3">'+
+											   '<label for="SpeciesPlantPartOther['+sCtr+']">Species Plant Part (Other)</label>'+
+											   '<input type="text" class="form-control" id="SpeciesPlantPartOther['+sCtr+']" placeholder="" disabled>'+
+									   '</div>'+
+								   '</div>';
+			
+			var chemcompCluster = '<div id="chemicalCompoundGroup'+ sCtr+'">'+
+									  '<div class="form-group form-row">'+
+										  '<div class="col-2"> </div>'+
+										  '<div class="col-5">'+
+											  '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
+											  '<input type="text" class="form-control" id="ChemicalCompound'+ ccCtr +'" placeholder="" name="compound['+sCtr+']['+speciesArr[pValue]+']">'+
+											  '<button id="chemicalCompoundAdd'+sCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+sCtr+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
+											  '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
+											  '<input type="hidden" name="lengthCC'+sCtr+'" value="'+speciesArr[pValue]+'">'+
+										  '</div>'+
+									  '</div>'+
+								
+									  '<div id="biologicalActivityGroup'+ ccCtr+'">'+
+										  '<div class="form-group form-row">'+
+											  '<div class="col-3"> </div>'+
+											  '<div class="col-4">'+
+												  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+							  					  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sCtr+']['+speciesArr[pValue]+'][0]">'+
+							  					  '<button id="biologicalActivityAdd'+ccCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+sCtr+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+							  				  '</div>'+
+											  '<div class="col-4">'+
+												  '<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
+							  						  '<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+sCtr+']['+speciesArr[pValue]+'][0]">'+
+							  						  '<input type="hidden" name="bioCellCC0" value="0">'+ //NOT YET USED (?)
+							  						  '<input type="hidden" name="lengthBC['+sCtr+']['+speciesArr[pValue]+']" value="'+speciesArr2[sCtr][speciesArr[pValue]]+'">'+
+											  '</div>'+
+										  '</div>'+
+									  '</div>'+
+								  '</div>'+
+								'</div>'; 
+									
+			var buttonAddSpecies =  '<div class="d-flex justify-content-center">'+
+										'<div class="form-row" style="width: 50%">'+
+											'<button type="button" class="btn btn-outline-success btn-block" id="speciesAdd" onclick="addSFields(0)">Add Species Part</button>'+
+										'</div>'+
+									'</div>';
 
-			var inputChemicalCompound = "<div class=\"row\" id=\"chemicalCompoundGroup" + sCtr + "\">"
-					+ "<div class=\"input-field col s6 offset-s1\">"
-					+ "<input id=\"chemicalCompound" + ccCtr + "\" type=\"text\" class=\"validate\" name=\"compound["+sCtr+"]["+speciesArr[pValue]+"]\">"
-					+ "<label for=\"chemicalCompound" + ccCtr + "\">Chemical Compound"
-					+ " ("
-					+ ccCtr
-					+ ")"
-					+ "</label>"
-					+
-
-					"<a class=\"btn-small right teal darken-4\" id=\"chemicalCompoundAdd"
-					+ sCtr
-					+ "\" onclick=\"addCCFields("
-					+ sCtr
-					+ ")\">Chemical Compound<i class=\"material-icons left\">add</i></a>"
-					+ "</div>"
-					+ "<input type='hidden' name='lengthCC"+sCtr+"' value='"+speciesArr[pValue]+"'>"
-					+ "<div class=\"col s12\" id=\"biologicalActivityGroup" + ccCtr + "\">"
-					+ "<div class=\"input-field col s6 offset-s2\">"
-					+ "<input id=\"biologicalActivity" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"bioAct["+sCtr+"]["+speciesArr[pValue]+"][0]\">"
-					+ "<label for=\"biologicalActivity" + baclCtr +"\">Biological Activity"
-					+ " ("
-					+ baclCtr
-					+ ")"
-					+ "</label>"
-					+ "<a class=\"btn-small right teal darken-4\" id=\"biologicalActivityAdd"
-					+ ccCtr
-					+ "\" onclick=\"addBAFields("
-					+ ccCtr
-					+ ","
-					+ sCtr
-					+ ","
-					+ speciesArr[pValue]
-					+ ")\">Biological Activities<i class=\"material-icons left\">add</i></a>"
-					+ "</div>"
-					+ "<div class=\"input-field col s4\">"
-					+ "<input id=\"cellLine" + baclCtr +"\" type=\"text\" class=\"validate\" name=\"cellLine["+sCtr+"]["+speciesArr[pValue]+"][0]\">"
-					+ "<label for=\"cellLine" + baclCtr +"\">CellLine"
-					+ " ("
-					+ baclCtr
-					+ ")"
-					+ "</label>"
-					+ "</div>"
-					+ "<input type='hidden' name='lengthBC["+sCtr+"]["+speciesArr[pValue]+"]' value='"+speciesArr2[sCtr][speciesArr[pValue]]+"'>";
-			+"</div>" + "</div>";
-
-			var inputButtonAdd = "<a class=\"btn-small teal darken-4 center col s6 offset-s3\" id=\"speciesAdd\" onclick=\"addSFields("
-					+ sCtr
-					+ ")\">Species<i class=\"material-icons left\">add</i></a>";
-
-			$('#speciesGroup').append(inputSpecies, inputChemicalCompound,
-					inputButtonAdd);
+			var speciesComponent = speciesPPCluster + chemcompCluster + buttonAddSpecies +"</div>";
+			
+			$('#speciesGroup').append(speciesComponent);
 		}
-
-		function speciesPartOtherEnable(pValue) {
-			var optionSpeciesPartText = "speciesPart" + pValue;
-			var optionSelected;
-
+		
+		function enablePPO(pValue) {
+			var selectPlantPart = "#PlantPart" + pValue;
+			var selectPlantPartOther = "#PlantPartOther[" + pValue + "]";			
+			
 			if (pValue == 0) {
-				$('speciesPart').remove();
-				optionSelected = document.getElementById('speciesPart').value;
-			} else {
-				$(optionSpeciesPartText).remove();
-				optionSelected = document.getElementById(optionSpeciesPartText).value;
-			}
-
-			if (optionSelected == -1) {
-				if (pValue == 0)
-					$('#speciesPartOther').prop("disabled", false);
-				else {
-					var speciesPartOtherText = "#speciesPartOther" + pValue;
-					$(speciesPartOtherText).prop("disabled", false);
+				console.log($('#PlantPart').val());
+				
+				if ($('#PlantPart').val() == -1) {
+					document.getElementById("PlantPartOther[0]").disabled = false;
+				} else {
+					document.getElementById("PlantPartOther[0]").disabled = true;
 				}
 			} else {
-				if (pValue == 0)
-					$('#speciesPartOther').prop("disabled", true);
-				else {
-					var speciesPartOtherText = "#speciesPartOther" + pValue;
-					$(speciesPartOtherText).prop("disabled", true);
+				console.log($(selectPlantPart).val());
+				var selectPlantPartOtherTemp = "PlantPartOther[" + pValue + "]";
+				
+				if ($(selectPlantPart).val() == -1) {
+					document.getElementById(selectPlantPartOtherTemp).disabled = false;
+				} else {
+					document.getElementById(selectPlantPartOtherTemp).disabled = true;
 				}
 			}
 		}
+		
+		function enableSPPO(pValue) {
+			var selectSpeciesPlantPart = "#SpeciesPlantPart" + pValue;
+			var selectSpeciesPlantPartOther = "#SpeciesPlantPartOther[" + pValue + "]";			
+			
+			if (pValue == 0) {
+				console.log($('#SpeciesPlantPart').val());
+				
+				if ($('#SpeciesPlantPart').val() == -1) {
+					document.getElementById("SpeciesPlantPartOther[0]").disabled = false;
+				} else {
+					document.getElementById("SpeciesPlantPartOther[0]").disabled = true;
+				}
+			} else {
+				console.log($(selectSpeciesPlantPart).val());
+				var selectPlantPartOtherTemp = "SpeciesPlantPartOther[" + pValue + "]";
+				
+				if ($(selectSpeciesPlantPart).val() == -1) {
+					document.getElementById(selectPlantPartOtherTemp).disabled = false;
+				} else {
+					document.getElementById(selectPlantPartOtherTemp).disabled = true;
+				}
+			}
+		}
+	
 	</script>
+
 </body>
 </html>
