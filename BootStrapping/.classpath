@@ -2,8 +2,9 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="lib/jwnl.jar"/>
-	<classpathentry kind="lib" path="lib/stanford-postagger-3.9.2.jar"/>
+	<classpathentry kind="lib" path="commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="jwnl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/patri/Downloads/stanford-postagger-2018-10-16/stanford-postagger-2018-10-16/stanford-postagger-3.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/patri/Downloads/mysql-connector-java-8.0.21/mysql-connector-java-8.0.21/mysql-connector-java-8.0.21.jar"/>
 	<classpathentry kind="output" path="out/production/BootStrapping"/>
 </classpath>

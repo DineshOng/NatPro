@@ -23,6 +23,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -92,7 +93,7 @@ public class Main {
 
             // POS TAGGER
             for(String rLine: relation){
-                //System.out.println(rLine);
+                //System.out.println("relation: "+rLine);
                 POSTagger(seedPattern,rLine,V,P,W);
             }
 
@@ -101,18 +102,24 @@ public class Main {
                 seedAL.add(temp);
             }
 
+
+
             String POSrelationship = "";
-            for(int i = seedAL.size()-1;i >= 0;i--){
+            /*for(int i = seedAL.size()-1;i >= 0;i--){
                 if(POSrelationship.compareTo("") == 0)
                     POSrelationship= POSrelationship.concat(seedAL.get(i));
                 else
                     POSrelationship= POSrelationship.concat(" "+seedAL.get(i));
-            }
+            }*/
 
 
 
+
+            TreeSet<String> Verbmatches = new TreeSet<String>();
             TreeSet<String> Vmatches = new TreeSet<String>();
+            TreeSet<String> Pronounmatches = new TreeSet<String>();
             TreeSet<String> Pmatches = new TreeSet<String>();
+            TreeSet<String> Wordmatches = new TreeSet<String>();
             TreeSet<String> Wmatches = new TreeSet<String>();
 
 
@@ -127,11 +134,14 @@ public class Main {
                     JWNL.initialize(new FileInputStream("file_properties.xml"));
                     IndexWord word = null;
                     if(tagged.matches(V)){
-                         word = Dictionary.getInstance().lookupIndexWord(POS.VERB, seedWord);
+                        word = Dictionary.getInstance().lookupIndexWord(POS.VERB, seedWord);
+                        Verbmatches.add(seedWord);
                     }else if(tagged.matches(P)){
-                         word = Dictionary.getInstance().lookupIndexWord(POS.ADVERB, seedWord);
+                        word = Dictionary.getInstance().lookupIndexWord(POS.ADVERB, seedWord);
+                        Pronounmatches.add(seedWord);
                     }else if(tagged.matches(W)){
-                         word = Dictionary.getInstance().lookupIndexWord(POS.ADJECTIVE, seedWord);
+                        word = Dictionary.getInstance().lookupIndexWord(POS.ADJECTIVE, seedWord);
+                        Wordmatches.add(seedWord);
                     }
                     Synset synset[] = word.getSenses();
 
@@ -168,28 +178,35 @@ public class Main {
                 //System.out.println(seedWord);
             }//End of wordnet loop
 
-            for(String temp: Vmatches){
+            /*for(String temp: Verbmatches){
                 //System.out.println(temp);
             }
 
             System.out.println();
-            for(String temp: Pmatches){
+            for(String temp: Pronounmatches){
                 //System.out.println(temp);
             }
 
-            for(String temp: Wmatches){
+            for(String temp: Wordmatches){
                 //System.out.println(temp);
-            }
+            }*/
 
 
 
 
 
             TreeSet<String> matches = new TreeSet<String>();
+            TreeSet<String> validation = new TreeSet<String>();
 
+            //CHECKS IF THE GENERATED XML FILE EXISTS
             DocumentBuilderFactory factory=  DocumentBuilderFactory.newInstance();
             try {
                 DocumentBuilder builder =  factory.newDocumentBuilder();
+                /*=======================================================================================================
+                =======================================================================================================
+                                                NOTE: CHECK IF FOLDER EXISTS
+                =======================================================================================================
+                 =======================================================================================================*/
                 Document doc = builder.parse("seedOutput/"+e1+"-"+e2+".xml");
                 doc.getDocumentElement().normalize();
                 //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
@@ -213,13 +230,138 @@ public class Main {
             } catch (org.xml.sax.SAXException e) {
                 e.printStackTrace();
             }
+            //====================================================================================================================
+            //For validation XML
+            //====================================================================================================================
+            DocumentBuilderFactory Vfactory=  DocumentBuilderFactory.newInstance();
+            try {
+                DocumentBuilder builder =  Vfactory.newDocumentBuilder();
+                /*=======================================================================================================
+                =======================================================================================================
+                                                NOTE: CHECK IF FOLDER EXISTS
+                =======================================================================================================
+                 =======================================================================================================*/
+                Document doc = builder.parse("validation/"+e1+"-"+e2+".xml");
+                doc.getDocumentElement().normalize();
+                //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+                NodeList nodeList = doc.getElementsByTagName("Seed");
+                for(int i = 0; i< nodeList.getLength();i++) {
+                    Node nNode = nodeList.item(i);
+                    //System.out.println("Node Name: " + nNode.getNodeName());
+                    if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                        //System.out.println("I am here");
+                        Element eElement = (Element) nNode;
+                        int eCount= eElement.getElementsByTagName("Pattern").getLength();
+                        for(int j=0; j<eCount;j++){
+                            //System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                            validation.add(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                        }
 
-            matches.add(POSrelationship);//adding the POS Tagged relationship to the generated seed patterns
-            for(String i: Vmatches){
-                for(String j: Pmatches){
-                    matches.add(i+" "+j);
+                    }
+                }
+            } catch (ParserConfigurationException | IOException e) {
+                e.printStackTrace();
+            } catch (org.xml.sax.SAXException e) {
+                e.printStackTrace();
+            }
+
+
+
+
+            //matches.add(POSrelationship);//adding the POS Tagged relationship to the generated seed patterns
+            //System.out.println("WordMatches: "+ Wmatches);
+            if(Wmatches .isEmpty() ){
+                for(String i: Vmatches){
+                    for(String j: Pmatches){
+                        matches.add(i+" "+j);
+                    }
                 }
             }
+            else{
+                for(String i: Vmatches){
+                    for(String j: Wmatches) {
+                        for (String k : Pmatches) {
+                            matches.add(i + " " + j+ " "+ k);
+                        }
+                    }
+                }
+            }
+            //String deleteTest = "";//ADD THESE FOR THE DELETE FUNCTION
+            if(Wordmatches.isEmpty() ){
+                for(String i: Verbmatches){
+                    for(String j: Pronounmatches){
+                        validation.add(i+" "+j);
+                        matches.add(i+" "+j);
+                        //deleteTest = i+" " +j;//ADD THESE FOR THE DELETE FUNCTION
+                    }
+                }
+            }
+            else{
+                for(String i: Verbmatches){
+                    for(String j: Wordmatches) {
+                        for (String k : Pronounmatches) {
+                            validation.add(i + " " + j+ " "+ k);
+                            matches.add(i + " " + j+ " "+ k);
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+
+            /*====================================================================================================================
+            ====================================================================================================================
+            ====================================================================================================================
+                                            DELETE SPECIFIC ITEMS IN XML FILE
+                                            CHECK LINE 289 AND 295 FOR TESTING
+            ====================================================================================================================
+             ====================================================================================================================
+             ====================================================================================================================*/
+           /* DocumentBuilderFactory Deletefactory=  DocumentBuilderFactory.newInstance();
+            try {
+                DocumentBuilder builder =  Deletefactory.newDocumentBuilder();
+                Document doc = builder.parse("validation/"+e1+"-"+e2+".xml");
+                doc.getDocumentElement().normalize();
+                //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+                NodeList nodeList = doc.getElementsByTagName("Seed");
+                for(int i = 0; i< nodeList.getLength();i++) {
+                    Node nNode = nodeList.item(i);
+                    //System.out.println("Node Name: " + nNode.getNodeName());
+                    if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                        //System.out.println("I am here");
+                        Element eElement = (Element) nNode;
+                        int eCount= eElement.getElementsByTagName("Pattern").getLength();
+                        for(int j=0; j<eCount;j++){
+                            //System.out.println("Delete Test:"+eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                            //validation.add(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                            if(eElement.getElementsByTagName("Pattern").item(j).getTextContent().equals(deleteTest)){
+                                eElement.getElementsByTagName("Pattern").item(j).getParentNode().removeChild(eElement.getElementsByTagName("Pattern").item(j));
+                                //System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent()+ " is Deleted Successfully");
+                            }
+                        }
+
+                    }
+                }
+                TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                Transformer transformer = transformerFactory.newTransformer();
+                DOMSource source = new DOMSource(doc);
+
+                StreamResult streamResult = new StreamResult("validation/"+e1+"-"+e2+".xml");
+                transformer.transform(source,streamResult);
+
+            } catch (ParserConfigurationException | IOException e) {
+                e.printStackTrace();
+            } catch (org.xml.sax.SAXException e) {
+                e.printStackTrace();
+            } catch (TransformerConfigurationException e) {
+                e.printStackTrace();
+            } catch (TransformerException e) {
+                e.printStackTrace();
+            }*/
+
 
             for(String temp: matches){
                 //System.out.println(temp);
@@ -256,6 +398,48 @@ public class Main {
                 DOMSource source = new DOMSource(document);
 
                 StreamResult streamResult = new StreamResult("seedOutput/"+e1+"-"+e2+".xml");
+                transformer.transform(source,streamResult);
+
+            } catch (ParserConfigurationException | TransformerException e) {
+                e.printStackTrace();
+            }
+
+            /*=======================================================================================================
+                                                CREATION OF VALIDATION XML
+             =======================================================================================================*/
+
+            DocumentBuilderFactory docBuildFactory = DocumentBuilderFactory.newInstance();
+            try {
+                DocumentBuilder documentBuilder = docBuildFactory.newDocumentBuilder();
+                Document document = documentBuilder.newDocument();
+
+
+                Element element = document.createElement("Seed");
+                document.appendChild(element);
+
+                Element A = document.createElement("Tag1");
+                A.appendChild(document.createTextNode(e1));
+                element.appendChild(A);
+
+                Element B = document.createElement("Tag2");
+                B.appendChild(document.createTextNode(e2));
+                element.appendChild(B);
+
+                Element C = document.createElement("Relation");
+                //C.appendChild(document.createTextNode(ms));
+                element.appendChild(C);
+                for(String ms: validation) {
+                    Element D = document.createElement("Pattern");
+                    D.appendChild(document.createTextNode(ms));
+                    C.appendChild(D);
+                }
+
+
+                TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                Transformer transformer = transformerFactory.newTransformer();
+                DOMSource source = new DOMSource(document);
+
+                StreamResult streamResult = new StreamResult("validation/"+e1+"-"+e2+".xml");
                 transformer.transform(source,streamResult);
 
             } catch (ParserConfigurationException | TransformerException e) {
