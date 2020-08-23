@@ -17,14 +17,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2172">
-              <caret line="446" column="13" lean-forward="true" selection-start-line="446" selection-start-column="13" selection-end-line="446" selection-end-column="13" />
+            <state relative-caret-position="410">
+              <caret line="447" column="21" selection-start-line="447" selection-start-column="21" selection-end-line="447" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3889#3897#0" expanded="true" />
-                <element signature="e#4013#4021#0" expanded="true" />
-                <element signature="e#4137#4145#0" expanded="true" />
-                <element signature="e#6914#6922#0" expanded="true" />
+                <element signature="e#1413#1421#0" expanded="true" />
+                <element signature="e#1424#1432#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/validation/plant-aka.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" selection-start-column="14" selection-end-column="14" />
+            <state relative-caret-position="34">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -43,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="3290" lean-forward="true" selection-start-column="3290" selection-end-column="3290" />
+              <caret column="3290" selection-start-column="3290" selection-end-column="3290" />
             </state>
           </provider>
         </entry>
@@ -56,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3247">
-              <caret line="227" column="76" lean-forward="true" selection-start-line="227" selection-start-column="76" selection-end-line="227" selection-end-column="76" />
+            <state relative-caret-position="3383">
+              <caret line="227" column="76" selection-start-line="227" selection-start-column="76" selection-end-line="227" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+            <state relative-caret-position="180">
+              <caret line="32" column="198" selection-start-line="32" selection-start-column="192" selection-end-line="32" selection-end-column="198" />
             </state>
           </provider>
         </entry>
@@ -117,7 +115,6 @@
       <find>matches</find>
       <find>Array</find>
       <find>a</find>
-      <find>relation</find>
       <find>gener</find>
       <find>known as</find>
       <find>ms</find>
@@ -126,6 +123,8 @@
       <find>seedAL</find>
       <find>wmatches</find>
       <find>system.out</find>
+      <find>batino</find>
+      <find>relation</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -135,6 +134,7 @@
         <option value="$PROJECT_DIR$/src/Bootstrap.form" />
         <option value="$PROJECT_DIR$/src/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/validation/plant-aka.xml" />
       </list>
     </option>
   </component>
@@ -150,8 +150,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,12 +178,6 @@
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
               <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Bootstrap" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
@@ -280,7 +274,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31503198" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3219616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -399,28 +393,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka..xml" />
+    <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3290" selection-start-column="3290" selection-end-column="3290" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SeedsPossible/Plant-Aka.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3383">
+          <caret line="227" column="76" selection-start-line="227" selection-start-column="76" selection-end-line="227" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Seeds/MedicinalPlant-Locations.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bootstrap.form">
       <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka..xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="296" selection-start-column="296" selection-end-column="296" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file_properties.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -436,40 +434,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bootstrap.java">
+    <entry file="file://$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3247">
-          <caret line="227" column="76" lean-forward="true" selection-start-line="227" selection-start-column="76" selection-end-line="227" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3290" lean-forward="true" selection-start-column="3290" selection-end-column="3290" />
+        <state relative-caret-position="180">
+          <caret line="32" column="198" selection-start-line="32" selection-start-column="192" selection-end-line="32" selection-end-column="198" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/validation/plant-aka.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2172">
-          <caret line="446" column="13" lean-forward="true" selection-start-line="446" selection-start-column="13" selection-end-line="446" selection-end-column="13" />
+        <state relative-caret-position="410">
+          <caret line="447" column="21" selection-start-line="447" selection-start-column="21" selection-end-line="447" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3889#3897#0" expanded="true" />
-            <element signature="e#4013#4021#0" expanded="true" />
-            <element signature="e#4137#4145#0" expanded="true" />
-            <element signature="e#6914#6922#0" expanded="true" />
+            <element signature="e#1413#1421#0" expanded="true" />
+            <element signature="e#1424#1432#0" expanded="true" />
           </folding>
         </state>
       </provider>

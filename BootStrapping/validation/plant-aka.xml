@@ -1,1 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Tag1>plant</Tag1><Tag2>aka</Tag2><Relation><Pattern>known as</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+    <Category>Common Name</Category>
+    <Tag1>plant
+        <Name>alstonia macrophylla</Name>
+        <Name>batino</Name>
+    </Tag1>
+    <Tag2>aka
+        <Name>hard milkwood</Name>
+    </Tag2>
+    <Relation>
+        <Pattern>known as</Pattern>
+    </Relation>
+</Seed>

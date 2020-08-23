@@ -39,6 +39,8 @@ public class Main {
         Reader fileReader = null;
         String e1=null; String e2=null;
         TreeSet<String> relation = new TreeSet<String>();
+        TreeSet<String> e1Name = new TreeSet<String>();
+        TreeSet<String> e2Name = new TreeSet<String>();
         String V = "(.*)_VB[A-Z]*(.*)";
         String W = "(.*)_[DJNPR][NJBTR]P*(.*)";
         String P = "(.*)_[IRT][NPO](.*)";
@@ -75,14 +77,16 @@ public class Main {
                     String class2 = seedMap.get(class1);
                     class1 = class1.toLowerCase();
                     class2 = class2.toLowerCase();
+                    //System.out.println("Classes: "+ class1+" "+class2);
                     for (String pLine : lines) {
                         pLine = pLine.toLowerCase();
-                        addRelation(relation,pLine,class1,class2,e1,e2);
+                        addRelation(relation,pLine,class1,class2,e1,e2,e1Name,e2Name);
+
                     }//end of pLine loop
                 }//end of class1 loop
 
                 /*for(String test: relation){
-                    System.out.println(test);
+                    System.out.println("relations are: "+test);
                 }*/
 
 
@@ -90,10 +94,14 @@ public class Main {
             }//end of seeds loop
 
             TreeSet<String> seedPattern = new TreeSet<String>();
+            /*for(String test: e1Name)
+                System.out.println("e1 is: "+test);
+            for(String test:e2Name)
+                System.out.println("e2 is: "+test);*/
 
             // POS TAGGER
             for(String rLine: relation){
-                //System.out.println("relation: "+rLine);
+                System.out.println("relation: "+rLine);
                 POSTagger(seedPattern,rLine,V,P,W);
             }
 
@@ -421,9 +429,24 @@ public class Main {
                 A.appendChild(document.createTextNode(e1));
                 element.appendChild(A);
 
+                //Element AValues = document.createElement("Name");
+                for(String e1Value: e1Name) {
+                    Element AValues = document.createElement("Name");
+                    AValues.appendChild(document.createTextNode(e1Value));
+                    A.appendChild(AValues);
+                }
+
                 Element B = document.createElement("Tag2");
                 B.appendChild(document.createTextNode(e2));
                 element.appendChild(B);
+
+                for(String e2Value: e2Name) {
+                    Element BValues = document.createElement("Name");
+                    if(!e1Name.contains(e2Value)){
+                        BValues.appendChild(document.createTextNode(e2Value));
+                        B.appendChild(BValues);
+                    }
+                }
 
                 Element C = document.createElement("Relation");
                 //C.appendChild(document.createTextNode(ms));
@@ -507,7 +530,8 @@ public class Main {
     public static void addRelation(
             TreeSet<String> relation, String pLine,
             String class1, String class2,
-            String e1, String e2){
+            String e1, String e2,
+            TreeSet<String> e1Name, TreeSet<String> e2Name){
         if(pLine.contains(class1) && pLine.contains(class2)){
             Pattern p = Pattern.compile("<\\/["+e1+"]+>.+<["+e2+"]+>");
             Matcher m = p.matcher(pLine);
@@ -515,11 +539,19 @@ public class Main {
                 String temp = m.group();
                 temp = temp.replaceAll("<\\/?[a-z]+>", "");
                 relation.add(temp);
+                e1Name.add(class1);
+                e2Name.add(class2);
+                System.out.println(temp);
+                //System.out.println("This is "+ e1Name+" and "+e2Name);
                 //System.out.println(relation.size());
                 //System.out.println(pLine);
             } // end of matcher while
         }// end of if pLine
     }
+
+
+
+
 
     /*=============================
     POS Tagger
