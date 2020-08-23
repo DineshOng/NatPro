@@ -21,28 +21,11 @@
 
 <title>NatPro Compound</title>
 
-<style>
-	@keyframes spinner-border {
-      to { transform: rotate(360deg); }
-    } 
-    .spinner-border {
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        vertical-align: text-bottom;
-        border: .25em solid currentColor;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner-border .75s linear infinite;
-        animation: spinner-border .75s linear infinite;
-    }
-    .spinner-border-sm {
-        height: 1rem;
-        border-width: .2em;
-    }
-    #compoundHelp, #compoundAlertFail, #compoundAlertSuccess, #hidSubBT{
-    	display: none;
-    }
+	<style>
+	
+	    #compoundHelp, #compoundAlertFail, #compoundAlertSuccess, #hidSubBT{
+	    	display: none;
+	    }
     </style>
     
     <script type="text/javascript" language="javascript" src="jsme/jsme.nocache.js"></script>
@@ -250,13 +233,8 @@
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
 		
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
-	<script type="text/javascript" charset="utf8"
-		src="js/loadingoverlay.min.js"></script>
-		
 
 	<script type="text/javascript">
-		
-	
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();
 	        
