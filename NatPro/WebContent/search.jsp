@@ -347,13 +347,13 @@
 			<input name="category" type="hidden" id="category" value="compound">
 			<div class="form-row">
 				<div class="col-auto">
-					<button class="btn btn-primary" id="searchCompoundBT" type="submit" >
+					<button class="btn btn-primary " type="submit" >
 						Search compound
 						<i class="fa fa-flask" aria-hidden="true"></i>
 					</button>
 				</div>
 				<div class="col-auto">
-					<button onclick="setCategory()" id="searchPlantBT" class="btn btn-success " type="button" >
+					<button onclick="setCategory()" class="btn btn-success " type="button" >
 						Search plant
 						<i class="fa fa-leaf" aria-hidden="true"></i>
 						</button>
@@ -371,25 +371,6 @@
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();
 	        //$('.hid').css('display', 'none');
-	        
-	         $('#searchCompoundBT').click(function() {
-	        	
-	        		$("#searchCompoundBT").show();
-	           		$("#searchCompoundBT").prop("disabled", true);
-	            	$("#searchCompoundBT").html('<i class="fa fa-spinner fa-spin"></i>&#32;Searching compounds...<i class="fa fa-flask" aria-hidden="true"></i>');
-	            	
-	            	$("#advancedSearchForm").submit();
-	         });
-	         
-	         $('#searchPlantBT').click(function() {
-		        	
-	        		$("#searchPlantBT").show();
-	           		$("#searchPlantBT").prop("disabled", true);
-	            	$("#searchPlantBT").html('<i class="fa fa-spinner fa-spin"></i>&#32;Searching plants...<i class="fa fa-leaf" aria-hidden="true"></i>');
-	            	
-	            	$("#advancedSearchForm").submit();
-	         });
-	         
 	    });
 	    
 	    function func_submit() {
