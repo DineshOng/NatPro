@@ -28,92 +28,178 @@
 			<p class="lead">Validate the gathered data from the processed files here</p>
 		</div>
 		
-		<!-- TEMPLATE
-			<div id="">
+		<!-- TEMPLATE FOR THE TABLE -->
+		<!--
+			<div id="GroupContainer">
 				<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
-				
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<td colspan="5" style="text-align: left">
-								<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
-							</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td style="text-align: left">
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="checkbox" id="" value="">
-									<label class="form-check-label" for="">Document</label>
-								</div>
-							</td>
-							<td>
-								plant
-							</td>
-							<td>
-								contains
-							</td>
-							<td>
-								chemical
-							</td>
-							<td style="text-align:right; width:300px">
-								<button id="" type="button" class="btn btn-primary btn-sm">APPROVE</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">REJECT</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">VIEW</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">EDIT</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<form id="">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<td colspan="5" style="text-align: left">
+									<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
+								</td>
+							</tr>
+						</thead>
+						<tbody id="GroupTableBody">
+							<tr>
+								<td style="text-align: left" style="width:200px">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="" value="">
+										<label class="form-check-label" for="">Document</label>
+									</div>
+								</td>
+								<td>
+									plant
+								</td>
+								<td>
+									contains
+								</td>
+								<td>
+									chemical
+								</td>
+								<td style="text-align:right; width:300px">
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">VIEW</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">EDIT</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>			
+				</form>
 			</div>
 		 -->
 		
 		<div class="container">
 			
-			<div id="CompoundGroup">
+			<div id="CompoundGroupContainer">
 				<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
-				
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<td colspan="5" style="text-align: left">
-								<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
-							</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td style="text-align: left">
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="checkbox" id="" value="">
-									<label class="form-check-label" for="">Document</label>
-								</div>
-							</td>
-							<td>
-								plant
-							</td>
-							<td>
-								contains
-							</td>
-							<td>
-								chemical
-							</td>
-							<td style="text-align:right; width:300px">
-								<button id="" type="button" class="btn btn-primary btn-sm">APPROVE</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">REJECT</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">VIEW</button>
-								<button id="" type="button" class="btn btn-primary btn-sm">EDIT</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<form id="">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<td colspan="5" style="text-align: left">
+									<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
+								</td>
+							</tr>
+						</thead>
+						<tbody id="CompoundGroupTableBody">
+							<tr>
+								<td style="text-align: left" style="width:200px">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="" value="">
+										<label class="form-check-label" for="">Document</label>
+									</div>
+								</td>
+								<td>
+									plant
+								</td>
+								<td>
+									contains
+								</td>
+								<td>
+									chemical
+								</td>
+								<td style="text-align:right; width:300px">
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">VIEW</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">EDIT</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>			
+				</form>
 			</div>
 			
+			<div id="CommonPlantNameGroupContainer">
+				<h3 style="padding-top:50px; padding-bottom:20px">Common Plant Name(s)</h3>
+				<form id="">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<td colspan="5" style="text-align: left">
+									<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
+								</td>
+							</tr>
+						</thead>
+						<tbody id="CommonPlantNameGroupTableBody">
+							<tr>
+								<td style="text-align: left" style="width:200px">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="" value="">
+										<label class="form-check-label" for="">Document</label>
+									</div>
+								</td>
+								<td>
+									alstonia macrophylla
+								</td>
+								<td>
+									known as
+								</td>
+								<td>
+									hard milkwood
+								</td>
+								<td style="text-align:right; width:300px">
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">VIEW</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">EDIT</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>			
+				</form>
+			</div>
+			
+			<div id="IllnessGroupContainer">
+				<h3 style="padding-top:50px; padding-bottom:20px">Illness(es)</h3>
+				<form id="">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<td colspan="5" style="text-align: left">
+									<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
+								</td>
+							</tr>
+						</thead>
+						<tbody id="IllnessGroupTableBody">
+							<tr>
+								<td style="text-align: left" style="width:200px">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="" value="">
+										<label class="form-check-label" for="">Document</label>
+									</div>
+								</td>
+								<td>
+									plant part
+								</td>
+								<td>
+									treats
+								</td>
+								<td>
+									illness
+								</td>
+								<td style="text-align:right; width:300px">
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">VIEW</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">EDIT</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>			
+				</form>
+			</div>
 			
 		</div>
 	</div>
