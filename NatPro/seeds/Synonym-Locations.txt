@@ -92,6 +92,7 @@ uvaria rufa;malaysia
 uvaria rufa;palawan
 uvaria rufa;philippines
 uvaria rufa;thailand
+Dysoxylum gaudichaudianum;philippines
 ipomoea cymosa;philippines
 merremia umbellata;philippines
 volkameria grandiflora;quezon
@@ -231,6 +232,7 @@ davallia solida;samoa
 humata griffithiana;fiji
 humata griffithiana;philippines
 humata griffithiana;samoa
+Eucalyptus deglupta;philippines
 ehretia philippinensis;palawan
 psidium guajava;australia
 psidium guajava;fiji
@@ -265,3 +267,11 @@ urena lobota;palawan
 psophocarpus tetragonolobus;philippines
 michelia champaca;philippines
 michelia longifolia;philippines
+Hoya meliflua;Apayao
+Hoya meliflua;bataan
+Hoya meliflua;la union
+Hoya meliflua;laguna
+Hoya meliflua;leyte
+Hoya meliflua;Negros
+Hoya meliflua;palawan
+Hoya meliflua;rizal
