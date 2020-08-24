@@ -1,5 +1,7 @@
 @charset "ISO-8859-1";
-
+		#adSearchDiv {
+			margin: 50px;
+		}
 		#firstDiv {
 			margin: 50px;
 			margin-left: 150px;

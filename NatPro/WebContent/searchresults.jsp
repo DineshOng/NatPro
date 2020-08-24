@@ -94,7 +94,9 @@
 										items="${compoundList.getCompoundSynonyms()}" var="csList" varStatus="loop">
 										<a
 											href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${csList}
-										</a><c:if test="${!loop.last}">, </c:if></c:forEach></td>
+										</a><c:if test="${!loop.last}">, </c:if>
+										</c:forEach>
+								</td>
 							</tr>
 						</c:forEach>
 					</tbody>
