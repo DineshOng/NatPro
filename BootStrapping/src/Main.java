@@ -101,7 +101,7 @@ public class Main {
 
             // POS TAGGER
             for(String rLine: relation){
-                System.out.println("relation: "+rLine);
+                //System.out.println("relation: "+rLine);
                 POSTagger(seedPattern,rLine,V,P,W);
             }
 
@@ -557,7 +557,7 @@ public class Main {
                 relation.add(temp);
                 e1Name.add(class1);
                 e2Name.add(class2);
-                System.out.println(temp);
+                //System.out.println(temp);
                 //System.out.println("This is "+ e1Name+" and "+e2Name);
                 //System.out.println(relation.size());
                 //System.out.println(pLine);
@@ -574,17 +574,17 @@ public class Main {
         switch(entities){
             case "plant+aka":
             case "MedicinalPlant+Synonym":
-                category.appendChild(document.createTextNode("Common Name(s)"));
+                category.appendChild(document.createTextNode("Common Name"));
                 break;
             case "Medicinal+PlantPart":
-                category.appendChild(document.createTextNode("Plant Part(s)"));
+                category.appendChild(document.createTextNode("Plant Part"));
                 break;
             case "MedicinalPlant+Location":
             case "Synonym+Location":
-                category.appendChild(document.createTextNode("Location(s)"));
+                category.appendChild(document.createTextNode("Location"));
                 break;
             case "MedicinalPlant+Compound":
-                category.appendChild(document.createTextNode("Compound(s)"));
+                category.appendChild(document.createTextNode("Compound"));
                 break;
 
 
@@ -599,7 +599,7 @@ public class Main {
     public static void POSTagger(TreeSet<String> seedPattern, String rLine, String V, String P, String W){
         MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
         String tagged = tagger.tagString(rLine);
-        System.out.println(tagged);
+        //System.out.println(tagged);
         String[] tLines= tagged.split(" ");
         for(int i=0; i<tLines.length;i++){
             //System.out.println(tLines[i]);

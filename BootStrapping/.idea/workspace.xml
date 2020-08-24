@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5142">
-              <caret line="265" selection-start-line="265" selection-end-line="265" />
+            <state relative-caret-position="180">
+              <caret line="103" column="18" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/validation/plant-aka.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="262" selection-start-column="262" selection-end-column="262" />
+              <caret column="259" selection-start-column="259" selection-end-column="259" />
             </state>
           </provider>
         </entry>
@@ -123,6 +123,7 @@
       <find>system.out</find>
       <find>batino</find>
       <find>relation</find>
+      <find>system.</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -149,7 +150,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,6 +191,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -272,7 +273,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32569295" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33315566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -392,6 +393,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka..xml" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="103" column="18" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -442,17 +453,7 @@
     <entry file="file://$PROJECT_DIR$/validation/plant-aka.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="262" selection-start-column="262" selection-end-column="262" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5142">
-          <caret line="265" selection-start-line="265" selection-end-line="265" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret column="259" selection-start-column="259" selection-end-column="259" />
         </state>
       </provider>
     </entry>
