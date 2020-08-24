@@ -260,6 +260,18 @@ public class Main {
                         //System.out.println("I am here");
                         Element eElement = (Element) nNode;
                         int eCount= eElement.getElementsByTagName("Pattern").getLength();
+                        int nameCount = eElement.getElementsByTagName("Name").getLength();
+                        for(int k=0; k<nameCount; k++){
+                            if((eElement.getElementsByTagName("Name").item(k).getParentNode().getNodeName().equals("Tag1"))){
+
+                                e1Name.add(eElement.getElementsByTagName("Name").item(k).getTextContent());
+                            }
+                            else{
+
+                                e2Name.add(eElement.getElementsByTagName("Name").item(k).getTextContent());
+                            }
+
+                        }
                         for(int j=0; j<eCount;j++){
                             //System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
                             validation.add(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
@@ -425,6 +437,10 @@ public class Main {
                 Element element = document.createElement("Seed");
                 document.appendChild(element);
 
+                Element category = document.createElement("Category");
+                addCategory(e1,e2,category,document);
+                element.appendChild(category);
+
                 Element A = document.createElement("Tag1");
                 A.appendChild(document.createTextNode(e1));
                 element.appendChild(A);
@@ -550,6 +566,30 @@ public class Main {
     }
 
 
+    /*=============================
+    Add Category
+    ==============================*/
+    public static void addCategory(String e1, String e2, Element category, Document document){
+        String entities = e1+"+"+e2;
+        switch(entities){
+            case "plant+aka":
+            case "MedicinalPlant+Synonym":
+                category.appendChild(document.createTextNode("Common Name(s)"));
+                break;
+            case "Medicinal+PlantPart":
+                category.appendChild(document.createTextNode("Plant Part(s)"));
+                break;
+            case "MedicinalPlant+Location":
+            case "Synonym+Location":
+                category.appendChild(document.createTextNode("Location(s)"));
+                break;
+            case "MedicinalPlant+Compound":
+                category.appendChild(document.createTextNode("Compound(s)"));
+                break;
+
+
+        }
+    }
 
 
 
