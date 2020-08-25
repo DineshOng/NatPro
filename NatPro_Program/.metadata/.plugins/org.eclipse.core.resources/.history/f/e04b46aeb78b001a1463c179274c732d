@@ -1,0 +1,69 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JTextArea;
+import javax.swing.JScrollBar;
+
+public class BootStrap_New {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					BootStrap_New window = new BootStrap_New();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public BootStrap_New() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 594, 536);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frame.getContentPane().add(panel, BorderLayout.NORTH);
+		
+		JButton btnBootstrappingStart = new JButton("Start");
+		btnBootstrappingStart.setToolTipText("Start Bootstrapping Process");
+		btnBootstrappingStart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		
+		JLabel lblNewLabel = new JLabel("BOOTSTRAPPING PROCESS");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(lblNewLabel);
+		panel.add(btnBootstrappingStart);
+		
+		JPanel panel_2 = new JPanel();
+		frame.getContentPane().add(panel_2, BorderLayout.CENTER);
+	}
+
+}
