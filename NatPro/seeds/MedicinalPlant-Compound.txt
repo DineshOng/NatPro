@@ -1,74 +1,83 @@
 e1:MedicinalPlant
 e2:Compound
 
-batino;Alstonerine
-batino;Alstophyllan-19-one
-batino;Alstophylline, demethoxy-
-batino;beta-Amyrin
-batino;Brucine
-batino;Campesterol
-batino;gamma-Sitosterol
-batino;Lupeol
-batino;Rauvomitin
-batino;Stigmasterol
-batino;Strictamin
-batino;24-methylenecycloartanol
-batino;Alstohentine
-batino;Alstomaline
-batino;Alstomicine
-batino;Alstophyllal
 batino;beta-Sitosteryl-beta-D-Glucoside
-batino;10,11-dimethoxynareline
-batino;16-hydroxy-N4-demethylalstophyllal Oxindole
 batino;16-hydroxyalstonal
+batino;Alstohentine
+batino;Rauvomitin
+batino;Alstonerine
+batino;16-hydroxy-N4-demethylalstophyllal Oxindole
+batino;Echitovenidine
+batino;24-methylenecycloartanol
+batino;Alstophyllal
+batino;Stigmasterol
 batino;16-hydroxyalstonisine
+batino;Echitamine
+batino;gamma-Sitosterol
+batino;Brucine
+batino;Alstomicine
+batino;Venenatine
 batino;6-oxoalstophyllal
 batino;6-oxoalstophylline
+batino;10,11-dimethoxynareline
+batino;Lupeol
+batino;beta-Amyrin
+batino;Campesterol
 batino;beta-Sitosterol
-batino;Echitamine
-batino;Echitovenidine
-batino;Venenatine
-brocolli;beta-Sitosterol
+batino;Alstomaline
+batino;Strictamin
 brocolli;Fatty acid
-brocolli;Linoleic acid
+brocolli;beta-Sitosterol
 brocolli;Triglycerides
-ivory mahogany;beta-Sitosterol
+brocolli;Linoleic acid
+ivory mahogany;Dysoxylins d
 ivory mahogany;Polyprenol
+ivory mahogany;Stigmasterol
+ivory mahogany;Gaudichaudysolin a
+ivory mahogany;beta-Sitosterol
 ivory mahogany;Squalene
 ivory mahogany;Triglycerides
 ivory mahogany;Dysoxylins a
 ivory mahogany;Dysoxylins b
 ivory mahogany;Dysoxylins c
-ivory mahogany;Dysoxylins d
-ivory mahogany;Gaudichaudysolin a
 ivory mahogany;p-hydroxyacetophenone
-ivory mahogany;Stigmasterol
 mustard;alpha-linolenic acid
-mustard;beta-carotene
-mustard;beta-Sitosterol
-mustard;Fatty acid
-mustard;Linoleic acid
-mustard;Lutein
 mustard;Trilinolenin
+mustard;beta-carotene
+mustard;Fatty acid
+mustard;beta-Sitosterol
+mustard;Lutein
+mustard;Linoleic acid
 radish;alpha-linolenic acid
-radish;beta-Sitosterol
 radish;Fatty acid
-radish;Linoleic acid
+radish;beta-Sitosterol
 radish;Triglycerides
-rainbow eucalyptus;Ellagic acid
-rainbow eucalyptus;Ellagitannins
+radish;Linoleic acid
 rainbow eucalyptus;Tritriacontane-16,18-dione
+rainbow eucalyptus;Ellagitannins
 rainbow eucalyptus;8-methoxyellagic acid-2-rhamnoside
 rainbow eucalyptus;Nerolidol
-rainbow eucalyptus;Oleanolic acid
+rainbow eucalyptus;Ellagic acid
+rainbow eucalyptus;5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone
 rainbow eucalyptus;Squalene
 rainbow eucalyptus;Ursolic acid
-rainbow eucalyptus;5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone
-red cabbage;beta-Sitosterol
+rainbow eucalyptus;Oleanolic acid
 red cabbage;Stigmasterol
+red cabbage;beta-Sitosterol
 red cabbage;Triglycerides
+wax plant;Oleanone
+wax plant;beta-Amyrin
+wax plant;alpha-amyrin cinnamate
+wax plant;Lupenone
+wax plant;Stigmasterol
+wax plant;beta-Sitosterol
 wax plant;Squalene
+wax plant;alpha-amyrin
+wax plant;beta-amyrin cinnamate
+wax plant;lupenyl cinnamate
+wax plant;Ursenone
+wax plant;Lupeol
+green/white cabbage;Fatty acid
 green/white cabbage;beta-Sitosterol
 green/white cabbage;Triglycerides
-green/white cabbage;Fatty acid
 green/white cabbage;Linoleic acid

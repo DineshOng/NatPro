@@ -104,7 +104,7 @@ public class AddPlantServlet extends HttpServlet {
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
 
-		if (!request.getParameter("commonPlantName").isBlank()) { // check if common plant name is filled
+		if (!request.getParameter("commonPlantName").equals("")) { // check if common plant name is filled
 			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",
 					"_");
 			String commonPlantName = request.getParameter("commonPlantName").trim();
@@ -113,7 +113,7 @@ public class AddPlantServlet extends HttpServlet {
 			// add data property for MedicinalPlant individual
 			m.addDataPropMedPlant(commonPlantName);
 
-			if (!request.getParameter("scientificName").isBlank()) { // check if scientific name is filled
+			if (!request.getParameter("scientificName").equals("")) { // check if scientific name is filled
 				String speciesNameIndiv = request.getParameter("scientificName").trim().toLowerCase().replaceAll(" ",
 						"_");
 				// create individual for Species
@@ -123,7 +123,7 @@ public class AddPlantServlet extends HttpServlet {
 				// add object property MedicinalPlant -> Species
 				m.addObjectHasScientificName(commonPlantNameIndiv, speciesNameIndiv);
 
-				if (!request.getParameter("genus").isBlank()) { // check if genus is filled
+				if (!request.getParameter("genus").equals("")) { // check if genus is filled
 					String genusNameIndiv = request.getParameter("genus").trim().toLowerCase().replaceAll(" ", "_");
 					// create individual for Genus
 					m.addIndiv_Genus(genusNameIndiv);
@@ -132,7 +132,7 @@ public class AddPlantServlet extends HttpServlet {
 					// add object property Species -> Genus
 					m.addObjectBelongsToGenus(speciesNameIndiv, genusNameIndiv);
 
-					if (!request.getParameter("family").isBlank()) { // check if family is filled
+					if (!request.getParameter("family").equals("")) { // check if family is filled
 						String familyNameIndiv = request.getParameter("family").trim().toLowerCase().replaceAll(" ",
 								"_");
 						// create individual for Family
@@ -172,7 +172,7 @@ public class AddPlantServlet extends HttpServlet {
 
 							for (int j = 0; j < compoundCtrMax; j++) {
 								String compound = request.getParameter("compound[" + i + "][" + j + "]");
-								if (compound != null && !compound.isBlank()) {
+								if (compound != null && !compound.equals("")) {
 									String compoundIndiv = cleanCompoundString(compound);
 									// create individual for Compound
 									m.addIndiv_Compound(compoundIndiv);
@@ -186,7 +186,7 @@ public class AddPlantServlet extends HttpServlet {
 									bioCellMax++;
 									for (int k = 0; k < bioCellMax; k++) {
 										String bioAct = request.getParameter("bioAct[" + i + "][" + j + "][" + k + "]");
-										if (!bioAct.isBlank()) {
+										if (!bioAct.equals("")) {
 											String bioActIndiv = bioAct.trim().toLowerCase().replaceAll(" ", "_");
 											// create individual for BiologicalActivity
 											m.addIndiv_BiologicalActivity(bioActIndiv);
@@ -196,7 +196,7 @@ public class AddPlantServlet extends HttpServlet {
 											m.addObjectHasBiologicalActivity(compoundIndiv, bioActIndiv);
 											String cellLine = request
 													.getParameter("cellLine[" + i + "][" + j + "][" + k + "]");
-											if (!cellLine.isBlank()) {
+											if (!cellLine.equals("")) {
 												String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ",
 														"_");
 												// create individual for CellLine
@@ -221,7 +221,7 @@ public class AddPlantServlet extends HttpServlet {
 			String[] locationNames;
 			locationNames = request.getParameterValues("location");
 			for (int i = 0; i < locationNames.length; i++) {
-				if (!locationNames[i].isBlank()) {
+				if (!locationNames[i].equals("")) {
 					String locationNameIndiv = locationNames[i].trim().toLowerCase().replaceAll(", ", " ")
 							.replaceAll(",", " ").replaceAll(" ", "_");
 					m.addIndiv_Location(locationNameIndiv);
@@ -240,7 +240,7 @@ public class AddPlantServlet extends HttpServlet {
 				String prepPartIndiv = "";
 				ArrayList<String> illnessIndivs = new ArrayList<>();
 				if (request.getParameter("preparation[" + i + "]") != null
-						&& !request.getParameter("preparation[" + i + "]").isBlank()) {
+						&& !request.getParameter("preparation[" + i + "]").equals("")) {
 					String preparation = request.getParameter("preparation[" + i + "]");
 					allPreparation = allPreparation.concat(preparation + " of " + commonPlantNameIndiv + " ");
 					if (request.getParameter("prepPart[" + i + "]") != null) {
@@ -261,7 +261,7 @@ public class AddPlantServlet extends HttpServlet {
 							// add data property for Illness individual
 							m.addDataPropIllness(illness);
 							illnessIndivs.add(illnessIndiv);
-							if (!allIllness.isBlank()) {
+							if (!allIllness.equals("")) {
 								allIllness = allIllness.concat(", " + illness);
 							} else {
 								allIllness = allIllness.concat(illness);
@@ -269,7 +269,7 @@ public class AddPlantServlet extends HttpServlet {
 
 						}
 					}
-					if (!allIllness.isBlank()) {
+					if (!allIllness.equals("")) {
 						allPreparation = allPreparation.concat("used for " + allIllness);
 					}
 					System.out.println(allPreparation);

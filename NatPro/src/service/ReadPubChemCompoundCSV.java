@@ -22,7 +22,7 @@ public class ReadPubChemCompoundCSV {
 		long startTime, endTime;
 	    startTime = System.nanoTime ();
 	    
-		url = new URL("https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + query + "/property/MolecularFormula,MolecularWeight,CanonicalSMILES,InChI,InChIKey,IUPACName,XLogP,ExactMass,TPSA,Complexity,Charge,HBondDonorCount,HBondAcceptorCount,RotatableBondCount/CSV");
+		url = new URL("https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" + query + "/property/MolecularFormula,MolecularWeight,IsomericSMILES,InChI,InChIKey,IUPACName,XLogP,ExactMass,TPSA,Complexity,Charge,HBondDonorCount,HBondAcceptorCount,RotatableBondCount/CSV");
 		
 		String csv = "";
 		
