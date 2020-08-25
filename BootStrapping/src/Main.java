@@ -1,12 +1,12 @@
+import com.sun.deploy.util.ArrayUtil;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import edu.stanford.nlp.util.ArrayUtils;
 import jdk.internal.org.xml.sax.SAXException;
 import net.didion.jwnl.JWNL;
 import net.didion.jwnl.data.IndexWord;
@@ -56,6 +56,7 @@ public class Main {
                 String seedData = readFile(seeds, fileReader).toString();
                 String[] seedLines = seedData.split("\\r?\\n");
                 ArrayList<String> seedEntity = new ArrayList<String>();
+                ArrayList<String> lines = new ArrayList<String>();
                 for(String sling: seedLines){
                     seedEntity.add(sling);
                 }
@@ -70,7 +71,9 @@ public class Main {
                 }
 
                 String xml2String = readFile(xmlFile, fileReader).toString();
-                String[] lines = xml2String.split("\\r?\\n");
+                String[] line = xml2String.split("\\r?\\n");
+                Collections.addAll(lines,line);
+
 
 
                 for(String class1 : seedMap.keySet()){
@@ -78,11 +81,17 @@ public class Main {
                     class1 = class1.toLowerCase();
                     class2 = class2.toLowerCase();
                     //System.out.println("Classes: "+ class1+" "+class2);
+
+                    for (String pLine : lines) {
+                        pLine = pLine.toLowerCase();
+                        addPreprocessing(relation,pLine,class1,class2,e1,e2,e1Name,e2Name,lines);
+                    }//end of pLine loop of preprocessing
+
                     for (String pLine : lines) {
                         pLine = pLine.toLowerCase();
                         addRelation(relation,pLine,class1,class2,e1,e2,e1Name,e2Name);
 
-                    }//end of pLine loop
+                    }//end of pLine loop of addrelations
                 }//end of class1 loop
 
                 /*for(String test: relation){
@@ -548,11 +557,11 @@ public class Main {
             String class1, String class2,
             String e1, String e2,
             TreeSet<String> e1Name, TreeSet<String> e2Name){
-        addPreprocessing(relation,pLine,class1,class2,e1,e2,e1Name,e2Name);
         if(pLine.contains(class1) && pLine.contains(class2)){
             Pattern p = Pattern.compile("<\\/["+e1+"]+>.+<["+e2+"]+>");
             Matcher m = p.matcher(pLine);
             while(m.find()) {
+
                 String temp = m.group();
                 temp = temp.replaceAll("<\\/?[a-z]+>", "");
                 relation.add(temp);
@@ -575,7 +584,7 @@ public class Main {
             TreeSet<String> relation, String pLine,
             String class1, String class2,
             String e1, String e2,
-            TreeSet<String> e1Name, TreeSet<String> e2Name){
+            TreeSet<String> e1Name, TreeSet<String> e2Name, ArrayList<String> lines){
         TreeSet<String> List = new TreeSet<String>();
         readXML(e1,e2,List);
         for(String l : List){
@@ -588,6 +597,13 @@ public class Main {
                     relation.add(temp);
                     e1Name.add(class1);
                     e2Name.add(class2);
+                    for(String delete : lines){
+                        String store = delete.toLowerCase();
+                        if(pLine.equals(store)){
+                            int index = lines.indexOf(delete);
+                            lines.set(index,"");
+                        }
+                    }
                     //System.out.println(temp);
                     //System.out.println("This is "+ e1Name+" and "+e2Name);
                     //System.out.println(relation.size());
