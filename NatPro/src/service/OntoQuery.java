@@ -197,8 +197,7 @@ public class OntoQuery {
 	}
 
 	public List<String> getCompounds(String MedicinalPlant) throws SQWRLException {
-		List<String> compounds = new ArrayList<String>();
-		LinkedHashSet<String> hashSet = new LinkedHashSet<String>(); // This set will only be used to check for
+		HashSet<String> values = new HashSet<String>(); // This set will only be used to check for
 																		// duplicate compounds
 		List<MedicinalPlant> medicinalPlantList = searchMedicinalPlant(MedicinalPlant);
 
@@ -210,16 +209,16 @@ public class OntoQuery {
 					for (int k = 0; k < speciesPartList.size(); k++) {
 						List<Compound> compoundList = speciesPartList.get(k).getCompounds();
 						for (int l = 0; l < compoundList.size(); l++) {
-							compounds.add(compoundList.get(l).getCompoundName());
+							values.add(compoundList.get(l).getCompoundName());
 							Set<String> compoundSynList = compoundList.get(l).getCompoundSynonyms();
-							compounds.addAll(compoundSynList);
+							values.addAll(compoundSynList);
 						}
 					}
 				}
 			}
 		} catch (Exception e) {
 		}
-
+		List<String> compounds = new ArrayList<String>(values);
 		return compounds;
 
 	}
