@@ -2,8 +2,6 @@ e1:MedicinalPlant
 e2:Compound
 
 batino;Alstonerine
-batino;Alstophyllan-19-one
-batino;Alstophylline, demethoxy-
 batino;beta-Amyrin
 batino;Brucine
 batino;Campesterol
@@ -36,6 +34,7 @@ ivory mahogany;beta-Sitosterol
 ivory mahogany;Polyprenol
 ivory mahogany;Squalene
 ivory mahogany;Triglycerides
+ivory mahogany;beta-Sitosterol
 ivory mahogany;Dysoxylins a
 ivory mahogany;Dysoxylins b
 ivory mahogany;Dysoxylins c
@@ -63,10 +62,29 @@ rainbow eucalyptus;Nerolidol
 rainbow eucalyptus;Oleanolic acid
 rainbow eucalyptus;Squalene
 rainbow eucalyptus;Ursolic acid
+rainbow eucalyptus;Nerolidol
+rainbow eucalyptus;Oleanolic acid
+rainbow eucalyptus;Squalene
+rainbow eucalyptus;Ursolic acid
 rainbow eucalyptus;5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone
+rainbow eucalyptus;Ellagic acid
+rainbow eucalyptus;Ellagitannins
+rainbow eucalyptus;Tritriacontane-16,18-dione
+rainbow eucalyptus;8-methoxyellagic acid-2-rhamnoside
 red cabbage;beta-Sitosterol
 red cabbage;Stigmasterol
 red cabbage;Triglycerides
+wax plant;alpha-amyrin
+wax plant;beta-Amyrin
+wax plant;Lupeol
+wax plant;alpha-amyrin cinnamate
+wax plant;beta-amyrin cinnamate
+wax plant;lupenyl cinnamate
+wax plant;beta-Sitosterol
+wax plant;Stigmasterol
+wax plant;Lupenone
+wax plant;Oleanone
+wax plant;Ursenone
 wax plant;Squalene
 green/white cabbage;beta-Sitosterol
 green/white cabbage;Triglycerides

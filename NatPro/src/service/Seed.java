@@ -17,13 +17,14 @@ public class Seed {
 //		genMPWithLoc(q);
 //		genSynWithLoc(q);
 		genMPWithComp(q);
+		genSynWithComp(q);
 //		genMPWithPart(q);
 //		genMPWithGenus(q);
 //		genMPWithFamily(q);
 //		genSynWithPart(q);
 //		genSynWithGenus(q);
 //		genGenusWithFamily(q);
-//		genSynWithComp(q);
+
 	}
 
 	public void genMPWithSyn(OntoQuery q) throws SQWRLException {

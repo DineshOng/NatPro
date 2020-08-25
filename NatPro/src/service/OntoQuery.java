@@ -203,7 +203,6 @@ public class OntoQuery {
 		List<MedicinalPlant> medicinalPlantList = searchMedicinalPlant(MedicinalPlant);
 
 		try {
-//			System.out.println(medicinalPlantList.get(0).getMedicinalPlant());
 			for (int i = 0; i < medicinalPlantList.size(); i++) {
 				List<Species> speciesList = medicinalPlantList.get(i).getSpecies();
 				for (int j = 0; j < speciesList.size(); j++) {
@@ -211,77 +210,47 @@ public class OntoQuery {
 					for (int k = 0; k < speciesPartList.size(); k++) {
 						List<Compound> compoundList = speciesPartList.get(k).getCompounds();
 						for (int l = 0; l < compoundList.size(); l++) {
+							compounds.add(compoundList.get(l).getCompoundName());
 							Set<String> compoundSynList = compoundList.get(l).getCompoundSynonyms();
 							compounds.addAll(compoundSynList);
-							// for (int m = 0; m < compoundSynList.size(); m++) {
-							// this is to ensure that no duplicate compounds will be added to the list
-							// if (hashSet.add(compoundSynList.get(m).toString()))
-							// compounds.add(compoundSynList.get(m).toString());
-
-							// }
 						}
 					}
 				}
 			}
 		} catch (Exception e) {
 		}
-		
+
 		return compounds;
 
 	}
 
 	public List<String> getSynCompounds(String Synonym) throws SQWRLException {
-		List<String> compounds = new ArrayList<String>();
-		LinkedHashSet<String> hashSet = new LinkedHashSet<String>(); // This set will only be used to check for
-																		// duplicate compounds
+		HashSet<String> values = new HashSet<String>();
+
 		String MedicinalPlant = "";
-		RDFProperty datatypeProperty_MedicinalPlant = owlModel.getRDFProperty("datatypeProperty_MedicinalPlant");
-		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
-		RDFProperty hasScientificName = owlModel.getRDFProperty("hasScientificName");
 
-		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
-		for (Iterator it = classes.iterator(); it.hasNext();) {
-			OWLNamedClass cls = (OWLNamedClass) it.next();
-			Collection instances = cls.getInstances(false);
-			if (cls.getBrowserText().contentEquals("MedicinalPlant")) {
-				for (Iterator jt = instances.iterator(); jt.hasNext();) {
-					try {
-						OWLIndividual individual = (OWLIndividual) jt.next();
-						// find the medicinal plant
-						Collection synonyms = individual.getPropertyValues(hasScientificName);
-						for (Iterator lt = synonyms.iterator(); lt.hasNext();) {
-							OWLIndividual sciNameIndiv = (OWLIndividual) lt.next();
-							if (Synonym.equalsIgnoreCase(
-									individual.getPropertyValue(datatypeProperty_Synonym).toString())) {
-								MedicinalPlant = individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString();
-							}
-						}
-
-					} catch (Exception e) {
-					}
-				}
-			}
-
-		}
 		List<MedicinalPlant> medicinalPlantList = searchMedicinalPlant(MedicinalPlant);
-
 		try {
 			for (int i = 0; i < medicinalPlantList.size(); i++) {
 				List<Species> speciesList = medicinalPlantList.get(i).getSpecies();
 				for (int j = 0; j < speciesList.size(); j++) {
-					List<SpeciesPart> speciesPartList = speciesList.get(j).getSpeciesParts();
-					for (int k = 0; k < speciesPartList.size(); k++) {
-						List<Compound> compoundList = speciesPartList.get(k).getCompounds();
-						for (int l = 0; l < compoundList.size(); l++) {
-							Set<String> compoundSynList = compoundList.get(l).getCompoundSynonyms();
-							compounds.addAll(compoundSynList);
+					if (speciesList.get(j).getSpecie().equals(Synonym)) {
+						List<SpeciesPart> speciesPartList = speciesList.get(j).getSpeciesParts();
+						for (int k = 0; k < speciesPartList.size(); k++) {
+							List<Compound> compoundList = speciesPartList.get(k).getCompounds();
+							for (int l = 0; l < compoundList.size(); l++) {
+								values.add(compoundList.get(l).getCompoundName());
+								Set<String> compoundSynList = compoundList.get(l).getCompoundSynonyms();
+								values.addAll(compoundSynList);
+							}
+
 						}
 					}
 				}
 			}
 		} catch (Exception e) {
 		}
-
+		List<String> compounds = new ArrayList<String>(values);
 		return compounds;
 
 	}
@@ -620,6 +589,7 @@ public class OntoQuery {
 								String syno = jtt.next().toString();
 								// System.out.println("dis>" + syno);
 								// if (!syno.equalsIgnoreCase(compoundIndiv))
+
 								synonyms.add(syno);
 							}
 							compound.setCompoundSynonyms(synonyms);
@@ -876,7 +846,6 @@ public class OntoQuery {
 							ArrayList<Preparation> preparations = new ArrayList<Preparation>();
 							preparations.addAll(getPreparationList(individual));
 							mp.setPreparations(preparations);
-							;
 
 							values.add(mp);
 						}
@@ -907,7 +876,7 @@ public class OntoQuery {
 			if (!synonym.isEmpty()) {
 				Species sp = new Species(synonym);
 				species.add(sp);
-				System.out.println(synonym);
+//				System.out.println(synonym);
 			}
 		}
 
@@ -953,7 +922,6 @@ public class OntoQuery {
 		Collection speciesPartCol = Species.getPropertyValues(hasChildPlantPart);
 		for (Iterator it = speciesPartCol.iterator(); it.hasNext();) {
 			OWLIndividual speciesPartIndiv = (OWLIndividual) it.next();
-
 			// Enter hasPlantPart object
 			OWLIndividual plantPartIndiv = (OWLIndividual) speciesPartIndiv.getPropertyValue(hasPlantPart);
 			// Get datatype property from hasPlantPart object
@@ -970,7 +938,9 @@ public class OntoQuery {
 
 	public ArrayList<Compound> getCompoundList(OWLIndividual SpeciesPart) {
 		RDFProperty hasCompound = owlModel.getRDFProperty("hasCompound");
+		RDFProperty includesCompound = owlModel.getRDFProperty("includesCompound");
 		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
 		ArrayList<Compound> compounds = new ArrayList<Compound>();
 
 		Collection compoundCol = SpeciesPart.getPropertyValues(hasCompound);
@@ -979,19 +949,35 @@ public class OntoQuery {
 			String comp = compoundIndiv.getBrowserText().replaceAll("http.+#", "");
 			comp = comp.replaceAll("\\.", ",");
 			comp = comp.replaceAll("_", " ");
-			Compound compound = getCompound(comp);
-			HashSet<String> compoundSynonyms = new HashSet<String>();
-			Collection compoundSynCol = compoundIndiv.getPropertyValues(datatypeProperty_CompoundSynonym);
-			for (Iterator jt = compoundSynCol.iterator(); jt.hasNext();) {
-				comp = jt.next().toString();
-				if (comp.equalsIgnoreCase(compound.getCompoundName())) {
-					compound.setCompoundName(comp);
+			if (comp.split(" ")[0].equals("mixtures")) { // if the compound is a mixture, we should get property
+															// "includesCompound"
+				Collection includeCompoundCol = compoundIndiv.getPropertyValues(includesCompound);
+				for (Iterator iit = includeCompoundCol.iterator(); iit.hasNext();) {
+					OWLIndividual includeCompoundIndiv = (OWLIndividual) iit.next();
+					String includecomp = includeCompoundIndiv.getBrowserText().replaceAll("http.+#", "");
+					includecomp = includecomp.replaceAll("\\.", ",");
+					includecomp = includecomp.replaceAll("_", " ");
+					Compound compound = getCompound(includecomp);
+					compounds.add(compound);
+					System.out.println(compound.getCompoundName() + "@");
 				}
-				compoundSynonyms.add(comp);
+			} else {
+				Compound compound = getCompound(comp);
+
+				HashSet<String> compoundSynonyms = new HashSet<String>();
+				Collection compoundSynCol = compoundIndiv.getPropertyValues(datatypeProperty_CompoundSynonym);
+				for (Iterator jt = compoundSynCol.iterator(); jt.hasNext();) {
+					comp = jt.next().toString();
+					if (comp.equalsIgnoreCase(compound.getCompoundName())) {
+						compound.setCompoundName(comp);
+					}
+					compoundSynonyms.add(comp);
+				}
+				compound.setCompoundSynonyms(compoundSynonyms);
+				compounds.add(compound);
+
+				System.out.println(compound.getCompoundName() + "@");
 			}
-			compound.setCompoundSynonyms(compoundSynonyms);
-			compounds.add(compound);
-			System.out.println(compound.getCompoundName() + "@");
 		}
 		return compounds;
 	}
