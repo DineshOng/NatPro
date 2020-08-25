@@ -30,7 +30,7 @@
 		
 		<!-- TEMPLATE FOR THE TABLE -->
 		<!--
-			<div id="GroupContainer">
+			<div id="_GroupContainer">
 				<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
 				<form id="">
 					<table class="table table-hover">
@@ -43,11 +43,11 @@
 								</td>
 							</tr>
 						</thead>
-						<tbody id="GroupTableBody">
+						<tbody id="_GroupTableBody">
 							<tr>
 								<td style="text-align: left" style="width:200px">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" id="" value="">
+										<input class="form-check-input" type="checkbox" name="" value="">
 										<label class="form-check-label" for="">Document</label>
 									</div>
 								</td>
@@ -82,9 +82,9 @@
 						<thead>
 							<tr>
 								<td colspan="5" style="text-align: left">
-									<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
-									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
-									<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm" onclick="selectAll(0)">SELECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm" onclick="approveAll(0)">APPROVE ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm" onclick="rejectAll(0)">REJECT ALL</button>
 								</td>
 							</tr>
 						</thead>
@@ -92,7 +92,30 @@
 							<tr>
 								<td style="text-align: left" style="width:200px">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" id="" value="">
+										<input class="form-check-input" type="checkbox" name="cc" value="0">
+										<label class="form-check-label" for="">Document</label>
+									</div>
+								</td>
+								<td>
+									plant
+								</td>
+								<td>
+									contains
+								</td>
+								<td>
+									chemical
+								</td>
+								<td style="text-align:right; width:300px">
+									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">REJECT</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">VIEW</button>
+									<button id="" type="button" class="btn btn-primary btn-sm">EDIT</button>
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align: left" style="width:200px">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name="cc" value="1">
 										<label class="form-check-label" for="">Document</label>
 									</div>
 								</td>
@@ -124,9 +147,9 @@
 						<thead>
 							<tr>
 								<td colspan="5" style="text-align: left">
-									<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
-									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
-									<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm" onclick="selectAll(1)">SELECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm" onclick="approveAll(1)">APPROVE ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm" onclick="rejectAll(1)">REJECT ALL</button>
 								</td>
 							</tr>
 						</thead>
@@ -134,7 +157,7 @@
 							<tr>
 								<td style="text-align: left" style="width:200px">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" id="" value="">
+										<input class="form-check-input" type="checkbox" name="cpn" value="0">
 										<label class="form-check-label" for="">Document</label>
 									</div>
 								</td>
@@ -166,7 +189,7 @@
 						<thead>
 							<tr>
 								<td colspan="5" style="text-align: left">
-									<button id="" type="button" class="btn btn-primary btn-sm">SELECT ALL</button>
+									<button id="" type="button" class="btn btn-primary btn-sm" onclick="selectAll(2)">SELECT ALL</button>
 									<button id="" type="button" class="btn btn-primary btn-sm">APPROVE ALL</button>
 									<button id="" type="button" class="btn btn-primary btn-sm">REJECT ALL</button>
 								</td>
@@ -176,7 +199,7 @@
 							<tr>
 								<td style="text-align: left" style="width:200px">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="checkbox" id="" value="">
+										<input class="form-check-input" type="checkbox" name="i" value="0">
 										<label class="form-check-label" for="">Document</label>
 									</div>
 								</td>
@@ -263,6 +286,72 @@
 		
 		$("#search").val('${searchKey}');
 		ddfunc(${searchCategory});
+	</script>
+	
+	<!-- TABLE SCRIPTS HERE -->
+	<script>
+		/*
+			VALUES FOR THE SPECIFIC TABLES
+			
+			tValue = table value
+			
+			0 - Compounds
+			1 - Common Plant Name
+			2 - Illness
+		*/
+	
+		function selectAll(tValue) {
+			//console.log(tValue);
+			
+			if (tValue == 0) { // compounds
+				var items = document.getElementsByName('cc');
+			}
+			else if (tValue == 1) { // common plant name
+				var items = document.getElementsByName('cpn');
+			}
+			else if (tValue == 2) { // illness
+				var items = document.getElementsByName('i');
+			}
+			
+			
+			for (var i = 0; i < items.length; i++) {
+				if (items[i].type == 'checkbox') {
+					items[i].checked = true;
+				}
+			}
+		}
+		
+		function approveAll(tValue) {
+			if (tValue == 0) { // compounds
+				var items = document.getElementsByName('cc');
+			}
+			else if (tValue == 1) { // common plant name
+				var items = document.getElementsByName('cpn');
+			}
+			else if (tValue == 2) { // illness
+				var items = document.getElementsByName('i');
+			}
+			
+			/*
+			code to approve all entries under specific tValue
+		*/
+		}
+		
+		function rejectAll(tValue) {
+			if (tValue == 0) { // compounds
+				var items = document.getElementsByName('cc');
+			}
+			else if (tValue == 1) { // common plant name
+				var items = document.getElementsByName('cpn');
+			}
+			else if (tValue == 2) { // illness
+				var items = document.getElementsByName('i');
+			}
+			
+			/*
+				code to reject all entries under specific tValue
+			*/
+		}
 	</script>
     
   </body>
