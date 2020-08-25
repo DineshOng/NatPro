@@ -548,6 +548,7 @@ public class Main {
             String class1, String class2,
             String e1, String e2,
             TreeSet<String> e1Name, TreeSet<String> e2Name){
+        addPreprocessing(relation,pLine,class1,class2,e1,e2,e1Name,e2Name);
         if(pLine.contains(class1) && pLine.contains(class2)){
             Pattern p = Pattern.compile("<\\/["+e1+"]+>.+<["+e2+"]+>");
             Matcher m = p.matcher(pLine);
@@ -564,6 +565,77 @@ public class Main {
             } // end of matcher while
         }// end of if pLine
     }
+
+
+
+    /*=============================
+    Use the generated seeds to look for patterns
+    ==============================*/
+    public static void addPreprocessing(
+            TreeSet<String> relation, String pLine,
+            String class1, String class2,
+            String e1, String e2,
+            TreeSet<String> e1Name, TreeSet<String> e2Name){
+        TreeSet<String> List = new TreeSet<String>();
+        readXML(e1,e2,List);
+        for(String l : List){
+            if(pLine.contains(class1) && pLine.contains(class2) && pLine.contains(l)){
+                Pattern p = Pattern.compile("<\\/["+e1+"]+>.+<["+e2+"]+>");
+                Matcher m = p.matcher(pLine);
+                while(m.find()) {
+                    String temp = m.group();
+                    temp = temp.replaceAll("<\\/?[a-z]+>", "");
+                    relation.add(temp);
+                    e1Name.add(class1);
+                    e2Name.add(class2);
+                    //System.out.println(temp);
+                    //System.out.println("This is "+ e1Name+" and "+e2Name);
+                    //System.out.println(relation.size());
+                    //System.out.println(pLine);
+                } // end of matcher while
+            }// end of if pLine
+        }
+
+        
+
+    }
+
+
+    public static void readXML(String e1, String e2, TreeSet<String> matches){
+        //CHECKS IF THE GENERATED XML FILE EXISTS
+        DocumentBuilderFactory factory=  DocumentBuilderFactory.newInstance();
+        try {
+            DocumentBuilder builder =  factory.newDocumentBuilder();
+                /*=======================================================================================================
+                =======================================================================================================
+                                                NOTE: CHECK IF FOLDER EXISTS
+                =======================================================================================================
+                 =======================================================================================================*/
+            Document doc = builder.parse("seedOutput/"+e1+"-"+e2+".xml");
+            doc.getDocumentElement().normalize();
+            //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
+            NodeList nodeList = doc.getElementsByTagName("Seed");
+            for(int i = 0; i< nodeList.getLength();i++) {
+                Node nNode = nodeList.item(i);
+                //System.out.println("Node Name: " + nNode.getNodeName());
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                    //System.out.println("I am here");
+                    Element eElement = (Element) nNode;
+                    int eCount= eElement.getElementsByTagName("Pattern").getLength();
+                    for(int j=0; j<eCount;j++){
+                        //System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                        matches.add(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
+                    }
+
+                }
+            }
+        } catch (ParserConfigurationException | IOException e) {
+            e.printStackTrace();
+        } catch (org.xml.sax.SAXException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     /*=============================
