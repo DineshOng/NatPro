@@ -441,7 +441,6 @@
 	
 			baclCtr++;
 			
-			console.log(pValue);
 			if (pValue == 0) {
 				
 				var newRow = '<div class="form-group form-row">';
@@ -518,7 +517,6 @@
 									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
 								   '</div>'+
 							   '</div>';
-							   
 				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
 							 	'<div class="form-group form-row">'+
 									 '<div class="col-3"> </div>'+
@@ -529,7 +527,7 @@
 					  				 '</div>'+
 									 '<div class="col-4">'+
 										 '<label for="CellLine">Cell Line</label>'+
-					  						 '<input type="text" class="form-control" id="CellLine" placeholder="" name="cellLine[0][0][0]">'+
+					  						 '<input type="text" class="form-control" id="CellLine" placeholder="" name="cellLine['+pValue+']['+speciesArr[pValue]+'][0]">'+
 					  						 '<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
 					  						 '<input type="hidden" name="lengthBC['+pValue+']['+speciesArr[pValue]+']" value="'+speciesArr2[pValue][speciesArr[pValue]]+'">'+
 									 '</div>'+
@@ -545,12 +543,12 @@
 								   '<div class="col-5">'+
 									   '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
 									   '<input type="text" class="form-control" id="ChemicalCompound'+ ccCtr +'" placeholder="" name="compound['+pValue+']['+speciesArr[pValue]+']">'+
-									   '<button id="chemicalCompoundAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
+									   '<button id="chemicalCompoundAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
 									   '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
 									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
 								   '</div>'+
 							   '</div>';
-							   
+							  
 				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
 							 	'<div class="form-group form-row">'+
 									 '<div class="col-3"> </div>'+
@@ -567,7 +565,7 @@
 									 '</div>'+
 								 '</div>'+
 							 '</div>';							
-							 
+							 console.log(speciesArr[pValue]);
 								
 				var chemCompFields = chemComp + bioAct;
 	
@@ -606,7 +604,7 @@
 												   '<option value="${plantPartsList}">${plantPartsList}</option>'+
 											   '</c:forEach>'+
 										   '</select>'+
-										   '<input type="hidden" name="speciesCtr" value="0">'+
+										   '<input type="hidden" name="speciesCtr" value="'+sCtr+'">'+
 									   '</div>'+
 									   '<div class="col-3">'+
 											   '<label for="SpeciesPlantPartOther['+sCtr+']">Species Plant Part (Other)</label>'+
