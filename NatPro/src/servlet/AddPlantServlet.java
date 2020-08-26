@@ -242,7 +242,7 @@ public class AddPlantServlet extends HttpServlet {
 				if (request.getParameter("preparation[" + i + "]") != null
 						&& !request.getParameter("preparation[" + i + "]").equals("")) {
 					String preparation = request.getParameter("preparation[" + i + "]");
-					allPreparation = allPreparation.concat(preparation + " of " + commonPlantNameIndiv + " ");
+					allPreparation = allPreparation.concat(preparation +  " ");
 					if (request.getParameter("prepPart[" + i + "]") != null) {
 						String prepPart = request.getParameter("prepPart[" + i + "]");
 						prepPartIndiv = prepPart.trim().toLowerCase().replaceAll(" ", "_");

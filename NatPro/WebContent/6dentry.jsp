@@ -1,262 +1,275 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Based from template.jsp -->
+
+
+<!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Required meta tags -->
+<meta charset="utf-8">
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-<title>NatPro - Materialize</title>
-
-<!-- CSS  -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Varela+Round"
 	rel="stylesheet">
-<link href="css/materialize.css" type="text/css" rel="stylesheet"
-	media="screen,projection" />
-<link href="css/style.css" type="text/css" rel="stylesheet"
-	media="screen,projection" />
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="DataTables/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="css/navbar.css" />
+
+<title>NatPro : ${searchKey}</title>
 </head>
 <body>
-	<%@include file="includeNavBar.html"%>
-	<div class="section" id="index-banner">
-		<div class="container row center">
-			<h5>Plant Entry</h5>
-			<h3>${medPlantsList.get(0).getMedicinalPlant()}</h3>
+	<!-- INCLUDE NAV BAR HTML -->
+	<%@include file="navbarnix.html"%>
+
+	<div class="jumbotron bg-success">
+		<h1 class="display-4 text-white text-center">${medPlantsList.get(0).getMedicinalPlant()}</h1>
+	</div>
+	<div class="d-flex flex-row list-group text-center">
+		<a class="list-group-item list-group-item-action active"
+			id="list-home-list" data-toggle="list" href="#taxInfo" role="tab"
+			aria-controls="TaxonomicInformation">Taxonomic Information</a> <a
+			class="list-group-item list-group-item-action" id="list-profile-list"
+			data-toggle="list" href="#plantName" role="tab"
+			aria-controls="ScientificName">Scientific/Common Name(s)</a> <a
+			class="list-group-item list-group-item-action"
+			id="list-messages-list" data-toggle="list" href="#location"
+			role="tab" aria-controls="Location">Location(s)</a> <a
+			class="list-group-item list-group-item-action"
+			id="list-settings-list" data-toggle="list" href="#bioAct" role="tab"
+			aria-controls="BiologicalActivities">Biological Activities</a> <a
+			class="list-group-item list-group-item-action"
+			id="list-settings-list" data-toggle="list" href="#prep" role="tab"
+			aria-controls="Preparation">Preparation(s)</a> <a
+			class="list-group-item list-group-item-action"
+			id="list-settings-list" data-toggle="list" href="#chemComp"
+			role="tab" aria-controls="ChemicalCompounds">Chemical Compound(s)</a>
+		<a class="list-group-item list-group-item-action"
+			id="list-settings-list" data-toggle="list" href="#photos" role="tab"
+			aria-controls="Photos">Photos</a>
+	</div>
+	<div class="tab-content" id="nav-tabContent">
+		<div class="tab-pane fade show active" id="taxInfo" role="tabpanel"
+			aria-labelledby="list-home-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover w-25">
+					<thead>
+						<tr>
+							<td>
+								<h4>Taxonomic Information</h4>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Family</th>
+							<td class="center">${medPlantsList.get(0).getSpecies().get(0).getFamily()}</td>
+						</tr>
+						<tr>
+							<th>Genus</th>
+							<td class="center">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
-		<div class="row">
-			<div class="col s12">
-				<ul class="tabs">
-					<li class="tab col"><a href="#taxInfo">Taxonomic
-							Information</a></li>
-					<li class="tab col"><a href="#plantName">Scientific/Common
-							Name(s)</a></li>
-					<li class="tab col"><a href="#location">Location(s)</a></li>
-					<li class="tab col"><a href="#bioAct">Biological
-							Activities</a></li>
-					<li class="tab col"><a href="#prep">Preparation(s)</a></li>
-					<li class="tab col"><a href="#chemComp">Chemical
-							Compound(s)</a></li>
-					<li class="tab col"><a href="#photos">Photos</a></li>
-				</ul>
+		<div class="tab-pane fade" id="plantName" role="tabpanel"
+			aria-labelledby="list-profile-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover w-25 text-center">
+					<thead>
+						<tr>
+							<td>
+								<h4>Scientific Name(s)</h4>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
+								var="speciesList">
+								<tr>
+									<td><i>${speciesList.getSpecie()}</i></td>
+								</tr>
+							</c:forEach>
+						</tr>
+					</tbody>
+				</table>
 			</div>
-			<div id="taxInfo" class="row center">
-				<div class="col s6 offset-s3">
-					<table class="highlight">
-						<thead>
-							<tr>
-								<th colspan="2" class="center"><h4>Taxonomic
-										Information</h4></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th id="tableSmallWidth" class="center">Family</th>
-								<td class="center">${medPlantsList.get(0).getSpecies().get(0).getFamily()}</td>
-							</tr>
-							<tr>
-								<th id="tableSmallWidth" class="center">Genus</th>
-								<td class="center">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div id="plantName" class="row center">
-				<div class="col s4 offset-s2">
-					<table class="highlight centered">
-						<thead>
-							<tr>
-								<th><h4>Scientific Name(s)</h4></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<c:forEach items="${medPlantsList.get(0).getSpecies()}"
-									var="speciesList">
-									<tr>
-										<td><i>${speciesList.getSpecie()}</i></td>
-									</tr>
-								</c:forEach>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="col s4">
-					<table class="highlight centered">
-						<thead>
-							<tr>
-								<th><h4>Common Name(s)</h4></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<c:forEach items="${medPlantsList.get(0).getSpecies()}">
-									<tr>
-										<td>${medPlantsList.get(0).getMedicinalPlant()}</td>
-									</tr>
-								</c:forEach>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div id="location" class="row center">
-				<div class="col s4 offset-s4">
-					<table class="highlight centered">
-						<thead>
-							<tr>
-								<th><h4>Location(s)</h4></th>
-							</tr>
-						</thead>
-						<tbody>
+		</div>
+		<div class="tab-pane fade" id="location" role="tabpanel"
+			aria-labelledby="list-messages-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover w-25 text-center">
+					<thead>
+						<tr>
+							<td>
+								<h4>Location(s)</h4>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
 							<c:forEach items="${medPlantsList.get(0).getLocations()}"
 								var="locationsList">
 								<tr>
 									<td>${locationsList}</td>
 								</tr>
 							</c:forEach>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div id="bioAct" class="row center">
-				<div class="col s6 offset-s3">
-					<table class="highlight centered">
-						<thead>
-							<tr>
-								<th><h4>Biological Activities</h4></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>biological activity</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div id="prep" class="row center">
-				<div class="col s10 offset-s1">
-					<table class="highlight">
-						<thead>
-							<tr>
-								<th colspan="4"><h4>Preparation</h4></th>
-							</tr>
-							<tr>
-								<th>Preparation</th>
-								<th>Utilized Plant Part</th>
-								<th>Illness</th>								
-							</tr>
-						</thead>
-						<tbody>
-							<!-- medPlants.get(0).getPreparations().get(0).getPreparation() -->
-							<c:forEach items="${medPlantsList.get(0).getPreparations()}"
-								var="prepList">
-								<c:forEach items="${prepList.getIllness()}"
-									var="illnessList">
-									<tr>
-										<td>${prepList.getPreparation()}</td>
-										<td>${prepList.getUtilizedPlantPart()}</td>
-										<td>${illnessList}</td>										
-									</tr>
-								</c:forEach>
-							</c:forEach>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div id="chemComp" class="row center">
-				<div class="col s12">
-					<table class="highlight centered">
-						<thead>
-							<tr>
-								<th colspan="9"><h4>Chemical Compounds</h4></th>
-							</tr>
-							<tr>
-								<th>Part</th>
-								<th>Structure</th>
-								<th>Name</th>
-								<th>Formula</th>
-								<th>Molecular Weight</th>
-								<th>XLoGP</th>
-								<th>TPSA</th>
-								<th># HBA</th>
-								<th># HDB</th>
-								<th># Rotatable Bonds</th>
-							</tr>
-						</thead>
-						<tbody>
-							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
-								var="speciesList">
-								<c:forEach items="${speciesList.getSpeciesParts()}"
-									var="speciesPartList">
-									<c:forEach items="${speciesPartList.getCompounds()}"
-										var="compoundsList">
-										<tr>
-											<td>${speciesPartList.getPlantPart()}</td>
-											<td></td>
-											<td><a href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
-											<td>${compoundsList.getMolForm()}</td>
-											<td>${compoundsList.getMolWeight()}</td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-									</c:forEach>
-								</c:forEach>
-							</c:forEach>
-
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div id="photos" class="row center">
-				<div class="col s6 offset-s3">
-					<c:forEach items="${photos}" var="item">
-				    	<img src="${item}">
-					</c:forEach>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="section green accent-4">
-		<div class="container row center">
-			<div class="col s6 offset-s3">
-				<table class="highlight centered">
-					<thead>
-						<tr>
-							<th colspan="2"><h4>References</h4></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Document</td>
-							<td><a class="waves-effect waves-light btn">View
-									Docuument</a></td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
+		<div class="tab-pane fade" id="bioAct" role="tabpanel"
+			aria-labelledby="list-settings-list">...</div>
+		<div class="tab-pane fade" id="prep" role="tabpanel"
+			aria-labelledby="list-settings-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th><h4>Preparation</h4></th>
+						</tr>
+						<tr>
+							<th>Preparation</th>
+							<th>Utilized Plant Part</th>
+							<th>Illness</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<c:forEach items="${medPlantsList.get(0).getPreparations()}"
+							var="prepList">
+							<c:forEach items="${prepList.getIllness()}" var="illnessList">
+								<tr>
+									<td>${prepList.getPreparation()}</td>
+									<td>${prepList.getUtilizedPlantPart()}</td>
+									<td>${illnessList}</td>
+								</tr>
+							</c:forEach>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="chemComp" role="tabpanel"
+			aria-labelledby="list-settings-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th><h4>Chemical Compounds</h4></th>
+						</tr>
+						<tr>
+							<th>Part</th>
+							<th>Structure</th>
+							<th>Name</th>
+							<th>Formula</th>
+							<th>Molecular Weight</th>
+							<th>XLoGP</th>
+							<th>TPSA</th>
+							<th># HBA</th>
+							<th># HDB</th>
+							<th># Rotatable Bonds</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${medPlantsList.get(0).getSpecies()}"
+							var="speciesList">
+							<c:forEach items="${speciesList.getSpeciesParts()}"
+								var="speciesPartList">
+								<c:forEach items="${speciesPartList.getCompounds()}"
+									var="compoundsList">
+									<tr>
+										<td>${speciesPartList.getPlantPart()}</td>
+										<td></td>
+										<td><a
+											href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
+										<td>${compoundsList.getMolForm()}</td>
+										<td>${compoundsList.getMolWeight()}</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</c:forEach>
+							</c:forEach>
+						</c:forEach>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="photos" role="tabpanel"
+			aria-labelledby="list-settings-list">...</div>
 	</div>
-	
-	
-	
-	
-	
-	<%@include file="includeFooter.html"%>
-	<%@include file="includeScripts.html"%>
-	<script>
-		$(document).ready(function() {
-			$('.tabs').tabs();
+	<!-- INCLUDE FOOTER HTML -->
+	<%@include file="_includeFooter.html"%>
+
+
+	<script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        $('#table_id').DataTable();
+	        //$('.hid').css('display', 'none');
+	    });
+	    
+	    function func_submit() {
+	    	$("#searchForm").submit();
+	    }
+	    
+		$(document).ready(function(){
+			var dropdown = $(".navbar-right .dropdown");
+			var toogleBtn = $(".navbar-right .dropdown-toggle");
+			
+			// Toggle search and close icon for search dropdown
+			dropdown.on("show.bs.dropdown", function(e){
+				toogleBtn.toggleClass("hide");
+			});
+			dropdown.on("hide.bs.dropdown", function(e){
+				toogleBtn.addClass("hide");
+				toogleBtn.first().removeClass("hide");
+			});
 		});
+		
+		function ddfunc(x){
+			if(x==1) {
+				$("#ddtext").html("Plant Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(1);
+			} else if(x==2) {
+				$("#ddtext").html("Scientific Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(2);
+			} else if(x==3) {
+				$("#ddtext").html("Genus <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(3);
+			} else if(x==4) {
+				$("#ddtext").html("Family <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(4);
+			} else if(x==5) {
+				$("#ddtext").html("Compound <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(5);
+			} else if(x==6) {
+				$("#ddtext").html("Location <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(6);
+			} else if(x==7) {
+				$("#ddtext").html("Biological Activites <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(7);
+			}
+		}
+		
+		$("#search").val('${searchKey}');
+		ddfunc(${searchCategory});
 	</script>
-	
-	
+
 </body>
 </html>
