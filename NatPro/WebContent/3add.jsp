@@ -28,8 +28,9 @@
 	<%@include file="navbarnix.html"%>
 
 	<!-- HTML CODE -->
-	<div class="jumbotron jumbotron-fluid" style="text-align: center">
-		<div class="container" style="padding-bottom: 30px">
+	<div class="jumbotron jumbotron-fluid bg-success"
+		style="text-align: center">
+		<div class="container text-white" style="padding-bottom: 30px">
 			<h1 class="display-4">Add</h1>
 			<p class="lead">Manually add a plant here</p>
 		</div>
@@ -247,7 +248,33 @@
 					</div>
 				</div>
 				<br>
-				<button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+				<button type="button" class="btn btn-outline-light btn-lg btn-block" data-toggle="modal"
+					data-target="#exampleModal">
+					<h3 class="mt-2">
+						<b>Submit</b>
+					</h3>
+				</button>
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1"
+					aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Adding New Plant Entry</h5>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">Are you sure you want to proceed and add this plant?</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-outline-danger"
+									data-dismiss="modal">X  Go Back</button>
+								<button type="submit" class="btn btn-success">&#10003 Add</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>
