@@ -54,9 +54,9 @@
 						<c:forEach items="${genusList}" var="genusList">
 							<tr>
 								<td><a
-									href="ViewPlantServlet?genus=${genusList.getGenus()}">${genusList.getGenus()}</a></td>
+									href="ViewGenusServlet?genus=${genusList.getGenus()}">${genusList.getGenus()}</a></td>
 								<td><a
-									href="ViewPlantServlet?genus=${genusList.getFamily().getFamily()}">${genusList.getFamily().getFamily()}</a></td>
+									href="ViewFamilyServlet?family=${genusList.getFamily().getFamily()}">${genusList.getFamily().getFamily()}</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -71,7 +71,7 @@
 						<c:forEach items="${familyList}" var="familyList">
 							<tr>
 								<td><a
-									href="ViewPlantServlet?genus=${familyList.getFamily()}">${familyList.getFamily()}</a></td>
+									href="ViewFamilyServlet?family=${familyList.getFamily()}">${familyList.getFamily()}</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

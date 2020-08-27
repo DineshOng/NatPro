@@ -1,95 +1,132 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- Based from template.jsp -->
+
+
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>NatPro - Materialize</title>
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Varela+Round"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="DataTables/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
-        <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    </head>
-    <body>
-        <%@include file="includeNavBar.html"%>
-        <div class="section no-pad-bot green darken-1" id="index-banner">
-            <div class="container">
-                <!--<br><br>-->
-                <div class="center">
-                    <span class="white-text" style="padding-right:100px">(view by)</span>
-                    <h1 class="header center white-text" id="noMarginTop">Genus</h1>
-                </div>
-                <div class="row center white-text">
-                    <table class="stripped highlight">
-                        <thead>
-                            <tr>
-                                <th>Genus</th>
-                                <th>Family</th>
-                                <th>Species</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Genus</td>
-                                <td>Family</td>
-                                <td>Species</td>
-                                <td><i class="material-icons right">edit</i></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!--
-                    <div class="row center">
-                        <a href="http://materializecss.com/getting-started.jsp" id="download-button" class="btn-large waves-effect waves-light green darken-3">Get Started</a>
-                    </div>
-                    <br><br>
-                -->
-            </div>
-        </div>
+<title>NatPro : ${searchKey}</title>
+</head>
+<body>
+	<!-- INCLUDE NAV BAR HTML -->
+	<%@include file="navbarnix.html"%>
+
+	<div class="jumbotron bg-success">
+		<h3 class="text-white text-center">Genus</h3>
+		<h1 class="display-4 text-white text-center">${genus}</h1>
+	</div>
+	<div class="d-flex flex-row list-group text-center ">
+		<a
+			class="list-group-item list-group-item-action list-group-item-success active"
+			id="list-home-list" data-toggle="list" href="#plantList" role="tab"
+			aria-controls="TaxonomicInformation">Plant List</a>
+	</div>
+	<div class="tab-content" id="nav-tabContent">
+		<div class="tab-pane fade show active" id="plantList" role="tabpanel"
+			aria-labelledby="list-home-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover w-25">
+					<thead>
+						<tr>
+							<th>Family</th>
+							<th>Genus</th>
+							<th>Plant Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${medPlantsList}" var="medPlantsList">
+							<tr>
+								<td><a
+									href="ViewFamilyServlet?family=${medPlantsList.getSpecies().get(0).getFamily()}">${medPlantsList.getSpecies().get(0).getFamily()}</a></td>
+								<td><a
+									href="ViewGenusServlet?genus=${medPlantsList.getSpecies().get(0).getGenus()}">${medPlantsList.getSpecies().get(0).getGenus()}</a></td>
+								<td><a
+									href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="photos" role="tabpanel"
+			aria-labelledby="list-settings-list">...</div>
+	</div>
+	<!-- INCLUDE FOOTER HTML -->
+	<%@include file="_includeFooter.html"%>
 
 
-        <div class="container">
-            <div class="section">
+	<script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
-                <!--   Icon Section   -->
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                            <h5 class="center">Speeds up development</h5>
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        $('#table_id').DataTable();
+	        //$('.hid').css('display', 'none');
+	    });
+	    
+	    function func_submit() {
+	    	$("#searchForm").submit();
+	    }
+	    
+		$(document).ready(function(){
+			var dropdown = $(".navbar-right .dropdown");
+			var toogleBtn = $(".navbar-right .dropdown-toggle");
+			
+			// Toggle search and close icon for search dropdown
+			dropdown.on("show.bs.dropdown", function(e){
+				toogleBtn.toggleClass("hide");
+			});
+			dropdown.on("hide.bs.dropdown", function(e){
+				toogleBtn.addClass("hide");
+				toogleBtn.first().removeClass("hide");
+			});
+		});
+		
+		function ddfunc(x){
+			if(x==1) {
+				$("#ddtext").html("Plant Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(1);
+			} else if(x==2) {
+				$("#ddtext").html("Scientific Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(2);
+			} else if(x==3) {
+				$("#ddtext").html("Genus <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(3);
+			} else if(x==4) {
+				$("#ddtext").html("Family <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(4);
+			} else if(x==5) {
+				$("#ddtext").html("Compound <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(5);
+			} else if(x==6) {
+				$("#ddtext").html("Location <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(6);
+			} else if(x==7) {
+				$("#ddtext").html("Biological Activites <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(7);
+			}
+		}
+		
+		$("#search").val('${searchKey}');
+		ddfunc(${searchCategory});
+	</script>
 
-                            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                            <h5 class="center">User Experience Focused</h5>
-
-                            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                            <h5 class="center">Easy to work with</h5>
-
-                            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <br><br>
-        </div>
-
-        <%@include file="includeFooter.html"%>
-		<%@include file="includeScripts.html"%>
-
-    </body>
+</body>
 </html>

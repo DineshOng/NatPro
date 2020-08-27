@@ -28,15 +28,18 @@
 	<%@include file="navbarnix.html"%>
 
 	<div class="jumbotron bg-success">
+		<h3 class="text-white text-center">Plant</h3>
 		<h1 class="display-4 text-white text-center">${medPlantsList.get(0).getMedicinalPlant()}</h1>
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
-		<a class="list-group-item list-group-item-action list-group-item-success active"
+		<a
+			class="list-group-item list-group-item-action list-group-item-success active"
 			id="list-home-list" data-toggle="list" href="#taxInfo" role="tab"
 			aria-controls="TaxonomicInformation">Taxonomic Information</a> <a
-			class="list-group-item list-group-item-action list-group-item-success" id="list-profile-list"
-			data-toggle="list" href="#plantName" role="tab"
-			aria-controls="ScientificName">Scientific/Common Name(s)</a> <a
+			class="list-group-item list-group-item-action list-group-item-success"
+			id="list-profile-list" data-toggle="list" href="#plantName"
+			role="tab" aria-controls="ScientificName">Scientific/Common
+			Name(s)</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-messages-list" data-toggle="list" href="#location"
 			role="tab" aria-controls="Location">Location(s)</a> <a
@@ -49,7 +52,8 @@
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#chemComp"
 			role="tab" aria-controls="ChemicalCompounds">Chemical Compound(s)</a>
-		<a class="list-group-item list-group-item-action list-group-item-success"
+		<a
+			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#photos" role="tab"
 			aria-controls="Photos">Photos</a>
 	</div>
@@ -68,11 +72,13 @@
 					<tbody>
 						<tr>
 							<th>Family</th>
-							<td class="center">${medPlantsList.get(0).getSpecies().get(0).getFamily()}</td>
+							<td class="center"><a
+								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">${medPlantsList.get(0).getSpecies().get(0).getFamily()}</a></td>
 						</tr>
 						<tr>
 							<th>Genus</th>
-							<td class="center">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</td>
+							<td class="center"><a
+								href="ViewGenusServlet?genus=${medPlantsList.get(0).getSpecies().get(0).getGenus()}">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</a></td>
 						</tr>
 					</tbody>
 				</table>
