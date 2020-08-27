@@ -127,7 +127,42 @@
 			</div>
 		</div>
 		<div class="tab-pane fade" id="bioAct" role="tabpanel"
-			aria-labelledby="list-settings-list">...</div>
+			aria-labelledby="list-settings-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th><h4>Biological Activities</h4></th>
+						</tr>
+						<tr>
+							<th>Chemical Compound</th>
+							<th>Biological Activity</th>
+							<th>Cell Line</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${medPlantsList.get(0).getSpecies()}"
+							var="speciesList">
+							<c:forEach items="${speciesList.getSpeciesParts()}"
+								var="speciesPartList">
+								<c:forEach items="${speciesPartList.getCompounds()}"
+									var="compoundsList">
+									<c:forEach items="${compoundsList.getBioActs()}"
+										var="bioActsList">
+										<tr>
+											<td><a
+												href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
+											<td>${bioActsList.getBiologicalActivity()}</td>
+											<td>${bioActsList.getCellLine().getCellLine()}</td>
+										</tr>
+									</c:forEach>
+								</c:forEach>
+							</c:forEach>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
 		<div class="tab-pane fade" id="prep" role="tabpanel"
 			aria-labelledby="list-settings-list">
 			<div class="d-flex justify-content-center">

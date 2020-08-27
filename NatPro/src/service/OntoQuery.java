@@ -18,6 +18,8 @@ import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
 import edu.stanford.smi.protegex.owl.model.OWLObjectProperty;
 import edu.stanford.smi.protegex.owl.model.RDFProperty;
 import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
+import model.BiologicalActivity;
+import model.CellLine;
 import model.Compound;
 import model.Family;
 import model.Genus;
@@ -198,7 +200,7 @@ public class OntoQuery {
 
 	public List<String> getCompounds(String MedicinalPlant) throws SQWRLException {
 		HashSet<String> values = new HashSet<String>(); // This set will only be used to check for
-																		// duplicate compounds
+														// duplicate compounds
 		List<MedicinalPlant> medicinalPlantList = searchMedicinalPlant(MedicinalPlant);
 
 		try {
@@ -576,22 +578,25 @@ public class OntoQuery {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
-						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
-
 						if (compoundIndiv.equalsIgnoreCase(compoundName.toLowerCase())) {
 							// System.out.println(compoundIndiv);
 							compound = new Compound(compoundIndiv);
+							try {
+								Collection compoundSynCol = individual
+										.getPropertyValues(datatypeProperty_CompoundSynonym);
+								// get compound synonyms
+								HashSet<String> synonyms = new HashSet<String>();
+								for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
+									String syno = jtt.next().toString();
+									// System.out.println("dis>" + syno);
+									// if (!syno.equalsIgnoreCase(compoundIndiv))
 
-							// get compound synonyms
-							HashSet<String> synonyms = new HashSet<String>();
-							for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
-								String syno = jtt.next().toString();
-								// System.out.println("dis>" + syno);
-								// if (!syno.equalsIgnoreCase(compoundIndiv))
-
-								synonyms.add(syno);
+									synonyms.add(syno);
+								}
+								compound.setCompoundSynonyms(synonyms);
+							} catch (Exception e) {
+								System.err.println("Syn err");
 							}
-							compound.setCompoundSynonyms(synonyms);
 
 							try {
 								if (!individual.getPropertyValue(dp_pubCID).toString().isEmpty())
@@ -921,6 +926,7 @@ public class OntoQuery {
 		Collection speciesPartCol = Species.getPropertyValues(hasChildPlantPart);
 		for (Iterator it = speciesPartCol.iterator(); it.hasNext();) {
 			OWLIndividual speciesPartIndiv = (OWLIndividual) it.next();
+
 			// Enter hasPlantPart object
 			OWLIndividual plantPartIndiv = (OWLIndividual) speciesPartIndiv.getPropertyValue(hasPlantPart);
 			// Get datatype property from hasPlantPart object
@@ -945,9 +951,11 @@ public class OntoQuery {
 		Collection compoundCol = SpeciesPart.getPropertyValues(hasCompound);
 		for (Iterator it = compoundCol.iterator(); it.hasNext();) {
 			OWLIndividual compoundIndiv = (OWLIndividual) it.next();
-			String comp = compoundIndiv.getBrowserText().replaceAll("http.+#", "");
-			comp = comp.replaceAll("\\.", ",");
-			comp = comp.replaceAll("_", " ");
+			String comp = compoundIndiv.getPropertyValue(datatypeProperty_Compound).toString();
+			System.out.println(comp);
+//			String comp = compoundIndiv.getBrowserText().replaceAll("http.+#", "");
+//			comp = comp.replaceAll("\\.", ",");
+//			comp = comp.replaceAll("_", " ");
 			if (comp.split(" ")[0].equals("mixtures")) { // if the compound is a mixture, we should get property
 															// "includesCompound"
 				Collection includeCompoundCol = compoundIndiv.getPropertyValues(includesCompound);
@@ -957,28 +965,77 @@ public class OntoQuery {
 					includecomp = includecomp.replaceAll("\\.", ",");
 					includecomp = includecomp.replaceAll("_", " ");
 					Compound compound = getCompound(includecomp);
+					HashSet<BiologicalActivity> bioActs = new HashSet<BiologicalActivity>();
+					bioActs.addAll(getBioActList(includeCompoundIndiv));
+					compound.setBioActs(bioActs);
 					compounds.add(compound);
 					System.out.println(compound.getCompoundName() + "@");
 				}
 			} else {
 				Compound compound = getCompound(comp);
-
-				HashSet<String> compoundSynonyms = new HashSet<String>();
-				Collection compoundSynCol = compoundIndiv.getPropertyValues(datatypeProperty_CompoundSynonym);
-				for (Iterator jt = compoundSynCol.iterator(); jt.hasNext();) {
-					comp = jt.next().toString();
-					if (comp.equalsIgnoreCase(compound.getCompoundName())) {
-						compound.setCompoundName(comp);
+				HashSet<BiologicalActivity> bioActs = new HashSet<BiologicalActivity>();
+				bioActs.addAll(getBioActList(compoundIndiv));
+				compound.setBioActs(bioActs);
+				try {
+					HashSet<String> compoundSynonyms = new HashSet<String>();
+					Collection compoundSynCol = compoundIndiv.getPropertyValues(datatypeProperty_CompoundSynonym);
+					for (Iterator jt = compoundSynCol.iterator(); jt.hasNext();) {
+						comp = jt.next().toString();
+						if (comp.equalsIgnoreCase(compound.getCompoundName())) {
+							compound.setCompoundName(comp);
+						}
+						compoundSynonyms.add(comp);
 					}
-					compoundSynonyms.add(comp);
+					compound.setCompoundSynonyms(compoundSynonyms);
+				} catch (Exception e) {
+
 				}
-				compound.setCompoundSynonyms(compoundSynonyms);
 				compounds.add(compound);
 
 				System.out.println(compound.getCompoundName() + "@");
 			}
 		}
 		return compounds;
+	}
+
+	public ArrayList<BiologicalActivity> getBioActList(OWLIndividual Compound) {
+		RDFProperty hasBiologicalActivity = owlModel.getRDFProperty("hasBiologicalActivity");
+		RDFProperty affects = owlModel.getRDFProperty("affects");
+
+		RDFProperty datatypeProperty_BiologicalActivity = owlModel
+				.getRDFProperty("datatypeProperty_BiologicalActivity");
+		RDFProperty datatypeProperty_CellLine = owlModel.getRDFProperty("datatypeProperty_CellLine");
+
+		ArrayList<BiologicalActivity> bioActs = new ArrayList<BiologicalActivity>();
+		BiologicalActivity bioAct = new BiologicalActivity("");
+		try { //check if the compound has biological activity
+			Collection BioActCol = Compound.getPropertyValues(hasBiologicalActivity);
+			for (Iterator jt = BioActCol.iterator(); jt.hasNext();) {
+				OWLIndividual bioActIndiv = (OWLIndividual) jt.next();
+				try { //check if the biological activity has data property
+					bioAct = new BiologicalActivity(
+							bioActIndiv.getPropertyValue(datatypeProperty_BiologicalActivity).toString());
+				} catch (Exception e) { //if none, just get the object name
+					bioAct = new BiologicalActivity(bioActIndiv.getBrowserText().replaceAll("_", " "));
+				}
+				try { //check if there is a cell line object
+					OWLIndividual CellLineIndiv = (OWLIndividual) bioActIndiv.getPropertyValue(affects);
+					try { //check if the cell line has data property
+						CellLine cellLine = new CellLine(
+								CellLineIndiv.getPropertyValue(datatypeProperty_CellLine).toString());
+						bioAct.setCellLine(cellLine);
+					} catch (Exception e) { //if none, just get the object name
+						CellLine cellLine = new CellLine(CellLineIndiv.getBrowserText().replaceAll("_", " "));
+						bioAct.setCellLine(cellLine);
+					}
+
+				} catch (Exception e) { //if none, disregard cellline and continue to the next
+				}
+				bioActs.add(bioAct);
+			}
+		} catch (Exception e) { //if none, disregard bioact and continue to the next
+		}
+		return bioActs;
 	}
 
 	public ArrayList<Preparation> getPreparationList(OWLIndividual MedicinalPlant) {
