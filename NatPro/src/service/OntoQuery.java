@@ -183,7 +183,9 @@ public class OntoQuery {
 							Collection locations = individual.getPropertyValues(isLocatedIn);
 							for (Iterator kt = locations.iterator(); kt.hasNext();) {
 								OWLIndividual locIndiv = (OWLIndividual) kt.next();
-								values.add(locIndiv.getPropertyValue(datatypeProperty_Location).toString());
+								values.add(locIndiv.getPropertyValue(datatypeProperty_Location).toString()
+										.substring(0, 1).toUpperCase()
+										+ locIndiv.getPropertyValue(datatypeProperty_Location).toString().substring(1));
 							}
 
 						}
@@ -1008,32 +1010,32 @@ public class OntoQuery {
 
 		ArrayList<BiologicalActivity> bioActs = new ArrayList<BiologicalActivity>();
 		BiologicalActivity bioAct = new BiologicalActivity("");
-		try { //check if the compound has biological activity
+		try { // check if the compound has biological activity
 			Collection BioActCol = Compound.getPropertyValues(hasBiologicalActivity);
 			for (Iterator jt = BioActCol.iterator(); jt.hasNext();) {
 				OWLIndividual bioActIndiv = (OWLIndividual) jt.next();
-				try { //check if the biological activity has data property
+				try { // check if the biological activity has data property
 					bioAct = new BiologicalActivity(
 							bioActIndiv.getPropertyValue(datatypeProperty_BiologicalActivity).toString());
-				} catch (Exception e) { //if none, just get the object name
+				} catch (Exception e) { // if none, just get the object name
 					bioAct = new BiologicalActivity(bioActIndiv.getBrowserText().replaceAll("_", " "));
 				}
-				try { //check if there is a cell line object
+				try { // check if there is a cell line object
 					OWLIndividual CellLineIndiv = (OWLIndividual) bioActIndiv.getPropertyValue(affects);
-					try { //check if the cell line has data property
+					try { // check if the cell line has data property
 						CellLine cellLine = new CellLine(
 								CellLineIndiv.getPropertyValue(datatypeProperty_CellLine).toString());
 						bioAct.setCellLine(cellLine);
-					} catch (Exception e) { //if none, just get the object name
+					} catch (Exception e) { // if none, just get the object name
 						CellLine cellLine = new CellLine(CellLineIndiv.getBrowserText().replaceAll("_", " "));
 						bioAct.setCellLine(cellLine);
 					}
 
-				} catch (Exception e) { //if none, disregard cellline and continue to the next
+				} catch (Exception e) { // if none, disregard cellline and continue to the next
 				}
 				bioActs.add(bioAct);
 			}
-		} catch (Exception e) { //if none, disregard bioact and continue to the next
+		} catch (Exception e) { // if none, disregard bioact and continue to the next
 		}
 		return bioActs;
 	}

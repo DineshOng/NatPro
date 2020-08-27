@@ -30,26 +30,26 @@
 	<div class="jumbotron bg-success">
 		<h1 class="display-4 text-white text-center">${medPlantsList.get(0).getMedicinalPlant()}</h1>
 	</div>
-	<div class="d-flex flex-row list-group text-center">
-		<a class="list-group-item list-group-item-action active"
+	<div class="d-flex flex-row list-group text-center ">
+		<a class="list-group-item list-group-item-action list-group-item-success active"
 			id="list-home-list" data-toggle="list" href="#taxInfo" role="tab"
 			aria-controls="TaxonomicInformation">Taxonomic Information</a> <a
-			class="list-group-item list-group-item-action" id="list-profile-list"
+			class="list-group-item list-group-item-action list-group-item-success" id="list-profile-list"
 			data-toggle="list" href="#plantName" role="tab"
 			aria-controls="ScientificName">Scientific/Common Name(s)</a> <a
-			class="list-group-item list-group-item-action"
+			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-messages-list" data-toggle="list" href="#location"
 			role="tab" aria-controls="Location">Location(s)</a> <a
-			class="list-group-item list-group-item-action"
+			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#bioAct" role="tab"
 			aria-controls="BiologicalActivities">Biological Activities</a> <a
-			class="list-group-item list-group-item-action"
+			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#prep" role="tab"
 			aria-controls="Preparation">Preparation(s)</a> <a
-			class="list-group-item list-group-item-action"
+			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#chemComp"
 			role="tab" aria-controls="ChemicalCompounds">Chemical Compound(s)</a>
-		<a class="list-group-item list-group-item-action"
+		<a class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#photos" role="tab"
 			aria-controls="Photos">Photos</a>
 	</div>
