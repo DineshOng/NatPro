@@ -3,6 +3,7 @@ package servlet;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileSystems;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
 import model.Compound;
 import model.Family;
 import model.Genus;
@@ -76,6 +78,15 @@ public class SearchServlet extends HttpServlet {
 			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
 //			System.out.println(medPlants.get(0).getPreparations().get(0).getIllness());
 			request.setAttribute("medPlantsList", medPlants);
+		} else if (request.getParameter("searchCategory").equals("2")) {
+			List<String> species = new ArrayList<String>();
+			try {
+				species = q.getAllSynonyms();
+			} catch (SQWRLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			request.setAttribute("speciesList", species);
 		} else if (request.getParameter("searchCategory").equals("3")) {
 			List<Genus> genus = q.searchGenus(searchKey);
 			request.setAttribute("genusList", genus);

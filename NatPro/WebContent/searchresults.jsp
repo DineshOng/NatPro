@@ -1,26 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
-	
-    <title>NatPro : ${searchKey}</title>
-  </head>
-  <body>
-  
-  	 <%@include file="navbarnix.html"%>
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Varela+Round"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="DataTables/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
-    <div id="firstDiv">
-		<table id="table_id" class="table table-striped table-bordered" style="width:100%">
+<title>NatPro : ${searchKey}</title>
+</head>
+<body>
+
+	<%@include file="navbarnix.html"%>
+
+	<div id="firstDiv">
+		<table id="table_id" class="table table-striped table-bordered"
+			style="width: 100%">
 			<c:choose>
 				<c:when test="${searchCategory =='1'}">
 					<thead>
@@ -36,9 +43,24 @@
 									href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
 								<td><c:forEach items="${medPlantsList.getSpecies()}"
 										var="speciesList" varStatus="loop">
-										<i><a href="6dentry.jsp?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a></i>
+										<i><a href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}">${speciesList.getSpecie()}</a></i>
 										<c:if test="${!loop.last}">, </c:if>
 									</c:forEach></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+				<c:when test="${searchCategory =='2'}">
+					<thead>
+						<tr>
+							<th>Scientific Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${speciesList}" var="speciesList">
+							<tr>
+								<td><i><a href="ViewSciPlantServlet?specie=${speciesList}">${speciesList}</a></i>
+								</td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -91,12 +113,13 @@
 								<td><a
 									href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${compoundList.getCompoundNameHTML()}</a></td>
 								<td><c:forEach
-										items="${compoundList.getCompoundSynonyms()}" var="csList" varStatus="loop">
+										items="${compoundList.getCompoundSynonyms()}" var="csList"
+										varStatus="loop">
 										<a
 											href="ViewCompoundServlet?compound=${compoundList.getCompoundName()}">${csList}
-										</a><c:if test="${!loop.last}">, </c:if>
-										</c:forEach>
-								</td>
+										</a>
+										<c:if test="${!loop.last}">, </c:if>
+									</c:forEach></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -104,11 +127,12 @@
 			</c:choose>
 		</table>
 	</div>
-    
-	<script type="text/javascript" src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-    
-    <script type="text/javascript">
+
+	<script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+	<script type="text/javascript">
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();
 	        //$('.hid').css('display', 'none');
@@ -161,6 +185,6 @@
 		$('.hid').css('display', 'none');
 		ddfunc(${searchCategory});
 	</script>
-    
-  </body>
+
+</body>
 </html>

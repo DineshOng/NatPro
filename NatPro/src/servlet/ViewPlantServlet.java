@@ -13,13 +13,14 @@ import com.flickr4java.flickr.FlickrException;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import model.MedicinalPlant;
+import model.Species;
 import service.FlickrService;
 import service.OntoQuery;
 
 /**
  * Servlet implementation class ViewPlantServlet
  */
-@WebServlet("/ViewPlantServlet")
+@WebServlet({"/ViewPlantServlet", "/ViewSciPlantServlet"})
 public class ViewPlantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -51,6 +52,17 @@ public class ViewPlantServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			break;
+		case "/ViewSciPlantServlet":
+			try {
+				viewSciPlant(request, response);
+			} catch (OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (FlickrException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
 		}
@@ -70,19 +82,28 @@ public class ViewPlantServlet extends HttpServlet {
 			throws OntologyLoadException, ServletException, IOException, FlickrException {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("medPlant");
-		System.out.println(searchKey);
 		OntoQuery q = new OntoQuery();
 		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
-		//System.out.println(medPlants.get(0).getSpecies().get(0).getSpeciesParts().get(0).getCompounds().get(0));
+//		System.out.println(medPlants.get(0).getSpecies().get(0).getSpeciesParts().get(0).getCompounds().get(0).getBioActs());
 //		for(MedicinalPlant m: medPlants) {
 //			System.out.println(m.getMedicinalPlant().toString());
 //		}
-		//System.out.println(medPlants.get(0).getSpecies());
-		List<String> photos = new FlickrService(searchKey).getPhotoURL();
-		//System.err.println(photos.get(0));
-		request.setAttribute("photos", photos);
+		// System.out.println(medPlants.get(0).getSpecies());
+//		List<String> photos = new FlickrService(searchKey).getPhotoURL();
+		// System.err.println(photos.get(0));
+//		request.setAttribute("photos", photos);
 		request.setAttribute("medPlantsList", medPlants);
 		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
 	}
 
+	private void viewSciPlant(HttpServletRequest request, HttpServletResponse response)
+			throws OntologyLoadException, ServletException, IOException, FlickrException {
+		// TODO Auto-generated method stub
+		String specieKey = request.getParameter("specie");
+		OntoQuery q = new OntoQuery();
+		Species specie = q.searchSpecie(specieKey);
+		request.setAttribute("SpecieObject", specie);
+		request.setAttribute("specie", specieKey);
+		request.getRequestDispatcher("6dentry-sci.jsp").forward(request, response);
+	}
 }

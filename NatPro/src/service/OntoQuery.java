@@ -864,6 +864,45 @@ public class OntoQuery {
 		return values;
 	}
 
+	public Species searchSpecie(String specie) {
+		Species searchSpecie = new Species(specie);
+
+		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
+		RDFProperty belongsToGenus = owlModel.getRDFProperty("belongsToGenus");
+		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
+		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
+		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Species")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					OWLIndividual specieIndiv = (OWLIndividual) jt.next();
+					if (specieIndiv.getPropertyValue(datatypeProperty_Synonym).equals(specie)) {
+						try { // check if specie has genus
+							OWLIndividual genusIndiv = (OWLIndividual) specieIndiv.getPropertyValue(belongsToGenus);
+							searchSpecie.setGenus(genusIndiv.getPropertyValue(datatypeProperty_Genus).toString());
+							try { // check if specie has family
+								OWLIndividual familyIndiv = (OWLIndividual) genusIndiv
+										.getPropertyValue(belongsToFamily);
+								searchSpecie
+										.setFamily(familyIndiv.getPropertyValue(datatypeProperty_Family).toString());
+							} catch (Exception e) { // if no family, disregard then proceed
+
+							}
+						} catch (Exception e) { // if no genus, disregard then proceed
+						}
+
+						searchSpecie.setSpeciesParts(getSpeciesPartList(specieIndiv));
+					}
+				}
+			}
+		}
+		return searchSpecie;
+	}
+
 	public ArrayList<Species> getSpeciesList(OWLIndividual MedicinalPlant) {
 		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
 		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");

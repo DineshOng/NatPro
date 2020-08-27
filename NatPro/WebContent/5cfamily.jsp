@@ -28,8 +28,8 @@
 	<%@include file="navbarnix.html"%>
 
 	<div class="jumbotron bg-success">
-		<h3 class="text-white text-center">Family</h3>
 		<h1 class="display-4 text-white text-center">${family}</h1>
+		<h3 class="text-white text-center">Family</h3>
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
 		<a

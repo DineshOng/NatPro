@@ -27,28 +27,32 @@
 	<!-- INCLUDE NAV BAR HTML -->
 	<%@include file="navbarnix.html"%>
 
-	<div class="jumbotron bg-success">		
-		<h1 class="display-4 text-white text-center">${medPlantsList.get(0).getMedicinalPlant()}</h1>
-		<h3 class="text-white text-center">Plant</h3>
+	<div class="jumbotron bg-success">
+		<h1 class="display-4 text-white text-center">${specie}</h1>
+		<h3 class="text-white text-center">Scientific Name</h3>
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
 		<a
 			class="list-group-item list-group-item-action list-group-item-success active"
 			id="list-home-list" data-toggle="list" href="#taxInfo" role="tab"
-			aria-controls="TaxonomicInformation">Taxonomic Information</a> <a
+			aria-controls="TaxonomicInformation">Taxonomic Information</a>
+		<!-- 			<a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-profile-list" data-toggle="list" href="#plantName"
-			role="tab" aria-controls="ScientificName">Scientific
+			role="tab" aria-controls="ScientificName">Common
 			Name(s)</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-messages-list" data-toggle="list" href="#location"
-			role="tab" aria-controls="Location">Location(s)</a> <a
+			role="tab" aria-controls="Location">Location(s)</a>  -->
+		<a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#bioAct" role="tab"
-			aria-controls="BiologicalActivities">Biological Activities</a> <a
+			aria-controls="BiologicalActivities">Biological Activities</a>
+		<!-- 			 <a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#prep" role="tab"
-			aria-controls="Preparation">Preparation(s)</a> <a
+			aria-controls="Preparation">Preparation(s)</a>  -->
+		<a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#chemComp"
 			role="tab" aria-controls="ChemicalCompounds">Chemical Compound(s)</a>
@@ -73,18 +77,18 @@
 						<tr>
 							<th>Family</th>
 							<td class="center"><a
-								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">${medPlantsList.get(0).getSpecies().get(0).getFamily()}</a></td>
+								href="ViewFamilyServlet?family=${SpecieObject.getFamily()}">${SpecieObject.getFamily()}</a></td>
 						</tr>
 						<tr>
 							<th>Genus</th>
 							<td class="center"><a
-								href="ViewGenusServlet?genus=${medPlantsList.get(0).getSpecies().get(0).getGenus()}">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</a></td>
+								href="ViewGenusServlet?genus=${SpecieObject.getGenus()}">${SpecieObject.getGenus()}</a></td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
-		<div class="tab-pane fade" id="plantName" role="tabpanel"
+		<%-- 		<div class="tab-pane fade" id="plantName" role="tabpanel"
 			aria-labelledby="list-profile-list">
 			<div class="d-flex justify-content-center">
 				<table class="table table-hover w-25 text-center">
@@ -100,7 +104,7 @@
 							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
 								var="speciesList">
 								<tr>
-									<td><a href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}"><i>${speciesList.getSpecie()}</i></a></td>
+									<td><i>${speciesList.getSpecie()}</i></td>
 								</tr>
 							</c:forEach>
 						</tr>
@@ -131,7 +135,7 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+		</div> --%>
 		<div class="tab-pane fade" id="bioAct" role="tabpanel"
 			aria-labelledby="list-settings-list">
 			<div class="d-flex justify-content-center">
@@ -147,21 +151,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${medPlantsList.get(0).getSpecies()}"
-							var="speciesList">
-							<c:forEach items="${speciesList.getSpeciesParts()}"
-								var="speciesPartList">
-								<c:forEach items="${speciesPartList.getCompounds()}"
-									var="compoundsList">
-									<c:forEach items="${compoundsList.getBioActs()}"
-										var="bioActsList">
-										<tr>
-											<td><a
-												href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
-											<td>${bioActsList.getBiologicalActivity()}</td>
-											<td>${bioActsList.getCellLine().getCellLine()}</td>
-										</tr>
-									</c:forEach>
+						<c:forEach items="${SpecieObject.getSpeciesParts()}"
+							var="speciesPartList">
+							<c:forEach items="${speciesPartList.getCompounds()}"
+								var="compoundsList">
+								<c:forEach items="${compoundsList.getBioActs()}"
+									var="bioActsList">
+									<tr>
+										<td><a
+											href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
+										<td>${bioActsList.getBiologicalActivity()}</td>
+										<td>${bioActsList.getCellLine().getCellLine()}</td>
+									</tr>
 								</c:forEach>
 							</c:forEach>
 						</c:forEach>
@@ -169,7 +170,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="tab-pane fade" id="prep" role="tabpanel"
+		<%-- 		<div class="tab-pane fade" id="prep" role="tabpanel"
 			aria-labelledby="list-settings-list">
 			<div class="d-flex justify-content-center">
 				<table class="table table-hover">
@@ -198,7 +199,7 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+		</div> --%>
 		<div class="tab-pane fade" id="chemComp" role="tabpanel"
 			aria-labelledby="list-settings-list">
 			<div class="d-flex justify-content-center">
@@ -221,29 +222,25 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${medPlantsList.get(0).getSpecies()}"
-							var="speciesList">
-							<c:forEach items="${speciesList.getSpeciesParts()}"
-								var="speciesPartList">
-								<c:forEach items="${speciesPartList.getCompounds()}"
-									var="compoundsList">
-									<tr>
-										<td>${speciesPartList.getPlantPart()}</td>
-										<td></td>
-										<td><a
-											href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
-										<td>${compoundsList.getMolForm()}</td>
-										<td>${compoundsList.getMolWeight()}</td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-								</c:forEach>
+						<c:forEach items="${SpecieObject.getSpeciesParts()}"
+							var="speciesPartList">
+							<c:forEach items="${speciesPartList.getCompounds()}"
+								var="compoundsList">
+								<tr>
+									<td>${speciesPartList.getPlantPart()}</td>
+									<td></td>
+									<td><a
+										href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
+									<td>${compoundsList.getMolForm()}</td>
+									<td>${compoundsList.getMolWeight()}</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
 							</c:forEach>
 						</c:forEach>
-
 					</tbody>
 				</table>
 			</div>
