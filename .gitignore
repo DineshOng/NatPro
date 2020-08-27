@@ -9,3 +9,5 @@ NatPro/Resources/english-left3words-distsim.tagger
 */RemoteSystemsTempFiles/*
 */META-INF/*
 */WEB-INF/*
+/.metadata/
+/.recommenders/
