@@ -155,9 +155,12 @@ public class AddPlantServlet extends HttpServlet {
 																									// iteration later
 					plantPartCtrMax++; // add one since incremention starts at 0 at front end
 					for (int i = 0; i < plantPartCtrMax; i++) { // traverse through the list of all plant parts selected
-						if (request.getParameter("plantPart[" + i + "]") != null) { // check if a plant part is selected
-							String plantPart = request.getParameter("plantPart[" + i + "]").trim().toLowerCase()
-									.replaceAll(" ", "_");
+						String temp = request.getParameter("plantPart[" + i + "]");
+						if(temp == null || temp.equals("")) {
+							temp = "plant";
+						}
+						if (temp != null) { // check if a plant part is selected
+							String plantPart = temp;
 							String speciesPartIndiv = speciesNameIndiv + "_" + plantPart;
 							// create individual for SpeciesPart
 							m.addIndiv_SpeciesPart(speciesPartIndiv);
@@ -243,8 +246,13 @@ public class AddPlantServlet extends HttpServlet {
 						&& !request.getParameter("preparation[" + i + "]").equals("")) {
 					String preparation = request.getParameter("preparation[" + i + "]");
 					allPreparation = allPreparation.concat(preparation +  " ");
-					if (request.getParameter("prepPart[" + i + "]") != null) {
-						String prepPart = request.getParameter("prepPart[" + i + "]");
+					
+					String temp = request.getParameter("prepPart[" + i + "]");
+					if(temp == null || temp.equals("")) {
+						temp = "plant";
+					}
+					if (temp != null) {
+						String prepPart = temp;
 						prepPartIndiv = prepPart.trim().toLowerCase().replaceAll(" ", "_");
 						allPreparation = allPreparation.concat(prepPart + " ");
 					}

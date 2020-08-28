@@ -72,7 +72,7 @@
 								<label for="ScientificName"><i
 									class="fa fa-drivers-license" aria-hidden="true"></i>
 									Scientific Name</label> <input type="text" class="form-control"
-									name="scientificName" id="ScientificName" placeholder="">
+									name="scientificName" id="ScientificName" pattern="^([A-Z][a-z]+) +([a-z-]+).*$" placeholder="">
 							</div>
 							<div id="locationGroup" class="col-4">
 								<div class="col-13">

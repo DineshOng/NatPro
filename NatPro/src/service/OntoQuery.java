@@ -34,8 +34,8 @@ public class OntoQuery {
 
 	public OntoQuery() throws OntologyLoadException {
 		/* Change local path */
-//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
-		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+//		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
 //		String owlPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\Ontology\\OntoNatPro.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
@@ -583,6 +583,9 @@ public class OntoQuery {
 						if (compoundIndiv.equalsIgnoreCase(compoundName.toLowerCase())) {
 							// System.out.println(compoundIndiv);
 							compound = new Compound(compoundIndiv);
+							HashSet<BiologicalActivity> bioActs = new HashSet<BiologicalActivity>();
+							bioActs.addAll(getBioActList(individual));
+							compound.setBioActs(bioActs);
 							try {
 								Collection compoundSynCol = individual
 										.getPropertyValues(datatypeProperty_CompoundSynonym);

@@ -72,11 +72,22 @@
 			-->
 
 			<li class="nav-item"><a href="index.jsp" class="nav-link" >Home</a></li>
-			<li class="nav-item">
+			<li class="nav-item dropdown">
+				<a data-toggle="dropdown" class="nav-link dropdown" href="#">Add</a>
+				<ul class="dropdown-menu">					
+					<li>
+						<form action="AddPlantPageServlet" method="POST">
+							<a href="javascript:;" class="dropdown-item" onclick="parentNode.submit();">Add New Plant</a>
+						</form>
+					</li>
+					<li><a href="add-compound.jsp" class="dropdown-item">Add New Compound</a></li>
+				</ul>
+			</li>
+			<!--<li class="nav-item">
 				<form action="AddPlantPageServlet" method="POST">
 					<a href="javascript:;" class="nav-link" onclick="parentNode.submit();">Add</a>
 				</form>
-			</li>
+			</li> -->
 			<li class="nav-item"><a href="4validation.jsp" class="nav-link">Validation</a></li>
 			<li class="nav-item"><a href="2upload.jsp" class="nav-link">Upload</a></li>
 			<!-- <li class="nav-item"><button type="button" class="btn btn-outline-success">Upload</button></li>  -->

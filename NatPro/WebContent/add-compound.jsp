@@ -36,6 +36,12 @@
 	        jsmeApplet = new JSApplet.JSME("jsme_container", "580px", "340px");
 	        jsmeApplet.options('nocanonize');
 	        generateStructure();
+	        
+	        jsmeApplet.setCallBack("InchiKeySearch", function(jsmeEvent) {
+				//alert(jsmeEvent.argument.key + "\n" + jsmeEvent.argument.inchi + "\n");
+				$('input[name="inchi"]').val(jsmeEvent.argument.inchi);
+				$('input[name="inchikey"]').val(jsmeEvent.argument.key);
+			});
 	   }
 	</script>
     
@@ -83,7 +89,7 @@
 							<input
 								onchange="checkIfNull()" name="compound" type="text"
 								class="form-control" id="compound" aria-describedby="emailHelp"
-								placeholder="Enter Compound Name" value="${compound.getCompoundName()}" required> 
+								placeholder="" value="${compound.getCompoundName()}" required> 
 								
 							<small
 								id="compoundHelp" class="form-text text-muted">Try
@@ -98,7 +104,7 @@
 							<input
 								pattern="(([A-Z][a-z]?)([1-9]0?)*)+" title="ex. H20, NaCl"
 								name="molForm" type="text" class="form-control"
-								 placeholder="Enter Molecular Formula" value="${compound.getMolForm()}">
+								 placeholder="" value="${compound.getMolForm()}">
 						</div>
 
 					</div>
@@ -106,25 +112,25 @@
 						<div class="form-group col-md-6">
 							<label for="">IUPAC Name</label> <input name="iupac" type="text"
 								class="form-control" 
-								placeholder="Enter IUPAC Name" value="${compound.getIupac()}">
+								placeholder="" value="${compound.getIupac()}">
 						</div>
 
 						<div class="form-group col-md-6">
 							<label for="">SMILES</label> <input name="canSMILES"
-								type="text" class="form-control" onmouseout="generateStructure()"
-								placeholder="Enter Canonical SMILES" value="${compound.getCanSMILES()}">
+								type="text" class="form-control" id="SMILES"
+								placeholder="" value="${compound.getCanSMILES()}">
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="">InChI</label> <input name="inchi" type="text"
 								class="form-control" 
-								placeholder="Enter InChI" value="${compound.getInchi()}">
+								placeholder="" value="${compound.getInchi()}">
 						</div>
 						<div class="form-group col-md-6">
 							<label for="">InChI key</label> <input name="inchikey"
 								type="text" class="form-control" 
-								placeholder="Enter InChl key" value="${compound.getInchikey()}">
+								placeholder="" value="${compound.getInchikey()}">
 						</div>
 					</div>
 					<div class="form-row">
@@ -132,7 +138,7 @@
 							<label for="exampleFormControlTextarea1">Compound Classes</label>
 							<textarea name="compoundClass" class="form-control"
 								rows="3"
-								placeholder="Enter Compound Classes"></textarea>
+								placeholder=""></textarea>
 							<small id="exampleFormControlTextarea1"
 								class="form-text text-muted">Enter compound classes
 								separated by each line.</small>
@@ -143,7 +149,7 @@
 							
 							<textarea name="synonym" class="form-control"
 								rows="3"
-								placeholder="Enter Compound Synonyms">${compound.getAllCompoundSynonymsHTML()}</textarea>
+								placeholder="">${compound.getAllCompoundSynonymsHTML()}</textarea>
 								
 								
 							<small id="exampleFormControlTextarea1"
@@ -158,19 +164,19 @@
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="molWeight" type="text" class="form-control"
 								id="exampleInputEmail1" aria-describedby="emailHelp"
-								placeholder="Enter Molecular Weight" value="${compound.getMolWeight()}">
+								placeholder="" value="${compound.getMolWeight()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">XLogP</label> <input
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="xlogp" type="text" class="form-control"
-								 placeholder="Enter XLogP" value="${compound.getXlogp()}">
+								 placeholder="" value="${compound.getXlogp()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">Mass</label> <input
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="mass" type="text" class="form-control"
-								 placeholder="Enter Mass" value="${compound.getMass()}">
+								 placeholder="" value="${compound.getMass()}">
 						</div>
 					</div>
 					<div class="form-row">
@@ -178,19 +184,19 @@
 							<label for="">TPSA</label> <input
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="tpsa" type="text" class="form-control"
-								 placeholder="Enter TPSA" value="${compound.getTpsa()}">
+								 placeholder="" value="${compound.getTpsa()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">Complexity</label> <input
 								pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" title="number only"
 								name="complexity" type="text" class="form-control"
-								 placeholder="Enter Complexity" value="${compound.getComplexity()}">
+								 placeholder="" value="${compound.getComplexity()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">Charge</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="charge" type="text" class="form-control"
-								 placeholder="Enter Charge" value="${compound.getCharge()}">
+								 placeholder="" value="${compound.getCharge()}">
 						</div>
 					</div>
 					<div class="form-row">
@@ -198,19 +204,19 @@
 							<label for="">H-Bond Acceptors</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="hBondDonor" type="text" class="form-control"
-								 placeholder="Enter H-Bond Acceptors" value="${compound.getHBondAcceptor()}">
+								 placeholder="" value="${compound.getHBondAcceptor()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">H-Bond Donors</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="hBondAcceptor" type="text" class="form-control"
-								 placeholder="Enter H-Bond Donor" value="${compound.getHBondDonor()}">
+								 placeholder="" value="${compound.getHBondDonor()}">
 						</div>
 						<div class="form-group col-md-4">
 							<label for="">Rotatable Bonds</label> <input
 								pattern="^-?([1-9][0-9]*)+|0$" title="integer only"
 								name="rotBondCount" type="text" class="form-control"
-								 placeholder="Enter Rotatable Bonds" value="${compound.getRotBondCount()}">
+								 placeholder="" value="${compound.getRotBondCount()}">
 						</div>
 					</div>
 					
@@ -336,6 +342,10 @@
 	        
 	    });
 	    
+	    $("#SMILES").on("keydown keyup", function() {
+	    	generateStructure();
+	    });
+	    
 	    function func_submit() {
 	    	$("#searchForm").submit();
 	    }
@@ -356,14 +366,7 @@
 		
 		function generateKey() {
 			$('input[name="canSMILES"]').val(jsmeApplet.smiles());
-			console.log(jsmeApplet.getWebSearchInchiKeyBaseUrl());
-			
-			jsmeApplet.setCallBack("InchiKeySearch", function(jsmeEvent) {
-				//alert(jsmeEvent.argument.key + "\n" + jsmeEvent.argument.inchi + "\n");
-				$('input[name="inchi"]').val(jsmeEvent.argument.inchi);
-				$('input[name="inchikey"]').val(jsmeEvent.argument.key);
-				});
-			
+			console.log(jsmeApplet.getWebSearchInchiKeyBaseUrl());	
 		}
 		
 		function generateStructure() {

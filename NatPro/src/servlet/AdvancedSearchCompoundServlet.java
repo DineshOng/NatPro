@@ -143,8 +143,8 @@ public class AdvancedSearchCompoundServlet extends HttpServlet {
 		AdvancedCompoundSearch acs;
 		try {
 			acs = new AdvancedCompoundSearch(props).search();
-			System.out.println("ACTUAL:" + acs.getHs().size());
-			for(String s : acs.getHs()) {
+			System.out.println("ACTUAL:" + acs.getResultCompound().size());
+			for(String s : acs.getResultCompound()) {
 				System.err.println("::" + s);
 			}
 		} catch (OntologyLoadException e) {

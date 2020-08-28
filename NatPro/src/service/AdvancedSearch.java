@@ -270,29 +270,37 @@ public class AdvancedSearch {
 				
 				Compound compound = q.getCompound(cc.getCompoundName());
 				
+				System.out.println(">>> " + compound.getBioActs());
+				
 				if((compound.getBioActs().size() == 0 || compound.getBioActs() == null) && bioAct != null) {
 					continue;
 				} 
 				if((compound.getBioActs().size() != 0 || compound.getBioActs() != null) && bioAct != null) {
 					temp = false;
 					
-					Boolean cl = false;
 					for(BiologicalActivity bioact : compound.getBioActs()) {
 						if(bioact.getBiologicalActivity().toLowerCase().contains(bioAct.toLowerCase())) {
 							temp = true;
 						}
-						
+					}
+					if(!temp)
+						continue;
+					
+				}
+				
+				if((compound.getBioActs().size() != 0 || compound.getBioActs() != null) && cellLine != null) {
+					temp = false;
+					for(BiologicalActivity bioact : compound.getBioActs()) {
 						if(bioact.getCellLine() == null && cellLine != null)
 							continue;
 						if(bioact.getCellLine() != null && cellLine != null) {
 							if(bioact.getCellLine().getCellLine().toLowerCase().contains(cellLine.toLowerCase())) {
-								cl = true;
+								temp = true;
 							}
 						}
 					}
-					if(!temp && !cl)
+					if(!temp)
 						continue;
-					
 				}
 
 				Double value;
