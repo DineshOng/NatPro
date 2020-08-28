@@ -30,45 +30,7 @@
 		
 		<!-- TEMPLATE FOR THE TABLE -->
 		<!--
-			<div class="container">
-				<form>
-					<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
-					<div class="row">
-						<div class="col-4" style="text-align:left">
-							<button type="button" class="btn btn-primary btn-sm" onclick="selectAll(0)">Select All</button>
-							<button type="button" class="btn btn-success btn-sm" onclick="approveAll(0)">Approve All</button>
-							<button type="button" class="btn btn-danger btn-sm" onclick="rejectAll(0)">Reject All</button>
-						</div>
-						<div class="w-100"></div>
-					</div>
-					
-					<div id="(name)Group">
-						<div id="(name)Entry(number)" class="form-row" style="padding-top:5px">
-							<div class="col-1" style="text-align:left">
-								<input class="form-check-input" type="checkbox" id="(name)Label(number)" name="(cc,cpn,ill)" value="(number)">
-			  					<label class="form-check-label" for="(name)Entry(number)">Document</label>
-							</div>
-							<div class="col-3">
-							plant
-							</div>
-							<div class="col-3">
-							contains
-							</div>
-							<div class="col-3">
-							chemical
-							</div>
-							<div class="col-2" style="text-align:right">
-								<button type="button" class="btn btn-success btn-sm" onclick="approveEntry(0,0)" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>
-								<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(0,0)"><i class="fa fa-times" aria-hidden="true"></i></button>
-								<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(0,0)"><i class="fa fa-eye" aria-hidden="true"></i></button>
-								<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(0,0)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-							</div>
-						</div>
-					</div>
-					
-					
-				</form>
-			</div>
+			
 		 -->
 		
 		<div class="container">
@@ -76,18 +38,18 @@
 			<form>
 				<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
 				<div class="row">
-					<div class="col-4" style="text-align:left">
-						<button type="button" class="btn btn-primary btn-sm" onclick="selectAll(0)">Select All</button>
-						<button type="button" class="btn btn-success btn-sm" onclick="approveAll(0)">Approve All</button>
-						<button type="button" class="btn btn-danger btn-sm" onclick="rejectAll(0)">Reject All</button>
+					<div class="col-12" style="text-align:left">
+						<button id="ccSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(0)" value="0">Select All</button>
+						<button id="ccApprove" type="button" class="btn btn-success btn-sm" onclick="approveAll(0)">Approve Selected</button>
+						<button id="ccReject" type="button" class="btn btn-danger btn-sm" onclick="rejectAll(0)">Reject Selected</button>
 					</div>
-					<div class="w-100"></div>
+					<!-- <div class="w-100"></div> -->
 				</div>
 				
 				<div id="CompoundGroup">
 					<div id="CompoundEntry0" class="form-row" style="padding-top:5px">
 						<div class="col-1" style="text-align:left">
-							<input class="form-check-input" type="checkbox" id="CompoundLabel0" name="cc" value="0">
+							<input class="form-check-input" type="checkbox" id="CompoundLabel0" name="cc" value="0" onchange="changeSelect(0)">
 		  					<label class="form-check-label" for="CompoundLabel0">Document</label>
 						</div>
 						<div class="col-3">
@@ -107,82 +69,55 @@
 						</div>
 					</div>
 				</div>
-				
-			</form>
-			
-			<form>
-				<h3 style="padding-top:50px; padding-bottom:20px">Common Plant Name(s)</h3>
-				<div class="row">
-					<div class="col-4" style="text-align:left">
-						<button type="button" class="btn btn-primary btn-sm" onclick="selectAll(1)">Select All</button>
-						<button type="button" class="btn btn-success btn-sm" onclick="approveAll(1)">Approve All</button>
-						<button type="button" class="btn btn-danger btn-sm" onclick="rejectAll(1)">Reject All</button>
-					</div>
-					<div class="w-100"></div>
-				</div>
-				
-				<div id="CommonPlantNameGroup">
-					<div id="CommonPlantNameEntry0" class="form-row" style="padding-top:5px">
+				<div id="CompoundGroup1">
+					<div id="CompoundEntry1" class="form-row" style="padding-top:5px">
 						<div class="col-1" style="text-align:left">
-							<input class="form-check-input" type="checkbox" id="CommonPlantNameLabel0" name="cpn" value="0">
-		  					<label class="form-check-label" for="CommonPlantNameLabel0">Document</label>
-						</div>
-						<div class="col-3">
-						name
-						</div>
-						<div class="col-3">
-						also known as
-						</div>
-						<div class="col-3">
-						name
-						</div>
-						<div class="col-2" style="text-align:right">
-							<button type="button" class="btn btn-success btn-sm" onclick="approveEntry(1,0)" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(1,0)"><i class="fa fa-times" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(1,0)"><i class="fa fa-eye" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(1,0)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-						</div>
-					</div>
-				</div>
-				
-			</form>
-			
-			<form>
-				<h3 style="padding-top:50px; padding-bottom:20px">Illness(es)</h3>
-				<div class="row">
-					<div class="col-4" style="text-align:left">
-						<button type="button" class="btn btn-primary btn-sm" onclick="selectAll(2)">Select All</button>
-						<button type="button" class="btn btn-success btn-sm" onclick="approveAll(2)">Approve All</button>
-						<button type="button" class="btn btn-danger btn-sm" onclick="rejectAll(2)">Reject All</button>
-					</div>
-					<div class="w-100"></div>
-				</div>
-				
-				<div id="IllnessGroup">
-					<div id="IllnessEntry0" class="form-row" style="padding-top:5px">
-						<div class="col-1" style="text-align:left">
-							<input class="form-check-input" type="checkbox" id="IllnessLabel0" name="ill" value="0">
-		  					<label class="form-check-label" for="IllnessLabel0">Document</label>
+							<input class="form-check-input" type="checkbox" id="CompoundLabel1" name="cc" value="1" onchange="changeSelect(0)">
+		  					<label class="form-check-label" for="CompoundLabel1">Document</label>
 						</div>
 						<div class="col-3">
 						plant
 						</div>
 						<div class="col-3">
-						treats
+						contains
 						</div>
 						<div class="col-3">
-						illness
+						chemical
 						</div>
 						<div class="col-2" style="text-align:right">
-							<button type="button" class="btn btn-success btn-sm" onclick="approveEntry(2,0)" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(2,0)"><i class="fa fa-times" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(2,0)"><i class="fa fa-eye" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(2,0)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-success btn-sm" onclick="approveEntry(0,1)" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(0,1)"><i class="fa fa-times" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(0,1)"><i class="fa fa-eye" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(0,1)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+						</div>
+					</div>
+				</div>
+				<div id="CompoundGroup">
+					<div id="CompoundEntry2" class="form-row" style="padding-top:5px">
+						<div class="col-1" style="text-align:left">
+							<input class="form-check-input" type="checkbox" id="CompoundLabel2" name="cc" value="2" onchange="changeSelect(0)">
+		  					<label class="form-check-label" for="CompoundLabel2">Document</label>
+						</div>
+						<div class="col-3">
+						plant
+						</div>
+						<div class="col-3">
+						contains
+						</div>
+						<div class="col-3">
+						chemical
+						</div>
+						<div class="col-2" style="text-align:right">
+							<button type="button" class="btn btn-success btn-sm" onclick="approveEntry(0,2)" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(0,2)"><i class="fa fa-times" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(0,2)"><i class="fa fa-eye" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(0,2)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
 						</div>
 					</div>
 				</div>
 				
 			</form>
+			
 		</div>
 	</div>
 	
@@ -191,6 +126,14 @@
     <%@include file="_includeFooter.html" %>
        
     <script>
+    	/* -- GLOBAL VARIABLES -- */
+    	
+    	//values for the counter
+    	var ccCtr, cpnCtr, illCtr;
+    	
+    	// initialize the counters at 0
+    	ccCtr = cpnCtr = illCtr = 0
+    	
     
 	    /*
 	    	CHEATSHEET
@@ -203,29 +146,88 @@
 	    	cValue = counter Value (nakalimutan ko kasi kung ganito rin yung pValue)
 	    */
 	    
-	    function selectAll(tValue) {
-	    	console.log(tValue);
-	    	
-	    	var items;
-	    	
-	    	switch (tValue) {
+	    function changeSelect(tValue) {
+    		console.log(tValue);
+    		
+    		var items;
+    		var isComplete = true;
+    		var button
+    		
+    		switch (tValue) {
 	    	case 0:
+	    		button = document.getElementById('ccSelect');
 	    		items = document.getElementsByName('cc');
 	    		console.log('cc');
 	    		break;
 	    	case 1:
+	    		button = document.getElementById('cpnSelect');
 	    		items = document.getElementsByName('cpn');
 	    		console.log('cpn');
 	    		break;
 	    	case 2:
+	    		button = document.getElementById('illSelect');
+	    		items = document.getElementsByName('ill');
+	    		console.log('ill');
+	    		break;
+	    	}
+    		
+    		for (var i in items) {
+    			if(items[i].checked == false) {
+    				// if at least one isn't checked
+    				isComplete = false;
+    				break;
+    			}
+    		}
+    		
+    		if (isComplete) {
+    			button.innerHTML="Unselect All";
+    			button.value = 1;
+    		}
+    		else if (!isComplete){
+    			button.innerHTML="Select All";
+    			button.value = 0;
+    		}
+    		
+    	}
+	    
+	    function selectAll(tValue) {
+	    	console.log(tValue);
+	    	
+	    	var items;
+	    	var button;
+	    	
+	    	switch (tValue) {
+	    	case 0:
+	    		button = document.getElementById('ccSelect');
+	    		items = document.getElementsByName('cc');
+	    		console.log('cc');
+	    		break;
+	    	case 1:
+	    		button = document.getElementById('cpnSelect');
+	    		items = document.getElementsByName('cpn');
+	    		console.log('cpn');
+	    		break;
+	    	case 2:
+	    		button = document.getElementById('illSelect');
 	    		items = document.getElementsByName('ill');
 	    		console.log('ill');
 	    		break;
 	    	}
 	    	
-	    	for (var i in items) {
-	    		items[i].checked = true;
+	    	if (button.value == 0) { //if select all function
+	    		for (var i in items) {
+		    		items[i].checked = true;
+		    	}
+	    		button.value = 1;
+	    	} else if (button.value == 1) { //if unselect all function
+	    		for (var i in items) {
+		    		items[i].checked = false;
+		    	}
+	    		button.value = 0;
 	    	}
+	    	
+	    	
+	    	changeSelect(tValue);
 	    }
 	    
 	    function approveAll(tValue) {
