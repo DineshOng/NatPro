@@ -1,5 +1,6 @@
-
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -12,40 +13,35 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
-    
-    	${html}
-        <nav class="white" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">NatPro</a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="1mainpage.html">Home</a></li>
-                    <li><a href="2upload.html" class="white-text green darken-3">Upload</a></li>
-                    <li><a href="3add.html">Add</a></li>
-                    <li><a href="4validation.html">Validation</a></li>
-                    <li><a href="5search.html">Search</a></li>
-                    <li><a href="6view.html">View</a></li>
-                </ul>
-
-                <ul id="nav-mobile" class="sidenav">
-                    <li><a href="1mainpage.html">Home</a></li>
-                    <li><a href="2upload.html" class="white-text green darken-3">Upload</a></li>
-                    <li><a href="3add.html">Add</a></li>
-                    <li><a href="4validation.html">Validation</a></li>
-                    <li><a href="5search.html">Search</a></li>
-                    <li><a href="6view.html">View</a></li>
-                </ul>
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            </div>
-        </nav>
-        <div class="section no-pad-bot green darken-1" id="index-banner">
+        <%@include file="includeNavBar.html"%>
+        <div class="section no-pad-bot" id="index-banner">
             <div class="container">
                 <!--<br><br>-->
-                <h1 class="header center white-text">Upload Complete!</h1>
-                <div class="row center white-text">
-                    <h6>The uploaded files are now being processed</h6>
+                <h1 class="header center green-text text-darken-3">Upload</h1>
+                <div class="row center">
+                    <h6>Upload your document here</h6>
                     <br>
-                    <a class="btn waves-effect waves-light green accent-4" href="2bprocessprogress.html">Check Bootstrapping progress</a>
-                    <a class="btn waves-effect waves-light green accent-4" href="2upload.html">upload more file(s)</a>
-
+                    <form action="/NatPro/uploadSERVLET"  method="POST" enctype="multipart/form-data" autocomplete="off">
+                        <div class="file-field" input field>
+                            <div class="col s6 offset-s3">
+                                <div class="waves-effect waves-light btn green darken-1">
+                                <span>Browse File/s</span>
+                                   	<!--   <input type="file" multiple>-->
+                                    <input id="upload"  type="file" name="file-upload"  value="" multiple="multiple" accept=".txt,.pdf">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Upload your document(s) here">
+                                </div>
+                            </div>
+                            <input type="submit" value="Upload" class="btn waves-effect waves-light green darken-3 col s2 offset-s5" id="btnSubmit">
+                        </div>
+                    </form>
+                    <!--<form action="2acomplete.html" class="">
+                        <label for="docFile">Select a file(s):</label>
+                        <input type="file" id="docFile" multiple>
+                        <br><br>
+                        <input type="submit" value="Upload" class="btn waves-effect waves-light green darken-3" id="btnSubmit">
+                    </form>-->
                 </div>
                 <!--
                     <div class="row center">
@@ -60,6 +56,8 @@
 
             </div>
         </div>
+
+
         <div class="container">
             <div class="section">
 
@@ -129,5 +127,6 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/init.js"></script>
+
     </body>
 </html>

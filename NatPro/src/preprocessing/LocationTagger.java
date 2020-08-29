@@ -15,7 +15,9 @@ public class LocationTagger extends EntityTagger {
 	public String run() throws ClassCastException, ClassNotFoundException, IOException {
 		hideTaggedEntities();
 		
-		String serializedClassifier = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\classifiers\\english.all.3class.distsim.crf.ser.gz";
+//		String serializedClassifier = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\classifiers\\english.all.3class.distsim.crf.ser.gz";
+		String serializedClassifier = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\classifiers\\english.all.3class.distsim.crf.ser.gz";
+
         AbstractSequenceClassifier<CoreLabel> classifier = CRFClassifier.getClassifier(serializedClassifier);
         List<Triple<String,Integer,Integer>> triples = classifier.classifyToCharacterOffsets(text);
         

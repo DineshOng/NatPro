@@ -1,132 +1,171 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- Based from template.jsp -->
+
+
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>NatPro - Materialize</title>
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Varela+Round"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="DataTables/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
-        <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    </head>
-    <body>
-        <%@include file="includeNavBar.html"%>
-        <div class="section no-pad-bot" id="index-banner">
-            <div class="container">
-                <!--<br><br>-->
-                <h1 class="header center green-text text-darken-3">Upload</h1>
-                <div class="row center">
-                    <h6>Upload your document here</h6>
-                    <br>
-                    <form action="/NatPro/uploadSERVLET"  method="POST" enctype="multipart/form-data" autocomplete="off">
-                        <div class="file-field" input field>
-                            <div class="col s6 offset-s3">
-                                <div class="waves-effect waves-light btn green darken-1">
-                                <span>Browse File/s</span>
-                                   	<!--   <input type="file" multiple>-->
-                                    <input id="upload"  type="file" name="file-upload"  value="" multiple="multiple" accept=".txt,.pdf">
-                                </div>
-                                <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" placeholder="Upload your document(s) here">
-                                </div>
-                            </div>
-                            <input type="submit" value="Upload" class="btn waves-effect waves-light green darken-3 col s2 offset-s5" id="btnSubmit">
-                        </div>
-                    </form>
-                    <!--<form action="2acomplete.html" class="">
-                        <label for="docFile">Select a file(s):</label>
-                        <input type="file" id="docFile" multiple>
-                        <br><br>
-                        <input type="submit" value="Upload" class="btn waves-effect waves-light green darken-3" id="btnSubmit">
-                    </form>-->
-                </div>
-                <!--
-                    <div class="row center">
-                        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-                    </div>
-                
-                    <div class="row center">
-                        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light green darken-3">Get Started</a>
-                    </div>
-                -->
-                <br><br>
+<title>NatPro : ${searchKey}</title>
+</head>
+<body>
+	<!-- INCLUDE NAV BAR HTML -->
+	<%@include file="navbarnix.html"%>
 
-            </div>
-        </div>
+	<!-- HTML CODE -->
+	<div class="jumbotron jumbotron-fluid" style="text-align: center">
+		<div class="container">
+			<h1 class="display-4">Upload</h1>
+			<p class="lead">Upload your document/s here</p>
+			<form action="/NatPro/uploadSERVLET" method="POST"
+				enctype="multipart/form-data" autocomplete="off">
+				<div class="input-group">
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" name="file-upload" id="inputGroupFile"
+							multiple accept=".txt,.pdf"/> <label class="custom-file-label"
+							for="inputGroupFile">Choose file/s</label>
+					</div>
+					<div class="input-group-append">
+						<button class="btn btn-success">Upload</button>
+					</div>
+				</div>
+			</form>
+			<div class="progress">
+				<div
+					class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+					role="progressbar" aria-valuenow="75" aria-valuemin="0"
+					aria-valuemax="100" style="width: 100%" hidden></div>
+			</div>
 
+			<div aria-live="polite" aria-atomic="true"
+				style="position: relative; min-height: 200px;" hidden>
+				<!-- Position it -->
+				<div style="position: absolute; top: 0; right: 0;">
 
-        <div class="container">
-            <div class="section">
+					<!-- Then put toasts within -->
+					<div class="toast" role="alert" aria-live="assertive"
+						aria-atomic="true">
+						<div class="toast-header">
+							<img src="..." class="rounded mr-2" alt="..."> <strong
+								class="mr-auto">Bootstrap</strong> <small class="text-muted">just
+								now</small>
+							<button type="button" class="ml-2 mb-1 close"
+								data-dismiss="toast" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="toast-body">See? Just like this.</div>
+					</div>
 
-                <!--   Icon Section   -->
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                            <h5 class="center">Speeds up development</h5>
+					<div class="toast" role="alert" aria-live="assertive"
+						aria-atomic="true">
+						<div class="toast-header">
+							<img src="..." class="rounded mr-2" alt="..."> <strong
+								class="mr-auto">Bootstrap</strong> <small class="text-muted">2
+								seconds ago</small>
+							<button type="button" class="ml-2 mb-1 close"
+								data-dismiss="toast" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="toast-body">Heads up, toasts will stack
+							automatically</div>
+					</div>
+				</div>
+			</div>
 
-                            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                            <h5 class="center">User Experience Focused</h5>
-
-                            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                            <h5 class="center">Easy to work with</h5>
-
-                            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <br><br>
-        </div>
-
-        <footer class="page-footer green darken-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                    <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4">We are a team of college students who are working on this prototype.</p>
+		</div>
+	</div>
 
 
-                    </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Team</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Altea</a></li>
-                            <li><a class="white-text" href="#!">Dagdag</a></li>
-                            <li><a class="white-text" href="#!">Embestro</a></li>
-                            <li><a class="white-text" href="#!">Ong</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright green darken-4">
-                <div class="container">
-                    Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-                </div>
-            </div>
-        </footer>
+	<!-- INCLUDE FOOTER HTML -->
+	<%@include file="_includeFooter.html"%>
 
 
-        <!--  Scripts-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
+	<script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
-    </body>
+	<script type="text/javascript">
+	
+	    $(document).ready(function() {
+	        $('#table_id').DataTable();
+	        //$('.hid').css('display', 'none');
+	    });
+	    
+	    function func_submit() {
+	    	$("#searchForm").submit();
+	    }
+	    
+		$(document).ready(function(){
+			var dropdown = $(".navbar-right .dropdown");
+			var toogleBtn = $(".navbar-right .dropdown-toggle");
+			
+			// Toggle search and close icon for search dropdown
+			dropdown.on("show.bs.dropdown", function(e){
+				toogleBtn.toggleClass("hide");
+			});
+			dropdown.on("hide.bs.dropdown", function(e){
+				toogleBtn.addClass("hide");
+				toogleBtn.first().removeClass("hide");
+			});
+		});
+		
+		function ddfunc(x){
+			if(x==1) {
+				$("#ddtext").html("Plant Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(1);
+			} else if(x==2) {
+				$("#ddtext").html("Scientific Name <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(2);
+			} else if(x==3) {
+				$("#ddtext").html("Genus <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(3);
+			} else if(x==4) {
+				$("#ddtext").html("Family <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(4);
+			} else if(x==5) {
+				$("#ddtext").html("Compound <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(5);
+			} else if(x==6) {
+				$("#ddtext").html("Location <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(6);
+			} else if(x==7) {
+				$("#ddtext").html("Biological Activites <b class='caret'></b>");
+				$('input[name="searchCategory"]').val(7);
+			}
+		}
+		
+		$("#search").val('${searchKey}');
+		ddfunc(${searchCategory});
+	</script>
+
+	<script type="text/javascript">
+
+    $('.custom-file input').change(function (e) {
+        var files = [];
+        for (var i = 0; i < $(this)[0].files.length; i++) {
+            files.push($(this)[0].files[i].name);
+        }
+        $(this).next('.custom-file-label').html(files.join(', '));
+    });
+
+	</script>
+
+</body>
 </html>

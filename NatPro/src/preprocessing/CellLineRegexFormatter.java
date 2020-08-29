@@ -6,8 +6,13 @@ import java.io.IOException;
 public class CellLineRegexFormatter {
     public static void main(String[] args) throws IOException{
         BufferedReader reader;
+//        String cellLinesTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cell-lines.txt";
+//        String clTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt";
+        
+        String cellLinesTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cell-lines.txt";
+        String clTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cl.txt";
         try {
-            reader = new BufferedReader(new FileReader("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cell-lines.txt"));
+            reader = new BufferedReader(new FileReader(cellLinesTxtFile));
             String line = reader.readLine();
             String str = "";
             while (line != null) {
@@ -30,13 +35,13 @@ public class CellLineRegexFormatter {
             }
             reader.close();
             
-            java.io.FileWriter fw2 = new java.io.FileWriter("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt");
+            java.io.FileWriter fw2 = new java.io.FileWriter(clTxtFile);
 	        fw2.write(str);
 	        fw2.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
         
-        new SortbyStringLength("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt");
+        new SortbyStringLength(clTxtFile);
     }
 }

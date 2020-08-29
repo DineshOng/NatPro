@@ -11,8 +11,9 @@ public class SpeciesTagger extends LookUpEntityTagger {
 	
 	public SpeciesTagger(String tag, String text, String filename) throws IOException {
 		super(tag, text, filename);
-		
-		words = new ReadLexiconFile("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\google-10k.txt").getContentsInHash();
+//		String googleTenKTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\google-10k.txt";
+		String googleTenKTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\google-10k.txt";
+		words = new ReadLexiconFile(googleTenKTxtFile).getContentsInHash();
 	}
 	
 	public String run() throws IOException {

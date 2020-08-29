@@ -10,11 +10,12 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 public class CommonNameTagger extends EntityTagger {
 	private TreeSet<String> phrases;
 	private MaxentTagger mt;
-	
+//	private String englishTaggerFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\english-left3words-distsim.tagger";
+	private String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\english-left3words-distsim.tagger";
 	public CommonNameTagger(String tag, String text) {
 		super(tag, text);
 		
-		mt = new MaxentTagger("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\english-left3words-distsim.tagger");
+		mt = new MaxentTagger(englishTaggerFile);
 		phrases = new TreeSet<String>();
 	}
 	
