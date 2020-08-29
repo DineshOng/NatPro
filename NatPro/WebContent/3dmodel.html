@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+
+<!--  
+   GLmol - Molecular Viewer on WebGL/Javascript 
+   (C) Copyright 2011-2012, biochem_fan
+
+   License: dual license of MIT or LGPL3
+
+    This program uses
+      Three.js 
+         https://github.com/mrdoob/three.js
+         Copyright (c) 2010-2011 three.js Authors. All rights reserved.
+      jQuery
+         http://jquery.org/
+         Copyright (c) 2011 John Resig
+-->
+
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+
+<title>GLmol - Molecular Viewer on WebGL/Javascript</title>
+<style type="text/css">
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+body {
+	overflow: hidden;
+}
+
+input, select, button, textarea {
+	border: 1px solid white;
+	background-color: black;
+	color: white;
+}
+
+option {
+	background-color: grey;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+#glmol01 {
+	width: 100%;
+	height: 100%;
+	background-color: grey;
+	position: absolute;
+}
+
+.settings {
+	position: absolute;
+	right: 0px;
+	top: 10%;
+	background-color: black;
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	margin: 0px;
+	padding: 10px;
+	-moz-transform-origin: 110% 100%;
+	-webkit-transform-origin: 110% 100%;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+}
+
+.controller {
+	position: absolute;
+	width: 0px;
+	right: 0px;
+	top: 10%;
+	background-color: rgba(0, 0, 0, 0.65);
+	color: white;
+}
+
+.tabBox {
+	position: absolute;
+	padding: 0px;
+	color: white;
+	bottom: 0px;
+	height: 20px;
+	width: 60%;
+}
+
+.bottomTab {
+	background-color: black;
+	border: 1px solid white;
+	color: white;
+	margin: 0px;
+	padding: 10px 10px 0px 10px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+}
+
+.insideTab {
+	border: 1px solid white;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.85);
+	margin: 0px;
+	overflow: scroll;
+}
+
+.tabBox p, .tabBox h1, .tabBox ul {
+	margin-left: 10px;
+	font-size: 90%;
+}
+</style>
+</head>
+<body>
+
+	<div id="glmol01"></div>
+
+	<div id="glmol01_srcbox">
+		<span class="">.</span>
+		<div class="insideTab">
+			You can load PDB, SDF/MOL(MDL not SYBYL) or XYZ files <br> -from
+			local disk (don't worry. your file will not be uploaded), <input
+				id="glmol01_file" type="file" size=1>
+			<button onClick="loadFile()">Load from file</button>
+			<br> -from RCSB PDB server, PDBID: <input id="glmol01_pdbid"
+				value="2POR" size=4>
+			<button onClick="download('pdb:' + $('#glmol01_pdbid').val())">Download</button>
+			<br> -from PubChem server, Compound ID(CID): <input
+				id="glmol01_cid" value="2244" size=4>
+			<button onClick="download('cid:' + $('#glmol01_cid').val())">Download</button>
+			<br>
+			<!-- CHECK: CSS nowrap is not working? -->
+			-or from the textarea below.<br>
+			<!-- white-space: nowrap not only doesn't work in Firefox but also let Chrome reformatting continuous spaces!!! -->
+			<textarea wrap="off" id="glmol01_src"
+				style="width: 100%; height: 8em; overflow: scroll;"></textarea>
+			<br>
+			<button onClick="glmol01.loadMolecule(); $('#loading').hide();">Reload
+				molecule from textarea</button>
+		</div>
+	</div>
+
+	<div class="tabBox" id="glmol01_infobox" style="left: 20%; z-index: 2;">
+		<span class="bottomTab">About</span>
+		<div class="insideTab" style="overflow: auto;">
+			<h1>About</h1>
+			<p>
+				GLmol -- Molecular Viewer on WebGL/Javascript<br> Version 0.47
+				(20120827)
+			</p>
+			<p>
+				This program is written by biochem_fan and released under LGPL.
+				Please visit <a href="http://webglmol.sfjp.jp/">my project page</a>
+				for the details and source code distribution.
+			</p>
+			<p>
+				Comments and Suggestions are welcome. Please mail to biochem_fan at
+				users.sourceforge.jp or write in <a
+					href="http://sourceforge.jp/projects/webglmol/forums/">the
+					forum</a>.
+			</p>
+			<h1>How to use</h1>
+			<ul>
+				<li>Rotation: left button</li>
+				<li>Translation: middle button or Ctrl-key + left button</li>
+				<li>Zoom: mousewheel or right button(up/down) or Shift-key +
+					left button(up/down)</li>
+				<li>Slab: left button + Ctrl-key. horizontal move adjusts near
+					clipping plane, vertical move far clipping plane.</li>
+			</ul>
+			<p>You can also change mouse mode with radio buttons at
+				right-bottom corner.</p>
+		</div>
+	</div>
+
+	<div class="tabBox" id="glmol01_viewbox" style="left: 5%; z-index: 1;">
+		<span class="bottomTab">View</span>
+		<div class="insideTab" style="overflow: auto;">
+
+			<input id="glmol01_showHetatms" type="checkbox" checked>Small
+			Molecule as <select id="glmol01_hetatm">
+				<option selected="selected" value="stick">sticks</option>
+				<option value="ballAndStick">ball and stick</option>
+				<option value="ballAndStick2">ball and stick (multiple
+					bond)</option>
+				<option value="sphere">spheres</option>
+				<option value="icosahedron">icosahedrons</option>
+				<option value="line">lines</option>
+			</select><br></br> Background color: <select id="glmol01_bgcolor">
+				<option value="0xffffff">white</option>
+				<option value="0x000000">black</option>
+				<option selected="selected" value="0x888888">grey</option>
+			</select> </br> </br>
+			<button id="glmol01_reload">Apply</button>
+
+		</div>
+	</div>
+
+
+
+	<div id="glmol01_pdbTitle"
+		style="position: absolute; color: white; background-color: rgba(0, 0, 0, 0.65); font-size: 80%"></div>
+
+	<script src="js/jquery-1.7.min.js"></script>
+	<script src="js/Three49custom.js"></script>
+	<script src="js/GLmol.js"></script>
+	<script type="text/javascript">
+		addTab('#glmol01_srcbox', '400px', 0);
+		addTab('#glmol01_viewbox', '400px', 1);
+		addTab('#glmol01_infobox', '400px', 2);
+
+		var url_string = document.location//window.location.href
+		var url = new URL(url_string);
+		//var c = url.searchParams.get("compound");
+		var nixon = url.searchParams.get("nixon");
+		nixon = lzw_decode(unescape(nixon));
+		nixon = nixon.replace(/nixon=/g, '');
+		//nixon = nixon.replace(/NH /g, 'NH+');
+		nixon = nixon.trim();
+		//console.log(nixon);
+
+		var glmol01 = new GLmol('glmol01', true);
+		download(nixon);
+
+		function download(x) {
+			//$('#loading').show();
+			//$.get(url, function(ret) {
+			$("#glmol01_src").val(x);
+			$("#glmol01_hetatm").val("ballAndStick");
+			glmol01.loadMolecule();
+			glmol01.defineRepresentation = defineRepFromController;
+			glmol01.rebuildScene();
+			glmol01.show();
+			$('#loading').hide();
+			//});
+		}
+
+		function addTab(tabId, height, zIndex) {
+			$(tabId + ' .bottomTab').toggle(function() {
+				$(tabId).css('z-index', 100).animate({
+					bottom : '0px',
+					'height' : (window.innerWidth > 800) ? height : '150px'
+				});
+			}, function() {
+				$(tabId).css('z-index', zIndex).animate({
+					bottom : '0px',
+					'height' : '20px'
+				});
+			});
+		}
+
+		// Decompress an LZW-encoded string
+		function lzw_decode(s) {
+			var dict = {};
+			var data = (s + "").split("");
+			var currChar = data[0];
+			var oldPhrase = currChar;
+			var out = [ currChar ];
+			var code = 256;
+			var phrase;
+			for (var i = 1; i < data.length; i++) {
+				var currCode = data[i].charCodeAt(0);
+				if (currCode < 256) {
+					phrase = data[i];
+				} else {
+					phrase = dict[currCode] ? dict[currCode]
+							: (oldPhrase + currChar);
+				}
+				out.push(phrase);
+				currChar = phrase.charAt(0);
+				dict[code] = oldPhrase + currChar;
+				code++;
+				oldPhrase = phrase;
+			}
+			return out.join("");
+		}
+
+		function loadFile() {
+			var file = $('#glmol01_file').get(0);
+			if (file)
+				file = file.files;
+			if (!file || !window.FileReader || !file[0]) {
+				alert("No file is selected. Or File API is not supported in your browser. Please try Firefox or Chrome.");
+				return;
+			}
+			$('#loading').show();
+			var reader = new FileReader();
+			reader.onload = function() {
+				$('#glmol01_src').val(reader.result);
+				glmol01.loadMolecule();
+				$('#loading').hide();
+			};
+			reader.readAsText(file[0]);
+		}
+
+		function saveImage() {
+			glmol01.show();
+			var imageURI = glmol01.renderer.domElement.toDataURL("image/png");
+			window.open(imageURI);
+		}
+
+		$('#glmol01_reload').click(function(ev) {
+			glmol01.defineRepresentation = defineRepFromController;
+			glmol01.rebuildScene();
+			glmol01.show();
+		});
+
+		function defineRepFromController() {
+			var idHeader = "#" + this.id + '_';
+
+			var time = new Date();
+			var all = this.getAllAtoms();
+			if ($(idHeader + 'biomt').attr('checked')
+					&& this.protein.biomtChains != "")
+				all = this.getChain(all, this.protein.biomtChains);
+			var allHet = this.getHetatms(all);
+			var hetatm = this.removeSolvents(allHet);
+
+			//console.log("selection " + (+new Date() - time));
+			time = new Date();
+
+			this.colorByAtom(all, {});
+			var colorMode = $(idHeader + 'color').val();
+			if (colorMode == 'ss') {
+				this.colorByStructure(all, 0xcc00cc, 0x00cccc);
+			} else if (colorMode == 'chain') {
+				this.colorByChain(all);
+			} else if (colorMode == 'chainbow') {
+				this.colorChainbow(all);
+			} else if (colorMode == 'b') {
+				this.colorByBFactor(all);
+			} else if (colorMode == 'polarity') {
+				this.colorByPolarity(all, 0xcc0000, 0xcccccc);
+			}
+			console.log("color " + (+new Date() - time));
+			time = new Date();
+
+			var asu = new THREE.Object3D();
+			var mainchainMode = $(idHeader + 'mainchain').val();
+			var doNotSmoothen = ($(idHeader + 'doNotSmoothen').attr('checked') == 'checked');
+			if ($(idHeader + 'showMainchain').attr('checked')) {
+				if (mainchainMode == 'ribbon') {
+					this.drawCartoon(asu, all, doNotSmoothen);
+					this.drawCartoonNucleicAcid(asu, all);
+				} else if (mainchainMode == 'thickRibbon') {
+					this.drawCartoon(asu, all, doNotSmoothen, this.thickness);
+					this.drawCartoonNucleicAcid(asu, all, null, this.thickness);
+				} else if (mainchainMode == 'strand') {
+					this.drawStrand(asu, all, null, null, null, null, null,
+							doNotSmoothen);
+					this.drawStrandNucleicAcid(asu, all);
+				} else if (mainchainMode == 'chain') {
+					this.drawMainchainCurve(asu, all, this.curveWidth, 'CA', 1);
+					this.drawMainchainCurve(asu, all, this.curveWidth, 'O3\'',
+							1);
+				} else if (mainchainMode == 'cylinderHelix') {
+					this.drawHelixAsCylinder(asu, all, 1.6);
+					this.drawCartoonNucleicAcid(asu, all);
+				} else if (mainchainMode == 'tube') {
+					this.drawMainchainTube(asu, all, 'CA');
+					this.drawMainchainTube(asu, all, 'O3\''); // FIXME: 5' end problem!
+				} else if (mainchainMode == 'bonds') {
+					this.drawBondsAsLine(asu, all, this.lineWidth);
+				}
+			}
+
+			if ($(idHeader + 'line').attr('checked')) {
+				this.drawBondsAsLine(this.modelGroup, this.getSidechains(all),
+						this.lineWidth);
+			}
+			//console.log("mainchain " + (+new Date() - time));
+			time = new Date();
+
+			if ($(idHeader + 'showBases').attr('checked')) {
+				var hetatmMode = $(idHeader + 'base').val();
+				if (hetatmMode == 'nuclStick') {
+					this.drawNucleicAcidStick(this.modelGroup, all);
+				} else if (hetatmMode == 'nuclLine') {
+					this.drawNucleicAcidLine(this.modelGroup, all);
+				} else if (hetatmMode == 'nuclPolygon') {
+					this.drawNucleicAcidLadder(this.modelGroup, all);
+				}
+			}
+
+			var target = $(idHeader + 'symopHetatms').attr('checked') ? asu
+					: this.modelGroup;
+			if ($(idHeader + 'showNonBonded').attr('checked')) {
+				var nonBonded = this.getNonbonded(allHet);
+				var nbMode = $(idHeader + 'nb').val();
+				if (nbMode == 'nb_sphere') {
+					this.drawAtomsAsIcosahedron(target, nonBonded, 0.3, true);
+				} else if (nbMode == 'nb_cross') {
+					this.drawAsCross(target, nonBonded, 0.3, true);
+
+				}
+			}
+
+			if ($(idHeader + 'showHetatms').attr('checked')) {
+				var hetatmMode = $(idHeader + 'hetatm').val();
+				if (hetatmMode == 'stick') {
+					this.drawBondsAsStick(target, hetatm, this.cylinderRadius,
+							this.cylinderRadius, true);
+				} else if (hetatmMode == 'sphere') {
+					this.drawAtomsAsSphere(target, hetatm, this.sphereRadius);
+				} else if (hetatmMode == 'line') {
+					this.drawBondsAsLine(target, hetatm, this.curveWidth);
+				} else if (hetatmMode == 'icosahedron') {
+					this.drawAtomsAsIcosahedron(target, hetatm,
+							this.sphereRadius);
+				} else if (hetatmMode == 'ballAndStick') {
+					this.drawBondsAsStick(target, hetatm,
+							this.cylinderRadius / 2.0, this.cylinderRadius,
+							true, false, 0.3);
+				} else if (hetatmMode == 'ballAndStick2') {
+					this.drawBondsAsStick(target, hetatm,
+							this.cylinderRadius / 2.0, this.cylinderRadius,
+							true, true, 0.3);
+				}
+
+			}
+			//console.log("hetatms " + (+new Date() - time));
+			time = new Date();
+
+			var projectionMode = $(idHeader + 'projection').val();
+			if (projectionMode == 'perspective')
+				this.camera = this.perspectiveCamera;
+			else if (projectionMode == 'orthoscopic')
+				this.camera = this.orthoscopicCamera;
+
+			this.setBackground(parseInt($(idHeader + 'bgcolor').val()));
+
+			if ($(idHeader + 'cell').attr('checked')) {
+				this.drawUnitcell(this.modelGroup);
+			}
+
+			if ($(idHeader + 'biomt').attr('checked')) {
+				this.drawSymmetryMates2(this.modelGroup, asu,
+						this.protein.biomtMatrices);
+			}
+			if ($(idHeader + 'packing').attr('checked')) {
+				this.drawSymmetryMatesWithTranslation2(this.modelGroup, asu,
+						this.protein.symMat);
+			}
+			this.modelGroup.add(asu);
+		};
+
+		glmol01.defineRepresentation = defineRepFromController;
+	</script>
+
+</body>
+</html>

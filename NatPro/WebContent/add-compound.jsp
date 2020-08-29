@@ -36,6 +36,7 @@
 	        jsmeApplet = new JSApplet.JSME("jsme_container", "580px", "340px");
 	        jsmeApplet.options('nocanonize');
 	        generateStructure();
+	        //updateModel();
 	        
 	        jsmeApplet.setCallBack("InchiKeySearch", function(jsmeEvent) {
 				//alert(jsmeEvent.argument.key + "\n" + jsmeEvent.argument.inchi + "\n");
@@ -78,8 +79,19 @@
   						</button>
   					</div>
   					
-  					<div id="jsme_div" class="form-row">
-						<div id="jsme_container" onmouseover="generateKey()" style="margin-bottom: 1rem"></div>
+  					<div class="row">
+  						<div class="col-md-6">
+		  					<div id="jsme_div">
+								<div id="jsme_container" onmouseover="generateKey()" style="margin-bottom: 1rem"></div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<iframe style="visibility:hidden;" onload="this.style.visibility = 'visible';" width="100%" height="100%" id='3d' class="compound" src="3dmodel.html" ></iframe>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						  
 					</div>
   					
 					<div class="form-row">
@@ -359,6 +371,7 @@
 		    	        		$('input[name="rotBondCount"]').val(obj.rotBondCount);
 		    	        		
 		    	        		generateStructure();
+		    	        		update3d();
 		    	        		
 		    	        		$('textarea[name="synonym"]').val($('textarea[name="synonym"]').val()+"\n"+obj.synonym);
 		        				
@@ -433,10 +446,33 @@
             });
             return arr;
         }
+        
+        $("#SMILES").change(updateModel);
 	    
-	    $("#SMILES").on("keydown keyup", function() {
-	    	generateStructure();
+	    $("#SMILES").on("keyup", updateModel);
+	    
+	   
+	    
+	    /*var typingTimer;                //timer identifier
+	    var doneTypingInterval = 1000;  //time in ms, 5 second for example
+	    var $input = $('#SMILES');
+
+	    //on keyup, start the countdown
+	    $input.on('keyup', function () {
+	      clearTimeout(typingTimer);
+	      typingTimer = setTimeout(updateModel, doneTypingInterval);
 	    });
+
+	    //on keydown, clear the countdown 
+	    $input.on('keydown', function () {
+	      clearTimeout(typingTimer);
+	    });
+
+	    //user is "finished typing," do something
+	    function doneTyping () {
+	    	generateStructure();
+	    	$("#3d").attr("src", "3dmodel.html?nixon="+escape(jsmeApplet.molFile(false)));
+	    }*/
 	    
 	    $("#compound").on("keydown keyup", function() {
 	    	checkIfNull();
@@ -461,15 +497,29 @@
 		});
 		
 		function generateKey() {
-			$('input[name="canSMILES"]').val(jsmeApplet.smiles());
-			console.log(jsmeApplet.getWebSearchInchiKeyBaseUrl());	
+			
+			//console.log(jsmeApplet.getWebSearchInchiKeyBaseUrl());	
+			if($('input[name="canSMILES"]').val() !== jsmeApplet.smiles()){
+				console.log("f");
+				update3d();
+				$('input[name="canSMILES"]').val(jsmeApplet.smiles());
+			}
+			
 		}
 		
 		function generateStructure() {
-	    	  var mol = $('input[name="canSMILES"]').val();
-	    	  jsmeApplet.readGenericMolecularInput(mol); 
+			var mol = $('input[name="canSMILES"]').val();
+			jsmeApplet.readGenericMolecularInput(mol); 
 	    }
 
+		function updateModel() {
+	    	generateStructure();
+	    	$("#3d").attr("src", "3dmodel.html?nixon="+escape(lzw_encode(jsmeApplet.molFile(false))));
+		}
+		
+		function update3d() {
+			$("#3d").attr("src", "3dmodel.html?nixon="+escape(lzw_encode(jsmeApplet.molFile(false))));
+		}
 		
 		function ddfunc(x){
 			if(x==1) {
@@ -536,6 +586,32 @@
 	              '<i class="fa fa-spinner fa-spin"></i>&#32;Saving...'
 	            );
     		}
+		}
+		
+		function lzw_encode(s) {
+		    var dict = {};
+		    var data = (s + "").split("");
+		    var out = [];
+		    var currChar;
+		    var phrase = data[0];
+		    var code = 256;
+		    for (var i=1; i<data.length; i++) {
+		        currChar=data[i];
+		        if (dict[phrase + currChar] != null) {
+		            phrase += currChar;
+		        }
+		        else {
+		            out.push(phrase.length > 1 ? dict[phrase] : phrase.charCodeAt(0));
+		            dict[phrase + currChar] = code;
+		            code++;
+		            phrase=currChar;
+		        }
+		    }
+		    out.push(phrase.length > 1 ? dict[phrase] : phrase.charCodeAt(0));
+		    for (var i=0; i<out.length; i++) {
+		        out[i] = String.fromCharCode(out[i]);
+		    }
+		    return out.join("");
 		}
 	</script>
 
