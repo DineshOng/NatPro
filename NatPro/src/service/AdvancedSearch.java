@@ -270,7 +270,7 @@ public class AdvancedSearch {
 				
 				Compound compound = q.getCompound(cc.getCompoundName());
 				
-				System.out.println(">>> " + compound.getBioActs());
+				System.out.println(">>> " + compound.getBioActs() + " " + compound.getCompoundName());
 				
 				if((compound.getBioActs().size() == 0 || compound.getBioActs() == null) && bioAct != null) {
 					continue;

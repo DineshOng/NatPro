@@ -19,7 +19,7 @@ public class AdvancedCompoundSearch extends AdvancedSearch {
 	}
 	
 	public AdvancedCompoundSearch search() {
-		if(medPlantName == null && location == null && family == null && genus == null && species == null && plantPart == null && illness == null && bioAct == null && cellLine == null) {
+		if(medPlantName == null && location == null && family == null && genus == null && species == null && plantPart == null && illness == null) {
 			if(compoundName != null) {
 				System.out.println("here");
 				//System.println(q.searchCompound(compoundName).get(0).getCompoundName());

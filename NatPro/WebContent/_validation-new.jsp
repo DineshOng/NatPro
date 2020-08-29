@@ -29,95 +29,110 @@
 		</div>
 		
 		<!-- TEMPLATE FOR THE TABLE -->
-		<!--
 			
-		 -->
-		
-		<div class="container">
-	
-			<form>
-				<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
-				<div class="row">
+		<!--
+			<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
+				<div class="row" id="toggleCompound" value="0">
 					<div class="col-12" style="text-align:left">
 						<button id="ccSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(0)" value="0">Select All</button>
-						<button id="ccApprove" type="button" class="btn btn-success btn-sm" onclick="approveAll(0)">Approve Selected</button>
-						<button id="ccReject" type="button" class="btn btn-danger btn-sm" onclick="rejectAll(0)">Reject Selected</button>
+						<button id="ccApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(0)">Approve Selected</button>
+						<button id="ccReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(0)">Reject Selected</button>
 					</div>
-					<!-- <div class="w-100"></div> -->
 				</div>
 				
 				<div id="CompoundGroup">
 					<div id="CompoundEntry0" class="form-row" style="padding-top:5px">
-						<div class="col-1" style="text-align:left">
+						<div class="col-2" style="text-align:left">
 							<input class="form-check-input" type="checkbox" id="CompoundLabel0" name="cc" value="0" onchange="changeSelect(0)">
 		  					<label class="form-check-label" for="CompoundLabel0">Document</label>
 						</div>
-						<div class="col-3">
+						<div class="col-3" id="ccPlant0">
 						plant
 						</div>
-						<div class="col-3">
+						<div class="col-2" id="ccRelation0">
 						contains
 						</div>
-						<div class="col-3">
+						<div class="col-3" id="ccRelationObject0">
 						chemical
 						</div>
 						<div class="col-2" style="text-align:right">
 							<button type="button" class="btn btn-success btn-sm" onclick="approveEntry(0,0)" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(0,0)"><i class="fa fa-times" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(0,0)"><i class="fa fa-eye" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(0,0)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(0,0)" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(0,0)" data-toggle="tooltip" data-placement="top" title="view entry"><i class="fa fa-eye" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(0,0)" data-toggle="tooltip" data-placement="top" title="edit entry"><i class="fa fa-pencil" aria-hidden="true"></i></button>
 						</div>
 					</div>
 				</div>
-				<div id="CompoundGroup1">
-					<div id="CompoundEntry1" class="form-row" style="padding-top:5px">
-						<div class="col-1" style="text-align:left">
-							<input class="form-check-input" type="checkbox" id="CompoundLabel1" name="cc" value="1" onchange="changeSelect(0)">
-		  					<label class="form-check-label" for="CompoundLabel1">Document</label>
-						</div>
-						<div class="col-3">
-						plant
-						</div>
-						<div class="col-3">
-						contains
-						</div>
-						<div class="col-3">
-						chemical
-						</div>
-						<div class="col-2" style="text-align:right">
-							<button type="button" class="btn btn-success btn-sm" onclick="approveEntry(0,1)" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(0,1)"><i class="fa fa-times" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(0,1)"><i class="fa fa-eye" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(0,1)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-						</div>
+		 -->
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<span>debugging only *pls hide*</span>
+					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(0)">Compound</button>
+					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(1)">Common Plant Name</button>
+					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(2)">Illness</button>
+				</div>
+			</div>
+	
+			<form>
+				<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
+				<div class="row" id="substituteCompound" value="1">
+					<div class="col-12">
+						empty.
 					</div>
 				</div>
-				<div id="CompoundGroup">
-					<div id="CompoundEntry2" class="form-row" style="padding-top:5px">
-						<div class="col-1" style="text-align:left">
-							<input class="form-check-input" type="checkbox" id="CompoundLabel2" name="cc" value="2" onchange="changeSelect(0)">
-		  					<label class="form-check-label" for="CompoundLabel2">Document</label>
-						</div>
-						<div class="col-3">
-						plant
-						</div>
-						<div class="col-3">
-						contains
-						</div>
-						<div class="col-3">
-						chemical
-						</div>
-						<div class="col-2" style="text-align:right">
-							<button type="button" class="btn btn-success btn-sm" onclick="approveEntry(0,2)" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry(0,2)"><i class="fa fa-times" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry(0,2)"><i class="fa fa-eye" aria-hidden="true"></i></button>
-							<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry(0,2)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-						</div>
+				<div class="row" id="toggleCompound" value="0" hidden>
+					<div class="col-12" style="text-align:left">
+						<button id="ccSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(0)" value="0">Select All</button>
+						<button id="ccApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(0)">Approve Selected</button>
+						<button id="ccReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(0)">Reject Selected</button>
 					</div>
 				</div>
 				
+				<div id="CompoundGroup">
+					
+				</div>
+				
+				
+				<h3 style="padding-top:50px; padding-bottom:20px">Common Plant Name(s)</h3>
+				<div class="row" id="substituteCommonPlantName" value="1">
+					<div class="col-12">
+						empty.
+					</div>
+				</div>
+				<div class="row" id="toggleCommonPlantName" value="0" hidden>
+					<div class="col-12" style="text-align:left">
+						<button id="cpnSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(1)" value="0">Select All</button>
+						<button id="cpnApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(1)">Approve Selected</button>
+						<button id="cpnReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(1)">Reject Selected</button>
+					</div>
+				</div>
+				
+				<div id="CommonPlantNameGroup">
+					
+				</div>
+				
+				<h3 style="padding-top:50px; padding-bottom:20px">Illness(es)</h3>
+				<div class="row" id="substituteIllness" value="1">
+					<div class="col-12">
+						empty.
+					</div>
+				</div>
+				<div class="row" id="toggleIllness" value="0" hidden>
+					<div class="col-12" style="text-align:left">
+						<button id="illSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(2)" value="0">Select All</button>
+						<button id="illApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(2)">Approve Selected</button>
+						<button id="illReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(2)">Reject Selected</button>
+					</div>
+				</div>
+				
+				<div id="IllnessGroup">
+					
+				</div>
+				
 			</form>
-			
+
 		</div>
 	</div>
 	
@@ -131,8 +146,9 @@
     	//values for the counter
     	var ccCtr, cpnCtr, illCtr;
     	
-    	// initialize the counters at 0
-    	ccCtr = cpnCtr = illCtr = 0
+    	// initialize the counters at -1 (because when calling the addEntry(), it automatically increments +1)
+    	// TODO: If ctr == -1, the category is empty and can be invisible from the user
+    	ccCtr = cpnCtr = illCtr = -1; 
     	
     
 	    /*
@@ -145,6 +161,57 @@
 	    	
 	    	cValue = counter Value (nakalimutan ko kasi kung ganito rin yung pValue)
 	    */
+	    
+	    function checkItems() {
+	    	var items;
+	    	var subComponent;
+	    	var toggleComponent;
+	    	
+	    	items = document.getElementsByName('cc');
+	    	subComponent = document.getElementById('substituteCompound');
+	    	toggleComponent = document.getElementById('toggleCompound');
+	    	if (items.length != 0) { // list not empty
+	    		subComponent.value = 0;
+	    		subComponent.hidden = true;
+	    		toggleComponent.value = 1;
+	    		toggleComponent.hidden = false;
+	    	} else if (items.length == 0) { // list empty
+	    		subComponent.value = 1;
+	    		subComponent.hidden = false;
+	    		toggleComponent.value = 0;
+	    		toggleComponent.hidden = true;  		
+	    	}
+	    	
+	    	items = document.getElementsByName('cpn');
+	    	subComponent = document.getElementById('substituteCommonPlantName');
+	    	toggleComponent = document.getElementById('toggleCommonPlantName');
+	    	if (items.length != 0) { // list not empty
+	    		subComponent.value = 0;
+	    		subComponent.hidden = true;
+	    		toggleComponent.value = 1;
+	    		toggleComponent.hidden = false;
+	    	} else if (items.length == 0) { // list empty
+	    		subComponent.value = 1;
+	    		subComponent.hidden = false;
+	    		toggleComponent.value = 0;
+	    		toggleComponent.hidden = true;  		
+	    	}
+	    	
+	    	items = document.getElementsByName('ill');
+	    	subComponent = document.getElementById('substituteIllness');
+	    	toggleComponent = document.getElementById('toggleIllness');
+	    	if (items.length != 0) { // list not empty
+	    		subComponent.value = 0;
+	    		subComponent.hidden = true;
+	    		toggleComponent.value = 1;
+	    		toggleComponent.hidden = false;
+	    	} else if (items.length == 0) { // list empty
+	    		subComponent.value = 1;
+	    		subComponent.hidden = false;
+	    		toggleComponent.value = 0;
+	    		toggleComponent.hidden = true;  		
+	    	}
+	    }
 	    
 	    function changeSelect(tValue) {
     		console.log(tValue);
@@ -171,13 +238,19 @@
 	    		break;
 	    	}
     		
-    		for (var i in items) {
+    		
+    		var checkedCtr = items.length; //for debugging
+    		console.log('max checkboxes : ' + checkedCtr);
+    		
+    		for (var i = 0; i < items.length; i++) {
     			if(items[i].checked == false) {
     				// if at least one isn't checked
     				isComplete = false;
-    				break;
+    				checkedCtr--;
     			}
     		}
+    		
+    		console.log(checkedCtr + ' out of ' + items.length);
     		
     		if (isComplete) {
     			button.innerHTML="Unselect All";
@@ -215,13 +288,17 @@
 	    	}
 	    	
 	    	if (button.value == 0) { //if select all function
-	    		for (var i in items) {
+	    		for (var i = 0; i < items.length; i++) {
 		    		items[i].checked = true;
+		    		console.log (i + ' is checked');
 		    	}
 	    		button.value = 1;
 	    	} else if (button.value == 1) { //if unselect all function
-	    		for (var i in items) {
-		    		items[i].checked = false;
+	    		for (var i = 0; i < items.length; i++) {
+	    			if (items[i].checked == true) {
+	    				items[i].checked = false;
+			    		console.log (i + ' is unchecked');
+	    			}
 		    	}
 	    		button.value = 0;
 	    	}
@@ -230,7 +307,7 @@
 	    	changeSelect(tValue);
 	    }
 	    
-	    function approveAll(tValue) {
+	    function approveSelected(tValue) {
 	    	console.log(tValue);
 	    	
 	    	var items;
@@ -250,12 +327,27 @@
 	    		break;
 	    	}
 	    	
-	    	/*
-	    		code for accepting entries
-	    	*/
+	    	var selectedItems = []; // used to filter the selected items from unselected ones
+	    	var selectedItems_tValues = []; // array used to contain the selected items' tValues;
+	    	
+	    	for (var i in items) {
+	    		if (items[i].checked == true) {
+	    			selectedItems.push(items[i]);
+	    			selectedItems_tValues.push(i);
+	    		}
+	    	}
+	    	
+	    	// getting all selected entries
+	    	for (var i in selectedItems_tValues) {
+	    		/*
+	    			code for accepting entries
+	    		*/
+	    	}
+	    	
+	    	
 	    }
 	    
-	    function rejectAll(tValue) {
+	    function rejectSelected(tValue) {
 	    	console.log(tValue);
 	    	
 	    	var items;
@@ -275,14 +367,27 @@
 	    		break;
 	    	}
 	    	
-	    	/*
-	    		code for rejecting all entries
-	    	*/
+	    	var selectedItems = []; // used to filter the selected items from unselected ones
+	    	var selectedItems_tValues = []; // array used to contain the selected items' tValues;
+	    	
+	    	
+	    	// getting all selected entries
+	    	for (var i = 0; i < items.length; i++) {
+	    		if (items[i].checked == true) {
+	    			selectedItems.push(items[i]);
+	    			selectedItems_tValues.push(i);
+	    		}
+	    	}
+	    	
+	    	for (var i in selectedItems_tValues) {
+	    		/*
+	    			code for rejecting entries
+	    		*/
+	    	}
 	    }
 	    
 	    function approveEntry(tValue,cValue) {
 	    	console.log(tValue + ', ' + cValue);
-	    	
 	    	
 	    	// finding a specific category using the tValue
 	    	switch (tValue) {
@@ -358,6 +463,90 @@
 	    		code to edit the specific entry using tValue and cValue
 	    	*/
 	    	
+	    }
+	    
+	    function addEntry(tValue) {
+    		console.log('addEntry(' + tValue + ')');
+	    	
+	    	// finding which category should the entry be in
+	    	switch(tValue) {
+	    	case 0:
+	    		ccCtr++;
+	    		
+	    		var entryCategory 		= 'cc';
+	    		var entryNum  			= ccCtr;
+	    		var nameEntry 			= 'CompoundEntry';
+	    		var nameLabel 			= 'CompoundLabel';
+	    		var nameGroup 			= 'CompoundGroup';
+	    		
+	    		var namePlant 			= 'ccPlant';
+	    		var nameRelation 		= 'ccRelation';
+	    		var nameRelationObject	= 'ccRelationObject';
+	    		break;
+	    	case 1:
+	    		cpnCtr++;
+	    		
+	    		var entryCategory 		= 'cpn';
+	    		var entryNum 			= cpnCtr;
+	    		var nameEntry 			= 'CommonPlantNameEntry';
+	    		var nameLabel 			= 'CommonPlantNameLabel';
+	    		var nameGroup 			= 'CommonPlantNameGroup';
+
+	    		var namePlant 			= 'cpnPlant';
+	    		var nameRelation 		= 'cpnRelation';
+	    		var nameRelationObject 	= 'cpnRelationObject';
+	    		break;
+	    	case 2:
+	    		illCtr++;
+	    		
+	    		var entryCategory 		= 'ill';
+	    		var entryNum 			= illCtr;
+	    		var nameEntry 			= 'IllnessEntry';
+	    		var nameLabel 			= 'IllnessLabel';
+	    		var nameGroup 			= 'IllnessGroup';
+
+	    		var namePlant 			= 'illPlant';
+	    		var nameRelation 		= 'illRelation';
+	    		var nameRelationObject 	= 'illRelationObject';
+	    		break;
+	    	}
+	    	
+	    	var entryContainerOpening 	= '<div id="'+ nameEntry + entryNum +'" class="form-row" style="padding-top:5px">';
+	    	
+			var entryDocument 			= '<div class="col-2" style="text-align:left">' +
+											  '<input class="form-check-input" type="checkbox" id="'+ nameLabel + entryNum +'" name="'+ entryCategory +'" value="'+ entryNum +'" onchange="changeSelect('+ tValue +')">' +
+											  '<label class="form-check-label" for="'+ nameLabel + entryNum +'">Document</label>' +
+										  '</div>';
+										  
+			//'plant' is a PLACEHOLDER; should be retrieved from backend							  
+			var entryPlant 				= '<div class="col-3" id="'+ entryCategory +'Plant'+ entryNum +'">' +
+											  'plant' +
+										  '</div>';
+			
+			//'relation' is a PLACEHOLDER; should be retrieved from backend							  
+			var entryRelation 			= '<div class="col-2" id="'+ entryCategory +'Relation'+ entryNum +'">' +
+											  'relation' +
+										  '</div>';
+										  
+			//'object' is a PLACEHOLDER; should be retrieved from backend							  
+			var entryRelationObject 	= '<div class="col-3" id="'+ entryCategory +'RelationObject'+ entryNum +'">' +
+											  'object' +
+										  '</div>';
+	    	
+			var entryCommands 			= '<div class="col-2" style="text-align:right">' +
+											  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
+											  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
+											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="view entry"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
+											  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
+										  '</div>';
+	    	
+    		var entryContainerClosing	= '</div>';
+    		
+    		var combinedEntry = entryContainerOpening + entryDocument + entryPlant + entryRelation + entryRelationObject + entryCommands + entryContainerClosing;
+    		
+    		$('#' + nameGroup).append(combinedEntry);
+    		
+    		checkItems();
 	    }
     </script>
 	

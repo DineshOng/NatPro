@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
@@ -52,6 +56,54 @@ public class AddCompoundServlet extends HttpServlet {
 			
 			ontoMngr.addDataPropCompound(compoundName);
 			//ontoMngr.setCompoundIndiv(compoundName);
+			
+			System.out.println("req: " + request.getParameter("bioActjson"));
+			if(!request.getParameter("bioActjson").equals("[{}]")) {
+				String bioActjson = request.getParameter("bioActjson").replaceAll("\\{\\},", "").replaceAll("\\[", "{\"json\":\\[").concat("}");
+				System.out.println("mod req: " + bioActjson);
+				
+				
+				JSONParser parser = new JSONParser();
+				JSONObject json = (JSONObject) parser.parse(bioActjson);
+				System.out.println(json);
+				
+				JSONArray msg = (JSONArray) json.get("json");
+				System.out.println(msg);
+				
+				
+				
+				Iterator ib = msg.iterator();
+	
+				while (ib.hasNext()) {
+					JSONObject obj = (JSONObject) ib.next();
+					
+					String bioAct = (String)obj.get("bioAct");
+					System.out.println(bioAct);
+					
+					String bioActIndiv = bioAct.trim().toLowerCase().replaceAll(" ", "_");
+					// create individual for BiologicalActivity
+					ontoMngr.addIndiv_BiologicalActivity(bioActIndiv);
+					// add data property for BiologicalActivity individual
+					ontoMngr.addDataPropBiologicalActivity(bioAct);
+					// add object property Compound -> BiologicalActivity
+					ontoMngr.addObjectHasBiologicalActivity(compoundName, bioActIndiv);
+					
+					String cellLine = (String)obj.get("cellLine");
+					System.out.println(cellLine);
+					
+					if (!cellLine.equals("")) {
+						String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ", "_");
+						// create individual for CellLine
+						ontoMngr.addIndiv_CellLine(cellLineIndiv);
+						// add data property for CellLine individual
+						ontoMngr.addDataPropCellLine(cellLine);
+						// add object property BiologicalActivity -> CellLine
+						ontoMngr.addObjectAffects(bioActIndiv, cellLineIndiv);
+					}
+				}
+			}
+			
+			
 			
 			String pubCID = request.getParameter("pubCID").trim();
 			String molForm = request.getParameter("molForm").trim();
@@ -106,7 +158,7 @@ public class AddCompoundServlet extends HttpServlet {
 			
 			response.sendRedirect("ViewCompoundServlet?compound=" + compoundName);
 			
-		} catch (OWLOntologyCreationException | OWLOntologyStorageException e) {
+		} catch (OWLOntologyCreationException | OWLOntologyStorageException | ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
