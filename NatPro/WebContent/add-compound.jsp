@@ -87,7 +87,7 @@
 							<label for="">Compound Name</label> 
 							
 							<input
-								onchange="checkIfNull()" name="compound" type="text"
+								name="compound" type="text"
 								class="form-control" id="compound" aria-describedby="emailHelp"
 								placeholder="" value="${compound.getCompoundName()}" required> 
 								
@@ -220,10 +220,51 @@
 						</div>
 					</div>
 					
+					<div class="mb-4">
+
+						<!-- Solid divider -->
+						<hr class="solid">
+					</div>
+					
 					<div class="form-row">
-						<button id="pubchemBT" class="btn btn-info" role="button">Auto-fill from PubChem</button>
+						<div class="form-group col-md-8">
+							<table class="table">
+			                    <thead>
+				                    <tr>
+				                        <td style="width: 55%">Biological Activity</th>
+				                        <td style="width: 40%">Cell Line</th>
+				                        <td style="width: 5%"></th>
+				                    </tr>
+			                    </thead>
+			                    <tbody>
+			                    <tr id="firstTR">
+			                        <td>
+			                            <input
+			                                type="text" name="bioActNX"
+			                                class="form-control" placeholder="">
+			                        </td>
+			                        <td>
+			                        	<input
+			                        		type="text" name="cellLineNX"
+			                        		class="form-control" placeholder="">
+			                        </td>
+			                        <td></td>
+			                    </tr>
+			                    </tbody>
+		                	</table>
+		                </div>
+		                <div class="form-group col-md-4">
+		                	<button id="addrow" type="button" class="btn btn-secondary btn-sm" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>
+		                </div>
+		            </div>
+		            
+		            <div class="form-row">
+						<button id="pubchemBT" class="btn btn-info" role="button">Auto-fill fields from PubChem</button>
 					</div>
 					&nbsp; 
+					
+					<input type="hidden" name="bioActjson" value="">
+					
 					<input type="hidden" name="oldCompound" value="${compound.getCompoundName()}">
 					<input type="hidden" name="pubCID" value="${compound.getPubCID()}">
 					<div class="form-row">
@@ -342,8 +383,63 @@
 	        
 	    });
 	    
+	    $(document).ready(function () {
+	    	var counter = 0;
+
+            $("#addrow").on("click", function () {
+                //if(counter < 4) {
+                    var newRow = $("<tr>");
+                    var cols = "";
+
+                    cols += '<td><input type="text" name="bioActNX' + counter + '" class="form-control" placeholder=""></td>';
+
+                    cols += '<td><input type="text" name="cellLineNX' + counter + '" class="form-control" placeholder=""></td>';
+
+                    cols += '<td><input type="button" class="ibtnDel btn btn-sm btn-danger " style="float: right" value="Delete"></td>';
+                    newRow.append(cols);
+                    $("table").append(newRow);
+                    counter++;
+                //}
+            });
+
+            $("table").on("click", ".ibtnDel", function (event) {
+                $(this).closest("tr").remove();       
+                counter -= 1
+            });
+	        
+	    });
+	    
+	    $("#compound").change(mapRC);
+
+        function mapRC() {
+            var RC = getRC();
+            var vals = RC.filter((RC) => {
+                return RC.bioAct != "" 
+            })
+            console.log(vals);
+            return vals;
+        }
+
+        function getRC() {
+            var arr = [{}];
+            
+            $("table").find('input[name^="bioActNX"]').each(function () {
+                var x = {};
+                var num = $(this).attr("name").split("NX")[1];
+                console.log(num);
+                x.cellLine = $('input[name="cellLineNX'+num+'"]').val().trim();
+                x.bioAct = $(this).val().trim();
+                arr.push(x);
+            });
+            return arr;
+        }
+	    
 	    $("#SMILES").on("keydown keyup", function() {
 	    	generateStructure();
+	    });
+	    
+	    $("#compound").on("keydown keyup", function() {
+	    	checkIfNull();
 	    });
 	    
 	    function func_submit() {
@@ -430,6 +526,10 @@
     		if($('input[name="hBondAcceptor"]')[0].checkValidity())
     		if($('input[name="rotBondCount"]')[0].checkValidity()) {
 	        	//$("#subBT").hide();
+	        	
+	        	
+	        	$('input[name="bioActjson"]').val(JSON.stringify(mapRC()));
+	        	
 	        	$("#subBT").show();
 	            $("#subBT").prop("disabled", true);
 	            $("#subBT").html(

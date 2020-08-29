@@ -717,7 +717,8 @@ public class OntoQuery {
 
 		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
 		RDFProperty datatypeProperty_CompoundSynonym = owlModel.getRDFProperty("datatypeProperty_CompoundSynonym");
-
+		RDFProperty datatypeProperty_IUPACName = owlModel.getRDFProperty("datatypeProperty_IUPACName");
+		
 		Boolean found = false;
 
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
@@ -730,12 +731,15 @@ public class OntoQuery {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
+						
+						String compoundIndivIUPAC = individual.getPropertyValue(datatypeProperty_IUPACName).toString();
+						
 						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
 
 						Compound mp = null;
 
 						// EDIT THIS CODE FOR OPTIMAL SEARCH FUNCTION
-						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase())) {
+						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase()) || compoundIndivIUPAC.toLowerCase().contains(Compound.toLowerCase())) {
 							// System.out.println(compoundIndiv);
 							mp = new Compound(compoundIndiv);
 							HashSet<String> synonyms = new HashSet<String>();
