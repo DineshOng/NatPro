@@ -11,15 +11,19 @@ decoction of bark and leaves used for dysentery;leaves
 decoction of fruit used for asthma and biliousness;fruit
 decoction of leaf and bark mixed with the same of annona glabra as anthelmintic for flatworms and nematodes;leaf
 decoction of leaves and flowers taken internally as laxative and diuretic for gonorrhea;flowers
+decoction of leaves and flowers taken internally as laxative and diuretic for gonorrhea;leaves
 decoction of leaves and roots used as emmenagogue;roots
 decoction of leaves used as emollient;leaves
 decoction of leaves used for asthma, bronchitis, cancer;leaves
 decoction of leaves used for hypertension;leaves
 decoction of leaves used to wash wounds;leaves
 decoction of roots and fruits used for cough with fever;fruits
+decoction of roots and fruits used for cough with fever;roots
 decoction of roots and leaves used for affections of the chest and lung;leaves
+decoction of roots and leaves used for affections of the chest and lung;roots
 decoction of roots for headaches, varicose veins, arthritis, fevers;roots
 decoction of stem-bark or whote root used for diarrhea, dysentery, frequent blood stools accompanied by tenesmus;root
+decoction of stem-bark or whote root used for diarrhea, dysentery, frequent blood stools accompanied by tenesmus;stem
 decoction of young fruit useful for catarrh, urinary problems;fruit
 decoctions of leaves for abdominal pain;leaves
 ear_aches_have_also_been_proven_to_be_cured_by_the_infusion_prepared_from_its_leaves;leaves
@@ -52,8 +56,10 @@ powder of leaves is sniffed up;leaves
 powder of root, mixed with java flour and water, applied to swellings;root
 powdered bark used for scorpion stings;bark
 powdered dried flowers for headaches; the assurani indians grate the tuberous seeds and drink it for intestinal parasites;flowers
+powdered dried flowers for headaches; the assurani indians grate the tuberous seeds and drink it for intestinal parasites;seeds
 rica infusion of leaves used as diuretic; rhizomes used as emollient;leaves
 root and flower decoction is used for hemoptysis;flower
+root and flower decoction is used for hemoptysis;root
 root juice is a drastic purgative;root
 roots of pulasan  are boiled with g linearis and used for bathing feverish patients;roots
 roots used for diabetes, skin swellings likes boils and furuncles;roots
