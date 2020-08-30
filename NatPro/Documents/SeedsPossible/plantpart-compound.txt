@@ -1,0 +1,288 @@
+e1:plantpart
+e2:compound
+
+bark;Alstonerine
+bark;beta-Amyrin
+bark;Brucine
+bark;Campesterol
+bark;gamma-Sitosterol
+bark;Lupeol
+bark;Rauvomitin
+bark;Stigmasterol
+bark;Strictamin
+bark;24-methylenecycloartanol
+bark;beta-Sitosterol
+bark;beta-sitosteryl fatty acid ester
+bark;Stigmasterol
+bark;9alphaH-isopimara-7,15-diene
+bark;Isopimaran-19-ol
+bark;Triacylglycerols
+bark;9alphaH-isopimara-7,15-diene
+bark;beta-sitosteryl fatty acid ester
+bark;Ellagic acid
+bark;Ellagitannins
+bark;Tritriacontane-16,18-dione
+bark;8-methoxyellagic acid-2-rhamnoside
+endotesta;beta-Sitosterol
+endotesta;Triacylglycerols
+endotesta;beta-Sitosterol
+endotesta;Phytyl fatty acid esters
+endotesta;Stigmasterol
+endotesta;Triglycerides
+flesh of the fruit;beta-Sitosterol
+flesh of the fruit;Fatty acids
+flesh of the fruit;Triglycerides
+flowers;alpha-amyrin
+flowers;beta-Amyrin
+flowers;Oleanolic acid
+flowers;Phytyl fatty acid esters
+flowers;Triacylglycerols
+flowers;alpha-amyrin cinnamate
+flowers;beta-amyrin cinnamate
+fruit rind;beta-Sitosterol
+fruit rind;Fatty acids
+fruit rind;Hydrocarbons
+leaf;Alstohentine
+leaf;Alstomaline
+leaf;Alstomicine
+leaf;Alstophyllal
+leaf;beta-Sitosteryl-beta-D-Glucoside
+leaf;10,11-dimethoxynareline
+leaf;16-hydroxy-N4-demethylalstophyllal Oxindole
+leaf;16-hydroxyalstonal
+leaf;16-hydroxyalstonisine
+leaf;6-oxoalstophyllal
+leaf;6-oxoalstophylline
+leaflets;Oleic acid
+leaflets;Triacylglycerols
+leaflets;1,2-dioleylglycerol
+leaves;Andrographolide
+leaves;beta-Sitosterol
+leaves;Chlorophyll a
+leaves;Stigmasterol
+leaves;14-deoxy-11,12-dihydroandrographolide
+leaves;14-deoxy-12-hydroxyandrographolide
+leaves;14-deoxyandrographolide
+leaves;beta-Sitosterol
+leaves;Fatty acids
+leaves;Lutein
+leaves;Polyprenol
+leaves;Squalene
+leaves;Triglycerides
+leaves;beta-Sitosterol
+leaves;Friedelinol
+leaves;Phytol
+leaves;Squalene
+leaves;Stigmasterol
+leaves;Chlorophyll a
+leaves;Polyprenol
+leaves;Squalene
+leaves;Triacylglycerols
+leaves;3beta-friedelinol
+leaves;alpha-linolenic acid
+leaves;beta-carotene
+leaves;beta-Sitosterol
+leaves;Fatty acid
+leaves;Linoleic acid
+leaves;Lutein
+leaves;Trilinolenin
+leaves;beta-Sitosterol
+leaves;Triglycerides
+leaves;beta-Sitosterol
+leaves;Stigmasterol
+leaves;Triglycerides
+leaves;Duranterectoside
+leaves;Durantoside
+leaves;Lamiide
+leaves;Lamiidoside
+leaves;Verbascoside
+leaves;beta-Sitosterol
+leaves;Polyprenol
+leaves;Squalene
+leaves;Triglycerides
+leaves;Linoleic acid
+leaves;Lutein
+leaves;Polyprenol
+leaves;Squalene
+leaves;Nerolidol
+leaves;Oleanolic acid
+leaves;Squalene
+leaves;Ursolic acid
+leaves;beta-Sitosterol
+leaves;Saturated hydrocarbons
+leaves;Squalene
+leaves;2-hydroxyethyl benzoate
+leaves;alpha-amyrin
+leaves;Bauerenol
+leaves;beta-Amyrin
+leaves;beta-Sitosterol
+leaves;Lupeol
+leaves;Stigmasterol
+leaves;alpha-amyrin
+leaves;beta-Amyrin
+leaves;beta-amyrin cinnamate
+leaves;beta-Sitosterol
+leaves;Lupeol
+leaves;Saturated hydrocarbons
+leaves;Squalene
+leaves;beta-Sitosterol
+leaves;Chlorophyll a
+leaves;Saturated hydrocarbons
+leaves;Squalene
+leaves;Stigmasterol
+leaves;beta-Sitosterol
+leaves;Lupeol
+leaves;Squalene
+leaves;alpha-amyrin
+leaves;Bauerenol
+leaves;beta-Sitosterol
+leaves;Lutein
+leaves;Squalene
+leaves;Stigmasterol
+leaves;alpha-amyrin
+leaves;alpha-amyrin fatty acid esters
+leaves;beta-Amyrin
+leaves;beta-amyrin fatty acid esters
+leaves;Lupeol
+leaves;Lupeol fatty acid esters
+leaves;beta-Sitosterol
+leaves;Fatty acid methyl esters
+leaves;Lupenone
+leaves;Stigmasterol
+leaves;beta-Sitosterol
+leaves;Chlorophyll a
+leaves;Lupeol acetate
+leaves;Taraxerol
+leaves;Triglycerides
+petiole;beta-Sitosterol
+petiole;Stigmasterol
+petiole;Triacylglycerols
+plant;beta-Sitosterol
+plant;Echitamine
+plant;Echitovenidine
+plant;Venenatine
+plant;Echitamine
+plant;Echitovenidine
+plant;Venenatine
+pods;beta-Sitosterol
+pods;Lupeol
+pods;Monogalactosyl diacylglycerols
+pods;Triacylglycerols
+rachis;beta-Sitosterol
+rachis;Stigmasterol
+rachis;Triacylglycerols
+roots;beta-Sitosterol
+roots;beta-sitosteryl fatty acid esters
+roots;Stigmasterol
+roots;Trans-cinnamate esters
+roots;5,2'-dihydroxy-7,8-dimethoxyflavone
+roots;beta-Sitosterol
+roots;beta-Sitosterol
+roots;Taraxerol
+roots;Taraxerone
+roots;Lupenone
+roots;Lupeol
+roots;alpha-linolenic acid
+roots;beta-Sitosterol
+roots;Fatty acid
+roots;Linoleic acid
+roots;Triglycerides
+sarcotesta;beta-Sitosterol
+sarcotesta;Squalene
+sarcotesta;Stigmasterol
+sarcotesta;Triglycerides
+sclerotesta;beta-Sitosterol
+sclerotesta;beta-sitosteryl fatty acid ester
+sclerotesta;Stigmasterol
+sclerotesta;beta-Sitosterol
+sclerotesta;Triacylglycerols
+sclerotesta;beta-Sitosterol
+sclerotesta;beta-sitosteryl fatty acid ester
+sclerotesta;Stigmasterol
+sclerotesta;Triglycerides
+seeds;beta-Sitosterol
+seeds;Fatty acids
+seeds;Triglycerides
+stem;Fatty acid
+stem;Linoleic acid
+stem;beta-Sitosterol
+stem;Fatty acid
+stem;Linoleic acid
+stem;Triglycerides
+stem bark;beta-Sitosterol
+stem bark;Dysoxylins a
+stem bark;Dysoxylins b
+stem bark;Dysoxylins c
+stem bark;Dysoxylins d
+stem bark;Gaudichaudysolin a
+stem bark;p-hydroxyacetophenone
+stem bark;Stigmasterol
+stems;14-deoxyandrographolide
+stems;Cycloartenol
+stems;Cycloartenol acetate
+stems;Polyprenol
+stems;Durantoside
+stems;Lamiidoside
+stems;alpha-amyrin cinnamate
+stems;beta-amyrin cinnamate
+stems;beta-Sitosterol
+stems;Stigmasterol
+stems;Taraxerol
+stems;Taraxerone
+stems;beta-Sitosterol
+stems;Dihydrocanaric acid
+stems;Lupenone
+stems;Lupeol
+stems;Saturated hydrocarbons
+stems;Stigmasterol
+stems;Taraxerol
+stems;beta-Sitosterol
+stems;Lupeol cinnamate
+stems;Squalene
+stems;Stigmasterol
+stems;Taraxerol
+stems;alpha-amyrin cinnamate
+stems;beta-amyrin cinnamate
+stems;beta-Sitosterol
+stems;Lupeol
+stems;Lupeol cinnamate
+stems;Saturated hydrocarbons
+stems;Stigmasterol
+stems;Betulin
+stems;alpha-amyrin
+stems;alpha-amyrin acetate
+stems;beta-Amyrin
+stems;beta-amyrin acetate
+stems;Lupeol acetate
+stems;alpha-amyrin acetate
+stems;beta-amyrin acetate
+stems;Taraxerol
+stems;Taraxeryl acetate
+stems;beta-Sitosterol
+stems;Stigmasterol
+stems;Taraxerol
+stems;beta-amyrin cinnamate
+stems;Taraxerol
+twigs;alpha-amyrin
+twigs;alpha-amyrin fatty acid ester
+twigs;beta-Amyrin
+twigs;beta-myrin fatty acid ester
+twigs;beta-Sitosterol
+twigs;Betulin
+twigs;Chlorophyll a
+twigs;Lupeol
+twigs;Lupeol fatty acid ester
+twigs;Oleanolic acid
+twigs;3beta,28-dihydroxyolean-12-ene
+twigs;Nerolidol
+twigs;Oleanolic acid
+twigs;Squalene
+twigs;Ursolic acid
+twigs;5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone
+unripe fruit;Cycloartenol
+unripe fruit;Cycloartenone
+unripe fruit;2,3-butanediols
+wood;Ellagic acid
+wood;Ellagitannins
+wood;Tritriacontane-16,18-dione
+wood;8-methoxyellagic acid-2-rhamnoside

@@ -36,6 +36,7 @@ public class Tagger {
 			
 			String preprocessedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Preprocessed\\";
 			String taggedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Tagged\\";
+			String taggedBootstrapFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
 			
 			String genusTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\genus.txt";
 			String bioActTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\bioact.txt";
@@ -96,7 +97,11 @@ public class Tagger {
             
 	        java.io.FileWriter fw4 = new java.io.FileWriter(taggedDocumentsFolderPath + uniqueID + ".xml");
 	        fw4.write(txt);
-	        fw4.close();	
+	        fw4.close();
+	        
+	        java.io.FileWriter fw5 = new java.io.FileWriter(taggedBootstrapFolderPath + uniqueID + ".xml");
+	        fw5.write(txt);
+	        fw5.close();	
         
 	}
 }

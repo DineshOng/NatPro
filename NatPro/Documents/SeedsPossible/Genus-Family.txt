@@ -1,0 +1,11 @@
+e1:genus
+e2:family
+
+Alstonia;Apocynaceae
+Andrographis;Acanthaceae
+Artocarpus;Moraceae
+Brassica;Brassicaceae
+Cycas;Cycadaceae
+Dysoxylum;Meliaceae
+Eucalyptus;Myrtaceae
+Hoya;Apocynaceae

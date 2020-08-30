@@ -38,7 +38,7 @@ import javax.servlet.http.HttpServlet;
 @MultipartConfig(maxFileSize = 16177215L)
 public class uploadSERVLET extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 //  private	String uploadedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\UploadedDocuments\\";
 //	private String taggedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Tagged\\";
 //	private String processingTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt";
@@ -54,50 +54,50 @@ public class uploadSERVLET extends HttpServlet {
 
 	protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {
-		long startTime, endTime, endGenDocIdTime, endCheckDocTime, saveDocTime=0, preprocDuration;
+		long startTime, endTime, endGenDocIdTime, endCheckDocTime, saveDocTime = 0, preprocDuration;
 		startTime = System.nanoTime();
 		request.setAttribute("startTime", (double) startTime / 1000000);
 		List<Part> fileParts = request.getParts().stream()
 				.filter(part -> "file-upload".equals(part.getName()) && part.getSize() > 0)
 				.collect(Collectors.toList()); // Retrieves <input type="file" name="file" multiple="true">
 		// List<String> files = new ArrayList<String>();
-		
-		if(fileParts.size()>1) {
+
+		if (fileParts.size() > 1) {
 			request.setAttribute("numdocsplural", "s");
-		}else {
+		} else {
 			request.setAttribute("numdocsplural", "");
 		}
-		
-		List<String>fileNameList = new ArrayList<String>();
+
+		List<String> fileNameList = new ArrayList<String>();
 		for (Part filePart : fileParts) {
 			String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
-			
+
 			InputStream fileContent = filePart.getInputStream();
 			InputStream fileContent1 = filePart.getInputStream();
 			// File targetFile = new File(fileName);
 			// OutputStream outStream;
-			
-	        try {
+
+			try {
 				String uniqueID = new GenUniqueDocID2(fileContent).getUniqueID();
 
 				endGenDocIdTime = System.nanoTime();
-				request.setAttribute("genDocIdDuration", (double) (endGenDocIdTime-startTime) / 1000000);
-				if(checkDocument(uniqueID)) {
+				request.setAttribute("genDocIdDuration", (double) (endGenDocIdTime - startTime) / 1000000);
+				if (checkDocument(uniqueID)) {
 					endCheckDocTime = System.nanoTime();
-					request.setAttribute("checkDocDuration", (double) (endCheckDocTime-endGenDocIdTime) / 1000000);
-					
+					request.setAttribute("checkDocDuration", (double) (endCheckDocTime - endGenDocIdTime) / 1000000);
+
 					System.out.println(fileName);
-					if(fileName.endsWith(".pdf")) {
-						new SaveFile(fileContent1, new File(uploadedDocumentsFolderPath+uniqueID+".pdf"));
-						
+					if (fileName.endsWith(".pdf")) {
+						new SaveFile(fileContent1, new File(uploadedDocumentsFolderPath + uniqueID + ".pdf"));
+
 						saveDocTime = System.nanoTime();
-						request.setAttribute("saveDocDuration", (double) (saveDocTime-endCheckDocTime) / 1000000);
-					} else if(fileName.endsWith(".txt")) {
-						new SaveFile(fileContent1, new File(uploadedDocumentsFolderPath+uniqueID+".txt"));
+						request.setAttribute("saveDocDuration", (double) (saveDocTime - endCheckDocTime) / 1000000);
+					} else if (fileName.endsWith(".txt")) {
+						new SaveFile(fileContent1, new File(uploadedDocumentsFolderPath + uniqueID + ".txt"));
 					}
 				} else {
-					//files.add(filePart.getName() + fileName);
-					System.out.println("file duplicate: "+fileName);
+					// files.add(filePart.getName() + fileName);
+					System.out.println("file duplicate: " + fileName);
 				}
 			} catch (NoSuchAlgorithmException e) {
 				e.printStackTrace();
@@ -107,14 +107,17 @@ public class uploadSERVLET extends HttpServlet {
 			fileNameList.add(fileName);
 		}
 		request.setAttribute("filenamelist", fileNameList);
-
-		String html = "	<div class=\"progress\">\r\n"
+		String plural = "";
+		if (fileNameList.size() > 1) {
+			plural = "s";
+		}
+		String preprocProg = "	<div class=\"progress\" style=\"height: 30px;\">\r\n"
 				+ "		<div class=\"progress-bar bg-success progress-bar-striped progress-bar-animated\" role=\"progressbar\" id=\"bar\"\r\n"
 				+ "			style=\"width: 0%\" aria-valuenow=\"25\" aria-valuemin=\"0\"\r\n"
-				+ "			aria-valuemax=\"100\"></div>\r\n" + "	</div>" + "<span id=\"currentProcess\"></span>";
+				+ "			aria-valuemax=\"100\">PROCESSING DOCUMENT" + plural + "</div>\r\n" + "	</div>"
+				+ "<span id=\"currentProcess\"></span>";
 
-		request.setAttribute("html", html);
-
+		request.setAttribute("preprocProg", preprocProg);
 
 		// for(String e :files ) {
 		// System.out.println("hi " + e);
@@ -133,20 +136,21 @@ public class uploadSERVLET extends HttpServlet {
 		File[] listOfFiles = folder.listFiles();
 
 		for (int i = 0; i < listOfFiles.length; i++) {
-		  if (listOfFiles[i].isFile()) {
-		    	String name = listOfFiles[i].getName().replaceAll(".pdf", "").replaceAll(".txt", "");
-		    	deleteProcessUntagged();
-		    	if(checkIfProcessing(name)) {
-		    		if(!getTaggedDocumentsNames().contains(name)) {
-			    		int num = i;
-			    		System.err.println("bef:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
-			    		new Thread(() -> {
-			    			try {
-			    				writeUniqueID(name);
-								new Tagger(folder+ "\\"+listOfFiles[num].getName(), name);
-								
+			if (listOfFiles[i].isFile()) {
+				String name = listOfFiles[i].getName().replaceAll(".pdf", "").replaceAll(".txt", "");
+				deleteProcessUntagged();
+				if (checkIfProcessing(name)) {
+					if (!getTaggedDocumentsNames().contains(name)) {
+						int num = i;
+						System.err.println("bef:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
+						new Thread(() -> {
+							try {
+								writeUniqueID(name);
+								new Tagger(folder + "\\" + listOfFiles[num].getName(), name);
+
 								System.err.println("aft:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
-							} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException e) {
+							} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException
+									| IOException e) {
 								e.printStackTrace();
 								try {
 									deleteUniqueID(name);
@@ -162,26 +166,30 @@ public class uploadSERVLET extends HttpServlet {
 									e.printStackTrace();
 								}
 							}
-			    		}).start();
-			    		
-		    		} else {
-		    			System.out.println(name + " already tagged");
-		    		}
-		    	} else {
-		    		
-		    		System.out.println(name + " preprocessing ongoing");
-		    	}
-		  } else if (listOfFiles[i].isDirectory()) {
-		    System.out.println("Directory " + listOfFiles[i].getName());
-		  }
+						}).start();
+						
+
+					} else {
+						System.out.println(name + " already tagged");
+					}
+				} else {
+
+					System.out.println(name + " preprocessing ongoing");
+				}
+			} else if (listOfFiles[i].isDirectory()) {
+				System.out.println("Directory " + listOfFiles[i].getName());
+			}
 		}
 		preprocDuration = System.nanoTime();
 		request.setAttribute("preprocDuration", (double) (preprocDuration - saveDocTime) / 1000000);
-		
-		endTime = System.nanoTime() ;
+
+		endTime = System.nanoTime();
 //		System.err.println("Processing Document Duration " + ((double) (endTime - startTime)) / 1000000 + " ms");
 		request.setAttribute("endTime", (double) (endTime - startTime) / 1000000);
-		request.getRequestDispatcher("uploadprogress.jsp").forward(request, response);
+//		request.getRequestDispatcher("uploadprogress.jsp").forward(request, response);
+
+		request.getRequestDispatcher("/BootstrapServlet").forward(request, response);
+
 	}
 
 	public Set<String> getTaggedDocumentsNames() throws IOException {
@@ -204,8 +212,7 @@ public class uploadSERVLET extends HttpServlet {
 
 	public void deleteProcessUntagged() throws IOException {
 		Set<String> tagged = getTaggedDocumentsNames();
-		String content = FileUtils.readFileToString(
-				new File(processingTxtFile), "UTF-8");
+		String content = FileUtils.readFileToString(new File(processingTxtFile), "UTF-8");
 
 		for (String s : tagged) {
 			content = content.replaceAll(s, "");
@@ -216,8 +223,7 @@ public class uploadSERVLET extends HttpServlet {
 	}
 
 	public void deleteUniqueID(String uniqueID) throws IOException {
-		String content = FileUtils.readFileToString(
-				new File(processingTxtFile), "UTF-8");
+		String content = FileUtils.readFileToString(new File(processingTxtFile), "UTF-8");
 		content = content.replaceAll(uniqueID, "");
 		File tempFile = new File(processingTxtFile);
 		FileUtils.writeStringToFile(tempFile, content, "UTF-8");
@@ -231,8 +237,7 @@ public class uploadSERVLET extends HttpServlet {
 	}
 
 	public boolean checkIfProcessing(String uniqueID) throws IOException {
-		BufferedReader reader = new BufferedReader(
-				new FileReader(processingTxtFile));
+		BufferedReader reader = new BufferedReader(new FileReader(processingTxtFile));
 		String line = reader.readLine();
 		while (line != null) {
 			if (!line.equals("")) {

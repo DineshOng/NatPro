@@ -42,14 +42,16 @@
 	<c:forEach items="${filenamelist}" var="filenameList">
 		<p class="display-6 text-dark text-center">${filenameList}</p>
 	</c:forEach>
-
-	${html}
+	<h4 class="text-dark">Preprocess:</h4>
+	${preprocProg}
 	<div class="container-fluid mt-3">
-		<div class="row justify-content-around">
+		<div class="row">
 			<div class="col">
 				<button id="but1" type="button" class="btn btn-secondary">Generate
-					Unique Document ID${numdocsplural}</button>
+					Unique Document ID${numdocsplural} </button>
+				
 			</div>
+
 			<div class="col">
 				<button id="but2" type="button" class="btn btn-secondary">Check
 					Document${numdocsplural} for Duplicate</button>
@@ -58,29 +60,84 @@
 				<button id="but3" type="button" class="btn btn-secondary">Save
 					Document${numdocsplural}</button>
 			</div>
+
 			<div class="col">
 				<button id="but4" type="button" class="btn btn-secondary">Convert
 					Document${numdocsplural} to Text File</button>
 			</div>
+
 			<div class="col">
 				<button id="but5" type="button" class="btn btn-secondary">Clean
 					the Text File${numdocsplural}</button>
 			</div>
+
 			<div class="col">
 				<button id="but6" type="button" class="btn btn-secondary">Split
 					Sentences</button>
 			</div>
+
 			<div class="col">
 				<button id="but7" type="button" class="btn btn-secondary">Tag
 					the Document${numdocsplural}</button>
 			</div>
+
 			<div class="col">
 				<button id="but8" type="button" class="btn btn-secondary">Finish
 					Preprocessing</button>
 			</div>
 		</div>
 	</div>
-	<div></div>
+	<br>
+	<h4 class="text-dark">Bootstrap:</h4>
+	${preprocProg}
+	<div class="progress" style="height: 30px;">
+		<div class="progress-bar" id="bar2" role="progressbar"
+			style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
+			aria-valuemax="100">BOOTSRAPPING DOCUMENT${numdocsplural}</div>
+	</div>
+	<div class="container-fluid mt-3">
+		<div class="row justify-content-around">
+			<div class="col">
+				<button id="but11" type="button" class="btn btn-secondary">Load
+					Tagged Document</button>
+			</div>
+			<i class="fa fa-arrow-right mt-2"></i>
+			<div class="col">
+				<button id="but22" type="button" class="btn btn-secondary">Load
+					Seeds</button>
+			</div>
+			<i class="fa fa-arrow-right mt-2"></i>
+			<div class="col">
+				<button id="but33" type="button" class="btn btn-secondary">Process
+					Tagged Document</button>
+			</div>
+			<i class="fa fa-arrow-right mt-2"></i>
+			<div class="col">
+				<button id="but44" type="button" class="btn btn-secondary">Generate
+					Patterns from Document</button>
+			</div>
+			<i class="fa fa-arrow-right mt-2"></i>
+			<div class="col">
+				<button id="but55" type="button" class="btn btn-secondary">POS
+					Tag Document</button>
+			</div>
+			<i class="fa fa-arrow-right mt-2"></i>
+			<div class="col">
+				<button id="but66" type="button" class="btn btn-secondary">Match
+					Patterns with Document</button>
+			</div>
+			<i class="fa fa-arrow-right mt-2"></i>
+			<div class="col">
+				<button id="but77" type="button" class="btn btn-secondary">Add
+					Seed Patterns</button>
+			</div>
+			<i class="fa fa-arrow-right mt-2"></i>
+			<div class="col">
+				<button id="but88" type="button" class="btn btn-secondary">Generate
+					File for Validation</button>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -100,6 +157,7 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
 	<script type="text/javascript">
         var i = 0;
         var currPercent = 0;
@@ -184,21 +242,27 @@
         			document.getElementById("but7").classList.remove("btn-warning");
         			document.getElementById("but7").classList.add("btn-success");
         			document.getElementById("but8").classList.add("btn-warning");
-        			document.getElementById("but8").innerHTML = "Finalizing Document"+s;
+        			document.getElementById("but8").innerHTML = "Processing Document"+s;
         			break;
         		}
-        		currPercent = currPercent + (timeStops[i]/endTime)*100
-        		progressBar.css("width", currPercent + "%");
+        		currPercent = currPercent + (timeStops[Math.round(i)]/endTime)*100
+        		progressBar.css("width", currPercent + "%");        		
         		i=i+1;
+        		window.onbeforeunload = function(){
+        			  return 'Are you sure you want to leave?';
+        			};
         	}else{
+        		window.onbeforeunload = null;
         		document.getElementById("but8").classList.remove("btn-warning");
     			document.getElementById("but8").classList.add("btn-success");
-    			document.getElementById("but8").innerHTML = "Finished Processing";
-    			
-    			document.getElementById("header").innerHTML = "Document"+s+" Upload Successful!";
+    			document.getElementById("but8").innerHTML = "Ready for Bootstrapping";
+    			 document.getElementById("bar").innerHTML = "Preprocessing Complete"; 
+    			/* document.getElementById("header").innerHTML = "Document"+s+" Upload Successful!"; */
+    			document.getElementById("header").innerHTML = "Bootstrapping Document"+s;
                 document.getElementById("spinner").style.display="none";
-                document.getElementById("bar").classList.remove("progress-bar-animated");
-        	}        	
+                document.getElementById("bar").classList.remove("progress-bar-animated"); 
+                
+        	} 
             // Wait for sometime before running this script again
             setTimeout("countNumbers()", 500);
         }
