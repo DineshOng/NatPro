@@ -21,6 +21,7 @@ public class Seed {
 //		genMPWithFamily(q);
 //		genMPWithPart(q);
 //		genMPWithComp(q);
+//		genMPWithPrep(q);
 //		
 //		genSynWithLoc(q);
 //		genSynWithGenus(q);
@@ -30,10 +31,15 @@ public class Seed {
 //
 //		genGenusWithFamily(q);	
 //		
-		genPrepWithIllness(q);
-		genPrepWithPlantPart(q);
+//		genPrepWithIllness(q);
+//		genPrepWithPlantPart(q);
+//
+//		genPartWithIllness(q);
+//		genPartWithCompound(q);
 
-		genPartWithIllness(q);
+//		genCompWithBioAct(q);
+//		genBioActWithCell(q);
+
 	}
 
 //	LEGEND:
@@ -191,6 +197,33 @@ public class Seed {
 				CompoundsList = q.getCompounds(MedPlantNames.get(i));
 				for (int j = 0; j < CompoundsList.size(); j++) {
 					writer.write(MedPlantNames.get(i) + ";" + CompoundsList.get(j));
+					writer.write("\r\n"); // write new line
+				}
+
+			}
+			writer.close();
+		} catch (
+
+		IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void genMPWithPrep(OntoQuery q) throws SQWRLException {
+		List<String> MedPlantNames = q.getAllMedPlantNames();
+		List<String> Prep = new ArrayList<String>();
+		try {
+			PrintWriter writer = new PrintWriter("./seeds/aka-prep.txt");
+			writer.print("");
+			writer.print("e1:aka\r\n");
+			writer.print("e2:prep\r\n");
+			writer.write("\r\n"); // write new line
+			for (int i = 0; i < MedPlantNames.size(); i++) {
+				Prep = q.getMPPreparation(MedPlantNames.get(i));
+				for (int j = 0; j < Prep.size(); j++) {
+					String aka = removePar(MedPlantNames.get(i));
+					String prep = removePar(Prep.get(j)).replaceAll("\\.", "");
+					writer.write(aka + ";" + prep);
 					writer.write("\r\n"); // write new line
 				}
 
@@ -434,6 +467,84 @@ public class Seed {
 						writer.write(part + ";" + ill);
 						writer.write("\r\n"); // write new line
 					}
+				}
+			}
+			writer.close();
+		} catch (
+
+		IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void genPartWithCompound(OntoQuery q) throws SQWRLException {
+		List<String> PlantPart = q.getAllPlantParts();
+		List<String> Compound = new ArrayList<String>();
+		try {
+			PrintWriter writer = new PrintWriter("./seeds/plantpart-compound.txt");
+			writer.print("");
+			writer.print("e1:plantpart\r\n");
+			writer.print("e2:compound\r\n");
+			writer.write("\r\n"); // write new line
+			for (int i = 0; i < PlantPart.size(); i++) {
+				Compound = q.getPlantPartCompound(PlantPart.get(i));
+				for (int j = 0; j < Compound.size(); j++) {
+					String part = removePar(PlantPart.get(i));
+					String comp = removePar(Compound.get(j));
+					writer.write(part + ";" + comp);
+					writer.write("\r\n"); // write new line
+				}
+			}
+			writer.close();
+		} catch (
+
+		IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void genCompWithBioAct(OntoQuery q) throws SQWRLException {
+		List<String> Compound = q.getAllCompounds();
+		List<String> BioAct = new ArrayList<String>();
+		try {
+			PrintWriter writer = new PrintWriter("./seeds/compound-bioact.txt");
+			writer.print("");
+			writer.print("e1:compound\r\n");
+			writer.print("e2:bioact\r\n");
+			writer.write("\r\n"); // write new line
+			for (int i = 0; i < Compound.size(); i++) {
+				BioAct = q.getCompoundBioAct(Compound.get(i));
+				for (int j = 0; j < BioAct.size(); j++) {
+					String comp = removePar(Compound.get(i));
+					String bioact = removePar(BioAct.get(j));
+					writer.write(comp + ";" + bioact);
+					writer.write("\r\n"); // write new line
+				}
+			}
+			writer.close();
+		} catch (
+
+		IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void genBioActWithCell(OntoQuery q) throws SQWRLException {
+		List<String> BioAct = q.getAllBioAct();
+		List<String> Cell = new ArrayList<String>();
+		try {
+			PrintWriter writer = new PrintWriter("./seeds/bioact-cell.txt");
+			writer.print("");
+			writer.print("e1:bioact\r\n");
+			writer.print("e2:cell\r\n");
+			writer.write("\r\n"); // write new line
+			for (int i = 0; i < BioAct.size(); i++) {
+				Cell = q.getBioActCell(BioAct.get(i));
+				for (int j = 0; j < Cell.size(); j++) {
+					String bioact = removePar(BioAct.get(i));
+					String cell = removePar(Cell.get(j));
+					writer.write(bioact + ";" + cell);
+					writer.write("\r\n"); // write new line
 				}
 			}
 			writer.close();
