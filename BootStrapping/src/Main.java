@@ -143,6 +143,7 @@ public class Main {
                 TreeSet<String> Wmatches = new TreeSet<String>();
 
 
+
                 for(String seedWord: seedPattern){
                     try {
                         MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
@@ -163,31 +164,34 @@ public class Main {
                             word = Dictionary.getInstance().lookupIndexWord(POS.ADJECTIVE, seedWord);
                             Wordmatches.add(seedWord);
                         }
-                        Synset synset[] = word.getSenses();
+                        if(word != null){
+                            Synset synset[] = word.getSenses();
 
-                        for(int i=0;i<synset.length;i++){
-                            //System.out.println(word.getSenses());
-                            for(Word synonym : synset[i].getWords())
-                            {
-                                if(tagged.matches(V)){
-                                    Vmatches.add(synonym.getLemma());
-
-
-
-                                }else if(tagged.matches(P)){
-                                    Pmatches.add(synonym.getLemma());
+                            for(int i=0;i<synset.length;i++){
+                                //System.out.println(word.getSenses());
+                                for(Word synonym : synset[i].getWords())
+                                {
+                                    if(tagged.matches(V)){
+                                        Vmatches.add(synonym.getLemma());
 
 
-                                }else if(tagged.matches(W)){
-                                    Wmatches.add(synonym.getLemma());
+
+                                    }else if(tagged.matches(P)){
+                                        Pmatches.add(synonym.getLemma());
 
 
+                                    }else if(tagged.matches(W)){
+                                        Wmatches.add(synonym.getLemma());
+
+
+                                    }
+                                    //matches.add(synonym.getLemma());
+                                    //System.out.println(synonym.getLemma());
                                 }
-                                //matches.add(synonym.getLemma());
-                                //System.out.println(synonym.getLemma());
+                                //System.out.println(" ");
                             }
-                            //System.out.println(" ");
                         }
+
 
 
                         //matches.clear();
@@ -409,103 +413,110 @@ public class Main {
                     //System.out.println(temp);
                 }
 
-                DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-                try {
-                    DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-                    Document document = documentBuilder.newDocument();
+                if(!matches.isEmpty()){
+                    DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+                    try {
+                        DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+                        Document document = documentBuilder.newDocument();
 
 
-                    Element element = document.createElement("Seed");
-                    document.appendChild(element);
+                        Element element = document.createElement("Seed");
+                        document.appendChild(element);
 
-                    Element A = document.createElement("Tag1");
-                    A.appendChild(document.createTextNode(e1));
-                    element.appendChild(A);
+                        Element A = document.createElement("Tag1");
+                        A.appendChild(document.createTextNode(e1));
+                        element.appendChild(A);
 
-                    Element B = document.createElement("Tag2");
-                    B.appendChild(document.createTextNode(e2));
-                    element.appendChild(B);
+                        Element B = document.createElement("Tag2");
+                        B.appendChild(document.createTextNode(e2));
+                        element.appendChild(B);
 
-                    Element C = document.createElement("Relation");
-                    //C.appendChild(document.createTextNode(ms));
-                    element.appendChild(C);
-                    for(String ms: matches) {
-                        Element D = document.createElement("Pattern");
-                        D.appendChild(document.createTextNode(ms));
-                        C.appendChild(D);
+                        Element C = document.createElement("Relation");
+                        //C.appendChild(document.createTextNode(ms));
+                        element.appendChild(C);
+                        for(String ms: matches) {
+                            Element D = document.createElement("Pattern");
+                            D.appendChild(document.createTextNode(ms));
+                            C.appendChild(D);
+                        }
+
+                        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                        Transformer transformer = transformerFactory.newTransformer();
+                        DOMSource source = new DOMSource(document);
+
+                        StreamResult streamResult = new StreamResult("seedOutput/"+e1+"-"+e2+".xml");
+                        transformer.transform(source,streamResult);
+
+                    } catch (ParserConfigurationException | TransformerException e) {
+                        e.printStackTrace();
                     }
-
-                    TransformerFactory transformerFactory = TransformerFactory.newInstance();
-                    Transformer transformer = transformerFactory.newTransformer();
-                    DOMSource source = new DOMSource(document);
-
-                    StreamResult streamResult = new StreamResult("seedOutput/"+e1+"-"+e2+".xml");
-                    transformer.transform(source,streamResult);
-
-                } catch (ParserConfigurationException | TransformerException e) {
-                    e.printStackTrace();
                 }
 
-            /*=======================================================================================================
+
+
+                if(!validation.isEmpty()){
+                    /*=======================================================================================================
                                                 CREATION OF VALIDATION XML
              =======================================================================================================*/
 
-                DocumentBuilderFactory docBuildFactory = DocumentBuilderFactory.newInstance();
-                try {
-                    DocumentBuilder documentBuilder = docBuildFactory.newDocumentBuilder();
-                    Document document = documentBuilder.newDocument();
+                    DocumentBuilderFactory docBuildFactory = DocumentBuilderFactory.newInstance();
+                    try {
+                        DocumentBuilder documentBuilder = docBuildFactory.newDocumentBuilder();
+                        Document document = documentBuilder.newDocument();
 
 
-                    Element element = document.createElement("Seed");
-                    document.appendChild(element);
+                        Element element = document.createElement("Seed");
+                        document.appendChild(element);
 
-                    Element category = document.createElement("Category");
-                    addCategory(e1,e2,category,document);
-                    element.appendChild(category);
+                        Element category = document.createElement("Category");
+                        addCategory(e1,e2,category,document);
+                        element.appendChild(category);
 
-                    Element A = document.createElement("Tag1");
-                    A.appendChild(document.createTextNode(e1));
-                    element.appendChild(A);
+                        Element A = document.createElement("Tag1");
+                        A.appendChild(document.createTextNode(e1));
+                        element.appendChild(A);
 
-                    //Element AValues = document.createElement("Name");
-                    for(String e1Value: e1Name) {
-                        Element AValues = document.createElement("Name");
-                        AValues.appendChild(document.createTextNode(e1Value));
-                        A.appendChild(AValues);
-                    }
-
-                    Element B = document.createElement("Tag2");
-                    B.appendChild(document.createTextNode(e2));
-                    element.appendChild(B);
-
-                    for(String e2Value: e2Name) {
-                        Element BValues = document.createElement("Name");
-                        if(!e1Name.contains(e2Value)){
-                            BValues.appendChild(document.createTextNode(e2Value));
-                            B.appendChild(BValues);
+                        //Element AValues = document.createElement("Name");
+                        for(String e1Value: e1Name) {
+                            Element AValues = document.createElement("Name");
+                            AValues.appendChild(document.createTextNode(e1Value));
+                            A.appendChild(AValues);
                         }
+
+                        Element B = document.createElement("Tag2");
+                        B.appendChild(document.createTextNode(e2));
+                        element.appendChild(B);
+
+                        for(String e2Value: e2Name) {
+                            Element BValues = document.createElement("Name");
+                            if(!e1Name.contains(e2Value)){
+                                BValues.appendChild(document.createTextNode(e2Value));
+                                B.appendChild(BValues);
+                            }
+                        }
+
+                        Element C = document.createElement("Relation");
+                        //C.appendChild(document.createTextNode(ms));
+                        element.appendChild(C);
+                        for(String ms: validation) {
+                            Element D = document.createElement("Pattern");
+                            D.appendChild(document.createTextNode(ms));
+                            C.appendChild(D);
+                        }
+
+
+                        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                        Transformer transformer = transformerFactory.newTransformer();
+                        DOMSource source = new DOMSource(document);
+
+                        StreamResult streamResult = new StreamResult("validation/"+e1+"-"+e2+".xml");
+                        transformer.transform(source,streamResult);
+
+                    } catch (ParserConfigurationException | TransformerException e) {
+                        e.printStackTrace();
                     }
-
-                    Element C = document.createElement("Relation");
-                    //C.appendChild(document.createTextNode(ms));
-                    element.appendChild(C);
-                    for(String ms: validation) {
-                        Element D = document.createElement("Pattern");
-                        D.appendChild(document.createTextNode(ms));
-                        C.appendChild(D);
-                    }
-
-
-                    TransformerFactory transformerFactory = TransformerFactory.newInstance();
-                    Transformer transformer = transformerFactory.newTransformer();
-                    DOMSource source = new DOMSource(document);
-
-                    StreamResult streamResult = new StreamResult("validation/"+e1+"-"+e2+".xml");
-                    transformer.transform(source,streamResult);
-
-                } catch (ParserConfigurationException | TransformerException e) {
-                    e.printStackTrace();
                 }
+
 
 
 
@@ -581,7 +592,7 @@ public class Main {
         if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && pLine.contains("<"+e2+">"+class2+"</"+e2+">") ){
             Pattern p = Pattern.compile("<\\/["+e1+"]+>.+<["+e2+"]+>");
             Matcher m = p.matcher(pLine);
-            System.out.println(e1+": "+class1+";"+e2+": "+class2);
+            //.println(e1+": "+class1+";"+e2+": "+class2);
             while(m.find()) {
 
                 String temp = m.group();
@@ -618,7 +629,7 @@ public class Main {
                 if (pLine.contains("<"+e1+">"+class1+"</"+e1+">") && pLine.contains("<"+e2+">"+class2+"</"+e2+">")) {
                     Pattern p = Pattern.compile("<\\/[" + e1 + "]+>.+<[" + e2 + "]+>");
                     Matcher m = p.matcher(pLine);
-                    System.out.println(e1+": "+class1+";"+e2+": "+class2);
+                    //System.out.println(e1+": "+class1+";"+e2+": "+class2);
                     while (m.find()) {
                         String temp = m.group();
                         temp = temp.replaceAll("<\\/?[a-z]+>", "");
