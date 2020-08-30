@@ -66,11 +66,12 @@ public class BootstrapServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		switch (request.getServletPath()) {
 		case "/BootstrapServlet":
-			while(checkIfProcessing()) {
-				System.out.println("Still Processing");
-			}
-			bootstrap(request, response);
 			request.getRequestDispatcher("uploadprogress.jsp").forward(request, response);
+			Thread uploadThread = (Thread) request.getAttribute("thread");
+			while(uploadThread.isAlive()) {
+//				System.out.println(uploadThread.isAlive());
+			}
+//			bootstrap(request, response);
 			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");

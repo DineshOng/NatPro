@@ -56,6 +56,7 @@ public class uploadSERVLET extends HttpServlet {
 			throws ServletException, IOException {
 		long startTime, endTime, endGenDocIdTime, endCheckDocTime, saveDocTime = 0, preprocDuration;
 		startTime = System.nanoTime();
+		Boolean stillProcessing = true;
 		request.setAttribute("startTime", (double) startTime / 1000000);
 		List<Part> fileParts = request.getParts().stream()
 				.filter(part -> "file-upload".equals(part.getName()) && part.getSize() > 0)
@@ -143,7 +144,7 @@ public class uploadSERVLET extends HttpServlet {
 					if (!getTaggedDocumentsNames().contains(name)) {
 						int num = i;
 						System.err.println("bef:>>>>>>>>>>>>>>>>>>>>>>>>>>> " + Thread.activeCount());
-						new Thread(() -> {
+						Thread thread = new Thread(() -> {
 							try {
 								writeUniqueID(name);
 								new Tagger(folder + "\\" + listOfFiles[num].getName(), name);
@@ -166,14 +167,13 @@ public class uploadSERVLET extends HttpServlet {
 									e.printStackTrace();
 								}
 							}
-						}).start();
-						
-
+						});
+						thread.start();
+						request.setAttribute("thread", thread);						
 					} else {
 						System.out.println(name + " already tagged");
 					}
 				} else {
-
 					System.out.println(name + " preprocessing ongoing");
 				}
 			} else if (listOfFiles[i].isDirectory()) {
@@ -187,8 +187,8 @@ public class uploadSERVLET extends HttpServlet {
 //		System.err.println("Processing Document Duration " + ((double) (endTime - startTime)) / 1000000 + " ms");
 		request.setAttribute("endTime", (double) (endTime - startTime) / 1000000);
 //		request.getRequestDispatcher("uploadprogress.jsp").forward(request, response);
-
 		request.getRequestDispatcher("/BootstrapServlet").forward(request, response);
+		
 
 	}
 
