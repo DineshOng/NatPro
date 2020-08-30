@@ -29,11 +29,18 @@
     </style>
     
     <script type="text/javascript" language="javascript" src="jsme/jsme.nocache.js"></script>
+    
+    <link rel="stylesheet" href="ChemDoodleWeb/ChemDoodleWeb.css" type="text/css">
+	<script type="text/javascript" src="ChemDoodleWeb/ChemDoodleWeb.js"></script>
+	
+	<script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
 
 	<script>
 	    //this function will be called after the JavaScriptApplet code has been loaded.
 	    function jsmeOnLoad() {
-	        jsmeApplet = new JSApplet.JSME("jsme_container", "580px", "340px");
+	    	var w = $("#jsme_div").width();
+	        jsmeApplet = new JSApplet.JSME("jsme_container", w+"px", "340px");
 	        jsmeApplet.options('nocanonize');
 	        generateStructure();
 	        //updateModel();
@@ -86,8 +93,19 @@
 							</div>
 						</div>
 						<div class="col-md-6">
-							<iframe style="visibility:hidden;" onload="this.style.visibility = 'visible';" width="100%" height="100%" id='3d' class="compound" src="3dmodel.html" ></iframe>
+							<div id="cd">
+								<script>
+								  var w = $("#cd").width();
+								  let transformStick = new ChemDoodle.TransformCanvas3D('transformStick', w, 340);
+								  transformStick.styles.set3DRepresentation('Stick');
+								  transformStick.styles.backgroundColor = 'black';
+								  let molFile = '';
+								  let molecule = ChemDoodle.readMOL(molFile, 1);
+								  transformStick.loadMolecule(molecule);
+								</script>
+							</div>
 						</div>
+						
 					</div>
 					
 					<div class="form-row">
@@ -288,8 +306,7 @@
 		</form>
 	</div>
 
-	<script type="text/javascript"
-		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	
 		
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
@@ -371,14 +388,13 @@
 		    	        		$('input[name="rotBondCount"]').val(obj.rotBondCount);
 		    	        		
 		    	        		generateStructure();
-		    	        		update3d();
 		    	        		
 		    	        		$('textarea[name="synonym"]').val($('textarea[name="synonym"]').val()+"\n"+obj.synonym);
 		        				
 		    	        		
 		    	        		$("#pubchemBT").show();
 		    	           		$("#pubchemBT").prop("disabled", false);
-		    	            	$("#pubchemBT").html('Auto-fill from PubChem');
+		    	            	$("#pubchemBT").html('Auto-fill fields from PubChem');
 		        				
 		        				
 		        				//$.LoadingOverlay("hide");
@@ -509,17 +525,33 @@
 		
 		function generateStructure() {
 			var mol = $('input[name="canSMILES"]').val();
-			jsmeApplet.readGenericMolecularInput(mol); 
+			jsmeApplet.readGenericMolecularInput(mol);
+			//update3d();
+			setTimeout(function() { update3d(); }, 500);
 	    }
 
 		function updateModel() {
 	    	generateStructure();
-	    	$("#3d").attr("src", "3dmodel.html?nixon="+escape(lzw_encode(jsmeApplet.molFile(false))));
+	    	update3d();
 		}
 		
 		function update3d() {
-			$("#3d").attr("src", "3dmodel.html?nixon="+escape(lzw_encode(jsmeApplet.molFile(false))));
+			//$("#3d").attr("src", "3dmodel.html?nixon="+escape(lzw_encode(jsmeApplet.molFile(false))));
+			molFile = jsmeApplet.molFile(false);
+			molecule = ChemDoodle.readMOL(molFile, 1);
+			  transformStick.loadMolecule(molecule);
+			 /*	ChemDoodle.iChemLabs.optimize(molecule, {
+	                dimension: 3
+	            }, function(mol) {
+	            	transformStick.loadMolecule(mol);
+	            });*/
 		}
+		
+		$(window).on('resize', function(){
+	    	var w = $("#jsme_div").width();
+	    	jsmeApplet.setSize(w+"px", "340px");
+	    	transformStick.resize(w, 340);
+		});
 		
 		function ddfunc(x){
 			if(x==1) {
