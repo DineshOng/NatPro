@@ -1,5 +1,5 @@
-e1:MedicinalPlant
-e2:Synonym
+e1:aka
+e2:plant
 
 alas cuatro;mirabilis jalapa
 alas cuatro;mirabilis longiflora
@@ -21,6 +21,7 @@ golden shower;cassia spectabilis
 golden shower;senna spectabilis
 hilagak;uvaria purpurea
 hilagak;uvaria rufa
+ivory mahogany;Dysoxylum gaudichaudianum
 kahoi-dalaga;mussaenda frondosa
 kahoi-dalaga;mussaenda grandiflora
 kalamitmit;ipomoea cymosa
@@ -41,6 +42,7 @@ mana;jatropha janipha
 mana;jatropha species
 melon-melonan;trichosanthes anguina
 melon-melonan;trichosanthes cucurmerina
+mustard;Brassica juncea
 okra;hibiscus esculentis linn.
 pakopatoti-alog;perdicium tomentosum
 palmera datilera ;phoenix cycadifolia
@@ -48,6 +50,9 @@ palmera datilera ;phoenix hanceana
 prutas-baguio;passiflora hibiscifolia
 rabbit's foot fern;davallia solida
 rabbit's foot fern;humata griffithiana
+radish;Raphanus sativus
+rainbow eucalyptus;Eucalyptus deglupta
+red cabbage;Brassica oleracea var capitata f. rubra
 salimomo ;ehretia philippinensis
 sapinit;psidium guajava
 sapinit;rubus comintanus
@@ -58,4 +63,5 @@ sapinit;urena lobota
 sigarilyas;psophocarpus tetragonolobus
 tsampakang-puti;michelia champaca
 tsampakang-puti;michelia longifolia
+wax plant;Hoya meliflua
 green/white cabbage;Brassica oleracea

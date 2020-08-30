@@ -1,5 +1,5 @@
-e1:MedicinalPlant
-e2:Compound
+e1:aka
+e2:compound
 
 batino;beta-Sitosteryl-beta-D-Glucoside
 batino;16-hydroxyalstonal
@@ -65,18 +65,6 @@ rainbow eucalyptus;Oleanolic acid
 red cabbage;Stigmasterol
 red cabbage;beta-Sitosterol
 red cabbage;Triglycerides
-wax plant;Oleanone
-wax plant;beta-Amyrin
-wax plant;alpha-amyrin cinnamate
-wax plant;Lupenone
-wax plant;Stigmasterol
-wax plant;beta-Sitosterol
-wax plant;Squalene
-wax plant;alpha-amyrin
-wax plant;beta-amyrin cinnamate
-wax plant;lupenyl cinnamate
-wax plant;Ursenone
-wax plant;Lupeol
 green/white cabbage;Fatty acid
 green/white cabbage;beta-Sitosterol
 green/white cabbage;Triglycerides

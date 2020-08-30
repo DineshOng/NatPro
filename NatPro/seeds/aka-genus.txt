@@ -1,5 +1,5 @@
-e1:MedicinalPlant
-e2:Genus
+e1:aka
+e2:genus
 
 batino;Alstonia
 brocolli;Brassica

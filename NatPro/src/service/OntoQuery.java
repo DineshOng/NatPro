@@ -34,9 +34,8 @@ public class OntoQuery {
 
 	public OntoQuery() throws OntologyLoadException {
 		/* Change local path */
-		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
-//		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
-//		String owlPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\Ontology\\OntoNatPro.owl";
+//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -520,6 +519,120 @@ public class OntoQuery {
 		}
 
 		return values;
+	}
+	
+	public List<String> getPreparationIllness(String preparation) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
+		RDFProperty datatypeProperty_Illness = owlModel.getRDFProperty("datatypeProperty_Illness");
+
+		RDFProperty treats = owlModel.getRDFProperty("treats");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Preparation")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						// find the genus
+						if (preparation.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Preparation).toString())) {
+							OWLIndividual illnessIndiv = (OWLIndividual) individual.getPropertyValue(treats);
+							values.add(illnessIndiv.getPropertyValue(datatypeProperty_Illness).toString());
+						}
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+
+		return values;
+	}
+	
+	public List<String> getPreparationPlantPart(String preparation) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
+		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
+
+		RDFProperty utilizedPart = owlModel.getRDFProperty("utilizedPart");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Preparation")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						// find the genus
+						if (preparation.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Preparation).toString())) {
+							OWLIndividual plantPartIndiv = (OWLIndividual) individual.getPropertyValue(utilizedPart);
+							values.add(plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString());
+						}
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+
+		return values;
+	}
+	
+	public List<String> getPreparationPlantPartIllness(String preparation) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
+		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
+
+		RDFProperty utilizedPart = owlModel.getRDFProperty("utilizedPart");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Preparation")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						// find the genus
+						if (preparation.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Preparation).toString())) {
+							OWLIndividual plantPartIndiv = (OWLIndividual) individual.getPropertyValue(utilizedPart);
+							values.add(plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString());
+						}
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+
+		return values;
+	}
+	
+	public List<String> getAllPreparations() {
+		List<String> preparation = new ArrayList<String>();
+		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Preparation")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						preparation.add(individual.getPropertyValue(datatypeProperty_Preparation).toString());
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return preparation;
+
 	}
 
 	public List<String> getAllPlantParts() {

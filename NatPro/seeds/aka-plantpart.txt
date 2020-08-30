@@ -1,5 +1,5 @@
-e1:MedicinalPlant
-e2:PlantPart
+e1:aka
+e2:plantpart
 
 batino;bark
 batino;leaf
