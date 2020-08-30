@@ -74,6 +74,9 @@
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(2)">Illness</button>
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(3)">Location</button>
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(4)">Synonym</button>
+					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(5)">Preparation</button>
+					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(6)">Genus</button>
+					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(7)">Family</button>
 				</div>
 			</div>
 	
@@ -169,6 +172,61 @@
 					
 				</div>
 				
+				
+				<h3 style="padding-top:50px; padding-bottom:20px">Preparation(s)</h3>
+				<div class="row" id="substitutePreparation" value="1">
+					<div class="col-12">
+						empty.
+					</div>
+				</div>
+				<div class="row" id="togglePreparation" value="0" hidden>
+					<div class="col-12" style="text-align:left">
+						<button id="prepSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(5)" value="0">Select All</button>
+						<button id="prepApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(5)">Approve Selected</button>
+						<button id="prepReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(5)">Reject Selected</button>
+					</div>
+				</div>
+				
+				<div id="PreparationGroup">
+					
+				</div>
+				
+				<h3 style="padding-top:50px; padding-bottom:20px">Genus</h3>
+				<div class="row" id="substituteGenus" value="1">
+					<div class="col-12">
+						empty.
+					</div>
+				</div>
+				<div class="row" id="toggleGenus" value="0" hidden>
+					<div class="col-12" style="text-align:left">
+						<button id="genSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(6)" value="0">Select All</button>
+						<button id="genApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(6)">Approve Selected</button>
+						<button id="genReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(6)">Reject Selected</button>
+					</div>
+				</div>
+				
+				<div id="GenusGroup">
+					
+				</div>
+				
+				<h3 style="padding-top:50px; padding-bottom:20px">Family</h3>
+				<div class="row" id="substituteFamily" value="1">
+					<div class="col-12">
+						empty.
+					</div>
+				</div>
+				<div class="row" id="toggleFamily" value="0" hidden>
+					<div class="col-12" style="text-align:left">
+						<button id="famSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(7)" value="0">Select All</button>
+						<button id="famApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(7)">Approve Selected</button>
+						<button id="famReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(7)">Reject Selected</button>
+					</div>
+				</div>
+				
+				<div id="FamilyGroup">
+					
+				</div>
+				
 			</form>
 
 		</div>
@@ -182,11 +240,11 @@
     	/* -- GLOBAL VARIABLES -- */
     	
     	//values for the counter
-    	var ccCtr, cpnCtr, illCtr, locCtr, synCtr;
+    	var ccCtr, cpnCtr, illCtr, locCtr, synCtr, prepCtr, genCtr, famCtr;
     	
     	// initialize the counters at -1 (because when calling the addEntry(), it automatically increments +1)
     	// TODO: If ctr == -1, the category is empty and can be invisible from the user
-    	ccCtr = cpnCtr = illCtr = locCtr = synCtr = -1; 
+    	ccCtr = cpnCtr = illCtr = locCtr = synCtr = prepCtr = genCtr = famCtr = -1; 
     	
     
 	    /*
@@ -198,6 +256,9 @@
 	    	2 = ill = illness
 	    	3 = loc = location
 	    	4 = syn = synonym
+	    	5 = prep = preparation
+	    	6 = gen = genus
+	    	7 = fam = family
 	    	
 	    	cValue = counter Value (nakalimutan ko kasi kung ganito rin yung pValue)
 	    */
@@ -281,6 +342,51 @@
 	    		toggleComponent.value = 0;
 	    		toggleComponent.hidden = true;  		
 	    	}
+	    	
+	    	items = document.getElementsByName('prep');
+	    	subComponent = document.getElementById('substitutePreparation');
+	    	toggleComponent = document.getElementById('togglePreparation');
+	    	if (items.length != 0) { // list not empty
+	    		subComponent.value = 0;
+	    		subComponent.hidden = true;
+	    		toggleComponent.value = 1;
+	    		toggleComponent.hidden = false;
+	    	} else if (items.length == 0) { // list empty
+	    		subComponent.value = 1;
+	    		subComponent.hidden = false;
+	    		toggleComponent.value = 0;
+	    		toggleComponent.hidden = true;  		
+	    	}
+	    	
+	    	items = document.getElementsByName('gen');
+	    	subComponent = document.getElementById('substituteGenus');
+	    	toggleComponent = document.getElementById('toggleGenus');
+	    	if (items.length != 0) { // list not empty
+	    		subComponent.value = 0;
+	    		subComponent.hidden = true;
+	    		toggleComponent.value = 1;
+	    		toggleComponent.hidden = false;
+	    	} else if (items.length == 0) { // list empty
+	    		subComponent.value = 1;
+	    		subComponent.hidden = false;
+	    		toggleComponent.value = 0;
+	    		toggleComponent.hidden = true;  		
+	    	}
+	    	
+	    	items = document.getElementsByName('fam');
+	    	subComponent = document.getElementById('substituteFamily');
+	    	toggleComponent = document.getElementById('toggleFamily');
+	    	if (items.length != 0) { // list not empty
+	    		subComponent.value = 0;
+	    		subComponent.hidden = true;
+	    		toggleComponent.value = 1;
+	    		toggleComponent.hidden = false;
+	    	} else if (items.length == 0) { // list empty
+	    		subComponent.value = 1;
+	    		subComponent.hidden = false;
+	    		toggleComponent.value = 0;
+	    		toggleComponent.hidden = true;  		
+	    	}
 	    }
 	    
 	    function changeSelect(tValue) {
@@ -315,6 +421,21 @@
 	    		button = document.getElementById('synSelect');
 	    		items = document.getElementsByName('syn');
 	    		console.log('syn');
+	    		break;
+	    	case 5:
+	    		button = document.getElementById('prepSelect');
+	    		items = document.getElementsByName('prep');
+	    		console.log('prep');
+	    		break;
+	    	case 6:
+	    		button = document.getElementById('genSelect');
+	    		items = document.getElementsByName('gen');
+	    		console.log('gen');
+	    		break;
+	    	case 7:
+	    		button = document.getElementById('famSelect');
+	    		items = document.getElementsByName('fam');
+	    		console.log('fam');
 	    		break;
 	    	}
     		
@@ -375,6 +496,21 @@
 	    		items = document.getElementsByName('syn');
 	    		console.log('syn');
 	    		break;
+	    	case 5:
+	    		button = document.getElementById('prepSelect');
+	    		items = document.getElementsByName('prep');
+	    		console.log('prep');
+	    		break;
+	    	case 6:
+	    		button = document.getElementById('genSelect');
+	    		items = document.getElementsByName('gen');
+	    		console.log('gen');
+	    		break;
+	    	case 7:
+	    		button = document.getElementById('famSelect');
+	    		items = document.getElementsByName('fam');
+	    		console.log('fam');
+	    		break;
 	    	}
 	    	
 	    	if (button.value == 0) { //if select all function
@@ -422,6 +558,18 @@
 	    	case 4:
 	    		items = document.getElementsByName('syn');
 	    		console.log('syn');
+	    		break;
+	    	case 5:
+	    		items = document.getElementsByName('prep');
+	    		console.log('prep');
+	    		break;
+	    	case 6:
+	    		items = document.getElementsByName('gen');
+	    		console.log('gen');
+	    		break;
+	    	case 7:
+	    		items = document.getElementsByName('fam');
+	    		console.log('fam');
 	    		break;
 	    	}
 	    	
@@ -471,6 +619,18 @@
 	    		items = document.getElementsByName('syn');
 	    		console.log('syn');
 	    		break;
+	    	case 5:
+	    		items = document.getElementsByName('prep');
+	    		console.log('prep');
+	    		break;
+	    	case 6:
+	    		items = document.getElementsByName('gen');
+	    		console.log('gen');
+	    		break;
+	    	case 7:
+	    		items = document.getElementsByName('fam');
+	    		console.log('fam');
+	    		break;
 	    	}
 	    	
 	    	var selectedItems = []; // used to filter the selected items from unselected ones
@@ -507,6 +667,12 @@
 	    		break;
 	    	case 4:
 	    		break;
+	    	case 5:
+	    		break;
+	    	case 6:
+	    		break;
+	    	case 7:
+	    		break;
 	    	}
 	    	
 	    	/*
@@ -530,6 +696,12 @@
 	    	case 3:
 	    		break;
 	    	case 4:
+	    		break;
+	    	case 5:
+	    		break;
+	    	case 6:
+	    		break;
+	    	case 7:
 	    		break;
 	    	}
 	    	
@@ -555,6 +727,12 @@
 	    		break;
 	    	case 4:
 	    		break;
+	    	case 5:
+	    		break;
+	    	case 6:
+	    		break;
+	    	case 7:
+	    		break;
 	    	}
 	    	
 	    	/*
@@ -578,6 +756,12 @@
 	    	case 3:
 	    		break;
 	    	case 4:
+	    		break;
+	    	case 5:
+	    		break;
+	    	case 6:
+	    		break;
+	    	case 7:
 	    		break;
 	    	}
 	    	
@@ -656,6 +840,45 @@
 	    		var namePlant 			= 'synPlant';
 	    		var nameRelation 		= 'synRelation';
 	    		var nameRelationObject 	= 'synRelationObject';
+	    		break;
+	    	case 5:
+	    		prepCtr++;
+	    		
+	    		var entryCategory 		= 'prep';
+	    		var entryNum 			= prepCtr;
+	    		var nameEntry 			= 'PreparationEntry';
+	    		var nameLabel 			= 'PreparationLabel';
+	    		var nameGroup 			= 'PreparationGroup';
+
+	    		var namePlant 			= 'prepPlant';
+	    		var nameRelation 		= 'prepRelation';
+	    		var nameRelationObject 	= 'prepRelationObject';
+	    		break;
+	    	case 6:
+	    		genCtr++;
+	    		
+	    		var entryCategory 		= 'gen';
+	    		var entryNum 			= genCtr;
+	    		var nameEntry 			= 'GenusEntry';
+	    		var nameLabel 			= 'GenusLabel';
+	    		var nameGroup 			= 'GenusGroup';
+
+	    		var namePlant 			= 'genPlant';
+	    		var nameRelation 		= 'genRelation';
+	    		var nameRelationObject 	= 'genRelationObject';
+	    		break;
+	    	case 7:
+	    		famCtr++;
+	    		
+	    		var entryCategory 		= 'fam';
+	    		var entryNum 			= famCtr;
+	    		var nameEntry 			= 'SynonymEntry';
+	    		var nameLabel 			= 'SynonymLabel';
+	    		var nameGroup 			= 'SynonymGroup';
+
+	    		var namePlant 			= 'famPlant';
+	    		var nameRelation 		= 'famRelation';
+	    		var nameRelationObject 	= 'famRelationObject';
 	    		break;
 	    	}
 	    	
