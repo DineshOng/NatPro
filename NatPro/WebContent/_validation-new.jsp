@@ -72,6 +72,8 @@
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(0)">Compound</button>
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(1)">Common Plant Name</button>
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(2)">Illness</button>
+					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(3)">Location</button>
+					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(4)">Synonym</button>
 				</div>
 			</div>
 	
@@ -131,6 +133,42 @@
 					
 				</div>
 				
+				<h3 style="padding-top:50px; padding-bottom:20px">Location(s)</h3>
+				<div class="row" id="substituteLocation" value="1">
+					<div class="col-12">
+						empty.
+					</div>
+				</div>
+				<div class="row" id="toggleLocation" value="0" hidden>
+					<div class="col-12" style="text-align:left">
+						<button id="locSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(3)" value="0">Select All</button>
+						<button id="locApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(3)">Approve Selected</button>
+						<button id="locReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(3)">Reject Selected</button>
+					</div>
+				</div>
+				
+				<div id="LocationGroup">
+					
+				</div>
+				
+				<h3 style="padding-top:50px; padding-bottom:20px">Synonyms(s)</h3>
+				<div class="row" id="substituteSynonym" value="1">
+					<div class="col-12">
+						empty.
+					</div>
+				</div>
+				<div class="row" id="toggleSynonym" value="0" hidden>
+					<div class="col-12" style="text-align:left">
+						<button id="illSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(4)" value="0">Select All</button>
+						<button id="illApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(4)">Approve Selected</button>
+						<button id="illReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(4)">Reject Selected</button>
+					</div>
+				</div>
+				
+				<div id="SynonymGroup">
+					
+				</div>
+				
 			</form>
 
 		</div>
@@ -144,11 +182,11 @@
     	/* -- GLOBAL VARIABLES -- */
     	
     	//values for the counter
-    	var ccCtr, cpnCtr, illCtr;
+    	var ccCtr, cpnCtr, illCtr, locCtr, synCtr;
     	
     	// initialize the counters at -1 (because when calling the addEntry(), it automatically increments +1)
     	// TODO: If ctr == -1, the category is empty and can be invisible from the user
-    	ccCtr = cpnCtr = illCtr = -1; 
+    	ccCtr = cpnCtr = illCtr = locCtr = synCtr = -1; 
     	
     
 	    /*
@@ -158,6 +196,8 @@
 	    	0 = cc = compound
 	    	1 = cpn = common plant name
 	    	2 = ill = illness
+	    	3 = loc = location
+	    	4 = syn = synonym
 	    	
 	    	cValue = counter Value (nakalimutan ko kasi kung ganito rin yung pValue)
 	    */
@@ -211,6 +251,36 @@
 	    		toggleComponent.value = 0;
 	    		toggleComponent.hidden = true;  		
 	    	}
+	    	
+	    	items = document.getElementsByName('loc');
+	    	subComponent = document.getElementById('substituteLocation');
+	    	toggleComponent = document.getElementById('toggleLocation');
+	    	if (items.length != 0) { // list not empty
+	    		subComponent.value = 0;
+	    		subComponent.hidden = true;
+	    		toggleComponent.value = 1;
+	    		toggleComponent.hidden = false;
+	    	} else if (items.length == 0) { // list empty
+	    		subComponent.value = 1;
+	    		subComponent.hidden = false;
+	    		toggleComponent.value = 0;
+	    		toggleComponent.hidden = true;  		
+	    	}
+	    	
+	    	items = document.getElementsByName('syn');
+	    	subComponent = document.getElementById('substituteSynonym');
+	    	toggleComponent = document.getElementById('toggleSynonym');
+	    	if (items.length != 0) { // list not empty
+	    		subComponent.value = 0;
+	    		subComponent.hidden = true;
+	    		toggleComponent.value = 1;
+	    		toggleComponent.hidden = false;
+	    	} else if (items.length == 0) { // list empty
+	    		subComponent.value = 1;
+	    		subComponent.hidden = false;
+	    		toggleComponent.value = 0;
+	    		toggleComponent.hidden = true;  		
+	    	}
 	    }
 	    
 	    function changeSelect(tValue) {
@@ -235,6 +305,16 @@
 	    		button = document.getElementById('illSelect');
 	    		items = document.getElementsByName('ill');
 	    		console.log('ill');
+	    		break;
+	    	case 3:
+	    		button = document.getElementById('locSelect');
+	    		items = document.getElementsByName('loc');
+	    		console.log('loc');
+	    		break;
+	    	case 4:
+	    		button = document.getElementById('synSelect');
+	    		items = document.getElementsByName('syn');
+	    		console.log('syn');
 	    		break;
 	    	}
     		
@@ -285,6 +365,16 @@
 	    		items = document.getElementsByName('ill');
 	    		console.log('ill');
 	    		break;
+	    	case 3:
+	    		button = document.getElementById('locSelect');
+	    		items = document.getElementsByName('loc');
+	    		console.log('loc');
+	    		break;
+	    	case 4:
+	    		button = document.getElementById('synSelect');
+	    		items = document.getElementsByName('syn');
+	    		console.log('syn');
+	    		break;
 	    	}
 	    	
 	    	if (button.value == 0) { //if select all function
@@ -324,6 +414,14 @@
 	    	case 2:
 	    		items = document.getElementsByName('ill');
 	    		console.log('ill');
+	    		break;
+	    	case 3:
+	    		items = document.getElementsByName('loc');
+	    		console.log('loc');
+	    		break;
+	    	case 4:
+	    		items = document.getElementsByName('syn');
+	    		console.log('syn');
 	    		break;
 	    	}
 	    	
@@ -365,6 +463,14 @@
 	    		items = document.getElementsByName('ill');
 	    		console.log('ill');
 	    		break;
+	    	case 3:
+	    		items = document.getElementsByName('loc');
+	    		console.log('loc');
+	    		break;
+	    	case 4:
+	    		items = document.getElementsByName('syn');
+	    		console.log('syn');
+	    		break;
 	    	}
 	    	
 	    	var selectedItems = []; // used to filter the selected items from unselected ones
@@ -397,6 +503,10 @@
 	    		break;
 	    	case 2:
 	    		break;
+	    	case 3:
+	    		break;
+	    	case 4:
+	    		break;
 	    	}
 	    	
 	    	/*
@@ -416,6 +526,10 @@
 	    	case 1:
 	    		break;
 	    	case 2:
+	    		break;
+	    	case 3:
+	    		break;
+	    	case 4:
 	    		break;
 	    	}
 	    	
@@ -437,6 +551,10 @@
 	    		break;
 	    	case 2:
 	    		break;
+	    	case 3:
+	    		break;
+	    	case 4:
+	    		break;
 	    	}
 	    	
 	    	/*
@@ -456,6 +574,10 @@
 	    	case 1:
 	    		break;
 	    	case 2:
+	    		break;
+	    	case 3:
+	    		break;
+	    	case 4:
 	    		break;
 	    	}
 	    	
@@ -508,6 +630,32 @@
 	    		var namePlant 			= 'illPlant';
 	    		var nameRelation 		= 'illRelation';
 	    		var nameRelationObject 	= 'illRelationObject';
+	    		break;
+	    	case 3:
+	    		locCtr++;
+	    		
+	    		var entryCategory 		= 'loc';
+	    		var entryNum 			= locCtr;
+	    		var nameEntry 			= 'LocationEntry';
+	    		var nameLabel 			= 'LocationLabel';
+	    		var nameGroup 			= 'LocationGroup';
+
+	    		var namePlant 			= 'locPlant';
+	    		var nameRelation 		= 'locRelation';
+	    		var nameRelationObject 	= 'locRelationObject';
+	    		break;
+	    	case 4:
+	    		synCtr++;
+	    		
+	    		var entryCategory 		= 'syn';
+	    		var entryNum 			= synCtr;
+	    		var nameEntry 			= 'SynonymEntry';
+	    		var nameLabel 			= 'SynonymLabel';
+	    		var nameGroup 			= 'SynonymGroup';
+
+	    		var namePlant 			= 'synPlant';
+	    		var nameRelation 		= 'synRelation';
+	    		var nameRelationObject 	= 'synRelationObject';
 	    		break;
 	    	}
 	    	
