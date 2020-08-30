@@ -1,5 +1,5 @@
-e1:Synonym
-e2:Genus
+e1:plant
+e2:genus
 
 Alstonia macrophylla;Alstonia
 Alstonia scholaris;Alstonia

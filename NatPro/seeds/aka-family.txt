@@ -1,5 +1,5 @@
-e1:MedicinalPlant
-e2:Family
+e1:aka
+e2:family
 
 batino;Apocynaceae
 brocolli;Brassicaceae

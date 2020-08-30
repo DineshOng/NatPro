@@ -1,5 +1,5 @@
-e1:Synonym
-e2:Family
+e1:plant
+e2:family
 
 Alstonia macrophylla;Apocynaceae
 Alstonia scholaris;Apocynaceae

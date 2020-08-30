@@ -1,5 +1,5 @@
-e1:Synonym
-e2:PlantPart
+e1:plant
+e2:plantpart
 
 Alstonia macrophylla;bark
 Alstonia macrophylla;leaf

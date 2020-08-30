@@ -1,5 +1,5 @@
-e1:Synonym
-e2:Compound
+e1:plant
+e2:compound
 
 Alstonia macrophylla;beta-Sitosteryl-beta-D-Glucoside
 Alstonia macrophylla;16-hydroxyalstonal
@@ -64,18 +64,6 @@ Eucalyptus deglupta;5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone
 Eucalyptus deglupta;Squalene
 Eucalyptus deglupta;Ursolic acid
 Eucalyptus deglupta;Oleanolic acid
-Hoya meliflua;Oleanone
-Hoya meliflua;beta-Amyrin
-Hoya meliflua;alpha-amyrin cinnamate
-Hoya meliflua;Lupenone
-Hoya meliflua;Stigmasterol
-Hoya meliflua;beta-Sitosterol
-Hoya meliflua;Squalene
-Hoya meliflua;alpha-amyrin
-Hoya meliflua;beta-amyrin cinnamate
-Hoya meliflua;lupenyl cinnamate
-Hoya meliflua;Ursenone
-Hoya meliflua;Lupeol
 Raphanus sativus;alpha-linolenic acid
 Raphanus sativus;Fatty acid
 Raphanus sativus;beta-Sitosterol

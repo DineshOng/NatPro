@@ -13,28 +13,50 @@ import model.MedicinalPlant;
 public class Seed {
 
 	public void generateSeed(OntoQuery q) throws OntologyLoadException, SQWRLException {
-//		genMPWithSyn(q);
-//		genMPWithLoc(q);
-//		genSynWithLoc(q);
+		
+		genMPWithSyn(q);
+		
+		genMPWithLoc(q);
+		genMPWithGenus(q);
+		genMPWithFamily(q);
+		genMPWithPart(q);
 		genMPWithComp(q);
+		
+		genSynWithLoc(q);
+		genSynWithGenus(q);
+		genSynWithFamily(q);
+		genSynWithPart(q);
 		genSynWithComp(q);
-//		genMPWithPart(q);
-//		genMPWithGenus(q);
-//		genMPWithFamily(q);
-//		genSynWithPart(q);
-//		genSynWithGenus(q);
-//		genGenusWithFamily(q);
+
+		genGenusWithFamily(q);	
+		
+		genPrepWithIllness(q);
+		genPrepWithPlantPart(q);
 
 	}
 
+//	LEGEND:
+//	aka - Synonym/Species (Scientific Name)
+//	plant - MedicinalPlant (Common Name)
+//	genus - Genus
+//	family - Family
+//	loc - Location
+//	plantpart - PlantPart
+//	prep - Preparation
+//	illness - Illness
+//	compound - Compound
+//	bioact - BiologicalActivity
+//	cell - CellLine
+//	bodypart - BodyPart
+	
 	public void genMPWithSyn(OntoQuery q) throws SQWRLException {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Synonyms = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Synonyms.txt");
+			PrintWriter writer = new PrintWriter("./seeds/aka-plant.txt");
 			writer.print("");
-			writer.print("e1:MedicinalPlant\r\n");
-			writer.print("e2:Synonym\r\n");
+			writer.print("e1:aka\r\n");
+			writer.print("e2:plant\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < MedPlantNames.size(); i++) {
 				Synonyms = q.getSynonyms(MedPlantNames.get(i));
@@ -57,10 +79,10 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Locs = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Locations.txt");
+			PrintWriter writer = new PrintWriter("./seeds/aka-loc.txt");
 			writer.print("");
-			writer.print("e1:MedicinalPlant\r\n");
-			writer.print("e2:Location\r\n");
+			writer.print("e1:aka\r\n");
+			writer.print("e2:loc\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < MedPlantNames.size(); i++) {
 				Locs = q.getLocations(MedPlantNames.get(i));
@@ -81,10 +103,10 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Genus = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Genus.txt");
+			PrintWriter writer = new PrintWriter("./seeds/aka-genus.txt");
 			writer.print("");
-			writer.print("e1:MedicinalPlant\r\n");
-			writer.print("e2:Genus\r\n");
+			writer.print("e1:aka\r\n");
+			writer.print("e2:genus\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < MedPlantNames.size(); i++) {
 				Genus = q.getMPGenus(MedPlantNames.get(i));
@@ -107,10 +129,10 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Family = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Family.txt");
+			PrintWriter writer = new PrintWriter("./seeds/aka-family.txt");
 			writer.print("");
-			writer.print("e1:MedicinalPlant\r\n");
-			writer.print("e2:Family\r\n");
+			writer.print("e1:aka\r\n");
+			writer.print("e2:family\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < MedPlantNames.size(); i++) {
 				Family = q.getMPFamily(MedPlantNames.get(i));
@@ -133,10 +155,10 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> PlantParts = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-PlantParts.txt");
+			PrintWriter writer = new PrintWriter("./seeds/aka-plantpart.txt");
 			writer.print("");
-			writer.print("e1:MedicinalPlant\r\n");
-			writer.print("e2:PlantPart\r\n");
+			writer.print("e1:aka\r\n");
+			writer.print("e2:plantpart\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < MedPlantNames.size(); i++) {
 				PlantParts = q.getMPPlantParts(MedPlantNames.get(i));
@@ -159,10 +181,10 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> CompoundsList = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Compound.txt");
+			PrintWriter writer = new PrintWriter("./seeds/aka-compound.txt");
 			writer.print("");
-			writer.print("e1:MedicinalPlant\r\n");
-			writer.print("e2:Compound\r\n");
+			writer.print("e1:aka\r\n");
+			writer.print("e2:compound\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < MedPlantNames.size(); i++) {
 				CompoundsList = q.getCompounds(MedPlantNames.get(i));
@@ -185,10 +207,10 @@ public class Seed {
 		List<String> Locs = new ArrayList<String>();
 		List<String> Synonyms = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-Locations.txt");
+			PrintWriter writer = new PrintWriter("./seeds/plant-loc.txt");
 			writer.print("");
-			writer.print("e1:Synonym\r\n");
-			writer.print("e2:Location\r\n");
+			writer.print("e1:plant\r\n");
+			writer.print("e2:loc\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < MedPlantNames.size(); i++) {
 				Locs = q.getLocations(MedPlantNames.get(i));
@@ -212,10 +234,10 @@ public class Seed {
 		List<String> Synonyms = q.getAllSynonyms();
 		List<String> Genus = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-Genus.txt");
+			PrintWriter writer = new PrintWriter("./seeds/plant-genus.txt");
 			writer.print("");
-			writer.print("e1:Synonym\r\n");
-			writer.print("e2:Genus\r\n");
+			writer.print("e1:plant\r\n");
+			writer.print("e2:genus\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < Synonyms.size(); i++) {
 				Genus = q.getSynonymGenus(Synonyms.get(i));
@@ -238,10 +260,10 @@ public class Seed {
 		List<String> Synonyms = q.getAllSynonyms();
 		List<String> Family = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-Family.txt");
+			PrintWriter writer = new PrintWriter("./seeds/plant-family.txt");
 			writer.print("");
-			writer.print("e1:Synonym\r\n");
-			writer.print("e2:Family\r\n");
+			writer.print("e1:plant\r\n");
+			writer.print("e2:family\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < Synonyms.size(); i++) {
 				Family = q.getSynonymFamily(Synonyms.get(i));
@@ -264,10 +286,10 @@ public class Seed {
 		List<String> Synonyms = q.getAllSynonyms();
 		List<String> PlantParts = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-PlantParts.txt");
+			PrintWriter writer = new PrintWriter("./seeds/plant-plantpart.txt");
 			writer.print("");
-			writer.print("e1:Synonym\r\n");
-			writer.print("e2:PlantPart\r\n");
+			writer.print("e1:plant\r\n");
+			writer.print("e2:plantpart\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < Synonyms.size(); i++) {
 				PlantParts = q.getSynonymPlantParts(Synonyms.get(i));
@@ -290,10 +312,10 @@ public class Seed {
 		List<String> Synonyms = q.getAllSynonyms();
 		List<String> CompoundsList = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-Compound.txt");
+			PrintWriter writer = new PrintWriter("./seeds/plant-compound.txt");
 			writer.print("");
-			writer.print("e1:Synonym\r\n");
-			writer.print("e2:Compound\r\n");
+			writer.print("e1:plant\r\n");
+			writer.print("e2:compound\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < Synonyms.size(); i++) {
 				CompoundsList = q.getSynCompounds(Synonyms.get(i));
@@ -317,10 +339,10 @@ public class Seed {
 		List<String> Genus= q.getAllGenus();
 		List<String> Family = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Genus-Family.txt");
+			PrintWriter writer = new PrintWriter("./seeds/genus-family.txt");
 			writer.print("");
-			writer.print("e1:Genus\r\n");
-			writer.print("e2:Family\r\n");
+			writer.print("e1:genus\r\n");
+			writer.print("e2:family\r\n");
 			writer.write("\r\n"); // write new line
 			for (int i = 0; i < Genus.size(); i++) {
 				Family = q.getGenusFamily(Genus.get(i));
@@ -338,6 +360,84 @@ public class Seed {
 			e.printStackTrace();
 		}
 	}
+	
+	public void genPrepWithIllness(OntoQuery q) throws SQWRLException {
+		List<String> Prep= q.getAllPreparations();
+		List<String> Illness = new ArrayList<String>();
+		try {
+			PrintWriter writer = new PrintWriter("./seeds/prep-illness.txt");
+			writer.print("");
+			writer.print("e1:prep\r\n");
+			writer.print("e2:illness\r\n");
+			writer.write("\r\n"); // write new line
+			for (int i = 0; i < Prep.size(); i++) {
+				Illness = q.getPreparationIllness(Prep.get(i));
+				for (int j = 0; j < Illness.size(); j++) {
+					String prep = removePar(Prep.get(i)).replaceAll("\\.", "");
+					String ill = removePar(Illness.get(j)).replaceAll("\\.", "");
+					writer.write(prep + ";" + ill);
+					writer.write("\r\n"); // write new line
+				}
+			}
+			writer.close();
+		} catch (
+
+		IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void genPrepWithPlantPart(OntoQuery q) throws SQWRLException {
+		List<String> Prep= q.getAllPreparations();
+		List<String> PlantPart = new ArrayList<String>();
+		try {
+			PrintWriter writer = new PrintWriter("./seeds/prep-plantpart.txt");
+			writer.print("");
+			writer.print("e1:prep\r\n");
+			writer.print("e2:plantpart\r\n");
+			writer.write("\r\n"); // write new line
+			for (int i = 0; i < Prep.size(); i++) {
+				PlantPart = q.getPreparationPlantPart(Prep.get(i));
+				for (int j = 0; j < PlantPart.size(); j++) {
+					String prep = removePar(Prep.get(i)).replaceAll("\\.", "");
+					String part = removePar(PlantPart.get(j)).replaceAll("\\.", "");
+					writer.write(prep + ";" + part);
+					writer.write("\r\n"); // write new line
+				}
+			}
+			writer.close();
+		} catch (
+
+		IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+//	public void genPartWithIllness(OntoQuery q) throws SQWRLException {
+//		List<String> Prep= q.getAllPreparations();
+//		List<String> PlantPart = new ArrayList<String>();
+//		try {
+//			PrintWriter writer = new PrintWriter("./seeds/Preparation-PlantParts.txt");
+//			writer.print("");
+//			writer.print("e1:Preparation\r\n");
+//			writer.print("e2:PlantPart\r\n");
+//			writer.write("\r\n"); // write new line
+//			for (int i = 0; i < Prep.size(); i++) {
+//				PlantPart = q.getPreparationPlantPart(Prep.get(i));
+//				for (int j = 0; j < PlantPart.size(); j++) {
+//					String prep = removePar(Prep.get(i)).replaceAll("\\.", "");
+//					String part = removePar(PlantPart.get(j)).replaceAll("\\.", "");
+//					writer.write(prep + ";" + part);
+//					writer.write("\r\n"); // write new line
+//				}
+//			}
+//			writer.close();
+//		} catch (
+//
+//		IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
 	
 	public String removePar(String string) {
 		String newString = string;
