@@ -1,0 +1,63 @@
+e1:bioact
+e2:cell
+
+anti-proliferative;DU-145
+anti-proliferative;HCT-116
+anti-proliferative;HDFn
+anti-proliferative;HT-29
+anti-proliferative;DU-145
+anti-proliferative;HCT-116
+anti-proliferative;HDFn
+anti-proliferative;HT-29
+anti-proliferative;DU-145
+anti-proliferative;HCT-116
+anti-proliferative;HDFn
+anti-proliferative;HT-29
+anti-proliferative;DU-145
+anti-proliferative;HCT-116
+anti-proliferative;HDFn
+anti-proliferative;HT-29
+decrease cell viability;MCF-7
+cytotoxic;HCT-116
+cytotoxic;HL60
+cytotoxic;HT-29
+cytotoxic;MCF-7
+cytotoxic;NCI-H226
+cytotoxic;RPMI8226
+cytotoxic;HCT-116
+cytotoxic;HL60
+cytotoxic;HT-29
+cytotoxic;MCF-7
+cytotoxic;NCI-H226
+cytotoxic;RPMI8226
+cytotoxic;HCT-116
+cytotoxic;HL60
+cytotoxic;HT-29
+cytotoxic;MCF-7
+cytotoxic;NCI-H226
+cytotoxic;RPMI8226
+cytotoxic;HCT-116
+cytotoxic;HL60
+cytotoxic;HT-29
+cytotoxic;MCF-7
+cytotoxic;NCI-H226
+cytotoxic;RPMI8226
+cytotoxic;HCT-116
+cytotoxic;HL60
+cytotoxic;HT-29
+cytotoxic;MCF-7
+cytotoxic;NCI-H226
+cytotoxic;RPMI8226
+cytotoxic;HCT-116
+cytotoxic;HL60
+cytotoxic;HT-29
+cytotoxic;MCF-7
+cytotoxic;NCI-H226
+cytotoxic;RPMI8226
+decrease cell viability MDA-MB-231;MDA-MB-231
+growth inhibition and apoptosis in SMMC7721;SMMC7721
+inhibited the proliferation;COLO 320 DM
+inhibited the proliferation of MDA-MB-231;MDA-MB-231
+inhibitory effects on Epstein-Barr virus early antigen;Epstein-Barr virus early antigen
+suppress colonic ACF formation and crypt multiplicity;ACF
+therapeutic efficacy against Ehrlich;Ehrlich

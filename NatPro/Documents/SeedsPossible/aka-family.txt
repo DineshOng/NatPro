@@ -1,0 +1,11 @@
+e1:aka
+e2:family
+
+batino;Apocynaceae
+brocolli;Brassicaceae
+ivory mahogany;Meliaceae
+mustard;Brassicaceae
+rainbow eucalyptus;Myrtaceae
+red cabbage;Brassicaceae
+wax plant;Apocynaceae
+green/white cabbage;Brassicaceae
