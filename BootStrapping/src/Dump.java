@@ -56,7 +56,7 @@ public class Dump {
     int count=1;
     int tcnt=0;
 
-    File tagFile = new File("Synonym-Locations.txt");
+
         System.out.println(tagFile.length());
     String[] temp = new String[(int)tagFile.length()];
         try {

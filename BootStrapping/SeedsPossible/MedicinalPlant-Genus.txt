@@ -1,0 +1,12 @@
+e1:MedicinalPlant
+e2:Genus
+
+batino;Alstonia
+brocolli;Brassica
+ivory mahogany;Dysoxylum
+mustard;Brassica
+radish;Raphanus
+rainbow eucalyptus;Eucalyptus
+red cabbage;Brassica
+wax plant;Hoya
+green/white cabbage;Brassica
