@@ -538,8 +538,13 @@ public class OntoQuery {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						// find the genus
 						if (preparation.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Preparation).toString())) {
-							OWLIndividual illnessIndiv = (OWLIndividual) individual.getPropertyValue(treats);
-							values.add(illnessIndiv.getPropertyValue(datatypeProperty_Illness).toString());
+//							OWLIndividual illnessIndiv = (OWLIndividual) individual.getPropertyValues(treats);
+							Collection illness = individual.getPropertyValues(treats);
+							for (Iterator kt = illness.iterator(); kt.hasNext();) {
+								OWLIndividual illnessIndiv = (OWLIndividual) kt.next();
+								values.add(illnessIndiv.getPropertyValue(datatypeProperty_Illness).toString());
+							}
+							
 						}
 					} catch (Exception e) {
 					}
@@ -547,7 +552,6 @@ public class OntoQuery {
 			}
 
 		}
-
 		return values;
 	}
 	
@@ -568,8 +572,12 @@ public class OntoQuery {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						// find the genus
 						if (preparation.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Preparation).toString())) {
-							OWLIndividual plantPartIndiv = (OWLIndividual) individual.getPropertyValue(utilizedPart);
-							values.add(plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString());
+							Collection plantPart = individual.getPropertyValues(utilizedPart);
+							for (Iterator kt = plantPart.iterator(); kt.hasNext();) {
+								OWLIndividual plantPartIndiv = (OWLIndividual) kt.next();
+								values.add(plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString());
+							}
+							
 						}
 					} catch (Exception e) {
 					}
