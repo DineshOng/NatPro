@@ -19,13 +19,24 @@
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
-<title>NatPro Advanced Search</title>
+<title>NatPro : Advanced Search</title>
 </head>
 <body>
 
 	<%@include file="navbarnix.html"%>
 
 	<!--  INSERT HTML CODE -->
+	
+	<div id="firstDiv">
+
+		<h3 class="card-title">
+			<b id="cardTitle">Advanced Search</b>
+		</h3>
+
+		<div class="mb-4">
+			<!-- Solid divider -->
+			<hr class="solid">
+		</div>
 	<div id="adSearchDiv">
 		<form id="advancedSearchForm" action="AdvancedSearchServlet" method="POST">
 			<div class="form-row">
@@ -134,7 +145,7 @@
 			
 			<div class="form-row align-items-center">
 			
-				<div class="col-auto">
+				<div class="col">
 			      <div class="input-group mb-2">
 			        <input name="molWeight_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -143,11 +154,11 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>Molecular Weight</label>
 			    </div>
 			    
-			   <div class="col-auto" style="margin-right: 8px">
+			   <div class="col" style="margin-right: 8px">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
@@ -157,7 +168,7 @@
 			    </div>
 			    
 			    
-			    <div class="col-auto">
+			    <div class="col">
 			      <div class="input-group mb-2">
 			        <input name="xlogp_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -166,11 +177,11 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>XLogP</label>
 			    </div>
 			    
-			    <div class="col-auto">
+			    <div class="col">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
@@ -182,7 +193,7 @@
 			</div>
 			
 			<div class="form-row align-items-center">
-				<div class="col-auto">
+				<div class="col">
 			      <div class="input-group mb-2">
 			        <input name="mass_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -191,11 +202,11 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>Mass</label>
 			    </div>
 			    
-			    <div class="col-auto" style="margin-right: 8px">
+			    <div class="col" style="margin-right: 8px">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
@@ -204,7 +215,7 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-auto">
+			    <div class="col">
 			      <div class="input-group mb-2">
 			        <input name="tpsa_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -213,11 +224,11 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>TPSA</label>
 			    </div>
 			    
-			    <div class="col-auto">
+			    <div class="col">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
@@ -229,7 +240,7 @@
 			</div>
 			
 			<div class="form-row align-items-center">
-				<div class="col-auto">
+				<div class="col">
 			      <div class="input-group mb-2">
 			        <input name="complexity_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -238,11 +249,11 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>Complexity</label>
 			    </div>
 			    
-			    <div class="col-auto" style="margin-right: 8px">
+			    <div class="col" style="margin-right: 8px">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
@@ -251,7 +262,7 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-auto">
+			    <div class="col">
 			      <div class="input-group mb-2">
 			        <input name="charge_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -260,11 +271,11 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>Charge</label>
 			    </div>
 			    
-			    <div class="col-auto">
+			    <div class="col">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
@@ -275,7 +286,7 @@
 			</div>
 			
 			<div class="form-row align-items-center">
-				<div class="col-auto">
+				<div class="col">
 			      <div class="input-group mb-2">
 			        <input name="hBondAcceptor_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -284,11 +295,11 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>H-Bond Acceptors</label>
 			    </div>
 			    
-			    <div class="col-auto" style="margin-right: 8px">
+			    <div class="col" style="margin-right: 8px">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
@@ -297,7 +308,7 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-auto">
+			    <div class="col">
 			      <div class="input-group mb-2">
 			        <input name="hBondDonor_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -306,11 +317,11 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>H-Bond Donors</label>
 			    </div>
 			    
-			    <div class="col-auto">
+			    <div class="col">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
@@ -321,7 +332,7 @@
 			</div>
 			
 			<div class="form-row align-items-center">
-				<div class="col-auto">
+				<div class="col">
 			      <div class="input-group mb-2">
 			        <input name="rotBondCount_lhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			        <div class="input-group-append">
@@ -330,16 +341,39 @@
 			      </div>
 			    </div>
 			    
-			    <div class="col-md-2 text-center">
+			    <div class="col text-center">
 			        <label>Rotatable Bonds</label>
 			    </div>
 			    
-			    <div class="col-auto">
+			    <div class="col" style="margin-right: 8px">
 			      <div class="input-group mb-2">
 			       	<div class="input-group-prepend">
 			          <div class="input-group-text">&le;</div>
 			        </div>
 			        <input name="rotBondCount_rhs" type="text" pattern="^(-?)(0|([1-9][0-9]*))(\.[0-9]+)?$" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+			      </div>
+			    </div>
+			    
+			    
+			    <div class="col" style="visibility:hidden">
+			      <div class="input-group mb-2">
+			        <input name="" type="text" pattern="" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
+			        <div class="input-group-append">
+			          <div class="input-group-text">&le;</div>
+			        </div>
+			      </div>
+			    </div>
+			    
+			    <div class="col text-center" style="visibility:hidden">
+			        <label>Rotatable Bonds</label>
+			    </div>
+			    
+			    <div class="col" style="visibility:hidden">
+			      <div class="input-group mb-2">
+			       	<div class="input-group-prepend">
+			          <div class="input-group-text">&le;</div>
+			        </div>
+			        <input name="" type="text" pattern="" type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
 			      </div>
 			    </div>
 			</div>
@@ -360,6 +394,7 @@
 				</div>
 			</div>
 		</form>
+	</div>
 	</div>
 
 

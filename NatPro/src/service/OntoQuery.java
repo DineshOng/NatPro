@@ -34,8 +34,8 @@ public class OntoQuery {
 
 	public OntoQuery() throws OntologyLoadException {
 		/* Change local path */
-//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
-		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+//		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -1152,6 +1152,45 @@ public class OntoQuery {
 							String syno = jtt.next().toString();
 							values.add(syno);
 						}
+					} catch (Exception e) {
+						// System.out.println("eeeek");
+					}
+				}
+			}
+		}
+
+		System.out.println(values.size());
+
+		return values;
+	}
+	
+	public List<Compound> getCompoundwStructure() {
+		List<Compound> values = new ArrayList<Compound>();
+
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
+		RDFProperty datatypeProperty_CanSMILES = owlModel.getRDFProperty("datatypeProperty_CanSMILES");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Compound")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
+						String smile = individual.getPropertyValue(datatypeProperty_CanSMILES).toString();
+						
+						System.out.println("=> " + compoundIndiv + " " + smile);
+						
+						//if(!smile.equals("") && smile.matches("^([^J][0-9BCOHNSOPrIFla@+\\-\\[\\]\\(\\)\\\\\\/%=#$,.~&!]{6,})$")) {
+						if(!smile.equals("")) {
+							Compound cc = new Compound(compoundIndiv);
+							cc.setCanSMILES(smile);
+							
+							values.add(cc);
+						}
+						
 					} catch (Exception e) {
 						// System.out.println("eeeek");
 					}

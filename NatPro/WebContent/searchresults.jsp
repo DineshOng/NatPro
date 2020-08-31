@@ -19,6 +19,15 @@
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
+<style>
+	td{
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</style>
+
 <title>NatPro : ${searchKey}</title>
 </head>
 <body>
