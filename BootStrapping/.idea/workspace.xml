@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="707" column="21" lean-forward="true" selection-start-line="707" selection-start-column="21" selection-end-line="707" selection-end-column="21" />
+            <state relative-caret-position="282">
+              <caret line="286" column="91" lean-forward="true" selection-start-line="286" selection-start-column="91" selection-end-line="286" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,61 +26,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/validation/plantpart-compound.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seedOutput/plantpart-compound.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka.xml">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="112" selection-start-column="112" selection-end-column="112" />
+            <state relative-caret-position="2176">
+              <caret line="128" column="438" selection-start-line="128" selection-start-column="417" selection-end-line="128" selection-end-column="438" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation/plant-compound.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="691" selection-start-column="691" selection-end-column="691" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seedOutput/bioact-cell.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seedOutput/compound-bioact.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seedOutput/plant-compound.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret column="2866" selection-start-column="2866" selection-end-column="2866" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seedOutput/plant-loc.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/seedOutput/plant-plantpart.xml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -95,13 +47,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>seedoutput</find>
-      <find>seedAL</find>
-      <find>wmatches</find>
-      <find>relation</find>
-      <find>system.</find>
-      <find>Pattern</find>
-      <find>ArrayList</find>
       <find>lines</find>
       <find>hard mi</find>
       <find>hard milkwood</find>
@@ -121,10 +66,17 @@
       <find>addPre</find>
       <find>campes</find>
       <find>start</find>
-      <find>e2Name</find>
       <find>entities that induced</find>
       <find>finish reading</find>
       <find>finished rea</find>
+      <find>e2Name</find>
+      <find>validation</find>
+      <find>jwnl</find>
+      <find>POSTagger</find>
+      <find>tagger</find>
+      <find>replaceall</find>
+      <find>replace</find>
+      <find>hashxml</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -148,7 +100,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="362" />
     <option name="y" value="68" />
     <option name="width" value="1377" />
@@ -161,17 +113,13 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
               <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
-              <item name="seedOutput" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
@@ -202,7 +150,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -211,24 +158,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SeedsPossible" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TaggedSample" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="D:\IntelliJ Projects\BootStrapping" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping\TaggedSample" />
       <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping\SeedsPossible" />
       <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/SeedsPossible" />
-      <recent name="$PROJECT_DIR$/TaggedSample" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="D:\IntelliJ Projects\BootStrapping" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -285,7 +232,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20842217" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -424,23 +371,6 @@
     <state x="34" y="23" key="new project wizard/0.23.1280.732@0.23.1280.732" timestamp="1582638934534" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Dump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Seeds/Synonym-Locations.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-PlantParts.txt" />
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Locations.txt" />
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Genus.txt" />
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonyms.txt" />
     <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Compound.txt" />
     <entry file="file://$PROJECT_DIR$/validation/Synonym-Family.xml" />
     <entry file="file://$PROJECT_DIR$/validation/MedicinalPlant-Family.xml" />
@@ -450,13 +380,7 @@
     <entry file="file://$PROJECT_DIR$/validation/MedicinalPlant-Location.xml" />
     <entry file="file://$PROJECT_DIR$/validation/MedicinalPlant-PlantPart.xml" />
     <entry file="file://$PROJECT_DIR$/validation/MedicinalPlant-Synonym.xml" />
-    <entry file="file://$PROJECT_DIR$/validation/plant-aka.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="144" lean-forward="true" selection-start-column="144" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/plant-aka.xml" />
     <entry file="file://$PROJECT_DIR$/validation/Synonym-Compound.xml" />
     <entry file="file://$PROJECT_DIR$/validation/Synonym-Genus.xml" />
     <entry file="file://$PROJECT_DIR$/validation/Synonym-Location.xml" />
@@ -486,13 +410,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation/plant-loc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="205" selection-start-column="205" selection-end-column="205" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/plant-loc.xml" />
     <entry file="file://$PROJECT_DIR$/SeedsPossible/Plant-Aka.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -506,35 +424,20 @@
     <entry file="file://$PROJECT_DIR$/SeedsPossible/compound-bioact.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="128" column="438" selection-start-line="128" selection-start-column="417" selection-end-line="128" selection-end-column="438" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation/bioact-cell.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation/plant-compound.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="691" selection-start-column="691" selection-end-column="691" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/bioact-cell.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/compound-bioact.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/bioact-cell.xml" />
     <entry file="file://$PROJECT_DIR$/seedOutput/plant-aka.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="112" selection-start-column="112" selection-end-column="112" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/plant-compound.xml" />
+    <entry file="file://$PROJECT_DIR$/seedOutput/bioact-cell.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/compound-bioact.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/seedOutput/plant-compound.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -552,18 +455,46 @@
     <entry file="file://$PROJECT_DIR$/seedOutput/plantpart-compound.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/TaggedSample/fff614b7f12551a41b350789393a6cef.xml" />
+    <entry file="file://$PROJECT_DIR$/validation/plantpart-compound.xml" />
+    <entry file="file://D:/Github/NatPro/NatPro/src/servlet/BootstrapServlet.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="707" column="21" lean-forward="true" selection-start-line="707" selection-start-column="21" selection-end-line="707" selection-end-column="21" />
+        <state relative-caret-position="2176">
+          <caret line="128" column="438" selection-start-line="128" selection-start-column="417" selection-end-line="128" selection-end-column="438" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/alstonia macrophylla-24-methylenecycloartanol.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/alstonia macrophylla-alstonerine.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/leaf-gamma-sitosterol.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/Github/NatPro/BootStrapping/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret selection-end-line="815" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation/plantpart-compound.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="286" column="91" lean-forward="true" selection-start-line="286" selection-start-column="91" selection-end-line="286" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

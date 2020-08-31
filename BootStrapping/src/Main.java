@@ -20,6 +20,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -276,7 +277,9 @@ public class Main {
                     }
                 }
 
-                File validationOutput = new File("validation/"+e1+"-"+e2+".xml");
+
+                String hashxml = xmlFile.getName().replaceAll(".xml","");
+                File validationOutput = new File("validation/"+hashxml+"-"+e1+"-"+e2+".xml");
                 if(validationOutput.exists()){
                     //====================================================================================================================
                     //For validation XML
@@ -289,7 +292,7 @@ public class Main {
                                                 NOTE: CHECK IF FOLDER EXISTS
                 =======================================================================================================
                  =======================================================================================================*/
-                        Document doc = builder.parse("validation/"+e1+"-"+e2+".xml");
+                        Document doc = builder.parse("validation/"+hashxml+"-"+e1+"-"+e2+".xml");
                         doc.getDocumentElement().normalize();
                         //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
                         NodeList nodeList = doc.getElementsByTagName("Seed");
@@ -525,7 +528,7 @@ public class Main {
                         Transformer transformer = transformerFactory.newTransformer();
                         DOMSource source = new DOMSource(document);
 
-                        StreamResult streamResult = new StreamResult("validation/"+e1+"-"+e2+".xml");
+                        StreamResult streamResult = new StreamResult("validation/"+hashxml+"-"+e1+"-"+e2+".xml");
                         transformer.transform(source,streamResult);
 
                     } catch (ParserConfigurationException | TransformerException e) {
@@ -639,7 +642,7 @@ public class Main {
     public static void addPreprocessing(
             TreeSet<String> relation, String pLine,
             String e1, String e2,
-             ArrayList<String> lines){
+            ArrayList<String> lines){
         TreeSet<String> List = new TreeSet<String>();
         File seedOutput = new File("seedOutput/"+e1+"-"+e2+".xml");
         //System.out.println(e1+": "+class1+";"+e2+": "+class2);
@@ -676,7 +679,7 @@ public class Main {
 
 
 
-        
+
 
     }
 
