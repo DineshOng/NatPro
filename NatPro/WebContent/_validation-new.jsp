@@ -15,6 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
 	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	
     <title>NatPro : ${searchKey}</title>
   </head>
   <body>
@@ -68,7 +70,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<span>debugging only *pls hide*</span>
+					<span>*debugging only pls hide*<br></span>
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(0)">Compound</button>
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(1)">Common Plant Name</button>
 					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(2)">Illness</button>
@@ -162,9 +164,9 @@
 				</div>
 				<div class="row" id="toggleSynonym" value="0" hidden>
 					<div class="col-12" style="text-align:left">
-						<button id="illSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(4)" value="0">Select All</button>
-						<button id="illApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(4)">Approve Selected</button>
-						<button id="illReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(4)">Reject Selected</button>
+						<button id="synSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(4)" value="0">Select All</button>
+						<button id="synApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(4)">Approve Selected</button>
+						<button id="synReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(4)">Reject Selected</button>
 					</div>
 				</div>
 				
@@ -228,6 +230,35 @@
 				</div>
 				
 			</form>
+			
+			
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" hidden="true">
+			  Document Modal Tester
+			</button>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Document</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <div class="embed-responsive embed-responsive-16by9">
+					  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
 
 		</div>
 	</div>
@@ -658,20 +689,36 @@
 	    	// finding a specific category using the tValue
 	    	switch (tValue) {
 	    	case 0:
+	    		items = document.getElementsByName('cc');
+	    		console.log('cc');
 	    		break;
 	    	case 1:
+	    		items = document.getElementsByName('cpn');
+	    		console.log('cpn');
 	    		break;
 	    	case 2:
+	    		items = document.getElementsByName('ill');
+	    		console.log('ill');
 	    		break;
 	    	case 3:
+	    		items = document.getElementsByName('loc');
+	    		console.log('loc');
 	    		break;
 	    	case 4:
+	    		items = document.getElementsByName('syn');
+	    		console.log('syn');
 	    		break;
 	    	case 5:
+	    		items = document.getElementsByName('prep');
+	    		console.log('prep');
 	    		break;
 	    	case 6:
+	    		items = document.getElementsByName('gen');
+	    		console.log('gen');
 	    		break;
 	    	case 7:
+	    		items = document.getElementsByName('fam');
+	    		console.log('fam');
 	    		break;
 	    	}
 	    	
@@ -688,20 +735,36 @@
 	    	// finding a specific category using the tValue
 	    	switch (tValue) {
 	    	case 0:
+	    		items = document.getElementsByName('cc');
+	    		console.log('cc');
 	    		break;
 	    	case 1:
+	    		items = document.getElementsByName('cpn');
+	    		console.log('cpn');
 	    		break;
 	    	case 2:
+	    		items = document.getElementsByName('ill');
+	    		console.log('ill');
 	    		break;
 	    	case 3:
+	    		items = document.getElementsByName('loc');
+	    		console.log('loc');
 	    		break;
 	    	case 4:
+	    		items = document.getElementsByName('syn');
+	    		console.log('syn');
 	    		break;
 	    	case 5:
+	    		items = document.getElementsByName('prep');
+	    		console.log('prep');
 	    		break;
 	    	case 6:
+	    		items = document.getElementsByName('gen');
+	    		console.log('gen');
 	    		break;
 	    	case 7:
+	    		items = document.getElementsByName('fam');
+	    		console.log('fam');
 	    		break;
 	    	}
 	    	
@@ -714,29 +777,48 @@
 	    function viewEntry(tValue,cValue) {
 	    	console.log(tValue + ', ' + cValue);
 	    	
+	    	var items;	    	
 	    	
 	    	// finding a specific category using the tValue
 	    	switch (tValue) {
 	    	case 0:
+	    		items = document.getElementsByName('cc');
+	    		console.log('cc');
 	    		break;
 	    	case 1:
+	    		items = document.getElementsByName('cpn');
+	    		console.log('cpn');
 	    		break;
 	    	case 2:
+	    		items = document.getElementsByName('ill');
+	    		console.log('ill');
 	    		break;
 	    	case 3:
+	    		items = document.getElementsByName('loc');
+	    		console.log('loc');
 	    		break;
 	    	case 4:
+	    		items = document.getElementsByName('syn');
+	    		console.log('syn');
 	    		break;
 	    	case 5:
+	    		items = document.getElementsByName('prep');
+	    		console.log('prep');
 	    		break;
 	    	case 6:
+	    		items = document.getElementsByName('gen');
+	    		console.log('gen');
 	    		break;
 	    	case 7:
+	    		items = document.getElementsByName('fam');
+	    		console.log('fam');
 	    		break;
 	    	}
 	    	
 	    	/*
 	    		code to view the specific entry using tValue and cValue
+	    		
+	    		
 	    	*/
 	    	
 	    }
@@ -872,9 +954,9 @@
 	    		
 	    		var entryCategory 		= 'fam';
 	    		var entryNum 			= famCtr;
-	    		var nameEntry 			= 'SynonymEntry';
-	    		var nameLabel 			= 'SynonymLabel';
-	    		var nameGroup 			= 'SynonymGroup';
+	    		var nameEntry 			= 'FamilyEntry';
+	    		var nameLabel 			= 'FamilyLabel';
+	    		var nameGroup 			= 'FamilyGroup';
 
 	    		var namePlant 			= 'famPlant';
 	    		var nameRelation 		= 'famRelation';
@@ -906,9 +988,9 @@
 	    	
 			var entryCommands 			= '<div class="col-2" style="text-align:right">' +
 											  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
+											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +')" data-toggle="modal" data-placement="top" title="view entry" data-target="#exampleModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
+											  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"class="btn btn-primary" data-target="#exampleModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
 											  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="view entry"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
 										  '</div>';
 	    	
     		var entryContainerClosing	= '</div>';
@@ -920,10 +1002,13 @@
     		checkItems();
 	    }
     </script>
-	
+    
+    
     
 	<script type="text/javascript" src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     
     <script type="text/javascript">
 	    $(document).ready(function() {
