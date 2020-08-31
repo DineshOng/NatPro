@@ -755,25 +755,54 @@ public class BootstrapServlet extends HttpServlet {
 		}
 	}
 
-	/*
-	 * ============================= Add Category ==============================
-	 */
-	public void addCategory(String e1, String e2, Element category, Document document) {
+	public static void addCategory(String e1, String e2, Element category, Document document) {
+		e1 = e1.toLowerCase();
+		e2 = e2.toLowerCase();
 		String entities = e1 + "+" + e2;
 		switch (entities) {
 		case "plant+aka":
-		case "MedicinalPlant+Synonym":
+		case "":
 			category.appendChild(document.createTextNode("Common Name"));
 			break;
-		case "Medicinal+PlantPart":
+		case "aka+plantpart":
+		case "plant+plantpart":
+		case "prep+plantpart":
 			category.appendChild(document.createTextNode("Plant Part"));
 			break;
-		case "MedicinalPlant+Location":
-		case "Synonym+Location":
+		case "aka+loc":
+		case "plant+loc":
 			category.appendChild(document.createTextNode("Location"));
 			break;
-		case "MedicinalPlant+Compound":
+
+		case "aka+compound":
+		case "plant+compound":
+		case "plantpart+compound":
 			category.appendChild(document.createTextNode("Compound"));
+			break;
+		case "aka+family":
+		case "genus+family":
+		case "plant+family":
+			category.appendChild(document.createTextNode("Family"));
+			break;
+		case "aka+genus":
+		case "plant+genus":
+			category.appendChild(document.createTextNode("Genus"));
+			break;
+		case "aka+plant":
+			category.appendChild(document.createTextNode("Plant"));
+			break;
+		case "aka+prep":
+			category.appendChild(document.createTextNode("Preparation"));
+			break;
+		case "bioact+cell":
+			category.appendChild(document.createTextNode("Cell"));
+			break;
+		case "compound+bioact":
+			category.appendChild(document.createTextNode("Bio-Activity"));
+			break;
+		case "plantpart+illness":
+		case "prep+illness":
+			category.appendChild(document.createTextNode("Illness"));
 			break;
 
 		}
