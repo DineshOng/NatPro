@@ -23,6 +23,7 @@ public class CompoundTagger extends LookUpEntityTagger {
 	private Map<String, Integer> map;
 	private Oscar oscar;
 	private Set<String> words;
+	private List<String> excludeList;
 	//private List<String> final_compounds;
 	
 	public CompoundTagger(String tag, String text, String filename, String commonWords) throws IOException {
@@ -32,6 +33,9 @@ public class CompoundTagger extends LookUpEntityTagger {
         compounds = new ArrayList<String>();
         words = new ReadLexiconFile(commonWords).getContentsInHash();
         oscar = new Oscar();
+        
+        excludeList = new ArrayList<String>();
+        excludeList.add("CellLine");
         //findEntities();
         
         //sortEntities();
@@ -81,7 +85,7 @@ public class CompoundTagger extends LookUpEntityTagger {
             Matcher matcher = pattern.matcher(text);
             while(matcher.find()) {
             	String compound = matcher.group().replaceAll("^and ", "").replaceAll("^the ", "").replaceAll("^a ", "").replaceAll("^[0-9]+ ", "").trim();
-            	if(!compounds.contains(compound)) {
+            	if(!compounds.contains(compound) && !excludeList.contains(compound)) {
             		compounds.add(compound);
             	}
                 Integer n = map.get(compound);
