@@ -22,6 +22,7 @@ import edu.stanford.nlp.io.EncodingPrintWriter;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 import java.io.*;
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,6 +35,7 @@ import net.didion.jwnl.data.POS;
 import net.didion.jwnl.data.Synset;
 import net.didion.jwnl.data.Word;
 import net.didion.jwnl.dictionary.Dictionary;
+import preprocessing.Tagger;
 
 /**
  * Servlet implementation class BootstrapServlet
@@ -48,6 +50,7 @@ public class BootstrapServlet extends HttpServlet {
 	private static final String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\models\\english-left3words-distsim.tagger";
 	private static final String filePropertiesXml = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\file_properties.xml";
 	private static final String processingTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\processing.txt";
+
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -68,9 +71,23 @@ public class BootstrapServlet extends HttpServlet {
 		case "/BootstrapServlet":
 			request.getRequestDispatcher("uploadprogress.jsp").forward(request, response);
 			Thread uploadThread = (Thread) request.getAttribute("thread");
-			while(uploadThread.isAlive()) {
-//				System.out.println(uploadThread.isAlive());
-			}
+
+			Thread bThread = new Thread(() -> {
+				while (uploadThread.isAlive()) {
+				}
+				try {
+					bootstrap(request, response);
+				} catch (ServletException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			});
+
+			bThread.start();
+
 //			bootstrap(request, response);
 			break;
 		default:
@@ -87,24 +104,7 @@ public class BootstrapServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-	
-	public boolean checkIfProcessing() throws IOException {
-		BufferedReader reader = new BufferedReader(
-				new FileReader(processingTxtFile));
-		String line = reader.readLine();
-		while (line != null) {
-			if (!line.equals("")) {
-				return false;
-			}
 
-			line = reader.readLine();
-		}
-
-		reader.close();
-
-		return true;
-	}
-	
 	private void bootstrap(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		File Folder = new File(taggedFolder);

@@ -48,8 +48,8 @@
 		<div class="row">
 			<div class="col">
 				<button id="but1" type="button" class="btn btn-secondary">Generate
-					Unique Document ID${numdocsplural} </button>
-				
+					Unique Document ID${numdocsplural}</button>
+
 			</div>
 
 			<div class="col">
@@ -89,49 +89,42 @@
 	</div>
 	<br>
 	<h4 class="text-dark">Bootstrap:</h4>
-	${preprocProg}
 	<div class="progress" style="height: 30px;">
-		<div class="progress-bar" id="bar2" role="progressbar"
+		<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id="bar2" role="progressbar"
 			style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
 			aria-valuemax="100">BOOTSRAPPING DOCUMENT${numdocsplural}</div>
 	</div>
+
 	<div class="container-fluid mt-3">
 		<div class="row justify-content-around">
 			<div class="col">
 				<button id="but11" type="button" class="btn btn-secondary">Load
 					Tagged Document</button>
 			</div>
-			<i class="fa fa-arrow-right mt-2"></i>
 			<div class="col">
 				<button id="but22" type="button" class="btn btn-secondary">Load
 					Seeds</button>
 			</div>
-			<i class="fa fa-arrow-right mt-2"></i>
 			<div class="col">
 				<button id="but33" type="button" class="btn btn-secondary">Process
 					Tagged Document</button>
 			</div>
-			<i class="fa fa-arrow-right mt-2"></i>
 			<div class="col">
 				<button id="but44" type="button" class="btn btn-secondary">Generate
 					Patterns from Document</button>
 			</div>
-			<i class="fa fa-arrow-right mt-2"></i>
 			<div class="col">
 				<button id="but55" type="button" class="btn btn-secondary">POS
 					Tag Document</button>
 			</div>
-			<i class="fa fa-arrow-right mt-2"></i>
 			<div class="col">
 				<button id="but66" type="button" class="btn btn-secondary">Match
 					Patterns with Document</button>
 			</div>
-			<i class="fa fa-arrow-right mt-2"></i>
 			<div class="col">
 				<button id="but77" type="button" class="btn btn-secondary">Add
 					Seed Patterns</button>
 			</div>
-			<i class="fa fa-arrow-right mt-2"></i>
 			<div class="col">
 				<button id="but88" type="button" class="btn btn-secondary">Generate
 					File for Validation</button>
@@ -162,11 +155,20 @@
         var i = 0;
         var currPercent = 0;
         var progressBar = $("#bar");
+        
+        var progressBar2 = $("#bar2");
+        var j = 0;
+        var currPercent2 = 0;
+        
         var s = document.getElementById("numdocsplural").getAttribute("val");
         var isare = "is";
         if(s == "s"){
         	isare="are";
         }
+        
+        var timeout1;
+        var timeout2;
+        
         var startTime = document.getElementById("startTime").getAttribute("val");
         var genDocIdDuration = document.getElementById("genDocIdDuration").getAttribute("val");
         var checkDocDuration = document.getElementById("checkDocDuration").getAttribute("val");
@@ -188,9 +190,13 @@
          console.log("tagDuration"+tagDuration);
          console.log("end time"+endTime);
          var timeStops = new Array(genDocIdDuration,checkDocDuration,saveDocDuration,convertTxtDuration,cleanDuration,splitDuration,tagDuration);
-        function countNumbers(){
+        function uploadProgress(){
+        	 
+        	window.onbeforeunload = function(){
+  			  return 'Are you sure you want to leave?';
+  			};
         	if(i<=7){
-        		switch(i){
+        		switch(i){        		
         		case 0: 
         			document.getElementById("but1").classList.add("btn-warning");
         			document.getElementById("but1").innerHTML = "Generating Unique Document ID"+s;
@@ -245,29 +251,110 @@
         			document.getElementById("but8").innerHTML = "Processing Document"+s;
         			break;
         		}
-        		currPercent = currPercent + (timeStops[Math.round(i)]/endTime)*100
+        		/* currPercent = currPercent + (timeStops[Math.floor(i)]/endTime)*100; */
+        		currPercent = currPercent + 7.15;
         		progressBar.css("width", currPercent + "%");        		
-        		i=i+1;
-        		window.onbeforeunload = function(){
-        			  return 'Are you sure you want to leave?';
-        			};
+        		i=i+0.5;
         	}else{
-        		window.onbeforeunload = null;
+                clearTimeout(timeout1);
+        		progressBar.css("width", "100%");  
+        		bootstrapProgress();
         		document.getElementById("but8").classList.remove("btn-warning");
     			document.getElementById("but8").classList.add("btn-success");
     			document.getElementById("but8").innerHTML = "Ready for Bootstrapping";
-    			 document.getElementById("bar").innerHTML = "Preprocessing Complete"; 
-    			/* document.getElementById("header").innerHTML = "Document"+s+" Upload Successful!"; */
+    			document.getElementById("bar").innerHTML = "Preprocessing Complete"; 
     			document.getElementById("header").innerHTML = "Bootstrapping Document"+s;
-                document.getElementById("spinner").style.display="none";
                 document.getElementById("bar").classList.remove("progress-bar-animated"); 
+                document.getElementById("bar").classList.remove("progress-bar-striped");
                 
+               
         	} 
             // Wait for sometime before running this script again
-            setTimeout("countNumbers()", 500);
+            timeout1 = setTimeout("uploadProgress()", 500);
         }
-        countNumbers();
+        
+       
+        function bootstrapProgress(){
+            if(j<=7){
+        		switch(j){        		
+        		case 0: 
+        			document.getElementById("but11").classList.add("btn-warning");
+        			document.getElementById("but11").innerHTML = "Loading Tagged Document";
+        			break;
+        		case 1: 
+        			document.getElementById("but11").innerHTML = "Tagged Document Loaded";
+        			document.getElementById("but11").classList.remove("btn-warning");
+        			document.getElementById("but11").classList.add("btn-success");        		
+        			document.getElementById("but22").classList.add("btn-warning");
+        			document.getElementById("but22").innerHTML = "Loading Seeds";
+        			break;
+        		case 2: 
+        			document.getElementById("but22").innerHTML = "Seeds Loaded";
+        			document.getElementById("but22").classList.remove("btn-warning");
+        			document.getElementById("but22").classList.add("btn-success");   
+        			document.getElementById("but33").classList.add("btn-warning");
+        			document.getElementById("but33").innerHTML = "Processing Tagged Document";
+        			break;
+        		case 3: 
+        			document.getElementById("but33").innerHTML = "Tagged Document Processed";
+        			document.getElementById("but33").classList.remove("btn-warning");
+        			document.getElementById("but33").classList.add("btn-success");   
+        			document.getElementById("but44").classList.add("btn-warning");
+        			document.getElementById("but44").innerHTML = "Generating Patterns from Document"; 
+        			break;
+        		case 4: 
+        			document.getElementById("but44").innerHTML = "Patterns Generated";
+        			document.getElementById("but44").classList.remove("btn-warning");
+        			document.getElementById("but44").classList.add("btn-success"); 
+        			document.getElementById("but55").classList.add("btn-warning");
+        			document.getElementById("but55").innerHTML = "Tagging POS";
+        			break;
+        		case 5: 
+        			document.getElementById("but55").innerHTML = "Document POS Tagged";
+        			document.getElementById("but55").classList.remove("btn-warning");
+        			document.getElementById("but55").classList.add("btn-success");
+        			document.getElementById("but66").classList.add("btn-warning");
+        			document.getElementById("but66").innerHTML = "Matching Patterns";
+        			break;
+        		case 6: 
+        			document.getElementById("but66").innerHTML = "Patterns Matched with Document";
+        			document.getElementById("but66").classList.remove("btn-warning");
+        			document.getElementById("but66").classList.add("btn-success");
+        			document.getElementById("but77").classList.add("btn-warning");
+        			document.getElementById("but77").innerHTML = "Saving Seed Patterns";
+        			break;
+        		case 7: 
+        			document.getElementById("but77").innerHTML = "New Seed Patterns Saved";
+        			document.getElementById("but77").classList.remove("btn-warning");
+        			document.getElementById("but77").classList.add("btn-success");
+        			document.getElementById("but88").classList.add("btn-warning");
+        			document.getElementById("but88").innerHTML = "Generating File for Validation";
+        			break;
+        		}
+        		/* currPercent = currPercent + (timeStops[Math.floor(i)]/endTime)*100; */
+        		currPercent2 = currPercent2 + 3;
+        		progressBar2.css("width", currPercent2 + "%");        		
+        		j=j+0.25;
+        		/* j=j+1; */
+        	}else{
+        		window.onbeforeunload = null; 
+                clearTimeout(timeout2);
+        		progressBar2.css("width", "100%");     
+        		document.getElementById("but88").classList.remove("btn-warning");
+    			document.getElementById("but88").classList.add("btn-success");
+    			document.getElementById("but88").innerHTML = "Document"+s+" Ready for Validation";
+    			document.getElementById("bar2").innerHTML = "Bootstrapping Complete"; 
+    			document.getElementById("header").innerHTML = "Document"+s+" Upload Successful!"; 
+                document.getElementById("spinner").style.display="none";
+                document.getElementById("bar2").classList.remove("progress-bar-animated"); 
+                document.getElementById("bar2").classList.remove("progress-bar-striped"); 
+        	}
+            timeout2 = setTimeout("bootstrapProgress()", 1000); 
+        }
+        
+        uploadProgress();
     </script>
+
 	<script type="text/javascript">
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();

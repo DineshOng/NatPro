@@ -56,7 +56,6 @@ public class uploadSERVLET extends HttpServlet {
 			throws ServletException, IOException {
 		long startTime, endTime, endGenDocIdTime, endCheckDocTime, saveDocTime = 0, preprocDuration;
 		startTime = System.nanoTime();
-		Boolean stillProcessing = true;
 		request.setAttribute("startTime", (double) startTime / 1000000);
 		List<Part> fileParts = request.getParts().stream()
 				.filter(part -> "file-upload".equals(part.getName()) && part.getSize() > 0)
