@@ -34,8 +34,8 @@ public class OntoQuery {
 
 	public OntoQuery() throws OntologyLoadException {
 		/* Change local path */
-//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
-		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+//		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -1071,16 +1071,13 @@ public class OntoQuery {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
-
-						String compoundIndivIUPAC = individual.getPropertyValue(datatypeProperty_IUPACName).toString();
-
+						
 						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
 
 						Compound mp = null;
 
 						// EDIT THIS CODE FOR OPTIMAL SEARCH FUNCTION
-						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase())
-								|| compoundIndivIUPAC.toLowerCase().contains(Compound.toLowerCase())) {
+						if (compoundIndiv.toLowerCase().contains(Compound.toLowerCase())) {
 							// System.out.println(compoundIndiv);
 							mp = new Compound(compoundIndiv);
 							HashSet<String> synonyms = new HashSet<String>();
@@ -1098,6 +1095,32 @@ public class OntoQuery {
 							mp.setCompoundSynonyms(synonyms);
 							found = true;
 							values.add(mp);
+						}
+						
+						try {
+							String compoundIndivIUPAC = individual.getPropertyValue(datatypeProperty_IUPACName).toString();
+							if (compoundIndivIUPAC.toLowerCase().contains(Compound.toLowerCase())) {
+								mp = new Compound(compoundIndiv);
+								HashSet<String> synonyms = new HashSet<String>();
+
+								for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
+									// if(!jtt.next().toString().isEmpty()) {
+									String syno = jtt.next().toString();
+									// System.out.println(syno + " " + compoundIndiv);
+									mp = new Compound(compoundIndiv);
+									// System.out.println(syno);
+									synonyms.add(syno);
+									// }
+								}
+								
+								synonyms.add(compoundIndivIUPAC);
+
+								mp.setCompoundSynonyms(synonyms);
+								found = true;
+								values.add(mp);
+							}
+						} catch (Exception ee) {
+							//System.out.println(ee);
 						}
 
 						if (!found) {
