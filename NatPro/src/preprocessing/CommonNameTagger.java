@@ -10,8 +10,8 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 public class CommonNameTagger extends EntityTagger {
 	private TreeSet<String> phrases;
 	private MaxentTagger mt;
-//	private String englishTaggerFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\english-left3words-distsim.tagger";
-	private String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\english-left3words-distsim.tagger";
+	private String englishTaggerFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\english-left3words-distsim.tagger";
+//	private String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\english-left3words-distsim.tagger";
 	public CommonNameTagger(String tag, String text) {
 		super(tag, text);
 		
@@ -24,12 +24,12 @@ public class CommonNameTagger extends EntityTagger {
 		
 		String phrase = "";
 		for(String word: words) {
-			//System.out.println(word);
+			System.out.println(word);
         	if(word.endsWith("VBN") && ((word.contains("known") || word.contains("called")  || word.contains("marketed")))) {
         		phrase += " ";
         	} else if(phrase.length()!=0  && word.endsWith("JJ") && (phrase.trim().endsWith("NN") || phrase.trim().endsWith("NNS"))) {
         		continue;
-        	} else if(phrase.length()!=0 && (word.endsWith("JJ") || word.endsWith("NN") || word.endsWith("NNS") || word.endsWith("CC"))) {
+        	} else if(phrase.length()!=0 && (word.endsWith("JJ") || word.endsWith("NN") || word.endsWith("NNP") || word.endsWith("NNS") || word.endsWith("CC"))) {
         		//System.out.println(word);
         		phrase += word + " ";
         	} else if(phrase.length()!=0 && word.endsWith("IN")) {
