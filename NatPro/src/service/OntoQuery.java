@@ -1098,26 +1098,28 @@ public class OntoQuery {
 						}
 						
 						try {
-							String compoundIndivIUPAC = individual.getPropertyValue(datatypeProperty_IUPACName).toString();
-							if (compoundIndivIUPAC.toLowerCase().contains(Compound.toLowerCase())) {
-								mp = new Compound(compoundIndiv);
-								HashSet<String> synonyms = new HashSet<String>();
-
-								for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
-									// if(!jtt.next().toString().isEmpty()) {
-									String syno = jtt.next().toString();
-									// System.out.println(syno + " " + compoundIndiv);
+							if(!found) {
+								String compoundIndivIUPAC = individual.getPropertyValue(datatypeProperty_IUPACName).toString();
+								if (compoundIndivIUPAC.toLowerCase().contains(Compound.toLowerCase())) {
 									mp = new Compound(compoundIndiv);
-									// System.out.println(syno);
-									synonyms.add(syno);
-									// }
+									HashSet<String> synonyms = new HashSet<String>();
+	
+									for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
+										// if(!jtt.next().toString().isEmpty()) {
+										String syno = jtt.next().toString();
+										// System.out.println(syno + " " + compoundIndiv);
+										mp = new Compound(compoundIndiv);
+										// System.out.println(syno);
+										synonyms.add(syno);
+										// }
+									}
+									
+									synonyms.add(compoundIndivIUPAC);
+	
+									mp.setCompoundSynonyms(synonyms);
+									found = true;
+									values.add(mp);
 								}
-								
-								synonyms.add(compoundIndivIUPAC);
-
-								mp.setCompoundSynonyms(synonyms);
-								found = true;
-								values.add(mp);
 							}
 						} catch (Exception ee) {
 							//System.out.println(ee);
