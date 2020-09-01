@@ -8,7 +8,7 @@ EDX analysis of <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPa
 
 Eight constituents were detected in <Synonym>Alstonia macrophylla</Synonym> crude <Compound>dichloromethane</Compound> (DCM) extracts, which consisted of a long-chain <Compound>unsaturated fatty acid</Compound> (17:0) and <Compound>fatty acid esters</Compound> such as ethyl <Compound>hexadecanoate</Compound> and methyl <Compound>hexadecanoate</Compound>.
 
-Extraction of <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPart> using <Compound>methanol</Compound> and <Compound>dimethyl sulfoxide</Compound> (MeOH/DMSO) solvents resulted in the identification of 17 constituents, principally <<CompoundClass@19>> (<Compound>alstonerine</Compound>, 34.38%; <Compound>strictamin</Compound>, 5.23%; <Compound>rauvomitin</Compound>, 4.29%; and <Compound>brucine</Compound>, 3.66%) and <<CompoundClass@20>> (-sitosterol, 3.85%; <Compound>lupeol</Compound>, 3.00%; <Compound>24-methylenecycloartanol</Compound>, 2.81%; <Compound>campesterol</Compound>, 2.71%; <Compound>beta-amyrin</Compound>, 2.30%; and <Compound>stigmasterol</Compound>, 2.
+Extraction of <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPart> using <Compound>methanol</Compound> and <Compound>dimethyl sulfoxide</Compound> (MeOH/DMSO) solvents resulted in the identification of 17 constituents, principally <ChemicalClass>alkaloids</ChemicalClass> (<Compound>alstonerine</Compound>, 34.38%; <Compound>strictamin</Compound>, 5.23%; <Compound>rauvomitin</Compound>, 4.29%; and <Compound>brucine</Compound>, 3.66%) and <ChemicalClass>triterpenoids</ChemicalClass> (-sitosterol, 3.85%; <Compound>lupeol</Compound>, 3.00%; <Compound>24-methylenecycloartanol</Compound>, 2.81%; <Compound>campesterol</Compound>, 2.71%; <Compound>beta-amyrin</Compound>, 2.30%; and <Compound>stigmasterol</Compound>, 2.
 
 13%).
 
@@ -24,7 +24,7 @@ In the <Location>Philippines</Location>, some of the most important and highly r
 
 Two of its five Philippine native species, <Synonym>Alstonia macrophylla</Synonym> Wall ex G.Don and <Synonym>Alstonia scholaris</Synonym> (L.) R. Br., are locally important, and various organs of these plants are harvested as natural remedies for human ailments.
 
-Both <Synonym>Alstonia macrophylla</Synonym> and <Synonym>Alstonia scholaris</Synonym> were reported to contain <Compound>echitovenidine</Compound>, <Compound>echitamine</Compound>, <Compound>venenatine</Compound> (an <<CompoundClass@36>>), and <BioAct>anti-inflammatory</BioAct> <<CompoundClass@20>>.
+Both <Synonym>Alstonia macrophylla</Synonym> and <Synonym>Alstonia scholaris</Synonym> were reported to contain <Compound>echitovenidine</Compound>, <Compound>echitamine</Compound>, <Compound>venenatine</Compound> (an <ChemicalClass>indole alkaloid</ChemicalClass>), and <BioAct>anti-inflammatory</BioAct> <ChemicalClass>triterpenoids</ChemicalClass>.
 
 The <PlantPart>bark</PlantPart> of the <Synonym>Alstonia scholaris</Synonym>, the most intensively used organ of this species, was recently found to have strong <BioAct>antifungal</BioAct> activity.
 
@@ -46,17 +46,17 @@ Similar to <Synonym>Alstonia scholaris</Synonym>, <Synonym>Alstonia macrophylla<
 
 A variety of phytochemical analytes have been reported from distinct organs of <Synonym>Alstonia macrophylla</Synonym>.
 
-Phytochemical investigations of <Synonym>Alstonia macrophylla</Synonym> afforded <<CompoundClass@62>>, <<CompoundClass@63>>, hydroxylated polyphenolic compounds, <<CompoundClass@19>>, tannic acids, and <Compound>monosaccharides</Compound>.
+Phytochemical investigations of <Synonym>Alstonia macrophylla</Synonym> afforded <ChemicalClass>steroid alcohols</ChemicalClass>, <ChemicalClass>isoprenoids</ChemicalClass>, hydroxylated polyphenolic compounds, <ChemicalClass>alkaloids</ChemicalClass>, tannic acids, and <Compound>monosaccharides</Compound>.
 
-<Synonym>Alstonia macrophylla</Synonym> was found to be rich in <Compound>beta-sitosterol</Compound>, a <<CompoundClass@66>> that is an effective inhibitor of semen movability, and has possible use as a family planning medicine for women.
+<Synonym>Alstonia macrophylla</Synonym> was found to be rich in <Compound>beta-sitosterol</Compound>, a <ChemicalClass>phytosterol</ChemicalClass> that is an effective inhibitor of semen movability, and has possible use as a family planning medicine for women.
 
 A study of the <PlantPart>aerial parts</PlantPart> reported 19 alkaloidal compounds, 15 of which were elucidated.
 
-In another study, also using <PlantPart>leaf</PlantPart> extracts yielded 10 undiscovered <<CompoundClass@69>>, <Compound>alstomaline</Compound>, <Compound>10,11-dimethoxynareline</Compound>, <Compound>alstohentine</Compound>, <Compound>alstomicine</Compound>, <Compound>16-hydroxyalstonisine</Compound>, 16hydroxyalstonal, <Compound>16-hydroxy-N4-demethylalstophyllal</Compound> oxindole, <Compound>alstophyllal</Compound>, <Compound>6-oxoalstophylline</Compound>, and <Compound>6-oxoalstophyllal</Compound>, in consort with 21 others already discovered by a previous study.
+In another study, also using <PlantPart>leaf</PlantPart> extracts yielded 10 undiscovered <ChemicalClass>indole alkaloids</ChemicalClass>, <Compound>alstomaline</Compound>, <Compound>10,11-dimethoxynareline</Compound>, <Compound>alstohentine</Compound>, <Compound>alstomicine</Compound>, <Compound>16-hydroxyalstonisine</Compound>, 16hydroxyalstonal, <Compound>16-hydroxy-N4-demethylalstophyllal</Compound> oxindole, <Compound>alstophyllal</Compound>, <Compound>6-oxoalstophylline</Compound>, and <Compound>6-oxoalstophyllal</Compound>, in consort with 21 others already discovered by a previous study.
 
-Like <Synonym>Alstonia scholaris</Synonym>, <Synonym>Alstonia macrophylla</Synonym> also has abundant <<CompoundClass@19>>.
+Like <Synonym>Alstonia scholaris</Synonym>, <Synonym>Alstonia macrophylla</Synonym> also has abundant <ChemicalClass>alkaloids</ChemicalClass>.
 
-To date, nearly 70 dissimilar categories of <<CompoundClass@73>> derivatives have been described in various organs of <Synonym>Alstonia macrophylla</Synonym>, and a majority of them were isolated from the <PlantPart>stem bark</PlantPart>.
+To date, nearly 70 dissimilar categories of <ChemicalClass>alkaloid</ChemicalClass> derivatives have been described in various organs of <Synonym>Alstonia macrophylla</Synonym>, and a majority of them were isolated from the <PlantPart>stem bark</PlantPart>.
 
 In this work, we established the <BioAct>antioxidant</BioAct> (by a modified assay using <Compound>1,1-diphenyl-2-picrylhydrazyl</Compound> (DPPH)), <BioAct>cytotoxic</BioAct> (<CellLine>HT-29</CellLine>, <CellLine>H69PR</CellLine>, <CellLine>MCF-7</CellLine>, <CellLine>THP-1</CellLine> immortalized cell lines, and normal <CellLine>HDFn</CellLine> primary culture cells), and <BioAct>antivenom</BioAct> activities of crude <Synonym>Alstonia macrophylla</Synonym> extracts.
 
@@ -80,11 +80,11 @@ The sample, seen in Table 1 and Figure 1, consisted chiefly of a <Compound>fatty
 
 46%).
 
-The MEOH/DMSO crude <Synonym>Alstonia macrophylla</Synonym> extracts were composed primarily of <<CompoundClass@19>> (Table 2 and Figure 1): <Compound>alstonerine</Compound> (34.38%), <Compound>strictamin</Compound> (5.23%), <Compound>rauvomitin</Compound> (4.29%), and <Compound>brucine</Compound> (3.
+The MEOH/DMSO crude <Synonym>Alstonia macrophylla</Synonym> extracts were composed primarily of <ChemicalClass>alkaloids</ChemicalClass> (Table 2 and Figure 1): <Compound>alstonerine</Compound> (34.38%), <Compound>strictamin</Compound> (5.23%), <Compound>rauvomitin</Compound> (4.29%), and <Compound>brucine</Compound> (3.
 
 66%).
 
-Other notable constituents from this polar <Preparation>extract</Preparation> were <<CompoundClass@20>>: -sitosterol (3.85%), <Compound>lupeol</Compound> (3.00%), <Compound>24-methylenecycloartanol</Compound> (2.81%), <Compound>campesterol</Compound> (2.71%), <Compound>beta-amyrin</Compound> (2.30%), and <Compound>stigmasterol</Compound> (2.
+Other notable constituents from this polar <Preparation>extract</Preparation> were <ChemicalClass>triterpenoids</ChemicalClass>: -sitosterol (3.85%), <Compound>lupeol</Compound> (3.00%), <Compound>24-methylenecycloartanol</Compound> (2.81%), <Compound>campesterol</Compound> (2.71%), <Compound>beta-amyrin</Compound> (2.30%), and <Compound>stigmasterol</Compound> (2.
 
 13%).
 
@@ -126,7 +126,7 @@ The mineral content for the <PlantPart>roots</PlantPart> displayed the presence 
 
 <Synonym>Alstonia macrophylla</Synonym> crude extracts were found to be effective free radical scavengers given that the IC50 value was low at 0.71 mg/mL (Figure 3).
 
-A previous report showed that three chief constituents purified from the methanolic fraction of <Synonym>Alstonia macrophylla</Synonym> <PlantPart>leaf</PlantPart>, specifically <Compound>betasitosterol</Compound>, <Compound>ursolic acid</Compound>, and <Compound>beta-sitosteryl-beta-D-glucoside</Compound>, as well as a minor fraction found to have <<CompoundClass@73>> and <Compound>fatty acids</Compound> were the entities that induced <BioAct>antioxidant</BioAct> activity at an effective concentration of 200 mg/kg (DPPH protocol evaluations, <Compound>superoxide</Compound> anion quenching experiments, and DNA cleavage assay).
+A previous report showed that three chief constituents purified from the methanolic fraction of <Synonym>Alstonia macrophylla</Synonym> <PlantPart>leaf</PlantPart>, specifically <Compound>betasitosterol</Compound>, <Compound>ursolic acid</Compound>, and <Compound>beta-sitosteryl-beta-D-glucoside</Compound>, as well as a minor fraction found to have <ChemicalClass>alkaloid</ChemicalClass> and <Compound>fatty acids</Compound> were the entities that induced <BioAct>antioxidant</BioAct> activity at an effective concentration of 200 mg/kg (DPPH protocol evaluations, <Compound>superoxide</Compound> anion quenching experiments, and DNA cleavage assay).
 
 2.
 
@@ -174,7 +174,7 @@ Post hoc analysis revealed that there were no significant differences between th
 
 The mean IC50 values of <CellLine>HT-29</CellLine> cells Figure 1. Total ion GC-MS chromatogram of (a) DCM and (b) MeOH/DMSO <Preparation>extract</Preparation> of <Synonym>Alstonia macrophylla</Synonym> with n-alkanes.
 
-Table 2. Volatile Constituents of MeOH:DMSO Extracts of <Synonym>Alstonia macrophylla</Synonym> compound RT (min) RIa % peak area functionality <Compound>2,5-dimethyl-4-hydroxy-3(2H)-furanone</Compound> 7.20 1026 1.16 <Compound>trihydroxybenzene 2-methoxy-4-vinylphenol</Compound> 19.96 1355 5.37 <<CompoundClass@152>> <Compound>2,6-dimethoxyphenol</Compound> 22.13 1375 1.83 diverse functional group <Compound>2,6-dimethoxy-4-(2-propenyl)-phenol</Compound> 45.43 1660 3.69 diverse functional group <Compound>3,5-dimethoxy-4-hydroxyphenylacetic acid</Compound> 49.60 1690 1.66 <Compound>phenolic acid strictamin</Compound> 77.42 2519 5.23 <<CompoundClass@73>> <Compound>rauvomitin</Compound> 84.82 2522 4.29 <<CompoundClass@73>> <Compound>alstonerine</Compound> 86.66 2544 34.38 <<CompoundClass@73>> <Compound>brucine</Compound> 86.85 2545 3.66 <<CompoundClass@73>> <Compound>burnamicine</Compound> 87.94 2561 1.71 <<CompoundClass@73>> <Compound>campesterol</Compound> 93.35 2643 2.71 <<CompoundClass@158>> <Compound>stigmasterol</Compound> 94.44 2663 2.13 <<CompoundClass@158>> -sitosterol 96.48 2701 3.85 <<CompoundClass@158>> <Compound>beta-amyrin</Compound> 97.27 2716 2.30 <<CompoundClass@158>> <Compound>lupeol</Compound> 98.43 2738 3.00 <<CompoundClass@158>> <Compound>24-methylenecycloartanol</Compound> 101.84 2802 2.81 <<CompoundClass@158>> aRetention index (HP-5 ms column).
+Table 2. Volatile Constituents of MeOH:DMSO Extracts of <Synonym>Alstonia macrophylla</Synonym> compound RT (min) RIa % peak area functionality <Compound>2,5-dimethyl-4-hydroxy-3(2H)-furanone</Compound> 7.20 1026 1.16 <Compound>trihydroxybenzene 2-methoxy-4-vinylphenol</Compound> 19.96 1355 5.37 <ChemicalClass>diterpenoid</ChemicalClass> <Compound>2,6-dimethoxyphenol</Compound> 22.13 1375 1.83 diverse functional group <Compound>2,6-dimethoxy-4-(2-propenyl)-phenol</Compound> 45.43 1660 3.69 diverse functional group <Compound>3,5-dimethoxy-4-hydroxyphenylacetic acid</Compound> 49.60 1690 1.66 <Compound>phenolic acid strictamin</Compound> 77.42 2519 5.23 <ChemicalClass>alkaloid</ChemicalClass> <Compound>rauvomitin</Compound> 84.82 2522 4.29 <ChemicalClass>alkaloid</ChemicalClass> <Compound>alstonerine</Compound> 86.66 2544 34.38 <ChemicalClass>alkaloid</ChemicalClass> <Compound>brucine</Compound> 86.85 2545 3.66 <ChemicalClass>alkaloid</ChemicalClass> <Compound>burnamicine</Compound> 87.94 2561 1.71 <ChemicalClass>alkaloid</ChemicalClass> <Compound>campesterol</Compound> 93.35 2643 2.71 <ChemicalClass>triterpenoid</ChemicalClass> <Compound>stigmasterol</Compound> 94.44 2663 2.13 <ChemicalClass>triterpenoid</ChemicalClass> -sitosterol 96.48 2701 3.85 <ChemicalClass>triterpenoid</ChemicalClass> <Compound>beta-amyrin</Compound> 97.27 2716 2.30 <ChemicalClass>triterpenoid</ChemicalClass> <Compound>lupeol</Compound> 98.43 2738 3.00 <ChemicalClass>triterpenoid</ChemicalClass> <Compound>24-methylenecycloartanol</Compound> 101.84 2802 2.81 <ChemicalClass>triterpenoid</ChemicalClass> aRetention index (HP-5 ms column).
 
 ACS Omega Article DOI: 10.1021/acsomega.
 
@@ -236,7 +236,7 @@ ACS Omega Article DOI: 10.1021/acsomega.
 
 B00082 ACS Omega 2019, 4, 9488-9496 9491 (Figure 6).
 
-An <<CompoundClass@73>> found in the <Family>Solanaceae</Family> family, <Compound>atropine</Compound>, was discovered to impede the venom of <Synonym>Daboia russelli</Synonym>.
+An <ChemicalClass>alkaloid</ChemicalClass> found in the <Family>Solanaceae</Family> family, <Compound>atropine</Compound>, was discovered to impede the venom of <Synonym>Daboia russelli</Synonym>.
 
 Phytochemical compounds, coumestan and steroids (<Compound>beta-sitosterol</Compound> and <Compound>stigmasterol</Compound>) <Preparation>extracted</Preparation> from the alcoholic rhizome preparations of <Synonym>Pluchea indica</Synonym> bypassed oxidative degradation of lipids and <Compound>superoxide</Compound> dismutase action stimulated through envenoming.
 
@@ -264,7 +264,7 @@ B00082 ACS Omega 2019, 4, 9488-9496 9492 trials.
 
 <CellLine>MCF-7</CellLine> was highly responsive to <Synonym>Alstonia macrophylla</Synonym>, while the least responsive to <Synonym>Alstonia macrophylla</Synonym> was <CellLine>THP-1</CellLine>. Wild-type <CellLine>HDFn</CellLine> trials incubated with <Synonym>Alstonia macrophylla</Synonym> were substantiated to be noncytotoxic and gave half maximal inhibitory concentrations of greater than 100 g/mL, whereas Zeocin-treated normal cells reached their half maximal inhibitory concentrations at less than 5.00 g/ mL.
 
-The results of this work on the crude MEOH/DMSO extracts from <Synonym>Alstonia macrophylla</Synonym>, which consisted primarily of <<CompoundClass@19>> and <<CompoundClass@20>>, could be the rationale for further development of this preparation, through additional bioassays, as a candidate for chemotherapeutic drugs or as a supplementation in the management of human colorectal cancer, human <BodyPart>breast</BodyPart> adenocarcinoma, and human small cell lung carcinoma.
+The results of this work on the crude MEOH/DMSO extracts from <Synonym>Alstonia macrophylla</Synonym>, which consisted primarily of <ChemicalClass>alkaloids</ChemicalClass> and <ChemicalClass>triterpenoids</ChemicalClass>, could be the rationale for further development of this preparation, through additional bioassays, as a candidate for chemotherapeutic drugs or as a supplementation in the management of human colorectal cancer, human <BodyPart>breast</BodyPart> adenocarcinoma, and human small cell lung carcinoma.
 
 <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPart> has shown in vitro prohibitory events against sPLA granting that there has been no preceding information of this phenomenon.
 

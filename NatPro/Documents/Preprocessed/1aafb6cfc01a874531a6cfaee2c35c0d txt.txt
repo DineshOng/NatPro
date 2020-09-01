@@ -1,0 +1,298 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/333246959
+Chemical Constituents of Moss Macromitrium orthostichum Nees ex
+Schwägr.
+Article  in  Asian Journal of Chemistry · June 2019
+DOI: 10.14233/ajchem.2019.21992
+CITATION
+1
+READS
+32
+4 authors, including:
+Some of the authors of this publication are also working on these related projects:
+Hoyas of the Philippines View project
+Natural Products Derived from Philippine Plants View project
+Consolacion Ragasa
+De La Salle University
+346 PUBLICATIONS   1,935 CITATIONS   
+SEE PROFILE
+Virgilio Linis
+De La Salle University
+16 PUBLICATIONS   52 CITATIONS   
+SEE PROFILE
+chien-chang Shen
+Eurofins, Belgium
+126 PUBLICATIONS   523 CITATIONS   
+SEE PROFILE
+All content following this page was uploaded by Virgilio Linis on 22 May 2019.
+The user has requested enhancement of the downloaded file.
+A J CSIAN OURNAL OF HEMISTRY
+https://doi.org/10.14233/ajchem.2019.21992
+INTRODUCTION
+Macromitrium Brid. is a large genus of pantropical mosses
+consisting of xerophytic epiphytes. One member of this genus,
+M. orthostichum Nees ex Schwägr. is restricted in Southeast
+Asia up to Papua New Guinea was recorded in Luzon, Mindoro
+and Mindanao islands in the Philippines [1]. Like other
+members of Macromitrium, this species is distinguished from
+other mosses by having creeping prostrate stems that give
+rise to rigid branches that terminate into sporophytes [2]. The
+plant of Macromitrium orthostichum, as in most members of
+Macromitrium, have some shades of reddish brown with leaves
+variously twisted and contorted around the branches. Macro-
+mitrium orthostichum differs from other Macromitrium species
+by having papillose rhizoids arising along the basal leaf margins
+[3].
+There is no report on the chemical constituents and biolo-
+gical activities of Macromitrium orthostichum. Herein, the
+isolation of zeorin (1), atranorin (2) and a mixture of ?-sitosterol
+(3) and stigmasterol (4) (Fig. 1) from the dichloromethane extract
+of Macromitrium orthostichum is reported. To the best of our
+knowledge, this is the first report on the isolation of compounds
+1-4 from Macromitrium orthostichum.
+Chemical Constituents of Moss Macromitrium orthostichum Nees ex Schwägr.
+CONSOLACION Y. RAGASA1,2,*, MARIA CARMEN S. TAN1, VIRGILIO C. LINIS3 and CHIEN-CHANG SHEN4
+1Department of Chemistry, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines
+2Department of Chemistry, De La Salle University Science & Technology Complex, Leandro V. Locsin Campus, Biñan City, Laguna 4024,
+Philippines
+3Department of Biology, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines
+4National Research Institute of Chinese Medicine, Ministry of Health and Welfare, 155-1, Li-Nong St., Sec. 2, Taipei, Taiwan
+*Corresponding author: Tel./Fax: +63 2 5360230; E-mail: consolacion.ragasa@dlsu.edu.ph
+Received: 10 February 2019; Accepted: 29 April 2019; Published online: 21 May 2019; AJC-19426
+Chemical investigation of dichloromethane extract of moss Macromitrium orthostichum Nees ex Schwägr. has led to the isolation of
+zeorin (1), atranorin (2) and a mixture of ?-sitosterol (3) and stigmasterol (4) in about 1:1 ratio. The structure of compound 1 was
+elucidated by extensive 1D and 2D NMR spectroscopy, while compounds 2-4 were identified by comparison of their NMR data with
+literature data.
+Keywords: Macromitrium orthostichum, Orthotrichaceae, Zeorin, Atranorin, ?-Sitosterol, Stigmasterol.
+Asian Journal of Chemistry;   Vol. 31, No. 7 (2019), 1626-1628
+This is an open access journal, and articles are distributed under the terms of the Creative Commons Attribution-NonCommercial-ShareAlike
+4.0 (CC BY-NC-SA 4.0) International License which allows readers to freely read, download, copy, distribute, print, search, or link to the full
+texts of its articles and to use them for any other lawful non-commercial purpose as long as the original source is duly acknowledged.
+EXPERIMENTAL
+NMR spectra were recorded on a Varian VNMRS spectro-
+meter in CDCl3 at 600 MHz for 1H NMR and 150 MHz for 13C
+NMR spectra. Column chromatography was performed with
+silica gel 60 (70-230 mesh). Thin layer chromatography was
+performed with plastic backed plates coated with silica gel F254
+and the plates were visualized by spraying with vanillin/H2SO4
+solution followed by warming.
+Sample collection: The Philippine specimen chosen for
+present investigation was gathered from a tree branch on a mossy
+forest at Mount Natib's Peak, Morong, Bataan, Philippines on
+19th December 2017. The specimen was collected and authenti-
+cated as Macromitrium orthostichum Nees ex Schwägr. by one
+of the authors (VCL).
+General isolation procedure: A glass column 12 inches
+in height with 0.5 inches in internal diameter was used for the
+fractionation of the crude extract. Fractions of 10 mL volumes
+were collected and monitored by thin layer chromatography.
+Fractions containing spots with similar Rf values were combined
+and rechromatographed using the appropriate solvent. Final
+purification was carried out using Pasteur pipette as the column,
+collecting 1 mL fractions. TLC-pure isolates were combined,
+and after evaporation of the solvent were subjected to NMR
+analysis.
+Isolation of chemical constituents of Macromitrium
+orthostichum: The freeze-dried Macromitrium orthostichum
+(17.81 g) was ground in a blender, soaked in CH2Cl2 for three
+days and then filtered. The filtrate was concentrated under
+vacuum to afford a crude extract (0.1723 g) which was chromato-
+graphed by gradient elution using increasing proportions of
+acetone in CH2Cl2 at 10 % increment. The fraction eluted with
+40 % acetone in CH2Cl2 was rechromatographed using 10 %
+EtOAc in petroleum ether to afford a mixture of compounds 3
+and 4 (2 mg) after washing with petroleum ether. The 50 %
+acetone in CH2Cl2 fraction was rechromatographed using 15 %
+EtOAc in petroleum ether, followed by CH3CN:Et2O:CH2Cl2
+(0.5:0.5:9, v/v). The fractions eluted with 15 % ethyl acetate
+in petroleum ether were combined and rechromatographed using
+the same solvent to afford compound 1 (0.7 mg) after washing
+with petroleum ether. The fractions eluted with CH3CN:Et2O:
+CH2Cl2 (0.5:0.5:9, v/v) was rechromatographed using the same
+solvent to yield compound 2 (0.3 mg) after washing with
+petroleum ether.
+Zeorin (1): 1H NMR (600 MHz, CDCl3): ? 0.74 (3H, s,
+H-28), 0.85 (3H, s, H-25), 0.96 (3H, s, H-27), 1.00 (3H, s, H-26),
+1.02 (3H, s, H-23), 1.13 (3H, s, H-24), 1.16 (3H, s, H-29),
+1.19 (3H, s, H-30), 3.94 (1H, dt, J = 4.2, 10.8 Hz, H-6). 13C NMR
+(150 MHz, CDCl3): ? 40.33 (C-1), 18.50 (C-2), 43.79 (C-3),
+33.60 (C-4), 61.07 (C-5), 69.30 (C-6), 45.48 (C-7), 42.85 (C-8),
+49.41 (C-9), 39.33 (C-10), 21.03 (C-11), 23.98 (C-12), 49.77
+(C-13), 41.86 (C-14), 34.32 (C-15), 21.90 (C-16), 53.94 (C-
+17), 43.99 (C-18), 41.21 (C-19), 26.58 (C-20), 51.05 (C-21),
+73.90 (C-22), 36.73 (C-23), 22.10 (C-24), 17.11 (C-25), 18.25
+(C-26), 17.05 (C-27), 16.07 (C-28), 28.75 (C-29), 30.87 (C-30).
+Atranorin (2): 1H NMR (600 MHz, CDCl3): ? 6.38 (1H,
+s, H-5), 10.34 (1H, s, H-8), 2.67 (3H, s, H-9), 6.50 (1H, s, H-6?),
+2.07 (3H, s, H-8?), 2.53 (3H, s, H-9?), 3.97 (3H, s, OCH3) 12.48
+(1H, s, 2-OH), 12.53 (1H, s, 4-OH), 11.92 (1H, s, 3?-OH).
+?-Sitosterol (3): 1H NMR (600 MHz, CDCl3): ? 3.50 (1H,
+m, H-3), 5.35 (1H, d, J = 4.8 Hz, H-5), 0.66 (3H, s, H-18),
+0.99 (3H, s, H-19), 0.93 (3H, d, J = 6.6 Hz, H-21), 0.84 (3H,
+d, J = 6.6 Hz, H-26), 0.83 (3H, d, J = 6.0 Hz, H-27), 0.86 (3H,
+t, J = 6.0 Hz, H-29).
+Stigmasterol (4): 1H NMR (600 MHz, CDCl3): ? 3.50 (1H,
+m, H-3), 5.33 (1H, d, J = 4.8 Hz, H-5), 0.68 (3H, s, H-18),
+0.99 (3H, s, H-19), 1.01 (3H, d, J = 6.6 Hz, H-21), 5.13 (1H,
+dd, J = 8.4, 15.6 Hz, H-22), 5.00 (1H, dd, J = 8.4, 15.0, H-23),
+0.84 (3H, d, J = 6.6 Hz, H-26), 0.83 (3H, d, J = 6.0 Hz, H-27),
+0.80 (3H, t, J = 6.0 Hz, H-29).
+RESULTS AND DISCUSSION
+Silica gel chromatography of the dichloromethane extract
+of Macromitrium orthostichum afforded zeorin (1), atranorin
+(2) and a mixture of ?-sitosterol (3) and stigmasterol (4) in
+about 1:1 ratio. The structure of compound 1 was elucidated
+by extensive 1D and 2D NMR spectroscopy and confirmed
+by comparison of its NMR data with those reported in the
+literature [4]. The NMR data of compound 2 were in accordance
+with those reported in the literature for atranorin [4]; compound
+3 for ?-sitosterol [5] and compound 4 for strigmasterol [5].
+The 1:1 ratio of compounds 3 and 4 was deduced from the
+intensities and integrations of the 1H NMR resonances for
+olefinic protons at ? 5.35 (d, J = 4.8 Hz, H-5) and methyl
+protons at ? 0.66 (s) for compound 3 and olefinic protons at ?
+5.35 (d, J = 4.8 Hz, H-5), 5.13 (dd, J = 8.4, 15.6 Hz) and 5.00
+(dd, J = 8.4, 15.0 Hz) and the methyl protons at ? 0.68 (s) for
+compound 4 [5].
+Although there is no reported biological activity for M.
+orthostichum, the compounds isolated from the plant were
+reported to possess diverse activities. Zeorin (1) and atranorin
+(2) exhibited antidiabetic and antioxidant activities [6]. Compound
+1 exhibited strong antibacterial and antifungal activities [7].
+On the other hand, compound 2 showed antiproliferative action
+against malignant cell lines [8], possessed antinociceptive
+OH
+H H
+H
+OH
+H
+OHO
+HO CH3
+O
+O
+H3C
+OH
+CH3
+O
+O
+CH3
+H
+2
+1
+1
+4 6
+10
+11 13
+18
+21
+22
+23
+25 26
+27
+28 29
+24
+30
+HO
+3
+HO
+4
+Fig. 1. Chemical structures of zeorin (1), atranorin (2), ?-sitosterol (3) and stigmasterol (4) from the dichloromethane extract of M. orthostichum
+Vol. 31, No. 7 (2019) Chemical Constituents of Moss Macromitrium orthostichum Nees ex Schwägr.  1627
+effects [9,10], exhibited antibiotic action against M. aurum
+[11], inhibited leukotriene B4 synthesis in leukocytes [12],
+and modulated the wound healing process [13]. ?-Sitosterol
+(3) inhibited the growth of human breast MCF-7 and MDA-
+MB231 adenocarcinoma cells [14]; was effective for the treat-
+ment of benign prostatic hyperplasia [15]; showed potential
+as an anticancer drug for colon carcinogenesis [16]; reduced
+intestinal cholesterol uptake [17]; and induced apoptosis
+mediated by the activation of ERK and the downregulation of
+Akt in MCA-102 murine fibrosarcoma cells [18]. On the other
+hand, stigmasterol (4) showed therapeutic efficacy against
+Ehrlich ascites carcinoma in mice [19]; lowered plasma chole-
+sterol levels, inhibited cholesterol absorption, and suppressed
+hepatic cholesterol and classic bile acid synthesis in rats [20];
+showed cytostatic activity against Hep2 and McCoy cells [21];
+markedly inhibited tumour promotion [22]; exhibited antimuta-
+genic [23], topical anti-inflammatory [24], antiosteoarthritic
+[25] and antioxidant [26] activities.
+ACKNOWLEDGEMENTS
+A research grant from the De La Salle University Science
+Foundation through the URCO is gratefully acknowledged.
+CONFLICT OF INTEREST
+The authors declare that there is no conflict of interests
+regarding the publication of this article.
+REFERENCES
+1. D.H. Vitt, T. Koponen and D.H. Norris, Acta Bot. Fennica, 154, 1 (1995).
+2. E.B. Bartram, Philipp. J. Sci., 68, 1 (1939).
+3. A. Eddy, A Handbook of Malesian Mosses. 3. Splachnobryaceae to
+Leptostomataceae, British Museum (Natural History): London (1996).
+4. C.Y. Ragasa, M.C.S. Tan, V.C. Linis and C.-C. Shen, Pharmacogn. J.,
+10, s27 (2018);
+https://doi.org/10.5530/pj.2018.6s.4.
+5. C.Y. Ragasa, G.C. Lorena, E.H. Mandia, D.D. Raga and C.-C. Shen,
+Am. J. Essent. Oils Nat. Prod., 1, 7 (2013).
+6. V.M. Thadhani and V. Karunaratne, Oxid. Med. Cellul. Long., 2017,
+Article ID 2079697 (2017);
+https://doi.org/10.1155/2017/2079697.
+7. R. Branislav, K. Marijana and S. Slobodan, Recent Advances in Clinical
+Medicine, pp. 279-286 (2018).
+8. T. Kristmundsdottir, E. Jonsdottir, H.M. Ogmundsdottir and K.
+Ingolfsdottir, Eur. J. Pharm. Sci., 24, 539 (2005);
+https://doi.org/10.1016/j.ejps.2005.01.011.
+9. M.G.D. Melo, A.A.S. Araujo, C.P.L. Rocha, E.M.S.A. Almeida, R.D.
+Siqueira, I.R. Bonjardim and L.J. Quintans-Júnior, Biol. Pharm. Bull.,
+31, 1977 (2008);
+https://doi.org/10.1248/bpb.31.1977.
+10. M.B.S. Maia, N.H. da Silva, E.F.d. Silva, M.T.J. Catanho, A.R.P. Schuler
+and E.C. Pereira, Lat. Am. J. Pharm., 21, 259 (2002).
+11. K. Ingolfsdottir, G.A. Chung, V.G. Skulason, S.R. Gissurarson and M.
+Vilhelmsdottir, Eur. J. Pharm. Sci., 6, 141 (1998);
+https://doi.org/10.1016/S0928-0987(97)00078-X.
+12. K.C. Kumar and K. Muller, J. Nat. Prod., 62, 817 (1999);
+https://doi.org/10.1021/np9803777.
+13. R.S.S. Barreto, R.L.C. Albuquerque-Júnior, R.N. Pereira-Filho, J.S.S.
+Quintans, A.S. Barreto, J.M. DeSantana, V.J. Santana-Filho, M.R.V.
+Santos, I.R. Bonjardim, A.A.S. Araújo and L.J. Quintans-Júnior, Rev.
+Bras. Farmacogn., 23, 310 (2013);
+https://doi.org/10.1590/S0102-695X2013005000010.
+14. A.B. Awad, M. Chinnam, C.S. Fink and P.G. Bradford, Phytomed., 14,
+747 (2007);
+https://doi.org/10.1016/j.phymed.2007.01.003.
+15. G.K. Jayaprakasha, K.K. Mandadi, S.M. Poulose, Y. Jadegoud, G.A.
+Nagana Gowda and B.S. Patil, Bioorg. Med. Chem., 15, 4923 (2007);
+https://doi.org/10.1016/j.bmc.2007.04.044.
+16. A.A. Baskar, S. Ignacimuthu, G.M. Paulraj and K.S. Al Numair, BMC
+Comp. Alt. Med., 10, 24 (2010);
+https://doi.org/10.1186/1472-6882-10-24.
+17. E.D. Jesch, J.M. Seo, T.P. Carr and J.Y. Lee, Nutr. Res., 29, 859 (2009);
+https://doi.org/10.1016/j.nutres.2009.10.016.
+18. D.-O. Moon, K.-J. Lee, Y.H. Choi and G.-Y. Kim, Int. Immunopharmacol.,
+7, 1044 (2007);
+https://doi.org/10.1016/j.intimp.2007.03.010.
+19. T. Ghosh, T.K. Maity and J. Singh, Orient. Pharm. Exp. Med., 11, 41
+(2011);
+https://doi.org/10.1007/s13596-011-0001-y.
+20. A.K. Batta, G. Xu, A. Honda, T. Miyazaki and G. Salen, Metabolism,
+55, 292 (2006);
+https://doi.org/10.1016/j.metabol.2005.08.024.
+21. M.A. Gómez, M.D. García and M.T. Sáenz, Phytother. Res., 15, 633
+(2001);
+https://doi.org/10.1002/ptr.837.
+22. Y. Kasahara, K. Kumaki, S. Katagiri, K. Yasukawa, S. Yamanouchi, M.
+Takido, T. Akihisa and T. Tamura, Phytother. Res., 8, 327 (1994);
+https://doi.org/10.1002/ptr.2650080603.
+23. J.-C. Lim, J.H. Park, M. Budesinsky, A. Kasal, Y.-H. Han, B.S. Koo,
+S.-I. Lee and D.-U. Lee, Chem. Pharm. Bull. (Tokyo), 53, 561 (2005);
+https://doi.org/10.1248/cpb.53.561.
+24. M.D. García, M.T. Sáenz, M.A. Gómez and M.A. Fernández, Phytother.
+Res., 13, 78 (1999);
+https://doi.org/10.1002/(SICI)1099-1573(199902)13:1<78::AID-
+PTR384>3.0.CO;2-F.
+25. O. Gabay, C. Sanchez, C. Salvat, F. Chevy, M. Breton, G. Nourissat, C.
+Wolf, C. Jacques and F. Berenbaum, Osteoarthritis Cartilage, 18, 106
+(2010);
+https://doi.org/10.1016/j.joca.2009.08.019.
+26. S. Panda, M. Jafri, A. Kar and B.K. Meheta, Fitoter., 80, 123 (2009);
+https://doi.org/10.1016/j.fitote.2008.12.002.
+1628  Ragasa et al. Asian J. Chem.
+View publication stats

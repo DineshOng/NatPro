@@ -87,7 +87,6 @@ public class BootstrapServlet extends HttpServlet {
 			});
 
 			bThread.start();
-
 //			bootstrap(request, response);
 			break;
 		default:
@@ -148,6 +147,8 @@ public class BootstrapServlet extends HttpServlet {
 				e1 = getTag(seedEntity.get(0));
 				e2 = getTag(seedEntity.get(1));
 
+				e1 = e1.toLowerCase();
+				e2 = e2.toLowerCase();
 //				 System.out.println("Seeds retrieved: "+e1+" "+e2);
 
 				ArrayList<String> seedMap1 = new ArrayList<String>();
@@ -650,8 +651,12 @@ public class BootstrapServlet extends HttpServlet {
 	 */
 	public void addRelation(TreeSet<String> relation, String pLine, String class1, String class2, String e1, String e2,
 			TreeSet<String> e1Name, TreeSet<String> e2Name) {
+//		System.out.println("e1:"+e1 +" | e2:"+e2);
+//		System.out.println("class1:"+class1 +" | class2:"+class2);
 		// System.out.println("running Relation");
 		// System.out.println(e1+": "+class1+";"+e2+": "+class2);
+		
+//		System.out.println(pLine);
 		if (pLine.contains("<" + e1 + ">" + class1 + "</" + e1 + ">")
 				&& pLine.contains("<" + e2 + ">" + class2 + "</" + e2 + ">")) {
 			if (e2.contains("pound")) {
@@ -761,50 +766,48 @@ public class BootstrapServlet extends HttpServlet {
 		e1 = e1.toLowerCase();
 		e2 = e2.toLowerCase();
 		String entities = e1 + "+" + e2;
-		System.out.println(entities);
 		switch (entities) {
-		case "Synonym+MedicinalPlant":
-		case "":
+		case "synonym+medicinalplant":
 			category.appendChild(document.createTextNode("Common Name"));
 			break;
-		case "MedicinalPlant+PlantPart":
-		case "Synonym+PlantPart":
-		case "Preparation+PlantPart":
+		case "medicinalplant+plantpart":
+		case "synonym+plantpart":
+		case "preparation+plantpart":
 			category.appendChild(document.createTextNode("Plant Part"));
 			break;
-		case "MedicinalPlant+Location":
-		case "Synonym+Location":
+		case "medicinalplant+location":
+		case "synonym+location":
 			category.appendChild(document.createTextNode("Location"));
 			break;
 
-		case "MedicinalPlant+Compound":
-		case "Synonym+Compound":
-		case "PlantPart+Compound":
+		case "medicinalplant+compound":
+		case "synonym+compound":
+		case "plantpart+compound":
 			category.appendChild(document.createTextNode("Compound"));
 			break;
-		case "MedicinalPlant+Family":
-		case "Genus+Family":
-		case "Synonym+Family":
+		case "medicinalplant+family":
+		case "genus+family":
+		case "synonym+family":
 			category.appendChild(document.createTextNode("Family"));
 			break;
-		case "MedicinalPlant+Genus":
-		case "Synonym+Genus":
+		case "medicinalplant+genus":
+		case "synonym+genus":
 			category.appendChild(document.createTextNode("Genus"));
 			break;
-		case "MedicinalPlant+Synonym":
+		case "medicinalplant+synonym":
 			category.appendChild(document.createTextNode("Plant"));
 			break;
-		case "MedicinalPlant+Preparation":
+		case "medicinalplant+preparation":
 			category.appendChild(document.createTextNode("Preparation"));
 			break;
 		case "BioAct+CellLine":
 			category.appendChild(document.createTextNode("Cell"));
 			break;
-		case "Compound+BioAct":
+		case "compound+BioAct":
 			category.appendChild(document.createTextNode("Bio-Activity"));
 			break;
-		case "PlantPart+Illness":
-		case "Preparation+Illness":
+		case "plantpart+illness":
+		case "preparation+illness":
 			category.appendChild(document.createTextNode("Illness"));
 			break;
 
