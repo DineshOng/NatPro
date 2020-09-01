@@ -238,25 +238,25 @@
 			</button>
 			
 			<!-- Modal -->
-			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog modal-dialog-scrollable modal-lg">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="exampleModalLabel">Document</h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-			        <div class="embed-responsive embed-responsive-16by9">
-					  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+			<div class="modal fade" id="documentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-scrollable modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Document</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe id="documentIframe" class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
 					</div>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			      </div>
-			    </div>
-			  </div>
+				</div>
 			</div>
 
 
@@ -777,55 +777,63 @@
 	    function viewEntry(tValue,cValue) {
 	    	console.log(tValue + ', ' + cValue);
 	    	
-	    	var items;	    	
+	    	var entry;
+	    	var entryDocument;
+	    	var modalIframe = document.getElementById('documentIframe');
 	    	
 	    	// finding a specific category using the tValue
+	    	// getting the source of the document using the entry's src
 	    	switch (tValue) {
 	    	case 0:
-	    		items = document.getElementsByName('cc');
-	    		console.log('cc');
+	    		entry = document.getElementById('CompoundLabel' + cValue);
+	    		entryDocument = entry.src;
 	    		break;
 	    	case 1:
-	    		items = document.getElementsByName('cpn');
-	    		console.log('cpn');
+	    		entry = document.getElementById('CommonPlantNameLabel' + cValue);
+	    		entryDocument = entry.src;
 	    		break;
 	    	case 2:
-	    		items = document.getElementsByName('ill');
-	    		console.log('ill');
+	    		entry = document.getElementById('IllnessLabel' + cValue);
+	    		entryDocument = entry.src;
 	    		break;
 	    	case 3:
-	    		items = document.getElementsByName('loc');
-	    		console.log('loc');
+	    		entry = document.getElementById('LocationLabel' + cValue);
+	    		entryDocument = entry.src;
 	    		break;
 	    	case 4:
-	    		items = document.getElementsByName('syn');
-	    		console.log('syn');
+	    		entry = document.getElementById('SynonymLabel' + cValue);
+	    		entryDocument = entry.src;
 	    		break;
 	    	case 5:
-	    		items = document.getElementsByName('prep');
-	    		console.log('prep');
+	    		entry = document.getElementById('PreparationLabel' + cValue);
+	    		entryDocument = entry.src;
 	    		break;
 	    	case 6:
-	    		items = document.getElementsByName('gen');
-	    		console.log('gen');
+	    		entry = document.getElementById('GenusLabel' + cValue);
+	    		entryDocument = entry.src;
 	    		break;
 	    	case 7:
-	    		items = document.getElementsByName('fam');
-	    		console.log('fam');
+	    		entry = document.getElementById('FamilyLabel' + cValue);
+	    		entryDocument = entry.src;
 	    		break;
 	    	}
 	    	
 	    	/*
-	    		code to view the specific entry using tValue and cValue
-	    		
-	    		
+	    		code to view the specific entry using tValue and cValue	    		
 	    	*/
+	    	
+	    	if (entryDocument == null) {
+	    		modalIframe.src = entryDocument;
+	    	} else {
+	    		modalIframe.src = 'https://www.youtube.com/embed/ZKYEQXN_nk0';
+	    	}
+	    	$('#documentModal').modal('show');
 	    	
 	    }
 	    
 	    function editEntry(tValue,cValue) {
 	    	console.log(tValue + ', ' + cValue);
-	    	
+	    	    	
 	    	
 	    	// finding a specific category using the tValue
 	    	switch (tValue) {
@@ -988,7 +996,7 @@
 	    	
 			var entryCommands 			= '<div class="col-2" style="text-align:right">' +
 											  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +')" data-toggle="modal" data-placement="top" title="view entry" data-target="#exampleModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
+											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +')" data-toggle="" data-placement="top" title="view entry" data-target="#documentModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
 											  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"class="btn btn-primary" data-target="#exampleModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
 											  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
 										  '</div>';
