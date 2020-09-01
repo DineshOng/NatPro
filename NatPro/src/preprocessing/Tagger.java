@@ -67,7 +67,12 @@ public class Tagger {
 	        fw2.write(txt);
 	        fw2.close();
            
-            
+	        //Note:
+            //Name of tag should not be a substring of other tag
+	        
+	        //MedicinalPlant : PlantPart => OK
+	        //Compound: CompoundClass => NOT OK
+	        
             txt = new CommonNameTagger("MedicinalPlant", txt).run();
             
             txt = new SpeciesTagger("Synonym", txt, genusTxtFile).run();
