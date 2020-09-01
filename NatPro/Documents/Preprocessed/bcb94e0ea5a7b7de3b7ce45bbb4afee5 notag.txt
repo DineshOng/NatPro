@@ -1,0 +1,129 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/272020999 Chemical constituents of Artocarpus ovatus Blanco ArticleinDer Pharma Chemica March 2015 CITATIONS 8 READS 323 Polyprenols, authors, including: Some of the authors of this publication are also working on these related projects: Natural Products Chemistry View project Hoyas of the Philippines View project Consolacion Ragasa De La Salle University 346 PUBLICATIONS,889 CITATIONS SEE PROFILE chien-chang Shen Eurofins, Belgium 126 PUBLICATIONS CITATIONS SEE PROFILE All content following this page was uploaded by Consolacion Ragasa on 01 March 2015.
+
+The user has requested enhancement of the downloaded file www.derpharmachemica.comt Available online a Scholars Research Library Der Pharma Chemica, 2015, 7:178-182 (http://derpharmachemica.com/archive.html) ISSN 0975-413X CODEN (USA): PCHHAX 178 www.scholarsresearchlibrary.com Chemical constituents of Artocarpus ovatus Blanco Consolacion Y. Ragasa. , Jocelyn L. Caro and Chien-Chang Shen 1Chemistry Department, De La Salle University Science & Technology Complex Leandro V. Locsin Campus, Binan City, Laguna, Philippines 2Chemistry Department De La Salle University, 2401 Taft Avenue, Manila, 1004, Philippines 3National Research Institute of Chinese Medicine, 155-1, Li-Nong St., Sec. , Taipei 112, Taiwan.
+
+. Chemical investigation of the dichloromethane extract of the leaves of Artocarpus ovatus Blanco led to the isolation of 3beta-friedelinol , squalene , polyprenol , triacylglycerols , and chlorophyll a.
+
+The structures of beta-Friedelinol, Squalene, Polyprenols, Triacylglycerols, were identified by comparison of their 1H and/or 13C NMR data with those reported in the literature.
+
+Keywords: Artocarpus ovatus, Moracceae, 3beta-friedelinol, squalene, polyprenol, triacylglycerols, chlorophyll a
+
+. Artocarpus ovatus Blanco, an endemic Philippine tree, produces strong and durable timber which is used for construction [beta-Friedelinol, ]. A latex obtained from the tree has potential for use as a chewing gum base , while the roasted seeds are eaten.
+
+There is no reported study on the chemical constituents of Artocarpus ovatus.
+
+However, congeners of the tree have been studied for their chemical constituents and biological activities.
+
+There are about 50 species of the genus Artocarpus (Moraceae) which are sources of edible fruit and timber and are used in folk medicines.
+
+A review of the chemical constituents, biological and pharmacological activities of Artocarpus has been provided.
+
+Compounds from Artocarpus species exhibit diverse biological activities including antibacterial, antitubercular, antiviral, antifungal, antiplatelet, antiarthritic, tyrosinase inhibitory and cytotoxicity.
+
+Artocarpus species are used for treatment against inflammation, malarial fever, diarrhoea, diabetes and tapeworm infection.
+
+They are rich in phenolic compounds such as flavonoids, stilbenoids, arylbenzofurons and jacalin.
+
+This study is part of our research on the chemical constituents of the genus Artocarpus found in the Philippines.
+
+We earlier reported the isolation of friedelinol, squalene, beta-sitosterol, stigmasterol and phytol from the leaves of Artocarpus camansi, while the stems yielded polyprenol, cycloartenol and cycloartenol acetate.
+
+In another study, the leaves of Artocarpus altilis yielded beta-sitosterol, triglycerides, squalene, polyprenol, lutein and fatty acids, while Artocarpus odoratissimus afforded beta-sitosterol, triglycerides and fatty acids from the flesh of the fruit and seeds; and beta-sitosterol, fatty acids and hydrocarbons from the fruit rind.
+
+Furthermore, the unripe fruit of Artocarpus heterophyllus afforded cycloartenone, cycloartenol, and a diastereomeric mixture of Squalene, 3-butanediols.
+
+Recently, we reported the isolation of lupeol, alphaamyrin, beta-amyrin, lupeol fatty acid ester, alpha-amyrin fatty acid ester, beta-myrin fatty acid ester, betulin, 3beta,28dihydroxyolean-12-ene, oleanolic acid, beta-sitosterol, and chlorophyll afrom the twigs of Artocarpus ovatus.
+
+Consolacion Y. Ragasa et al Der Pharma Chemica, 2015, 7 :178-182.
+
+179 www.scholarsresearchlibrary.com We report herein the isolation and identification of 3beta-friedelinol , squalene , polyprenol , triacylglycerols , and chlorophyll a (Fig. ) from the dichloromethane extract of the leaves of Artocarpus ovatus.
+
+To the best of our knowledge this is the first report on the isolation of the beta-Friedelinol, Squalene, Polyprenols, from the tree.
+
+N N CH3 N N Mg CH3 O H3C H H H C H3C C O H3C O OO 2b 2a Squalene, 12 13 Polyprenols, Triacylglycerols, 4a 4b beta gamma alpha delta 18 beta-Friedelinol, 1a 8a 7 16 9 Chlorophyll a, chlorophyll a, 5a 14 15 8 17 10a 10b 7b 7c 10 11 P1 P3 P7 P11 P15 P16 P3a P7a P11a P15a beta-Friedelinol, Polyprenols, H HH Squalene, HO OH[ Polyprenols, ]n CH2OCR O CHOCR' O CH2OCR" O Triacylglycerols, R, R', R" = long chain fatty acids Fig..
+
+Chemical constituents of Artocarpus ovatus leaves: 3beta-friedelinol , squalene , polyprenol , triacylglycerols , and chlorophyll a MATERIALS AND METHODS General Experimental Procedure NMR spectra were recorded on a Varian VNMRS spectrometer in CDCl at 600 MHz for 1H NMR and 150 MHz for 13C NMR spectra.
+
+Column chromatography was performed with silica gel 60 (70-230 mesh).
+
+Thin layer chromatography was performed with plastic backed plates coated with silica gel F254 and the plates were visualized by spraying with vanillin/H2SO4 solution followed by warming.
+
+Sample Collection The sample was collected from Bataan, Philippines in October 2013.
+
+vanillin was identified as Artocarpus ovatus Blanco at the Jose Vera Santos Herbarium, Institute of Biology, University of the Philippines, Diliman, Quezon City.
+
+Consolacion Y. Ragasa et al Der Pharma Chemica, 2015, 7 :178-182.
+
+180 www.scholarsresearchlibrary.com General Isolation Procedure A glass column 18 inches in height and beta-Friedelinol, 0 inche internal diameter was packed with silica gel.
+
+The crude extract from the leaves were fractionated by silica gel chromatography using increasing proportions of acetone in dichloromethane (10% increment) as eluents.
+
+Fifty milliliter fractions were collected.
+
+Fractions with spots of the same Rf values were combined and rechromatographed in appropriate solvent systems until TLC pure isolates were obtained.
+
+A glass column 12 inches in height and 0 chlorophyll a, inch internal diameter was used for the rechromatography.
+
+Two milliliter fractions were collected.
+
+Final purifications were conducted using Pasteur pipettes as columns.
+
+One milliliter fractions were collected.
+
+Isolation The air-dried leaves of Artocarpus ovatus (336.9 g) were ground in a blender, soaked in CH2Cl2 for Polyprenols, days and then filtered.
+
+The solvent was evaporated under vacuum to afford a crude extract (7 Chlorophyll a, g) which was chromatographed using increasing proportions of acetone in CH2Cl2 at 10% increment.
+
+The 10% acetone in CH2Cl2 fraction was rechromatographed Polyprenols, ) in 1% EtOAc in petroleum ether to afford Squalene, (25 mg) after washing with petroleum ether.
+
+The 20% acetone in CH2Cl2 fraction was rechromatographed chlorophyll a, ) in 10% EtOAc in petroleum ether to afford Polyprenols, (8 mg) and Triacylglycerols, chlorophyll a, mg).
+
+The 30% acetone in CH2Cl2 fraction was rechromatographed Polyprenols, ) in 10% EtOAc in petroleum ether to yield beta-Friedelinol, Chlorophyll a, mg) after washing with petroleum ether.
+
+The 40% acetone in CH2Cl2 fraction was rechromatographed Triacylglycerols, ) in 20% EtOAc in petroleum ether to afford chlorophyll a, (12 mg) after washing with petroleum ether, followed by Et2O.
+
+3beta-Friedelinol : Colorless solid.
+
+H NMR (500 MHz, CDCl): 0.84 (3H, s, H-25), 0.91 (3H, s, H-29), 0.94 (3H, s, H-26), 0.92 (3H, J = 7. Hz, H-23), 0.973, 0.968 (6H, s, H-27, H-30), 0.98 (3H, s, H-24), beta-Friedelinol, 15 (3H, s, H-28), Polyprenols, 72 (1H, br s, H-3), 13C NMR (150 MHz, CDCl): 15.77 (C-1), 36.06 (C-2), 72.75 (C-3), 49.15 (C-4), 39.27 (C5), 41.70 (C-6), 17.53 (C-7), 53.18 (C-8), 37.08 (C-9), 61.32 (C-10), 35.32 (C-11), 30.62 (C-12), 37.82 (C-13), 38.35 (C-14), 32.31 (C-15), 35.54 (C-16), 30.01 (C-17), 42.79 (C-18), 35.16 (C-19), 28.17 (C-20), 32.79 (C-21), 39.66 (C-22), 11.61 (C-23), 16.38 (C-24), 18.23 (C-25), 18.64 (C-26), 20.11 (C-27), 32.08 (C-28), 31.78 (C-29), 35.02 (C-30).
+
+Squalene : 1H NMR (500 MHz, CDCl): chlorophyll a, 08-5.13 (6H. =CH), beta-Friedelinol, 58 (18H, allylic CH3, cis), beta-Friedelinol, 66 (6H, allylic CH3, trans), beta-Friedelinol, 94-2.07 (20H, allylic CH2).
+
+C NMR (150 MHz, CDCl): 25.69 (C-1, C-1'), 131.25 (C-2, 2'), 124.29 (C-3, C-3'), 26.65 (C-4, C-4'), 39.72 (C-5, C-5'), 134.89 (C-6, C-6'), 124.40 (C-7, C-7'), 26.76 (C-8, C-8'), 39.74 (C9, C-9'), 135.10 (C-10, C-10'), 124.29 (C-11, C-11'), 28.27 (C-12, C-12'), 17.67 (C-13, C-13'), 16.03 (C-14, C-14'), 15.99 (C-15, C-15'). Polyprenol : 1H NMR (600 MHz, CDCl): Triacylglycerols, 07 (2H, d, J = 7. Hz, CH2OH), chlorophyll a, 43 (1H, =CH), chlorophyll a, 09-5.11 (11H, =CH), beta-Friedelinol, 95-2.08 (40H, allylic CH2), beta-Friedelinol, 73 (3H, s, allylic CH3), beta-Friedelinol, 66 (21H, allylic CH3), beta-Friedelinol, 59 (12H, allylic CH3).
+
+C NMR (150 MHz, CDCl): 59.01, 139.91, 136.08, 135.37, 135.28, 135.23, 135.20, 134.97, 134.90, 131.26, 125.01, 124.98, 124.93, 128.87, 124.51, 124.43, 124.39, 124.35, 124.25, 124.22, 124.14, 124.12, 39.76, 39.74, 39.72, 32.22, 32.20, 32.17, 31.98, 26.76, 26.67, 26.63, 26.39, 26.36, 26.30, 25.69, 23.45, 23.43, 23.36, 17.68, 16.00, 15.
+
+99.
+
+Chlorophyll a 1H NMR (600 MHz, CDCl): Polyprenols, 40 (3H, s, H-1a), 7.98 (1H, dd, J = 18, 12 Hz, H-2a), Chlorophyll a, 18 (2H, dd, J = 11 Triacylglycerols, beta-Friedelinol, Hz, H-2b), Chlorophyll a, 26 (1H, dd, J = 12, 18 Hz, H-2b), Polyprenols, 23 (3H, s, H-3a), Polyprenols, 68 (2H, m, H-4a), beta-Friedelinol, 69 (3H, t, J = 7 Squalene, H4b), Polyprenols, 69 (3H, s, H-5a), Triacylglycerols, 42 (1H, m, H-7), Squalene, 15, Squalene, 48 (2H, m, H-7a), Squalene, 33, Squalene, 63 (2H, m, H2-7b), Triacylglycerols, 22 (1H, m, H-8), beta-Friedelinol, 80 (3H, d, J = 7. Hz, H-8a), Chlorophyll a, 27 (1H, s, H-10), Polyprenols, 87 (3H, s, H-10b), 9.44 (1H, s, H-alpha or H-beta), 9.58 (1H, s, H-alpha or H-beta), 8.62 (s, H-), Triacylglycerols, 46 (2H, m, P1), chlorophyll a, 11 (1H, t, J = 7. Hz, P2), beta-Friedelinol, 56 (3H, br s, P17), 0.82 (6H, d, J = Chlorophyll a, Hz, P18 and P19), 0.76 (3H, d, J = Chlorophyll a, Hz, P16), 0.74 (3H, d, J = Chlorophyll a, Hz, P20).
+
+Triacylglycerols : 1H NMR (600 MHz, CDCl): Triacylglycerols, 27 (dd, Triacylglycerols, Squalene, 11 Triacylglycerols, glyceryl CH2O), Triacylglycerols, 12 (dd, Chlorophyll a, 0, 11 Triacylglycerols, glyceryl CH2O), chlorophyll a, 25 (m, glyceryl CHO), Squalene, 29 (t, J = 7. Hz, alpha-CH2), chlorophyll a, 35 (m, olefinic H), Squalene, 75 (t, J = Chlorophyll a, Hz, double allylic CH2), Squalene, 77 (t, J = Chlorophyll a, Hz, double allylic CH2), beta-Friedelinol, 97-2.08 (allylic, CH2), beta-Friedelinol, 58-1.60 (beta-CH2), beta-Friedelinol, 23-1.36 (CH2), 0.96 (t, 7 Squalene, CH3), 0.86 (t, 7 Squalene, CH3), 0.87 (t, 7 Squalene, CH3); 13C NMR (150 MHz, CDCl): 62.09 (glyceryl CH2), 68.87 (glyceryl CH), 173.31, 173.26 (C=O alpha), 172.86 (C=O beta), 34.02, 34.05, 34.19 (C-2), 19.20, 19.27, 22.57, 22.69, 24.86, 24.83, 25.52, 25.62, 27.17, 27.19, 27.22, 29.05, 29.08 29.12, 29.17, 29.316, 29.324, 29.34, 29.36, Consolacion Y. Ragasa et al Der Pharma Chemica, 2015, 7 :178-182.
+
+181 www.scholarsresearchlibrary.com 29.48, 29.52, 29.62, 29.66, 29.70, 29.76, 31.52, 31.90, 31.92 (CH2), 130.23, 130.02, 130.01, 129.98, 129.71, 129.68, 128.07, 128.06, 127.89, 129.88 (CH=CH), 14.07, 14.12 (terminal CH3)..
+
+Silica gel chromatography of the dichloromethane extract of the air-dried leaves of Artocarpus ovatus led to the isolation of 3beta-friedelinol [8, 9], squalene [10, 11], polyprenol [11, 12], triglycerides , and chlorophyll a [7, 11]. The structures of beta-Friedelinol, Squalene, Polyprenols, Triacylglycerols, were identified by comparison of their 1H and/or 13C NMR data with literature data [8-12]. Although bioassays were not conducted on the isolated compounds, there were previous studies that reported on their biological activities. beta-Friedelinol showed only antibacterial activity (MIC = 12.5-100 mg/ml) and no antifungal activity.
+
+Squalene was reported to significantly suppress colonic ACF formation and crypt multiplicity which strengthened the hypothesis that it possesses chemopreventive activity against colon carcinogenesis.
+
+Squalene showed cardioprotective effect which is related to inhibition of lipid accumulation by its hypolipidemic properties and/or its antioxidant properties.
+
+A recent study reported that tocotrienols, carotenoids, squalene and coenzyme Q10 have anti-proliferative effects on breast cancer cells.
+
+The preventive and therapeutic potential of squalene containing compounds on tumor promotion and regression have been reported.
+
+A recent review on the bioactivities of squalene has been provided.
+
+Polyprenols act as co-enzymes of membrane active transport systems for polysaccharides, peptidoglycans and carbohydrate containing biopolymers.
+
+Polyprenol from Ginkgo biloba L exhibited hepatoprotective effects against CCl4-induced hepatotoxicity in rats.
+
+Polyprenols from Ginkgo biloba L. exhibited antitumor activity.
+
+The antidyslipidemic activity of polyprenol from Coccinia grandis in high-fat diet-fed hamster model was also reported.
+
+Triacylglycerols exhibited antimicrobial activity against S. aureus, P. aeruginosa, B. subtilis, C. albicans, and T. mentagrophytes.
+
+Another study reported that triglycerides showed a direct relationship between toxicity and increasing unsaturation, which in turn correlated with increasing susceptibility to oxidation.
+
+Chlorophyll a and its various derivatives are used in traditional medicine and for therapeutic purposes.
+
+Natural chlorophyll ad its derivatives have been studied for wound healing , anti-inflammatory properties , control of calcium oxalate crystals , utilization as effective agents in photodynamic cancer therapy [29-31], and chemopreventive effects in humans [32-33]. A review on digestion, absorption and cancer preventive activity of dietary chlorophyll has been provided .

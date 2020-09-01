@@ -767,48 +767,47 @@ public class BootstrapServlet extends HttpServlet {
 		e2 = e2.toLowerCase();
 		String entities = e1 + "+" + e2;
 		switch (entities) {
-		case "Synonym+MedicinalPlant":
-		case "":
+		case "synonym+medicinalplant":
 			category.appendChild(document.createTextNode("Common Name"));
 			break;
-		case "MedicinalPlant+PlantPart":
-		case "Synonym+PlantPart":
-		case "Preparation+PlantPart":
+		case "medicinalplant+plantpart":
+		case "synonym+plantpart":
+		case "preparation+plantpart":
 			category.appendChild(document.createTextNode("Plant Part"));
 			break;
-		case "MedicinalPlant+Location":
-		case "Synonym+Location":
+		case "medicinalplant+location":
+		case "synonym+location":
 			category.appendChild(document.createTextNode("Location"));
 			break;
 
-		case "MedicinalPlant+Compound":
-		case "Synonym+Compound":
-		case "PlantPart+Compound":
+		case "medicinalplant+compound":
+		case "synonym+compound":
+		case "plantpart+compound":
 			category.appendChild(document.createTextNode("Compound"));
 			break;
-		case "MedicinalPlant+Family":
-		case "Genus+Family":
-		case "Synonym+Family":
+		case "medicinalplant+family":
+		case "genus+family":
+		case "synonym+family":
 			category.appendChild(document.createTextNode("Family"));
 			break;
-		case "MedicinalPlant+Genus":
-		case "Synonym+Genus":
+		case "medicinalplant+genus":
+		case "synonym+genus":
 			category.appendChild(document.createTextNode("Genus"));
 			break;
-		case "MedicinalPlant+Synonym":
+		case "medicinalplant+synonym":
 			category.appendChild(document.createTextNode("Plant"));
 			break;
-		case "MedicinalPlant+Preparation":
+		case "medicinalplant+preparation":
 			category.appendChild(document.createTextNode("Preparation"));
 			break;
 		case "BioAct+CellLine":
 			category.appendChild(document.createTextNode("Cell"));
 			break;
-		case "Compound+BioAct":
+		case "compound+BioAct":
 			category.appendChild(document.createTextNode("Bio-Activity"));
 			break;
-		case "PlantPart+Illness":
-		case "Preparation+Illness":
+		case "plantpart+illness":
+		case "preparation+illness":
 			category.appendChild(document.createTextNode("Illness"));
 			break;
 
