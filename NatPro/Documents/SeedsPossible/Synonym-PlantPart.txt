@@ -1,0 +1,71 @@
+e1:Synonym
+e2:PlantPart
+
+Alstonia macrophylla;bark
+Alstonia macrophylla;leaf
+Alstonia macrophylla;plant
+Alstonia scholaris;plant
+Andrographis paniculata;leaves
+Andrographis paniculata;pods
+Andrographis paniculata;roots
+Andrographis paniculata;stems
+Artocarpus altilis;leaves
+Artocarpus camansi;leaves
+Artocarpus camansi;stems
+Artocarpus heterophyllus;unripe fruit
+Artocarpus odoratissimus;flesh of the fruit
+Artocarpus odoratissimus;fruit rind
+Artocarpus odoratissimus;seeds
+Artocarpus ovatus;leaves
+Artocarpus ovatus;twigs
+Brassica juncea;leaves
+Brassica oleracea;leaves
+Brassica oleracea;stem
+Brassica oleracea var. Italic;stem
+Brassica oleracea var capitata f. rubra;leaves
+Cycas edentata;bark
+Cycas edentata;sclerotesta
+Cycas lacrimans;bark
+Cycas lacrimans;endotesta
+Cycas lacrimans;leaflets
+Cycas lacrimans;petiole
+Cycas lacrimans;rachis
+Cycas lacrimans;roots
+Cycas lacrimans;sclerotesta
+Cycas sancti-lasallei;bark
+Cycas sancti-lasallei;endotesta
+Cycas sancti-lasallei;sarcotesta
+Cycas sancti-lasallei;sclerotesta
+Duranta erecta;flowers
+Duranta erecta;leaves
+Duranta erecta;stems
+Dysoxylum gaudichaudianum;leaves
+Dysoxylum gaudichaudianum;stem bark
+Dysoxylum mollissimum;leaves
+Eucalyptus deglupta;bark
+Eucalyptus deglupta;leaves
+Eucalyptus deglupta;twigs
+Eucalyptus deglupta;wood
+Hoya buotii;flowers
+Hoya buotii;leaves
+Hoya buotii;roots
+Hoya buotii;stems
+Hoya cagayanensis;leaves
+Hoya cagayanensis;stems
+Hoya cumingiana;leaves
+Hoya cumingiana;stems
+Hoya diversifolia;leaves
+Hoya diversifolia;stems
+Hoya meliflua;leaves
+Hoya mindorensis;leaves
+Hoya mindorensis;roots
+Hoya mindorensis;stems
+Hoya multiflora;leaves
+Hoya multiflora;stems
+Hoya paziae;leaves
+Hoya paziae;stems
+Hoya pubicalyx;leaves
+Hoya pubicalyx;stems
+Hoya wayetii;leaves
+Hoya wayetii;stems
+Raphanus sativus;roots
