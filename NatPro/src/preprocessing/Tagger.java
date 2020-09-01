@@ -78,7 +78,7 @@ public class Tagger {
             txt = new SpeciesFamilyTagger("Family", txt, familyTxtFile).run();
             txt = new OrgPartTagger("PlantPart", txt, orgPartTxtFile).run();
             txt = new CellLineTagger("CellLine", txt, clTxtFile).run();
-            txt = new CompoundClassTagger("CompoundClass", txt, compoundClassTxtFile).run();
+            txt = new CompoundClassTagger("ChemicalClass", txt, compoundClassTxtFile).run();
             txt = new BodyPartTagger("BodyPart", txt, bodyPartTxtFile).run();
             txt = new PreparationTagger("Preparation", txt, prepTxtFile).run();
             txt = new IllnessTagger("Illness", txt, illnessTxtFile).run();
