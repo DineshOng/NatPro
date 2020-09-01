@@ -28,6 +28,7 @@
 <body>
 	<!-- INCLUDE NAV BAR HTML -->
 	<%@include file="navbarnix.html"%>
+	<h1>${i}</h1>
 	<div class="jumbotron bg-success">
 		<div class="d-flex justify-content-center">
 			<h1 class="display-4 text-white text-center" id="header">Processing
@@ -256,9 +257,7 @@
         		progressBar.css("width", currPercent + "%");        		
         		i=i+0.5;
         	}else{
-                clearTimeout(timeout1);
-        		progressBar.css("width", "100%");  
-        		bootstrapProgress();
+        		progressBar.css("width", "100%");        		
         		document.getElementById("but8").classList.remove("btn-warning");
     			document.getElementById("but8").classList.add("btn-success");
     			document.getElementById("but8").innerHTML = "Ready for Bootstrapping";
@@ -266,8 +265,8 @@
     			document.getElementById("header").innerHTML = "Bootstrapping Document"+s;
                 document.getElementById("bar").classList.remove("progress-bar-animated"); 
                 document.getElementById("bar").classList.remove("progress-bar-striped");
-                
-               
+                bootstrapProgress();
+                clearTimeout(timeout1);   
         	} 
             // Wait for sometime before running this script again
             timeout1 = setTimeout("uploadProgress()", 500);
@@ -338,7 +337,7 @@
         		/* j=j+1; */
         	}else{
         		window.onbeforeunload = null; 
-                clearTimeout(timeout2);
+
         		progressBar2.css("width", "100%");     
         		document.getElementById("but88").classList.remove("btn-warning");
     			document.getElementById("but88").classList.add("btn-success");
@@ -348,6 +347,7 @@
                 document.getElementById("spinner").style.display="none";
                 document.getElementById("bar2").classList.remove("progress-bar-animated"); 
                 document.getElementById("bar2").classList.remove("progress-bar-striped"); 
+                clearTimeout(timeout2);
         	}
             timeout2 = setTimeout("bootstrapProgress()", 1000); 
         }

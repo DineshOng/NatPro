@@ -37,7 +37,7 @@
 				<div class="input-group">
 					<div class="custom-file">
 						<input type="file" class="custom-file-input" name="file-upload" id="inputGroupFile"
-							multiple accept=".txt,.pdf"/> <label class="custom-file-label"
+							multiple accept=".txt,.pdf" required/> <label class="custom-file-label"
 							for="inputGroupFile">Choose file/s</label>
 					</div>
 					<div class="input-group-append">
@@ -45,12 +45,12 @@
 					</div>
 				</div>
 			</form>
-			<div class="progress">
+<!-- 			<div class="progress">
 				<div
 					class="progress-bar progress-bar-striped progress-bar-animated bg-success"
 					role="progressbar" aria-valuenow="75" aria-valuemin="0"
 					aria-valuemax="100" style="width: 100%" hidden></div>
-			</div>
+			</div> -->
 
 			<div aria-live="polite" aria-atomic="true"
 				style="position: relative; min-height: 200px;" hidden>
