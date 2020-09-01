@@ -1,0 +1,32 @@
+e1:Synonym
+e2:Genus
+
+Alstonia macrophylla;Alstonia
+Alstonia scholaris;Alstonia
+Andrographis paniculata;Andrographis
+Artocarpus altilis;Artocarpus
+Artocarpus camansi;Artocarpus
+Artocarpus heterophyllus;Artocarpus
+Artocarpus odoratissimus;Artocarpus
+Artocarpus ovatus;Artocarpus
+Brassica juncea;Brassica
+Brassica oleracea;Brassica
+Brassica oleracea var. Italic;Brassica
+Brassica oleracea var capitata f. rubra;Brassica
+Cycas edentata;Cycas
+Cycas lacrimans;Cycas
+Cycas sancti-lasallei;Cycas
+Dysoxylum gaudichaudianum;Dysoxylum
+Dysoxylum mollissimum;Dysoxylum
+Eucalyptus deglupta;Eucalyptus
+Hoya buotii;Hoya
+Hoya cagayanensis;Hoya
+Hoya cumingiana;Hoya
+Hoya diversifolia;Hoya
+Hoya meliflua;Hoya
+Hoya mindorensis;Hoya
+Hoya multiflora;Hoya
+Hoya paziae;Hoya
+Hoya pubicalyx;Hoya
+Hoya wayetii;Hoya
+Raphanus sativus;Raphanus

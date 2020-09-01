@@ -1,5 +1,5 @@
-e1:plantpart
-e2:compound
+e1:PlantPart
+e2:Compound
 
 bark;Alstonerine
 bark;beta-Amyrin
