@@ -148,7 +148,7 @@ public class BootstrapServlet extends HttpServlet {
 				e1 = getTag(seedEntity.get(0));
 				e2 = getTag(seedEntity.get(1));
 
-				// System.out.println("Seeds retrieved: "+e1+" "+e2);
+//				 System.out.println("Seeds retrieved: "+e1+" "+e2);
 
 				ArrayList<String> seedMap1 = new ArrayList<String>();
 				ArrayList<String> seedMap2 = new ArrayList<String>();
@@ -329,7 +329,9 @@ public class BootstrapServlet extends HttpServlet {
 					}
 				}
 
-				File validationOutput = new File(validationFolder + e1 + "-" + e2 + ".xml");
+//				File validationOutput = new File(validationFolder + e1 + "-" + e2 + ".xml");
+				String hashxml = xmlFile.getName().replaceAll(".xml","");
+                File validationOutput = new File(validationFolder+hashxml+"-"+e1+"-"+e2+".xml");
 				if (validationOutput.exists()) {
 					// ====================================================================================================================
 					// For validation XML
@@ -347,7 +349,7 @@ public class BootstrapServlet extends HttpServlet {
 						 * =============================================================================
 						 * ==========================
 						 */
-						Document doc = builder.parse(validationFolder + e1 + "-" + e2 + ".xml");
+						Document doc = builder.parse(validationFolder+hashxml+"-"+ e1 + "-" + e2 + ".xml");
 						doc.getDocumentElement().normalize();
 						// System.out.println("Root element: " +
 						// doc.getDocumentElement().getNodeName());
@@ -572,7 +574,7 @@ public class BootstrapServlet extends HttpServlet {
 						Transformer transformer = transformerFactory.newTransformer();
 						DOMSource source = new DOMSource(document);
 
-						StreamResult streamResult = new StreamResult(validationFolder + e1 + "-" + e2 + ".xml");
+						StreamResult streamResult = new StreamResult(validationFolder+hashxml+"-"+e1+"-"+e2+".xml");
 						transformer.transform(source, streamResult);
 
 					} catch (Exception e) {
@@ -759,49 +761,50 @@ public class BootstrapServlet extends HttpServlet {
 		e1 = e1.toLowerCase();
 		e2 = e2.toLowerCase();
 		String entities = e1 + "+" + e2;
+		System.out.println(entities);
 		switch (entities) {
-		case "plant+aka":
+		case "Synonym+MedicinalPlant":
 		case "":
 			category.appendChild(document.createTextNode("Common Name"));
 			break;
-		case "aka+plantpart":
-		case "plant+plantpart":
-		case "prep+plantpart":
+		case "MedicinalPlant+PlantPart":
+		case "Synonym+PlantPart":
+		case "Preparation+PlantPart":
 			category.appendChild(document.createTextNode("Plant Part"));
 			break;
-		case "aka+loc":
-		case "plant+loc":
+		case "MedicinalPlant+Location":
+		case "Synonym+Location":
 			category.appendChild(document.createTextNode("Location"));
 			break;
 
-		case "aka+compound":
-		case "plant+compound":
-		case "plantpart+compound":
+		case "MedicinalPlant+Compound":
+		case "Synonym+Compound":
+		case "PlantPart+Compound":
 			category.appendChild(document.createTextNode("Compound"));
 			break;
-		case "aka+family":
-		case "genus+family":
-		case "plant+family":
+		case "MedicinalPlant+Family":
+		case "Genus+Family":
+		case "Synonym+Family":
 			category.appendChild(document.createTextNode("Family"));
 			break;
-		case "aka+genus":
-		case "plant+genus":
+		case "MedicinalPlant+Genus":
+		case "Synonym+Genus":
 			category.appendChild(document.createTextNode("Genus"));
 			break;
-		case "aka+plant":
+		case "MedicinalPlant+Synonym":
 			category.appendChild(document.createTextNode("Plant"));
 			break;
-		case "aka+prep":
+		case "MedicinalPlant+Preparation":
 			category.appendChild(document.createTextNode("Preparation"));
 			break;
-		case "bioact+cell":
+		case "BioAct+CellLine":
 			category.appendChild(document.createTextNode("Cell"));
 			break;
-		case "compound+bioact":
+		case "Compound+BioAct":
 			category.appendChild(document.createTextNode("Bio-Activity"));
 			break;
-		case "plantpart+illness":
-		case "prep+illness":
+		case "PlantPart+Illness":
+		case "Preparation+Illness":
 			category.appendChild(document.createTextNode("Illness"));
 			break;
 

@@ -53,6 +53,7 @@ public class Main {
             File[] seedList = seedFolder.listFiles();
             for(File seeds: seedList) {
 
+
                 String e1=null; String e2=null;
                 TreeSet<String> relation = new TreeSet<String>();
                 TreeSet<String> e1Name = new TreeSet<String>();
@@ -123,10 +124,11 @@ public class Main {
                 }*/
 
                 TreeSet<String> seedPattern = new TreeSet<String>();
-            /*for(String test: e1Name)
+                //System.out.println(e1Name.isEmpty());
+            for(String test: e1Name)
                 System.out.println("e1 is: "+test);
             for(String test:e2Name)
-                System.out.println("e2 is: "+test);*/
+                System.out.println("e2 is: "+test);
 
                 // POS TAGGER
                 for(String rLine: relation){
@@ -161,12 +163,14 @@ public class Main {
 
 
 
+
                 for(String seedWord: seedPattern){
+                    //System.out.println(seedWord+" is seedword");
                     try {
                         MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
                         String tagged = tagger.tagString(seedWord);
                         String temp = tagged.substring(tagged.indexOf("_")+1);
-                        //System.out.println(temp);
+                        //System.out.println("Temp: "+temp);
 
                         // initialize JWNL (this must be done before JWNL can be used)
                         JWNL.initialize(new FileInputStream("file_properties.xml"));
@@ -334,7 +338,7 @@ public class Main {
 
 
                 //matches.add(POSrelationship);//adding the POS Tagged relationship to the generated seed patterns
-                //System.out.println("WordMatches: "+ Wmatches);
+                //System.out.println("WordMatches: "+ Pmatches);
                 if(Wmatches .isEmpty() ){
                     for(String i: Vmatches){
                         for(String j: Pmatches){
@@ -472,6 +476,7 @@ public class Main {
                 }
 
 
+                //System.out.println(validation.isEmpty());
 
                 if(!validation.isEmpty()){
                     /*=======================================================================================================
@@ -609,6 +614,8 @@ public class Main {
             String class1, String class2,
             String e1, String e2,
             TreeSet<String> e1Name, TreeSet<String> e2Name){
+        e1= e1.toLowerCase();
+        e2 = e2.toLowerCase();
         //System.out.println("running Relation");
         //System.out.println(e1+": "+class1+";"+e2+": "+class2);
         if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && pLine.contains("<"+e2+">"+class2+"</"+e2+">") ){
@@ -643,9 +650,11 @@ public class Main {
             TreeSet<String> relation, String pLine,
             String e1, String e2,
             ArrayList<String> lines){
+        e1 = e1.toLowerCase();
+        e2 = e2.toLowerCase();
         TreeSet<String> List = new TreeSet<String>();
         File seedOutput = new File("seedOutput/"+e1+"-"+e2+".xml");
-        //System.out.println(e1+": "+class1+";"+e2+": "+class2);
+        //System.out.println(e1+": "+";"+e2+": ");
         if(seedOutput.exists()){
             readXML(e1,e2,List);
             //System.out.println("I am not empty");
@@ -729,48 +738,47 @@ public class Main {
         e2 = e2.toLowerCase();
         String entities = e1+"+"+e2;
         switch(entities){
-            case "plant+aka":
-            case "":
+            case "Synonym+MedicinalPlant":
                 category.appendChild(document.createTextNode("Common Name"));
                 break;
-            case "aka+plantpart":
-            case "plant+plantpart":
-            case "prep+plantpart":
+            case "MedicinalPlant+PlantPart":
+            case "Synonym+PlantPart":
+            case "Preparation+PlantPart":
                 category.appendChild(document.createTextNode("Plant Part"));
                 break;
-            case "aka+loc":
-            case "plant+loc":
+            case "MedicinalPlant+Location":
+            case "Synonym+Location":
                 category.appendChild(document.createTextNode("Location"));
                 break;
 
-            case "aka+compound":
-            case "plant+compound":
-            case "plantpart+compound":
+            case "MedicinalPlant+Compound":
+            case "Synonym+Compound":
+            case "PlantPart+Compound":
                 category.appendChild(document.createTextNode("Compound"));
                 break;
-            case "aka+family":
-            case "genus+family":
-            case "plant+family":
+            case "MedicinalPlant+Family":
+            case "Genus+Family":
+            case "Synonym+Family":
                 category.appendChild(document.createTextNode("Family"));
                 break;
-            case "aka+genus":
-            case "plant+genus":
+            case "MedicinalPlant+Genus":
+            case "Synonym+Genus":
                 category.appendChild(document.createTextNode("Genus"));
                 break;
-            case "aka+plant":
+            case "MedicinalPlant+Synonym":
                 category.appendChild(document.createTextNode("Plant"));
                 break;
-            case "aka+prep":
+            case "MedicinalPlant+Preparation":
                 category.appendChild(document.createTextNode("Preparation"));
                 break;
-            case "bioact+cell":
+            case "BioAct+CellLine":
                 category.appendChild(document.createTextNode("Cell"));
                 break;
-            case "compound+bioact":
+            case "Compound+BioAct":
                 category.appendChild(document.createTextNode("Bio-Activity"));
                 break;
-            case "plantpart+illness":
-            case "prep+illness":
+            case "PlantPart+Illness":
+            case "Preparation+Illness":
                 category.appendChild(document.createTextNode("Illness"));
                 break;
 

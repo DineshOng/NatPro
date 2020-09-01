@@ -1,5 +1,5 @@
-e1:genus
-e2:family
+e1:Genus
+e2:Family
 
 Alstonia;Apocynaceae
 Andrographis;Acanthaceae

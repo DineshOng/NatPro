@@ -1,5 +1,5 @@
-e1:compound
-e2:bioact
+e1:Compound
+e2:BioAct
 
 alpha-amyrin;analgesic
 alpha-amyrin;anti-inflammatory

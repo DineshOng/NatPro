@@ -1,5 +1,5 @@
-e1:plantpart
-e2:illness
+e1:PlantPart
+e2:Illness
 
 bark;dysentery
 bark;malaria

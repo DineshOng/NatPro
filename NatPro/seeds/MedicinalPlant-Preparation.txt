@@ -1,0 +1,97 @@
+e1:MedicinalPlant
+e2:Preparation
+
+alas cuatro;alcoholic extract exhibited significant anti-inflammatory activity in the carrageenan-induced paw edema model
+alas cuatro;decoction of entire plant is used vaginal discharge, dysentery, diarrhea, abdominal colic and muscle pains
+alas cuatro;decoction used for abscesses
+alas cuatro;infusion of leaves used as a diuretic and for dropsy
+alas cuatro;juice of leaves are soothing when applied to areas of urticaria
+alas cuatro;leaf juice used for wounds
+alas cuatro;leaves used as poultices for boils and abscesses, and the juice used for uterine discharges
+alas cuatro;leaves used for poulticing boils and abscesses; juice used for uterine discharges
+alas cuatro;methanol extract of mj showed stronger and broader spectrum of microbial activity compared to other extracts, using amikacin as the standard bacterial agent
+alas cuatro;powdered dried flowers for headaches; the assurani indians grate the tuberous seeds and drink it for intestinal parasites
+alas cuatro;root decoction used as diuretic
+amarillo;decoction of flowers used to relieve flatulence
+asoka;bark extract used for menorrhagia
+asoka;juice of flowers used as coolant against biliousness
+asoka;leaf juice, mixed with cumin seeds,, used for stomachaches
+asoka;methanolic extract showed strongest activity against both bacteria and fungi
+balaniu;ointment made from the oil used as protection against mosquito bites
+bittermelon;extracted juice is applied in areas of the skin
+buntot-pusa;aequous extract of acalypha hispida leaves suggest trypanocidal effect
+buntot-pusa;aqueous extract of acalypha hispida leaves
+buntot-pusa;decoction of leaves and flowers taken internally as laxative and diuretic for gonorrhea
+buntot-pusa;root and flower decoction is used for hemoptysis
+caimito;decoction of bark used as tonic and stimulant; used for diarrhea, dysentery, hemorrhages and treatment of gonorrhea
+caimito;decoction of leaves used for hypertension
+caimito;decoction of the bark given for dysentery
+caimito;decoction used for angina
+caimito;infusion of the bark is tonic and refreshing
+caimito;leaf decoction also used for diabetes
+caimito;leaf decoction for cancer treatment
+estrella;decoction of leaves used for asthma, bronchitis, cancer
+estrella;decoction of leaves used to wash wounds
+estrella;leaves are washed, pounded and put on painful carious teeth
+galamai-amo;leaves are pounded and the juice used as purgative
+golden shower;leaf extract study showed significant antifungal activity and suggests a potential use in infections caused by c albicans
+hilagak;alcoholic tincture of the roots used as an ecbolic (promoting labor by increasing uterine contractions
+kahoi-dalaga;decoction of leaves used as emollient
+kahoi-dalaga;decoction of roots and leaves used for affections of the chest and lung
+kahoi-dalaga;mixed and pounded, the expressed juice strained and mixed with lemon extract; taken three times daily
+kalamitmit;decoction of plant used as deobstruent, diuretic and alterative; useful for rheumatism, headaches and neuralgia
+kalamitmit;pounded leaves used as poultice for burns and scalds
+kalamitmit;powder of leaves is sniffed up
+kalamitmit;powder of root, mixed with java flour and water, applied to swellings
+kasopangil;leaves uses folkloric - leaves used in decoction or as poultice for the treatment of carbuncles
+kauad-kawaran;decoction of dried material used for nephritic-edema, urinary lithiasis and infections, hepatitis, hepatic fever among infants, cold-fever among infants, headaches, multiple furuncles
+kauad-kawaran;decoction of fresh plant used to hasten parturition
+kayumanis;decoction of roots and fruits used for cough with fever
+kilob;leaves are used as poultice, decoction or infusion for fever
+kilob;roots of pulasan  are boiled with g linearis and used for bathing feverish patients
+lagundi;leaves should be thoroughly washed and chopped into pieces and boil under low fire for about 15 minutes without cover
+loktokong;crushed leaves are applied to sprains
+mana;decoction of dried roots used for indigestion and colic
+mana;juice extracts from j multifida leaves were applied to the tongue and oral mucosa of affected children as a single application
+mana;leaf juice extract used for treatment of thrush
+mana;leaves and fruits are boiled, used internally or externally in a bath for fever
+melon-melonan;leaf juice rubbed externally for fevers
+melon-melonan;root juice is a drastic purgative
+melon-melonan;roots used for diabetes, skin swellings likes boils and furuncles
+mustasa;gastric juice, sharpens the appetite and assists in digestion
+okra;decoction of roots for headaches, varicose veins, arthritis, fevers
+okra;decoction of young fruit useful for catarrh, urinary problems
+okra;decoctions of leaves for abdominal pain
+okra;fruit decoction used as soothing demulcent remedy for throat irritations associated with coughing
+okra;infusion of roots used for syphilis
+okra;paste of seeds, mixed with milk, used for pruritic skin lesions
+oregano;boil one cup of fresh leaves in 3 cups of water for 10 to 15 minutes drink half a cup 3 times a day for common colds
+oregano;for a concentrate, juice the oregano leaves and take 1 tablespoon every hour to relieve chronic coughs, rheumatism, bronchitis, asthma, and dyspepsia
+oregano;for_insect_bites_wounds_and_stings_apply_the_leaves_as_a_poultice_directly_on_the_afflicted_area
+oregano;for sore throat, boil 2 tablespoonful of dried oregano leaves in a pint of water; take 2 hours before or after meals
+oregano;the leaves relieve painful swellings, boils, and sprains, when their poultices are applied directly to the affected area
+oregano;to prevent degenerative arthritis & for general good health drink oregano decoction daily
+pakopatoti-alog;infusion and electuary for obstructed menses and hysteria
+pakopatoti-alog;leaf infusion used as stomachic and antispasmodic
+palmera datilera ;extract of date flesh and ascorbic acid
+prutas-baguio;decoction of fruit used for asthma and biliousness
+prutas-baguio;decoction of leaf and bark mixed with the same of annona glabra as anthelmintic for flatworms and nematodes
+prutas-baguio;decoction of leaves and roots used as emmenagogue
+prutas-baguio;infusion of leaves and roots used for hysteria
+ribbon fern;juice of leaves used by the temuan tribe as shampoo to clean and treat hair
+ribbon fern;scalp ointment to improve hair growth
+salimomo ;decoction of stem-bark or whote root used for diarrhea, dysentery, frequent blood stools accompanied by tenesmus
+sapinit;root decoction used for dysentery
+sigarilyas;methanol extract of psophocarpus tetragonologus leaves exhibited bactericidal effect on pseudomonas aeruginosa
+sigarilyas;methanol extract of pt root showed no toxicity and a favorable antimicrobial activity against candida albicans
+tikas;decoction of rhizome used as diuretic
+tikas;decoction of rhizomes used in fevers, dropsy and dyspepsia
+tikas;flowers may be used for external wound bleeding - use 10 to 15 gm dried material in decoction
+tikas;rhizome material in decoction
+tikas;rica infusion of leaves used as diuretic; rhizomes used as emollient
+tsaang-gubat;drink as tea daily for general good health
+tsaang-gubat;gargle for stronger teeth and prevent cavities
+tsaang-gubat;thoroughly wash the leaves of tsaang gubat in running water chop to a desirable size and boil 1cup of chopped leaves in 2 cups of water boil inlow heat for 15 to 20 minutes and drain
+tsampakang-puti;flowers uses folkloric - infusion of flowers used as vaginal wash
+tubang-dalag;leaves mixed with coconut oil, applied to wounds
+yerba buena;when made into powder or ointment it is recommended for the treatment of insect bites

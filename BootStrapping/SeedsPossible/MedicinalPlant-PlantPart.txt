@@ -1,0 +1,19 @@
+e1:MedicinalPlant
+e2:PlantPart
+
+batino;bark
+batino;leaf
+batino;plant
+brocolli;stem
+ivory mahogany;leaves
+ivory mahogany;stem bark
+mustard;leaves
+radish;roots
+rainbow eucalyptus;bark
+rainbow eucalyptus;leaves
+rainbow eucalyptus;twigs
+rainbow eucalyptus;wood
+red cabbage;leaves
+wax plant;leaves
+green/white cabbage;leaves
+green/white cabbage;stem
