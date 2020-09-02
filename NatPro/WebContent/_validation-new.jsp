@@ -1,37 +1,49 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- Based from template.jsp -->
 
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
-	<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
-	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	
-    <title>NatPro : ${searchKey}</title>
-  </head>
-  <body>
-  	<!-- INCLUDE NAV BAR HTML -->
- 	<%@include file="navbarnix.html"%>
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Varela+Round"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+	href="DataTables/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
-    <!-- HTML CODE -->
-    <div class="jumbotron jumbotron-fluid" style="text-align:center">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
+
+<title>NatPro : ${searchKey}</title>
+</head>
+<body>
+	<!-- INCLUDE NAV BAR HTML -->
+	<%@include file="navbarnix.html"%>
+
+	<%-- 	<a href="file:///C://Users//eduar//Documents//GitHub//NatPro//NatPro//Documents//UploadedDocuments//${pdfFileName}.pdf">${pdfFileName}</a> --%>
+
+	<!-- HTML CODE -->
+	<div class="jumbotron jumbotron-fluid" style="text-align: center">
 		<div class="container">
 			<h1 class="display-4">Validation</h1>
-			<p class="lead">Validate the gathered data from the processed files here</p>
+			<p class="lead">Validate the gathered data from the processed
+				files here</p>
 		</div>
-		
+
 		<!-- TEMPLATE FOR THE TABLE -->
-			
+
 		<!--
 			<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
 				<div class="row" id="toggleCompound" value="0">
@@ -66,194 +78,217 @@
 					</div>
 				</div>
 		 -->
-		
+
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<span>*debugging only pls hide*<br></span>
-					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(0)">Compound</button>
-					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(1)">Common Plant Name</button>
-					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(2)">Illness</button>
-					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(3)">Location</button>
-					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(4)">Synonym</button>
-					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(5)">Preparation</button>
-					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(6)">Genus</button>
-					<button type="button" class="btn btn-primary btn-sm" onclick="addEntry(7)">Family</button>
+					<button type="button" class="btn btn-primary btn-sm"
+						onclick="addEntry(0)">Compound</button>
+					<button type="button" class="btn btn-primary btn-sm"
+						onclick="addEntry(1)">Common Plant Name</button>
+					<button type="button" class="btn btn-primary btn-sm"
+						onclick="addEntry(2)">Illness</button>
+					<button type="button" class="btn btn-primary btn-sm"
+						onclick="addEntry(3)">Location</button>
+					<button type="button" class="btn btn-primary btn-sm"
+						onclick="addEntry(4)">Synonym</button>
+					<button type="button" class="btn btn-primary btn-sm"
+						onclick="addEntry(5)">Preparation</button>
+					<button type="button" class="btn btn-primary btn-sm"
+						onclick="addEntry(6)">Genus</button>
+					<button type="button" class="btn btn-primary btn-sm"
+						onclick="addEntry(7)">Family</button>
 				</div>
 			</div>
-	
+
+
 			<form>
-				<h3 style="padding-top:50px; padding-bottom:20px">Compound(s)</h3>
+				<h3 style="padding-top: 50px; padding-bottom: 20px">Compound(s)</h3>
 				<div class="row" id="substituteCompound" value="1">
-					<div class="col-12">
-						empty.
-					</div>
+					<div class="col-12">empty.</div>
 				</div>
 				<div class="row" id="toggleCompound" value="0" hidden>
-					<div class="col-12" style="text-align:left">
-						<button id="ccSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(0)" value="0">Select All</button>
-						<button id="ccApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(0)">Approve Selected</button>
-						<button id="ccReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(0)">Reject Selected</button>
+					<div class="col-12" style="text-align: left">
+						<button id="ccSelect" type="button" class="btn btn-primary btn-sm"
+							onclick="selectAll(0)" value="0">Select All</button>
+						<button id="ccApprove" type="button"
+							class="btn btn-success btn-sm" onclick="approveSelected(0)">Approve
+							Selected</button>
+						<button id="ccReject" type="button" class="btn btn-danger btn-sm"
+							onclick="rejectSelected(0)">Reject Selected</button>
 					</div>
 				</div>
-				
-				<div id="CompoundGroup">
-					
-				</div>
-				
-				
-				<h3 style="padding-top:50px; padding-bottom:20px">Common Plant Name(s)</h3>
+
+				<div id="CompoundGroup"></div>
+
+
+				<h3 style="padding-top: 50px; padding-bottom: 20px">Common
+					Plant Name(s)</h3>
 				<div class="row" id="substituteCommonPlantName" value="1">
-					<div class="col-12">
-						empty.
-					</div>
+					<div class="col-12">empty.</div>
 				</div>
 				<div class="row" id="toggleCommonPlantName" value="0" hidden>
-					<div class="col-12" style="text-align:left">
-						<button id="cpnSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(1)" value="0">Select All</button>
-						<button id="cpnApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(1)">Approve Selected</button>
-						<button id="cpnReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(1)">Reject Selected</button>
+					<div class="col-12" style="text-align: left">
+						<button id="cpnSelect" type="button"
+							class="btn btn-primary btn-sm" onclick="selectAll(1)" value="0">Select
+							All</button>
+						<button id="cpnApprove" type="button"
+							class="btn btn-success btn-sm" onclick="approveSelected(1)">Approve
+							Selected</button>
+						<button id="cpnReject" type="button" class="btn btn-danger btn-sm"
+							onclick="rejectSelected(1)">Reject Selected</button>
 					</div>
 				</div>
-				
-				<div id="CommonPlantNameGroup">
-					
-				</div>
-				
-				<h3 style="padding-top:50px; padding-bottom:20px">Illness(es)</h3>
+
+				<div id="CommonPlantNameGroup"></div>
+
+				<h3 style="padding-top: 50px; padding-bottom: 20px">Illness(es)</h3>
 				<div class="row" id="substituteIllness" value="1">
-					<div class="col-12">
-						empty.
-					</div>
+					<div class="col-12">empty.</div>
 				</div>
 				<div class="row" id="toggleIllness" value="0" hidden>
-					<div class="col-12" style="text-align:left">
-						<button id="illSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(2)" value="0">Select All</button>
-						<button id="illApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(2)">Approve Selected</button>
-						<button id="illReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(2)">Reject Selected</button>
+					<div class="col-12" style="text-align: left">
+						<button id="illSelect" type="button"
+							class="btn btn-primary btn-sm" onclick="selectAll(2)" value="0">Select
+							All</button>
+						<button id="illApprove" type="button"
+							class="btn btn-success btn-sm" onclick="approveSelected(2)">Approve
+							Selected</button>
+						<button id="illReject" type="button" class="btn btn-danger btn-sm"
+							onclick="rejectSelected(2)">Reject Selected</button>
 					</div>
 				</div>
-				
-				<div id="IllnessGroup">
-					
-				</div>
-				
-				<h3 style="padding-top:50px; padding-bottom:20px">Location(s)</h3>
+
+				<div id="IllnessGroup"></div>
+
+				<h3 style="padding-top: 50px; padding-bottom: 20px">Location(s)</h3>
 				<div class="row" id="substituteLocation" value="1">
-					<div class="col-12">
-						empty.
-					</div>
+					<div class="col-12">empty.</div>
 				</div>
 				<div class="row" id="toggleLocation" value="0" hidden>
-					<div class="col-12" style="text-align:left">
-						<button id="locSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(3)" value="0">Select All</button>
-						<button id="locApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(3)">Approve Selected</button>
-						<button id="locReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(3)">Reject Selected</button>
+					<div class="col-12" style="text-align: left">
+						<button id="locSelect" type="button"
+							class="btn btn-primary btn-sm" onclick="selectAll(3)" value="0">Select
+							All</button>
+						<button id="locApprove" type="button"
+							class="btn btn-success btn-sm" onclick="approveSelected(3)">Approve
+							Selected</button>
+						<button id="locReject" type="button" class="btn btn-danger btn-sm"
+							onclick="rejectSelected(3)">Reject Selected</button>
 					</div>
 				</div>
-				
-				<div id="LocationGroup">
-					
-				</div>
-				
-				<h3 style="padding-top:50px; padding-bottom:20px">Synonyms(s)</h3>
+
+				<div id="LocationGroup"></div>
+
+				<h3 style="padding-top: 50px; padding-bottom: 20px">Synonyms(s)</h3>
 				<div class="row" id="substituteSynonym" value="1">
-					<div class="col-12">
-						empty.
-					</div>
+					<div class="col-12">empty.</div>
 				</div>
 				<div class="row" id="toggleSynonym" value="0" hidden>
-					<div class="col-12" style="text-align:left">
-						<button id="synSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(4)" value="0">Select All</button>
-						<button id="synApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(4)">Approve Selected</button>
-						<button id="synReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(4)">Reject Selected</button>
+					<div class="col-12" style="text-align: left">
+						<button id="synSelect" type="button"
+							class="btn btn-primary btn-sm" onclick="selectAll(4)" value="0">Select
+							All</button>
+						<button id="synApprove" type="button"
+							class="btn btn-success btn-sm" onclick="approveSelected(4)">Approve
+							Selected</button>
+						<button id="synReject" type="button" class="btn btn-danger btn-sm"
+							onclick="rejectSelected(4)">Reject Selected</button>
 					</div>
 				</div>
-				
-				<div id="SynonymGroup">
-					
-				</div>
-				
-				
-				<h3 style="padding-top:50px; padding-bottom:20px">Preparation(s)</h3>
+
+				<div id="SynonymGroup"></div>
+
+
+				<h3 style="padding-top: 50px; padding-bottom: 20px">Preparation(s)</h3>
 				<div class="row" id="substitutePreparation" value="1">
-					<div class="col-12">
-						empty.
-					</div>
+					<div class="col-12">empty.</div>
 				</div>
 				<div class="row" id="togglePreparation" value="0" hidden>
-					<div class="col-12" style="text-align:left">
-						<button id="prepSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(5)" value="0">Select All</button>
-						<button id="prepApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(5)">Approve Selected</button>
-						<button id="prepReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(5)">Reject Selected</button>
+					<div class="col-12" style="text-align: left">
+						<button id="prepSelect" type="button"
+							class="btn btn-primary btn-sm" onclick="selectAll(5)" value="0">Select
+							All</button>
+						<button id="prepApprove" type="button"
+							class="btn btn-success btn-sm" onclick="approveSelected(5)">Approve
+							Selected</button>
+						<button id="prepReject" type="button"
+							class="btn btn-danger btn-sm" onclick="rejectSelected(5)">Reject
+							Selected</button>
 					</div>
 				</div>
-				
-				<div id="PreparationGroup">
-					
-				</div>
-				
-				<h3 style="padding-top:50px; padding-bottom:20px">Genus</h3>
+
+				<div id="PreparationGroup"></div>
+
+				<h3 style="padding-top: 50px; padding-bottom: 20px">Genus</h3>
 				<div class="row" id="substituteGenus" value="1">
-					<div class="col-12">
-						empty.
-					</div>
+					<div class="col-12">empty.</div>
 				</div>
 				<div class="row" id="toggleGenus" value="0" hidden>
-					<div class="col-12" style="text-align:left">
-						<button id="genSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(6)" value="0">Select All</button>
-						<button id="genApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(6)">Approve Selected</button>
-						<button id="genReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(6)">Reject Selected</button>
+					<div class="col-12" style="text-align: left">
+						<button id="genSelect" type="button"
+							class="btn btn-primary btn-sm" onclick="selectAll(6)" value="0">Select
+							All</button>
+						<button id="genApprove" type="button"
+							class="btn btn-success btn-sm" onclick="approveSelected(6)">Approve
+							Selected</button>
+						<button id="genReject" type="button" class="btn btn-danger btn-sm"
+							onclick="rejectSelected(6)">Reject Selected</button>
 					</div>
 				</div>
-				
-				<div id="GenusGroup">
-					
-				</div>
-				
-				<h3 style="padding-top:50px; padding-bottom:20px">Family</h3>
+
+				<div id="GenusGroup"></div>
+
+				<h3 style="padding-top: 50px; padding-bottom: 20px">Family</h3>
 				<div class="row" id="substituteFamily" value="1">
-					<div class="col-12">
-						empty.
-					</div>
+					<div class="col-12">empty.</div>
 				</div>
 				<div class="row" id="toggleFamily" value="0" hidden>
-					<div class="col-12" style="text-align:left">
-						<button id="famSelect" type="button" class="btn btn-primary btn-sm" onclick="selectAll(7)" value="0">Select All</button>
-						<button id="famApprove" type="button" class="btn btn-success btn-sm" onclick="approveSelected(7)">Approve Selected</button>
-						<button id="famReject" type="button" class="btn btn-danger btn-sm" onclick="rejectSelected(7)">Reject Selected</button>
+					<div class="col-12" style="text-align: left">
+						<button id="famSelect" type="button"
+							class="btn btn-primary btn-sm" onclick="selectAll(7)" value="0">Select
+							All</button>
+						<button id="famApprove" type="button"
+							class="btn btn-success btn-sm" onclick="approveSelected(7)">Approve
+							Selected</button>
+						<button id="famReject" type="button" class="btn btn-danger btn-sm"
+							onclick="rejectSelected(7)">Reject Selected</button>
 					</div>
 				</div>
-				
-				<div id="FamilyGroup">
-					
-				</div>
-				
+
+				<div id="FamilyGroup"></div>
+
 			</form>
-			
-			
+
+
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" hidden="true">
-			  Document Modal Tester
-			</button>
-			
+			<button type="button" class="btn btn-primary" data-toggle="modal"
+				data-target="#exampleModal" hidden="true">Document Modal
+				Tester</button>
+
 			<!-- Modal -->
-			<div class="modal fade" id="documentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal fade" id="documentModal" tabindex="-1"
+				aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-scrollable modal-lg">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Document</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
 						<div class="modal-body">
 							<div class="embed-responsive embed-responsive-16by9">
-								<iframe id="documentIframe" class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+								<iframe id="documentIframe" class="embed-responsive-item"
+									src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+									allowfullscreen></iframe>
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
@@ -262,12 +297,12 @@
 
 		</div>
 	</div>
-	
-    
-    <!-- INCLUDE FOOTER HTML -->
-    <%@include file="_includeFooter.html" %>
-       
-    <script>
+
+
+	<!-- INCLUDE FOOTER HTML -->
+	<%@include file="_includeFooter.html"%>
+
+	<script>
     	/* -- GLOBAL VARIABLES -- */
     	
     	//values for the counter
@@ -861,9 +896,8 @@
 	    	
 	    }
 	    
-	    function addEntry(tValue) {
+	    function addEntry(tValue, docu, val1, val2) {
     		console.log('addEntry(' + tValue + ')');
-	    	
 	    	// finding which category should the entry be in
 	    	switch(tValue) {
 	    	case 0:
@@ -878,6 +912,19 @@
 	    		var namePlant 			= 'ccPlant';
 	    		var nameRelation 		= 'ccRelation';
 	    		var nameRelationObject	= 'ccRelationObject';
+	    		
+	    		var selectPlant = '<div class="col-2" id="'+ entryCategory +'Plant'+ entryNum +'">' +
+				'<select class="custom-select mr-sm-2" id="'+ entryCategory +'selectPlant'+ entryNum +'">'+
+		      '</select>'+
+		      '</div>'; 
+		      var selectPlantPart = '<div class="col-1" id="'+ entryCategory +'PlantPart'+ entryNum +'">' +
+				'<select class="custom-select mr-sm-2" id="'+ entryCategory +'selectPart'+ entryNum +'">'+
+		      '</select>'+
+		      '</div>'; 
+		      
+		      var options = selectPlant + selectPlantPart;
+		      
+		      var relation = "contains";
 	    		break;
 	    	case 1:
 	    		cpnCtr++;
@@ -917,6 +964,13 @@
 	    		var namePlant 			= 'locPlant';
 	    		var nameRelation 		= 'locRelation';
 	    		var nameRelationObject 	= 'locRelationObject';
+	    		
+	    		var selectPlant = '<div class="col-2" id="'+ entryCategory +'Plant'+ entryNum +'">' +
+				'<select class="custom-select mr-sm-2" id="'+ entryCategory +'selectPlant'+ entryNum +'">'+
+		      '</select>'+
+		      '</div>'; 
+		      var options = selectPlant;
+		      var relation = "located in";
 	    		break;
 	    	case 4:
 	    		synCtr++;
@@ -976,25 +1030,26 @@
 	    	
 			var entryDocument 			= '<div class="col-2" style="text-align:left">' +
 											  '<input class="form-check-input" type="checkbox" id="'+ nameLabel + entryNum +'" name="'+ entryCategory +'" value="'+ entryNum +'" onchange="changeSelect('+ tValue +')">' +
-											  '<label class="form-check-label" for="'+ nameLabel + entryNum +'">Document</label>' +
+											  '<label class="form-check-label" for="'+ nameLabel + entryNum +'">docu</label>' +
 										  '</div>';
 										  
+ 			
 			//'plant' is a PLACEHOLDER; should be retrieved from backend							  
 			var entryPlant 				= '<div class="col-3" id="'+ entryCategory +'Plant'+ entryNum +'">' +
-											  'plant' +
+											 val1+
 										  '</div>';
 			
 			//'relation' is a PLACEHOLDER; should be retrieved from backend							  
 			var entryRelation 			= '<div class="col-2" id="'+ entryCategory +'Relation'+ entryNum +'">' +
-											  'relation' +
+											  relation +
 										  '</div>';
 										  
 			//'object' is a PLACEHOLDER; should be retrieved from backend							  
-			var entryRelationObject 	= '<div class="col-3" id="'+ entryCategory +'RelationObject'+ entryNum +'">' +
-											  'object' +
+			var entryRelationObject 	= '<div class="col-2" id="'+ entryCategory +'RelationObject'+ entryNum +'">' +
+											  val2 +
 										  '</div>';
 	    	
-			var entryCommands 			= '<div class="col-2" style="text-align:right">' +
+			var entryCommands 			= '<div class="col-3" style="text-align:right">' +
 											  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
 											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +')" data-toggle="" data-placement="top" title="view entry" data-target="#documentModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
 											  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"class="btn btn-primary" data-target="#exampleModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
@@ -1003,22 +1058,29 @@
 	    	
     		var entryContainerClosing	= '</div>';
     		
-    		var combinedEntry = entryContainerOpening + entryDocument + entryPlant + entryRelation + entryRelationObject + entryCommands + entryContainerClosing;
+    		var combinedEntry = entryContainerOpening + entryDocument +  options+ entryRelation + entryRelationObject + entryCommands + entryContainerClosing;
     		
     		$('#' + nameGroup).append(combinedEntry);
     		
     		checkItems();
 	    }
     </script>
-    
-    
-    
-	<script type="text/javascript" src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    
-    <script type="text/javascript">
+
+
+
+	<script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();
 	        //$('.hid').css('display', 'none');
@@ -1070,6 +1132,81 @@
 		$("#search").val('${searchKey}');
 		ddfunc(${searchCategory});
 	</script>
-    
-  </body>
+
+	<c:forEach items="${Validations}" var="Validations">
+		<%-- 		<c:if test="${not empty Validations.getSynonyms()}">
+			<c:forEach items="${Validations.getSynonyms()}" var="SynonymsList">
+				<script type="text/javascript">
+				  console.log("${SynonymsList}");
+			</script>
+				<c:set var="count" value="0" scope="page" />
+				<c:forEach items="${Validations.getCompounds()}" var="CompoundList">
+					<script type="text/javascript">
+					/* <div class="col-3" id="ccPlant0">hello there</div> */
+				  addEntry(0, "${Validations.getPdfFileName()}", "${SynonymsList}", "${CompoundList}");
+				  document.getElementById("ccPlant${count}").innerHTML = "hello";
+			</script>
+					<c:set var="count" value="${count + 1}" scope="page" />
+				</c:forEach>
+			</c:forEach>
+		</c:if>
+		<c:if test="${empty Validations.getSynonyms()}">
+			<c:forEach items="${Validations.getCompounds()}" var="CompoundList">
+				<script type="text/javascript">
+				  addEntry(0, "${Validations.getPdfFileName()}", "plant", "${CompoundList}");
+			</script>
+			</c:forEach>
+		</c:if> --%>
+
+		<c:set var="count" value="0" scope="page" />
+		<c:forEach items="${Validations.getCompounds()}" var="CompoundList">
+			<script type="text/javascript">
+				  addEntry(0, "${Validations.getPdfFileName()}", "smth", "${CompoundList}");  
+			</script>
+
+			<c:if test="${not empty Validations.getSynonyms()}">
+				<c:forEach items="${Validations.getSynonyms()}" var="SynonymsList">
+					<script type="text/javascript">
+						  var x = document.getElementById("ccselectPlant${count}");
+						  var option = document.createElement("option");
+						  option.text = "${SynonymsList}";
+						  x.appendChild(option);	  
+					</script>
+				</c:forEach>
+			</c:if>
+
+			<c:if test="${not empty Validations.getPlantParts()}">
+				<c:forEach items="${Validations.getPlantParts()}"
+					var="PlantPartsList">
+					<script type="text/javascript">
+						  var x = document.getElementById("ccselectPart${count}");
+						  var option = document.createElement("option");
+						  option.text = "${PlantPartsList}";
+						  x.appendChild(option);	  
+					</script>
+				</c:forEach>
+			</c:if>
+			<c:set var="count" value="${count + 1}" scope="page" />
+		</c:forEach>
+
+		<c:set var="count" value="0" scope="page" />
+		<c:forEach items="${Validations.getLocation()}" var="CompoundList">
+			<script type="text/javascript">
+				  addEntry(3, "${Validations.getPdfFileName()}", "smth", "${CompoundList}");  
+			</script>
+
+			<c:if test="${not empty Validations.getSynonyms()}">
+				<c:forEach items="${Validations.getSynonyms()}" var="SynonymsList">
+					<script type="text/javascript">
+						  var x = document.getElementById("locselectPlant${count}");
+						  var option = document.createElement("option");
+						  option.text = "${SynonymsList}";
+						  x.appendChild(option);	  
+					</script>
+				</c:forEach>
+			</c:if>
+			<c:set var="count" value="${count + 1}" scope="page" />
+		</c:forEach>
+	</c:forEach>
+</body>
 </html>

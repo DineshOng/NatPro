@@ -8,8 +8,11 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.TreeSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,6 +31,7 @@ import org.w3c.dom.NodeList;
 import com.flickr4java.flickr.FlickrException;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import model.Validation;
 import service.OntoQuery;
 
 /**
@@ -87,29 +91,69 @@ public class ValidationServlet extends HttpServlet {
 		File Folder = new File(validationFolder);
 		File[] listFiles = Folder.listFiles();
 		Reader fileReader = null;
-		ArrayList<String> lines = new ArrayList<String>();
+		String pdfFileName = null;
+		HashSet<Validation> validations = new HashSet<Validation>();
 		for (File xmlFile : listFiles) {
+			ArrayList<String> lines = new ArrayList<String>();
 			System.out.println(xmlFile.getAbsolutePath());
+			pdfFileName = getPdfFileName(xmlFile) + ".pdf";
+//			System.out.println(pdfFileName);
+			request.setAttribute("pdfFileName", pdfFileName);
+
+			Validation xmlValidation = new Validation(pdfFileName);
+			xmlValidation = findIfPresent(xmlValidation, validations);
+
 			String xmlString = readFile(xmlFile, fileReader).toString();
 			String[] xmlLine = xmlString.split("\\r?\\n");
 			Collections.addAll(lines, xmlLine);
-//			System.out.println(lines);
-			
+			System.out.println(lines);
+
 			TreeSet<String> CategoryList = new TreeSet<String>();
-			readXML(CategoryList, xmlFile);
-			System.out.println(CategoryList);
-			
+			readXML(xmlValidation, xmlFile, "Tag1");
+			readXML(xmlValidation, xmlFile, "Tag2");
+//			System.out.println(CategoryList);
+
 //			for (String pLine : lines) {
 //				pLine = pLine.toLowerCase();
 //				 System.out.println(pLine+"/n");
 //
 //			}
+//			xmlValidation.addSynonyms("hello there");
+			validations.add(xmlValidation);
 		}
-		
+
+		Validation xmlValidation2 = new Validation(pdfFileName+"2");
+	
+		xmlValidation2 = findIfPresent(xmlValidation2,validations);
+		xmlValidation2.addCompounds("hellohello");
+		xmlValidation2.addCompounds("hihi");
+		xmlValidation2.addCompounds("hello2hello2");
+		xmlValidation2.addCompounds("hellohello");
+		validations.add(xmlValidation2);
+
+//		for (Validation temp : validations) {
+//			System.out.println(temp.getPdfFileName());
+//			for (String mp : temp.getCompounds()) {
+//				System.out.println(mp);
+//			}
+//		}
+//		System.out.println("HERE:"+validations.iterator().next().getSynonyms().iterator().next().toString());
+		request.setAttribute("Validations", validations);
 		request.getRequestDispatcher("_validation-new.jsp").forward(request, response);
 
 	}
-	
+
+	Validation findIfPresent(Validation curValidation, HashSet<Validation> validations) {
+		if (validations.contains(curValidation)) {
+			for (Validation v : validations) {
+				if (v.equals(curValidation))
+					return v;
+			}
+		}
+
+		return curValidation;
+	}
+
 	public StringBuilder readFile(File xmlFile, Reader fileReader) {
 		try {
 
@@ -135,8 +179,19 @@ public class ValidationServlet extends HttpServlet {
 		}
 		return (sb);
 	}
-	
-	public void readXML(String tag, TreeSet<String> matches, File xmlFile) {
+
+	public String getPdfFileName(File xmlFile) {
+		String pdfFileName = null;
+		Pattern pattern = Pattern.compile("^([A-Z]*)\\w+");
+		Matcher matcher = pattern.matcher(xmlFile.getName());
+		if (matcher.find()) {
+			pdfFileName = matcher.group();
+		}
+		return pdfFileName;
+
+	}
+
+	public void readXML(Validation validation, File xmlFile, String tag) {
 		// CHECKS IF THE GENERATED XML FILE EXISTS
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		try {
@@ -152,7 +207,7 @@ public class ValidationServlet extends HttpServlet {
 			 * ==========================
 			 */
 			Document doc = builder.parse(xmlFile.getAbsoluteFile());
-			
+
 			doc.getDocumentElement().normalize();
 			// System.out.println("Root element: " +
 			// doc.getDocumentElement().getNodeName());
@@ -162,13 +217,77 @@ public class ValidationServlet extends HttpServlet {
 				// System.out.println("Node Name: " + nNode.getNodeName());
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 					// System.out.println("I am here");
-					
 					Element eElement = (Element) nNode;
 					int eCount = eElement.getElementsByTagName(tag).getLength();
-					
 					for (int j = 0; j < eCount; j++) {
 						// System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
-						matches.add(eElement.getElementsByTagName(tag).item(j).getTextContent());
+//						System.out.println(eElement.getElementsByTagName("Tag1").item(0).getTextContent());
+						String tag1 = eElement.getElementsByTagName(tag).item(j).getTextContent();
+						Element nameElement = (Element) eElement.getElementsByTagName(tag).item(j);
+						if (tag1.contains("plantpart")) {
+							System.out.println("plantpart");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addPlantParts(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("bioact")) {
+							System.out.println("bioact");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addBioActs(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("compound")) {
+							System.out.println("compound");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addCompounds(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("synonym")) {
+							System.out.println("synonym");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addSynonyms(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("medicinalplant")) {
+							System.out.println("medicinalplant");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addMedicinalPlants(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("genus")) {
+							System.out.println("genus");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addGenus(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("family")) {
+							System.out.println("family");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addFamily(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("preparation")) {
+							System.out.println("preparation");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addPreparation(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("illness")) {
+							System.out.println("illness");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addIllness(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						}
+						else if (tag1.contains("location")) {
+							System.out.println("location");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addLocation(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						}
+
+//						matches.add(eElement.getElementsByTagName("Tag1").item(j).getTextContent());
 					}
 
 				}
