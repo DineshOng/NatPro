@@ -862,10 +862,18 @@
 	    function editEntry(tValue,cValue) {
 	    	console.log(tValue + ', ' + cValue);
 	    	    	
-	    	
+
 	    	// finding a specific category using the tValue
 	    	switch (tValue) {
 	    	case 0:
+		    	var name = 'ccRelationObjectName'+cValue;
+		    	var name2 = 'ccRelationObjectEdit'+cValue;
+			 	document.getElementById(name).style.display="none"; 
+			 	console.log(document.getElementById(name).innerHTML); 
+	    		document.getElementById(name2).value = document.getElementById(name).innerHTML;
+	    		document.getElementById(name2).style.display="block"; 
+	    		/*var element = document.getElementById("fname1");
+	    	    element.parentNode.removeChild(element);  */
 	    		break;
 	    	case 1:
 	    		break;
@@ -891,7 +899,6 @@
 	    
 	    function addEntry(tValue, docu, docunum, val2) {
     		console.log('addEntry(' + tValue + ')');
-    		console.log(docunum)
     		var pdfFile = "'"+docu+"'";
 	    	// finding which category should the entry be in
 	    	switch(tValue) {
@@ -1040,9 +1047,9 @@
 										  '</div>';
 										  
 			//'object' is a PLACEHOLDER; should be retrieved from backend							  
-			var entryRelationObject 	= '<div class="col-2" id="'+ entryCategory +'RelationObject'+ entryNum +'">' +
-											  val2 +
-										  '</div>';
+			var entryRelationObject 	= '<div class="col-2" id="'+ entryCategory +'RelationObject'+ entryNum +'" style="display:block;">' +
+											  '<p id="'+ entryCategory +'RelationObjectName'+ entryNum +'">'+val2 +'</p>'+
+										  '<input type="text" id="'+ entryCategory +'RelationObjectEdit'+ entryNum +'" name="object" style="display: none"></div>';
 	    	
 			var entryCommands 			= '<div class="col-3" style="text-align:right">' +
 											  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
