@@ -78,7 +78,7 @@
 					</div>
 				</div>
 		 -->
-
+		<a href="file:///SERVER/directory/file.ext">file.ext</a>
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -270,7 +270,7 @@
 			<!-- Modal -->
 			<div class="modal fade" id="documentModal" tabindex="-1"
 				aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-scrollable modal-lg">
+				<div class="modal-dialog modal-xl modal-dialog-scrollable">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Document</h5>
@@ -809,11 +809,11 @@
 	    	
 	    }
 	    
-	    function viewEntry(tValue,cValue) {
+	    function viewEntry(tValue,cValue,docu) {
 	    	console.log(tValue + ', ' + cValue);
 	    	
 	    	var entry;
-	    	var entryDocument;
+	    	var entryDocument = "\\NatPro\\Documents\\UploadedDocuments\\"+docu;
 	    	var modalIframe = document.getElementById('documentIframe');
 	    	
 	    	// finding a specific category using the tValue
@@ -821,35 +821,27 @@
 	    	switch (tValue) {
 	    	case 0:
 	    		entry = document.getElementById('CompoundLabel' + cValue);
-	    		entryDocument = entry.src;
 	    		break;
 	    	case 1:
 	    		entry = document.getElementById('CommonPlantNameLabel' + cValue);
-	    		entryDocument = entry.src;
 	    		break;
 	    	case 2:
 	    		entry = document.getElementById('IllnessLabel' + cValue);
-	    		entryDocument = entry.src;
 	    		break;
 	    	case 3:
 	    		entry = document.getElementById('LocationLabel' + cValue);
-	    		entryDocument = entry.src;
 	    		break;
 	    	case 4:
 	    		entry = document.getElementById('SynonymLabel' + cValue);
-	    		entryDocument = entry.src;
 	    		break;
 	    	case 5:
 	    		entry = document.getElementById('PreparationLabel' + cValue);
-	    		entryDocument = entry.src;
 	    		break;
 	    	case 6:
 	    		entry = document.getElementById('GenusLabel' + cValue);
-	    		entryDocument = entry.src;
 	    		break;
 	    	case 7:
 	    		entry = document.getElementById('FamilyLabel' + cValue);
-	    		entryDocument = entry.src;
 	    		break;
 	    	}
 	    	
@@ -857,7 +849,8 @@
 	    		code to view the specific entry using tValue and cValue	    		
 	    	*/
 	    	
-	    	if (entryDocument == null) {
+	    	if (entryDocument != null) {
+	    		console.log(entryDocument);
 	    		modalIframe.src = entryDocument;
 	    	} else {
 	    		modalIframe.src = 'https://www.youtube.com/embed/ZKYEQXN_nk0';
@@ -896,8 +889,10 @@
 	    	
 	    }
 	    
-	    function addEntry(tValue, docu, val1, val2) {
+	    function addEntry(tValue, docu, docunum, val2) {
     		console.log('addEntry(' + tValue + ')');
+    		console.log(docunum)
+    		var pdfFile = "'"+docu+"'";
 	    	// finding which category should the entry be in
 	    	switch(tValue) {
 	    	case 0:
@@ -1030,14 +1025,14 @@
 	    	
 			var entryDocument 			= '<div class="col-2" style="text-align:left">' +
 											  '<input class="form-check-input" type="checkbox" id="'+ nameLabel + entryNum +'" name="'+ entryCategory +'" value="'+ entryNum +'" onchange="changeSelect('+ tValue +')">' +
-											  '<label class="form-check-label" for="'+ nameLabel + entryNum +'">docu</label>' +
+											  '<label class="form-check-label" for="'+ nameLabel + entryNum +'">Document'+docunum+'</label>' +
 										  '</div>';
 										  
  			
-			//'plant' is a PLACEHOLDER; should be retrieved from backend							  
+/* 			//'plant' is a PLACEHOLDER; should be retrieved from backend							  
 			var entryPlant 				= '<div class="col-3" id="'+ entryCategory +'Plant'+ entryNum +'">' +
 											 val1+
-										  '</div>';
+										  '</div>'; */
 			
 			//'relation' is a PLACEHOLDER; should be retrieved from backend							  
 			var entryRelation 			= '<div class="col-2" id="'+ entryCategory +'Relation'+ entryNum +'">' +
@@ -1051,7 +1046,7 @@
 	    	
 			var entryCommands 			= '<div class="col-3" style="text-align:right">' +
 											  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +')" data-toggle="" data-placement="top" title="view entry" data-target="#documentModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
+											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +','+pdfFile +')" data-toggle="" data-placement="top" title="view entry" data-target="#documentModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
 											  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"class="btn btn-primary" data-target="#exampleModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
 											  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
 										  '</div>';
@@ -1133,35 +1128,12 @@
 		ddfunc(${searchCategory});
 	</script>
 
+	<c:set var="docunum" value="1" scope="page" />
 	<c:forEach items="${Validations}" var="Validations">
-		<%-- 		<c:if test="${not empty Validations.getSynonyms()}">
-			<c:forEach items="${Validations.getSynonyms()}" var="SynonymsList">
-				<script type="text/javascript">
-				  console.log("${SynonymsList}");
-			</script>
-				<c:set var="count" value="0" scope="page" />
-				<c:forEach items="${Validations.getCompounds()}" var="CompoundList">
-					<script type="text/javascript">
-					/* <div class="col-3" id="ccPlant0">hello there</div> */
-				  addEntry(0, "${Validations.getPdfFileName()}", "${SynonymsList}", "${CompoundList}");
-				  document.getElementById("ccPlant${count}").innerHTML = "hello";
-			</script>
-					<c:set var="count" value="${count + 1}" scope="page" />
-				</c:forEach>
-			</c:forEach>
-		</c:if>
-		<c:if test="${empty Validations.getSynonyms()}">
-			<c:forEach items="${Validations.getCompounds()}" var="CompoundList">
-				<script type="text/javascript">
-				  addEntry(0, "${Validations.getPdfFileName()}", "plant", "${CompoundList}");
-			</script>
-			</c:forEach>
-		</c:if> --%>
-
 		<c:set var="count" value="0" scope="page" />
 		<c:forEach items="${Validations.getCompounds()}" var="CompoundList">
 			<script type="text/javascript">
-				  addEntry(0, "${Validations.getPdfFileName()}", "smth", "${CompoundList}");  
+				  addEntry(0, "${Validations.getPdfFileName()}", "${docunum}", "${CompoundList}");  
 			</script>
 
 			<c:if test="${not empty Validations.getSynonyms()}">
@@ -1207,6 +1179,8 @@
 			</c:if>
 			<c:set var="count" value="${count + 1}" scope="page" />
 		</c:forEach>
+
+		<c:set var="docunum" value="${docunum + 1}" scope="page" />
 	</c:forEach>
 </body>
 </html>
