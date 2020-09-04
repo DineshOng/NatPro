@@ -1052,10 +1052,15 @@
 										  '<input type="text" id="'+ entryCategory +'RelationObjectEdit'+ entryNum +'" name="object" style="display: none"></div>';
 	    	
 			var entryCommands 			= '<div class="col-3" style="text-align:right">' +
-											  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +','+pdfFile +')" data-toggle="" data-placement="top" title="view entry" data-target="#documentModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"class="btn btn-primary" data-target="#exampleModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
+											  '<div id="entryCommands'+ tValue + '-' + entryNum +'">' +
+												  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
+												  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +','+pdfFile +')" data-toggle="" data-placement="top" title="view entry" data-target="#documentModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
+												  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"class="btn btn-primary" data-target="#exampleModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
+												  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
+											  '</div>'+
+											  '<div id="entryCommandsEdit'+ tValue + '-' + entryNum +'" style="text-align:right" hidden>'+
+												  '<button type="button" class="btn btn-success btn-sm" onclick="confirmEntry('+ tValue +','+ entryNum +')">ConfirmEntry</button>'+
+											  '</div>'+
 										  '</div>';
 	    	
     		var entryContainerClosing	= '</div>';
