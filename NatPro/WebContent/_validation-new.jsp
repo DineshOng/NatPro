@@ -861,6 +861,9 @@
 	    
 	    function editEntry(tValue,cValue) {
 	    	console.log(tValue + ', ' + cValue);
+	    	
+	    	var commands = document.getElementById('entryCommands' + tValue + '-' + cValue); //4-buttons
+	    	var commandsEdit = document.getElementById('entryCommandsEdit' + tValue + '-' + cValue); //1-buttons
 	    	    	
 
 	    	// finding a specific category using the tValue
@@ -894,7 +897,21 @@
 	    	/*
 	    		code to edit the specific entry using tValue and cValue
 	    	*/
+	    	//switch 4-button commands to 1-button command so that the user will remember to confirm edit
+	    	commands.hidden = true;
+	    	commandsEdit.hidden = false;
 	    	
+	    }
+	    
+	    function confirmEdit(tValue, cValue) {
+	    	//TODO: CODE INCOMPLETE, ADD CONFIRM EDIT CODE
+	    	
+	    	var commands = document.getElementById('entryCommands' + tValue + '-' + cValue); //4-buttons
+	    	var commandsEdit = document.getElementById('entryCommandsEdit' + tValue + '-' + cValue); //1-buttons
+	    	
+	    	//switch 4-button commands to 1-button command so that the user will remember to confirm edit
+	    	commands.hidden = false;
+	    	commandsEdit.hidden = true;
 	    }
 	    
 	    function addEntry(tValue, docu, docunum, val2) {
@@ -1059,7 +1076,7 @@
 												  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
 											  '</div>'+
 											  '<div id="entryCommandsEdit'+ tValue + '-' + entryNum +'" style="text-align:right" hidden>'+
-												  '<button type="button" class="btn btn-success btn-sm" onclick="confirmEntry('+ tValue +','+ entryNum +')">ConfirmEntry</button>'+
+												  '<button type="button" class="btn btn-success btn-sm" onclick="confirmEdit('+ tValue +','+ entryNum +')">Confirm Edit</button>'+
 											  '</div>'+
 										  '</div>';
 	    	
