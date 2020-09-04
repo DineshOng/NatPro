@@ -25,12 +25,11 @@ public class EntityTagger {
 	}
 	
 	public EntityTagger hideTaggedEntities() {
-		//Pattern pattern = Pattern.compile("<([a-z]+)>([0-9a-zA-Z\\s.-]+)<\\/[a-z]+>"); //<([a-z]+)>([^<]+)<\\/[a-z]+>
-		Pattern pattern = Pattern.compile("<(\\w+)>([^<]+)<\\/\\w+>");
+		Pattern pattern = Pattern.compile("<([a-z]+)>([a-zA-Z\\s.-]+)<\\/[a-z]+>");
 		Matcher matcher = pattern.matcher(text);
 		idx = 0;
 		while(matcher.find()) {
-        	prev_ent.put(matcher.group(1) + "@#@" + idx, matcher.group(2));
+        	prev_ent.put(matcher.group(1) + " " + idx, matcher.group(2));
         	text = text.replaceAll(matcher.group(), "<<" + matcher.group(1) + "@" + idx + ">>");
         	//text = text.replaceAll(matcher.group(), "hi");
         	idx++;
@@ -47,7 +46,7 @@ public class EntityTagger {
 			//prev_ent.add(tag_name + " " + e + " " + idx);
 			e = e.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
             e = e.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
-			prev_ent.put(tag + "@#@" + idx, e);
+			prev_ent.put(tag + " " + idx, e);
 			text = text.replaceAll(e, "<<" + tag + "@" + idx + ">>");
 			idx++;
         }
@@ -63,7 +62,7 @@ public class EntityTagger {
 			//prev_ent.add(tag_name + " " + e + " " + idx);
 			e = e.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
             e = e.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
-			prev_ent.put(tag + "@#@" + idx, e.toLowerCase());
+			prev_ent.put(tag + " " + idx, e.toLowerCase());
 			text = text.replaceAll("(?i)"+e, "<<" + tag + "@" + idx + ">>");
 			idx++;
         }
@@ -79,7 +78,7 @@ public class EntityTagger {
 	
 	public EntityTagger resolveHiddenEntities() {
 		for (String e : prev_ent.keySet()) {
-            String []tag = e.split("@#@");
+            String []tag = e.split(" ");
             text = text.replaceAll("<<"+ tag[0] + "@" + tag[1] + ">>", "<"+tag[0]+">"+prev_ent.get(e)+"</"+tag[0]+">");
         }
 		
