@@ -9,6 +9,7 @@
  cinnamate
 cinnamate
  benzoate
+ oxindole
  acetate
 phylline
 hydrazyl
@@ -43,6 +44,7 @@ none
 side
 lide
 erol
+onal
 ytyl
 tate
 late
