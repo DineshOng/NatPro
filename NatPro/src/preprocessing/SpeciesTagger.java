@@ -9,10 +9,10 @@ import java.util.regex.Pattern;
 public class SpeciesTagger extends LookUpEntityTagger {
 	private Set<String> commonWords;
 	
-	public SpeciesTagger(String tag, String text, String filename, String googleTenKTxtFile) throws IOException {
+	public SpeciesTagger(String tag, String text, String filename, String filename2) throws IOException {
 		super(tag, text, filename);
 		
-		commonWords = new ReadLexiconFile(googleTenKTxtFile).getContentsInHash();
+		commonWords = new ReadLexiconFile(filename2).getContentsInHash();
 	}
 	
 	public String run() throws IOException {
