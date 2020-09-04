@@ -8,10 +8,10 @@ import java.security.DigestInputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class GenUniqueDocID2 {
+public class GenUniqueDocID {
     private String id = "";
 
-    public GenUniqueDocID2(InputStream filename) throws IOException, NoSuchAlgorithmException {
+    public GenUniqueDocID(InputStream filename) throws IOException, NoSuchAlgorithmException {
         System.out.println("Generating Unique Doc ID...");
         long startTime, endTime;
         startTime = System.nanoTime ();

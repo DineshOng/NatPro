@@ -10,7 +10,7 @@ import org.apache.commons.io.FileUtils;
 //
 //import org.xml.sax.SAXException;
 import preprocessing.Tagger;
-import service.GenUniqueDocID2;
+import service.GenUniqueDocID;
 import service.SaveFile;
 
 import java.io.Reader;
@@ -78,7 +78,7 @@ public class UploadServlet extends HttpServlet {
 			// OutputStream outStream;
 			
 	        try {
-				String uniqueID = new GenUniqueDocID2(fileContent).getUniqueID();
+				String uniqueID = new GenUniqueDocID(fileContent).getUniqueID();
 
 				endGenDocIdTime = System.nanoTime();
 				request.setAttribute("genDocIdDuration", (double) (endGenDocIdTime-startTime) / 1000000);

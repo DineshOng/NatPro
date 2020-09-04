@@ -20,26 +20,32 @@ public class FlickrService {
 		String apikey = "091207bccef6c4eb9697af2c1d7494f1";
 		String secret = "8fc03d3f7b19f731";
 		
-		Flickr flickr = new Flickr(apikey, secret, new REST());
-
-	    // Set the wanted search parameters (I'm not using real variables in the example)
-	    SearchParameters searchParameters = new SearchParameters();
-	    searchParameters.setText(q + " plant");
-	    searchParameters.setSafeSearch("1");
-	    searchParameters.setLicense("0");
-	    //searchParameters.setSort(SearchParameters.INTERESTINGNESS_DESC);
-	    searchParameters.setSort(SearchParameters.RELEVANCE);
-	    
-	    PhotoList<Photo> list = flickr.getPhotosInterface().search(searchParameters, 0, 0);
-	    
-	    PhotoURL = new ArrayList<String>();
-	    
-	    for(Photo photo: list) {
-	    	//System.out.println(photo.getMediumUrl());
-	    	PhotoURL.add(photo.getMediumUrl());
-	    }
+		PhotoURL = new ArrayList<String>();
 		
-	    System.err.println(PhotoURL.size());
+		try {
+			Flickr flickr = new Flickr(apikey, secret, new REST());
+	
+		    // Set the wanted search parameters (I'm not using real variables in the example)
+		    SearchParameters searchParameters = new SearchParameters();
+		    searchParameters.setText(q + " plant");
+		    searchParameters.setSafeSearch("1");
+		    searchParameters.setLicense("0");
+		    //searchParameters.setSort(SearchParameters.INTERESTINGNESS_DESC);
+		    searchParameters.setSort(SearchParameters.RELEVANCE);
+		    
+		    PhotoList<Photo> list = flickr.getPhotosInterface().search(searchParameters, 0, 0);
+		    
+		    
+		    
+		    for(Photo photo: list) {
+		    	//System.out.println(photo.getMediumUrl());
+		    	PhotoURL.add(photo.getMediumUrl());
+		    }
+			
+		    System.err.println(PhotoURL.size());
+		} catch (Exception e) {
+			
+		}
 	    
 	    
 	}
