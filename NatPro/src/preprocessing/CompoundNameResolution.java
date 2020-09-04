@@ -91,7 +91,7 @@ public class CompoundNameResolution {
 					break;
 				}
 				
-				for(int i=s; i<e; i++) {
+				for(int i=s; i<=e; i++) {
 					range.add(i+"");
 				}
 				

@@ -5,7 +5,9 @@
  methyl esters
  methyl ester
  fatty acids
+ acid esters
  fatty acid
+ acid ester
  cinnamate
 cinnamate
  benzoate
@@ -13,7 +15,10 @@ cinnamate
  acetate
 phylline
 hydrazyl
+prenoids
+prenoid
 phyllal
+contane
 flavone
  esters
 methane
@@ -43,11 +48,13 @@ enol
 none
 side
 lide
+olea
 erol
 onal
 ytyl
 tate
 late
+tane
 oate
 llyl
 diol
