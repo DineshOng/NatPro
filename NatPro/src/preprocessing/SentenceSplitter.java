@@ -121,10 +121,6 @@ public class SentenceSplitter {
         return sstext;
     }
 
-    public String getSstext() {
-        return sstext;
-    }
-
     public void setSstext(String sstext) {
         this.sstext = sstext;
     }

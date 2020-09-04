@@ -1,4 +1,5 @@
 package preprocessing;
+
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.text.PDFTextStripperByArea;
@@ -6,12 +7,14 @@ import org.apache.pdfbox.text.PDFTextStripperByArea;
 import java.io.File;
 
 public class PDFtoTXT {
-    private String text = "";
+    private String text;
 
     public PDFtoTXT(String filename){
         System.out.println("Converting PDF to TEXT...");
         long startTime, endTime;
         startTime = System.nanoTime ();
+        
+        text = "";
 
         try{
             PDDocument document = null;
@@ -33,15 +36,7 @@ public class PDFtoTXT {
         System.err.println("[PDF to TXT Converter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
     }
 
-    public String convertedText() {
+    public String getConvertedText() {
         return text;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 }

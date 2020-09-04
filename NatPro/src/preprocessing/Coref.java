@@ -69,7 +69,7 @@ public class Coref {
 		return corefText;
 	}
 
-	public String run() throws IOException {
+	public String run() {
 		String[] sentences = text.split("\n\n");
 		String subject = "";
 		

@@ -18,40 +18,48 @@ public class Tagger {
 	
 	public Tagger(String filename, String uniqueID) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException{
 			//file paths
-//			String preprocessedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Preprocessed\\";
-//			String taggedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Tagged\\";
+			String preprocessedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Preprocessed\\";
+			String taggedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Tagged\\";
+			
+			String genusTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\genus.txt";
+			String bioActTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bioact.txt";
+			String familyTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\family.txt";
+			String orgPartTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\orgpart.txt";
+			String clTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt";
+			String compoundClassTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-class.txt";
+			String bodyPartTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bodypart.txt";
+			String prepTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\prep.txt";
+			String illnessTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\illness.txt";
+			String compoundSuffixTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-suffix.txt";
+			
+			String twentyKTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\20k.txt";
+			String googleTenKTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\google-10k.txt";
+			
+			String englishTaggerFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\english-left3words-distsim.tagger";
+			String serializedClassifier = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\classifiers\\english.all.3class.distsim.crf.ser.gz";
+			
+//			String preprocessedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Preprocessed\\";
+//			String taggedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Tagged\\";
+//			String taggedBootstrapFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
 //			
-//			String genusTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\genus.txt";
-//			String bioActTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bioact.txt";
-//			String familyTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\family.txt";
-//			String orgPartTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\orgpart.txt";
-//			String clTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt";
-//			String compoundClassTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-class.txt";
-//			String bodyPartTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bodypart.txt";
-//			String prepTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\prep.txt";
-//			String illnessTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\illness.txt";
-//			String compoundSuffixTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-suffix.txt";
+//			String genusTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\genus.txt";
+//			String bioActTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\bioact.txt";
+//			String familyTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\family.txt";
+//			String orgPartTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\orgpart.txt";
+//			String clTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cl.txt";
+//			String compoundClassTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\compound-class.txt";
+//			String bodyPartTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\bodypart.txt";
+//			String prepTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\prep.txt";
+//			String illnessTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\illness.txt";
+//			String compoundSuffixTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\compound-suffix.txt";
 //			
-//			String twentyKTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\20k.txt";
+//			String twentyKTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\20k.txt";
+//			String googleTenKTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\google-10k.txt";
 			
-			String preprocessedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Preprocessed\\";
-			String taggedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Tagged\\";
-			String taggedBootstrapFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
+//			private String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\english-left3words-distsim.tagger";
+//			String serializedClassifier = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\classifiers\\english.all.3class.distsim.crf.ser.gz";
 			
-			String genusTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\genus.txt";
-			String bioActTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\bioact.txt";
-			String familyTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\family.txt";
-			String orgPartTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\orgpart.txt";
-			String clTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cl.txt";
-			String compoundClassTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\compound-class.txt";
-			String bodyPartTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\bodypart.txt";
-			String prepTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\prep.txt";
-			String illnessTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\illness.txt";
-			String compoundSuffixTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\compound-suffix.txt";
-			
-			String twentyKTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\20k.txt";
-			
-        	String text = new PDFtoTXT(filename).convertedText();
+        	String text = new PDFtoTXT(filename).getConvertedText();
             String cleanTxt = new TextCleaner(text).cleanText().getText();
             String txt = new SentenceSplitter(cleanTxt).getSentenceSplitText();
             
@@ -73,12 +81,12 @@ public class Tagger {
 	        //MedicinalPlant : PlantPart => OK
 	        //Compound: CompoundClass => NOT OK
 	        
-            txt = new CommonNameTagger("MedicinalPlant", txt).run();
+            txt = new CommonNameTagger("MedicinalPlant", txt, englishTaggerFile).run();
             
-            txt = new SpeciesTagger("Synonym", txt, genusTxtFile).run();
+            txt = new SpeciesTagger("Synonym", txt, genusTxtFile, googleTenKTxtFile).run();
             txt = new SpeciesNameResolution("Synonym", txt).run();
             
-            txt = new LocationTagger("Location", txt).run();
+            txt = new LocationTagger("Location", txt, serializedClassifier).run();
             txt = new BioActivityTagger("BioAct", txt, bioActTxtFile).run();
             txt = new SpeciesFamilyTagger("Family", txt, familyTxtFile).run();
             txt = new OrgPartTagger("PlantPart", txt, orgPartTxtFile).run();
@@ -104,9 +112,9 @@ public class Tagger {
 	        fw4.write(txt);
 	        fw4.close();
 	        
-	        java.io.FileWriter fw5 = new java.io.FileWriter(taggedBootstrapFolderPath + uniqueID + ".xml");
-	        fw5.write(txt);
-	        fw5.close();	
+	        //java.io.FileWriter fw5 = new java.io.FileWriter(taggedBootstrapFolderPath + uniqueID + ".xml");
+	        //fw5.write(txt);
+	        //fw5.close();	
         
 	}
 }

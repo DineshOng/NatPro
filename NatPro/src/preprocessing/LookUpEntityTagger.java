@@ -17,7 +17,7 @@ public class LookUpEntityTagger extends EntityTagger {
 	protected String suffix_regex;
 	
 
-	public LookUpEntityTagger (String tag, String text, String filename) {
+	public LookUpEntityTagger(String tag, String text, String filename) {
 		super(tag, text);
 	
 		this.filename = filename;

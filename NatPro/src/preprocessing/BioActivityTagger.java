@@ -2,7 +2,7 @@ package preprocessing;
 import java.io.IOException;
 
 public class BioActivityTagger extends LookUpEntityTagger {
-	public BioActivityTagger(String tag, String text, String filename) throws IOException {
+	public BioActivityTagger(String tag, String text, String filename) {
 		super(tag, text, filename);
 	}
 	
