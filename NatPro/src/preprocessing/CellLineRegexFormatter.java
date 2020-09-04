@@ -4,7 +4,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CellLineRegexFormatter {
-	
 	String filepath1;
 	String filepath2;
 	

@@ -8,7 +8,6 @@ import java.util.TreeSet;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 public class CommonNameTagger extends EntityTagger {
-	
 	private TreeSet<String> phrases;
 	private MaxentTagger mt;
 	private String POSTaggerFile;
