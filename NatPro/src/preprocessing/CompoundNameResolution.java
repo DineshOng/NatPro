@@ -32,6 +32,9 @@ public class CompoundNameResolution {
 		pattern = Pattern.compile("(<"+tag+">([A-Za-z0-9\\[\\(\\]\\),':-]+)(( ([A-Za-z0-9\\[\\(\\]\\),':-]+))+)?<\\/"+tag+">) ?(\\((([1-9][a-z])|([XIV]+)|([1-9]))\\))");
 		matcher = pattern.matcher(text);
 		
+		//EntityTagger et = new EntityTagger("Compound", text);
+		//text = et.hideTaggedEntities().getText();
+		
 		while(matcher.find()) {
 			String compound = "";
 			if(matcher.group(3)!=null) {
@@ -137,14 +140,25 @@ public class CompoundNameResolution {
 			
 			
 			for(String cod: range) {
-				compounds += "<" + tag + ">" + compoundsByCode.get(cod) + "</" + tag + ">, ";
+				if(compoundsByCode.get(cod) != null)
+					compounds += "<" + tag + ">" + compoundsByCode.get(cod) + "</" + tag + ">, ";
 			}
 			
 			text = text.replaceAll(matcher.group(), compounds);
 		}
 		
+		pattern = Pattern.compile("(<Compound>[^<]+)<Compound>([^<]+)<\\/Compound>([^<]+<\\/Compound>)");
+		matcher = pattern.matcher(text);
+		while(matcher.find()) {
+			String temp = matcher.group().replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
+			temp = temp.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
+	    	text = text.replaceAll(temp, matcher.group(1).trim() + compoundsByName.get(matcher.group(2)) + matcher.group(3).trim());
+        }
+		
 		text = text.replaceAll(" {2}", " ");
 		
+		//text = et.resolveHiddenEntities().getText();
+			
 		return text;
 	}
 
