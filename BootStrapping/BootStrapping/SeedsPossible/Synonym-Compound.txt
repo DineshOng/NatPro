@@ -1,0 +1,71 @@
+e1:Synonym
+e2:Compound
+
+Alstonia macrophylla;beta-Sitosteryl-beta-D-Glucoside
+Alstonia macrophylla;16-hydroxyalstonal
+Alstonia macrophylla;Alstohentine
+Alstonia macrophylla;Rauvomitin
+Alstonia macrophylla;Alstonerine
+Alstonia macrophylla;16-hydroxy-N4-demethylalstophyllal Oxindole
+Alstonia macrophylla;Echitovenidine
+Alstonia macrophylla;24-methylenecycloartanol
+Alstonia macrophylla;Alstophyllal
+Alstonia macrophylla;Stigmasterol
+Alstonia macrophylla;16-hydroxyalstonisine
+Alstonia macrophylla;Echitamine
+Alstonia macrophylla;gamma-Sitosterol
+Alstonia macrophylla;Brucine
+Alstonia macrophylla;Alstomicine
+Alstonia macrophylla;Venenatine
+Alstonia macrophylla;6-oxoalstophyllal
+Alstonia macrophylla;6-oxoalstophylline
+Alstonia macrophylla;10,11-dimethoxynareline
+Alstonia macrophylla;Lupeol
+Alstonia macrophylla;beta-Amyrin
+Alstonia macrophylla;Campesterol
+Alstonia macrophylla;beta-Sitosterol
+Alstonia macrophylla;Alstomaline
+Alstonia macrophylla;Strictamin
+Brassica juncea;alpha-linolenic acid
+Brassica juncea;Trilinolenin
+Brassica juncea;beta-carotene
+Brassica juncea;Fatty acid
+Brassica juncea;beta-Sitosterol
+Brassica juncea;Lutein
+Brassica juncea;Linoleic acid
+Brassica oleracea;Fatty acid
+Brassica oleracea;beta-Sitosterol
+Brassica oleracea;Triglycerides
+Brassica oleracea;Linoleic acid
+Brassica oleracea var. Italic;Fatty acid
+Brassica oleracea var. Italic;beta-Sitosterol
+Brassica oleracea var. Italic;Triglycerides
+Brassica oleracea var. Italic;Linoleic acid
+Brassica oleracea var capitata f. rubra;Stigmasterol
+Brassica oleracea var capitata f. rubra;beta-Sitosterol
+Brassica oleracea var capitata f. rubra;Triglycerides
+Dysoxylum gaudichaudianum;Dysoxylins d
+Dysoxylum gaudichaudianum;Polyprenol
+Dysoxylum gaudichaudianum;Stigmasterol
+Dysoxylum gaudichaudianum;Gaudichaudysolin a
+Dysoxylum gaudichaudianum;beta-Sitosterol
+Dysoxylum gaudichaudianum;Squalene
+Dysoxylum gaudichaudianum;Triglycerides
+Dysoxylum gaudichaudianum;Dysoxylins a
+Dysoxylum gaudichaudianum;Dysoxylins b
+Dysoxylum gaudichaudianum;Dysoxylins c
+Dysoxylum gaudichaudianum;p-hydroxyacetophenone
+Eucalyptus deglupta;Tritriacontane-16,18-dione
+Eucalyptus deglupta;Ellagitannins
+Eucalyptus deglupta;8-methoxyellagic acid-2-rhamnoside
+Eucalyptus deglupta;Nerolidol
+Eucalyptus deglupta;Ellagic acid
+Eucalyptus deglupta;5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone
+Eucalyptus deglupta;Squalene
+Eucalyptus deglupta;Ursolic acid
+Eucalyptus deglupta;Oleanolic acid
+Raphanus sativus;alpha-linolenic acid
+Raphanus sativus;Fatty acid
+Raphanus sativus;beta-Sitosterol
+Raphanus sativus;Triglycerides
+Raphanus sativus;Linoleic acid

@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b711fd2d-9e51-4ec3-9bff-a9361d2c3f83" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="587" column="44" lean-forward="true" selection-start-line="587" selection-start-column="44" selection-end-line="587" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SeedsPossible/BioAct-CellLine.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-579" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/788ca68e20b45a467a7f43b2042a058f.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="42" column="119" selection-start-line="42" selection-start-column="119" selection-end-line="42" selection-end-column="119" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="106" column="123" selection-start-line="106" selection-start-column="123" selection-end-line="106" selection-end-column="123" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>seedMap.put</find>
+      <find>synset</find>
+      <find>cell viability</find>
+      <find>MDA</find>
+      <find>decrease</find>
+      <find>ehrl</find>
+      <find>ehr</find>
+      <find>validation.add</find>
+      <find>matches</find>
+      <find>POSTa</find>
+      <find>validation</find>
+      <find>relation</find>
+      <find>rLine</find>
+      <find>TempSeed</find>
+      <find>located in</find>
+      <find>system.out.println</find>
+      <find>POSTagger</find>
+      <find>ehrlich</find>
+      <find>I went here</find>
+      <find>System</find>
+      <find>hashxml</find>
+      <find>key</find>
+      <find>class1</find>
+      <find>supp</find>
+      <find>ValidationMap</find>
+      <find>seedMap</find>
+      <find>search</find>
+      <find>I am at</find>
+      <find>addPreprocessing</find>
+      <find>validationMap</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/file_properties.xml" />
+        <option value="$PROJECT_DIR$/src/Bootstrap.form" />
+        <option value="$PROJECT_DIR$/src/Bootstrap.java" />
+        <option value="$PROJECT_DIR$/validation/plant-aka.xml" />
+        <option value="$PROJECT_DIR$/src/Dump.java" />
+        <option value="$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml" />
+        <option value="$PROJECT_DIR$/validation/plant-compound.xml" />
+        <option value="$PROJECT_DIR$/validation/plant-loc.xml" />
+        <option value="$PROJECT_DIR$/validation/bcb94e0ea5a7b7de3b7ce45bbb4afee5-leaves-triacylglycerols.xml" />
+        <option value="$PROJECT_DIR$/seedOutput/BioAct-CellLine.xml" />
+        <option value="$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-therapeutic efficacy against Ehrlich-CellLine.xml" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="362" />
+    <option name="y" value="68" />
+    <option name="width" value="1377" />
+    <option name="height" value="959" />
+  </component>
+  <component name="ProjectId" id="1YImtOzh5Wp0Rm99VozrdWB25Fw" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
+              <item name="Seeds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
+              <item name="SeedsPossible" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
+              <item name="TaggedSample" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/guava-26.0-jre.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="D:\IntelliJ Projects\BootStrapping" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping\TaggedSample" />
+      <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping\SeedsPossible" />
+      <recent name="C:\Users\patri\OneDrive\Desktop\BootStrapping" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/SeedsPossible" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Bootstrap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Bootstrap" />
+      <module name="BootStrapping" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="BootStrapping" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Bootstrap" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b711fd2d-9e51-4ec3-9bff-a9361d2c3f83" name="Default Changelist" comment="" />
+      <created>1582087413049</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582087413049</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23294243" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Tool Output" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32995737" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23294243" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Tool Output" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32995737" />
+    </layout-to-restore>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="356" y="65" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1583338087566">
+      <screen x="0" y="23" width="1280" height="731" />
+    </state>
+    <state x="356" y="65" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.23.1280.731@0.23.1280.731" timestamp="1583338087566" />
+    <state x="490" y="285" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582643275215">
+      <screen x="0" y="23" width="1280" height="733" />
+    </state>
+    <state x="490" y="285" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1280.732@0.23.1280.732" timestamp="1582639343836" />
+    <state x="490" y="285" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1280.733@0.23.1280.733" timestamp="1582643275215" />
+    <state width="1218" height="191" key="GridCell.Tab.0.bottom" timestamp="1583864675618">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state width="1218" height="191" key="GridCell.Tab.0.bottom/0.23.1280.730@0.23.1280.730" timestamp="1583695109727" />
+    <state width="1218" height="191" key="GridCell.Tab.0.bottom/0.23.1280.731@0.23.1280.731" timestamp="1583386088704" />
+    <state width="1218" height="191" key="GridCell.Tab.0.bottom/0.23.1280.732@0.23.1280.732" timestamp="1583864675618" />
+    <state width="1218" height="192" key="GridCell.Tab.0.bottom/0.23.1280.733@0.23.1280.733" timestamp="1582644157539" />
+    <state width="1218" height="191" key="GridCell.Tab.0.bottom/0.23.1280.735@0.23.1280.735" timestamp="1583093611074" />
+    <state width="1218" height="191" key="GridCell.Tab.0.bottom/0.23.1280.736@0.23.1280.736" timestamp="1583094558594" />
+    <state width="1218" height="191" key="GridCell.Tab.0.center" timestamp="1583864675617">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state width="1218" height="191" key="GridCell.Tab.0.center/0.23.1280.730@0.23.1280.730" timestamp="1583695109725" />
+    <state width="1218" height="191" key="GridCell.Tab.0.center/0.23.1280.731@0.23.1280.731" timestamp="1583386088702" />
+    <state width="1218" height="191" key="GridCell.Tab.0.center/0.23.1280.732@0.23.1280.732" timestamp="1583864675617" />
+    <state width="1218" height="192" key="GridCell.Tab.0.center/0.23.1280.733@0.23.1280.733" timestamp="1582644157538" />
+    <state width="1218" height="191" key="GridCell.Tab.0.center/0.23.1280.735@0.23.1280.735" timestamp="1583093611073" />
+    <state width="1218" height="191" key="GridCell.Tab.0.center/0.23.1280.736@0.23.1280.736" timestamp="1583094558593" />
+    <state width="1218" height="191" key="GridCell.Tab.0.left" timestamp="1583864675616">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state width="1218" height="191" key="GridCell.Tab.0.left/0.23.1280.730@0.23.1280.730" timestamp="1583695109724" />
+    <state width="1218" height="191" key="GridCell.Tab.0.left/0.23.1280.731@0.23.1280.731" timestamp="1583386088702" />
+    <state width="1218" height="191" key="GridCell.Tab.0.left/0.23.1280.732@0.23.1280.732" timestamp="1583864675616" />
+    <state width="1218" height="192" key="GridCell.Tab.0.left/0.23.1280.733@0.23.1280.733" timestamp="1582644157537" />
+    <state width="1218" height="191" key="GridCell.Tab.0.left/0.23.1280.735@0.23.1280.735" timestamp="1583093611072" />
+    <state width="1218" height="191" key="GridCell.Tab.0.left/0.23.1280.736@0.23.1280.736" timestamp="1583094558593" />
+    <state width="1218" height="191" key="GridCell.Tab.0.right" timestamp="1583864675617">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state width="1218" height="191" key="GridCell.Tab.0.right/0.23.1280.730@0.23.1280.730" timestamp="1583695109726" />
+    <state width="1218" height="191" key="GridCell.Tab.0.right/0.23.1280.731@0.23.1280.731" timestamp="1583386088703" />
+    <state width="1218" height="191" key="GridCell.Tab.0.right/0.23.1280.732@0.23.1280.732" timestamp="1583864675617" />
+    <state width="1218" height="192" key="GridCell.Tab.0.right/0.23.1280.733@0.23.1280.733" timestamp="1582644157538" />
+    <state width="1218" height="191" key="GridCell.Tab.0.right/0.23.1280.735@0.23.1280.735" timestamp="1583093611073" />
+    <state width="1218" height="191" key="GridCell.Tab.0.right/0.23.1280.736@0.23.1280.736" timestamp="1583094558594" />
+    <state width="1218" height="211" key="GridCell.Tab.1.bottom" timestamp="1583347420075">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state width="1218" height="211" key="GridCell.Tab.1.bottom/0.23.1280.732@0.23.1280.732" timestamp="1583347420075" />
+    <state width="1218" height="211" key="GridCell.Tab.1.center" timestamp="1583347420075">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state width="1218" height="211" key="GridCell.Tab.1.center/0.23.1280.732@0.23.1280.732" timestamp="1583347420075" />
+    <state width="1218" height="211" key="GridCell.Tab.1.left" timestamp="1583347420074">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state width="1218" height="211" key="GridCell.Tab.1.left/0.23.1280.732@0.23.1280.732" timestamp="1583347420074" />
+    <state width="1218" height="211" key="GridCell.Tab.1.right" timestamp="1583347420075">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state width="1218" height="211" key="GridCell.Tab.1.right/0.23.1280.732@0.23.1280.732" timestamp="1583347420075" />
+    <state x="120" y="23" key="SettingsEditor" timestamp="1583859742477">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state x="120" y="23" key="SettingsEditor/0.23.1280.732@0.23.1280.732" timestamp="1583859742477" />
+    <state x="120" y="23" key="SettingsEditor/0.23.1280.735@0.23.1280.735" timestamp="1583092886461" />
+    <state x="319" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1583850870379">
+      <screen x="0" y="23" width="1280" height="730" />
+    </state>
+    <state x="319" y="220" key="com.intellij.ide.util.TipDialog/0.23.1280.730@0.23.1280.730" timestamp="1583850870379" />
+    <state x="319" y="220" key="com.intellij.ide.util.TipDialog/0.23.1280.731@0.23.1280.731" timestamp="1583385768421" />
+    <state x="319" y="221" key="com.intellij.ide.util.TipDialog/0.23.1280.732@0.23.1280.732" timestamp="1583077827205" />
+    <state x="34" y="23" key="new project wizard" timestamp="1582638934534">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state x="34" y="23" key="new project wizard/0.23.1280.732@0.23.1280.732" timestamp="1582638934534" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-PlantPart.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/org/w3c/dom/Document.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-cycas lacrimans-endotesta.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/bcb94e0ea5a7b7de3b7ce45bbb4afee5-leaves-3beta-friedelinol.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Family.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dump.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Compound.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-PlantPart.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-cycas edentata-bark.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-bataan.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-bark-brucine.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/bcb94e0ea5a7b7de3b7ce45bbb4afee5-leaves-chlorophyll a.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-stigmasterol.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-bark-rauvomitin.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-leaf-6-oxoalstophyllal.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Compound.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-bark-strictamin.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-campesterol.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-cycas lacrimans-bark.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-beta-sitosterol.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-cycas lacrimans-sclerotesta.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/bcb94e0ea5a7b7de3b7ce45bbb4afee5-leaves-triacylglycerols.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="347" selection-start-line="3" selection-start-column="331" selection-end-line="3" selection-end-column="347" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/guava-26.0-jre.jar!/com/google/common/collect/Multimap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#2024#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-fruit rind-Compound.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Ursolic acid-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-beta-Amyrin-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-unripe fruit-Compound.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-beta-Sitosteryl-beta-D-Glucoside-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-beta-sitosterol-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-inhibited the proliferation of MDA-MB-231-CellLine.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="136" column="364" selection-start-line="136" selection-start-column="364" selection-end-line="136" selection-end-column="364" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/bcb94e0ea5a7b7de3b7ce45bbb4afee5.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/fff614b7f12551a41b350789393a6cef.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="36" column="330" selection-start-line="36" selection-start-column="328" selection-end-line="36" selection-end-column="330" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="136" column="410" selection-start-line="136" selection-start-column="410" selection-end-line="136" selection-end-column="410" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-growth inhibition and apoptosis in SMMC7721-CellLine.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-therapeutic efficacy against Ehrlich-CellLine.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-PlantPart.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Location.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Compound.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/PlantPart-Compound.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Coenzyme Q10-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-alpha-amyrin cinnamate-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Alstonia macrophylla-Compound.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Family.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/BioAct-CellLine.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/Compound-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="106" column="123" selection-start-line="106" selection-start-column="123" selection-end-line="106" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/788ca68e20b45a467a7f43b2042a058f.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="42" column="119" selection-start-line="42" selection-start-column="119" selection-end-line="42" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/BioAct-CellLine.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-579" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="587" column="44" lean-forward="true" selection-start-line="587" selection-start-column="44" selection-end-line="587" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>BootStrapping</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>guava-26.0-jre</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
