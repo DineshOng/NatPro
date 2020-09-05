@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import org.apache.commons.math.util.OpenIntToDoubleHashMap.Iterator;
 
@@ -81,26 +82,34 @@ public class Tagger {
 	        //MedicinalPlant : PlantPart => OK
 	        //Compound: CompoundClass => NOT OK
 	        
-            txt = new CommonNameTagger("MedicinalPlant", txt, englishTaggerFile).run();
-            
             txt = new SpeciesTagger("Synonym", txt, genusTxtFile, googleTenKTxtFile).run();
             txt = new SpeciesNameResolution("Synonym", txt).run();
+            
+            txt = new CommonNameTagger("MedicinalPlant", txt, englishTaggerFile).run();
             
             txt = new LocationTagger("Location", txt, serializedClassifier).run();
             txt = new BioActivityTagger("BioAct", txt, bioActTxtFile).run();
             txt = new SpeciesFamilyTagger("Family", txt, familyTxtFile).run();
-            txt = new OrgPartTagger("PlantPart", txt, orgPartTxtFile).run();
             txt = new CellLineTagger("CellLine", txt, clTxtFile).run();
             txt = new CompoundClassTagger("ChemicalClass", txt, compoundClassTxtFile).run();
-            txt = new BodyPartTagger("BodyPart", txt, bodyPartTxtFile).run();
             txt = new PreparationTagger("Preparation", txt, prepTxtFile).run();
             txt = new IllnessTagger("Illness", txt, illnessTxtFile).run();
+            txt = new BodyPartTagger("BodyPart", txt, bodyPartTxtFile).run();
+            txt = new OrgPartTagger("PlantPart", txt, orgPartTxtFile).run();
             
             txt = new CompoundTagger("Compound", txt, compoundSuffixTxtFile, twentyKTxtFile).run();
             txt = new CompoundNameExpander("Compound", txt).run();
             txt = new CompoundNameResolution("Compound", txt).run();
             
             txt = new Coref(txt).run();
+            
+//            Pattern pattern = Pattern.compile("(<Compound>[^<]+)<Compound>([^<]+)<\\/Compound>([^<]+<\\/Compound>)");
+//    		Matcher matcher = pattern.matcher(text);
+//    		while(matcher.find()) {
+//    			String temp = matcher.group().replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
+//    			temp = temp.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
+//    	    	text = text.replaceAll(temp, matcher.group(1).trim() + compoundsByName.get(matcher.group(2)) + matcher.group(3).trim());
+//            }
             
             String notag = txt.replaceAll("<\\/?\\w+>", "");
             

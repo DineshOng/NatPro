@@ -30,8 +30,12 @@ public class TextCleaner {
         //text = text.replaceAll("\\s\n"," ");
         text = text.replaceAll("\\. \u03B1",". Alpha");
         text = text.replaceAll("\u03B1","alpha");
+        
+        text = text.replaceAll("","Beta");
+        
         text = text.replaceAll("\\. \u03B2",". Beta");
         text = text.replaceAll("\u03B2","beta");
+        
         text = text.replaceAll("\\. \u0393",". Gamma");
         text = text.replaceAll("\u0393","gamma");
         

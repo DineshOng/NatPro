@@ -1,12 +1,16 @@
 tetranortriterpenoid
 indole alkaloids
 steroid alcohols
+sesquiterpenoids
+coumarinolignoid
+trinorditerpenes
 indole alkaloid
 flavonolignans
 flavonolignans
 sesquiterpenes
 sesquiterpene
 benzoflavones
+megastigmanes
 triterpenoids
 benzoflavone
 triterpenoid

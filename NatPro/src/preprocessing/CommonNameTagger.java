@@ -25,7 +25,7 @@ public class CommonNameTagger extends EntityTagger {
 		String[] words = sentence.split(" ");
 		
 		String phrase = "";
-		System.out.println(sentence);
+		//System.out.println(sentence);
 		for(String word: words) {
 			//System.out.println(word);
         	if(word.endsWith("VBN") && ((word.contains("known") || word.contains("called")  || word.contains("marketed")))) {
@@ -63,6 +63,8 @@ public class CommonNameTagger extends EntityTagger {
 	}
 	
 	public String run() {
+		hideTaggedEntities();
+		
 		String[] sentences = text.split("\n\n");
 		
 		for(String sentence: sentences) {
@@ -79,6 +81,8 @@ public class CommonNameTagger extends EntityTagger {
 				text = text.replaceAll(s.trim(), "<" + tag + ">" + s.trim() + "</" + tag + ">");
 			}
 		}
+		
+		resolveHiddenEntities();
 		
 		return text;
 	}

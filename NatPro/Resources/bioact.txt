@@ -21,6 +21,7 @@ Inhibition of Glycosidase
 Insect antennae response
 Inhibition of Protease
 Cell growth inhbition
+hypercholesterolemic
 anti-proliferative
 Anti-inflammatory
 Antitrypanosomal
@@ -29,6 +30,7 @@ Antileishmanial
 Antinociceptive
 Antiallergenic
 Antiangiogenic
+anti-microbial
 Antibacterial
 Molluscicidal
 antimicrobial
@@ -39,6 +41,7 @@ Antimalarial
 Insecticidal
 Nematostatic
 Antiophidian
+nematicidal
 Antioxidant
 Anti-cancer
 Anti-fungal
@@ -48,6 +51,7 @@ Anticancer
 Antifungal
 Anxiolytic
 anti-venom
+hemolytic
 Antiviral
 Cytotoxic
 Genotoxic

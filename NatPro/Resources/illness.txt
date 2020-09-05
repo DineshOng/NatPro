@@ -1,4 +1,5 @@
 Swollen lymph nodes
+hypocholesterolemia
 skin irritations
 lung hemorrhage
 Gastric reflux
@@ -8,25 +9,30 @@ Hypertension
 Common cold
 Sore throat
 Acid reflux
+sore throat
 Tonsilitis
 Meningitis
 body aches
 hemorrhage
+enteritis
 Heartburn
 dysentery
 beri-beri
+headaches
 Diabetes
 Dandruff
 Headache
 Diarrhea
 beriberi
 Hiccups
+tumors
 Stroke
 Dengue
 Phlegm
 Wounds
 ulcers
 coughs
+colds
 Fever
 Cough
 Boils

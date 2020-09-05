@@ -34,7 +34,7 @@ A new limonoid, <Compound>gaudichaudysolin A</Compound>solated from the plant's 
 
 This study was conducted as part of our research on the chemical constituents of the genus Dysoxylum found in the <Location>Philippines</Location>.
 
-We earlier reported the isolation of new glabretal-type <ChemicalClass>triterpenoids</ChemicalClass> along with the known <Location>Mariquit</Location> et al. /<BioAct>Cytotoxic</BioAct> Compounds from <Location>IJPPR</Location>, Volume 8, Issue 4: April 2016 Page 669 compounds, <Compound>24,25-epoxy-3,23-dihydroxy-7-tirucallene</Compound>, <Compound>squalene</Compound>, <Compound>polyprenol</Compound>, <Compound>linoleic acid</Compound> and <Compound>lutein</Compound> from the <PlantPart>leaves</PlantPart> of <Synonym>Dysoxylum mollissimum</Synonym> Blume.
+We earlier reported the isolation of new glabretal-type <ChemicalClass>triterpenoids</ChemicalClass> along with the known <Location>Mariquit</Location> et al. /<BioAct>Cytotoxic</BioAct> Compounds from <Location>IJPPR</Location>, Volume 8, Issue 4: April 2016 Page 669 compounds, <Compound>24,25-epoxy-3Beta,23-dihydroxy-7-tirucallene</Compound>, <Compound>squalene</Compound>, <Compound>polyprenol</Compound>, <Compound>linoleic acid</Compound> and <Compound>lutein</Compound> from the <PlantPart>leaves</PlantPart> of <Synonym>Dysoxylum mollissimum</Synonym> Blume.
 
 Recently, we reported that the crude <Compound>dicloromethane</Compound> <PlantPart>leaf</PlantPart> <Preparation>extract</Preparation> of <Synonym>Dysoxylum gaudichaudianum</Synonym> (A. Juss.) Miq exhibited IC50 values of 7.35 and 13.19 g/mL against <BodyPart>breast</BodyPart> cancer (<CellLine>MCF-7</CellLine>) and colon cancer (<CellLine>HT-29</CellLine>) cells, respectively.
 
@@ -226,11 +226,11 @@ Thus, <Compound>Squalene</Compound>, was reported to exhibit <BioAct>cytotoxic</
 
 <Compound>Polyprenols</Compound> from <Synonym>Ginkgo biloba</Synonym> L. showed hepatoprotective effects against CCl4-stimulated hepatotoxicity in rats and exhibited antitumor activity.
 
-<Compound>Polyprenols</Compound> inhibited Heps, S (180) and EC transplanted tumors by at least 50%25.
+<Compound>Polyprenols</Compound> inhibited Heps, S (180) and EC transplanted <Illness>tumors</Illness> by at least 50%25.
 
 <Compound>Polyprenol</Compound>, with concentrations between 10-3-10-4 M, induced apoptosis in multidrug-resistant <CellLine>MCF-7</CellLine> cells by reducing the resistance marker, <Compound>P-glycoprotein</Compound> (Pgp), in the plasma membrane.
 
-In a related study, <CellLine>MCF-7</CellLine> cells treated with 10-4 M of <Compound>polyprenol</Compound> resulted in the downregulation of DPAGT overexpression which led to the regulation of <Compound>E-cadherin</Compound> expression, an important factor in the prevention of tumors and metastasis.
+In a related study, <CellLine>MCF-7</CellLine> cells treated with 10-4 M of <Compound>polyprenol</Compound> resulted in the downregulation of DPAGT overexpression which led to the regulation of <Compound>E-cadherin</Compound> expression, an important factor in the prevention of <Illness>tumors</Illness> and metastasis.
 
 To the best of our knowledge, this is the first report on the cytotoxicity of <Compound>polyprenols</Compound>, against colon cancer cells <CellLine>HT-29</CellLine> and <CellLine>HCT116</CellLine> and <BodyPart>breast</BodyPart> cancer cells <CellLine>MCF-7</CellLine>, with IC50 values of <Compound>Squalene</Compound>, 059, 9.258 and <Compound>triglycerides</Compound>, 786 g/mL, respectively.
 
