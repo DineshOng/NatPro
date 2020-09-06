@@ -97,7 +97,7 @@
 								<script>
 								  var w = $("#cd").width();
 								  let transformStick = new ChemDoodle.TransformCanvas3D('transformStick', w, 340);
-								  transformStick.styles.set3DRepresentation('Ball and Stick');
+								  transformStick.styles.set3DRepresentation('Stick');
 								  transformStick.styles.backgroundColor = 'black';
 								  let molFile = '';
 								  let molecule = ChemDoodle.readMOL(molFile, 1);
@@ -267,39 +267,19 @@
 				                    </tr>
 			                    </thead>
 			                    <tbody>
-			                    	<c:forEach items="${compound.getBioActs()}" var="bioactList" varStatus="loop">
-			                    		<tr>
-					                    	<td>
-					                            <input
-					                                type="text" name="bioActNX${loop.index+100}"
-					                                class="form-control" placeholder="" value="${bioactList.getBiologicalActivity()}">
-					                        </td>
-					                        <td>
-					                        	<input
-					                        		type="text" name="cellLineNX${loop.index+100}"
-					                        		class="form-control" placeholder="" value="${bioactList.getCellLine().getCellLine()}">
-					                        </td>
-					                        <td>
-					                        	<input type="button" class="ibtnDel btn btn-sm btn-danger " style="float: right" value="Delete">
-					                        </td>
-					                	</tr>
-				                   	</c:forEach>
-				                   	
-				                   	<c:if test="${empty compound.getBioActs()}">
-				                    <tr id="firstTR">
-				                        <td>
-				                            <input
-				                                type="text" name="bioActNX"
-				                                class="form-control" placeholder="">
-				                        </td>
-				                        <td>
-				                        	<input
-				                        		type="text" name="cellLineNX"
-				                        		class="form-control" placeholder="">
-				                        </td>
-				                        <td></td>
-				                    </tr>
-				                    </c:if>
+			                    <tr id="firstTR">
+			                        <td>
+			                            <input
+			                                type="text" name="bioActNX"
+			                                class="form-control" placeholder="">
+			                        </td>
+			                        <td>
+			                        	<input
+			                        		type="text" name="cellLineNX"
+			                        		class="form-control" placeholder="">
+			                        </td>
+			                        <td></td>
+			                    </tr>
 			                    </tbody>
 		                	</table>
 		                </div>
