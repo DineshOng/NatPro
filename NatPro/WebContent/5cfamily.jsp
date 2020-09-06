@@ -28,7 +28,25 @@
 	<%@include file="navbarnix.html"%>
 
 	<div class="jumbotron bg-success">
-		<h1 class="display-4 text-white text-center">${family}</h1>
+		<div class="d-flex justify-content-center">
+			<h1 class="display-4 text-white" style="display: block">
+				<p id="familyName">${family}</p>
+			</h1>
+			<input class="form-control w-auto h-25 mt-3" type="text"
+				id="editFamilyField" name="editFamilyName" style="display: none"
+				required>
+			<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3"
+				onclick="editFamily()" data-toggle="tooltip" data-placement="top"
+				title="edit entry" class="btn btn-primary" id="editFamilyBtn">
+				<i class="fa fa-pencil" aria-hidden="true" id="editFamilyLogo"></i>
+			</button>
+			<button type="button" class="btn btn-outline-danger btn-sm h-25 mt-3"
+				onclick="cancelEditFamily()" data-toggle="tooltip"
+				data-placement="top" title="edit entry" class="btn btn-primary"
+				id="cancelEditFamilyBtn" style="display: none">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+		</div>
 		<h3 class="text-white text-center">Family</h3>
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
@@ -70,6 +88,56 @@
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
 
+	<script type="text/javascript">
+	function editFamily(){
+		console.log("edit");
+		document.getElementById("familyName").style.display="none";
+		document.getElementById("editFamilyField").value = document.getElementById("familyName").innerHTML;
+		document.getElementById("editFamilyField").style.display="block";
+		document.getElementById("editFamilyBtn").onclick = function () { saveEditFamily(); };
+		document.getElementById("editFamilyLogo").classList.remove("fa-pencil");
+		document.getElementById("editFamilyLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelEditFamilyBtn").style.display="block";
+	}
+	
+	function cancelEditFamily(){
+		console.log("cancel");
+		document.getElementById("familyName").style.display="block";
+		document.getElementById("editFamilyField").style.display="none";   
+		document.getElementById("editFamilyLogo").classList.remove("fa-check");
+		document.getElementById("editFamilyLogo").classList.add("fa-pencil"); 
+		document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };	
+		document.getElementById("cancelEditFamilyBtn").style.display="none";
+	}
+	
+	function saveEditFamily(){
+		console.log("save");
+		var newFamilyNameVal = document.getElementById("editFamilyField").value;
+		var oldFamilyNameVal = document.getElementById("familyName").innerHTML;
+	
+		$.ajax({
+			type : "GET",
+			url : 'EditFamily',
+			dataType: "text",
+			data: { 
+				    newFamilyName: newFamilyNameVal,
+				    oldFamilyName: oldFamilyNameVal
+				  },
+			success : function(data) {
+				alert(data)
+				document.getElementById("editFamilyField").style.display="none";
+				document.getElementById("familyName").innerHTML = newFamilyNameVal; 
+				document.getElementById("familyName").style.display="block";
+				document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };		
+				document.getElementById("editFamilyLogo").classList.remove("fa-check");
+				document.getElementById("editFamilyLogo").classList.add("fa-pencil");   
+			}
+			});
+		
+	}
+	
+	</script>
 
 	<script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
