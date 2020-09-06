@@ -25,7 +25,7 @@
     <div class="jumbotron jumbotron-fluid" style="text-align:center">
 		<div class="container">
 			<h1 class="display-4">Welcome to NatPro</h1>
-			<p class="lead">This is a prototype of the program</p>
+			<!-- <p class="lead">This is a prototype of the program</p> -->
 		</div>
 	</div>
 	<div class="jumbotron jumbotron-fluid" style="text-align:center">

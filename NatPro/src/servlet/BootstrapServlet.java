@@ -71,10 +71,13 @@ public class BootstrapServlet extends HttpServlet {
 		case "/BootstrapServlet":
 			request.getRequestDispatcher("uploadprogress.jsp").forward(request, response);
 			Thread uploadThread = (Thread) request.getAttribute("thread");
-
+			try {
+				uploadThread.join();
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			Thread bThread = new Thread(() -> {
-				while (uploadThread.isAlive()) {
-				}
 				try {
 					bootstrap(request, response);
 				} catch (ServletException e) {
@@ -105,7 +108,7 @@ public class BootstrapServlet extends HttpServlet {
 	}
 
 	private void bootstrap(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException{
 		File Folder = new File(taggedFolder);
 		File[] listFiles = Folder.listFiles();
 		Reader fileReader = null;
@@ -331,8 +334,8 @@ public class BootstrapServlet extends HttpServlet {
 				}
 
 //				File validationOutput = new File(validationFolder + e1 + "-" + e2 + ".xml");
-				String hashxml = xmlFile.getName().replaceAll(".xml","");
-                File validationOutput = new File(validationFolder+hashxml+"-"+e1+"-"+e2+".xml");
+				String hashxml = xmlFile.getName().replaceAll(".xml", "");
+				File validationOutput = new File(validationFolder + hashxml + "-" + e1 + "-" + e2 + ".xml");
 				if (validationOutput.exists()) {
 					// ====================================================================================================================
 					// For validation XML
@@ -350,7 +353,7 @@ public class BootstrapServlet extends HttpServlet {
 						 * =============================================================================
 						 * ==========================
 						 */
-						Document doc = builder.parse(validationFolder+hashxml+"-"+ e1 + "-" + e2 + ".xml");
+						Document doc = builder.parse(validationFolder + hashxml + "-" + e1 + "-" + e2 + ".xml");
 						doc.getDocumentElement().normalize();
 						// System.out.println("Root element: " +
 						// doc.getDocumentElement().getNodeName());
@@ -575,7 +578,8 @@ public class BootstrapServlet extends HttpServlet {
 						Transformer transformer = transformerFactory.newTransformer();
 						DOMSource source = new DOMSource(document);
 
-						StreamResult streamResult = new StreamResult(validationFolder+hashxml+"-"+e1+"-"+e2+".xml");
+						StreamResult streamResult = new StreamResult(
+								validationFolder + hashxml + "-" + e1 + "-" + e2 + ".xml");
 						transformer.transform(source, streamResult);
 
 					} catch (Exception e) {
@@ -586,7 +590,11 @@ public class BootstrapServlet extends HttpServlet {
 				System.out.println("Finish Reading seeds : seedOutput/" + e1 + "-" + e2 + ".xml");
 
 			} // end of seeds loop
-
+			if (xmlFile.delete()) {
+				System.err.println("Deleted the file: " + xmlFile.getName());
+			} else {
+				System.err.println("Failed to delete the file.");
+			}
 		} // End of file[] Loop
 	}
 
@@ -655,7 +663,7 @@ public class BootstrapServlet extends HttpServlet {
 //		System.out.println("class1:"+class1 +" | class2:"+class2);
 		// System.out.println("running Relation");
 		// System.out.println(e1+": "+class1+";"+e2+": "+class2);
-		
+
 //		System.out.println(pLine);
 		if (pLine.contains("<" + e1 + ">" + class1 + "</" + e1 + ">")
 				&& pLine.contains("<" + e2 + ">" + class2 + "</" + e2 + ">")) {

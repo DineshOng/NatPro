@@ -122,14 +122,14 @@ public class ValidationServlet extends HttpServlet {
 			validations.add(xmlValidation);
 		}
 
-		Validation xmlValidation2 = new Validation(pdfFileName+"2");
-	
-		xmlValidation2 = findIfPresent(xmlValidation2,validations);
-		xmlValidation2.addCompounds("hellohello");
-		xmlValidation2.addCompounds("hihi");
-		xmlValidation2.addCompounds("hello2hello2");
-		xmlValidation2.addCompounds("hellohello");
-		validations.add(xmlValidation2);
+//		Validation xmlValidation2 = new Validation(pdfFileName+"2");
+//	
+//		xmlValidation2 = findIfPresent(xmlValidation2,validations);
+//		xmlValidation2.addCompounds("hellohello");
+//		xmlValidation2.addCompounds("hihi");
+//		xmlValidation2.addCompounds("hello2hello2");
+//		xmlValidation2.addCompounds("hellohello");
+//		validations.add(xmlValidation2);
 
 //		for (Validation temp : validations) {
 //			System.out.println(temp.getPdfFileName());

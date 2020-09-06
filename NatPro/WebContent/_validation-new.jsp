@@ -78,9 +78,9 @@
 					</div>
 				</div>
 		 -->
-		<a href="file:///SERVER/directory/file.ext">file.ext</a>
+
 		<div class="container">
-			<div class="row">
+<!-- 			<div class="row">
 				<div class="col-12">
 					<span>*debugging only pls hide*<br></span>
 					<button type="button" class="btn btn-primary btn-sm"
@@ -100,7 +100,7 @@
 					<button type="button" class="btn btn-primary btn-sm"
 						onclick="addEntry(7)">Family</button>
 				</div>
-			</div>
+			</div> -->
 
 
 			<form>
@@ -1171,7 +1171,7 @@
 		<c:set var="count" value="0" scope="page" />
 		<c:forEach items="${Validations.getLocation()}" var="CompoundList">
 			<script type="text/javascript">
-				  addEntry(3, "${Validations.getPdfFileName()}", "smth", "${CompoundList}");  
+				  addEntry(3, "${Validations.getPdfFileName()}", "${docunum}", "${CompoundList}");  
 			</script>
 
 			<c:if test="${not empty Validations.getSynonyms()}">
