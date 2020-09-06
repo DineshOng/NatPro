@@ -11,10 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import model.BiologicalActivity;
 import model.Compound;
 import service.OntoMngr;
 import service.OntoQuery;
@@ -141,22 +146,70 @@ public class SaveCompoundServlet extends HttpServlet {
 				 * ontoMngr.addDataPropCompound_Synonym(syn); } }
 				 */
 
-				Iterator i = set.iterator(); // get iterator
-				while (i.hasNext()) {
-					ontoMngr.addDataPropCompound_Synonym(i.next().toString().trim());
+				Iterator it = set.iterator(); // get iterator
+				while (it.hasNext()) {
+					ontoMngr.addDataPropCompound_Synonym(it.next().toString().trim());
+				}
+				
+				for(BiologicalActivity ba : compound.getBioActs()) {
+					ontoMngr.removeObjectPropertyValue(compound.getCompoundOWL(), OntoMngr.OP_hasBiologicalActivity, OntoMngr.cleanString(ba.getBiologicalActivity()));
+				}
+				
+				System.out.println("req: " + request.getParameter("bioActjson"));
+				if(!request.getParameter("bioActjson").equals("[{}]")) {
+					String bioActjson = request.getParameter("bioActjson").replaceAll("\\{\\},", "").replaceAll("\\[", "{\"json\":\\[").concat("}");
+					System.out.println("mod req: " + bioActjson);
+					
+					
+					JSONParser parser = new JSONParser();
+					JSONObject json = (JSONObject) parser.parse(bioActjson);
+					System.out.println(json);
+					
+					JSONArray msg = (JSONArray) json.get("json");
+					System.out.println(msg);
+					
+					Iterator ib = msg.iterator();
+
+					while (ib.hasNext()) {
+						JSONObject obj = (JSONObject) ib.next();
+						
+						String bioAct = (String)obj.get("bioAct");
+						System.out.println(bioAct);
+						
+						String bioActIndiv = bioAct.trim().toLowerCase().replaceAll(" ", "_");
+						// create individual for BiologicalActivity
+						ontoMngr.addIndiv_BiologicalActivity(bioActIndiv);
+						// add data property for BiologicalActivity individual
+						ontoMngr.addDataPropBiologicalActivity(bioAct);
+						// add object property Compound -> BiologicalActivity
+						ontoMngr.addObjectHasBiologicalActivity(compound.getCompoundOWL(), bioActIndiv);
+						
+						String cellLine = (String)obj.get("cellLine");
+						System.out.println(cellLine);
+						
+						if (!cellLine.equals("")) {
+							String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ", "_");
+							// create individual for CellLine
+							ontoMngr.addIndiv_CellLine(cellLineIndiv);
+							// add data property for CellLine individual
+							ontoMngr.addDataPropCellLine(cellLine);
+							// add object property BiologicalActivity -> CellLine
+							ontoMngr.addObjectAffects(bioActIndiv, cellLineIndiv);
+						}
+					}
 				}
 
 				// change indiv and dataprop name
 				if (!oldCompoundName.equals(newCompoundName)) {
 					ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), OntoMngr.cleanString(oldCompoundName),
 							OntoMngr.DP_Compound, compound.getCompoundName(), newCompoundName);
-					ontoMngr.changeNameIndividual(oldCompoundName, newCompoundName);
+					ontoMngr.changeCompoundNameIndividual(oldCompoundName, newCompoundName);
 				}
 
 				response.sendRedirect("ViewCompoundServlet?compound=" + newCompoundName);
 			}
 
-		} catch (OWLOntologyCreationException | OWLOntologyStorageException | OntologyLoadException e) {
+		} catch (OWLOntologyCreationException | OWLOntologyStorageException | OntologyLoadException | ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
