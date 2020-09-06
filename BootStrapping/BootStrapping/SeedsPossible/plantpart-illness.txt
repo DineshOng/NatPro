@@ -1,0 +1,62 @@
+e1:PlantPart
+e2:Illness
+
+bark;dysentery
+bark;malaria
+leaves;colds
+seeds;fevers
+leaves;dysentery
+fruit;asthma
+leaf;flatworms
+flowers;decoction
+leaves;decoction
+flowers;gonorrhea
+leaves;gonorrhea
+leaves;bronchitis, cancer
+leaves;for asthma
+leaves;for hypertension
+fruits;cough
+roots;cough
+leaves;affections
+roots;affections
+roots;arthritis
+roots;fevers
+roots;headaches
+roots;varicose vein
+root;diarrhea
+stem;diarrhea
+root;dysentery, frequent blood stools
+stem;dysentery, frequent blood stools
+fruit;catarrh
+fruit;urinary problem
+leaves;ear ache
+leaves;asthma
+leaves;bronchitis
+leaves;chronic cough
+leaves;rheumatism
+leaves;sore throat
+fruit;cough
+fruit;throat irritation
+roots;for hysteria
+roots;syphilis
+leaf;cancer treatment
+leaf;treatment
+seeds;for stomachaches
+leaf;fevers
+leaf;for wounds
+fruits;fever
+leaves;the treatment
+seeds;pruritic skin lesion
+leaves;burns
+bark;scorpion sting
+flowers;headaches
+seeds;headaches
+flowers;intestinal parasites
+seeds;intestinal parasites
+flower;decoction
+root;decoction
+roots;bathing feverish patients
+roots;fever
+roots;diabetes
+roots;skin swellings
+leaves;boil

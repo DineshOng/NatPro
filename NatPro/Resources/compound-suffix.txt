@@ -5,20 +5,44 @@
  methyl esters
  methyl ester
  fatty acids
+ acid esters
  fatty acid
+ acid ester
  cinnamate
+arachidin
 cinnamate
  benzoate
+ oxindole
+mangostin
+ citrate
  acetate
 phylline
 hydrazyl
+prenoids
+thusiin
+glucose
+bulbins
+osterol
+prenoid
 phyllal
+contane
 flavone
  esters
 methane
+benzyl
+atasin
+noside
+dehyde
 sterol
  ester
 xylins
+istin
+oscin
+iscin
+fural
+enone
+myrin
+lagin
 thoxy
 dione
 phyll
@@ -26,6 +50,7 @@ zoate
 ethyl
  acid
 erols
+lidol
 enols
 rides
 namic
@@ -35,17 +60,24 @@ sides
 phane
 solin
 diene
+ienol
 enol
 nate
 mate
 enol
 none
 side
+nane
 lide
+olea
 erol
+onal
 ytyl
+nine
 tate
 late
+tone
+tane
 oate
 llyl
 diol

@@ -16,6 +16,7 @@ male cone
 stem bark
 cone base
 endotesta
+peduncle
 flowers
 leaflet
 flower

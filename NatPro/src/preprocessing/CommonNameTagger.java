@@ -10,12 +10,14 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 public class CommonNameTagger extends EntityTagger {
 	private TreeSet<String> phrases;
 	private MaxentTagger mt;
-	private String englishTaggerFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\english-left3words-distsim.tagger";
-//	private String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\english-left3words-distsim.tagger";
-	public CommonNameTagger(String tag, String text) {
+	private String POSTaggerFile;
+	
+	public CommonNameTagger(String tag, String text, String filename) {
 		super(tag, text);
 		
-		mt = new MaxentTagger(englishTaggerFile);
+		this.POSTaggerFile = filename;
+		
+		mt = new MaxentTagger(POSTaggerFile);
 		phrases = new TreeSet<String>();
 	}
 	
@@ -23,8 +25,9 @@ public class CommonNameTagger extends EntityTagger {
 		String[] words = sentence.split(" ");
 		
 		String phrase = "";
+		//System.out.println(sentence);
 		for(String word: words) {
-			System.out.println(word);
+			//System.out.println(word);
         	if(word.endsWith("VBN") && ((word.contains("known") || word.contains("called")  || word.contains("marketed")))) {
         		phrase += " ";
         	} else if(phrase.length()!=0  && word.endsWith("JJ") && (phrase.trim().endsWith("NN") || phrase.trim().endsWith("NNS"))) {
@@ -60,6 +63,8 @@ public class CommonNameTagger extends EntityTagger {
 	}
 	
 	public String run() {
+		hideTaggedEntities();
+		
 		String[] sentences = text.split("\n\n");
 		
 		for(String sentence: sentences) {
@@ -76,6 +81,8 @@ public class CommonNameTagger extends EntityTagger {
 				text = text.replaceAll(s.trim(), "<" + tag + ">" + s.trim() + "</" + tag + ">");
 			}
 		}
+		
+		resolveHiddenEntities();
 		
 		return text;
 	}

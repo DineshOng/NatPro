@@ -10,6 +10,7 @@ public class Species {
 	ArrayList<SpeciesPart> speciesParts;
 	String genus;
 	String family;
+	Genus genusObj;
 
 	public Species(String specie) {
 		this.specie = StringUtils.capitalize(specie);
@@ -47,5 +48,11 @@ public class Species {
 		this.family = family;
 	}
 	
+	public Genus getGenusObj() {
+		return genusObj;
+	}
 	
+	public void setGenus(Genus genusObj) {
+		this.genusObj = genusObj;
+	}
 }

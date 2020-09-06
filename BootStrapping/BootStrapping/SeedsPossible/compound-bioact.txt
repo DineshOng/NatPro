@@ -1,0 +1,84 @@
+e1:Compound
+e2:BioAct
+
+alpha-amyrin;analgesic
+alpha-amyrin;anti-inflammatory
+alpha-amyrin cinnamate;anti-inflammatory activity
+alpha-amyrin cinnamate;inhibitory effects on Epstein-Barr virus early antigen
+beta-Amyrin;analgesic
+beta-Amyrin;anti-fungal activity against a.rabiei
+beta-Amyrin;anti-inflammatory
+beta-amyrin cinnamate;anti-inflammatory activity
+beta-amyrin cinnamate;inhibitory effects on Epstein-Barr virus early antigen
+beta-Sitosterol;anti-proliferative
+beta-Sitosterol;anti-proliferative
+beta-Sitosterol;anti-proliferative
+beta-Sitosterol;anti-proliferative
+beta-Sitosterol;decrease cell viability
+beta-Sitosterol;antioxidant
+beta-Sitosterol;cytotoxic
+beta-Sitosterol;cytotoxic
+beta-Sitosterol;cytotoxic
+beta-Sitosterol;growth inhibitory effect MDA- MB-231
+beta-Sitosterol;growth inhibitory effect on MCF-7
+beta-Sitosterol;inhibited the proliferation
+beta-Sitosterol;inhibitor
+beta-Sitosteryl-beta-D-Glucoside;antioxidant
+Coenzyme Q10;anti-proliferative effects on breast cancer cells
+Gaudichaudysolin a;HL60
+Gaudichaudysolin a;cytotoxic
+Gaudichaudysolin a;cytotoxic
+Gaudichaudysolin a;cytotoxic
+Gaudichaudysolin a;cytotoxic
+Lupenone;adipocyte differentiatio
+Lupeol;anti-fungal activity against fusarium oxysporum and penicillium notatum
+Lupeol;anti-inflammatory
+Lupeol;antiurolithiatic
+Lupeol;diuretic
+Lupeol;growth inhibition and apoptosis in SMMC7721
+Lupeol;hypotensive
+Lupeol;inhibited the proliferation of MDA-MB-231
+Lupeol acetate;hypotensive
+Lupeol cinnamate;anti-inflammatory activity
+Lupeol cinnamate;inhibitory effect on skin tumor promotion
+Lupeol cinnamate;inhibitory effects on Epstein-Barr virus early antigen
+Polyprenol;anti-proliferative
+Polyprenol;anti-proliferative
+Polyprenol;anti-proliferative
+Polyprenol;decrease cell viability
+Polyprenol;antitumor
+Polyprenol;cytotoxic
+Polyprenol;cytotoxic
+Polyprenol;cytotoxic
+Polyprenol;hepatoprotective
+Squalene;anti-proliferative
+Squalene;anti-proliferative
+Squalene;anti-proliferative
+Squalene;decrease cell viability
+Squalene;anti-proliferative effects on breast cancer cells
+Squalene;antitumor
+Squalene;control colonic aberrant crypt foci formation
+Squalene;cytotoxic
+Squalene;cytotoxic
+Squalene;cytotoxic
+Squalene;suppress colonic ACF formation and crypt multiplicity
+Stigmasterol;anti-inflammatory
+Stigmasterol;anti-proliferative
+Stigmasterol;antimutagenic
+Stigmasterol;antiosteoarthritic
+Stigmasterol;antioxidant
+Stigmasterol;cytostatic against hep-2
+Stigmasterol;cytostatic against mccoy cells
+Stigmasterol;inhibited tumour promotion in two stage carcinogenesis
+Stigmasterol;therapeutic efficacy against Ehrlich
+Tocotrienols;anti-proliferative effects on breast cancer cells
+Triacylglycerols;decrease cell viability
+Triacylglycerols;decrease cell viability MDA-MB-231
+Triglycerides;anti-proliferative
+Triglycerides;anti-proliferative
+Triglycerides;anti-proliferative
+Triglycerides;decrease cell viability
+Triglycerides;cytotoxic
+Triglycerides;cytotoxic
+Triglycerides;cytotoxic
+Ursolic acid;antioxidant

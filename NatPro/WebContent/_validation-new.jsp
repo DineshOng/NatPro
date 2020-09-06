@@ -861,6 +861,9 @@
 	    
 	    function editEntry(tValue,cValue) {
 	    	console.log(tValue + ', ' + cValue);
+	    	
+	    	var commands = document.getElementById('entryCommands' + tValue + '-' + cValue); //4-buttons
+	    	var commandsEdit = document.getElementById('entryCommandsEdit' + tValue + '-' + cValue); //1-buttons
 	    	    	
 
 	    	// finding a specific category using the tValue
@@ -894,7 +897,21 @@
 	    	/*
 	    		code to edit the specific entry using tValue and cValue
 	    	*/
+	    	//switch 4-button commands to 1-button command so that the user will remember to confirm edit
+	    	commands.hidden = true;
+	    	commandsEdit.hidden = false;
 	    	
+	    }
+	    
+	    function confirmEdit(tValue, cValue) {
+	    	//TODO: CODE INCOMPLETE, ADD CONFIRM EDIT CODE
+	    	
+	    	var commands = document.getElementById('entryCommands' + tValue + '-' + cValue); //4-buttons
+	    	var commandsEdit = document.getElementById('entryCommandsEdit' + tValue + '-' + cValue); //1-buttons
+	    	
+	    	//switch 4-button commands to 1-button command so that the user will remember to confirm edit
+	    	commands.hidden = false;
+	    	commandsEdit.hidden = true;
 	    }
 	    
 	    function addEntry(tValue, docu, docunum, val2) {
@@ -1052,10 +1069,15 @@
 										  '<input type="text" id="'+ entryCategory +'RelationObjectEdit'+ entryNum +'" name="object" style="display: none"></div>';
 	    	
 			var entryCommands 			= '<div class="col-3" style="text-align:right">' +
-											  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +','+pdfFile +')" data-toggle="" data-placement="top" title="view entry" data-target="#documentModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"class="btn btn-primary" data-target="#exampleModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
-											  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
+											  '<div id="entryCommands'+ tValue + '-' + entryNum +'">' +
+												  '<button type="button" class="btn btn-success btn-sm" onclick="approveEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="approve entry"><i class="fa fa-check" aria-hidden="true"></i></button>' +
+												  '<button type="button" class="btn btn-primary btn-sm" onclick="viewEntry('+ tValue +','+ entryNum +','+pdfFile +')" data-toggle="" data-placement="top" title="view entry" data-target="#documentModal"><i class="fa fa-eye" aria-hidden="true"></i></button>' +
+												  '<button type="button" class="btn btn-secondary btn-sm" onclick="editEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="edit entry"class="btn btn-primary" data-target="#exampleModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>' +
+												  '<button type="button" class="btn btn-danger btn-sm" onclick="rejectEntry('+ tValue +','+ entryNum +')" data-toggle="tooltip" data-placement="top" title="reject entry"><i class="fa fa-times" aria-hidden="true"></i></button>' +
+											  '</div>'+
+											  '<div id="entryCommandsEdit'+ tValue + '-' + entryNum +'" style="text-align:right" hidden>'+
+												  '<button type="button" class="btn btn-success btn-sm" onclick="confirmEdit('+ tValue +','+ entryNum +')">Confirm Edit</button>'+
+											  '</div>'+
 										  '</div>';
 	    	
     		var entryContainerClosing	= '</div>';

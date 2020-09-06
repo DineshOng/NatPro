@@ -4,13 +4,31 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CellLineRegexFormatter {
+	String filepath1;
+	String filepath2;
+	
     public static void main(String[] args) throws IOException{
-        BufferedReader reader;
-//        String cellLinesTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cell-lines.txt";
-//        String clTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt";
+        new CellLineRegexFormatter("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cell-lines.txt",
+        							"C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt")
+        							.run();
+    }
+    
+    public CellLineRegexFormatter() {
+    	
+    }
+    
+    public CellLineRegexFormatter(String filepath1, String filepath2) {
+    	this.filepath1 = filepath1;
+    	this.filepath2 = filepath2;
+    }
+    
+    public void run() throws IOException {
+    	BufferedReader reader;
+        String cellLinesTxtFile = filepath1;
+        String clTxtFile = filepath2;
         
-        String cellLinesTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cell-lines.txt";
-        String clTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cl.txt";
+//        String cellLinesTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cell-lines.txt";
+//        String clTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cl.txt";
         try {
             reader = new BufferedReader(new FileReader(cellLinesTxtFile));
             String line = reader.readLine();

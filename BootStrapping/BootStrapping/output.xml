@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+    <Tag1>species</Tag1>
+    <Tag2>location</Tag2>
+    <Relation>
+        <Pattern>belong</Pattern>
+        <Pattern>long</Pattern>
+        <Pattern>hanker</Pattern>
+        <Pattern>yearn</Pattern>
+    </Relation>
+</Seed>

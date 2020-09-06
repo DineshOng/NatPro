@@ -35,8 +35,8 @@ class Reverb(object):
         patterns = []
         patterns_tags = []
         i = 0
-        limit = len(tagged_text)-1
-        tags = tagged_text
+        limit = len(tagged_text)-1 #length of the array  [('word1', 'VBD'), ('word2', 'DT'), ('word3', 'NN')].size = 3
+        tags = tagged_text #array of tagged text [('word1', 'VBD'), ('word2', 'DT'), ('word3', 'NN')]
 
         verb = ['VB', 'VBD', 'VBD|VBN', 'VBG', 'VBG|NN', 'VBN', 'VBP',
                 'VBP|TO', 'VBZ', 'VP']
@@ -56,12 +56,12 @@ class Reverb(object):
             tmp_tags = []
 
             # a ReVerb pattern always starts with a verb
-            if tags[i][1] in verb:
+            if tags[i][1] in verb: # Find verb after the tagged entity
 
-                tmp.write(tags[i][0]+' ')
-                t = (tags[i][0], tags[i][1])
-                tmp_tags.append(t)
-                i += 1
+                tmp.write(tags[i][0]+' ') # phrase += someWord + ' '
+                t = (tags[i][0], tags[i][1]) # t = ('word1', POS)
+                tmp_tags.append(t) # append(t)
+                i += 1 #increment
 
                 # V = verb particle? adv? (also capture auxiliary verbs)
                 while i <= limit and (tags[i][1] in verb or tags[i][1] in adverb or tags[i][1] in particule):
@@ -86,7 +86,7 @@ class Reverb(object):
                     i += 1
 
                 # add the build pattern to the list collected patterns
-                patterns.append(tmp.getvalue())
+                patterns.append(tmp.getvalue()) # append phrase string
                 patterns_tags.append(tmp_tags)
             i += 1
 
