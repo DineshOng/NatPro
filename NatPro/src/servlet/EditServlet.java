@@ -1,0 +1,99 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Collection;
+import java.util.Iterator;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+
+import com.flickr4java.flickr.FlickrException;
+
+import edu.stanford.smi.protege.exception.OntologyLoadException;
+import edu.stanford.smi.protegex.owl.model.OWLIndividual;
+import edu.stanford.smi.protegex.owl.model.OWLNamedClass;
+import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
+import service.OntoMngr;
+import service.OntoQuery;
+
+/**
+ * Servlet implementation class EditServlet
+ */
+@WebServlet({ "/EditServlet", "/EditMedPlant" })
+public class EditServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public EditServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		switch (request.getServletPath()) {
+		case "/EditMedPlant":
+			try {
+				editMedPlant(request, response);
+			} catch (OWLOntologyCreationException | OWLOntologyStorageException | ServletException | IOException | SQWRLException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/EditLocation":
+			editLocation(request, response);
+			break;
+		default:
+			System.out.println("URL pattern doesn't match existing patterns.");
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+	private void editMedPlant(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException, OntologyLoadException, SQWRLException {
+		String oldMedPlantName = request.getParameter("oldMedPlantName");
+		String newMedPlantName = request.getParameter("newMedPlantName");
+		
+		//Get the individual name of the MedicinalPlant 
+		OntoQuery q = new OntoQuery();
+		String oldMedPlantNameIndiv = q.getMedPlantIndivName(oldMedPlantName);
+		
+		//Change the individual name
+		OntoMngr m = new OntoMngr();
+		m.changeNameIndividual(oldMedPlantNameIndiv, newMedPlantName);
+		
+		PrintWriter out = response.getWriter();
+		String message = "Plant Name Successfully Edited";
+		out.println(message);
+	}
+
+	private void editLocation(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+	}
+
+}

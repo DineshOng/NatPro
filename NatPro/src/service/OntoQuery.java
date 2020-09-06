@@ -35,7 +35,7 @@ public class OntoQuery {
 	public OntoQuery() throws OntologyLoadException {
 		/* Change local path */
 //		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
-		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -1588,4 +1588,32 @@ public class OntoQuery {
 		}
 		return values;
 	}
+	
+	public String getMedPlantIndivName(String medPlantName) throws SQWRLException {
+		RDFProperty datatypeProperty_MedicinalPlant = owlModel.getRDFProperty("datatypeProperty_MedicinalPlant");
+		String medPlantIndivName = null;
+//		System.out.println("Entered Get All PlantNames");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("MedicinalPlant")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						if(medPlantName.equals(individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString())) {
+							medPlantIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return medPlantIndivName;
+	}
+	
+	
 }

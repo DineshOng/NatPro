@@ -27,8 +27,25 @@
 	<!-- INCLUDE NAV BAR HTML -->
 	<%@include file="navbarnix.html"%>
 
-	<div class="jumbotron bg-success">		
-		<h1 class="display-4 text-white text-center">${medPlantsList.get(0).getMedicinalPlant()}</h1>
+	<div class="jumbotron bg-success">
+		<div class="d-flex justify-content-center">
+			<h1 class="display-4 text-white" style="display: block">
+				<p id="medPlantName">${medPlantsList.get(0).getMedicinalPlant()}</p>
+			</h1>
+			<input class="form-control w-auto h-25 mt-3" type="text"
+				id="editMedPlantField" name="editMedPlantName" style="display: none"
+				required>
+			<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3"
+				onclick="editMedPlant()" data-toggle="tooltip" data-placement="top"
+				title="edit entry" class="btn btn-primary" id="editMedPlantBtn">
+				<i class="fa fa-pencil" aria-hidden="true" id="editMedPlantLogo"></i>
+			</button>
+			<button type="button" class="btn btn-outline-danger btn-sm h-25 mt-3"
+				onclick="cancelEditMedPlant()" data-toggle="tooltip" data-placement="top"
+				title="edit entry" class="btn btn-primary" id="cancelEditMedPlantBtn" style="display:none">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+		</div>
 		<h3 class="text-white text-center">Plant</h3>
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
@@ -38,8 +55,7 @@
 			aria-controls="TaxonomicInformation">Taxonomic Information</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-profile-list" data-toggle="list" href="#plantName"
-			role="tab" aria-controls="ScientificName">Scientific
-			Name(s)</a> <a
+			role="tab" aria-controls="ScientificName">Scientific Name(s)</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-messages-list" data-toggle="list" href="#location"
 			role="tab" aria-controls="Location">Location(s)</a> <a
@@ -100,7 +116,8 @@
 							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
 								var="speciesList">
 								<tr>
-									<td><a href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}"><i>${speciesList.getSpecie()}</i></a></td>
+									<td><a
+										href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}"><i>${speciesList.getSpecie()}</i></a></td>
 								</tr>
 							</c:forEach>
 						</tr>
@@ -254,6 +271,57 @@
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
 
+
+	<script type="text/javascript">
+	function editMedPlant(){
+		console.log("edit");
+		document.getElementById("medPlantName").style.display="none";
+		document.getElementById("editMedPlantField").value = document.getElementById("medPlantName").innerHTML;
+		document.getElementById("editMedPlantField").style.display="block";
+		document.getElementById("editMedPlantBtn").onclick = function () { saveEditMedPlant(); };
+		document.getElementById("editMedPlantLogo").classList.remove("fa-pencil");
+		document.getElementById("editMedPlantLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelEditMedPlantBtn").style.display="block";
+	}
+	
+	function cancelEditMedPlant(){
+		console.log("cancel");
+		document.getElementById("medPlantName").style.display="block";
+		document.getElementById("editMedPlantField").style.display="none";   
+		document.getElementById("editMedPlantLogo").classList.remove("fa-check");
+		document.getElementById("editMedPlantLogo").classList.add("fa-pencil"); 
+		document.getElementById("editMedPlantBtn").onclick = function () { editMedPlant(); };	
+		document.getElementById("cancelEditMedPlantBtn").style.display="none";
+	}
+	
+	function saveEditMedPlant(){
+		console.log("save");
+		var newMedPlantNameVal = document.getElementById("editMedPlantField").value;
+		var oldMedPlantNameVal = document.getElementById("medPlantName").innerHTML;
+	
+		$.ajax({
+			type : "GET",
+			url : 'EditMedPlant',
+			dataType: "text",
+			data: { 
+				    newMedPlantName: newMedPlantNameVal,
+				    oldMedPlantName: oldMedPlantNameVal
+				  },
+			success : function(data) {
+				alert(data)
+				document.getElementById("editMedPlantField").style.display="none";
+				document.getElementById("medPlantName").innerHTML = newMedPlantNameVal; 
+				document.getElementById("medPlantName").style.display="block";
+				document.getElementById("editMedPlantBtn").onclick = function () { editMedPlant(); };		
+				document.getElementById("editMedPlantLogo").classList.remove("fa-check");
+				document.getElementById("editMedPlantLogo").classList.add("fa-pencil");   
+			}
+			});
+		
+	}
+	
+	</script>
 
 	<script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
