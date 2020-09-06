@@ -1615,5 +1615,83 @@ public class OntoQuery {
 		return medPlantIndivName;
 	}
 	
+	public String getFamilyIndivName(String familyName) throws SQWRLException {
+		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
+		String familyIndivName = null;
+//		System.out.println("Entered Get All PlantNames");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Family")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						if(familyName.equals(individual.getPropertyValue(datatypeProperty_Family).toString())) {
+							familyIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return familyIndivName;
+	}
+	
+	public String getGenusIndivName(String genusName) throws SQWRLException {
+		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
+		String genusIndivName = null;
+//		System.out.println("Entered Get All PlantNames");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Genus")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						if(genusName.equals(individual.getPropertyValue(datatypeProperty_Genus).toString())) {
+							genusIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return genusIndivName;
+	}
+	
+	public String getSpeciesIndivName(String sciName) throws SQWRLException {
+		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
+		String sciNameIndivName = null;
+//		System.out.println("Entered Get All PlantNames");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Species")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						if(sciName.equals(individual.getPropertyValue(datatypeProperty_Synonym).toString())) {
+							sciNameIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return sciNameIndivName;
+	}
+	
 	
 }

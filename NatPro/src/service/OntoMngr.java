@@ -7,10 +7,13 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collections;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
+import org.semanticweb.owlapi.util.OWLEntityRemover;
+import org.semanticweb.owlapi.util.OWLEntityRenamer;
 import org.semanticweb.owlapi.vocab.OWL2Datatype;
 
 public class OntoMngr {
@@ -82,11 +85,13 @@ public class OntoMngr {
 	public OntoMngr() throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// loadOntology();
 		owlManager = OWLManager.createOWLOntologyManager();
-		//owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl"); // user defined
+		
+		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
+		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl"); // user defined
 
-		owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+//		owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 
-		owlFile = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl");
+//		owlFile = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl");
 
 		// load the ontology
 		owlOntology = owlManager.loadOntologyFromOntologyDocument(owlFile);
@@ -155,8 +160,24 @@ public class OntoMngr {
 		content = content.replaceAll(str1, str2);
 		 */
 		
+		//Compound
 		str1 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
 		str2 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
+		content = content.replaceAll(str1, str2);
+		
+		//Genus
+		str1 = "<belongsToGenus rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
+		str2 = "<belongsToGenus rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
+		content = content.replaceAll(str1, str2);
+		
+		//Family
+		str1 = "<belongsToFamily rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
+		str2 = "<belongsToFamily rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
+		content = content.replaceAll(str1, str2);
+		
+		//Scientific Name
+		str1 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
+		str2 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
 		content = content.replaceAll(str1, str2);
 
 		Files.write(path, content.getBytes(charset));
@@ -841,7 +862,8 @@ public class OntoMngr {
 		owlManager.applyChange(axiomObjectProp);
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
-
+	
+	
 	public OWLClass getMedPlantClass() {
 		return medPlantClass;
 	}

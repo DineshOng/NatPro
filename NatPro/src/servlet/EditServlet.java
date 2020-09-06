@@ -26,7 +26,7 @@ import service.OntoQuery;
 /**
  * Servlet implementation class EditServlet
  */
-@WebServlet({ "/EditServlet", "/EditMedPlant" })
+@WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamily", "/EditGenus", "/EditSciName" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -50,13 +50,38 @@ public class EditServlet extends HttpServlet {
 		case "/EditMedPlant":
 			try {
 				editMedPlant(request, response);
-			} catch (OWLOntologyCreationException | OWLOntologyStorageException | ServletException | IOException | SQWRLException | OntologyLoadException e) {
+			} catch (OWLOntologyCreationException | OWLOntologyStorageException | ServletException | IOException
+					| SQWRLException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			break;
-		case "/EditLocation":
-			editLocation(request, response);
+		case "/EditFamily":
+			try {
+				editFamily(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/EditGenus":
+			try {
+				editGenus(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/EditSciName":
+			try {
+				editSciName(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
@@ -74,25 +99,77 @@ public class EditServlet extends HttpServlet {
 	}
 
 	private void editMedPlant(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException, OntologyLoadException, SQWRLException {
+			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException,
+			OntologyLoadException, SQWRLException {
 		String oldMedPlantName = request.getParameter("oldMedPlantName");
 		String newMedPlantName = request.getParameter("newMedPlantName");
-		
-		//Get the individual name of the MedicinalPlant 
+
+		// Get the individual name of the MedicinalPlant
 		OntoQuery q = new OntoQuery();
 		String oldMedPlantNameIndiv = q.getMedPlantIndivName(oldMedPlantName);
-		
-		//Change the individual name
+
+		// Change the individual name
 		OntoMngr m = new OntoMngr();
 		m.changeNameIndividual(oldMedPlantNameIndiv, newMedPlantName);
-		
+
 		PrintWriter out = response.getWriter();
 		String message = "Plant Name Successfully Edited";
 		out.println(message);
 	}
 
-	private void editLocation(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	private void editFamily(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException,
+			OntologyLoadException, SQWRLException {
+		String oldFamilyName = request.getParameter("oldFamilyName");
+		String newFamilyName = request.getParameter("newFamilyName");
+
+		// Get the individual name of the MedicinalPlant
+		OntoQuery q = new OntoQuery();
+		String oldFamilyNameIndiv = q.getFamilyIndivName(oldFamilyName);
+
+		// Change the individual name
+		OntoMngr m = new OntoMngr();
+		m.changeNameIndividual(oldFamilyNameIndiv, newFamilyName);
+
+		PrintWriter out = response.getWriter();
+		String message = "Family Name Successfully Edited";
+		out.println(message);
+	}
+
+	private void editGenus(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException, OWLOntologyStorageException, SQWRLException {
+		String oldGenusName = request.getParameter("oldGenusName");
+		String newGenusName = request.getParameter("newGenusName");
+
+		// Get the individual name of the MedicinalPlant
+		OntoQuery q = new OntoQuery();
+		String oldGenusNameIndiv = q.getGenusIndivName(oldGenusName);
+
+		// Change the individual name
+		OntoMngr m = new OntoMngr();
+		m.changeNameIndividual(oldGenusNameIndiv, newGenusName);
+
+		PrintWriter out = response.getWriter();
+		String message = "Genus Name Successfully Edited";
+		out.println(message);
+	}
+
+	private void editSciName(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException, OWLOntologyStorageException, SQWRLException {
+		String oldSciName = request.getParameter("oldSciName");
+		String newSciName = request.getParameter("newSciName");
+
+		// Get the individual name of the MedicinalPlant
+		OntoQuery q = new OntoQuery();
+		String oldSciNameIndiv = q.getSpeciesIndivName(oldSciName);
+
+		// Change the individual name
+		OntoMngr m = new OntoMngr();
+		m.changeNameIndividual(oldSciNameIndiv, newSciName);
+
+		PrintWriter out = response.getWriter();
+		String message = "Scientific Name Successfully Edited";
+		out.println(message);
 
 	}
 

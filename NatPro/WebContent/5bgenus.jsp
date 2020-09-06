@@ -28,7 +28,26 @@
 	<%@include file="navbarnix.html"%>
 
 	<div class="jumbotron bg-success">
-		<h1 class="display-4 text-white text-center">${genus}</h1>
+		<div class="d-flex justify-content-center">
+			<h1 class="display-4 text-white" style="display: block">
+				<p id="genusName">${genus}</p>
+			</h1>
+			<input class="form-control w-auto h-25 mt-3" type="text"
+				id="editGenusField" name="editGenusName" style="display: none"
+				required>
+			<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3"
+				onclick="editGenus()" data-toggle="tooltip" data-placement="top"
+				title="edit entry" class="btn btn-primary" id="editGenusBtn">
+				<i class="fa fa-pencil" aria-hidden="true" id="editGenusLogo"></i>
+			</button>
+			<button type="button" class="btn btn-outline-danger btn-sm h-25 mt-3"
+				onclick="cancelEditGenus()" data-toggle="tooltip"
+				data-placement="top" title="edit entry" class="btn btn-primary"
+				id="cancelEditGenusBtn" style="display: none">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+		</div>
+
 		<h3 class="text-white text-center">Genus</h3>
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
@@ -70,6 +89,56 @@
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
 
+	<script type="text/javascript">
+	function editGenus(){
+		console.log("edit");
+		document.getElementById("genusName").style.display="none";
+		document.getElementById("editGenusField").value = document.getElementById("genusName").innerHTML;
+		document.getElementById("editGenusField").style.display="block";
+		document.getElementById("editGenusBtn").onclick = function () { saveEditGenus(); };
+		document.getElementById("editGenusLogo").classList.remove("fa-pencil");
+		document.getElementById("editGenusLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelEditGenusBtn").style.display="block";
+	}
+	
+	function cancelEditGenus(){
+		console.log("cancel");
+		document.getElementById("genusName").style.display="block";
+		document.getElementById("editGenusField").style.display="none";   
+		document.getElementById("editGenusLogo").classList.remove("fa-check");
+		document.getElementById("editGenusLogo").classList.add("fa-pencil"); 
+		document.getElementById("editGenusBtn").onclick = function () { editGenus(); };	
+		document.getElementById("cancelEditGenusBtn").style.display="none";
+	}
+	
+	function saveEditGenus(){
+		console.log("save");
+		var newGenusNameVal = document.getElementById("editGenusField").value;
+		var oldGenusNameVal = document.getElementById("genusName").innerHTML;
+	
+		$.ajax({
+			type : "GET",
+			url : 'EditGenus',
+			dataType: "text",
+			data: { 
+				    newGenusName: newGenusNameVal,
+				    oldGenusName: oldGenusNameVal
+				  },
+			success : function(data) {
+				alert(data)
+				document.getElementById("editGenusField").style.display="none";
+				document.getElementById("genusName").innerHTML = newGenusNameVal; 
+				document.getElementById("genusName").style.display="block";
+				document.getElementById("editGenusBtn").onclick = function () { editGenus(); };		
+				document.getElementById("editGenusLogo").classList.remove("fa-check");
+				document.getElementById("editGenusLogo").classList.add("fa-pencil");   
+			}
+			});
+		
+	}
+	
+	</script>
 
 	<script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
