@@ -203,7 +203,7 @@ public class SaveCompoundServlet extends HttpServlet {
 				if (!oldCompoundName.equals(newCompoundName)) {
 					ontoMngr.changeDataProperty(ontoMngr.getCompoundClass(), OntoMngr.cleanString(oldCompoundName),
 							OntoMngr.DP_Compound, compound.getCompoundName(), newCompoundName);
-					ontoMngr.changeCompoundNameIndividual(oldCompoundName, newCompoundName);
+					ontoMngr.changeNameIndividual(oldCompoundName, newCompoundName);
 				}
 
 				response.sendRedirect("ViewCompoundServlet?compound=" + newCompoundName);

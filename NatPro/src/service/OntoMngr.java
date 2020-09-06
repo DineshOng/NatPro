@@ -47,6 +47,10 @@ public class OntoMngr {
 	public static String DP_HBondDonor = "datatypeProperty_HBondDonorCount";
 	public static String DP_HBondAcceptor = "datatypeProperty_HBondAcceptorCount";
 	public static String DP_RotatableBond = "datatypeProperty_RotatableBondCount";
+	
+	/* Object Properties */
+	public static String OP_hasBiologicalActivity = "hasBiologicalActivity";
+	public static String OP_affects = "affects";
 
 	private OWLOntology owlOntology;
 	private OWLOntologyManager owlManager;
@@ -179,8 +183,24 @@ public class OntoMngr {
 		str1 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
 		str2 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
 		content = content.replaceAll(str1, str2);
+		
 
 		Files.write(path, content.getBytes(charset));
+	}
+	
+	public void removeObjectPropertyValue(String indivName, String objPropName, String oldVal) throws OWLOntologyStorageException {
+		if(oldVal != null) {
+			OWLIndividual indiv = owlFact.getOWLNamedIndividual("#" + indivName.trim(), pm);
+			OWLIndividual oldIndiv = owlFact.getOWLNamedIndividual("#" + oldVal.trim(), pm);
+			//OWLObjectProperty objProp = owlFact.getOWLObjectProperty("#" + objPropName, pm);
+			
+			OWLObjectPropertyExpression objProp = owlFact.getOWLObjectProperty("#" + objPropName, pm);
+			
+			OWLObjectPropertyAssertionAxiom opa = owlFact.getOWLObjectPropertyAssertionAxiom(objProp, indiv, oldIndiv);
+			RemoveAxiom r = new RemoveAxiom(owlOntology, opa);
+			owlManager.applyChange(r);
+			owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+		}
 	}
 
 	public void removeDataPropertyValue(String indivName, String datapropName, String oldVal) throws OWLOntologyStorageException {
