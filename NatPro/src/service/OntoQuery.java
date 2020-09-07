@@ -1625,7 +1625,7 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(medPlantName.toLowerCase().equals(individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString().toLowerCase())) {
+						if(medPlantName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString().toLowerCase())) {
 							medPlantIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1651,7 +1651,7 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(familyName.toLowerCase().equals(individual.getPropertyValue(datatypeProperty_Family).toString().toLowerCase())) {
+						if(familyName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Family).toString())) {
 							familyIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1677,7 +1677,7 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(genusName.toLowerCase().equals(individual.getPropertyValue(datatypeProperty_Genus).toString().toLowerCase())) {
+						if(genusName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Genus).toString().toLowerCase())) {
 							genusIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1703,7 +1703,7 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(sciName.toLowerCase().equals(individual.getPropertyValue(datatypeProperty_Synonym).toString().toLowerCase())) {
+						if(sciName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Synonym).toString().toLowerCase())) {
 							sciNameIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +27,8 @@ import service.OntoQuery;
 /**
  * Servlet implementation class EditServlet
  */
-@WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditGenusName", "/EditSciName" })
+@WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
+		"/EditSciName" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -59,6 +61,15 @@ public class EditServlet extends HttpServlet {
 		case "/EditFamilyName":
 			try {
 				editFamilyName(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/EditFamily":
+			try {
+				editFamily(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -124,6 +135,55 @@ public class EditServlet extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			String message = "Edit Unsuccessful, Plant Name Already Exists!";
 			out.println(message);
+		}
+	}
+
+	private void editFamily(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException,
+			OntologyLoadException, SQWRLException {
+		String oldFamily = request.getParameter("oldFamilyVal");
+		String newFamily = request.getParameter("newFamilyVal");
+
+		System.out.println(oldFamily);
+		System.out.println(newFamily);
+
+		OntoQuery q = new OntoQuery();
+		String oldFamilyIndiv = q.getFamilyIndivName(oldFamily);
+		List<String> genus = q.getAllGenus();
+		List<String> families = q.getAllFamily();
+		System.out.println(families);
+
+		// check if new family indiv already exists, if not create new indiv
+		boolean createNewIndiv = false;
+		for (String family : families) {
+			if (family.equalsIgnoreCase(newFamily.toLowerCase())) {
+				createNewIndiv = false;
+			} else {
+				createNewIndiv = true;
+			}
+		}
+
+		OntoMngr m = new OntoMngr();
+		if (createNewIndiv) {
+			m.addIndiv_Family(m.cleanString(newFamily));
+			m.addDataPropFamily(newFamily);
+
+		} else {
+			String FamilyIndiv = q.getFamilyIndivName(newFamily);
+			m.setFamilyIndiv(FamilyIndiv);
+		}
+
+		// Get the genus of the old family to be updated
+		for (int i = 0; i < genus.size(); i++) {
+			String genusIndiv = q.getGenusIndivName(genus.get(i));
+			System.out.println(genusIndiv);
+			List<String> genusToFamily = q.getGenusFamily(genus.get(i));
+			System.out.println(genusToFamily);
+			if (genusToFamily.contains(oldFamily)) {
+				m.removeObjectPropertyValue(genusIndiv, "belongsToFamily", oldFamilyIndiv);
+				m.addObjectBelongsToFamily(genusIndiv, m.cleanString(newFamily));
+			}
+
 		}
 	}
 

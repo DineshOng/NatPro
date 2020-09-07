@@ -92,7 +92,10 @@
 						<tr>
 							<th>Family</th>
 							<td class="center"><a id="family" style="display: inline"
-								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">${medPlantsList.get(0).getSpecies().get(0).getFamily()}</a>
+								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">
+									<p style="display: inline;" id="familyName">${medPlantsList.get(0).getSpecies().get(0).getFamily()}
+									</p>
+							</a>
 								<div class="autocomplete" style="width: 300px; display: none"
 									id="familyInputDiv">
 									<input type="text" id="familyInput" name="family"
@@ -323,7 +326,7 @@
 			families.push("${family}")
 		</script>
 	</c:forEach>
-	
+
 	<c:forEach items="${genusList}" var="genus">
 		<script>
 			genus.push("${genus}")
@@ -389,9 +392,11 @@
 	<script type="text/javascript">
 	function editFamily(){
 		document.getElementById("family").style.display="none";
-		document.getElementById("familyInput").value = document.getElementById("family").innerHTML;
+		document.getElementById("familyInput").value = document.getElementById("familyName").innerHTML.trim();
 		document.getElementById("familyInputDiv").style.display= "inline";
 		document.getElementById("editFamilyBtn").onclick = function () { saveFamily(); };
+		document.getElementById("editFamilyBtn").classList.remove("btn-outline-dark");
+		document.getElementById("editFamilyBtn").classList.add("btn-success");
 		document.getElementById("editFamilyLogo").classList.remove("fa-pencil");
 		document.getElementById("editFamilyLogo").classList.add("fa-check");  
 		
@@ -403,39 +408,41 @@
 		document.getElementById("familyInputDiv").style.display="none";   
 		document.getElementById("editFamilyLogo").classList.remove("fa-check");
 		document.getElementById("editFamilyLogo").classList.add("fa-pencil"); 
-		document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };	
+		document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };
+		document.getElementById("editFamilyBtn").classList.remove("btn-success");
+		document.getElementById("editFamilyBtn").classList.add("btn-outline-dark");
 		document.getElementById("cancelEditFamilyBtn").style.visibility="hidden";
 	}
 	
 	function saveFamily(){
-		var newMedPlantNameVal = document.getElementById("familyInput").value;
-		var oldMedPlantNameVal = document.getElementById("family").innerHTML;
+		var newFamilyVal = document.getElementById("familyInput").value;
+		var oldFamilyVal = document.getElementById("familyName").innerHTML.trim();
 	
-		console.log(newMedPlantNameVal);
-		console.log(oldMedPlantNameVal);
-/* 		$.ajax({
+ 		$.ajax({
 			type : "GET",
-			url : 'EditMedPlant',
+			url : 'EditFamily',
 			dataType: "text",
 			data: { 
-				    newMedPlantName: newMedPlantNameVal,
-				    oldMedPlantName: oldMedPlantNameVal
+				newFamilyVal: newFamilyVal,
+				oldFamilyVal: oldFamilyVal
 				  },
 			success : function(data) {
 				alert(data)
-				if(data.trim() == "Plant Name Successfully Edited"){
-					document.getElementById("editMedPlantField").style.display="none";
-					document.getElementById("medPlantName").innerHTML = newMedPlantNameVal; 
-					document.getElementById("medPlantName").style.display="block";
-					document.getElementById("editMedPlantBtn").onclick = function () { editMedPlant(); };		
-					document.getElementById("editMedPlantLogo").classList.remove("fa-check");
-					document.getElementById("editMedPlantLogo").classList.add("fa-pencil"); 
-					document.getElementById("cancelEditMedPlantBtn").style.display="none";
+				if(data.trim() == "Family Successfully Edited"){
+					document.getElementById("familyInputDiv").style.display="none";
+					document.getElementById("familyName").innerHTML = newFamilyVal; 
+					document.getElementById("family").style.display="inline";
+					document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };	
+					document.getElementById("editFamilyBtn").classList.remove("btn-success");
+					document.getElementById("editFamilyBtn").classList.add("btn-outline-dark");
+					document.getElementById("editFamilyLogo").classList.remove("fa-check");
+					document.getElementById("editFamilyLogo").classList.add("fa-pencil"); 
+					document.getElementById("cancelEditFamilyBtn").style.visibility="hidden";
 				}else{
-					cancelEditMedPlant();
+					cancelEditFamily();
 				}
 			}
-			}); */
+			}); 
 		
 	}
 	</script>
@@ -446,6 +453,8 @@
 		document.getElementById("genusInput").value = document.getElementById("genus").innerHTML;
 		document.getElementById("genusInputDiv").style.display= "inline";
 		document.getElementById("editGenusBtn").onclick = function () { saveGenus(); };
+		document.getElementById("editGenusBtn").classList.remove("btn-outline-dark");
+		document.getElementById("editGenusBtn").classList.add("btn-success");
 		document.getElementById("editGenusLogo").classList.remove("fa-pencil");
 		document.getElementById("editGenusLogo").classList.add("fa-check");  
 		
@@ -458,6 +467,8 @@
 		document.getElementById("editGenusLogo").classList.remove("fa-check");
 		document.getElementById("editGenusLogo").classList.add("fa-pencil"); 
 		document.getElementById("editGenusBtn").onclick = function () { editGenus(); };	
+		document.getElementById("editGenusBtn").classList.remove("btn-success");
+		document.getElementById("editGenusBtn").classList.add("btn-outline-dark");
 		document.getElementById("cancelEditGenusBtn").style.visibility="hidden";
 	}
 	

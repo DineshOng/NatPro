@@ -203,7 +203,7 @@ public class OntoMngr {
 			OWLIndividual indiv = owlFact.getOWLNamedIndividual("#" + indivName.trim(), pm);
 			OWLIndividual oldIndiv = owlFact.getOWLNamedIndividual("#" + oldVal.trim(), pm);
 			//OWLObjectProperty objProp = owlFact.getOWLObjectProperty("#" + objPropName, pm);
-			
+						
 			OWLObjectPropertyExpression objProp = owlFact.getOWLObjectProperty("#" + objPropName, pm);
 			
 			OWLObjectPropertyAssertionAxiom opa = owlFact.getOWLObjectPropertyAssertionAxiom(objProp, indiv, oldIndiv);
