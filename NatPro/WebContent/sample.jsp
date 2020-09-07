@@ -18,6 +18,8 @@
 <link rel="stylesheet" type="text/css"
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+<link href="css/autocomplete.css" type="text/css" rel="stylesheet"
+	media="screen,projection" />
 
 <title>NatPro : ${searchKey}</title>
 </head>
@@ -25,10 +27,12 @@
 
 	<%@include file="navbarnix.html"%>
 	<!-- HTML CODE -->
-	<form>
-		<label id="fname1" for="fname">EDIT THIS </label><input type="text"
-			id="fname" name="fname" style="display: none"> <input
-			type="button" value="EDIT" onclick="edit()">
+	<form autocomplete="off" action="/action_page.php">
+		<div class="autocomplete" style="width: 300px;">
+			<input id="familyInput" type="text" name="family"
+				placeholder="Family">
+		</div>
+		<input type="submit">
 	</form>
 	<!-- 	
 	<input type="text" id="lname" name="lname"> -->
@@ -36,50 +40,20 @@
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+
 	<script>
-	function edit(){
-		document.getElementById("fname").style.display="block";
-		document.getElementById("fname").value = document.getElementById("fname1").innerHTML;
-		var element = document.getElementById("fname1");
-	    element.parentNode.removeChild(element);
-		/* document.getElementById("fname1").style.display="none"; */
-	}
+	/* An array containing all the country names in the world: */
+	var countries = ["bark", "leaf", "root", "sclerosta" ];
+	
+	/*
+	 * initiate the autocomplete function on the "myInput" element, and pass along
+	 * the countries array as possible autocomplete values:
+	 */
+	autocomplete(document.getElementById("familyInput"), countries); 
 	</script>
-
-	<!-- 	<script>
-	$( document ).ready(function() {
-		$.ajax({
-			type : "GET",
-			url : 'SampleServlet',
-			dataType: "text",
-			success : function(data) {
-			document.getElementById("header").innerHTML = "Document Upload Successful!";
-				console.log(data);
-			}
-			});
-	});
-
-	</script> -->
-	<script>
-	function ajaxAsyncRequest(){
-/*  		alert("Please wait while processing data");  */
-		document.getElementById("uploadForm").style.display = "none";  
-		document.getElementById("progressView").style.display = "block";  
-		$.ajax({
-			type : "GET",
-			url : 'SampleServlet',
-			dataType: "text",
-			success : function(data) {
-				data;
-				/* document.getElementById("bar2").style.width = data+"%"; */
-			/* 	document.getElementById("bar2").style.width = "100%"; */
-			/* uploadProgress(); */
-				console.log(data);
-			}
-			});
-	}
-	</script>
-
+	
+	
 	<script type="text/javascript">
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();

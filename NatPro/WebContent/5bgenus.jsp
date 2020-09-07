@@ -119,7 +119,7 @@
 	
 		$.ajax({
 			type : "GET",
-			url : 'EditGenus',
+			url : 'EditGenusName',
 			dataType: "text",
 			data: { 
 				    newGenusName: newGenusNameVal,

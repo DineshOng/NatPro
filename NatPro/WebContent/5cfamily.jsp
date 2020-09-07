@@ -118,7 +118,7 @@
 	
 		$.ajax({
 			type : "GET",
-			url : 'EditFamily',
+			url : 'EditFamilyName',
 			dataType: "text",
 			data: { 
 				    newFamilyName: newFamilyNameVal,

@@ -26,7 +26,7 @@ import service.OntoQuery;
 /**
  * Servlet implementation class EditServlet
  */
-@WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamily", "/EditGenus", "/EditSciName" })
+@WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditGenusName", "/EditSciName" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -56,18 +56,18 @@ public class EditServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			break;
-		case "/EditFamily":
+		case "/EditFamilyName":
 			try {
-				editFamily(request, response);
+				editFamilyName(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			break;
-		case "/EditGenus":
+		case "/EditGenusName":
 			try {
-				editGenus(request, response);
+				editGenusName(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -127,7 +127,7 @@ public class EditServlet extends HttpServlet {
 		}
 	}
 
-	private void editFamily(HttpServletRequest request, HttpServletResponse response)
+	private void editFamilyName(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException,
 			OntologyLoadException, SQWRLException {
 		String oldFamilyName = request.getParameter("oldFamilyName");
@@ -156,7 +156,7 @@ public class EditServlet extends HttpServlet {
 		}
 	}
 
-	private void editGenus(HttpServletRequest request, HttpServletResponse response)
+	private void editGenusName(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
 			OWLOntologyStorageException, SQWRLException {
 		String oldGenusName = request.getParameter("oldGenusName");

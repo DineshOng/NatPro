@@ -21,6 +21,8 @@
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
+<link href="css/autocomplete.css" type="text/css" rel="stylesheet"
+	media="screen,projection" />
 <title>NatPro : ${searchKey}</title>
 </head>
 <body>
@@ -78,7 +80,7 @@
 		<div class="tab-pane fade show active" id="taxInfo" role="tabpanel"
 			aria-labelledby="list-home-list">
 			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25">
+				<table class="table table-hover w-auto">
 					<thead>
 						<tr>
 							<td>
@@ -89,13 +91,47 @@
 					<tbody>
 						<tr>
 							<th>Family</th>
-							<td class="center"><a
-								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">${medPlantsList.get(0).getSpecies().get(0).getFamily()}</a></td>
+							<td class="center"><a id="family" style="display: inline"
+								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">${medPlantsList.get(0).getSpecies().get(0).getFamily()}</a>
+								<div class="autocomplete" style="width: 300px; display: none"
+									id="familyInputDiv">
+									<input type="text" id="familyInput" name="family"
+										placeholder="Family">
+								</div>
+								<button type="button" class="btn btn-outline-dark btn-sm "
+									onclick="editFamily()" data-toggle="tooltip"
+									data-placement="top" title="edit entry" class="btn btn-primary"
+									id="editFamilyBtn">
+									<i class="fa fa-pencil" aria-hidden="true" id="editFamilyLogo"></i>
+								</button>
+								<button type="button" class="btn btn-outline-danger btn-sm"
+									onclick="cancelEditFamily()" data-toggle="tooltip"
+									data-placement="top" title="edit entry" class="btn btn-primary"
+									id="cancelEditFamilyBtn" style="visibility: hidden">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button></td>
 						</tr>
 						<tr>
 							<th>Genus</th>
-							<td class="center"><a
-								href="ViewGenusServlet?genus=${medPlantsList.get(0).getSpecies().get(0).getGenus()}">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</a></td>
+							<td class="center"><a id="genus" style="display: inline"
+								href="ViewGenusServlet?genus=${medPlantsList.get(0).getSpecies().get(0).getGenus()}">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</a>
+								<div class="autocomplete" style="width: 300px; display: none"
+									id="genusInputDiv">
+									<input type="text" id="genusInput" name="genus"
+										placeholder="Genus">
+								</div>
+								<button type="button" class="btn btn-outline-dark btn-sm "
+									onclick="editGenus()" data-toggle="tooltip"
+									data-placement="top" title="edit entry" class="btn btn-primary"
+									id="editGenusBtn">
+									<i class="fa fa-pencil" aria-hidden="true" id="editGenusLogo"></i>
+								</button>
+								<button type="button" class="btn btn-outline-danger btn-sm"
+									onclick="cancelEditGenus()" data-toggle="tooltip"
+									data-placement="top" title="edit entry" class="btn btn-primary"
+									id="cancelEditGenusBtn" style="visibility: hidden">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -272,6 +308,27 @@
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
 
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+
+
+	<script>	
+		var families = [];
+		var genus = [];
+		autocomplete(document.getElementById("familyInput"), families); 
+		autocomplete(document.getElementById("genusInput"), genus); 
+	</script>
+
+	<c:forEach items="${familyList}" var="family">
+		<script>
+			families.push("${family}")
+		</script>
+	</c:forEach>
+	
+	<c:forEach items="${genusList}" var="genus">
+		<script>
+			genus.push("${genus}")
+		</script>
+	</c:forEach>
 
 	<script type="text/javascript">
 	function editMedPlant(){
@@ -328,6 +385,115 @@
 	}
 	
 	</script>
+
+	<script type="text/javascript">
+	function editFamily(){
+		document.getElementById("family").style.display="none";
+		document.getElementById("familyInput").value = document.getElementById("family").innerHTML;
+		document.getElementById("familyInputDiv").style.display= "inline";
+		document.getElementById("editFamilyBtn").onclick = function () { saveFamily(); };
+		document.getElementById("editFamilyLogo").classList.remove("fa-pencil");
+		document.getElementById("editFamilyLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelEditFamilyBtn").style.visibility="visible";
+	}
+	
+	function cancelEditFamily(){
+		document.getElementById("family").style.display="inline";
+		document.getElementById("familyInputDiv").style.display="none";   
+		document.getElementById("editFamilyLogo").classList.remove("fa-check");
+		document.getElementById("editFamilyLogo").classList.add("fa-pencil"); 
+		document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };	
+		document.getElementById("cancelEditFamilyBtn").style.visibility="hidden";
+	}
+	
+	function saveFamily(){
+		var newMedPlantNameVal = document.getElementById("familyInput").value;
+		var oldMedPlantNameVal = document.getElementById("family").innerHTML;
+	
+		console.log(newMedPlantNameVal);
+		console.log(oldMedPlantNameVal);
+/* 		$.ajax({
+			type : "GET",
+			url : 'EditMedPlant',
+			dataType: "text",
+			data: { 
+				    newMedPlantName: newMedPlantNameVal,
+				    oldMedPlantName: oldMedPlantNameVal
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Plant Name Successfully Edited"){
+					document.getElementById("editMedPlantField").style.display="none";
+					document.getElementById("medPlantName").innerHTML = newMedPlantNameVal; 
+					document.getElementById("medPlantName").style.display="block";
+					document.getElementById("editMedPlantBtn").onclick = function () { editMedPlant(); };		
+					document.getElementById("editMedPlantLogo").classList.remove("fa-check");
+					document.getElementById("editMedPlantLogo").classList.add("fa-pencil"); 
+					document.getElementById("cancelEditMedPlantBtn").style.display="none";
+				}else{
+					cancelEditMedPlant();
+				}
+			}
+			}); */
+		
+	}
+	</script>
+
+	<script type="text/javascript">
+	function editGenus(){
+		document.getElementById("genus").style.display="none";
+		document.getElementById("genusInput").value = document.getElementById("genus").innerHTML;
+		document.getElementById("genusInputDiv").style.display= "inline";
+		document.getElementById("editGenusBtn").onclick = function () { saveGenus(); };
+		document.getElementById("editGenusLogo").classList.remove("fa-pencil");
+		document.getElementById("editGenusLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelEditGenusBtn").style.visibility="visible";
+	}
+	
+	function cancelEditGenus(){
+		document.getElementById("genus").style.display="inline";
+		document.getElementById("genusInputDiv").style.display="none";   
+		document.getElementById("editGenusLogo").classList.remove("fa-check");
+		document.getElementById("editGenusLogo").classList.add("fa-pencil"); 
+		document.getElementById("editGenusBtn").onclick = function () { editGenus(); };	
+		document.getElementById("cancelEditGenusBtn").style.visibility="hidden";
+	}
+	
+	function saveGenus(){
+		var newMedPlantNameVal = document.getElementById("genusInput").value;
+		var oldMedPlantNameVal = document.getElementById("genus").innerHTML;
+	
+		console.log(newMedPlantNameVal);
+		console.log(oldMedPlantNameVal);
+/* 		$.ajax({
+			type : "GET",
+			url : 'EditMedPlant',
+			dataType: "text",
+			data: { 
+				    newMedPlantName: newMedPlantNameVal,
+				    oldMedPlantName: oldMedPlantNameVal
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Plant Name Successfully Edited"){
+					document.getElementById("editMedPlantField").style.display="none";
+					document.getElementById("medPlantName").innerHTML = newMedPlantNameVal; 
+					document.getElementById("medPlantName").style.display="block";
+					document.getElementById("editMedPlantBtn").onclick = function () { editMedPlant(); };		
+					document.getElementById("editMedPlantLogo").classList.remove("fa-check");
+					document.getElementById("editMedPlantLogo").classList.add("fa-pencil"); 
+					document.getElementById("cancelEditMedPlantBtn").style.display="none";
+				}else{
+					cancelEditMedPlant();
+				}
+			}
+			}); */
+		
+	}
+	</script>
+
 
 	<script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>

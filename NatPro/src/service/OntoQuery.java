@@ -111,6 +111,29 @@ public class OntoQuery {
 		}
 		return values;
 	}
+	
+	public List<String> getAllFamily() throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+
+		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Family")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						values.add(individual.getPropertyValue(datatypeProperty_Family).toString());
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+		return values;
+	}
 
 	public List<String> getAllPreparations() {
 		List<String> preparation = new ArrayList<String>();

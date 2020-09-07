@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.flickr4java.flickr.FlickrException;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
 import model.MedicinalPlant;
 import model.Species;
 import service.FlickrService;
@@ -20,7 +21,7 @@ import service.OntoQuery;
 /**
  * Servlet implementation class ViewPlantServlet
  */
-@WebServlet({"/ViewPlantServlet", "/ViewSciPlantServlet"})
+@WebServlet({ "/ViewPlantServlet", "/ViewSciPlantServlet" })
 public class ViewPlantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -44,24 +45,19 @@ public class ViewPlantServlet extends HttpServlet {
 		case "/ViewPlantServlet":
 			try {
 				viewPlant(request, response);
-			} catch (OntologyLoadException e) {
+			} catch (SQWRLException | OntologyLoadException | ServletException | IOException | FlickrException e1) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (FlickrException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				e1.printStackTrace();
 			}
 			break;
 		case "/ViewSciPlantServlet":
 			try {
 				viewSciPlant(request, response);
-			} catch (OntologyLoadException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (FlickrException e) {
+			} catch (OntologyLoadException | ServletException | IOException | FlickrException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
 			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
@@ -79,7 +75,7 @@ public class ViewPlantServlet extends HttpServlet {
 	}
 
 	private void viewPlant(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException, FlickrException {
+			throws OntologyLoadException, ServletException, IOException, FlickrException, SQWRLException {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("medPlant");
 		OntoQuery q = new OntoQuery();
@@ -93,6 +89,14 @@ public class ViewPlantServlet extends HttpServlet {
 		// System.err.println(photos.get(0));
 //		request.setAttribute("photos", photos);
 		request.setAttribute("medPlantsList", medPlants);
+
+		// retrieve for auto complete
+		List<String> family = q.getAllFamily();
+		request.setAttribute("familyList", family);
+
+		// retrieve for auto complete
+		List<String> genus = q.getAllGenus();
+		request.setAttribute("genusList", genus);
 		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
 	}
 
