@@ -94,9 +94,13 @@ public class ViewPlantServlet extends HttpServlet {
 		List<String> family = q.getAllFamily();
 		request.setAttribute("familyList", family);
 
-		// retrieve for auto complete
 		List<String> genus = q.getAllGenus();
 		request.setAttribute("genusList", genus);
+		
+		List<String> syns = q.getAllSynonyms();
+		request.setAttribute("synList", syns);
+		
+		
 		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
 	}
 

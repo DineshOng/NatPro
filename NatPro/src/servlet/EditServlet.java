@@ -27,7 +27,7 @@ import service.OntoQuery;
 /**
  * Servlet implementation class EditServlet
  */
-@WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
+@WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus", "/EditSci",
 		"/EditSciName" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -103,6 +103,15 @@ public class EditServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			break;
+		case "/EditSci":
+			try {
+				editSci(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
 		}
@@ -153,14 +162,10 @@ public class EditServlet extends HttpServlet {
 		String oldFamily = request.getParameter("oldFamilyVal");
 		String newFamily = request.getParameter("newFamilyVal");
 
-		System.out.println(oldFamily);
-		System.out.println(newFamily);
-
 		OntoQuery q = new OntoQuery();
 		String oldFamilyIndiv = q.getFamilyIndivName(oldFamily);
 		List<String> genus = q.getAllGenus();
 		List<String> families = q.getAllFamily();
-		System.out.println(families);
 
 		// check if new family indiv already exists, if not create new indiv
 		boolean createNewIndiv = false;
@@ -185,9 +190,7 @@ public class EditServlet extends HttpServlet {
 		// Get the genus of the old family to be updated
 		for (int i = 0; i < genus.size(); i++) {
 			String genusIndiv = q.getGenusIndivName(genus.get(i));
-			System.out.println(genusIndiv);
 			List<String> genusToFamily = q.getGenusFamily(genus.get(i));
-			System.out.println(genusToFamily);
 			if (genusToFamily.contains(oldFamily)) {
 				m.removeObjectPropertyValue(genusIndiv, "belongsToFamily", oldFamilyIndiv);
 				m.addObjectBelongsToFamily(genusIndiv, m.cleanString(newFamily));
@@ -262,9 +265,7 @@ public class EditServlet extends HttpServlet {
 		// Get the specie/s of the old genus to be updated
 		for (int i = 0; i < species.size(); i++) {
 			String speciesIndiv = q.getSpeciesIndivName(species.get(i));
-			System.out.println(speciesIndiv);
 			List<String> synToGenus = q.getSynonymGenus(species.get(i));
-			System.out.println(synToGenus);
 			if (synToGenus.contains(oldGenus)) {
 				m.removeObjectPropertyValue(speciesIndiv, "belongsToGenus", oldGenusIndiv);
 				m.addObjectBelongsToGenus(speciesIndiv, m.cleanString(newGenus));
@@ -335,4 +336,49 @@ public class EditServlet extends HttpServlet {
 
 	}
 
+	private void editSci(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException,
+			OntologyLoadException, SQWRLException {
+		String oldSci = request.getParameter("oldSpecieVal");
+		String newSci = request.getParameter("newSpecieVal");
+	
+		OntoQuery q = new OntoQuery();
+		String oldSciIndiv = q.getSpeciesIndivName(oldSci);
+		List<String> medplants = q.getAllMedPlantNames();
+		List<String> synList = q.getAllSynonyms();
+		
+		// check if new genus indiv already exists, if not create new indiv
+		boolean createNewIndiv = false;
+		for (String syn : synList) {
+			if (syn.equalsIgnoreCase(newSci.toLowerCase())) {
+				createNewIndiv = false;
+			} else {
+				createNewIndiv = true;
+			}
+		}
+		
+		OntoMngr m = new OntoMngr();
+		if (createNewIndiv) {
+			m.addIndiv_Species(m.cleanString(newSci));
+			m.addDataPropSpecies(newSci);
+
+		} else {
+			String specieIndiv = q.getSpeciesIndivName(newSci);
+			m.setSpeciesIndiv(specieIndiv);
+		}
+		
+		// Get the medicinal plant of the old scientific name to be updated
+		for (int i = 0; i < medplants.size(); i++) {
+			String medPlantIndiv = q.getMedPlantIndivName(medplants.get(i));
+			List<String> medPlantToSpecie = q.getSynonyms(medplants.get(i));
+			if (medPlantToSpecie.contains(oldSci)) {
+				m.removeObjectPropertyValue(medPlantIndiv, "hasScientificName", oldSciIndiv);
+				m.addObjectHasScientificName(medPlantIndiv, m.cleanString(newSci));
+			}
+		}
+
+		PrintWriter out = response.getWriter();
+		String message = "Scientific Name Successfully Edited";
+		out.println(message);
+	}
 }

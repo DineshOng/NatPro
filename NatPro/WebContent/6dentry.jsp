@@ -145,7 +145,7 @@
 		<div class="tab-pane fade" id="plantName" role="tabpanel"
 			aria-labelledby="list-profile-list">
 			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25 text-center">
+				<table class="table table-hover w-auto text-center">
 					<thead>
 						<tr>
 							<td>
@@ -158,8 +158,29 @@
 							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
 								var="speciesList">
 								<tr>
-									<td><a
-										href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}"><i>${speciesList.getSpecie()}</i></a></td>
+									<td><a id="specie" style="display: inline"
+										href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}">
+											<i><p style="display: inline;" id="specieName">${speciesList.getSpecie()}</p></i>
+									</a>
+										<div class="autocomplete" style="width: 300px; display: none"
+											id="specieInputDiv">
+											<input type="text" id="specieInput" name="specie"
+												placeholder="Scientific Name">
+										</div>
+										<button type="button" class="btn btn-outline-dark btn-sm "
+											onclick="editSpecie()" data-toggle="tooltip"
+											data-placement="top" title="edit entry"
+											class="btn btn-primary" id="editSpecieBtn">
+											<i class="fa fa-pencil" aria-hidden="true"
+												id="editSpecieLogo"></i>
+										</button>
+										<button type="button" class="btn btn-outline-danger btn-sm"
+											onclick="cancelEditSpecie()" data-toggle="tooltip"
+											data-placement="top" title="edit entry"
+											class="btn btn-primary" id="cancelEditSpecieBtn"
+											style="visibility: hidden">
+											<i class="fa fa-times" aria-hidden="true"></i>
+										</button></td>
 								</tr>
 							</c:forEach>
 						</tr>
@@ -319,8 +340,10 @@
 	<script>	
 		var families = [];
 		var genus = [];
+		var syns = [];
 		autocomplete(document.getElementById("familyInput"), families); 
 		autocomplete(document.getElementById("genusInput"), genus); 
+		autocomplete(document.getElementById("specieInput"), syns); 
 	</script>
 
 	<c:forEach items="${familyList}" var="family">
@@ -332,6 +355,12 @@
 	<c:forEach items="${genusList}" var="genus">
 		<script>
 			genus.push("${genus}")
+		</script>
+	</c:forEach>
+	
+	<c:forEach items="${synList}" var="syn">
+		<script>
+			syns.push("${syn}")
 		</script>
 	</c:forEach>
 
@@ -503,6 +532,67 @@
 					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
 				}else{
 					cancelEditGenus();
+				}
+			}
+			}); 
+		
+	}
+	</script>
+
+	<script type="text/javascript">
+	function editSpecie(){
+		document.getElementById("specie").style.display="none";
+		document.getElementById("specieInput").value = document.getElementById("specieName").innerHTML.trim();
+		document.getElementById("specieInputDiv").style.display= "inline";
+		document.getElementById("editSpecieBtn").onclick = function () { saveSpecie(); };
+		document.getElementById("editSpecieBtn").classList.remove("btn-outline-dark");
+		document.getElementById("editSpecieBtn").classList.add("btn-success");
+		document.getElementById("editSpecieLogo").classList.remove("fa-pencil");
+		document.getElementById("editSpecieLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelEditSpecieBtn").style.visibility="visible";
+	}
+	
+	function cancelEditSpecie(){
+		document.getElementById("specie").style.display="inline";
+		document.getElementById("specieInputDiv").style.display="none";   
+		document.getElementById("editSpecieLogo").classList.remove("fa-check");
+		document.getElementById("editSpecieLogo").classList.add("fa-pencil"); 
+		document.getElementById("editSpecieBtn").onclick = function () { editSpecie(); };	
+		document.getElementById("editSpecieBtn").classList.remove("btn-success");
+		document.getElementById("editSpecieBtn").classList.add("btn-outline-dark");
+		document.getElementById("cancelEditSpecieBtn").style.visibility="hidden";
+	}
+	
+	function saveSpecie(){
+		var newSpecieVal = document.getElementById("specieInput").value;
+		var oldSpecieVal = document.getElementById("specieName").innerHTML.trim();
+	
+		console.log(newSpecieVal);
+		console.log(oldSpecieVal);
+ 		$.ajax({
+			type : "GET",
+			url : 'EditSci',
+			dataType: "text",
+			data: {
+				newSpecieVal: newSpecieVal,
+				oldSpecieVal: oldSpecieVal
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Scientific Name Successfully Edited"){
+					document.getElementById("specieInputDiv").style.display="none";
+					document.getElementById("specieName").innerHTML = newSpecieVal; 
+					document.getElementById("specie").style.display="inline";
+					document.getElementById("editSpecieBtn").onclick = function () { editMedPlant(); };
+					document.getElementById("editSpecieBtn").classList.remove("btn-success");
+					document.getElementById("editSpecieBtn").classList.add("btn-outline-dark");
+					document.getElementById("editSpecieLogo").classList.remove("fa-check");
+					document.getElementById("editSpecieLogo").classList.add("fa-pencil"); 
+					document.getElementById("cancelEditSpecieBtn").style.visibility="hidden";
+					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
+				}else{
+					cancelEditSpecie();
 				}
 			}
 			}); 
