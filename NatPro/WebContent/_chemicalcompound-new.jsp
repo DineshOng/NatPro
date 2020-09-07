@@ -30,18 +30,28 @@
 	<!-- CONTENT HERE -->
 	<div class="jumbotron bg-success" style="text-align:center">
 		<h1 class="display-4 text-white">
-			<p id="chemCompoundName">*insert code here*</p>
+			<p id="chemCompoundName"><b>${compound.getCompoundNameHTML()}</b></p>
 		</h1>
-		<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3" onclick="filloutPubChemInfo()" data-toggle="tooltip" data-placement="top" title="get information from PubChem" class="btn btn-primary" id="pubchemFilloutInfoBtn">
+		<img id="compoundIMG" class="responsive-img circle" src="https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=${compound.getPubCID()}&t=l">
+		<br>
+		<button type="button" id="pubchemBT" class="btn btn-outline-light btn-sm h-25 mt-3" onclick="filloutPubChemInfo()" data-toggle="tooltip" data-placement="top" title="get information from PubChem">
 			Fill Out Information from PubChem
 		</button>
+		
 		<input class="form-control w-auto h-25 mt-3" type="text" id="editChemCompoundField" name="editChemCompoundName" style="display: none" required>
-		<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3" onclick="editChemCompound()" data-toggle="tooltip" data-placement="top" title="edit entry" class="btn btn-primary" id="editChemCompoundBtn">
+		
+		<button type="button" id="editBT" class="btn btn-outline-light btn-sm mt-3" onclick="editChemCompound()" data-toggle="tooltip" data-placement="top" title="edit entry">
 			<i class="fa fa-pencil" aria-hidden="true" id="editChemCompoundLogo"></i>
 		</button>
-		<button type="button" class="btn btn-outline-danger btn-sm h-25 mt-3" onclick="cancelEditChemCompound()" data-toggle="tooltip" data-placement="top" title="edit entry" class="btn btn-primary" id="cancelEditChemCompoundBtn" style="display:none">
+		
+		<button type="button" id="saveBT" class="btn btn-outline-light btn-sm mt-3" onclick="saveEditChemCompound()" data-toggle="tooltip" data-placement="top" title="edit entry" hidden>
+			<i class="fa fa-check" aria-hidden="true"></i>
+		</button>
+		
+		<button type="button" id="cancelBT" class="btn btn-outline-danger btn-sm mt-3" onclick="cancelEditChemCompound()" data-toggle="tooltip" data-placement="top" title="edit entry" hidden>
 			<i class="fa fa-times" aria-hidden="true"></i>
 		</button>
+		
 		<h3 class="text-white text-center">Chemical Compound</h3>
 	</div>
 	
@@ -58,7 +68,7 @@
 				<table class="table table-hover w-25">
 					<thead>
 						<tr>
-							<th colspan="2">
+							<th colspan="3">
 								<h4 class="text-center">General Information</h4>
 							</th>
 						</tr>
@@ -68,64 +78,104 @@
 							<th>
 								Common Name
 							</th>
+							<td id="compound">
+								${compound.getCompoundName()}
+							</td>
 							<td>
-								
+								<button type="button" id="editCompound" onClick="editField(0,0)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<th>
 								IUPAC Name
 							</th>
+							<td id="iupac">
+								${compound.getIupac()}
+							</td>
 							<td>
-								
+								<button type="button" id="editCompound" onClick="editField(0,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<th>
 								Canonical SMILES
 							</th>
+							<td id="canSMILES">
+								${compound.getCanSMILES()}
+							</td>
 							<td>
-								
+								<button type="button" id="editCompound" onClick="editField(0,2)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<th>
 								Formula
 							</th>
+							<td id="molForm">
+								${compound.getMolFormHTML()}
+							</td>
 							<td>
-								
+								<button type="button" id="editCompound" onClick="editField(0,3)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<th>
 								InChl
 							</th>
+							<td id="inchi">
+								${compound.getInchi()}
+							</td>
 							<td>
-								
+								<button type="button" id="editCompound" onClick="editField(0,4)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<th>
 								InChl key
 							</th>
+							<td id="inchikey">
+								${compound.getInchikey()}
+							</td>
 							<td>
-								
+								<button type="button" id="editCompound" onClick="editField(0,5)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<th>
 								Chemical Class
 							</th>
-							<td>
+							<td id="chemClass">
 								
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(0,6)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
 							<th>
 								PubChem CID
 							</th>
+							<td id="pubCID">
+								${compound.getPubCID()}
+							</td>
 							<td>
-								
+								<button type="button" id="editCompound" onClick="editField(0,7)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 					</tbody>
@@ -148,72 +198,117 @@
 							<th>
 								Molecular Weight
 							</th>
+							<td id="molWeight">
+								${compound.getMolWeight()}
+							</td>
 							<td>
-								
+								<button type="button" id="editCompound" onClick="editField(1,0)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th id="xlogp">
 								XLogP
 							</th>
 							<td>
-								
+								${compound.getXlogp()}
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(1,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th id="mass">
 								Mass
 							</th>
 							<td>
-								
+								${compound.getMass()}
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(1,2)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th id="tpsa">
 								TPSA
 							</th>
 							<td>
-								
+								${compound.getTpsa()}
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(1,3)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th id="complexity">
 								Complexity
 							</th>
 							<td>
-								
+								${compound.getComplexity()}
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(1,4)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th id="charge">
 								Charge
 							</th>
 							<td>
-								
+								${compound.getCharge()}
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(1,5)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th id="hBondAcceptor">
 								H-Bond Acceptors
 							</th>
 							<td>
-								
+								${compound.getHBondAcceptor()}
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(1,6)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th id="hBondDonor">
 								H-Bond Donor
 							</th>
 							<td>
-								
+								${compound.getHBondDonor()}
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(1,7)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
-							<th>
+							<th id="rotBondCount">
 								Rotatable Bonds
 							</th>
 							<td>
-								
+								${compound.getRotBondCount()}
+							</td>
+							<td>
+								<button type="button" id="editCompound" onClick="editField(1,8)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 					</tbody>
@@ -231,7 +326,13 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td></td>
+							<td id="synonym">
+								<c:forEach items="${compound.getCompoundSynonyms()}" var="cs">
+									<tr>
+										<td>${cs}</td>
+									</tr>
+								</c:forEach>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -255,13 +356,203 @@
 			</div>
 		</div>
 		
-		
+	<form id="saveForm" action="AddCompoundServlet" method="POST">
+       	<input type="hidden" name="compound">
+       	
+       	<input type="hidden" name="pubCID">
+       	<input type="hidden" name="molForm">
+       	<input type="hidden" name="canSMILES">
+       	<input type="hidden" name="inchi">
+       	<input type="hidden" name="inchikey">
+       	<input type="hidden" name="iupac">
+       	
+       	<input type="hidden" name="molWeight" value=0>
+       	<input type="hidden" name="xlogp" value=0>
+       	<input type="hidden" name="mass" value=0>
+       	<input type="hidden" name="tpsa" value=0>
+       	<input type="hidden" name="complexity" value=0>
+       	
+       	<input type="hidden" name="charge" value=0>
+       	<input type="hidden" name="hBondDonor" value=0>
+       	<input type="hidden" name="hBondAcceptor" value=0>
+       	<input type="hidden" name="rotBondCount" value=0>
+       	
+    </form>	
 		
 	</div>
 	
 
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
+	<script>
+		/*
+			tValue = table Value
+			0 = geninfo
+			1 = cheminfo
+			2 = synonym
+			3 = bioact
+		*/
+	
+		function editField(tValue, eValue) {
+			
+		}
+	</script>
+
+
+	<script>
+       
+     $(document).ready(function() {
+     	//$('#loading').hide();
+     	
+     	$('#saveBT').click(function() {
+     		
+     		$('input[name="compound"]').val($("#compound").text());
+     		
+     		$('input[name="pubCID"]').val($("#pubCID").text());
+     		$('input[name="molForm"]').val($("#molForm").text());
+     		$('input[name="canSMILES"]').val($("#canSMILES").text());
+     		$('input[name="inchi"]').val($("#inchi").text());
+     		$('input[name="inchikey"]').val($("#inchikey").text());
+     		$('input[name="iupac"]').val($("#iupac").text());
+     		
+     		$('input[name="molWeight"]').val($("#molWeight").text());
+     		$('input[name="xlogp"]').val($("#xlogp").text());
+     		$('input[name="mass"]').val($("#mass").text());
+     		$('input[name="tpsa"]').val($("#tpsa").text());
+     		$('input[name="complexity"]').val($("#complexity").text());
+     		
+     		$('input[name="charge"]').val($("#charge").text());
+     		$('input[name="hBondDonor"]').val($("#hBondDonor").text());
+     		$('input[name="hBondAcceptor"]').val($("#hBondAcceptor").text());
+     		$('input[name="rotBondCount"]').val($("#rotBondCount").text());
+     		
+     		$("#saveForm").submit();
+     	});
+     	
+$('#editBT').click(function() {
+     		
+	
+	/*var strAction = "compound.jsp?";
+	
+	if($("#compound").text() != "")
+		strAction += ("compound="+escape($("#compound").text()));
+	if($("#pubCID").text() != "")
+		strAction += ("&pubCID="+escape($("#pubCID").text()));
+	if($("#molForm").text() != "")
+		strAction += ("&molForm="+escape($("#molForm").text()));
+	if($("#canSMILES").text() != "")
+		strAction += ("&canSMILES="+escape($("#canSMILES").text()));
+	if($("#inchi").text() != "")
+		strAction += ("&inchi="+escape($("#inchi").text()));
+	if($("#inchikey").text() != "")
+		strAction += ("&inchikey="+escape($("#inchikey").text()));
+	if($("#iupac").text() != "")
+		strAction += ("&iupac="+escape($("#iupac").text()));
+	
+	if($("#molWeight").text() != "")
+		strAction += ("&molWeight="+escape($("#molWeight").text()));
+	if($("#xlogp").text() != "")
+		strAction += ("&xlogp="+escape($("#xlogp").text()));
+	if($("#mass").text() != "")
+		strAction += ("&mass="+escape($("#massmass").text()));
+	if($("#tpsa").text() != "")
+		strAction += ("&tpsa="+escape($("#tpsa").text()));
+	if($("#complexity").text() != "")
+		strAction += ("&complexity="+escape($("#complexity").text()));
+	
+	if($("#charge").text() != "")
+		strAction += ("&charge="+escape($("#charge").text()));
+	if($("#hBondDonor").text() != "")
+		strAction += ("&hBondDonor="+escape($("#hBondDonor").text()));
+	if($("#hBondAcceptor").text() != "")
+		strAction += ("&hBondAcceptor="+escape($("#hBondAcceptor").text()));
+	if($("#rotBondCount").text() != "")
+		strAction += ("&rotBondCount="+escape($("#rotBondCount").text()));
+	*/
+	var strAction = "EditCompoundServlet";
+		
+	$("#saveForm").attr("action", strAction);
+	
+     		$('input[name="compound"]').val($("#compound").text());
+     		
+     		$('input[name="pubCID"]').val($("#pubCID").text());
+     		$('input[name="molForm"]').val($("#molForm").text());
+     		$('input[name="canSMILES"]').val($("#canSMILES").text());
+     		$('input[name="inchi"]').val($("#inchi").text());
+     		$('input[name="inchikey"]').val($("#inchikey").text());
+     		$('input[name="iupac"]').val($("#iupac").text());
+     		
+     		$('input[name="molWeight"]').val($("#molWeight").text());
+     		$('input[name="xlogp"]').val($("#xlogp").text());
+     		$('input[name="mass"]').val($("#mass").text());
+     		$('input[name="tpsa"]').val($("#tpsa").text());
+     		$('input[name="complexity"]').val($("#complexity").text());
+     		
+     		$('input[name="charge"]').val($("#charge").text());
+     		$('input[name="hBondDonor"]').val($("#hBondDonor").text());
+     		$('input[name="hBondAcceptor"]').val($("#hBondAcceptor").text());
+     		$('input[name="rotBondCount"]').val($("#rotBondCount").text());
+     		
+     		$("#saveForm").submit();
+     	});
+     	
+     	$('#pubchemBT').click(function() {
+     		$.LoadingOverlay("show");
+     		$.ajax({
+     			url : 'RetrieveCompoundServlet?compound=${compound.getCompoundName()}',
+     			data : {
+     				userName : $('#compound').val()
+     			},
+     			success : function(obj) {
+     				if(obj.molForm == null) {
+     					//$('#loading').hide();
+     					$.LoadingOverlay("hide");
+     					
+     					alert("compound not found");
+     				} else {
+     				
+      				$('#compoundIMG').attr("src", "https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid="+obj.pubCID+"&t=l");
+      				
+      				$('#pubCID').html(obj.pubCID);
+      				$('#molForm').html(obj.molForm);
+      				$('#canSMILES').html(obj.canSMILES);
+      				$('#inchi').html(obj.inchi);
+      				$('#inchikey').html(obj.inchikey);
+      				$('#iupac').html(obj.iupac);
+      				
+      				$('#molWeight').html(obj.molWeight);
+      				$('#xlogp').html(obj.xlogp);
+      				$('#mass').html(obj.mass);
+      				$('#tpsa').html(obj.tpsa);
+      				$('#complexity').html(obj.complexity);
+      				
+      				$('#charge').html(obj.charge);
+      				$('#hBondDonor').html(obj.hBondDonor);
+      				$('#hBondAcceptor').html(obj.hBondAcceptor);
+      				$('#rotBondCount').html(obj.rotBondCount);
+      				
+      				var arr = obj.synonym;
+      				var syn = arr.split("\n");
+      				var text = "";
+      				
+      				var i;
+      				for (i = 0; i < syn.length; i++) {
+      				  text += '<tr><td>' + syn[i] + "</td></tr>";
+      				}
+      				$('#synonym').append(text);
+      				
+      				$('#pubchemBT').hide();
+      				
+      				$.LoadingOverlay("hide");
+      			}
+     				//$.LoadingOverlay("hide");
+     				
+     			}
+     		});
+     	});
+     });
+     
+    </script>
 
 
 	<script type="text/javascript"
