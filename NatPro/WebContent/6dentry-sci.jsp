@@ -28,7 +28,25 @@
 	<%@include file="navbarnix.html"%>
 
 	<div class="jumbotron bg-success">
-		<h1 class="display-4 text-white text-center">${specie}</h1>
+		<div class="d-flex justify-content-center">
+			<h1 class="display-4 text-white" style="display: block">
+				<p id="specieName">${specie}</p>
+			</h1>
+			<input class="form-control w-auto h-25 mt-3" type="text"
+				id="editSpecieField" name="editSpecieName" style="display: none"
+				required>
+			<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3"
+				onclick="editSpecie()" data-toggle="tooltip" data-placement="top"
+				title="edit entry" class="btn btn-primary" id="editSpecieBtn">
+				<i class="fa fa-pencil" aria-hidden="true" id="editSpecieLogo"></i>
+			</button>
+			<button type="button" class="btn btn-outline-danger btn-sm h-25 mt-3"
+				onclick="cancelEditSpecie()" data-toggle="tooltip"
+				data-placement="top" title="edit entry" class="btn btn-primary"
+				id="cancelEditSpecieBtn" style="display: none">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</button>
+		</div>
 		<h3 class="text-white text-center">Scientific Name</h3>
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
@@ -251,6 +269,61 @@
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
 
+	<script type="text/javascript">
+	function editSpecie(){
+		console.log("edit");
+		document.getElementById("specieName").style.display="none";
+		document.getElementById("editSpecieField").value = document.getElementById("specieName").innerHTML;
+		document.getElementById("editSpecieField").style.display="block";
+		document.getElementById("editSpecieBtn").onclick = function () { saveEditSpecie(); };
+		document.getElementById("editSpecieLogo").classList.remove("fa-pencil");
+		document.getElementById("editSpecieLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelEditSpecieBtn").style.display="block";
+	}
+	
+	function cancelEditSpecie(){
+		console.log("cancel");
+		document.getElementById("specieName").style.display="block";
+		document.getElementById("editSpecieField").style.display="none";   
+		document.getElementById("editSpecieLogo").classList.remove("fa-check");
+		document.getElementById("editSpecieLogo").classList.add("fa-pencil"); 
+		document.getElementById("editSpecieBtn").onclick = function () { editSpecie(); };	
+		document.getElementById("cancelEditSpecieBtn").style.display="none";
+	}
+	
+	function saveEditSpecie(){
+		console.log("save");
+		var newSpecieNameVal = document.getElementById("editSpecieField").value;
+		var oldSpecieNameVal = document.getElementById("specieName").innerHTML;
+	
+		$.ajax({
+			type : "GET",
+			url : 'EditSciName',
+			dataType: "text",
+			data: { 
+				    newSpecieName: newSpecieNameVal,
+				    oldSpecieName: oldSpecieNameVal
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Scientific Name Successfully Edited"){
+					document.getElementById("editSpecieField").style.display="none";
+					document.getElementById("specieName").innerHTML = newSpecieNameVal; 
+					document.getElementById("specieName").style.display="block";
+					document.getElementById("editSpecieBtn").onclick = function () { editSpecie(); };		
+					document.getElementById("editSpecieLogo").classList.remove("fa-check");
+					document.getElementById("editSpecieLogo").classList.add("fa-pencil");
+					document.getElementById("cancelEditSpecieBtn").style.display="none";
+				}else{
+					cancelEditSpecie();
+				}
+			}
+			});
+		
+	}
+	
+	</script>
 
 	<script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>

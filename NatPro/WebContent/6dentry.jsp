@@ -41,8 +41,9 @@
 				<i class="fa fa-pencil" aria-hidden="true" id="editMedPlantLogo"></i>
 			</button>
 			<button type="button" class="btn btn-outline-danger btn-sm h-25 mt-3"
-				onclick="cancelEditMedPlant()" data-toggle="tooltip" data-placement="top"
-				title="edit entry" class="btn btn-primary" id="cancelEditMedPlantBtn" style="display:none">
+				onclick="cancelEditMedPlant()" data-toggle="tooltip"
+				data-placement="top" title="edit entry" class="btn btn-primary"
+				id="cancelEditMedPlantBtn" style="display: none">
 				<i class="fa fa-times" aria-hidden="true"></i>
 			</button>
 		</div>
@@ -310,12 +311,17 @@
 				  },
 			success : function(data) {
 				alert(data)
-				document.getElementById("editMedPlantField").style.display="none";
-				document.getElementById("medPlantName").innerHTML = newMedPlantNameVal; 
-				document.getElementById("medPlantName").style.display="block";
-				document.getElementById("editMedPlantBtn").onclick = function () { editMedPlant(); };		
-				document.getElementById("editMedPlantLogo").classList.remove("fa-check");
-				document.getElementById("editMedPlantLogo").classList.add("fa-pencil");   
+				if(data.trim() == "Plant Name Successfully Edited"){
+					document.getElementById("editMedPlantField").style.display="none";
+					document.getElementById("medPlantName").innerHTML = newMedPlantNameVal; 
+					document.getElementById("medPlantName").style.display="block";
+					document.getElementById("editMedPlantBtn").onclick = function () { editMedPlant(); };		
+					document.getElementById("editMedPlantLogo").classList.remove("fa-check");
+					document.getElementById("editMedPlantLogo").classList.add("fa-pencil"); 
+					document.getElementById("cancelEditMedPlantBtn").style.display="none";
+				}else{
+					cancelEditMedPlant();
+				}
 			}
 			});
 		

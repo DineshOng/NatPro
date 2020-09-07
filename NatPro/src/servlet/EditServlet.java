@@ -108,13 +108,23 @@ public class EditServlet extends HttpServlet {
 		OntoQuery q = new OntoQuery();
 		String oldMedPlantNameIndiv = q.getMedPlantIndivName(oldMedPlantName);
 
-		// Change the individual name
-		OntoMngr m = new OntoMngr();
-		m.changeNameIndividual(oldMedPlantNameIndiv, newMedPlantName);
+		String checkIfIndivNameExists = q.getMedPlantIndivName(newMedPlantName);
+		if (checkIfIndivNameExists == null) {
+			// Change the individual name
+			OntoMngr m = new OntoMngr();
+			m.setMedPlantIndiv(oldMedPlantNameIndiv);
+			m.addDataPropMedPlant(newMedPlantName);
+			m.removeDataPropertyValue(oldMedPlantNameIndiv, "datatypeProperty_MedicinalPlant", oldMedPlantName);
+			m.changeNameIndividual(oldMedPlantNameIndiv, newMedPlantName);
 
-		PrintWriter out = response.getWriter();
-		String message = "Plant Name Successfully Edited";
-		out.println(message);
+			PrintWriter out = response.getWriter();
+			String message = "Plant Name Successfully Edited";
+			out.println(message);
+		} else {
+			PrintWriter out = response.getWriter();
+			String message = "Edit Unsuccessful, Plant Name Already Exists!";
+			out.println(message);
+		}
 	}
 
 	private void editFamily(HttpServletRequest request, HttpServletResponse response)
@@ -127,17 +137,28 @@ public class EditServlet extends HttpServlet {
 		OntoQuery q = new OntoQuery();
 		String oldFamilyNameIndiv = q.getFamilyIndivName(oldFamilyName);
 
-		// Change the individual name
-		OntoMngr m = new OntoMngr();
-		m.changeNameIndividual(oldFamilyNameIndiv, newFamilyName);
+		String checkIfIndivNameExists = q.getFamilyIndivName(newFamilyName);
+		if (checkIfIndivNameExists == null) {
+			// Change the individual name
+			OntoMngr m = new OntoMngr();
+			m.setFamilyIndiv(oldFamilyNameIndiv);
+			m.addDataPropFamily(newFamilyName);
+			m.removeDataPropertyValue(oldFamilyNameIndiv, "datatypeProperty_Family", oldFamilyName);
+			m.changeNameIndividual(oldFamilyNameIndiv, newFamilyName);
 
-		PrintWriter out = response.getWriter();
-		String message = "Family Name Successfully Edited";
-		out.println(message);
+			PrintWriter out = response.getWriter();
+			String message = "Family Name Successfully Edited";
+			out.println(message);
+		} else {
+			PrintWriter out = response.getWriter();
+			String message = "Edit Unsuccessful, Family Name Already Exists!";
+			out.println(message);
+		}
 	}
 
 	private void editGenus(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException, OWLOntologyStorageException, SQWRLException {
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
 		String oldGenusName = request.getParameter("oldGenusName");
 		String newGenusName = request.getParameter("newGenusName");
 
@@ -145,31 +166,52 @@ public class EditServlet extends HttpServlet {
 		OntoQuery q = new OntoQuery();
 		String oldGenusNameIndiv = q.getGenusIndivName(oldGenusName);
 
-		// Change the individual name
-		OntoMngr m = new OntoMngr();
-		m.changeNameIndividual(oldGenusNameIndiv, newGenusName);
+		String checkIfIndivNameExists = q.getGenusIndivName(newGenusName);
+		if (checkIfIndivNameExists == null) {
+			// Change the individual name
+			OntoMngr m = new OntoMngr();
+			m.setGenusIndiv(oldGenusNameIndiv);
+			m.addDataPropGenus(newGenusName);
+			m.removeDataPropertyValue(oldGenusNameIndiv, "datatypeProperty_Genus", oldGenusName);
+			m.changeNameIndividual(oldGenusNameIndiv, newGenusName);
 
-		PrintWriter out = response.getWriter();
-		String message = "Genus Name Successfully Edited";
-		out.println(message);
+			PrintWriter out = response.getWriter();
+			String message = "Genus Name Successfully Edited";
+			out.println(message);
+		} else {
+			PrintWriter out = response.getWriter();
+			String message = "Edit Unsuccessful, Genus Name Already Exists!";
+			out.println(message);
+		}
 	}
 
 	private void editSciName(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException, OWLOntologyStorageException, SQWRLException {
-		String oldSciName = request.getParameter("oldSciName");
-		String newSciName = request.getParameter("newSciName");
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
+		String oldSciName = request.getParameter("oldSpecieName");
+		String newSciName = request.getParameter("newSpecieName");
 
 		// Get the individual name of the MedicinalPlant
 		OntoQuery q = new OntoQuery();
 		String oldSciNameIndiv = q.getSpeciesIndivName(oldSciName);
 
-		// Change the individual name
-		OntoMngr m = new OntoMngr();
-		m.changeNameIndividual(oldSciNameIndiv, newSciName);
+		String checkIfIndivNameExists = q.getSpeciesIndivName(newSciName);
+		if (checkIfIndivNameExists == null) {
+			// Change the individual name
+			OntoMngr m = new OntoMngr();
+			m.setSpeciesIndiv(oldSciNameIndiv);
+			m.addDataPropSpecies(newSciName);
+			m.removeDataPropertyValue(oldSciNameIndiv, "datatypeProperty_Synonym", oldSciName);
+			m.changeNameIndividual(oldSciNameIndiv, newSciName);
 
-		PrintWriter out = response.getWriter();
-		String message = "Scientific Name Successfully Edited";
-		out.println(message);
+			PrintWriter out = response.getWriter();
+			String message = "Scientific Name Successfully Edited";
+			out.println(message);
+		} else {
+			PrintWriter out = response.getWriter();
+			String message = "Edit Unsuccessful, Scientific Name Already Exists!";
+			out.println(message);
+		}
 
 	}
 

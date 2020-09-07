@@ -1602,7 +1602,7 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(medPlantName.equals(individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString())) {
+						if(medPlantName.toLowerCase().equals(individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString().toLowerCase())) {
 							medPlantIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1628,7 +1628,7 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(familyName.equals(individual.getPropertyValue(datatypeProperty_Family).toString())) {
+						if(familyName.toLowerCase().equals(individual.getPropertyValue(datatypeProperty_Family).toString().toLowerCase())) {
 							familyIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1654,7 +1654,7 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(genusName.equals(individual.getPropertyValue(datatypeProperty_Genus).toString())) {
+						if(genusName.toLowerCase().equals(individual.getPropertyValue(datatypeProperty_Genus).toString().toLowerCase())) {
 							genusIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1680,7 +1680,7 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(sciName.equals(individual.getPropertyValue(datatypeProperty_Synonym).toString())) {
+						if(sciName.toLowerCase().equals(individual.getPropertyValue(datatypeProperty_Synonym).toString().toLowerCase())) {
 							sciNameIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {

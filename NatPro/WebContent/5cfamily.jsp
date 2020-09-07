@@ -126,12 +126,18 @@
 				  },
 			success : function(data) {
 				alert(data)
-				document.getElementById("editFamilyField").style.display="none";
-				document.getElementById("familyName").innerHTML = newFamilyNameVal; 
-				document.getElementById("familyName").style.display="block";
-				document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };		
-				document.getElementById("editFamilyLogo").classList.remove("fa-check");
-				document.getElementById("editFamilyLogo").classList.add("fa-pencil");   
+				if(data.trim() == "Family Name Successfully Edited"){
+					document.getElementById("editFamilyField").style.display="none";
+					document.getElementById("familyName").innerHTML = newFamilyNameVal; 
+					document.getElementById("familyName").style.display="block";
+					document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };		
+					document.getElementById("editFamilyLogo").classList.remove("fa-check");
+					document.getElementById("editFamilyLogo").classList.add("fa-pencil");   
+					document.getElementById("cancelEditFamilyBtn").style.display="none";
+					window.location.href = "ViewFamilyServlet?family="+newFamilyNameVal; 
+				}else{
+					cancelEditFamily();
+				}
 			}
 			});
 		

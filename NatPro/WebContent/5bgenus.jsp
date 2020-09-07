@@ -127,12 +127,18 @@
 				  },
 			success : function(data) {
 				alert(data)
-				document.getElementById("editGenusField").style.display="none";
-				document.getElementById("genusName").innerHTML = newGenusNameVal; 
-				document.getElementById("genusName").style.display="block";
-				document.getElementById("editGenusBtn").onclick = function () { editGenus(); };		
-				document.getElementById("editGenusLogo").classList.remove("fa-check");
-				document.getElementById("editGenusLogo").classList.add("fa-pencil");   
+				if(data.trim() == "Genus Name Successfully Edited"){
+					document.getElementById("editGenusField").style.display="none";
+					document.getElementById("genusName").innerHTML = newGenusNameVal; 
+					document.getElementById("genusName").style.display="block";
+					document.getElementById("editGenusBtn").onclick = function () { editGenus(); };		
+					document.getElementById("editGenusLogo").classList.remove("fa-check");
+					document.getElementById("editGenusLogo").classList.add("fa-pencil");
+					document.getElementById("cancelEditGenusBtn").style.display="none";
+					window.location.href = "ViewGenusServlet?genus="+newGenusNameVal; 
+				}else{
+					cancelEditGenus();
+				}
 			}
 			});
 		
