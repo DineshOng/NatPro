@@ -85,6 +85,15 @@ public class EditServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			break;
+		case "/EditGenus":
+			try {
+				editGenus(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
 		case "/EditSciName":
 			try {
 				editSciName(request, response);
@@ -183,8 +192,11 @@ public class EditServlet extends HttpServlet {
 				m.removeObjectPropertyValue(genusIndiv, "belongsToFamily", oldFamilyIndiv);
 				m.addObjectBelongsToFamily(genusIndiv, m.cleanString(newFamily));
 			}
-
 		}
+
+		PrintWriter out = response.getWriter();
+		String message = "Family Successfully Edited";
+		out.println(message);
 	}
 
 	private void editFamilyName(HttpServletRequest request, HttpServletResponse response)
@@ -214,6 +226,54 @@ public class EditServlet extends HttpServlet {
 			String message = "Edit Unsuccessful, Family Name Already Exists!";
 			out.println(message);
 		}
+	}
+	
+	private void editGenus(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException,
+			OntologyLoadException, SQWRLException {
+		String oldGenus = request.getParameter("oldGenusVal");
+		String newGenus = request.getParameter("newGenusVal");
+		
+		OntoQuery q = new OntoQuery();
+		String oldGenusIndiv = q.getGenusIndivName(oldGenus);
+		List<String> species = q.getAllSynonyms();
+		List<String> genusList = q.getAllGenus();
+		
+		// check if new genus indiv already exists, if not create new indiv
+		boolean createNewIndiv = false;
+		for (String genus : genusList) {
+			if (genus.equalsIgnoreCase(newGenus.toLowerCase())) {
+				createNewIndiv = false;
+			} else {
+				createNewIndiv = true;
+			}
+		}
+		
+		OntoMngr m = new OntoMngr();
+		if (createNewIndiv) {
+			m.addIndiv_Genus(m.cleanString(newGenus));
+			m.addDataPropGenus(newGenus);
+
+		} else {
+			String GenusIndiv = q.getGenusIndivName(newGenus);
+			m.setGenusIndiv(GenusIndiv);
+		}
+		
+		// Get the specie/s of the old genus to be updated
+		for (int i = 0; i < species.size(); i++) {
+			String speciesIndiv = q.getSpeciesIndivName(species.get(i));
+			System.out.println(speciesIndiv);
+			List<String> synToGenus = q.getSynonymGenus(species.get(i));
+			System.out.println(synToGenus);
+			if (synToGenus.contains(oldGenus)) {
+				m.removeObjectPropertyValue(speciesIndiv, "belongsToGenus", oldGenusIndiv);
+				m.addObjectBelongsToGenus(speciesIndiv, m.cleanString(newGenus));
+			}
+		}
+
+		PrintWriter out = response.getWriter();
+		String message = "Genus Successfully Edited";
+		out.println(message);
 	}
 
 	private void editGenusName(HttpServletRequest request, HttpServletResponse response)

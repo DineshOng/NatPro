@@ -117,7 +117,9 @@
 						<tr>
 							<th>Genus</th>
 							<td class="center"><a id="genus" style="display: inline"
-								href="ViewGenusServlet?genus=${medPlantsList.get(0).getSpecies().get(0).getGenus()}">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</a>
+								href="ViewGenusServlet?genus=${medPlantsList.get(0).getSpecies().get(0).getGenus()}">
+									<p style="display: inline;" id="genusName">${medPlantsList.get(0).getSpecies().get(0).getGenus()}</p>
+							</a>
 								<div class="autocomplete" style="width: 300px; display: none"
 									id="genusInputDiv">
 									<input type="text" id="genusInput" name="genus"
@@ -450,7 +452,7 @@
 	<script type="text/javascript">
 	function editGenus(){
 		document.getElementById("genus").style.display="none";
-		document.getElementById("genusInput").value = document.getElementById("genus").innerHTML;
+		document.getElementById("genusInput").value = document.getElementById("genusName").innerHTML.trim();
 		document.getElementById("genusInputDiv").style.display= "inline";
 		document.getElementById("editGenusBtn").onclick = function () { saveGenus(); };
 		document.getElementById("editGenusBtn").classList.remove("btn-outline-dark");
@@ -473,34 +475,37 @@
 	}
 	
 	function saveGenus(){
-		var newMedPlantNameVal = document.getElementById("genusInput").value;
-		var oldMedPlantNameVal = document.getElementById("genus").innerHTML;
+		var newGenusVal = document.getElementById("genusInput").value;
+		var oldGenusVal = document.getElementById("genusName").innerHTML.trim();
 	
-		console.log(newMedPlantNameVal);
-		console.log(oldMedPlantNameVal);
-/* 		$.ajax({
+		console.log(newGenusVal);
+		console.log(oldGenusVal);
+ 		$.ajax({
 			type : "GET",
-			url : 'EditMedPlant',
+			url : 'EditGenus',
 			dataType: "text",
-			data: { 
-				    newMedPlantName: newMedPlantNameVal,
-				    oldMedPlantName: oldMedPlantNameVal
+			data: {
+				newGenusVal: newGenusVal,
+				oldGenusVal: oldGenusVal
 				  },
 			success : function(data) {
 				alert(data)
-				if(data.trim() == "Plant Name Successfully Edited"){
-					document.getElementById("editMedPlantField").style.display="none";
-					document.getElementById("medPlantName").innerHTML = newMedPlantNameVal; 
-					document.getElementById("medPlantName").style.display="block";
-					document.getElementById("editMedPlantBtn").onclick = function () { editMedPlant(); };		
-					document.getElementById("editMedPlantLogo").classList.remove("fa-check");
-					document.getElementById("editMedPlantLogo").classList.add("fa-pencil"); 
-					document.getElementById("cancelEditMedPlantBtn").style.display="none";
+				if(data.trim() == "Genus Successfully Edited"){
+					document.getElementById("genusInputDiv").style.display="none";
+					document.getElementById("genusName").innerHTML = newGenusVal; 
+					document.getElementById("genus").style.display="inline";
+					document.getElementById("editGenusBtn").onclick = function () { editMedPlant(); };
+					document.getElementById("editGenusBtn").classList.remove("btn-success");
+					document.getElementById("editGenusBtn").classList.add("btn-outline-dark");
+					document.getElementById("editGenusLogo").classList.remove("fa-check");
+					document.getElementById("editGenusLogo").classList.add("fa-pencil"); 
+					document.getElementById("cancelEditGenusBtn").style.visibility="hidden";
+					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
 				}else{
-					cancelEditMedPlant();
+					cancelEditGenus();
 				}
 			}
-			}); */
+			}); 
 		
 	}
 	</script>
