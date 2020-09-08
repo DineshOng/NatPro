@@ -302,14 +302,47 @@
 					</thead>
 					<tbody>
 
+						<c:set var="prepNum" value="1" scope="page" />
 						<c:forEach items="${medPlantsList.get(0).getPreparations()}"
 							var="prepList">
 							<c:forEach items="${prepList.getIllness()}" var="illnessList">
 								<tr>
-									<td>${prepList.getPreparation()}</td>
-									<td>${prepList.getUtilizedPlantPart()}</td>
-									<td>${illnessList}</td>
+									<td><p style="display: inline;" id="prepName${prepNum}">${prepList.getPreparation()}</p>
+										<div class="autocomplete" style="width: 300px; display: none"
+											id="prepInputDiv${prepNum}">
+											<input type="text" id="prepInput${prepNum}" name="prep"
+												style="width: 600px;" placeholder="Preparation">
+										</div></td>
+									<td><p style="display: inline;"
+											id="plantPartName${prepNum}">${prepList.getUtilizedPlantPart()}</p>
+										<div class="autocomplete" style="width: 300px; display: none"
+											id="plantPartInputDiv${prepNum}">
+											<input type="text" id="plantPartInput${prepNum}"
+												name="plantPart" placeholder="Plant Part">
+										</div></td>
+									<td><p style="display: inline;" id="illnessName${prepNum}">${illnessList}</p>
+										<div class="autocomplete" style="width: 300px; display: none"
+											id="illnessInputDiv${prepNum}">
+											<input type="text" id="illnessInput${prepNum}" name="illness"
+												placeholder="Illness">
+										</div>
+										<div style="display: inline; float: right;">
+											<button type="button" class="btn btn-outline-dark btn-sm "
+												onclick="editPrep(${prepNum})" data-toggle="tooltip"
+												data-placement="top" title="edit entry"
+												id="editPrepBtn${prepNum}">
+												<i class="fa fa-pencil" aria-hidden="true"
+													id="editPrepLogo${prepNum}"></i>
+											</button>
+											<button type="button" class="btn btn-outline-danger btn-sm"
+												onclick="cancelEditPrep(${prepNum})" data-toggle="tooltip"
+												data-placement="top" title="edit entry"
+												id="cancelEditPrepBtn${prepNum}" style="visibility: hidden">
+												<i class="fa fa-times" aria-hidden="true"></i>
+											</button>
+										</div></td>
 								</tr>
+								<c:set var="prepNum" value="${prepNum + 1}" scope="page" />
 							</c:forEach>
 						</c:forEach>
 					</tbody>
@@ -373,15 +406,27 @@
 
 	<script type="text/javascript" src="js/autocomplete.js"></script>
 
+	<!-- Script to Generate Autocomplete Fields -->
+
 	<script>	
 		var families = [];
 		var genus = [];
 		var syns = [];
 		var locs = [];
+		var plantParts = [];
+		var illness = [];
 		/* autocomplete(document.getElementById("familyInput"), families);  */
 		autocomplete(document.getElementById("genusInput"), genus); 
 		autocomplete(document.getElementById("specieInput"), syns); 
 		autocomplete(document.getElementById("locInput"), locs); 
+		
+		var i;
+		for (i = 1; i < "${prepNum}"; i++) {
+			var plantPartInputId = 'plantPartInput'+i;
+			var illnessInputId = 'illnessInput'+i;
+			autocomplete(document.getElementById(illnessInputId), illness);
+			autocomplete(document.getElementById(plantPartInputId), plantParts);
+		} 
 	</script>
 
 	<c:forEach items="${familyList}" var="family">
@@ -408,6 +453,19 @@
 		</script>
 	</c:forEach>
 
+	<c:forEach items="${plantPartsList}" var="plantPart">
+		<script>	
+			plantParts.push("${plantPart}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${illnessList}" var="illness">
+		<script>
+			illness.push("${illness}")
+		</script>
+	</c:forEach>
+
+	<!-- Script for Edit Plant -->
 	<script type="text/javascript">
 	function editMedPlant(){
 		console.log("edit");
@@ -464,6 +522,7 @@
 	
 	</script>
 
+	<!-- Script for Edit Family -->
 	<script type="text/javascript">
 	function editFamily(){
 		document.getElementById("family").style.display="none";
@@ -522,6 +581,7 @@
 	}
 	</script>
 
+	<!-- Script for Edit Genus -->
 	<script type="text/javascript">
 	function editGenus(){
 		document.getElementById("genus").style.display="none";
@@ -585,6 +645,7 @@
 	}
 	</script>
 
+	<!-- Script for Edit Specie -->
 	<script type="text/javascript">
 	function editSpecie(){
 		document.getElementById("specie").style.display="none";
@@ -648,6 +709,136 @@
 	}
 	</script>
 
+	<!-- Script for Edit Genus -->
+	<script type="text/javascript">
+	function editPrep(prepNum){
+		var editBtnId = "editPrepBtn"+prepNum;
+		var editLogoId = "editPrepLogo"+prepNum;
+		var cancelEditBtnId = "cancelEditPrepBtn"+prepNum;
+		
+		var prepInputDivId = "prepInputDiv"+prepNum;
+		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
+		var illnessInputDivId = "illnessInputDiv"+prepNum;
+		
+		var prepInputId = "prepInput"+prepNum;
+		var plantPartInputId = "plantPartInput"+prepNum;
+		var illnessInputId = "illnessInput"+prepNum;
+		
+				
+		var prepNameId = "prepName"+prepNum;
+		var plantPartNameId = "plantPartName"+prepNum;
+		var illnessNameId = "illnessName"+prepNum;
+		
+		document.getElementById(editBtnId).onclick = function () { savePrep(prepNum); };
+		
+		document.getElementById(editBtnId).classList.remove("btn-outline-dark");
+		document.getElementById(editBtnId).classList.add("btn-success");
+		
+		document.getElementById(editLogoId).classList.remove("fa-pencil");
+		document.getElementById(editLogoId).classList.add("fa-check");  
+		
+		document.getElementById(prepInputDivId).style.display= "inline";	
+		document.getElementById(plantPartInputDivId).style.display= "inline";		
+		document.getElementById(illnessInputDivId).style.display= "inline";		
+		
+		document.getElementById(prepNameId).style.display="none";
+		document.getElementById(plantPartNameId).style.display="none";
+		document.getElementById(illnessNameId).style.display="none";
+		
+		document.getElementById(prepInputId).value = document.getElementById(prepNameId).innerHTML.trim();
+		document.getElementById(plantPartInputId).value = document.getElementById(plantPartNameId).innerHTML.trim();
+		document.getElementById(illnessInputId).value = document.getElementById(illnessNameId).innerHTML.trim();
+		
+		document.getElementById(cancelEditBtnId).style.visibility="visible"; 
+		
+	}
+	
+	function cancelEditPrep(prepNum){
+		var editBtnId = "editPrepBtn"+prepNum;
+		var editLogoId = "editPrepLogo"+prepNum;
+		var cancelEditBtnId = "cancelEditPrepBtn"+prepNum;
+		
+		var prepInputDivId = "prepInputDiv"+prepNum;
+		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
+		var illnessInputDivId = "illnessInputDiv"+prepNum;
+		
+		var prepInputId = "prepInput"+prepNum;
+		var plantPartInputId = "plantPartInput"+prepNum;
+		var illnessInputId = "illnessInput"+prepNum;
+		
+				
+		var prepNameId = "prepName"+prepNum;
+		var plantPartNameId = "plantPartName"+prepNum;
+		var illnessNameId = "illnessName"+prepNum;
+		
+		document.getElementById(editBtnId).classList.add("btn-outline-dark");
+		document.getElementById(editBtnId).classList.remove("btn-success");
+		
+		document.getElementById(editLogoId).classList.add("fa-pencil");
+		document.getElementById(editLogoId).classList.remove("fa-check");  
+		
+		document.getElementById(prepInputDivId).style.display= "none";	
+		document.getElementById(plantPartInputDivId).style.display= "none";		
+		document.getElementById(illnessInputDivId).style.display= "none";		
+		
+		document.getElementById(prepNameId).style.display="inline";
+		document.getElementById(plantPartNameId).style.display="inline";
+		document.getElementById(illnessNameId).style.display="inline";
+				
+		document.getElementById(cancelEditBtnId).style.visibility="hidden"; 
+	}
+	
+	function savePrep(prepNum){
+		var editBtnId = "editPrepBtn"+prepNum;
+		var editLogoId = "editPrepLogo"+prepNum;
+		var cancelEditBtnId = "cancelEditPrepBtn"+prepNum;
+		
+		var prepInputDivId = "prepInputDiv"+prepNum;
+		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
+		var illnessInputDivId = "illnessInputDiv"+prepNum;
+		
+		var prepInputId = "prepInput"+prepNum;
+		var plantPartInputId = "plantPartInput"+prepNum;
+		var illnessInputId = "illnessInput"+prepNum;
+		
+				
+		var prepNameId = "prepName"+prepNum;
+		var plantPartNameId = "plantPartName"+prepNum;
+		var illnessNameId = "illnessName"+prepNum;
+		
+		var prepVal = document.getElementById(prepInputId).value;
+		var plantPartVal = document.getElementById(plantPartInputId).value;
+		var illnessVal = document.getElementById(illnessInputId).value;
+		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
+	
+		console.log(prepVal);
+		console.log(plantPartVal);
+		console.log(illnessVal);
+  		$.ajax({
+			type : "GET",
+			url : 'EditPrep',
+			dataType: "text",
+			data: {
+				prepVal: prepVal,
+				plantPartVal: plantPartVal,
+				illnessVal: illnessVal,
+				medPlantName: medPlantName
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Preparation Successfully Edited"){
+					
+				}else{
+					cancelEditGenus();
+				}
+			}
+			}); 
+		
+	} 
+	</script>
+
+
+	<!-- Script for Add/Delete Location -->
 	<script type="text/javascript">
 	function addLoc(){
 		/* document.getElementById("loc").style.display="none"; */
@@ -732,6 +923,7 @@
 	}
 	</script>
 
+	<!-- Script for Edit Entry -->
 	<script type="text/javascript">
 	function editEntry(){
 		var i;
@@ -766,7 +958,6 @@
 		document.getElementById("editEntryBtn").onclick = function () { editEntry(); };
 	}
 	</script>
-
 
 	<script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>

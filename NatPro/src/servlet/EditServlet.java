@@ -28,7 +28,7 @@ import service.OntoQuery;
  * Servlet implementation class EditServlet
  */
 @WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
-		"/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc" })
+		"/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -124,6 +124,15 @@ public class EditServlet extends HttpServlet {
 		case "/RemoveLoc":
 			try {
 				removeLoc(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/EditPrep":
+			try {
+				editPrep(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -488,4 +497,21 @@ public class EditServlet extends HttpServlet {
 		out.println(message);
 
 	}
+
+	private void editPrep(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
+		String prepVal = request.getParameter("prepVal");
+		String plantPartVal = request.getParameter("plantPartVal");
+		String illnessVal = request.getParameter("illnessVal");
+		String medPlantName = request.getParameter("medPlantName");
+		
+
+		
+		PrintWriter out = response.getWriter();
+		String message = "Preparation Successfully Edited";
+		out.println(message);
+
+	}
+
 }

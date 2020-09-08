@@ -103,6 +103,11 @@ public class ViewPlantServlet extends HttpServlet {
 		List<String> locs = q.getAllLocations();
 		request.setAttribute("locList", locs);
 		
+		List<String> plantParts = q.getAllPlantParts();
+		request.setAttribute("plantPartsList", plantParts);
+		
+		List<String> illness = q.getAllIllness();
+		request.setAttribute("illnessList", illness);
 		
 		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
 	}

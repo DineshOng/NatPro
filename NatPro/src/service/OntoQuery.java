@@ -113,7 +113,7 @@ public class OntoQuery {
 		}
 		return values;
 	}
-	
+
 	public List<String> getAllLocations() throws SQWRLException {
 		List<String> values = new ArrayList<String>();
 
@@ -127,8 +127,9 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						values.add(WordUtils.capitalize(individual.getPropertyValue(datatypeProperty_Location).toString()));
-						
+						values.add(WordUtils
+								.capitalize(individual.getPropertyValue(datatypeProperty_Location).toString()));
+
 					} catch (Exception e) {
 					}
 				}
@@ -137,7 +138,7 @@ public class OntoQuery {
 		}
 		return values;
 	}
-	
+
 	public List<String> getAllFamily() throws SQWRLException {
 		List<String> values = new ArrayList<String>();
 
@@ -255,6 +256,31 @@ public class OntoQuery {
 
 		}
 		return bioacts;
+
+	}
+
+	public List<String> getAllIllness() {
+		List<String> illness = new ArrayList<String>();
+		RDFProperty datatypeProperty_Illness = owlModel
+				.getRDFProperty("datatypeProperty_Illness");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Illness")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					OWLIndividual individual = (OWLIndividual) jt.next();
+					try {
+						illness.add(individual.getPropertyValue(datatypeProperty_Illness).toString());
+					} catch (Exception e) {
+						illness.add(individual.getBrowserText().replaceAll("_", " "));
+					}
+				}
+			}
+
+		}
+		return illness;
 
 	}
 
@@ -1120,7 +1146,7 @@ public class OntoQuery {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
-						
+
 						Collection compoundSynCol = individual.getPropertyValues(datatypeProperty_CompoundSynonym);
 
 						Compound mp = null;
@@ -1145,14 +1171,15 @@ public class OntoQuery {
 							found = true;
 							values.add(mp);
 						}
-						
+
 						try {
-							if(!found) {
-								String compoundIndivIUPAC = individual.getPropertyValue(datatypeProperty_IUPACName).toString();
+							if (!found) {
+								String compoundIndivIUPAC = individual.getPropertyValue(datatypeProperty_IUPACName)
+										.toString();
 								if (compoundIndivIUPAC.toLowerCase().contains(Compound.toLowerCase())) {
 									mp = new Compound(compoundIndiv);
 									HashSet<String> synonyms = new HashSet<String>();
-	
+
 									for (Iterator jtt = compoundSynCol.iterator(); jtt.hasNext();) {
 										// if(!jtt.next().toString().isEmpty()) {
 										String syno = jtt.next().toString();
@@ -1162,16 +1189,16 @@ public class OntoQuery {
 										synonyms.add(syno);
 										// }
 									}
-									
+
 									synonyms.add(compoundIndivIUPAC);
-	
+
 									mp.setCompoundSynonyms(synonyms);
 									found = true;
 									values.add(mp);
 								}
 							}
 						} catch (Exception ee) {
-							//System.out.println(ee);
+							// System.out.println(ee);
 						}
 
 						if (!found) {
@@ -1237,7 +1264,7 @@ public class OntoQuery {
 
 		return values;
 	}
-	
+
 	public List<Compound> getCompoundwStructure() {
 		List<Compound> values = new ArrayList<Compound>();
 
@@ -1254,17 +1281,19 @@ public class OntoQuery {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						String compoundIndiv = individual.getPropertyValue(datatypeProperty_Compound).toString();
 						String smile = individual.getPropertyValue(datatypeProperty_CanSMILES).toString();
-						
+
 						System.out.println("=> " + compoundIndiv + " " + smile);
-						
-						//if(!smile.equals("") && smile.matches("^([^J][0-9BCOHNSOPrIFla@+\\-\\[\\]\\(\\)\\\\\\/%=#$,.~&!]{6,})$")) {
-						if(!smile.equals("")) {
+
+						// if(!smile.equals("") &&
+						// smile.matches("^([^J][0-9BCOHNSOPrIFla@+\\-\\[\\]\\(\\)\\\\\\/%=#$,.~&!]{6,})$"))
+						// {
+						if (!smile.equals("")) {
 							Compound cc = new Compound(compoundIndiv);
 							cc.setCanSMILES(smile);
-							
+
 							values.add(cc);
 						}
-						
+
 					} catch (Exception e) {
 						// System.out.println("eeeek");
 					}
@@ -1637,7 +1666,7 @@ public class OntoQuery {
 		}
 		return values;
 	}
-	
+
 	public String getMedPlantIndivName(String medPlantName) throws SQWRLException {
 		RDFProperty datatypeProperty_MedicinalPlant = owlModel.getRDFProperty("datatypeProperty_MedicinalPlant");
 		String medPlantIndivName = null;
@@ -1651,7 +1680,8 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(medPlantName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString().toLowerCase())) {
+						if (medPlantName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_MedicinalPlant)
+								.toString().toLowerCase())) {
 							medPlantIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1663,7 +1693,7 @@ public class OntoQuery {
 		}
 		return medPlantIndivName;
 	}
-	
+
 	public String getFamilyIndivName(String familyName) throws SQWRLException {
 		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
 		String familyIndivName = null;
@@ -1677,7 +1707,8 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(familyName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Family).toString())) {
+						if (familyName
+								.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Family).toString())) {
 							familyIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1689,7 +1720,7 @@ public class OntoQuery {
 		}
 		return familyIndivName;
 	}
-	
+
 	public String getGenusIndivName(String genusName) throws SQWRLException {
 		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
 		String genusIndivName = null;
@@ -1703,7 +1734,8 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(genusName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Genus).toString().toLowerCase())) {
+						if (genusName.equalsIgnoreCase(
+								individual.getPropertyValue(datatypeProperty_Genus).toString().toLowerCase())) {
 							genusIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1715,7 +1747,7 @@ public class OntoQuery {
 		}
 		return genusIndivName;
 	}
-	
+
 	public String getSpeciesIndivName(String sciName) throws SQWRLException {
 		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
 		String sciNameIndivName = null;
@@ -1729,7 +1761,8 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(sciName.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Synonym).toString().toLowerCase())) {
+						if (sciName.equalsIgnoreCase(
+								individual.getPropertyValue(datatypeProperty_Synonym).toString().toLowerCase())) {
 							sciNameIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1741,7 +1774,7 @@ public class OntoQuery {
 		}
 		return sciNameIndivName;
 	}
-	
+
 	public String getLocIndivName(String location) throws SQWRLException {
 		RDFProperty datatypeProperty_Location = owlModel.getRDFProperty("datatypeProperty_Location");
 		String locIndivName = null;
@@ -1754,7 +1787,8 @@ public class OntoQuery {
 				for (Iterator jt = instances.iterator(); jt.hasNext();) {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
-						if(location.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Location).toString().toLowerCase())) {
+						if (location.equalsIgnoreCase(
+								individual.getPropertyValue(datatypeProperty_Location).toString().toLowerCase())) {
 							locIndivName = individual.getBrowserText();
 						}
 					} catch (Exception e) {
@@ -1766,6 +1800,5 @@ public class OntoQuery {
 		}
 		return locIndivName;
 	}
-	
-	
+
 }
