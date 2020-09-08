@@ -38,18 +38,27 @@
 				id="editMedPlantField" name="editMedPlantName" style="display: none"
 				required>
 			<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3"
-				onclick="editMedPlant()" data-toggle="tooltip" data-placement="top"
-				title="edit entry" class="btn btn-primary" id="editMedPlantBtn">
+				style="display: none" onclick="editMedPlant()" data-toggle="tooltip"
+				data-placement="top" title="edit plant name" id="editMedPlantBtn">
 				<i class="fa fa-pencil" aria-hidden="true" id="editMedPlantLogo"></i>
 			</button>
 			<button type="button" class="btn btn-outline-danger btn-sm h-25 mt-3"
 				onclick="cancelEditMedPlant()" data-toggle="tooltip"
-				data-placement="top" title="edit entry" class="btn btn-primary"
-				id="cancelEditMedPlantBtn" style="display: none">
+				data-placement="top" title="cancel" id="cancelEditMedPlantBtn"
+				style="display: none">
 				<i class="fa fa-times" aria-hidden="true"></i>
 			</button>
 		</div>
 		<h3 class="text-white text-center">Plant</h3>
+
+		<div class="d-flex flex-row-reverse bd-highlight">
+			<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3"
+				onclick="editEntry()" data-toggle="tooltip" data-placement="top"
+				title="edit entry" id="editEntryBtn">
+				<i class="fa fa-pencil" aria-hidden="true" id="editEntryLogo"></i>
+				<p style="display: inline;" id="editEntryName">EDIT</p>
+			</button>
+		</div>
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
 		<a
@@ -100,8 +109,9 @@
 										placeholder="Genus">
 								</div>
 								<button type="button" class="btn btn-outline-dark btn-sm "
-									onclick="editGenus()" data-toggle="tooltip"
-									data-placement="top" title="edit entry" id="editGenusBtn">
+									style="display: none" onclick="editGenus()"
+									data-toggle="tooltip" data-placement="top" title="edit entry"
+									id="editGenusBtn">
 									<i class="fa fa-pencil" aria-hidden="true" id="editGenusLogo"></i>
 								</button>
 								<button type="button" class="btn btn-outline-danger btn-sm"
@@ -165,8 +175,9 @@
 												placeholder="Scientific Name">
 										</div>
 										<button type="button" class="btn btn-outline-dark btn-sm "
-											onclick="editSpecie()" data-toggle="tooltip"
-											data-placement="top" title="edit entry" id="editSpecieBtn">
+											style="display: none" onclick="editSpecie()"
+											data-toggle="tooltip" data-placement="top" title="edit entry"
+											id="editSpecieBtn">
 											<i class="fa fa-pencil" aria-hidden="true"
 												id="editSpecieLogo"></i>
 										</button>
@@ -202,8 +213,9 @@
 								<td><p style="display: inline;" id="locName${locNum}">${locationsList}</p>
 									<div style="display: inline; float: right;">
 										<button type="button" class="btn btn-outline-danger btn-sm "
-											onclick="removeLoc(${locNum})" data-toggle="tooltip"
-											data-placement="top" title="add location" id="removeLocBtn">
+											style="display: none" onclick="removeLoc(${locNum})"
+											data-toggle="tooltip" data-placement="top"
+											title="add location" id="removeLocBtn${locNum}">
 											<i class="fa fa-trash" id="removeLocLogo" aria-hidden="true"></i>
 										</button>
 									</div></td>
@@ -219,8 +231,8 @@
 											placeholder="Location">
 									</div>
 									<button type="button" class="btn btn-outline-dark btn-sm "
-										onclick="addLoc()" data-toggle="tooltip" data-placement="top"
-										title="add location" id="addLocBtn">
+										style="display: none" onclick="addLoc()" data-toggle="tooltip"
+										data-placement="top" title="add location" id="addLocBtn">
 										<i class="fa fa-plus" id="addLocLogo" aria-hidden="true"></i>
 										Location
 									</button>
@@ -718,8 +730,41 @@
 			}); 
 		
 	}
+	</script>
+
+	<script type="text/javascript">
+	function editEntry(){
+		var i;
+		for (i = 1; i < "${locNum}"; i++) {
+			var id = 'removeLocBtn'+i;
+			document.getElementById(id).style.display="inline";
+		} 
+		document.getElementById("editEntryLogo").classList.remove("fa-pencil");
+		document.getElementById("editEntryLogo").classList.add("fa-check");
+		document.getElementById("editEntryName").innerHTML=" Finish Editing";
+		document.getElementById("editEntryBtn").onclick = function () { cancelEditEntry(); };
+		document.getElementById("editMedPlantBtn").style.display="inline";
+		document.getElementById("editGenusBtn").style.display="inline";
+		document.getElementById("editSpecieBtn").style.display="inline";
+		document.getElementById("addLocBtn").style.display="inline";
+	}
 	
-	
+	function cancelEditEntry(){
+		var i;
+		for (i = 1; i < "${locNum}"; i++) {
+			var id = 'removeLocBtn'+i;
+			document.getElementById(id).style.display="none";
+		} 
+		document.getElementById("editMedPlantBtn").style.display="none";
+		document.getElementById("editGenusBtn").style.display="none";
+		document.getElementById("editSpecieBtn").style.display="none";
+		document.getElementById("addLocBtn").style.display="none";
+		
+		document.getElementById("editEntryLogo").classList.add("fa-pencil");
+		document.getElementById("editEntryLogo").classList.remove("fa-check");
+		document.getElementById("editEntryName").innerHTML=" EDIT";
+		document.getElementById("editEntryBtn").onclick = function () { editEntry(); };
+	}
 	</script>
 
 
