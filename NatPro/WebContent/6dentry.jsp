@@ -90,31 +90,6 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th>Family</th>
-							<td class="center"><a id="family" style="display: inline"
-								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">
-									<p style="display: inline;" id="familyName">${medPlantsList.get(0).getSpecies().get(0).getFamily()}
-									</p>
-							</a>
-								<div class="autocomplete" style="width: 300px; display: none"
-									id="familyInputDiv">
-									<input type="text" id="familyInput" name="family"
-										placeholder="Family">
-								</div>
-								<button type="button" class="btn btn-outline-dark btn-sm "
-									onclick="editFamily()" data-toggle="tooltip"
-									data-placement="top" title="edit entry" class="btn btn-primary"
-									id="editFamilyBtn">
-									<i class="fa fa-pencil" aria-hidden="true" id="editFamilyLogo"></i>
-								</button>
-								<button type="button" class="btn btn-outline-danger btn-sm"
-									onclick="cancelEditFamily()" data-toggle="tooltip"
-									data-placement="top" title="edit entry" class="btn btn-primary"
-									id="cancelEditFamilyBtn" style="visibility: hidden">
-									<i class="fa fa-times" aria-hidden="true"></i>
-								</button></td>
-						</tr>
-						<tr>
 							<th>Genus</th>
 							<td class="center"><a id="genus" style="display: inline"
 								href="ViewGenusServlet?genus=${medPlantsList.get(0).getSpecies().get(0).getGenus()}">
@@ -138,6 +113,30 @@
 									<i class="fa fa-times" aria-hidden="true"></i>
 								</button></td>
 						</tr>
+						<tr>
+							<th>Family</th>
+							<td class="center"><a id="family" style="display: inline"
+								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">
+									<p style="display: inline;" id="familyName">${medPlantsList.get(0).getSpecies().get(0).getFamily()}
+									</p>
+							</a> <!-- <div class="autocomplete" style="width: 300px; display: none"
+									id="familyInputDiv">
+									<input type="text" id="familyInput" name="family"
+										placeholder="Family">
+								</div>
+								<button type="button" class="btn btn-outline-dark btn-sm "
+									onclick="editFamily()" data-toggle="tooltip"
+									data-placement="top" title="edit entry" class="btn btn-primary"
+									id="editFamilyBtn">
+									<i class="fa fa-pencil" aria-hidden="true" id="editFamilyLogo"></i>
+								</button>
+								<button type="button" class="btn btn-outline-danger btn-sm"
+									onclick="cancelEditFamily()" data-toggle="tooltip"
+									data-placement="top" title="edit entry" class="btn btn-primary"
+									id="cancelEditFamilyBtn" style="visibility: hidden">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button> --></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -145,7 +144,7 @@
 		<div class="tab-pane fade" id="plantName" role="tabpanel"
 			aria-labelledby="list-profile-list">
 			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-auto text-center">
+				<table class="table table-hover w-auto">
 					<thead>
 						<tr>
 							<td>
@@ -341,7 +340,7 @@
 		var families = [];
 		var genus = [];
 		var syns = [];
-		autocomplete(document.getElementById("familyInput"), families); 
+		/* autocomplete(document.getElementById("familyInput"), families);  */
 		autocomplete(document.getElementById("genusInput"), genus); 
 		autocomplete(document.getElementById("specieInput"), syns); 
 	</script>
@@ -357,7 +356,7 @@
 			genus.push("${genus}")
 		</script>
 	</c:forEach>
-	
+
 	<c:forEach items="${synList}" var="syn">
 		<script>
 			syns.push("${syn}")
@@ -506,6 +505,7 @@
 	function saveGenus(){
 		var newGenusVal = document.getElementById("genusInput").value;
 		var oldGenusVal = document.getElementById("genusName").innerHTML.trim();
+		var sciNameVal = document.getElementById("specieName").innerHTML.trim();
 	
 		console.log(newGenusVal);
 		console.log(oldGenusVal);
@@ -515,7 +515,8 @@
 			dataType: "text",
 			data: {
 				newGenusVal: newGenusVal,
-				oldGenusVal: oldGenusVal
+				oldGenusVal: oldGenusVal,
+				sciNameVal: sciNameVal
 				  },
 			success : function(data) {
 				alert(data)
@@ -567,7 +568,8 @@
 	function saveSpecie(){
 		var newSpecieVal = document.getElementById("specieInput").value;
 		var oldSpecieVal = document.getElementById("specieName").innerHTML.trim();
-	
+		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
+		
 		console.log(newSpecieVal);
 		console.log(oldSpecieVal);
  		$.ajax({
@@ -576,7 +578,8 @@
 			dataType: "text",
 			data: {
 				newSpecieVal: newSpecieVal,
-				oldSpecieVal: oldSpecieVal
+				oldSpecieVal: oldSpecieVal,
+				medPlantName: medPlantName
 				  },
 			success : function(data) {
 				alert(data)
