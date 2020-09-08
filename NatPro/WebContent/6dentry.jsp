@@ -771,6 +771,8 @@
 		var plantPartNameId = "plantPartName"+prepNum;
 		var illnessNameId = "illnessName"+prepNum;
 		
+		document.getElementById(editBtnId).onclick = function () { editPrep(prepNum); };
+		
 		document.getElementById(editBtnId).classList.add("btn-outline-dark");
 		document.getElementById(editBtnId).classList.remove("btn-success");
 		
@@ -806,9 +808,14 @@
 		var plantPartNameId = "plantPartName"+prepNum;
 		var illnessNameId = "illnessName"+prepNum;
 		
-		var prepVal = document.getElementById(prepInputId).value;
-		var plantPartVal = document.getElementById(plantPartInputId).value;
+		var oldPrepVal = document.getElementById(prepNameId).innerHTML.trim();
+		var oldPlantPartVal = document.getElementById(plantPartNameId).innerHTML.trim();
+		var oldIllnessVal = document.getElementById(illnessNameId).innerHTML.trim();
+		
+		var prepVal = document.getElementById(prepInputId).value;		
+		var plantPartVal = document.getElementById(plantPartInputId).value;		
 		var illnessVal = document.getElementById(illnessInputId).value;
+		
 		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
 	
 		console.log(prepVal);
@@ -819,17 +826,20 @@
 			url : 'EditPrep',
 			dataType: "text",
 			data: {
-				prepVal: prepVal,
-				plantPartVal: plantPartVal,
-				illnessVal: illnessVal,
+				oldPrepVal: oldPrepVal,
+				oldPlantPartVal: oldPlantPartVal,
+				oldIllnessVal: oldIllnessVal,
+				prepVal: prepVal,				
+				plantPartVal: plantPartVal,				
+				illnessVal: illnessVal,				
 				medPlantName: medPlantName
 				  },
 			success : function(data) {
 				alert(data)
 				if(data.trim() == "Preparation Successfully Edited"){
-					
+					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
 				}else{
-					cancelEditGenus();
+					cancelEditPrep(prepNum);
 				}
 			}
 			}); 

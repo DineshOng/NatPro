@@ -261,8 +261,7 @@ public class OntoQuery {
 
 	public List<String> getAllIllness() {
 		List<String> illness = new ArrayList<String>();
-		RDFProperty datatypeProperty_Illness = owlModel
-				.getRDFProperty("datatypeProperty_Illness");
+		RDFProperty datatypeProperty_Illness = owlModel.getRDFProperty("datatypeProperty_Illness");
 
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
 		for (Iterator it = classes.iterator(); it.hasNext();) {
@@ -1799,6 +1798,91 @@ public class OntoQuery {
 
 		}
 		return locIndivName;
+	}
+	
+	public String getPrepIndivName(String prep) throws SQWRLException {
+		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
+		String prepIndivName = null;
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Preparation")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+
+					OWLIndividual individual = (OWLIndividual) jt.next();
+					try {
+						if (prep.equalsIgnoreCase(
+								individual.getPropertyValue(datatypeProperty_Preparation).toString().toLowerCase())) {
+							prepIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return prepIndivName;
+	}
+	
+	public String getPlantPartIndivName(String plantPart) throws SQWRLException {
+		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
+		String plantPartIndivName = null;
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("PlantPart")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+
+					OWLIndividual individual = (OWLIndividual) jt.next();
+					try {
+						if (plantPart.equalsIgnoreCase(
+								individual.getPropertyValue(datatypeProperty_PlantPart).toString().toLowerCase())) {
+							plantPartIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return plantPartIndivName;
+	}
+	
+
+	public String getIllnessIndivName(String illness) throws SQWRLException {
+		RDFProperty datatypeProperty_Illness = owlModel.getRDFProperty("datatypeProperty_Illness");
+		String illIndivName = null;
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Illness")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+
+					OWLIndividual individual = (OWLIndividual) jt.next();
+					try {
+						if (illness.equalsIgnoreCase(
+								individual.getPropertyValue(datatypeProperty_Illness).toString().toLowerCase())) {
+							illIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+						if (illness.equalsIgnoreCase(individual.getBrowserText().replaceAll("_", " "))) {
+							illIndivName = individual.getBrowserText();
+						}
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return illIndivName;
 	}
 
 }
