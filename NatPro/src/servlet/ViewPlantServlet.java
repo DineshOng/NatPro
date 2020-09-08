@@ -100,6 +100,9 @@ public class ViewPlantServlet extends HttpServlet {
 		List<String> syns = q.getAllSynonyms();
 		request.setAttribute("synList", syns);
 		
+		List<String> locs = q.getAllLocations();
+		request.setAttribute("locList", locs);
+		
 		
 		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
 	}

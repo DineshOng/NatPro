@@ -54,26 +54,25 @@
 	<div class="d-flex flex-row list-group text-center ">
 		<a
 			class="list-group-item list-group-item-action list-group-item-success active"
-			id="list-home-list" data-toggle="list" href="#taxInfo" role="tab"
+			id="taxInfoTab" data-toggle="list" href="#taxInfo" role="tab"
 			aria-controls="TaxonomicInformation">Taxonomic Information</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
-			id="list-profile-list" data-toggle="list" href="#plantName"
-			role="tab" aria-controls="ScientificName">Scientific Name(s)</a> <a
+			id="sciNameTab" data-toggle="list" href="#plantName" role="tab"
+			aria-controls="ScientificName">Scientific Name(s)</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
-			id="list-messages-list" data-toggle="list" href="#location"
-			role="tab" aria-controls="Location">Location(s)</a> <a
+			id="locTab" data-toggle="list" href="#location" role="tab"
+			aria-controls="Location">Location(s)</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
-			id="list-settings-list" data-toggle="list" href="#bioAct" role="tab"
+			id="bioActTab" data-toggle="list" href="#bioAct" role="tab"
 			aria-controls="BiologicalActivities">Biological Activities</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
-			id="list-settings-list" data-toggle="list" href="#prep" role="tab"
+			id="prepTab" data-toggle="list" href="#prep" role="tab"
 			aria-controls="Preparation">Preparation(s)</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
-			id="list-settings-list" data-toggle="list" href="#chemComp"
-			role="tab" aria-controls="ChemicalCompounds">Chemical Compound(s)</a>
-		<a
+			id="chemCompTab" data-toggle="list" href="#chemComp" role="tab"
+			aria-controls="ChemicalCompounds">Chemical Compound(s)</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
-			id="list-settings-list" data-toggle="list" href="#photos" role="tab"
+			id="photoTab" data-toggle="list" href="#photos" role="tab"
 			aria-controls="Photos">Photos</a>
 	</div>
 	<div class="tab-content" id="nav-tabContent">
@@ -144,7 +143,7 @@
 		<div class="tab-pane fade" id="plantName" role="tabpanel"
 			aria-labelledby="list-profile-list">
 			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-auto">
+				<table class="table table-hover w-auto text-center">
 					<thead>
 						<tr>
 							<td>
@@ -177,7 +176,7 @@
 											onclick="cancelEditSpecie()" data-toggle="tooltip"
 											data-placement="top" title="edit entry"
 											class="btn btn-primary" id="cancelEditSpecieBtn"
-											style="visibility: hidden">
+											style="display: none">
 											<i class="fa fa-times" aria-hidden="true"></i>
 										</button></td>
 								</tr>
@@ -190,7 +189,7 @@
 		<div class="tab-pane fade" id="location" role="tabpanel"
 			aria-labelledby="list-messages-list">
 			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25 text-center">
+				<table class="table table-hover w-auto text-center">
 					<thead>
 						<tr>
 							<td>
@@ -199,13 +198,34 @@
 						</tr>
 					</thead>
 					<tbody>
+						<c:forEach items="${medPlantsList.get(0).getLocations()}"
+							var="locationsList">
+							<tr>
+								<td>${locationsList}</td>
+							</tr>
+						</c:forEach>
 						<tr>
-							<c:forEach items="${medPlantsList.get(0).getLocations()}"
-								var="locationsList">
-								<tr>
-									<td>${locationsList}</td>
-								</tr>
-							</c:forEach>
+							<td>
+								<div class="justify-content-center">
+									<div class="autocomplete" style="width: 300px; display: none"
+										id="locInputDiv">
+										<input type="text" id="locInput" name="loc"
+											placeholder="Location">
+									</div>
+									<button type="button" class="btn btn-outline-dark btn-sm "
+										onclick="addLoc()" data-toggle="tooltip" data-placement="top"
+										title="add location" class="btn btn-primary" id="addLocBtn">
+										<i class="fa fa-plus" id="addLocLogo" aria-hidden="true"></i>
+										Location
+									</button>
+									<button type="button" class="btn btn-outline-danger btn-sm"
+										onclick="cancelAddLoc()" data-toggle="tooltip"
+										data-placement="top" class="btn btn-primary"
+										id="cancelAddLocBtn" style="display: none">
+										<i class="fa fa-times" aria-hidden="true"></i>
+									</button>
+								</div>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -340,9 +360,11 @@
 		var families = [];
 		var genus = [];
 		var syns = [];
+		var locs = [];
 		/* autocomplete(document.getElementById("familyInput"), families);  */
 		autocomplete(document.getElementById("genusInput"), genus); 
 		autocomplete(document.getElementById("specieInput"), syns); 
+		autocomplete(document.getElementById("locInput"), locs); 
 	</script>
 
 	<c:forEach items="${familyList}" var="family">
@@ -360,6 +382,12 @@
 	<c:forEach items="${synList}" var="syn">
 		<script>
 			syns.push("${syn}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${locList}" var="loc">
+		<script>
+			locs.push("${loc}")
 		</script>
 	</c:forEach>
 
@@ -551,7 +579,7 @@
 		document.getElementById("editSpecieLogo").classList.remove("fa-pencil");
 		document.getElementById("editSpecieLogo").classList.add("fa-check");  
 		
-		document.getElementById("cancelEditSpecieBtn").style.visibility="visible";
+		document.getElementById("cancelEditSpecieBtn").style.display= "inline";
 	}
 	
 	function cancelEditSpecie(){
@@ -562,7 +590,7 @@
 		document.getElementById("editSpecieBtn").onclick = function () { editSpecie(); };	
 		document.getElementById("editSpecieBtn").classList.remove("btn-success");
 		document.getElementById("editSpecieBtn").classList.add("btn-outline-dark");
-		document.getElementById("cancelEditSpecieBtn").style.visibility="hidden";
+		document.getElementById("cancelEditSpecieBtn").style.display="none";
 	}
 	
 	function saveSpecie(){
@@ -592,10 +620,72 @@
 					document.getElementById("editSpecieBtn").classList.add("btn-outline-dark");
 					document.getElementById("editSpecieLogo").classList.remove("fa-check");
 					document.getElementById("editSpecieLogo").classList.add("fa-pencil"); 
-					document.getElementById("cancelEditSpecieBtn").style.visibility="hidden";
+					document.getElementById("cancelEditSpecieBtn").style.display="none";
 					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
 				}else{
 					cancelEditSpecie();
+				}
+			}
+			}); 
+		
+	}
+	</script>
+
+	<script type="text/javascript">
+	function addLoc(){
+		/* document.getElementById("loc").style.display="none"; */
+		/* document.getElementById("locInput").value = document.getElementById("specieName").innerHTML.trim(); */
+		document.getElementById("locInputDiv").style.display= "inline";
+		document.getElementById("addLocBtn").onclick = function () { saveLoc(); };
+		document.getElementById("addLocBtn").classList.remove("btn-outline-dark");
+		document.getElementById("addLocBtn").classList.add("btn-success");
+		document.getElementById("addLocLogo").classList.remove("fa-plus");
+		document.getElementById("addLocLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelAddLocBtn").style.display="inline";
+	}
+	
+	function cancelAddLoc(){
+		/* document.getElementById("loc").style.display="inline"; */
+		document.getElementById("locInputDiv").style.display="none";   
+		document.getElementById("addLocLogo").classList.remove("fa-check");
+		document.getElementById("addLocLogo").classList.add("fa-plus"); 
+		document.getElementById("addLocBtn").onclick = function () { addLoc(); };	
+		document.getElementById("addLocBtn").classList.remove("btn-success");
+		document.getElementById("addLocBtn").classList.add("btn-outline-dark");
+		document.getElementById("cancelAddLocBtn").style.display="none";
+	}
+	
+	function saveLoc(){
+		var locVal = document.getElementById("locInput").value;
+		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
+		
+		console.log(locVal);
+		console.log(medPlantName);
+ 		$.ajax({
+			type : "GET",
+			url : 'AddLoc',
+			dataType: "text",
+			data: {
+				locVal: locVal,
+				medPlantName: medPlantName
+				  },
+			success : function(data) {
+				alert(data)
+				
+
+				if(data.trim() == "Location Added Successfully"){
+					document.getElementById("locInputDiv").style.display="none";
+					document.getElementById("addLocBtn").onclick = function () { addLoc(); };
+					document.getElementById("addLocBtn").classList.remove("btn-success");
+					document.getElementById("addLocBtn").classList.add("btn-outline-dark");
+					document.getElementById("addLocLogo").classList.remove("fa-check");
+					document.getElementById("addLocLogo").classList.add("fa-plus");
+					document.getElementById("cancelAddLocBtn").style.display="none";
+					/* document.getElementById("locTab").classList.add("active"); */
+					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
+				}else{
+					cancelAddLoc();
 				}
 			}
 			}); 

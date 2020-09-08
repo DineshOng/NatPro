@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.commons.lang.WordUtils;
+
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import edu.stanford.smi.protegex.owl.ProtegeOWL;
 import edu.stanford.smi.protegex.owl.model.OWLIndividual;
@@ -103,6 +105,30 @@ public class OntoQuery {
 					try {
 						OWLIndividual individual = (OWLIndividual) jt.next();
 						values.add(individual.getPropertyValue(datatypeProperty_Genus).toString());
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+		return values;
+	}
+	
+	public List<String> getAllLocations() throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+
+		RDFProperty datatypeProperty_Location = owlModel.getRDFProperty("datatypeProperty_Location");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Location")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						values.add(WordUtils.capitalize(individual.getPropertyValue(datatypeProperty_Location).toString()));
+						
 					} catch (Exception e) {
 					}
 				}
@@ -1714,6 +1740,31 @@ public class OntoQuery {
 
 		}
 		return sciNameIndivName;
+	}
+	
+	public String getLocIndivName(String location) throws SQWRLException {
+		RDFProperty datatypeProperty_Location = owlModel.getRDFProperty("datatypeProperty_Location");
+		String locIndivName = null;
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Location")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						if(location.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Location).toString().toLowerCase())) {
+							locIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return locIndivName;
 	}
 	
 	

@@ -28,7 +28,7 @@ import service.OntoQuery;
  * Servlet implementation class EditServlet
  */
 @WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
-		"/EditSci", "/EditSciName" })
+		"/EditSci", "/EditSciName", "/AddLoc" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -106,6 +106,15 @@ public class EditServlet extends HttpServlet {
 		case "/EditSci":
 			try {
 				editSci(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/AddLoc":
+			try {
+				addLoc(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -214,7 +223,7 @@ public class EditServlet extends HttpServlet {
 		String oldFamilyName = request.getParameter("oldFamilyName");
 		String newFamilyName = request.getParameter("newFamilyName");
 
-		// Get the individual name of the MedicinalPlant
+		// Get the individual name of the Family
 		OntoQuery q = new OntoQuery();
 		String oldFamilyNameIndiv = q.getFamilyIndivName(oldFamilyName);
 
@@ -305,7 +314,7 @@ public class EditServlet extends HttpServlet {
 		String oldGenusName = request.getParameter("oldGenusName");
 		String newGenusName = request.getParameter("newGenusName");
 
-		// Get the individual name of the MedicinalPlant
+		// Get the individual name of the Genus
 		OntoQuery q = new OntoQuery();
 		String oldGenusNameIndiv = q.getGenusIndivName(oldGenusName);
 
@@ -334,7 +343,7 @@ public class EditServlet extends HttpServlet {
 		String oldSciName = request.getParameter("oldSpecieName");
 		String newSciName = request.getParameter("newSpecieName");
 
-		// Get the individual name of the MedicinalPlant
+		// Get the individual name of the Specie
 		OntoQuery q = new OntoQuery();
 		String oldSciNameIndiv = q.getSpeciesIndivName(oldSciName);
 
@@ -411,6 +420,45 @@ public class EditServlet extends HttpServlet {
 			String message = "Scientific Name Successfully Edited";
 			out.println(message);
 		}
+
+	}
+
+	private void addLoc(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
+		String location = request.getParameter("locVal");
+		String medPlantName = request.getParameter("medPlantName");
+		
+		// Get the individual name of the MedicinalPlant
+		OntoQuery q = new OntoQuery();
+		String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
+		List<String> locList = q.getAllLocations();
+		
+		// check if new genus indiv already exists, if not create new indiv
+		boolean createNewIndiv = false;
+		for (String loc : locList) {
+			if (loc.equalsIgnoreCase(location.toLowerCase())) {
+				createNewIndiv = false;
+			} else {
+				createNewIndiv = true;
+			}
+		}
+
+		OntoMngr m = new OntoMngr();
+		if (createNewIndiv) {
+			m.addIndiv_Location(m.cleanString(location));
+			m.addDataPropLocation(location);
+			m.addObjectIsLocatedIn(medPlantIndiv, m.cleanString(location));
+
+		} else {
+			String locIndiv = q.getLocIndivName(location);
+			m.setLocationIndiv(locIndiv);
+			m.addObjectIsLocatedIn(medPlantIndiv, locIndiv);
+		}
+		
+		PrintWriter out = response.getWriter();
+		String message = "Location Added Successfully";
+		out.println(message);
 
 	}
 }
