@@ -34,11 +34,11 @@
 		</h1>
 		<img id="compoundIMG" class="responsive-img circle" src="https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=${compound.getPubCID()}&t=l">
 		<br>
+		<input class="form-control w-auto h-25 mt-3" type="text" id="editChemCompoundField" name="editChemCompoundName" hidden required>
+		
 		<button type="button" id="pubchemBT" class="btn btn-outline-light btn-sm h-25 mt-3" onclick="filloutPubChemInfo()" data-toggle="tooltip" data-placement="top" title="get information from PubChem">
 			Fill Out Information from PubChem
 		</button>
-		
-		<input class="form-control w-auto h-25 mt-3" type="text" id="editChemCompoundField" name="editChemCompoundName" style="display: none" required>
 		
 		<button type="button" id="editBT" class="btn btn-outline-light btn-sm mt-3" onclick="editChemCompound()" data-toggle="tooltip" data-placement="top" title="edit entry">
 			<i class="fa fa-pencil" aria-hidden="true" id="editChemCompoundLogo"></i>
@@ -78,8 +78,11 @@
 							<th>
 								Common Name
 							</th>
-							<td id="compound">
-								${compound.getCompoundName()}
+							<td>
+								<div id="compound">
+									${compound.getCompoundName()}
+								</div>
+								<input type="text" id="editCompoundName" name="editCompoundName" hidden required>
 							</td>
 							<td>
 								<button type="button" id="editCompound" onClick="editField(0,0)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
@@ -91,12 +94,21 @@
 							<th>
 								IUPAC Name
 							</th>
-							<td id="iupac">
-								${compound.getIupac()}
+							<td>
+								<div id="iupac">
+									${compound.getIupac()}
+								</div>
+								<input type="text" id="editIupacName" name="editIupacName" hidden required>
 							</td>
 							<td>
 								<button type="button" id="editCompound" onClick="editField(0,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveCompound" onClick="saveField(0,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelCompound" onClick="cancelField(0,1)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
@@ -104,12 +116,21 @@
 							<th>
 								Canonical SMILES
 							</th>
-							<td id="canSMILES">
-								${compound.getCanSMILES()}
+							<td>
+								<div id="canSMILES">
+									${compound.getCanSMILES()}
+								</div>
+								<input type="text" id="editCanSmilesName" name="editCanSmilesName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(0,2)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editCanSmiles" onClick="editField(0,2)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveCanSmiles" onClick="saveField(0,2)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelCanSmiles" onClick="cancelField(0,2)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
@@ -117,12 +138,21 @@
 							<th>
 								Formula
 							</th>
-							<td id="molForm">
-								${compound.getMolFormHTML()}
+							<td>
+								<div id="molForm">
+									${compound.getMolFormHTML()}
+								</div>
+								<input type="text" id="editMolFormName" name="editMolFormName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(0,3)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editMolForm" onClick="editField(0,3)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveMolForm" onClick="saveField(0,3)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelMolForm" onClick="cancelField(0,3)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
@@ -130,12 +160,21 @@
 							<th>
 								InChl
 							</th>
-							<td id="inchi">
+							<td>
+								<div id="inchi">
 								${compound.getInchi()}
+								</div>
+								<input type="text" id="editInchiName" name="editInchiName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(0,4)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editInchi" onClick="editField(0,4)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveInchi" onClick="saveField(0,4)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelInchi" onClick="cancelField(0,4)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
@@ -143,12 +182,21 @@
 							<th>
 								InChl key
 							</th>
-							<td id="inchikey">
-								${compound.getInchikey()}
+							<td>
+								<div id="inchikey">
+									${compound.getInchikey()}
+								</div>
+								<input type="text" id="editInchiKeyName" name="editInchiKeyName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(0,5)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editInchiKey" onClick="editField(0,5)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveInchiKey" onClick="saveField(0,5)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelInchiKey" onClick="cancelField(0,5)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
@@ -156,12 +204,21 @@
 							<th>
 								Chemical Class
 							</th>
-							<td id="chemClass">
-								
+							<td>
+								<div id="chemClass">
+									${compound.getChemClass()}
+								</div>
+								<input type="text" id="editChemClassName" name="editChemClassName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(0,6)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editChemClass" onClick="editField(0,6)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveChemClass" onClick="saveField(0,6)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelChemClass" onClick="cancelField(0,6)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
@@ -169,12 +226,21 @@
 							<th>
 								PubChem CID
 							</th>
-							<td id="pubCID">
+							<td>
+								<div id="pubCID">
 								${compound.getPubCID()}
+								</div>
+								<input type="text" id="editPubCidName" name="editPubCidName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(0,7)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editPubCid" onClick="editField(0,7)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="savePubCid" onClick="saveField(0,7)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelPubCid" onClick="cancelField(0,7)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
@@ -198,116 +264,197 @@
 							<th>
 								Molecular Weight
 							</th>
-							<td id="molWeight">
-								${compound.getMolWeight()}
+							<td>
+								<div id="molWeight">
+									${compound.getMolWeight()}
+								</div>
+								<input type="text" id="editMolWeightName" name="editMolWeightName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,0)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editMolWeight" onClick="editField(1,0)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveMolWeight" onClick="saveField(1,0)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelMolWeight" onClick="cancelField(1,0)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
 						<tr>
-							<th id="xlogp">
+							<th>
 								XLogP
 							</th>
 							<td>
-								${compound.getXlogp()}
+								<div id="xlogp">
+									${compound.getXlogp()}
+								</div>
+								<input type="text" id="editXlogpName" name="editXlogpName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editXlogp" onClick="editField(1,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveXlogp" onClick="saveField(1,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelXlogp" onClick="cancelField(1,1)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
 						<tr>
-							<th id="mass">
+							<th>
 								Mass
 							</th>
 							<td>
-								${compound.getMass()}
+								<div id="mass">
+									${compound.getMass()}
+								</div>
+								<input type="text" id="editMassName" name="editMassName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,2)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editMass" onClick="editField(1,2)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveMass" onClick="saveField(1,2)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelMass" onClick="cancelField(1,2)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
 						<tr>
-							<th id="tpsa">
+							<th>
 								TPSA
 							</th>
 							<td>
-								${compound.getTpsa()}
+								<div id="tpsa">
+									${compound.getTpsa()}
+								</div>
+								<input type="text" id="editTpsaName" name="editTpsaName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,3)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editTpsa" onClick="editField(1,3)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveTpsa" onClick="saveField(1,3)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelTpsa" onClick="cancelField(1,3)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
 						<tr>
-							<th id="complexity">
+							<th>
 								Complexity
 							</th>
 							<td>
-								${compound.getComplexity()}
+								<div id="complexity">
+									${compound.getComplexity()}
+								</div>
+								<input type="text" id="editComplexityName" name="editComplexityName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,4)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editComplexity" onClick="editField(1,4)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveComplexity" onClick="saveField(1,4)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelComplexity" onClick="cancelField(1,4)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
 						<tr>
-							<th id="charge">
+							<th>
 								Charge
 							</th>
 							<td>
-								${compound.getCharge()}
+								<div id="charge">
+									${compound.getCharge()}
+								</div>
+								<input type="text" id="editChargeName" name="editChargeName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,5)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editCharge" onClick="editField(1,5)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveCharge" onClick="saveField(1,5)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelCharge" onClick="cancelField(1,5)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
 						<tr>
-							<th id="hBondAcceptor">
+							<th>
 								H-Bond Acceptors
 							</th>
 							<td>
-								${compound.getHBondAcceptor()}
+								<div id="hBondAcceptor">
+									${compound.getHBondAcceptor()}
+								</div>
+								<input type="text" id="editHBondAcceptorName" name="editHBondAcceptorName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,6)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editHBondAcceptor" onClick="editField(1,6)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveHBondAcceptor" onClick="saveField(1,6)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelHBondAcceptor" onClick="cancelField(1,6)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
 						<tr>
-							<th id="hBondDonor">
+							<th>
 								H-Bond Donor
 							</th>
 							<td>
-								${compound.getHBondDonor()}
+								<div id="hBondDonor">
+									${compound.getHBondDonor()}
+								</div>
+								<input type="text" id="editHBondDonorName" name="editHBondDonorName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,7)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editHBondDonor" onClick="editField(1,7)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveHBondDonor" onClick="saveField(1,7)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelHBondDonor" onClick="cancelField(1,7)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
 						<tr>
-							<th id="rotBondCount">
+							<th>
 								Rotatable Bonds
 							</th>
 							<td>
-								${compound.getRotBondCount()}
+								<div id="rotBondCount">
+									${compound.getRotBondCount()}
+								</div>
+								<input type="text" id="editRotBondCountName" name="editRotBondCountName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(1,8)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editRotBondCount" onClick="editField(1,8)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="saveRotBondCount" onClick="saveField(1,8)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelRotBondCount" onClick="cancelField(1,8)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
 						</tr>
@@ -394,7 +541,180 @@
 		*/
 	
 		function editField(tValue, eValue) {
+			console.log("edit: " + tValue + "-" + eValue);
 			
+			var editInputField; // inputfield to change the value;
+			var editButton; // editbutton
+			var saveButton // save button
+			var cancelButton; // cancel button
+			var editTarget; // the name to be edited
+			
+			switch (tValue) {
+			case 0: // gen info
+				switch (eValue) {
+				case 0: //common name
+					editInputField = document.getElementById("compound");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 1: // uipac
+					editInputField = document.getElementById("uipac");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 2: // smiles
+					editInputField = document.getElementById("canSMILES");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 3: // formula
+					editInputField = document.getElementById("molForm");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 4: // inchl
+					editInputField = document.getElementById("inchi");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 5: // inchlkey
+					editInputField = document.getElementById("inchikey");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 6: // chem class
+					editInputField = document.getElementById("chemClass");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 7: // pb cid
+					editInputField = document.getElementById("pubCID");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				}
+				break;
+			case 1: // chem info
+				switch (eValue) {
+				case 0: // mol weight
+					editInputField = document.getElementById("molWeight");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 1: // xlogp
+					editInputField = document.getElementById("xlogp");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 2: // mass
+					editInputField = document.getElementById("mass");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 3: // tpsa
+					editInputField = document.getElementById("tpsa");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 4: // complexity
+					editInputField = document.getElementById("complexity");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 5: //charge
+					editInputField = document.getElementById("charge");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 6: // hbond acceptors
+					editInputField = document.getElementById("hBondAcceptor");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 7: // hbond donors
+					editInputField = document.getElementById("hBondDonor");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				case 8: // rotatable bonds
+					editInputField = document.getElementById("rotBondCount");
+					editButton = document.getElementById("");
+					saveButton = document.getElementById("");
+					cancelButton = document.getElementById("");
+					editTarget = document.getElementById("");
+					break;
+				}
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			}
+		}
+		
+		function editChemCompound() {
+			console.log("edit");
+			document.getElementById("editBT").hidden = true;
+			document.getElementById("saveBT").hidden = false;
+			document.getElementById("cancelBT").hidden = false;
+			
+			document.getElementById("editchemCompoundName").value = document.getElementById("chemCompoundName").innerHTML;
+			document.getElementById("editChemCompoundField").hidden = false;	
+		}
+		
+		function saveEditChemCompound() {
+			console.log("save");
+			var oldChemCompoundNameVal = document.getElementById("chemCompoundName").innerHTML;
+			var newChemCompoundNameVal = document.getElementById("editchemCompoundName").value;
+			
+			document.getElementById("editBT").hidden = false;
+			document.getElementById("saveBT").hidden = true;
+			document.getElementById("cancelBT").hidden = true;
+			
+			document.getElementById("editChemCompoundField").hidden = true;	
+			
+			//insert ajax code here
+		}
+		
+		function cancelEditChemCompound() {
+			console.log("cancel");
+			document.getElementById("editBT").hidden = false;
+			document.getElementById("saveBT").hidden = true;
+			document.getElementById("cancelBT").hidden = true;
+			
+			document.getElementById("editChemCompoundField").hidden = true;	
 		}
 	</script>
 
