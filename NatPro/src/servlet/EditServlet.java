@@ -28,7 +28,7 @@ import service.OntoQuery;
  * Servlet implementation class EditServlet
  */
 @WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
-		"/EditSci", "/EditSciName", "/AddLoc" })
+		"/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -115,6 +115,15 @@ public class EditServlet extends HttpServlet {
 		case "/AddLoc":
 			try {
 				addLoc(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/RemoveLoc":
+			try {
+				removeLoc(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -423,17 +432,16 @@ public class EditServlet extends HttpServlet {
 
 	}
 
-	private void addLoc(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
-			OWLOntologyStorageException, SQWRLException {
+	private void addLoc(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException,
+			OntologyLoadException, OWLOntologyCreationException, OWLOntologyStorageException, SQWRLException {
 		String location = request.getParameter("locVal");
 		String medPlantName = request.getParameter("medPlantName");
-		
+
 		// Get the individual name of the MedicinalPlant
 		OntoQuery q = new OntoQuery();
 		String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
 		List<String> locList = q.getAllLocations();
-		
+
 		// check if new genus indiv already exists, if not create new indiv
 		boolean createNewIndiv = false;
 		for (String loc : locList) {
@@ -455,9 +463,28 @@ public class EditServlet extends HttpServlet {
 			m.setLocationIndiv(locIndiv);
 			m.addObjectIsLocatedIn(medPlantIndiv, locIndiv);
 		}
-		
+
 		PrintWriter out = response.getWriter();
 		String message = "Location Added Successfully";
+		out.println(message);
+
+	}
+
+	private void removeLoc(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
+		String location = request.getParameter("locVal");
+		String medPlantName = request.getParameter("medPlantName");
+
+		// Get the individual name of the MedicinalPlant
+		OntoQuery q = new OntoQuery();
+		String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
+		String locIndiv = q.getLocIndivName(location);
+		OntoMngr m = new OntoMngr();
+		m.removeObjectPropertyValue(medPlantIndiv, "isLocatedIn", locIndiv);
+		
+		PrintWriter out = response.getWriter();
+		String message = "Location Removed";
 		out.println(message);
 
 	}

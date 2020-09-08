@@ -101,14 +101,13 @@
 								</div>
 								<button type="button" class="btn btn-outline-dark btn-sm "
 									onclick="editGenus()" data-toggle="tooltip"
-									data-placement="top" title="edit entry" class="btn btn-primary"
-									id="editGenusBtn">
+									data-placement="top" title="edit entry" id="editGenusBtn">
 									<i class="fa fa-pencil" aria-hidden="true" id="editGenusLogo"></i>
 								</button>
 								<button type="button" class="btn btn-outline-danger btn-sm"
 									onclick="cancelEditGenus()" data-toggle="tooltip"
-									data-placement="top" title="edit entry" class="btn btn-primary"
-									id="cancelEditGenusBtn" style="visibility: hidden">
+									data-placement="top" title="edit entry" id="cancelEditGenusBtn"
+									style="visibility: hidden">
 									<i class="fa fa-times" aria-hidden="true"></i>
 								</button></td>
 						</tr>
@@ -167,16 +166,14 @@
 										</div>
 										<button type="button" class="btn btn-outline-dark btn-sm "
 											onclick="editSpecie()" data-toggle="tooltip"
-											data-placement="top" title="edit entry"
-											class="btn btn-primary" id="editSpecieBtn">
+											data-placement="top" title="edit entry" id="editSpecieBtn">
 											<i class="fa fa-pencil" aria-hidden="true"
 												id="editSpecieLogo"></i>
 										</button>
 										<button type="button" class="btn btn-outline-danger btn-sm"
 											onclick="cancelEditSpecie()" data-toggle="tooltip"
 											data-placement="top" title="edit entry"
-											class="btn btn-primary" id="cancelEditSpecieBtn"
-											style="display: none">
+											id="cancelEditSpecieBtn" style="display: none">
 											<i class="fa fa-times" aria-hidden="true"></i>
 										</button></td>
 								</tr>
@@ -198,11 +195,20 @@
 						</tr>
 					</thead>
 					<tbody>
+						<c:set var="locNum" value="1" scope="page" />
 						<c:forEach items="${medPlantsList.get(0).getLocations()}"
 							var="locationsList">
 							<tr>
-								<td>${locationsList}</td>
+								<td><p style="display: inline;" id="locName${locNum}">${locationsList}</p>
+									<div style="display: inline; float: right;">
+										<button type="button" class="btn btn-outline-danger btn-sm "
+											onclick="removeLoc(${locNum})" data-toggle="tooltip"
+											data-placement="top" title="add location" id="removeLocBtn">
+											<i class="fa fa-trash" id="removeLocLogo" aria-hidden="true"></i>
+										</button>
+									</div></td>
 							</tr>
+							<c:set var="locNum" value="${locNum + 1}" scope="page" />
 						</c:forEach>
 						<tr>
 							<td>
@@ -214,14 +220,14 @@
 									</div>
 									<button type="button" class="btn btn-outline-dark btn-sm "
 										onclick="addLoc()" data-toggle="tooltip" data-placement="top"
-										title="add location" class="btn btn-primary" id="addLocBtn">
+										title="add location" id="addLocBtn">
 										<i class="fa fa-plus" id="addLocLogo" aria-hidden="true"></i>
 										Location
 									</button>
 									<button type="button" class="btn btn-outline-danger btn-sm"
 										onclick="cancelAddLoc()" data-toggle="tooltip"
-										data-placement="top" class="btn btn-primary"
-										id="cancelAddLocBtn" style="display: none">
+										data-placement="top" id="cancelAddLocBtn"
+										style="display: none">
 										<i class="fa fa-times" aria-hidden="true"></i>
 									</button>
 								</div>
@@ -354,7 +360,6 @@
 	<%@include file="_includeFooter.html"%>
 
 	<script type="text/javascript" src="js/autocomplete.js"></script>
-
 
 	<script>	
 		var families = [];
@@ -656,6 +661,28 @@
 		document.getElementById("cancelAddLocBtn").style.display="none";
 	}
 	
+	function removeLoc(locNum){
+		var locVal = document.getElementById("locName"+locNum).innerHTML.trim();
+		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
+		
+		console.log(locVal);
+   		$.ajax({
+			type : "GET",
+			url : 'RemoveLoc',
+			dataType: "text",
+			data: {
+				locVal: locVal,
+				medPlantName: medPlantName
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Location Removed"){
+					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}";
+				}
+			}
+			});   
+	}
+	
 	function saveLoc(){
 		var locVal = document.getElementById("locInput").value;
 		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
@@ -691,6 +718,8 @@
 			}); 
 		
 	}
+	
+	
 	</script>
 
 
