@@ -119,7 +119,8 @@
 								<button type="button" class="btn btn-outline-dark btn-sm "
 									style="display: none" onclick="editGenus()"
 									data-toggle="tooltip" data-trigger="hover" data-placement="top"
-									title="edit the genus this plant belongs to" id="editGenusBtn">
+									title="select the genus this plant belongs to"
+									id="editGenusBtn">
 									<i class="fa fa-pencil" aria-hidden="true" id="editGenusLogo"></i>
 								</button>
 								<button type="button" class="btn btn-outline-danger btn-sm"
@@ -192,7 +193,8 @@
 											style="display: none" onclick="editSpecie()"
 											data-toggle="tooltip" data-trigger="hover"
 											data-placement="top"
-											title="edit this plant's scientific name" id="editSpecieBtn">
+											title="select this plant's scientific name"
+											id="editSpecieBtn">
 											<i class="fa fa-pencil" aria-hidden="true"
 												id="editSpecieLogo"></i>
 										</button>
@@ -418,9 +420,11 @@
 							<th># HBA</th>
 							<th># HDB</th>
 							<th># Rotatable Bonds</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
+						<c:set var="compNum" value="1" scope="page" />
 						<c:forEach items="${medPlantsList.get(0).getSpecies()}"
 							var="speciesList">
 							<c:forEach items="${speciesList.getSpeciesParts()}"
@@ -428,10 +432,25 @@
 								<c:forEach items="${speciesPartList.getCompounds()}"
 									var="compoundsList">
 									<tr>
-										<td>${speciesPartList.getPlantPart()}</td>
+										<td><p style="display: inline;"
+												id="plantPartCompName${compNum}">${speciesPartList.getPlantPart()}</p>
+											<div class="autocomplete" style="width: 300px; display: none"
+												id="plantPartCompInputDiv${compNum}">
+												<input type="text" id="plantPartCompInput${compNum}"
+													name="plantPartComp" placeholder="Plant Part">
+											</div></td>
 										<td></td>
 										<td><a
-											href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
+											href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}"><p
+													style="display: inline;" id="chemCompName${compNum}">${compoundsList.getCompoundNameHTML()}</p></a>
+											<div class="autocomplete" style="width: 300px; display: none"
+												id="chemCompInputDiv${compNum}">
+												<input type="text" id="chemCompInput${compNum}"
+													name="chemComp" placeholder="Chemical Compound">
+											</div> <i id="editSpecieTip" style="display: inline;"
+											class="fa fa-info-circle" data-toggle="popover"
+											data-placement="top" data-trigger="hover"
+											data-content="You may edit this compound's attributes in the compound page."></i></td>
 										<td>${compoundsList.getMolForm()}</td>
 										<td>${compoundsList.getMolWeight()}</td>
 										<td></td>
@@ -439,7 +458,22 @@
 										<td></td>
 										<td></td>
 										<td></td>
+										<td><button type="button"
+												class="btn btn-outline-dark btn-sm " style="display: inline"
+												onclick="editComp(${compNum})" data-toggle="tooltip"
+												data-trigger="hover" data-placement="top"
+												title="edit compound" id="editCompBtn${compNum}">
+												<i class="fa fa-pencil" aria-hidden="true"
+													id="editCompLogo${compNum}"></i>
+											</button>
+											<button type="button" class="btn btn-outline-danger btn-sm"
+												onclick="cancelEditComp(${compNum})" data-toggle="tooltip"
+												data-trigger="hover" data-placement="top" title="cancel"
+												id="cancelEditCompBtn${compNum}" style="display: none">
+												<i class="fa fa-times" aria-hidden="true"></i>
+											</button></td>
 									</tr>
+									<c:set var="compNum" value="${compNum + 1}" scope="page" />
 								</c:forEach>
 							</c:forEach>
 						</c:forEach>
@@ -459,7 +493,7 @@
 	<!-- <script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script> -->
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
-	<script type="text/javascript" src="js/autocomplete.js"></script>
+
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -475,65 +509,6 @@
 		  $('[data-toggle="popover"]').popover();
 		})
 	</script>
-
-	<!-- Script to Generate Autocomplete Fields -->
-	<script>	
-		var families = [];
-		var genus = [];
-		var syns = [];
-		var locs = [];
-		var plantParts = [];
-		var illness = [];
-		/* autocomplete(document.getElementById("familyInput"), families);  */
-		autocomplete(document.getElementById("genusInput"), genus); 
-		autocomplete(document.getElementById("specieInput"), syns); 
-		autocomplete(document.getElementById("locInput"), locs); 
-		
-		var i;
-		for (i = 1; i <= "${prepNum}"; i++) {
-			var plantPartInputId = 'plantPartInput'+i;
-			var illnessInputId = 'illnessInput'+i;
-			autocomplete(document.getElementById(illnessInputId), illness);
-			autocomplete(document.getElementById(plantPartInputId), plantParts);
-		} 
-	</script>
-
-	<c:forEach items="${familyList}" var="family">
-		<script>
-			families.push("${family}")
-		</script>
-	</c:forEach>
-
-	<c:forEach items="${genusList}" var="genus">
-		<script>
-			genus.push("${genus}")
-		</script>
-	</c:forEach>
-
-	<c:forEach items="${synList}" var="syn">
-		<script>
-			syns.push("${syn}")
-		</script>
-	</c:forEach>
-
-	<c:forEach items="${locList}" var="loc">
-		<script>
-			locs.push("${loc}")
-		</script>
-	</c:forEach>
-
-	<c:forEach items="${plantPartsList}" var="plantPart">
-		<script>	
-			plantParts.push("${plantPart}")
-		</script>
-	</c:forEach>
-
-	<c:forEach items="${illnessList}" var="illness">
-		<script>
-			illness.push("${illness}")
-		</script>
-	</c:forEach>
-
 	<!-- Script for Edit Plant -->
 	<script type="text/javascript">
 	function editMedPlant(){
@@ -1049,6 +1024,133 @@
 	} 
 	</script>
 
+	<script type="text/javascript">
+	function editComp(compNum){
+		var editBtnId = "editCompBtn"+compNum;
+		var editLogoId = "editCompLogo"+compNum;
+		var cancelEditBtnId = "cancelEditCompBtn"+compNum;
+		
+		var plantPartCompInputDivId = "plantPartCompInputDiv"+compNum;
+		var chemCompInputDivId = "chemCompInputDiv"+compNum;
+		
+		var plantPartCompInputId = "plantPartCompInput"+compNum;
+		var chemCompInputId = "chemCompInput"+compNum;
+		
+		var plantPartCompNameId = "plantPartCompName"+compNum;
+		var chemCompNameId = "chemCompName"+compNum;
+		
+		document.getElementById(editBtnId).onclick = function () { saveComp(prepNum); };
+		
+		document.getElementById(editBtnId).classList.remove("btn-outline-dark");
+		document.getElementById(editBtnId).classList.add("btn-success");
+		
+		document.getElementById(editLogoId).classList.remove("fa-pencil");
+		document.getElementById(editLogoId).classList.add("fa-check");  
+		
+		document.getElementById(plantPartCompInputDivId).style.display= "inline";	
+		document.getElementById(chemCompInputDivId).style.display= "inline";		
+		
+		document.getElementById(plantPartCompNameId).style.display="none";
+		document.getElementById(chemCompNameId).style.display="none";
+		
+		document.getElementById(plantPartCompInputId).value = document.getElementById(plantPartCompNameId).innerHTML.trim();
+		document.getElementById(chemCompInputId).value = document.getElementById(chemCompNameId).innerHTML.trim();
+		
+		document.getElementById(cancelEditBtnId).style.display="inline"; 
+		
+	}
+		
+	function cancelEditComp(compNum){
+		var editBtnId = "editCompBtn"+compNum;
+		var editLogoId = "editCompLogo"+compNum;
+		var cancelEditBtnId = "cancelEditCompBtn"+compNum;
+		
+		var plantPartCompInputDivId = "plantPartCompInputDiv"+compNum;
+		var chemCompInputDivId = "chemCompInputDiv"+compNum;
+		
+		var plantPartCompInputId = "plantPartCompInput"+compNum;
+		var chemCompInputId = "chemCompInput"+compNum;
+		
+		var plantPartCompNameId = "plantPartCompName"+compNum;
+		var chemCompNameId = "chemCompName"+compNum;
+		
+		document.getElementById(editBtnId).onclick = function () { editComp(compNum); };
+		
+		document.getElementById(editBtnId).classList.add("btn-outline-dark");
+		document.getElementById(editBtnId).classList.remove("btn-success");
+		
+		document.getElementById(editLogoId).classList.add("fa-pencil");
+		document.getElementById(editLogoId).classList.remove("fa-check");  
+		
+		document.getElementById(plantPartCompInputDivId).style.display= "none";	
+		document.getElementById(chemCompInputDivId).style.display= "none";	
+		
+		document.getElementById(plantPartCompNameId).style.display="inline";
+		document.getElementById(chemCompNameId).style.display="inline";
+				
+		document.getElementById(cancelEditBtnId).style.display="none"; 
+	}
+	
+	function saveComp(prepNum){
+		var editBtnId = "editCompBtn"+prepNum;
+		var editLogoId = "editCompLogo"+prepNum;
+		var cancelEditBtnId = "cancelEditCompBtn"+prepNum;
+		
+		var prepInputDivId = "prepInputDiv"+prepNum;
+		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
+		var illnessInputDivId = "illnessInputDiv"+prepNum;
+		
+		var prepInputId = "prepInput"+prepNum;
+		var plantPartInputId = "plantPartInput"+prepNum;
+		var illnessInputId = "illnessInput"+prepNum;
+		
+				
+		var prepNameId = "prepName"+prepNum;
+		var plantPartNameId = "plantPartName"+prepNum;
+		var illnessNameId = "illnessName"+prepNum;
+		
+		var oldPrepVal = document.getElementById(prepNameId).innerHTML.trim();
+		var oldPlantPartVal = document.getElementById(plantPartNameId).innerHTML.trim();
+		var oldIllnessVal = document.getElementById(illnessNameId).innerHTML.trim();
+		
+		var prepVal = document.getElementById(prepInputId).value.trim();		
+		var plantPartVal = document.getElementById(plantPartInputId).value.trim();		
+		var illnessVal = document.getElementById(illnessInputId).value.trim();
+		
+		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
+	
+		console.log(prepVal);
+		console.log(plantPartVal);
+		console.log(illnessVal);
+  		$.ajax({
+			type : "GET",
+			url : 'EditPrep',
+			dataType: "text",
+			data: {
+				oldPrepVal: oldPrepVal,
+				oldPlantPartVal: oldPlantPartVal,
+				oldIllnessVal: oldIllnessVal,
+				prepVal: prepVal,				
+				plantPartVal: plantPartVal,				
+				illnessVal: illnessVal,				
+				medPlantName: medPlantName
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Preparation Successfully Edited"){			
+					document.getElementById(prepNameId).innerHTML = prepVal;
+					document.getElementById(plantPartNameId).innerHTML = plantPartVal;
+					document.getElementById(illnessNameId).innerHTML = illnessVal;
+					cancelEditPrep(prepNum);
+				}else{
+					cancelEditPrep(prepNum);
+				}
+			}
+			}); 
+		
+	} 
+	</script>
+
 
 	<!-- Script for Add/Delete Location -->
 	<script type="text/javascript">
@@ -1243,6 +1345,81 @@
 		$("#search").val('${searchKey}');
 		ddfunc(${searchCategory});
 	</script>
+
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+
+	<!-- Script to Generate Autocomplete Fields -->
+	<script>	
+		var families = [];
+		var genus = [];
+		var syns = [];
+		var locs = [];
+		var plantParts = [];
+		var illness = [];
+		var compounds = [];
+		/* autocomplete(document.getElementById("familyInput"), families);  */
+		autocomplete(document.getElementById("genusInput"), genus); 
+		autocomplete(document.getElementById("specieInput"), syns); 
+		autocomplete(document.getElementById("locInput"), locs); 
+		
+		var i;
+		for (i = 1; i <= "${prepNum}"; i++) {
+			var plantPartInputId = 'plantPartInput'+i;
+			var illnessInputId = 'illnessInput'+i;
+			autocomplete(document.getElementById(illnessInputId), illness);
+			autocomplete(document.getElementById(plantPartInputId), plantParts);
+		} 
+		
+		var j;
+		for (j = 1; j < "${compNum}"; j++) {
+			var plantPartCompInputId = 'plantPartCompInput'+j;
+			var chemCompInputId = 'chemCompInput'+j;
+			autocomplete(document.getElementById(plantPartCompInputId), plantParts);
+			autocomplete(document.getElementById(chemCompInputId), compounds);
+		} 
+	</script>
+
+	<c:forEach items="${familyList}" var="family">
+		<script>
+			families.push("${family}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${genusList}" var="genus">
+		<script>
+			genus.push("${genus}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${synList}" var="syn">
+		<script>
+			syns.push("${syn}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${locList}" var="loc">
+		<script>
+			locs.push("${loc}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${plantPartsList}" var="plantPart">
+		<script>	
+			plantParts.push("${plantPart}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${illnessList}" var="illness">
+		<script>
+			illness.push("${illness}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${compoundList}" var="compound">
+		<script>
+			compounds.push("${compound}")
+		</script>
+	</c:forEach>
 
 </body>
 </html>

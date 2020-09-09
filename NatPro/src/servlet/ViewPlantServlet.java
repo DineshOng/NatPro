@@ -109,6 +109,9 @@ public class ViewPlantServlet extends HttpServlet {
 		List<String> illness = q.getAllIllness();
 		request.setAttribute("illnessList", illness);
 		
+		List<String> compounds = q.getAllCompounds();
+		request.setAttribute("compoundList", compounds);
+		
 		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
 	}
 
