@@ -1251,6 +1251,12 @@
 			document.getElementById(id).style.display="inline";
 		} 
 		
+		var k;
+		for (k = 1; k < "${compNum}"; k++) {
+			var id = 'editCompBtn'+k;
+			document.getElementById(id).style.display="inline";
+		} 
+		
 		document.getElementById("editEntryLogo").classList.remove("fa-pencil");
 		document.getElementById("editEntryLogo").classList.add("fa-check");
 		document.getElementById("editEntryName").innerHTML=" Finish Editing";
@@ -1274,7 +1280,12 @@
 		var j;
 		for (j = 1; j < "${prepNum}"; j++) {
 			var id = 'editPrepBtn'+j;
-			console.log(id);
+			document.getElementById(id).style.display="none";
+		} 
+		
+		var k;
+		for (k = 1; k < "${compNum}"; k++) {
+			var id = 'editCompBtn'+k;
 			document.getElementById(id).style.display="none";
 		} 
 		document.getElementById("editMedPlantBtn").style.display="none";
