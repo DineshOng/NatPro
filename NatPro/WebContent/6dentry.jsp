@@ -301,7 +301,6 @@
 						</tr>
 					</thead>
 					<tbody>
-
 						<c:set var="prepNum" value="1" scope="page" />
 						<c:forEach items="${medPlantsList.get(0).getPreparations()}"
 							var="prepList">
@@ -345,6 +344,39 @@
 								<c:set var="prepNum" value="${prepNum + 1}" scope="page" />
 							</c:forEach>
 						</c:forEach>
+						<tr>
+							<td><p style="display: inline;" id="prepName${prepNum}"></p>
+								<div class="autocomplete" style="width: 300px; display: none"
+									id="prepInputDiv${prepNum}">
+									<input type="text" id="prepInput${prepNum}" name="prep"
+										style="width: 600px;" placeholder="Preparation">
+								</div></td>
+							<td><p style="display: inline;" id="plantPartName${prepNum}"></p>
+								<div class="autocomplete" style="width: 300px; display: none"
+									id="plantPartInputDiv${prepNum}">
+									<input type="text" id="plantPartInput${prepNum}"
+										name="plantPart" placeholder="Plant Part">
+								</div></td>
+							<td><p style="display: inline;" id="illnessName${prepNum}"></p>
+								<div class="autocomplete" style="width: 300px; display: none"
+									id="illnessInputDiv${prepNum}">
+									<input type="text" id="illnessInput${prepNum}" name="illness"
+										placeholder="Illness">
+								</div>
+								<button type="button" class="btn btn-outline-dark btn-sm "
+									style="display: inline" onclick="addPrep(${prepNum})"
+									data-toggle="tooltip" data-placement="top" title="add location"
+									id="addPrepBtn${prepNum}">
+									<i class="fa fa-plus" id="addPrepLogo${prepNum}"
+										aria-hidden="true"></i> Preparation
+								</button>
+								<button type="button" class="btn btn-outline-danger btn-sm"
+									onclick="cancelAddPrep(${prepNum})" data-toggle="tooltip"
+									data-placement="top" id="cancelAddPrepBtn${prepNum}"
+									style="display: none">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -421,7 +453,7 @@
 		autocomplete(document.getElementById("locInput"), locs); 
 		
 		var i;
-		for (i = 1; i < "${prepNum}"; i++) {
+		for (i = 1; i <= "${prepNum}"; i++) {
 			var plantPartInputId = 'plantPartInput'+i;
 			var illnessInputId = 'illnessInput'+i;
 			autocomplete(document.getElementById(illnessInputId), illness);
@@ -752,7 +784,7 @@
 		document.getElementById(cancelEditBtnId).style.visibility="visible"; 
 		
 	}
-	
+		
 	function cancelEditPrep(prepNum){
 		var editBtnId = "editPrepBtn"+prepNum;
 		var editLogoId = "editPrepLogo"+prepNum;
@@ -843,6 +875,135 @@
 					cancelEditPrep(prepNum);
 				}else{
 					cancelEditPrep(prepNum);
+				}
+			}
+			}); 
+		
+	} 
+	
+	function addPrep(prepNum){
+		var addBtnId = "addPrepBtn"+prepNum;
+		var addLogoId = "addPrepLogo"+prepNum;
+		var cancelAddBtnId = "cancelAddPrepBtn"+prepNum;
+		
+		var prepInputDivId = "prepInputDiv"+prepNum;
+		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
+		var illnessInputDivId = "illnessInputDiv"+prepNum;
+		
+		var prepInputId = "prepInput"+prepNum;
+		var plantPartInputId = "plantPartInput"+prepNum;
+		var illnessInputId = "illnessInput"+prepNum;
+		
+				
+		var prepNameId = "prepName"+prepNum;
+		var plantPartNameId = "plantPartName"+prepNum;
+		var illnessNameId = "illnessName"+prepNum;
+		
+		document.getElementById(addBtnId).onclick = function () { saveAddPrep(prepNum); };
+		
+		document.getElementById(addBtnId).classList.remove("btn-outline-dark");
+		document.getElementById(addBtnId).classList.add("btn-success");
+		
+		document.getElementById(addLogoId).classList.remove("fa-pencil");
+		document.getElementById(addLogoId).classList.add("fa-check");  
+		
+		document.getElementById(prepInputDivId).style.display= "inline";	
+		document.getElementById(plantPartInputDivId).style.display= "inline";		
+		document.getElementById(illnessInputDivId).style.display= "inline";		
+		
+		document.getElementById(prepNameId).style.display="none";
+		document.getElementById(plantPartNameId).style.display="none";
+		document.getElementById(illnessNameId).style.display="none";
+		
+		document.getElementById(prepInputId).value = document.getElementById(prepNameId).innerHTML.trim();
+		document.getElementById(plantPartInputId).value = document.getElementById(plantPartNameId).innerHTML.trim();
+		document.getElementById(illnessInputId).value = document.getElementById(illnessNameId).innerHTML.trim();
+		
+		document.getElementById(cancelAddBtnId).style.display="inline"; 
+		
+	}
+	
+	
+	function cancelAddPrep(prepNum){
+		var addBtnId = "addPrepBtn"+prepNum;
+		var addLogoId = "addPrepLogo"+prepNum;
+		var cancelAddBtnId = "cancelAddPrepBtn"+prepNum;
+		
+		var prepInputDivId = "prepInputDiv"+prepNum;
+		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
+		var illnessInputDivId = "illnessInputDiv"+prepNum;
+		
+		var prepInputId = "prepInput"+prepNum;
+		var plantPartInputId = "plantPartInput"+prepNum;
+		var illnessInputId = "illnessInput"+prepNum;
+		
+				
+		var prepNameId = "prepName"+prepNum;
+		var plantPartNameId = "plantPartName"+prepNum;
+		var illnessNameId = "illnessName"+prepNum;
+		
+		document.getElementById(addBtnId).onclick = function () { addPrep(prepNum); };
+		
+		document.getElementById(addBtnId).classList.add("btn-outline-dark");
+		document.getElementById(addBtnId).classList.remove("btn-success");
+		
+		document.getElementById(addLogoId).classList.add("fa-pencil");
+		document.getElementById(addLogoId).classList.remove("fa-check");  
+		
+		document.getElementById(prepInputDivId).style.display= "none";	
+		document.getElementById(plantPartInputDivId).style.display= "none";		
+		document.getElementById(illnessInputDivId).style.display= "none";		
+		
+		document.getElementById(prepNameId).style.display="inline";
+		document.getElementById(plantPartNameId).style.display="inline";
+		document.getElementById(illnessNameId).style.display="inline";
+				
+		document.getElementById(cancelAddBtnId).style.display="none"; 
+	}
+	
+	function saveAddPrep(prepNum){
+		var addBtnId = "addPrepBtn"+prepNum;
+		var addLogoId = "addPrepLogo"+prepNum;
+		var cancelAddBtnId = "cancelAddPrepBtn"+prepNum;
+		
+		var prepInputDivId = "prepInputDiv"+prepNum;
+		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
+		var illnessInputDivId = "illnessInputDiv"+prepNum;
+		
+		var prepInputId = "prepInput"+prepNum;
+		var plantPartInputId = "plantPartInput"+prepNum;
+		var illnessInputId = "illnessInput"+prepNum;
+		
+				
+		var prepNameId = "prepName"+prepNum;
+		var plantPartNameId = "plantPartName"+prepNum;
+		var illnessNameId = "illnessName"+prepNum;
+			
+		var prepVal = document.getElementById(prepInputId).value;		
+		var plantPartVal = document.getElementById(plantPartInputId).value;		
+		var illnessVal = document.getElementById(illnessInputId).value;
+		
+		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
+
+  		$.ajax({
+			type : "GET",
+			url : 'AddPrep',
+			dataType: "text",
+			data: {
+				prepVal: prepVal,				
+				plantPartVal: plantPartVal,				
+				illnessVal: illnessVal,				
+				medPlantName: medPlantName
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Preparation Added Successfully"){			
+/* 					document.getElementById(prepNameId).innerHTML = prepVal;
+					document.getElementById(plantPartNameId).innerHTML = plantPartVal;
+					document.getElementById(illnessNameId).innerHTML = illnessVal;
+					cancelEditPrep(prepNum); */
+				}else{
+					cancelAddPrep(prepNum);
 				}
 			}
 			}); 
@@ -942,13 +1103,11 @@
 		var i;
 		for (i = 1; i < "${locNum}"; i++) {
 			var id = 'removeLocBtn'+i;
-			console.log(id);
 			document.getElementById(id).style.display="inline";
 		} 
 		var j;
 		for (j = 1; j < "${prepNum}"; j++) {
 			var id = 'editPrepBtn'+j;
-			console.log(id);
 			document.getElementById(id).style.display="inline";
 		} 
 		

@@ -203,18 +203,11 @@ public class EditServlet extends HttpServlet {
 		List<String> genus = q.getAllGenus();
 		List<String> families = q.getAllFamily();
 
-		// check if new family indiv already exists, if not create new indiv
-		boolean createNewIndiv = false;
-		for (String family : families) {
-			if (family.equalsIgnoreCase(newFamily)) {
-				createNewIndiv = false;
-			} else {
-				createNewIndiv = true;
-			}
-		}
-
+		// returns null if indiv not yet exists
+		String checkIfFamilyIndivExists = q.getFamilyIndivName(newFamily);
+		
 		OntoMngr m = new OntoMngr();
-		if (createNewIndiv) {
+		if (checkIfFamilyIndivExists == null) {
 			m.addIndiv_Family(m.cleanString(newFamily));
 			m.addDataPropFamily(newFamily);
 
@@ -285,18 +278,11 @@ public class EditServlet extends HttpServlet {
 		List<String> species = q.getAllSynonyms();
 		List<String> genusList = q.getAllGenus();
 
-		// check if new genus indiv already exists, if not create new indiv
-		boolean createNewIndiv = false;
-		for (String genus : genusList) {
-			if (genus.equalsIgnoreCase(newGenus)) {
-				createNewIndiv = false;
-			} else {
-				createNewIndiv = true;
-			}
-		}
+		// returns null if indiv not yet exists
+		String checkIfGenusIndivExists = q.getGenusIndivName(newGenus);
 
 		OntoMngr m = new OntoMngr();
-		if (createNewIndiv) {
+		if (checkIfGenusIndivExists==null) {
 			m.addIndiv_Genus(m.cleanString(newGenus));
 			m.addDataPropGenus(newGenus);
 
@@ -405,18 +391,11 @@ public class EditServlet extends HttpServlet {
 		List<String> medplants = q.getAllMedPlantNames();
 		List<String> synList = q.getAllSynonyms();
 
-		// check if new genus indiv already exists, if not create new indiv
-		boolean createNewIndiv = false;
-		for (String syn : synList) {
-			if (syn.equalsIgnoreCase(newSci)) {
-				createNewIndiv = false;
-			} else {
-				createNewIndiv = true;
-			}
-		}
+		// returns null if indiv not yet exists
+		String checkIfSpecieIndivExists = q.getSpeciesIndivName(newSci);
 
 		OntoMngr m = new OntoMngr();
-		if (createNewIndiv) {
+		if (checkIfSpecieIndivExists == null) {
 			m.addIndiv_Species(m.cleanString(newSci));
 			m.addDataPropSpecies(newSci);
 
@@ -425,6 +404,7 @@ public class EditServlet extends HttpServlet {
 			m.setSpeciesIndiv(specieIndiv);
 		}
 
+		//if no scientific name yet
 		if (oldSci.isEmpty()) {
 			String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
 			m.addObjectHasScientificName(medPlantIndiv, m.cleanString(newSci));
@@ -460,18 +440,10 @@ public class EditServlet extends HttpServlet {
 		String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
 		List<String> locList = q.getAllLocations();
 
-		// check if new genus indiv already exists, if not create new indiv
-		boolean createNewIndiv = false;
-		for (String loc : locList) {
-			if (loc.equalsIgnoreCase(location)) {
-				createNewIndiv = false;
-			} else {
-				createNewIndiv = true;
-			}
-		}
-
+		// returns null if indiv not yet exists
+		String checkIfLocIndivExists = q.getLocIndivName(location);
 		OntoMngr m = new OntoMngr();
-		if (createNewIndiv) {
+		if (checkIfLocIndivExists == null) {
 			m.addIndiv_Location(m.cleanString(location));
 			m.addDataPropLocation(location);
 			m.addObjectIsLocatedIn(medPlantIndiv, m.cleanString(location));
@@ -530,86 +502,94 @@ public class EditServlet extends HttpServlet {
 
 		OntoMngr m = new OntoMngr();
 
-		if (checkIfPrepIndivExists == null) {
-			String prepIndiv = m.cleanString(prepVal).replaceAll("\\.", "");
-			String oldPrepIndiv = q.getPrepIndivName(oldPrepVal);
-			String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
+		try {
+			if (checkIfPrepIndivExists == null) {
+				String prepIndiv = m.cleanString(prepVal).replaceAll("\\.", "");
+				String oldPrepIndiv = q.getPrepIndivName(oldPrepVal);
+				String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
 
-			m.addIndiv_Preparation(prepIndiv);
-			m.addDataPropPreparation(prepVal);
-			m.addObjectHasPreparation(medPlantIndiv, prepIndiv);
+				m.addIndiv_Preparation(prepIndiv);
+				m.addDataPropPreparation(prepVal);
+				m.addObjectHasPreparation(medPlantIndiv, prepIndiv);
 
-			String oldIllIndiv = q.getIllnessIndivName(oldIllnessVal);
-			m.removeObjectPropertyValue(oldPrepIndiv, "treats", oldIllIndiv);
-			if (checkIfIllIndivExists == null) {
-				m.addIndiv_Illness(m.cleanString(illnessVal));
-				m.addDataPropIllness(illnessVal);
-				m.addObjectTreats(prepIndiv, m.cleanString(illnessVal));
+				String oldIllIndiv = q.getIllnessIndivName(oldIllnessVal);
+				m.removeObjectPropertyValue(oldPrepIndiv, "treats", oldIllIndiv);
+				if (checkIfIllIndivExists == null) {
+					m.addIndiv_Illness(m.cleanString(illnessVal));
+					m.addDataPropIllness(illnessVal);
+					m.addObjectTreats(prepIndiv, m.cleanString(illnessVal));
+				} else {
+					String illIndiv = q.getIllnessIndivName(illnessVal);
+					m.setIllnessIndiv(illIndiv);
+					m.addObjectTreats(prepIndiv, illIndiv);
+				}
+
+				List<String> remainingIllness = q.getPreparationIllness(oldPrepVal);
+				// If there are still remaining illness, don't remove utilized plant part from
+				// old preparation yet
+				if (!(remainingIllness.size() > 1)) {
+					String oldPlantPartIndiv = q.getPlantPartIndivName(oldPlantPartVal);
+					m.removeObjectPropertyValue(oldPrepIndiv, "utilizedPart", oldPlantPartIndiv);
+					m.removeObjectPropertyValue(medPlantIndiv, "hasPreparation", oldPrepIndiv);
+				}
+
+				if (checkIfPlantPartIndivExists == null) {
+					m.addIndiv_PlantPart(m.cleanString(plantPartVal));
+					m.addDataPropPlantPart(plantPartVal);
+					m.addObjectUtilizedPart(prepIndiv, m.cleanString(plantPartVal));
+				} else {
+					String plantPartIndiv = q.getPlantPartIndivName(plantPartVal);
+					m.setPlantPartIndiv(plantPartIndiv);
+					m.addObjectUtilizedPart(prepIndiv, plantPartIndiv);
+				}
+
 			} else {
-				String illIndiv = q.getIllnessIndivName(illnessVal);
-				m.setIllnessIndiv(illIndiv);
-				m.addObjectTreats(prepIndiv, illIndiv);
-			}
+				String prepIndiv = q.getPrepIndivName(prepVal);
+				m.setPreparationIndiv(prepIndiv);
 
-			List<String> remainingIllness = q.getPreparationIllness(oldPrepVal);
-			// If there are still remaining illness, don't remove utilized plant part from
-			// old preparation yet
-			if (!(remainingIllness.size() > 1)) {
 				String oldPlantPartIndiv = q.getPlantPartIndivName(oldPlantPartVal);
-				m.removeObjectPropertyValue(oldPrepIndiv, "utilizedPart", oldPlantPartIndiv);
-				m.removeObjectPropertyValue(medPlantIndiv, "hasPreparation", oldPrepIndiv);
-			}
-						
-			
-			if (checkIfPlantPartIndivExists == null) {
-				m.addIndiv_PlantPart(m.cleanString(plantPartVal));
-				m.addDataPropPlantPart(plantPartVal);
-				m.addObjectUtilizedPart(prepIndiv, m.cleanString(plantPartVal));
-			} else {
-				String plantPartIndiv = q.getPlantPartIndivName(plantPartVal);
-				m.setPlantPartIndiv(plantPartIndiv);
-				m.addObjectUtilizedPart(prepIndiv, plantPartIndiv);
-			}
-			
-		} else {
-			String prepIndiv = q.getPrepIndivName(prepVal);
-			m.setPreparationIndiv(prepIndiv);
+				m.removeObjectPropertyValue(prepIndiv, "utilizedPart", oldPlantPartIndiv);
+				if (checkIfPlantPartIndivExists == null) {
+					m.addIndiv_PlantPart(m.cleanString(plantPartVal));
+					m.addDataPropPlantPart(plantPartVal);
+					m.addObjectUtilizedPart(prepIndiv, m.cleanString(plantPartVal));
+				} else {
+					String plantPartIndiv = q.getPlantPartIndivName(plantPartVal);
+					m.setPlantPartIndiv(plantPartIndiv);
+					m.addObjectUtilizedPart(prepIndiv, plantPartIndiv);
+				}
 
-			String oldPlantPartIndiv = q.getPlantPartIndivName(oldPlantPartVal);
-			m.removeObjectPropertyValue(prepIndiv, "utilizedPart", oldPlantPartIndiv);
-			if (checkIfPlantPartIndivExists == null) {
-				m.addIndiv_PlantPart(m.cleanString(plantPartVal));
-				m.addDataPropPlantPart(plantPartVal);
-				m.addObjectUtilizedPart(prepIndiv, m.cleanString(plantPartVal));
-			} else {
-				String plantPartIndiv = q.getPlantPartIndivName(plantPartVal);
-				m.setPlantPartIndiv(plantPartIndiv);
-				m.addObjectUtilizedPart(prepIndiv, plantPartIndiv);
+				String oldIllIndiv = q.getIllnessIndivName(oldIllnessVal);
+				m.removeObjectPropertyValue(prepIndiv, "treats", oldIllIndiv);
+				if (checkIfIllIndivExists == null) {
+					m.addIndiv_Illness(m.cleanString(illnessVal));
+					m.addDataPropIllness(illnessVal);
+					m.addObjectTreats(prepIndiv, m.cleanString(illnessVal));
+				} else {
+					String illIndiv = q.getIllnessIndivName(illnessVal);
+					m.setIllnessIndiv(illIndiv);
+					m.addObjectTreats(prepIndiv, illIndiv);
+				}
+
 			}
 
-			String oldIllIndiv = q.getIllnessIndivName(oldIllnessVal);
-			m.removeObjectPropertyValue(prepIndiv, "treats", oldIllIndiv);
-			if (checkIfIllIndivExists == null) {
-				m.addIndiv_Illness(m.cleanString(illnessVal));
-				m.addDataPropIllness(illnessVal);
-				m.addObjectTreats(prepIndiv, m.cleanString(illnessVal));
-			} else {
-				String illIndiv = q.getIllnessIndivName(illnessVal);
-				m.setIllnessIndiv(illIndiv);
-				m.addObjectTreats(prepIndiv, illIndiv);
-			}
-
+			PrintWriter out = response.getWriter();
+			String message = "Preparation Successfully Edited";
+			out.println(message);
+		} catch (Exception e) {
+			PrintWriter out = response.getWriter();
+			String message = "Preparation Edit Unsuccessful";
+			out.println(message);
 		}
 
-		PrintWriter out = response.getWriter();
-		String message = "Preparation Successfully Edited";
-		out.println(message);
-
 	}
-	
-	private void addPrep(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
-			OWLOntologyStorageException, SQWRLException {
+
+	private void addPrep(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException,
+			OntologyLoadException, OWLOntologyCreationException, OWLOntologyStorageException, SQWRLException {
+		String prepVal = request.getParameter("prepVal");
+		String plantPartVal = request.getParameter("plantPartVal");
+		String illnessVal = request.getParameter("illnessVal");
+		String medPlantName = request.getParameter("medPlantName");
 		
 		PrintWriter out = response.getWriter();
 		String message = "Preparation Added Successfully";
