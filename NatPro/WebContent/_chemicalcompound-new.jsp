@@ -88,6 +88,12 @@
 								<button type="button" id="editCompound" onClick="editField(0,0)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
 								</button>
+								<button type="button" id="saveCompound" onClick="saveField(0,0)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</button>
+								<button type="button" id="cancelCompound" onClick="cancelField(0,0)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button>
 							</td>
 						</tr>
 						<tr>
@@ -101,13 +107,13 @@
 								<input type="text" id="editIupacName" name="editIupacName" hidden required>
 							</td>
 							<td>
-								<button type="button" id="editCompound" onClick="editField(0,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
+								<button type="button" id="editIupac" onClick="editField(0,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="edit entry">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
 								</button>
-								<button type="button" id="saveCompound" onClick="saveField(0,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
+								<button type="button" id="saveIupac" onClick="saveField(0,1)" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="save edit" hidden>
 									<i class="fa fa-check" aria-hidden="true"></i>
 								</button>
-								<button type="button" id="cancelCompound" onClick="cancelField(0,1)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
+								<button type="button" id="cancelIupac" onClick="cancelField(0,1)" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="cancel edit" hidden>
 									<i class="fa fa-times" aria-hidden="true"></i>
 								</button>
 							</td>
@@ -534,6 +540,7 @@
 	<script>
 		/*
 			tValue = table Value
+			eValue = entry Value
 			0 = geninfo
 			1 = cheminfo
 			2 = synonym
@@ -554,59 +561,59 @@
 				switch (eValue) {
 				case 0: //common name
 					editInputField = document.getElementById("compound");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editCompound");
+					saveButton = document.getElementById("saveCompound");
+					cancelButton = document.getElementById("cancelCompound");
+					editTarget = document.getElementById("editCompoundName");
 					break;
 				case 1: // uipac
-					editInputField = document.getElementById("uipac");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editInputField = document.getElementById("iupac");
+					editButton = document.getElementById("editIupac");
+					saveButton = document.getElementById("saveIupac");
+					cancelButton = document.getElementById("cancelIupac");
+					editTarget = document.getElementById("editIupacName");
 					break;
 				case 2: // smiles
 					editInputField = document.getElementById("canSMILES");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editCanSmiles");
+					saveButton = document.getElementById("saveCanSmiles");
+					cancelButton = document.getElementById("cancelCanSmiles");
+					editTarget = document.getElementById("editCanSmilesName");
 					break;
 				case 3: // formula
 					editInputField = document.getElementById("molForm");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editMolForm");
+					saveButton = document.getElementById("saveMolForm");
+					cancelButton = document.getElementById("cancelMolForm");
+					editTarget = document.getElementById("editMolFormName");
 					break;
 				case 4: // inchl
 					editInputField = document.getElementById("inchi");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editInchi");
+					saveButton = document.getElementById("saveInchi");
+					cancelButton = document.getElementById("cancelInchi");
+					editTarget = document.getElementById("editInchiName");
 					break;
 				case 5: // inchlkey
 					editInputField = document.getElementById("inchikey");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editInchiKey");
+					saveButton = document.getElementById("saveInchiKey");
+					cancelButton = document.getElementById("cancelInchiKey");
+					editTarget = document.getElementById("editInchiKeyName");
 					break;
 				case 6: // chem class
 					editInputField = document.getElementById("chemClass");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editChemClass");
+					saveButton = document.getElementById("saveChemClass");
+					cancelButton = document.getElementById("cancelChemClass");
+					editTarget = document.getElementById("editChemClassName");
 					break;
 				case 7: // pb cid
 					editInputField = document.getElementById("pubCID");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editPubCid");
+					saveButton = document.getElementById("savePubCid");
+					cancelButton = document.getElementById("cancelPubCid");
+					editTarget = document.getElementById("editPubCidName");
 					break;
 				}
 				break;
@@ -614,74 +621,422 @@
 				switch (eValue) {
 				case 0: // mol weight
 					editInputField = document.getElementById("molWeight");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editMolWeight");
+					saveButton = document.getElementById("saveMolWeight");
+					cancelButton = document.getElementById("cancelMolWeight");
+					editTarget = document.getElementById("editMolWeightName");
 					break;
 				case 1: // xlogp
 					editInputField = document.getElementById("xlogp");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editXlogp");
+					saveButton = document.getElementById("saveXlogp");
+					cancelButton = document.getElementById("cancelXlogp");
+					editTarget = document.getElementById("editXlogpName");
 					break;
 				case 2: // mass
 					editInputField = document.getElementById("mass");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editMass");
+					saveButton = document.getElementById("saveMass");
+					cancelButton = document.getElementById("cancelMass");
+					editTarget = document.getElementById("editMassName");
 					break;
 				case 3: // tpsa
 					editInputField = document.getElementById("tpsa");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editTpsa");
+					saveButton = document.getElementById("saveTpsa");
+					cancelButton = document.getElementById("cancelTpsa");
+					editTarget = document.getElementById("editTpsaName");
 					break;
 				case 4: // complexity
 					editInputField = document.getElementById("complexity");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editComplexity");
+					saveButton = document.getElementById("saveComplexity");
+					cancelButton = document.getElementById("cancelComplexity");
+					editTarget = document.getElementById("editComplexityName");
 					break;
 				case 5: //charge
 					editInputField = document.getElementById("charge");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editCharge");
+					saveButton = document.getElementById("saveCharge");
+					cancelButton = document.getElementById("cancelCharge");
+					editTarget = document.getElementById("editChargeName");
 					break;
 				case 6: // hbond acceptors
 					editInputField = document.getElementById("hBondAcceptor");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editHBondAcceptor");
+					saveButton = document.getElementById("saveHBondAcceptor");
+					cancelButton = document.getElementById("cancelHBondAcceptor");
+					editTarget = document.getElementById("editHBondAcceptorName");
 					break;
 				case 7: // hbond donors
 					editInputField = document.getElementById("hBondDonor");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editHBondDonor");
+					saveButton = document.getElementById("saveHBondDonor");
+					cancelButton = document.getElementById("cancelHBondDonor");
+					editTarget = document.getElementById("editHBondDonorName");
 					break;
 				case 8: // rotatable bonds
 					editInputField = document.getElementById("rotBondCount");
-					editButton = document.getElementById("");
-					saveButton = document.getElementById("");
-					cancelButton = document.getElementById("");
-					editTarget = document.getElementById("");
+					editButton = document.getElementById("editRotBondCount");
+					saveButton = document.getElementById("saveRotBondCount");
+					cancelButton = document.getElementById("cancelRotBondCount");
+					editTarget = document.getElementById("editRotBondCountName");
 					break;
 				}
 				break;
 			case 2:
+				//di ko maisip paano iimplement to iba kasi naka foreach siya eh 
+				editInputField = document.getElementById("");
+				editButton = document.getElementById("");
+				saveButton = document.getElementById("");
+				cancelButton = document.getElementById("");
+				editTarget = document.getElementById("");
 				break;
 			case 3:
+				//di ko maisip paano iimplement to iba kasi naka foreach siya eh
+				editInputField = document.getElementById("");
+				editButton = document.getElementById("");
+				saveButton = document.getElementById("");
+				cancelButton = document.getElementById("");
+				editTarget = document.getElementById("");
 				break;
 			}
+			
+			editInputField.hidden = true;
+			editButton.hidden = true;
+			saveButton.hidden = false;
+			cancelButton.hidden = false;
+			editTarget.hidden = false;
+			editTarget.value = editInputField.innerHTML;
+		}
+		
+		function saveField(tValue, eValue) {
+			console.log("save: " + tValue + "-" + eValue);
+			
+			var editInputField; // inputfield to change the value;
+			var editButton; // editbutton
+			var saveButton // save button
+			var cancelButton; // cancel button
+			var editTarget; // the name to be edited
+			
+			switch (tValue) {
+			case 0: // gen info
+				switch (eValue) {
+				case 0: //common name
+					editInputField = document.getElementById("compound");
+					editButton = document.getElementById("editCompound");
+					saveButton = document.getElementById("saveCompound");
+					cancelButton = document.getElementById("cancelCompound");
+					editTarget = document.getElementById("editCompoundName");
+					break;
+				case 1: // uipac
+					editInputField = document.getElementById("iupac");
+					editButton = document.getElementById("editIupac");
+					saveButton = document.getElementById("saveIupac");
+					cancelButton = document.getElementById("cancelIupac");
+					editTarget = document.getElementById("editIupacName");
+					break;
+				case 2: // smiles
+					editInputField = document.getElementById("canSMILES");
+					editButton = document.getElementById("editCanSmiles");
+					saveButton = document.getElementById("saveCanSmiles");
+					cancelButton = document.getElementById("cancelCanSmiles");
+					editTarget = document.getElementById("editCanSmilesName");
+					break;
+				case 3: // formula
+					editInputField = document.getElementById("molForm");
+					editButton = document.getElementById("editMolForm");
+					saveButton = document.getElementById("saveMolForm");
+					cancelButton = document.getElementById("cancelMolForm");
+					editTarget = document.getElementById("editMolFormName");
+					break;
+				case 4: // inchl
+					editInputField = document.getElementById("inchi");
+					editButton = document.getElementById("editInchi");
+					saveButton = document.getElementById("saveInchi");
+					cancelButton = document.getElementById("cancelInchi");
+					editTarget = document.getElementById("editInchiName");
+					break;
+				case 5: // inchlkey
+					editInputField = document.getElementById("inchikey");
+					editButton = document.getElementById("editInchiKey");
+					saveButton = document.getElementById("saveInchiKey");
+					cancelButton = document.getElementById("cancelInchiKey");
+					editTarget = document.getElementById("editInchiKeyName");
+					break;
+				case 6: // chem class
+					editInputField = document.getElementById("chemClass");
+					editButton = document.getElementById("editChemClass");
+					saveButton = document.getElementById("saveChemClass");
+					cancelButton = document.getElementById("cancelChemClass");
+					editTarget = document.getElementById("editChemClassName");
+					break;
+				case 7: // pb cid
+					editInputField = document.getElementById("pubCID");
+					editButton = document.getElementById("editPubCid");
+					saveButton = document.getElementById("savePubCid");
+					cancelButton = document.getElementById("cancelPubCid");
+					editTarget = document.getElementById("editPubCidName");
+					break;
+				}
+				break;
+			case 1: // chem info
+				switch (eValue) {
+				case 0: // mol weight
+					editInputField = document.getElementById("molWeight");
+					editButton = document.getElementById("editMolWeight");
+					saveButton = document.getElementById("saveMolWeight");
+					cancelButton = document.getElementById("cancelMolWeight");
+					editTarget = document.getElementById("editMolWeightName");
+					break;
+				case 1: // xlogp
+					editInputField = document.getElementById("xlogp");
+					editButton = document.getElementById("editXlogp");
+					saveButton = document.getElementById("saveXlogp");
+					cancelButton = document.getElementById("cancelXlogp");
+					editTarget = document.getElementById("editXlogpName");
+					break;
+				case 2: // mass
+					editInputField = document.getElementById("mass");
+					editButton = document.getElementById("editMass");
+					saveButton = document.getElementById("saveMass");
+					cancelButton = document.getElementById("cancelMass");
+					editTarget = document.getElementById("editMassName");
+					break;
+				case 3: // tpsa
+					editInputField = document.getElementById("tpsa");
+					editButton = document.getElementById("editTpsa");
+					saveButton = document.getElementById("saveTpsa");
+					cancelButton = document.getElementById("cancelTpsa");
+					editTarget = document.getElementById("editTpsaName");
+					break;
+				case 4: // complexity
+					editInputField = document.getElementById("complexity");
+					editButton = document.getElementById("editComplexity");
+					saveButton = document.getElementById("saveComplexity");
+					cancelButton = document.getElementById("cancelComplexity");
+					editTarget = document.getElementById("editComplexityName");
+					break;
+				case 5: //charge
+					editInputField = document.getElementById("charge");
+					editButton = document.getElementById("editCharge");
+					saveButton = document.getElementById("saveCharge");
+					cancelButton = document.getElementById("cancelCharge");
+					editTarget = document.getElementById("editChargeName");
+					break;
+				case 6: // hbond acceptors
+					editInputField = document.getElementById("hBondAcceptor");
+					editButton = document.getElementById("editHBondAcceptor");
+					saveButton = document.getElementById("saveHBondAcceptor");
+					cancelButton = document.getElementById("cancelHBondAcceptor");
+					editTarget = document.getElementById("editHBondAcceptorName");
+					break;
+				case 7: // hbond donors
+					editInputField = document.getElementById("hBondDonor");
+					editButton = document.getElementById("editHBondDonor");
+					saveButton = document.getElementById("saveHBondDonor");
+					cancelButton = document.getElementById("cancelHBondDonor");
+					editTarget = document.getElementById("editHBondDonorName");
+					break;
+				case 8: // rotatable bonds
+					editInputField = document.getElementById("rotBondCount");
+					editButton = document.getElementById("editRotBondCount");
+					saveButton = document.getElementById("saveRotBondCount");
+					cancelButton = document.getElementById("cancelRotBondCount");
+					editTarget = document.getElementById("editRotBondCountName");
+					break;
+				}
+				break;
+			case 2:
+				//di ko maisip paano iimplement to iba kasi naka foreach siya eh 
+				editInputField = document.getElementById("");
+				editButton = document.getElementById("");
+				saveButton = document.getElementById("");
+				cancelButton = document.getElementById("");
+				editTarget = document.getElementById("");
+				break;
+			case 3:
+				//di ko maisip paano iimplement to iba kasi naka foreach siya eh
+				editInputField = document.getElementById("");
+				editButton = document.getElementById("");
+				saveButton = document.getElementById("");
+				cancelButton = document.getElementById("");
+				editTarget = document.getElementById("");
+				break;
+			}
+			
+			console.log(editTarget.value);
+			
+			editInputField.hidden.false;
+			editButton.hidden = false;
+			saveButton.hidden = true;
+			cancelButton.hidden = true;
+			editTarget.hidden = true;
+			editInputField.innerHTML = editTarget.value;
+			
+			//enter ajax code here
+		}
+		
+		function cancelField(tValue, eValue) {
+			console.log("cancel: " + tValue + "-" + eValue);
+			
+			var editInputField; // inputfield to change the value;
+			var editButton; // editbutton
+			var saveButton // save button
+			var cancelButton; // cancel button
+			var editTarget; // the name to be edited
+			
+			switch (tValue) {
+			case 0: // gen info
+				switch (eValue) {
+				case 0: //common name
+					editInputField = document.getElementById("compound");
+					editButton = document.getElementById("editCompound");
+					saveButton = document.getElementById("saveCompound");
+					cancelButton = document.getElementById("cancelCompound");
+					editTarget = document.getElementById("editCompoundName");
+					break;
+				case 1: // uipac
+					editInputField = document.getElementById("iupac");
+					editButton = document.getElementById("editIupac");
+					saveButton = document.getElementById("saveIupac");
+					cancelButton = document.getElementById("cancelIupac");
+					editTarget = document.getElementById("editIupacName");
+					break;
+				case 2: // smiles
+					editInputField = document.getElementById("canSMILES");
+					editButton = document.getElementById("editCanSmiles");
+					saveButton = document.getElementById("saveCanSmiles");
+					cancelButton = document.getElementById("cancelCanSmiles");
+					editTarget = document.getElementById("editCanSmilesName");
+					break;
+				case 3: // formula
+					editInputField = document.getElementById("molForm");
+					editButton = document.getElementById("editMolForm");
+					saveButton = document.getElementById("saveMolForm");
+					cancelButton = document.getElementById("cancelMolForm");
+					editTarget = document.getElementById("editMolFormName");
+					break;
+				case 4: // inchl
+					editInputField = document.getElementById("inchi");
+					editButton = document.getElementById("editInchi");
+					saveButton = document.getElementById("saveInchi");
+					cancelButton = document.getElementById("cancelInchi");
+					editTarget = document.getElementById("editInchiName");
+					break;
+				case 5: // inchlkey
+					editInputField = document.getElementById("inchikey");
+					editButton = document.getElementById("editInchiKey");
+					saveButton = document.getElementById("saveInchiKey");
+					cancelButton = document.getElementById("cancelInchiKey");
+					editTarget = document.getElementById("editInchiKeyName");
+					break;
+				case 6: // chem class
+					editInputField = document.getElementById("chemClass");
+					editButton = document.getElementById("editChemClass");
+					saveButton = document.getElementById("saveChemClass");
+					cancelButton = document.getElementById("cancelChemClass");
+					editTarget = document.getElementById("editChemClassName");
+					break;
+				case 7: // pb cid
+					editInputField = document.getElementById("pubCID");
+					editButton = document.getElementById("editPubCid");
+					saveButton = document.getElementById("savePubCid");
+					cancelButton = document.getElementById("cancelPubCid");
+					editTarget = document.getElementById("editPubCidName");
+					break;
+				}
+				break;
+			case 1: // chem info
+				switch (eValue) {
+				case 0: // mol weight
+					editInputField = document.getElementById("molWeight");
+					editButton = document.getElementById("editMolWeight");
+					saveButton = document.getElementById("saveMolWeight");
+					cancelButton = document.getElementById("cancelMolWeight");
+					editTarget = document.getElementById("editMolWeightName");
+					break;
+				case 1: // xlogp
+					editInputField = document.getElementById("xlogp");
+					editButton = document.getElementById("editXlogp");
+					saveButton = document.getElementById("saveXlogp");
+					cancelButton = document.getElementById("cancelXlogp");
+					editTarget = document.getElementById("editXlogpName");
+					break;
+				case 2: // mass
+					editInputField = document.getElementById("mass");
+					editButton = document.getElementById("editMass");
+					saveButton = document.getElementById("saveMass");
+					cancelButton = document.getElementById("cancelMass");
+					editTarget = document.getElementById("editMassName");
+					break;
+				case 3: // tpsa
+					editInputField = document.getElementById("tpsa");
+					editButton = document.getElementById("editTpsa");
+					saveButton = document.getElementById("saveTpsa");
+					cancelButton = document.getElementById("cancelTpsa");
+					editTarget = document.getElementById("editTpsaName");
+					break;
+				case 4: // complexity
+					editInputField = document.getElementById("complexity");
+					editButton = document.getElementById("editComplexity");
+					saveButton = document.getElementById("saveComplexity");
+					cancelButton = document.getElementById("cancelComplexity");
+					editTarget = document.getElementById("editComplexityName");
+					break;
+				case 5: //charge
+					editInputField = document.getElementById("charge");
+					editButton = document.getElementById("editCharge");
+					saveButton = document.getElementById("saveCharge");
+					cancelButton = document.getElementById("cancelCharge");
+					editTarget = document.getElementById("editChargeName");
+					break;
+				case 6: // hbond acceptors
+					editInputField = document.getElementById("hBondAcceptor");
+					editButton = document.getElementById("editHBondAcceptor");
+					saveButton = document.getElementById("saveHBondAcceptor");
+					cancelButton = document.getElementById("cancelHBondAcceptor");
+					editTarget = document.getElementById("editHBondAcceptorName");
+					break;
+				case 7: // hbond donors
+					editInputField = document.getElementById("hBondDonor");
+					editButton = document.getElementById("editHBondDonor");
+					saveButton = document.getElementById("saveHBondDonor");
+					cancelButton = document.getElementById("cancelHBondDonor");
+					editTarget = document.getElementById("editHBondDonorName");
+					break;
+				case 8: // rotatable bonds
+					editInputField = document.getElementById("rotBondCount");
+					editButton = document.getElementById("editRotBondCount");
+					saveButton = document.getElementById("saveRotBondCount");
+					cancelButton = document.getElementById("cancelRotBondCount");
+					editTarget = document.getElementById("editRotBondCountName");
+					break;
+				}
+				break;
+			case 2:
+				//di ko maisip paano iimplement to iba kasi naka foreach siya eh 
+				editInputField = document.getElementById("");
+				editButton = document.getElementById("");
+				saveButton = document.getElementById("");
+				cancelButton = document.getElementById("");
+				editTarget = document.getElementById("");
+				break;
+			case 3:
+				//di ko maisip paano iimplement to iba kasi naka foreach siya eh
+				editInputField = document.getElementById("");
+				editButton = document.getElementById("");
+				saveButton = document.getElementById("");
+				cancelButton = document.getElementById("");
+				editTarget = document.getElementById("");
+				break;
+			}
+			
+			editInputField.hidden.false;
+			editButton.hidden = false;
+			saveButton.hidden = true;
+			cancelButton.hidden = true;
+			editTarget.hidden = true;
 		}
 		
 		function editChemCompound() {
