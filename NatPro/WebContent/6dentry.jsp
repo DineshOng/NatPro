@@ -11,6 +11,10 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Varela+Round"
 	rel="stylesheet">
 <link rel="stylesheet"
@@ -39,13 +43,14 @@
 				required>
 			<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3"
 				style="display: none" onclick="editMedPlant()" data-toggle="tooltip"
-				data-placement="top" title="edit plant name" id="editMedPlantBtn">
+				data-trigger="hover" data-placement="top" title="edit plant name"
+				id="editMedPlantBtn">
 				<i class="fa fa-pencil" aria-hidden="true" id="editMedPlantLogo"></i>
 			</button>
 			<button type="button" class="btn btn-outline-danger btn-sm h-25 mt-3"
 				onclick="cancelEditMedPlant()" data-toggle="tooltip"
-				data-placement="top" title="cancel" id="cancelEditMedPlantBtn"
-				style="display: none">
+				data-trigger="hover" data-placement="top" title="cancel"
+				id="cancelEditMedPlantBtn" style="display: none">
 				<i class="fa fa-times" aria-hidden="true"></i>
 			</button>
 		</div>
@@ -54,7 +59,7 @@
 		<div class="d-flex flex-row-reverse bd-highlight">
 			<button type="button" class="btn btn-outline-light btn-sm h-25 mt-3"
 				onclick="editEntry()" data-toggle="tooltip" data-placement="top"
-				title="edit entry" id="editEntryBtn">
+				title="edit entry" id="editEntryBtn" data-trigger="hover">
 				<i class="fa fa-pencil" aria-hidden="true" id="editEntryLogo"></i>
 				<p style="display: inline;" id="editEntryName">EDIT</p>
 			</button>
@@ -107,17 +112,20 @@
 									id="genusInputDiv">
 									<input type="text" id="genusInput" name="genus"
 										placeholder="Genus">
-								</div>
+								</div> <i id="editGenusTip" style="display: none;"
+								class="fa fa-info-circle" data-toggle="popover"
+								data-placement="top" data-trigger="hover"
+								data-content="You may edit this name in the genus page."></i>
 								<button type="button" class="btn btn-outline-dark btn-sm "
 									style="display: none" onclick="editGenus()"
-									data-toggle="tooltip" data-placement="top" title="edit genus"
-									id="editGenusBtn">
+									data-toggle="tooltip" data-trigger="hover" data-placement="top"
+									title="edit the genus this plant belongs to" id="editGenusBtn">
 									<i class="fa fa-pencil" aria-hidden="true" id="editGenusLogo"></i>
 								</button>
 								<button type="button" class="btn btn-outline-danger btn-sm"
 									onclick="cancelEditGenus()" data-toggle="tooltip"
-									data-placement="top" title="cancel" id="cancelEditGenusBtn"
-									style="visibility: hidden">
+									data-trigger="hover" data-placement="top" title="cancel"
+									id="cancelEditGenusBtn" style="visibility: hidden">
 									<i class="fa fa-times" aria-hidden="true"></i>
 								</button></td>
 						</tr>
@@ -127,7 +135,10 @@
 								href="ViewFamilyServlet?family=${medPlantsList.get(0).getSpecies().get(0).getFamily()}">
 									<p style="display: inline;" id="familyName">${medPlantsList.get(0).getSpecies().get(0).getFamily()}
 									</p>
-							</a> <!-- <div class="autocomplete" style="width: 300px; display: none"
+							</a> <i id="editFamilyTip" style="display: none;"
+								class="fa fa-info-circle" data-toggle="popover"
+								data-placement="top" data-trigger="hover"
+								data-content="You may edit this name in the family page."></i> <!-- <div class="autocomplete" style="width: 300px; display: none"
 									id="familyInputDiv">
 									<input type="text" id="familyInput" name="family"
 										placeholder="Family">
@@ -173,18 +184,22 @@
 											id="specieInputDiv">
 											<input type="text" id="specieInput" name="specie"
 												placeholder="Scientific Name">
-										</div>
+										</div> <i id="editSpecieTip" style="display: none;"
+										class="fa fa-info-circle" data-toggle="popover"
+										data-placement="top" data-trigger="hover"
+										data-content="You may edit this name in the scientific name page."></i>
 										<button type="button" class="btn btn-outline-dark btn-sm "
 											style="display: none" onclick="editSpecie()"
-											data-toggle="tooltip" data-placement="top"
-											title="edit scientific name" id="editSpecieBtn">
+											data-toggle="tooltip" data-trigger="hover"
+											data-placement="top"
+											title="edit this plant's scientific name" id="editSpecieBtn">
 											<i class="fa fa-pencil" aria-hidden="true"
 												id="editSpecieLogo"></i>
 										</button>
 										<button type="button" class="btn btn-outline-danger btn-sm"
 											onclick="cancelEditSpecie()" data-toggle="tooltip"
-											data-placement="top" title="cancel" id="cancelEditSpecieBtn"
-											style="display: none">
+											data-trigger="hover" data-placement="top" title="cancel"
+											id="cancelEditSpecieBtn" style="display: none">
 											<i class="fa fa-times" aria-hidden="true"></i>
 										</button></td>
 								</tr>
@@ -214,8 +229,9 @@
 									<div style="display: inline; float: right;">
 										<button type="button" class="btn btn-outline-danger btn-sm "
 											style="display: none" onclick="removeLoc(${locNum})"
-											data-toggle="tooltip" data-placement="top"
-											title="remove location" id="removeLocBtn${locNum}">
+											data-toggle="tooltip" data-trigger="hover"
+											data-placement="top" title="remove location"
+											id="removeLocBtn${locNum}">
 											<i class="fa fa-trash" id="removeLocLogo" aria-hidden="true"></i>
 										</button>
 									</div></td>
@@ -232,14 +248,15 @@
 									</div>
 									<button type="button" class="btn btn-outline-dark btn-sm "
 										style="display: none" onclick="addLoc()" data-toggle="tooltip"
-										data-placement="top" title="add location" id="addLocBtn">
+										data-trigger="hover" data-placement="top" title="add location"
+										id="addLocBtn">
 										<i class="fa fa-plus" id="addLocLogo" aria-hidden="true"></i>
 										Location
 									</button>
 									<button type="button" class="btn btn-outline-danger btn-sm"
 										onclick="cancelAddLoc()" data-toggle="tooltip"
-										data-placement="top" id="cancelAddLocBtn" title="cancel"
-										style="display: none">
+										data-trigger="hover" data-placement="top" id="cancelAddLocBtn"
+										title="cancel" style="display: none">
 										<i class="fa fa-times" aria-hidden="true"></i>
 									</button>
 								</div>
@@ -328,14 +345,15 @@
 										<div style="display: inline; float: right;">
 											<button type="button" class="btn btn-outline-dark btn-sm "
 												style="display: none;" onclick="editPrep(${prepNum})"
-												data-toggle="tooltip" data-placement="top"
-												title="edit preparation" id="editPrepBtn${prepNum}">
+												data-toggle="tooltip" data-trigger="hover"
+												data-placement="top" title="edit preparation"
+												id="editPrepBtn${prepNum}">
 												<i class="fa fa-pencil" aria-hidden="true"
 													id="editPrepLogo${prepNum}"></i>
 											</button>
 											<button type="button" class="btn btn-outline-danger btn-sm"
 												onclick="cancelEditPrep(${prepNum})" data-toggle="tooltip"
-												data-placement="top" title="cancel"
+												data-trigger="hover" data-placement="top" title="cancel"
 												id="cancelEditPrepBtn${prepNum}" style="visibility: hidden">
 												<i class="fa fa-times" aria-hidden="true"></i>
 											</button>
@@ -365,7 +383,7 @@
 								</div>
 								<button type="button" class="btn btn-outline-dark btn-sm "
 									style="display: none" onclick="addPrep(${prepNum})"
-									data-toggle="tooltip" data-placement="top"
+									data-toggle="tooltip" data-trigger="hover" data-placement="top"
 									title="add preparation" id="addPrepBtn">
 									<i class="fa fa-plus" id="addPrepLogo" aria-hidden="true"></i>
 									Preparation
@@ -435,11 +453,30 @@
 	</div>
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
-
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script> -->
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 	<script type="text/javascript" src="js/autocomplete.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+	<script>
+	$(function () {
+		  $('[data-toggle="tooltip"]').tooltip();
+		  $('[data-toggle="popover"]').popover();
+		})
+	</script>
 
 	<!-- Script to Generate Autocomplete Fields -->
-
 	<script>	
 		var families = [];
 		var genus = [];
@@ -1118,7 +1155,10 @@
 		document.getElementById("editEntryBtn").onclick = function () { cancelEditEntry(); };
 		document.getElementById("editMedPlantBtn").style.display="inline";
 		document.getElementById("editGenusBtn").style.display="inline";
+		document.getElementById("editGenusTip").style.display="inline";
+		document.getElementById("editFamilyTip").style.display="inline";
 		document.getElementById("editSpecieBtn").style.display="inline";
+		document.getElementById("editSpecieTip").style.display="inline";
 		document.getElementById("addLocBtn").style.display="inline";
 		document.getElementById("addPrepBtn").style.display="inline";
 	}
@@ -1137,7 +1177,10 @@
 		} 
 		document.getElementById("editMedPlantBtn").style.display="none";
 		document.getElementById("editGenusBtn").style.display="none";
+		document.getElementById("editGenusTip").style.display="none";
+		document.getElementById("editFamilyTip").style.display="none";
 		document.getElementById("editSpecieBtn").style.display="none";
+		document.getElementById("editSpecieTip").style.display="none";
 		document.getElementById("addLocBtn").style.display="none";
 		document.getElementById("addPrepBtn").style.display="none";
 		
@@ -1147,10 +1190,6 @@
 		document.getElementById("editEntryBtn").onclick = function () { editEntry(); };
 	}
 	</script>
-
-	<script type="text/javascript"
-		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 	<script type="text/javascript">
 	    $(document).ready(function() {
