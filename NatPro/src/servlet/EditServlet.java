@@ -28,7 +28,7 @@ import service.OntoQuery;
  * Servlet implementation class EditServlet
  */
 @WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
-		"/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep" })
+		"/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep", "/AddPrep" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -133,6 +133,15 @@ public class EditServlet extends HttpServlet {
 		case "/EditPrep":
 			try {
 				editPrep(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/AddPrep":
+			try {
+				addPrep(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -491,7 +500,7 @@ public class EditServlet extends HttpServlet {
 		String locIndiv = q.getLocIndivName(location);
 		OntoMngr m = new OntoMngr();
 		m.removeObjectPropertyValue(medPlantIndiv, "isLocatedIn", locIndiv);
-		
+
 		PrintWriter out = response.getWriter();
 		String message = "Location Removed";
 		out.println(message);
@@ -504,30 +513,68 @@ public class EditServlet extends HttpServlet {
 		String oldPrepVal = request.getParameter("oldPrepVal");
 		String oldPlantPartVal = request.getParameter("oldPlantPartVal");
 		String oldIllnessVal = request.getParameter("oldIllnessVal");
-		
-		String prepVal = request.getParameter("prepVal");		
+
+		String prepVal = request.getParameter("prepVal");
 		String plantPartVal = request.getParameter("plantPartVal");
 		String illnessVal = request.getParameter("illnessVal");
 		String medPlantName = request.getParameter("medPlantName");
-		
+
 		OntoQuery q = new OntoQuery();
 		List<String> prepList = q.getAllPreparations();
 		List<String> plantPartList = q.getAllPlantParts();
 		List<String> illList = q.getAllIllness();
-		
+
 		String checkIfPrepIndivExists = q.getPrepIndivName(prepVal);
-		String checkIfIllIndivExists = q.getIllnessIndivName(illnessVal); 
-		String checkIfPlantPartIndivExists = q.getIllnessIndivName(plantPartVal); 
-					
+		String checkIfIllIndivExists = q.getIllnessIndivName(illnessVal);
+		String checkIfPlantPartIndivExists = q.getIllnessIndivName(plantPartVal);
+
 		OntoMngr m = new OntoMngr();
-		
+
 		if (checkIfPrepIndivExists == null) {
-			m.addIndiv_Preparation(m.cleanString(prepVal));
-			m.addDataPropPreparation(illnessVal);
+			String prepIndiv = m.cleanString(prepVal).replaceAll("\\.", "");
+			String oldPrepIndiv = q.getPrepIndivName(oldPrepVal);
+			String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
+
+			m.addIndiv_Preparation(prepIndiv);
+			m.addDataPropPreparation(prepVal);
+			m.addObjectHasPreparation(medPlantIndiv, prepIndiv);
+
+			String oldIllIndiv = q.getIllnessIndivName(oldIllnessVal);
+			m.removeObjectPropertyValue(oldPrepIndiv, "treats", oldIllIndiv);
+			if (checkIfIllIndivExists == null) {
+				m.addIndiv_Illness(m.cleanString(illnessVal));
+				m.addDataPropIllness(illnessVal);
+				m.addObjectTreats(prepIndiv, m.cleanString(illnessVal));
+			} else {
+				String illIndiv = q.getIllnessIndivName(illnessVal);
+				m.setIllnessIndiv(illIndiv);
+				m.addObjectTreats(prepIndiv, illIndiv);
+			}
+
+			List<String> remainingIllness = q.getPreparationIllness(oldPrepVal);
+			// If there are still remaining illness, don't remove utilized plant part from
+			// old preparation yet
+			if (!(remainingIllness.size() > 1)) {
+				String oldPlantPartIndiv = q.getPlantPartIndivName(oldPlantPartVal);
+				m.removeObjectPropertyValue(oldPrepIndiv, "utilizedPart", oldPlantPartIndiv);
+				m.removeObjectPropertyValue(medPlantIndiv, "hasPreparation", oldPrepIndiv);
+			}
+						
+			
+			if (checkIfPlantPartIndivExists == null) {
+				m.addIndiv_PlantPart(m.cleanString(plantPartVal));
+				m.addDataPropPlantPart(plantPartVal);
+				m.addObjectUtilizedPart(prepIndiv, m.cleanString(plantPartVal));
+			} else {
+				String plantPartIndiv = q.getPlantPartIndivName(plantPartVal);
+				m.setPlantPartIndiv(plantPartIndiv);
+				m.addObjectUtilizedPart(prepIndiv, plantPartIndiv);
+			}
+			
 		} else {
 			String prepIndiv = q.getPrepIndivName(prepVal);
 			m.setPreparationIndiv(prepIndiv);
-			
+
 			String oldPlantPartIndiv = q.getPlantPartIndivName(oldPlantPartVal);
 			m.removeObjectPropertyValue(prepIndiv, "utilizedPart", oldPlantPartIndiv);
 			if (checkIfPlantPartIndivExists == null) {
@@ -539,7 +586,7 @@ public class EditServlet extends HttpServlet {
 				m.setPlantPartIndiv(plantPartIndiv);
 				m.addObjectUtilizedPart(prepIndiv, plantPartIndiv);
 			}
-			
+
 			String oldIllIndiv = q.getIllnessIndivName(oldIllnessVal);
 			m.removeObjectPropertyValue(prepIndiv, "treats", oldIllIndiv);
 			if (checkIfIllIndivExists == null) {
@@ -551,22 +598,21 @@ public class EditServlet extends HttpServlet {
 				m.setIllnessIndiv(illIndiv);
 				m.addObjectTreats(prepIndiv, illIndiv);
 			}
-			
+
 		}
-		
-		
-//		for (int i = 0; i < medplants.size(); i++) {
-//			String medPlantIndiv = q.getMedPlantIndivName(medplants.get(i));
-//			List<String> medPlantToSpecie = q.getSynonyms(medplants.get(i));
-//			if (medPlantToSpecie.contains(oldSci)) {
-//				m.removeObjectPropertyValue(medPlantIndiv, "hasScientificName", oldSciIndiv);
-//				m.addObjectHasScientificName(medPlantIndiv, m.cleanString(newSci));
-//			}
-//		}
-		
-		
+
 		PrintWriter out = response.getWriter();
 		String message = "Preparation Successfully Edited";
+		out.println(message);
+
+	}
+	
+	private void addPrep(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
+		
+		PrintWriter out = response.getWriter();
+		String message = "Preparation Added Successfully";
 		out.println(message);
 
 	}

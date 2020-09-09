@@ -328,9 +328,9 @@
 										</div>
 										<div style="display: inline; float: right;">
 											<button type="button" class="btn btn-outline-dark btn-sm "
-												onclick="editPrep(${prepNum})" data-toggle="tooltip"
-												data-placement="top" title="edit entry"
-												id="editPrepBtn${prepNum}">
+												style="display: none;" onclick="editPrep(${prepNum})"
+												data-toggle="tooltip" data-placement="top"
+												title="edit entry" id="editPrepBtn${prepNum}">
 												<i class="fa fa-pencil" aria-hidden="true"
 													id="editPrepLogo${prepNum}"></i>
 											</button>
@@ -836,8 +836,11 @@
 				  },
 			success : function(data) {
 				alert(data)
-				if(data.trim() == "Preparation Successfully Edited"){
-					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
+				if(data.trim() == "Preparation Successfully Edited"){			
+					document.getElementById(prepNameId).innerHTML = prepVal;
+					document.getElementById(plantPartNameId).innerHTML = plantPartVal;
+					document.getElementById(illnessNameId).innerHTML = illnessVal;
+					cancelEditPrep(prepNum);
 				}else{
 					cancelEditPrep(prepNum);
 				}
@@ -939,8 +942,16 @@
 		var i;
 		for (i = 1; i < "${locNum}"; i++) {
 			var id = 'removeLocBtn'+i;
+			console.log(id);
 			document.getElementById(id).style.display="inline";
 		} 
+		var j;
+		for (j = 1; j < "${prepNum}"; j++) {
+			var id = 'editPrepBtn'+j;
+			console.log(id);
+			document.getElementById(id).style.display="inline";
+		} 
+		
 		document.getElementById("editEntryLogo").classList.remove("fa-pencil");
 		document.getElementById("editEntryLogo").classList.add("fa-check");
 		document.getElementById("editEntryName").innerHTML=" Finish Editing";
@@ -955,6 +966,12 @@
 		var i;
 		for (i = 1; i < "${locNum}"; i++) {
 			var id = 'removeLocBtn'+i;
+			document.getElementById(id).style.display="none";
+		} 
+		var j;
+		for (j = 1; j < "${prepNum}"; j++) {
+			var id = 'editPrepBtn'+j;
+			console.log(id);
 			document.getElementById(id).style.display="none";
 		} 
 		document.getElementById("editMedPlantBtn").style.display="none";
