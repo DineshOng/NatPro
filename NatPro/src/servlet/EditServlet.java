@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.WordUtils;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
@@ -205,7 +206,7 @@ public class EditServlet extends HttpServlet {
 
 		// returns null if indiv not yet exists
 		String checkIfFamilyIndivExists = q.getFamilyIndivName(newFamily);
-		
+
 		OntoMngr m = new OntoMngr();
 		if (checkIfFamilyIndivExists == null) {
 			m.addIndiv_Family(m.cleanString(newFamily));
@@ -282,7 +283,7 @@ public class EditServlet extends HttpServlet {
 		String checkIfGenusIndivExists = q.getGenusIndivName(newGenus);
 
 		OntoMngr m = new OntoMngr();
-		if (checkIfGenusIndivExists==null) {
+		if (checkIfGenusIndivExists == null) {
 			m.addIndiv_Genus(m.cleanString(newGenus));
 			m.addDataPropGenus(newGenus);
 
@@ -404,7 +405,7 @@ public class EditServlet extends HttpServlet {
 			m.setSpeciesIndiv(specieIndiv);
 		}
 
-		//if no scientific name yet
+		// if no scientific name yet
 		if (oldSci.isEmpty()) {
 			String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
 			m.addObjectHasScientificName(medPlantIndiv, m.cleanString(newSci));
@@ -544,6 +545,15 @@ public class EditServlet extends HttpServlet {
 				}
 
 			} else {
+				
+				List<String> plantParts = q.getPreparationPlantPart(prepVal);
+				if(!plantParts.get(0).equalsIgnoreCase(plantPartVal)) {
+					PrintWriter out = response.getWriter();
+					String message = "Failed to Edit Preparation, Existing preparation has different plant part.";
+					out.println(message);
+					return;
+				}
+				
 				String prepIndiv = q.getPrepIndivName(prepVal);
 				m.setPreparationIndiv(prepIndiv);
 
@@ -590,7 +600,57 @@ public class EditServlet extends HttpServlet {
 		String plantPartVal = request.getParameter("plantPartVal");
 		String illnessVal = request.getParameter("illnessVal");
 		String medPlantName = request.getParameter("medPlantName");
-		
+
+		OntoQuery q = new OntoQuery();
+
+		String checkIfPrepIndivExists = q.getPrepIndivName(prepVal);
+		String checkIfIllIndivExists = q.getIllnessIndivName(illnessVal);
+		String checkIfPlantPartIndivExists = q.getIllnessIndivName(plantPartVal);
+
+		OntoMngr m = new OntoMngr();
+
+		String prepIndiv;
+		if (checkIfPrepIndivExists == null) {
+			prepIndiv = m.cleanString(prepVal).replaceAll("\\.", "");
+			String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
+
+			m.addIndiv_Preparation(prepIndiv);
+			m.addDataPropPreparation(prepVal);
+			m.addObjectHasPreparation(medPlantIndiv, prepIndiv);
+		} else {
+			prepIndiv = q.getPrepIndivName(prepVal);
+			m.setPreparationIndiv(prepIndiv);
+			
+			List<String> plantParts = q.getPreparationPlantPart(prepVal);
+			System.out.println(plantParts);
+			if(!plantParts.get(0).equalsIgnoreCase(plantPartVal)) {
+				PrintWriter out = response.getWriter();
+				String message = "Failed to Add Preparation, Existing preparation has different plant part.";
+				out.println(message);
+				return;
+			}
+			
+		}
+
+		if (checkIfPlantPartIndivExists == null) {
+			m.addIndiv_PlantPart(m.cleanString(plantPartVal));
+			m.addDataPropPlantPart(plantPartVal);
+			m.addObjectUtilizedPart(prepIndiv, m.cleanString(plantPartVal));
+		} else {
+			String plantPartIndiv = q.getPlantPartIndivName(plantPartVal);
+			m.setPlantPartIndiv(plantPartIndiv);
+			m.addObjectUtilizedPart(prepIndiv, plantPartIndiv);
+		}
+
+		if (checkIfIllIndivExists == null) {
+			m.addIndiv_Illness(m.cleanString(illnessVal));
+			m.addDataPropIllness(illnessVal);
+			m.addObjectTreats(prepIndiv, m.cleanString(illnessVal));
+		} else {
+			String illIndiv = q.getIllnessIndivName(illnessVal);
+			m.setIllnessIndiv(illIndiv);
+			m.addObjectTreats(prepIndiv, illIndiv);
+		}
 		PrintWriter out = response.getWriter();
 		String message = "Preparation Added Successfully";
 		out.println(message);

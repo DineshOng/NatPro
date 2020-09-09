@@ -110,13 +110,13 @@
 								</div>
 								<button type="button" class="btn btn-outline-dark btn-sm "
 									style="display: none" onclick="editGenus()"
-									data-toggle="tooltip" data-placement="top" title="edit entry"
+									data-toggle="tooltip" data-placement="top" title="edit genus"
 									id="editGenusBtn">
 									<i class="fa fa-pencil" aria-hidden="true" id="editGenusLogo"></i>
 								</button>
 								<button type="button" class="btn btn-outline-danger btn-sm"
 									onclick="cancelEditGenus()" data-toggle="tooltip"
-									data-placement="top" title="edit entry" id="cancelEditGenusBtn"
+									data-placement="top" title="cancel" id="cancelEditGenusBtn"
 									style="visibility: hidden">
 									<i class="fa fa-times" aria-hidden="true"></i>
 								</button></td>
@@ -176,15 +176,15 @@
 										</div>
 										<button type="button" class="btn btn-outline-dark btn-sm "
 											style="display: none" onclick="editSpecie()"
-											data-toggle="tooltip" data-placement="top" title="edit entry"
-											id="editSpecieBtn">
+											data-toggle="tooltip" data-placement="top"
+											title="edit scientific name" id="editSpecieBtn">
 											<i class="fa fa-pencil" aria-hidden="true"
 												id="editSpecieLogo"></i>
 										</button>
 										<button type="button" class="btn btn-outline-danger btn-sm"
 											onclick="cancelEditSpecie()" data-toggle="tooltip"
-											data-placement="top" title="edit entry"
-											id="cancelEditSpecieBtn" style="display: none">
+											data-placement="top" title="cancel" id="cancelEditSpecieBtn"
+											style="display: none">
 											<i class="fa fa-times" aria-hidden="true"></i>
 										</button></td>
 								</tr>
@@ -215,7 +215,7 @@
 										<button type="button" class="btn btn-outline-danger btn-sm "
 											style="display: none" onclick="removeLoc(${locNum})"
 											data-toggle="tooltip" data-placement="top"
-											title="add location" id="removeLocBtn${locNum}">
+											title="remove location" id="removeLocBtn${locNum}">
 											<i class="fa fa-trash" id="removeLocLogo" aria-hidden="true"></i>
 										</button>
 									</div></td>
@@ -238,7 +238,7 @@
 									</button>
 									<button type="button" class="btn btn-outline-danger btn-sm"
 										onclick="cancelAddLoc()" data-toggle="tooltip"
-										data-placement="top" id="cancelAddLocBtn"
+										data-placement="top" id="cancelAddLocBtn" title="cancel"
 										style="display: none">
 										<i class="fa fa-times" aria-hidden="true"></i>
 									</button>
@@ -329,13 +329,13 @@
 											<button type="button" class="btn btn-outline-dark btn-sm "
 												style="display: none;" onclick="editPrep(${prepNum})"
 												data-toggle="tooltip" data-placement="top"
-												title="edit entry" id="editPrepBtn${prepNum}">
+												title="edit preparation" id="editPrepBtn${prepNum}">
 												<i class="fa fa-pencil" aria-hidden="true"
 													id="editPrepLogo${prepNum}"></i>
 											</button>
 											<button type="button" class="btn btn-outline-danger btn-sm"
 												onclick="cancelEditPrep(${prepNum})" data-toggle="tooltip"
-												data-placement="top" title="edit entry"
+												data-placement="top" title="cancel"
 												id="cancelEditPrepBtn${prepNum}" style="visibility: hidden">
 												<i class="fa fa-times" aria-hidden="true"></i>
 											</button>
@@ -364,15 +364,15 @@
 										placeholder="Illness">
 								</div>
 								<button type="button" class="btn btn-outline-dark btn-sm "
-									style="display: inline" onclick="addPrep(${prepNum})"
-									data-toggle="tooltip" data-placement="top" title="add location"
-									id="addPrepBtn${prepNum}">
-									<i class="fa fa-plus" id="addPrepLogo${prepNum}"
-										aria-hidden="true"></i> Preparation
+									style="display: none" onclick="addPrep(${prepNum})"
+									data-toggle="tooltip" data-placement="top"
+									title="add preparation" id="addPrepBtn">
+									<i class="fa fa-plus" id="addPrepLogo" aria-hidden="true"></i>
+									Preparation
 								</button>
 								<button type="button" class="btn btn-outline-danger btn-sm"
 									onclick="cancelAddPrep(${prepNum})" data-toggle="tooltip"
-									data-placement="top" id="cancelAddPrepBtn${prepNum}"
+									data-placement="top" id="cancelAddPrepBtn" title="cancel"
 									style="display: none">
 									<i class="fa fa-times" aria-hidden="true"></i>
 								</button></td>
@@ -844,9 +844,9 @@
 		var oldPlantPartVal = document.getElementById(plantPartNameId).innerHTML.trim();
 		var oldIllnessVal = document.getElementById(illnessNameId).innerHTML.trim();
 		
-		var prepVal = document.getElementById(prepInputId).value;		
-		var plantPartVal = document.getElementById(plantPartInputId).value;		
-		var illnessVal = document.getElementById(illnessInputId).value;
+		var prepVal = document.getElementById(prepInputId).value.trim();		
+		var plantPartVal = document.getElementById(plantPartInputId).value.trim();		
+		var illnessVal = document.getElementById(illnessInputId).value.trim();
 		
 		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
 	
@@ -882,9 +882,9 @@
 	} 
 	
 	function addPrep(prepNum){
-		var addBtnId = "addPrepBtn"+prepNum;
-		var addLogoId = "addPrepLogo"+prepNum;
-		var cancelAddBtnId = "cancelAddPrepBtn"+prepNum;
+		var addBtnId = "addPrepBtn";
+		var addLogoId = "addPrepLogo";
+		var cancelAddBtnId = "cancelAddPrepBtn";
 		
 		var prepInputDivId = "prepInputDiv"+prepNum;
 		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
@@ -904,7 +904,7 @@
 		document.getElementById(addBtnId).classList.remove("btn-outline-dark");
 		document.getElementById(addBtnId).classList.add("btn-success");
 		
-		document.getElementById(addLogoId).classList.remove("fa-pencil");
+		document.getElementById(addLogoId).classList.remove("fa-plus");
 		document.getElementById(addLogoId).classList.add("fa-check");  
 		
 		document.getElementById(prepInputDivId).style.display= "inline";	
@@ -925,9 +925,9 @@
 	
 	
 	function cancelAddPrep(prepNum){
-		var addBtnId = "addPrepBtn"+prepNum;
-		var addLogoId = "addPrepLogo"+prepNum;
-		var cancelAddBtnId = "cancelAddPrepBtn"+prepNum;
+		var addBtnId = "addPrepBtn";
+		var addLogoId = "addPrepLogo";
+		var cancelAddBtnId = "cancelAddPrepBtn";
 		
 		var prepInputDivId = "prepInputDiv"+prepNum;
 		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
@@ -947,7 +947,7 @@
 		document.getElementById(addBtnId).classList.add("btn-outline-dark");
 		document.getElementById(addBtnId).classList.remove("btn-success");
 		
-		document.getElementById(addLogoId).classList.add("fa-pencil");
+		document.getElementById(addLogoId).classList.add("fa-plus");
 		document.getElementById(addLogoId).classList.remove("fa-check");  
 		
 		document.getElementById(prepInputDivId).style.display= "none";	
@@ -962,9 +962,9 @@
 	}
 	
 	function saveAddPrep(prepNum){
-		var addBtnId = "addPrepBtn"+prepNum;
-		var addLogoId = "addPrepLogo"+prepNum;
-		var cancelAddBtnId = "cancelAddPrepBtn"+prepNum;
+		var addBtnId = "addPrepBtn";
+		var addLogoId = "addPrepLogo";
+		var cancelAddBtnId = "cancelAddPrepBtn";
 		
 		var prepInputDivId = "prepInputDiv"+prepNum;
 		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
@@ -979,9 +979,9 @@
 		var plantPartNameId = "plantPartName"+prepNum;
 		var illnessNameId = "illnessName"+prepNum;
 			
-		var prepVal = document.getElementById(prepInputId).value;		
-		var plantPartVal = document.getElementById(plantPartInputId).value;		
-		var illnessVal = document.getElementById(illnessInputId).value;
+		var prepVal = document.getElementById(prepInputId).value.trim();		
+		var plantPartVal = document.getElementById(plantPartInputId).value.trim();		
+		var illnessVal = document.getElementById(illnessInputId).value.trim();
 		
 		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
 
@@ -997,7 +997,8 @@
 				  },
 			success : function(data) {
 				alert(data)
-				if(data.trim() == "Preparation Added Successfully"){			
+				if(data.trim() == "Preparation Added Successfully"){	
+					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}";
 /* 					document.getElementById(prepNameId).innerHTML = prepVal;
 					document.getElementById(plantPartNameId).innerHTML = plantPartVal;
 					document.getElementById(illnessNameId).innerHTML = illnessVal;
@@ -1119,6 +1120,7 @@
 		document.getElementById("editGenusBtn").style.display="inline";
 		document.getElementById("editSpecieBtn").style.display="inline";
 		document.getElementById("addLocBtn").style.display="inline";
+		document.getElementById("addPrepBtn").style.display="inline";
 	}
 	
 	function cancelEditEntry(){
@@ -1137,6 +1139,7 @@
 		document.getElementById("editGenusBtn").style.display="none";
 		document.getElementById("editSpecieBtn").style.display="none";
 		document.getElementById("addLocBtn").style.display="none";
+		document.getElementById("addPrepBtn").style.display="none";
 		
 		document.getElementById("editEntryLogo").classList.add("fa-pencil");
 		document.getElementById("editEntryLogo").classList.remove("fa-check");
