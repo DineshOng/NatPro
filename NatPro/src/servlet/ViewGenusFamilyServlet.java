@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.flickr4java.flickr.FlickrException;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
 import model.MedicinalPlant;
 import service.OntoQuery;
 
@@ -43,24 +44,20 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 		case "/ViewGenusServlet":
 			try {
 				viewGenus(request, response);
-			} catch (OntologyLoadException e) {
+			} catch (OntologyLoadException | ServletException | IOException | FlickrException e1) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (FlickrException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				e1.printStackTrace();
 			}
+
 			break;
 		case "/ViewFamilyServlet":
 			try {
 				viewFamily(request, response);
-			} catch (OntologyLoadException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (FlickrException e) {
+			} catch (SQWRLException | OntologyLoadException | ServletException | IOException | FlickrException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
 			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
@@ -102,7 +99,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 	}
 
 	private void viewFamily(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException, FlickrException {
+			throws OntologyLoadException, ServletException, IOException, FlickrException, SQWRLException {
 		String family = request.getParameter("family");
 		// TODO Auto-generated method stub
 		OntoQuery q = new OntoQuery();
@@ -120,6 +117,13 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 			}
 		}
 		request.setAttribute("medPlantsList", familyMedPlants);
+
+		List<String> genusList = q.getFamilyGenus(family);
+		request.setAttribute("genusList", genusList);
+		
+		List<String> genus = q.getAllGenus();
+		request.setAttribute("allGenusList", genus);
+		
 		request.setAttribute("family", family);
 		request.getRequestDispatcher("5cfamily.jsp").forward(request, response);
 	}

@@ -29,7 +29,8 @@ import service.OntoQuery;
  * Servlet implementation class EditServlet
  */
 @WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
-		"/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep", "/AddPrep", "/EditComp" })
+		"/AddGenus", "/RemoveGenus", "/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep", "/AddPrep",
+		"/EditComp" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -89,6 +90,24 @@ public class EditServlet extends HttpServlet {
 		case "/EditGenus":
 			try {
 				editGenus(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/AddGenus":
+			try {
+				addGenus(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/RemoveGenus":
+			try {
+				removeGenus(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -360,6 +379,78 @@ public class EditServlet extends HttpServlet {
 		}
 	}
 
+	private void addGenus(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
+		String genus = request.getParameter("genusVal");
+		String familyName = request.getParameter("familyName");
+
+		try {
+			OntoQuery q = new OntoQuery();
+			String familyIndiv = q.getFamilyIndivName(familyName);
+
+			String checkIfGenusIndivExists = q.getGenusIndivName(genus);
+			OntoMngr m = new OntoMngr();
+			if (checkIfGenusIndivExists == null) {
+				m.addIndiv_Genus(m.cleanString(genus));
+				m.addDataPropGenus(genus);
+				m.addObjectBelongsToFamily(m.cleanString(genus), familyIndiv);
+
+			} else {
+				String oldFamily;
+				try {
+					oldFamily = q.getGenusFamily(checkIfGenusIndivExists).get(0);
+				} catch (Exception e) {
+					oldFamily = null;
+				}
+				if (oldFamily == null) {
+					m.setGenusIndiv(checkIfGenusIndivExists);
+					m.addObjectBelongsToFamily(checkIfGenusIndivExists, familyIndiv);
+				} else {
+					String oldFamilyIndiv = q.getFamilyIndivName(oldFamily);
+					m.removeObjectPropertyValue(checkIfGenusIndivExists, "belongsToFamily", oldFamilyIndiv);
+					m.setGenusIndiv(checkIfGenusIndivExists);
+					m.addObjectBelongsToFamily(checkIfGenusIndivExists, familyIndiv);
+				}
+			}
+
+			PrintWriter out = response.getWriter();
+			String message = "Genus Added Successfully";
+			out.println(message);
+		} catch (Exception e) {
+			System.err.println(e);
+			PrintWriter out = response.getWriter();
+			String message = "Genus Failed to Add";
+			out.println(message);
+		}
+
+	}
+
+	private void removeGenus(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
+		String genus = request.getParameter("genusVal");
+		String familyName = request.getParameter("familyName");
+
+		try {
+			OntoQuery q = new OntoQuery();
+			String checkIfGenusIndivExists = q.getGenusIndivName(genus);
+			String familyIndiv = q.getFamilyIndivName(familyName);
+
+			OntoMngr m = new OntoMngr();
+			m.removeObjectPropertyValue(checkIfGenusIndivExists, "belongsToFamily", familyIndiv);
+
+			PrintWriter out = response.getWriter();
+			String message = "Location Removed";
+			out.println(message);
+		} catch (Exception e) {
+			PrintWriter out = response.getWriter();
+			String message = "Remove Location Failed";
+			out.println(message);
+		}
+
+	}
+
 	private void editSciName(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
 			OWLOntologyStorageException, SQWRLException {
@@ -448,7 +539,6 @@ public class EditServlet extends HttpServlet {
 		// Get the individual name of the MedicinalPlant
 		OntoQuery q = new OntoQuery();
 		String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
-		List<String> locList = q.getAllLocations();
 
 		// returns null if indiv not yet exists
 		String checkIfLocIndivExists = q.getLocIndivName(location);
@@ -679,54 +769,52 @@ public class EditServlet extends HttpServlet {
 		OntoMngr m = new OntoMngr();
 
 		try {
-		String oldSpeciesPart = m.cleanString(specieName + " " + oldPlantPartCompVal);
+			String oldSpeciesPart = m.cleanString(specieName + " " + oldPlantPartCompVal);
 
-		String checkIfCompIndivExists = q.getCompoundIndivName(chemCompVal);
+			String checkIfCompIndivExists = q.getCompoundIndivName(chemCompVal);
 
-		String checkIfPlantPartIndivExists = q.getPlantPartIndivName(plantPartCompVal);
+			String checkIfPlantPartIndivExists = q.getPlantPartIndivName(plantPartCompVal);
 
-		String newSpeciesPart = m.cleanString(specieName + " " + plantPartCompVal);
-		String checkIfSpeciesPartIndivExists = q.getSpeciesPartIndivName(newSpeciesPart);
+			String newSpeciesPart = m.cleanString(specieName + " " + plantPartCompVal);
+			String checkIfSpeciesPartIndivExists = q.getSpeciesPartIndivName(newSpeciesPart);
 
-		String oldChemCompIndiv = q.getCompoundIndivName(oldChemCompVal);
-		m.removeObjectPropertyValue(oldSpeciesPart, "hasCompound", oldChemCompIndiv);
+			String oldChemCompIndiv = q.getCompoundIndivName(oldChemCompVal);
+			m.removeObjectPropertyValue(oldSpeciesPart, "hasCompound", oldChemCompIndiv);
 
-		// remove species part if no more remaining compounds
-		if (q.getSpeciesPartCompound(oldSpeciesPart).size() == 1) {
-			m.removeObjectPropertyValue(m.cleanString(specieName), "hasChildPlantPart", oldSpeciesPart);
-		}
+			// remove species part if no more remaining compounds
+			if (q.getSpeciesPartCompound(oldSpeciesPart).size() == 1) {
+				m.removeObjectPropertyValue(m.cleanString(specieName), "hasChildPlantPart", oldSpeciesPart);
+			}
 
-		if (checkIfSpeciesPartIndivExists == null) {
-			m.addIndiv_SpeciesPart(newSpeciesPart);
-			m.addObjectHasChildPlantPart(m.cleanString(specieName), newSpeciesPart);
-		}
+			if (checkIfSpeciesPartIndivExists == null) {
+				m.addIndiv_SpeciesPart(newSpeciesPart);
+				m.addObjectHasChildPlantPart(m.cleanString(specieName), newSpeciesPart);
+			}
 
-		if (checkIfPlantPartIndivExists == null) {
-			m.addIndiv_PlantPart(m.cleanString(plantPartCompVal));
-			m.addDataPropPlantPart(plantPartCompVal);
-			m.addObjectHasPlantPart(newSpeciesPart, m.cleanString(plantPartCompVal));
-		} else {
-			m.addObjectHasPlantPart(newSpeciesPart, m.cleanString(plantPartCompVal));
-		}
+			if (checkIfPlantPartIndivExists == null) {
+				m.addIndiv_PlantPart(m.cleanString(plantPartCompVal));
+				m.addDataPropPlantPart(plantPartCompVal);
+				m.addObjectHasPlantPart(newSpeciesPart, m.cleanString(plantPartCompVal));
+			} else {
+				m.addObjectHasPlantPart(newSpeciesPart, m.cleanString(plantPartCompVal));
+			}
 
-		if (checkIfCompIndivExists == null) {
-			m.addIndiv_Compound(m.cleanString(chemCompVal));
-			m.addDataPropCompound(chemCompVal);
-			m.addObjectHasCompound(newSpeciesPart, m.cleanString(chemCompVal));
-		} else {
-			m.addObjectHasCompound(newSpeciesPart, m.cleanString(chemCompVal));
-		}
-		
-		PrintWriter out = response.getWriter();
-		String message = "Chemical Compound Successfully Edited";
-		out.println(message);
-		}catch(Exception e) {
+			if (checkIfCompIndivExists == null) {
+				m.addIndiv_Compound(m.cleanString(chemCompVal));
+				m.addDataPropCompound(chemCompVal);
+				m.addObjectHasCompound(newSpeciesPart, m.cleanString(chemCompVal));
+			} else {
+				m.addObjectHasCompound(newSpeciesPart, m.cleanString(chemCompVal));
+			}
+
+			PrintWriter out = response.getWriter();
+			String message = "Chemical Compound Successfully Edited";
+			out.println(message);
+		} catch (Exception e) {
 			PrintWriter out = response.getWriter();
 			String message = "Chemical Compound Edit Failed";
 			out.println(message);
 		}
-
-		
 
 	}
 }

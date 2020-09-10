@@ -730,6 +730,37 @@ public class OntoQuery {
 		return values;
 	}
 
+	public List<String> getFamilyGenus(String Family) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
+		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
+
+		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Genus")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						// find the genus
+						OWLIndividual familyIndiv = (OWLIndividual) individual.getPropertyValue(belongsToFamily);
+						if (Family.equalsIgnoreCase(familyIndiv.getPropertyValue(datatypeProperty_Family).toString())) {
+							values.add(individual.getPropertyValue(datatypeProperty_Genus).toString());
+						}
+
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+
+		return values;
+	}
+
 	public List<String> getPreparationIllness(String preparation) throws SQWRLException {
 		List<String> values = new ArrayList<String>();
 		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");

@@ -20,7 +20,8 @@
 <link rel="stylesheet" type="text/css"
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-
+<link href="css/autocomplete.css" type="text/css" rel="stylesheet"
+	media="screen,projection" />
 <title>NatPro : ${searchKey}</title>
 </head>
 <body>
@@ -52,11 +53,69 @@
 	<div class="d-flex flex-row list-group text-center ">
 		<a
 			class="list-group-item list-group-item-action list-group-item-success active"
+			id="list-home-list" data-toggle="list" href="#genusList" role="tab"
+			aria-controls="GenusList">Genus List</a> <a
+			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-home-list" data-toggle="list" href="#plantList" role="tab"
 			aria-controls="TaxonomicInformation">Plant List</a>
 	</div>
 	<div class="tab-content" id="nav-tabContent">
-		<div class="tab-pane fade show active" id="plantList" role="tabpanel"
+		<div class="tab-pane fade show active" id="genusList" role="tabpanel"
+			aria-labelledby="list-home-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover w-auto text-center">
+					<thead>
+						<tr>
+							<th>Genus</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:set var="genusNum" value="1" scope="page" />
+						<c:forEach items="${genusList}" var="genusList">
+							<tr>
+								<td><a href="ViewGenusServlet?genus=${genusList}"><p
+											style="display: inline;" id="genusName${genusNum}">${genusList}</p></a>
+									<div style="display: inline; float: right;">
+										<button type="button" class="btn btn-outline-danger btn-sm "
+											style="display: inline" onclick="removeGenus(${genusNum})"
+											data-toggle="tooltip" data-trigger="hover"
+											data-placement="top" title="remove genus"
+											id="removeGenusBtn${locNum}">
+											<i class="fa fa-trash" id="removeGenusLogo" aria-hidden="true"></i>
+										</button>
+									</div></td>
+							</tr>
+							<c:set var="genusNum" value="${genusNum + 1}" scope="page" />
+						</c:forEach>
+						<tr>
+							<td>
+								<div class="justify-content-center">
+									<div class="autocomplete" style="width: 300px; display: none"
+										id="genusInputDiv">
+										<input type="text" id="genusInput" name="genus"
+											placeholder="Genus">
+									</div>
+									<button type="button" class="btn btn-outline-dark btn-sm "
+										style="display: inline" onclick="addGenus()"
+										data-toggle="tooltip" data-trigger="hover"
+										data-placement="top" title="add genus" id="addGenusBtn">
+										<i class="fa fa-plus" id="addGenusLogo" aria-hidden="true"></i>
+										Genus
+									</button>
+									<button type="button" class="btn btn-outline-danger btn-sm"
+										onclick="cancelAddGenus()" data-toggle="tooltip"
+										data-trigger="hover" data-placement="top"
+										id="cancelAddGenusBtn" title="cancel" style="display: none">
+										<i class="fa fa-times" aria-hidden="true"></i>
+									</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tab-pane fade show" id="plantList" role="tabpanel"
 			aria-labelledby="list-home-list">
 			<div class="d-flex justify-content-center">
 				<table class="table table-hover w-25">
@@ -82,11 +141,82 @@
 				</table>
 			</div>
 		</div>
-		<div class="tab-pane fade" id="photos" role="tabpanel"
-			aria-labelledby="list-settings-list">...</div>
 	</div>
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
+
+	<!-- Script for Add/Delete Location -->
+	<script type="text/javascript">
+	function addGenus(){
+		document.getElementById("genusInputDiv").style.display= "inline";
+		document.getElementById("addGenusBtn").onclick = function () { saveGenus(); };
+		document.getElementById("addGenusBtn").classList.remove("btn-outline-dark");
+		document.getElementById("addGenusBtn").classList.add("btn-success");
+		document.getElementById("addGenusLogo").classList.remove("fa-plus");
+		document.getElementById("addGenusLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelAddGenusBtn").style.display="inline";
+	}
+	
+	function cancelAddGenus(){
+		document.getElementById("genusInputDiv").style.display="none";   
+		document.getElementById("addGenusLogo").classList.remove("fa-check");
+		document.getElementById("addGenusLogo").classList.add("fa-plus"); 
+		document.getElementById("addGenusBtn").onclick = function () { addGenus(); };	
+		document.getElementById("addGenusBtn").classList.remove("btn-success");
+		document.getElementById("addGenusBtn").classList.add("btn-outline-dark");
+		document.getElementById("cancelAddGenusBtn").style.display="none";
+	}
+	
+	function saveGenus(){
+		var genusVal = document.getElementById("genusInput").value.trim();
+		var familyName = document.getElementById("familyName").innerHTML.trim();
+		
+		console.log(genusVal);
+		console.log(familyName);
+  		$.ajax({
+			type : "GET",
+			url : 'AddGenus',
+			dataType: "text",
+			data: {
+				genusVal: genusVal,
+				familyName: familyName
+				  },
+			success : function(data) {
+				alert(data)
+				
+				if(data.trim() == "Genus Added Successfully"){
+					window.location.href = "ViewFamilyServlet?family="+familyName; 
+					cancelAddGenus();
+				}else{
+					cancelAddGenus();
+				}
+			}
+			});  
+		
+	}
+	
+	function removeGenus(genusNum){
+		var genusVal = document.getElementById("genusName"+genusNum).innerHTML.trim();
+		var familyName = document.getElementById("familyName").innerHTML.trim();
+		
+    		$.ajax({
+			type : "GET",
+			url : 'RemoveGenus',
+			dataType: "text",
+			data: {
+				genusVal: genusVal,
+				familyName: familyName
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Location Removed"){
+					window.location.href = "ViewFamilyServlet?family="+familyName; 
+				}
+			}
+			});   
+	}
+	</script>
 
 	<script type="text/javascript">
 	function editFamily(){
@@ -201,6 +331,19 @@
 		$("#search").val('${searchKey}');
 		ddfunc(${searchCategory});
 	</script>
+
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+	<!-- Script to Generate Autocomplete Fields -->
+	<script>	
+		var genus = [];
+		autocomplete(document.getElementById("genusInput"), genus); 
+	</script>
+
+	<c:forEach items="${allGenusList}" var="genus">
+		<script>
+			genus.push("${genus}");
+		</script>
+	</c:forEach>
 
 </body>
 </html>
