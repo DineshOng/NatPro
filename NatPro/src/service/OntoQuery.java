@@ -306,8 +306,9 @@ public class OntoQuery {
 							Collection synonyms = individual.getPropertyValues(datatypeProperty_Synonym);
 							// This is for entities from OntoPHerb, synonyms as datatype prop
 							for (Iterator kt = synonyms.iterator(); kt.hasNext();) {
-								if (!kt.next().toString().isEmpty()) {
-									values.add(kt.next().toString());
+								String syn = kt.next().toString();
+								if (!syn.isEmpty()) {
+									values.add(syn);
 								}
 							}
 
@@ -849,6 +850,36 @@ public class OntoQuery {
 						OWLIndividual plantPartIndiv = (OWLIndividual) individual.getPropertyValue(hasPlantPart);
 						if (plantpart.equalsIgnoreCase(
 								plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString())) {
+							Collection compounds = individual.getPropertyValues(hasCompound);
+							for (Iterator kt = compounds.iterator(); kt.hasNext();) {
+								OWLIndividual compIndiv = (OWLIndividual) kt.next();
+								values.add(compIndiv.getPropertyValue(datatypeProperty_Compound).toString());
+							}
+						}
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+
+		return values;
+	}
+
+	public List<String> getSpeciesPartCompound(String speciesPart) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
+		RDFProperty hasCompound = owlModel.getRDFProperty("hasCompound");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("SpeciesPart")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						if (speciesPart.equalsIgnoreCase(individual.getBrowserText())) {
 							Collection compounds = individual.getPropertyValues(hasCompound);
 							for (Iterator kt = compounds.iterator(); kt.hasNext();) {
 								OWLIndividual compIndiv = (OWLIndividual) kt.next();
@@ -1799,7 +1830,7 @@ public class OntoQuery {
 		}
 		return locIndivName;
 	}
-	
+
 	public String getPrepIndivName(String prep) throws SQWRLException {
 		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
 		String prepIndivName = null;
@@ -1826,7 +1857,7 @@ public class OntoQuery {
 		}
 		return prepIndivName;
 	}
-	
+
 	public String getPlantPartIndivName(String plantPart) throws SQWRLException {
 		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
 		String plantPartIndivName = null;
@@ -1853,7 +1884,6 @@ public class OntoQuery {
 		}
 		return plantPartIndivName;
 	}
-	
 
 	public String getIllnessIndivName(String illness) throws SQWRLException {
 		RDFProperty datatypeProperty_Illness = owlModel.getRDFProperty("datatypeProperty_Illness");
@@ -1883,6 +1913,56 @@ public class OntoQuery {
 
 		}
 		return illIndivName;
+	}
+
+	public String getSpeciesPartIndivName(String speciesPart) throws SQWRLException {
+		String SpeciesPartIndivName = null;
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("SpeciesPart")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					OWLIndividual individual = (OWLIndividual) jt.next();
+					if (speciesPart.equalsIgnoreCase(individual.getBrowserText())) {
+						SpeciesPartIndivName = individual.getBrowserText();
+					}
+				}
+			}
+
+		}
+		return SpeciesPartIndivName;
+	}
+
+	public String getCompoundIndivName(String compound) throws SQWRLException {
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
+		String compoundIndivName = null;
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Compound")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+
+					OWLIndividual individual = (OWLIndividual) jt.next();
+					try {
+						if (compound.equalsIgnoreCase(
+								individual.getPropertyValue(datatypeProperty_Compound).toString().toLowerCase())) {
+							compoundIndivName = individual.getBrowserText();
+						}
+					} catch (Exception e) {
+						if (compound.equalsIgnoreCase(individual.getBrowserText().replaceAll("_", " "))) {
+							compoundIndivName = individual.getBrowserText();
+						}
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return compoundIndivName;
 	}
 
 }

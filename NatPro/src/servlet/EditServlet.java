@@ -29,7 +29,7 @@ import service.OntoQuery;
  * Servlet implementation class EditServlet
  */
 @WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
-		"/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep", "/AddPrep" })
+		"/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep", "/AddPrep", "/EditComp" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -143,6 +143,15 @@ public class EditServlet extends HttpServlet {
 		case "/AddPrep":
 			try {
 				addPrep(request, response);
+			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
+					| IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/EditComp":
+			try {
+				editComp(request, response);
 			} catch (SQWRLException | OWLOntologyCreationException | OWLOntologyStorageException | ServletException
 					| IOException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -545,15 +554,15 @@ public class EditServlet extends HttpServlet {
 				}
 
 			} else {
-				
+
 				List<String> plantParts = q.getPreparationPlantPart(prepVal);
-				if(!plantParts.get(0).equalsIgnoreCase(plantPartVal)) {
+				if (!plantParts.get(0).equalsIgnoreCase(plantPartVal)) {
 					PrintWriter out = response.getWriter();
 					String message = "Failed to Edit Preparation, Existing preparation has different plant part.";
 					out.println(message);
 					return;
 				}
-				
+
 				String prepIndiv = q.getPrepIndivName(prepVal);
 				m.setPreparationIndiv(prepIndiv);
 
@@ -620,16 +629,16 @@ public class EditServlet extends HttpServlet {
 		} else {
 			prepIndiv = q.getPrepIndivName(prepVal);
 			m.setPreparationIndiv(prepIndiv);
-			
+
 			List<String> plantParts = q.getPreparationPlantPart(prepVal);
 			System.out.println(plantParts);
-			if(!plantParts.get(0).equalsIgnoreCase(plantPartVal)) {
+			if (!plantParts.get(0).equalsIgnoreCase(plantPartVal)) {
 				PrintWriter out = response.getWriter();
 				String message = "Failed to Add Preparation, Existing preparation has different plant part.";
 				out.println(message);
 				return;
 			}
-			
+
 		}
 
 		if (checkIfPlantPartIndivExists == null) {
@@ -657,4 +666,67 @@ public class EditServlet extends HttpServlet {
 
 	}
 
+	private void editComp(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OntologyLoadException, OWLOntologyCreationException,
+			OWLOntologyStorageException, SQWRLException {
+		String oldPlantPartCompVal = request.getParameter("oldPlantPartCompVal");
+		String oldChemCompVal = request.getParameter("oldChemCompVal");
+		String plantPartCompVal = request.getParameter("plantPartCompVal");
+		String chemCompVal = request.getParameter("chemCompVal");
+		String specieName = request.getParameter("specieName");
+
+		OntoQuery q = new OntoQuery();
+		OntoMngr m = new OntoMngr();
+
+		try {
+		String oldSpeciesPart = m.cleanString(specieName + " " + oldPlantPartCompVal);
+
+		String checkIfCompIndivExists = q.getCompoundIndivName(chemCompVal);
+
+		String checkIfPlantPartIndivExists = q.getPlantPartIndivName(plantPartCompVal);
+
+		String newSpeciesPart = m.cleanString(specieName + " " + plantPartCompVal);
+		String checkIfSpeciesPartIndivExists = q.getSpeciesPartIndivName(newSpeciesPart);
+
+		String oldChemCompIndiv = q.getCompoundIndivName(oldChemCompVal);
+		m.removeObjectPropertyValue(oldSpeciesPart, "hasCompound", oldChemCompIndiv);
+
+		// remove species part if no more remaining compounds
+		if (q.getSpeciesPartCompound(oldSpeciesPart).size() == 1) {
+			m.removeObjectPropertyValue(m.cleanString(specieName), "hasChildPlantPart", oldSpeciesPart);
+		}
+
+		if (checkIfSpeciesPartIndivExists == null) {
+			m.addIndiv_SpeciesPart(newSpeciesPart);
+			m.addObjectHasChildPlantPart(m.cleanString(specieName), newSpeciesPart);
+		}
+
+		if (checkIfPlantPartIndivExists == null) {
+			m.addIndiv_PlantPart(m.cleanString(plantPartCompVal));
+			m.addDataPropPlantPart(plantPartCompVal);
+			m.addObjectHasPlantPart(newSpeciesPart, m.cleanString(plantPartCompVal));
+		} else {
+			m.addObjectHasPlantPart(newSpeciesPart, m.cleanString(plantPartCompVal));
+		}
+
+		if (checkIfCompIndivExists == null) {
+			m.addIndiv_Compound(m.cleanString(chemCompVal));
+			m.addDataPropCompound(chemCompVal);
+			m.addObjectHasCompound(newSpeciesPart, m.cleanString(chemCompVal));
+		} else {
+			m.addObjectHasCompound(newSpeciesPart, m.cleanString(chemCompVal));
+		}
+		
+		PrintWriter out = response.getWriter();
+		String message = "Chemical Compound Successfully Edited";
+		out.println(message);
+		}catch(Exception e) {
+			PrintWriter out = response.getWriter();
+			String message = "Chemical Compound Edit Failed";
+			out.println(message);
+		}
+
+		
+
+	}
 }

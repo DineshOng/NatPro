@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.flickr4java.flickr.FlickrException;
 
+import edu.stanford.nlp.util.StringUtils;
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
 import model.MedicinalPlant;
@@ -96,22 +98,32 @@ public class ViewPlantServlet extends HttpServlet {
 
 		List<String> genus = q.getAllGenus();
 		request.setAttribute("genusList", genus);
-		
+
 		List<String> syns = q.getAllSynonyms();
 		request.setAttribute("synList", syns);
-		
+
+		//Get synonyms without individual
+		List <String> synIndiv = q.getSynonyms(searchKey.replaceAll("_", ""));
+		List <String> removeSynNoIndiv = new ArrayList<String>();
+		for(String syn:synIndiv) {
+			if(q.getSpeciesIndivName(syn)==null) {
+				removeSynNoIndiv.add(StringUtils.capitalize(syn));
+			}
+		}
+		request.setAttribute("synNoIndiv", removeSynNoIndiv);
+
 		List<String> locs = q.getAllLocations();
 		request.setAttribute("locList", locs);
-		
+
 		List<String> plantParts = q.getAllPlantParts();
 		request.setAttribute("plantPartsList", plantParts);
-		
+
 		List<String> illness = q.getAllIllness();
 		request.setAttribute("illnessList", illness);
-		
+
 		List<String> compounds = q.getAllCompounds();
 		request.setAttribute("compoundList", compounds);
-		
+
 		request.getRequestDispatcher("6dentry.jsp").forward(request, response);
 	}
 

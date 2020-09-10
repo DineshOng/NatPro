@@ -177,36 +177,80 @@
 							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
 								var="speciesList">
 								<tr>
-									<td><a id="specie" style="display: inline"
-										href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}">
-											<i><p style="display: inline;" id="specieName">${speciesList.getSpecie()}</p></i>
-									</a>
-										<div class="autocomplete" style="width: 300px; display: none"
-											id="specieInputDiv">
-											<input type="text" id="specieInput" name="specie"
-												placeholder="Scientific Name">
-										</div> <i id="editSpecieTip" style="display: none;"
-										class="fa fa-info-circle" data-toggle="popover"
-										data-placement="top" data-trigger="hover"
-										data-content="You may edit this name in the scientific name page."></i>
-										<button type="button" class="btn btn-outline-dark btn-sm "
-											style="display: none" onclick="editSpecie()"
-											data-toggle="tooltip" data-trigger="hover"
-											data-placement="top"
-											title="select this plant's scientific name"
-											id="editSpecieBtn">
-											<i class="fa fa-pencil" aria-hidden="true"
-												id="editSpecieLogo"></i>
-										</button>
-										<button type="button" class="btn btn-outline-danger btn-sm"
-											onclick="cancelEditSpecie()" data-toggle="tooltip"
-											data-trigger="hover" data-placement="top" title="cancel"
-											id="cancelEditSpecieBtn" style="display: none">
-											<i class="fa fa-times" aria-hidden="true"></i>
-										</button></td>
+									<td><c:set var="contains" value="false" /> <c:set
+											var="noIndiv" value="true" /> <c:forEach var="synNoIndiv"
+											items="${synNoIndiv}">
+											<c:if test="${synNoIndiv eq speciesList.getSpecie()}">
+												<c:set var="contains" value="true" />
+											</c:if>
+										</c:forEach> <c:choose>
+											<c:when test="${not contains}">
+												<c:set var="noIndiv" value="false" />
+												<a id="specie" style="display: inline"
+													href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}">
+													<i><p style="display: inline;" id="specieName">${speciesList.getSpecie()}</p></i>
+												</a>
+												<div class="autocomplete"
+													style="width: 300px; display: none" id="specieInputDiv">
+													<input type="text" id="specieInput" name="specie"
+														placeholder="Scientific Name">
+												</div>
+												<i id="editSpecieTip" style="display: none;"
+													class="fa fa-info-circle" data-toggle="popover"
+													data-placement="top" data-trigger="hover"
+													data-content="You may edit this name in the scientific name page."></i>
+												<button type="button" class="btn btn-outline-dark btn-sm "
+													style="display: none" onclick="editSpecie()"
+													data-toggle="tooltip" data-trigger="hover"
+													data-placement="top"
+													title="select this plant's scientific name"
+													id="editSpecieBtn">
+													<i class="fa fa-pencil" aria-hidden="true"
+														id="editSpecieLogo"></i>
+												</button>
+												<button type="button" class="btn btn-outline-danger btn-sm"
+													onclick="cancelEditSpecie()" data-toggle="tooltip"
+													data-trigger="hover" data-placement="top" title="cancel"
+													id="cancelEditSpecieBtn" style="display: none">
+													<i class="fa fa-times" aria-hidden="true"></i>
+												</button>
+											</c:when>
+											<c:otherwise>
+												<i><p style="display: inline;" id="specieName2">${speciesList.getSpecie()}</p></i>
+											</c:otherwise>
+										</c:choose></td>
 								</tr>
+
 							</c:forEach>
 						</tr>
+						<c:if test="${noIndiv}">
+							<tr>
+								<td><p id="specie" style="display: inline">
+										<i><p style="display: inline;" id="specieName"></p></i>
+									</p>
+									<div class="autocomplete" style="width: 300px; display: none"
+										id="specieInputDiv">
+										<input type="text" id="specieInput" name="specie"
+											placeholder="Scientific Name">
+									</div> <i id="editSpecieTip" style="display: none;"
+									class="fa fa-info-circle" data-toggle="popover"
+									data-placement="top" data-trigger="hover"
+									data-content="You may edit this name in the scientific name page."></i>
+									<button type="button" class="btn btn-outline-dark btn-sm "
+										style="display: none" onclick="editSpecie()"
+										data-toggle="tooltip" data-trigger="hover"
+										data-placement="top"
+										title="select this plant's scientific name" id="editSpecieBtn">
+										<i class="fa fa-pencil" aria-hidden="true" id="editSpecieLogo"></i>
+									</button>
+									<button type="button" class="btn btn-outline-danger btn-sm"
+										onclick="cancelEditSpecie()" data-toggle="tooltip"
+										data-trigger="hover" data-placement="top" title="cancel"
+										id="cancelEditSpecieBtn" style="display: none">
+										<i class="fa fa-times" aria-hidden="true"></i>
+									</button></td>
+							</tr>
+						</c:if>
 					</tbody>
 				</table>
 			</div>
@@ -447,7 +491,7 @@
 												id="chemCompInputDiv${compNum}">
 												<input type="text" id="chemCompInput${compNum}"
 													name="chemComp" placeholder="Chemical Compound">
-											</div> <i id="editSpecieTip" style="display: inline;"
+											</div> <i id="editSpecieTip${compNum}" style="display: none;"
 											class="fa fa-info-circle" data-toggle="popover"
 											data-placement="top" data-trigger="hover"
 											data-content="You may edit this compound's attributes in the compound page."></i></td>
@@ -459,7 +503,7 @@
 										<td></td>
 										<td></td>
 										<td><button type="button"
-												class="btn btn-outline-dark btn-sm " style="display: inline"
+												class="btn btn-outline-dark btn-sm " style="display: none"
 												onclick="editComp(${compNum})" data-toggle="tooltip"
 												data-trigger="hover" data-placement="top"
 												title="edit compound" id="editCompBtn${compNum}">
@@ -716,7 +760,7 @@
 	}
 	
 	function saveSpecie(){
-		var newSpecieVal = document.getElementById("specieInput").value;
+		var newSpecieVal = document.getElementById("specieInput").value.trim();
 		var oldSpecieVal = document.getElementById("specieName").innerHTML.trim();
 		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
 		
@@ -1024,6 +1068,7 @@
 	} 
 	</script>
 
+	<!-- Script for Edit Genus -->
 	<script type="text/javascript">
 	function editComp(compNum){
 		var editBtnId = "editCompBtn"+compNum;
@@ -1039,7 +1084,7 @@
 		var plantPartCompNameId = "plantPartCompName"+compNum;
 		var chemCompNameId = "chemCompName"+compNum;
 		
-		document.getElementById(editBtnId).onclick = function () { saveComp(prepNum); };
+		document.getElementById(editBtnId).onclick = function () { saveComp(compNum); };
 		
 		document.getElementById(editBtnId).classList.remove("btn-outline-dark");
 		document.getElementById(editBtnId).classList.add("btn-success");
@@ -1091,59 +1136,47 @@
 		document.getElementById(cancelEditBtnId).style.display="none"; 
 	}
 	
-	function saveComp(prepNum){
-		var editBtnId = "editCompBtn"+prepNum;
-		var editLogoId = "editCompLogo"+prepNum;
-		var cancelEditBtnId = "cancelEditCompBtn"+prepNum;
+	function saveComp(compNum){
+		var editBtnId = "editCompBtn"+compNum;
+		var editLogoId = "editCompLogo"+compNum;
+		var cancelEditBtnId = "cancelEditCompBtn"+compNum;
 		
-		var prepInputDivId = "prepInputDiv"+prepNum;
-		var plantPartInputDivId = "plantPartInputDiv"+prepNum;
-		var illnessInputDivId = "illnessInputDiv"+prepNum;
+		var plantPartCompInputDivId = "plantPartCompInputDiv"+compNum;
+		var chemCompInputDivId = "chemCompInputDiv"+compNum;
 		
-		var prepInputId = "prepInput"+prepNum;
-		var plantPartInputId = "plantPartInput"+prepNum;
-		var illnessInputId = "illnessInput"+prepNum;
+		var plantPartCompInputId = "plantPartCompInput"+compNum;
+		var chemCompInputId = "chemCompInput"+compNum;
 		
-				
-		var prepNameId = "prepName"+prepNum;
-		var plantPartNameId = "plantPartName"+prepNum;
-		var illnessNameId = "illnessName"+prepNum;
+		var plantPartCompNameId = "plantPartCompName"+compNum;
+		var chemCompNameId = "chemCompName"+compNum;
 		
-		var oldPrepVal = document.getElementById(prepNameId).innerHTML.trim();
-		var oldPlantPartVal = document.getElementById(plantPartNameId).innerHTML.trim();
-		var oldIllnessVal = document.getElementById(illnessNameId).innerHTML.trim();
+		var oldPlantPartCompVal = document.getElementById(plantPartCompNameId).innerHTML.trim();
+		var oldChemCompVal = document.getElementById(chemCompNameId).innerHTML.trim();
 		
-		var prepVal = document.getElementById(prepInputId).value.trim();		
-		var plantPartVal = document.getElementById(plantPartInputId).value.trim();		
-		var illnessVal = document.getElementById(illnessInputId).value.trim();
+		var plantPartCompVal = document.getElementById(plantPartCompInputId).value.trim();		
+		var chemCompVal = document.getElementById(chemCompInputId).value.trim();		
 		
-		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
+		var specieName = document.getElementById("specieName").innerHTML.trim();
 	
-		console.log(prepVal);
-		console.log(plantPartVal);
-		console.log(illnessVal);
   		$.ajax({
 			type : "GET",
-			url : 'EditPrep',
+			url : 'EditComp',
 			dataType: "text",
 			data: {
-				oldPrepVal: oldPrepVal,
-				oldPlantPartVal: oldPlantPartVal,
-				oldIllnessVal: oldIllnessVal,
-				prepVal: prepVal,				
-				plantPartVal: plantPartVal,				
-				illnessVal: illnessVal,				
-				medPlantName: medPlantName
+				oldPlantPartCompVal: oldPlantPartCompVal,
+				oldChemCompVal: oldChemCompVal,
+				plantPartCompVal: plantPartCompVal,
+				chemCompVal: chemCompVal,
+				specieName: specieName
 				  },
 			success : function(data) {
 				alert(data)
-				if(data.trim() == "Preparation Successfully Edited"){			
-					document.getElementById(prepNameId).innerHTML = prepVal;
-					document.getElementById(plantPartNameId).innerHTML = plantPartVal;
-					document.getElementById(illnessNameId).innerHTML = illnessVal;
-					cancelEditPrep(prepNum);
+				if(data.trim() == "Chemical Compound Successfully Edited"){			
+					document.getElementById(plantPartCompNameId).innerHTML = plantPartCompVal;
+					document.getElementById(chemCompNameId).innerHTML = chemCompVal;
+					cancelEditComp(compNum);
 				}else{
-					cancelEditPrep(prepNum);
+					cancelEditComp(compNum);
 				}
 			}
 			}); 
@@ -1254,7 +1287,9 @@
 		var k;
 		for (k = 1; k < "${compNum}"; k++) {
 			var id = 'editCompBtn'+k;
+			var idTip = 'editSpecieTip'+k;
 			document.getElementById(id).style.display="inline";
+			document.getElementById(idTip).style.display="inline";
 		} 
 		
 		document.getElementById("editEntryLogo").classList.remove("fa-pencil");
@@ -1286,7 +1321,9 @@
 		var k;
 		for (k = 1; k < "${compNum}"; k++) {
 			var id = 'editCompBtn'+k;
+			var idTip = 'editSpecieTip'+k;
 			document.getElementById(id).style.display="none";
+			document.getElementById(idTip).style.display="none";
 		} 
 		document.getElementById("editMedPlantBtn").style.display="none";
 		document.getElementById("editGenusBtn").style.display="none";
