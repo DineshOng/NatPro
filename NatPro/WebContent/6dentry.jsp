@@ -610,65 +610,6 @@
 	
 	</script>
 
-	<!-- Script for Edit Family -->
-	<script type="text/javascript">
-	function editFamily(){
-		document.getElementById("family").style.display="none";
-		document.getElementById("familyInput").value = document.getElementById("familyName").innerHTML.trim();
-		document.getElementById("familyInputDiv").style.display= "inline";
-		document.getElementById("editFamilyBtn").onclick = function () { saveFamily(); };
-		document.getElementById("editFamilyBtn").classList.remove("btn-outline-dark");
-		document.getElementById("editFamilyBtn").classList.add("btn-success");
-		document.getElementById("editFamilyLogo").classList.remove("fa-pencil");
-		document.getElementById("editFamilyLogo").classList.add("fa-check");  
-		
-		document.getElementById("cancelEditFamilyBtn").style.visibility="visible";
-	}
-	
-	function cancelEditFamily(){
-		document.getElementById("family").style.display="inline";
-		document.getElementById("familyInputDiv").style.display="none";   
-		document.getElementById("editFamilyLogo").classList.remove("fa-check");
-		document.getElementById("editFamilyLogo").classList.add("fa-pencil"); 
-		document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };
-		document.getElementById("editFamilyBtn").classList.remove("btn-success");
-		document.getElementById("editFamilyBtn").classList.add("btn-outline-dark");
-		document.getElementById("cancelEditFamilyBtn").style.visibility="hidden";
-	}
-	
-	function saveFamily(){
-		var newFamilyVal = document.getElementById("familyInput").value;
-		var oldFamilyVal = document.getElementById("familyName").innerHTML.trim();
-	
- 		$.ajax({
-			type : "GET",
-			url : 'EditFamily',
-			dataType: "text",
-			data: { 
-				newFamilyVal: newFamilyVal,
-				oldFamilyVal: oldFamilyVal
-				  },
-			success : function(data) {
-				alert(data)
-				if(data.trim() == "Family Successfully Edited"){
-					document.getElementById("familyInputDiv").style.display="none";
-					document.getElementById("familyName").innerHTML = newFamilyVal; 
-					document.getElementById("family").style.display="inline";
-					document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };	
-					document.getElementById("editFamilyBtn").classList.remove("btn-success");
-					document.getElementById("editFamilyBtn").classList.add("btn-outline-dark");
-					document.getElementById("editFamilyLogo").classList.remove("fa-check");
-					document.getElementById("editFamilyLogo").classList.add("fa-pencil"); 
-					document.getElementById("cancelEditFamilyBtn").style.visibility="hidden";
-				}else{
-					cancelEditFamily();
-				}
-			}
-			}); 
-		
-	}
-	</script>
-
 	<!-- Script for Edit Genus -->
 	<script type="text/javascript">
 	function editGenus(){

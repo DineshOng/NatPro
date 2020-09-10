@@ -20,7 +20,8 @@
 <link rel="stylesheet" type="text/css"
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-
+<link href="css/autocomplete.css" type="text/css" rel="stylesheet"
+	media="screen,projection" />
 <title>NatPro : ${searchKey}</title>
 </head>
 <body>
@@ -53,11 +54,50 @@
 	<div class="d-flex flex-row list-group text-center ">
 		<a
 			class="list-group-item list-group-item-action list-group-item-success active"
+			id="list-home-list" data-toggle="list" href="#familyList" role="tab"
+			aria-controls="FamilyList">Family</a> <a
+			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-home-list" data-toggle="list" href="#plantList" role="tab"
 			aria-controls="TaxonomicInformation">Plant List</a>
 	</div>
 	<div class="tab-content" id="nav-tabContent">
-		<div class="tab-pane fade show active" id="plantList" role="tabpanel"
+		<div class="tab-pane fade show active" id="familyList" role="tabpanel"
+			aria-labelledby="list-home-list">
+			<div class="d-flex justify-content-center">
+				<table class="table table-hover w-auto text-center">
+					<thead>
+						<tr>
+							<th>Belongs to Family</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="ViewFamilyServlet?family=${family}"><p
+										style="display: inline;" id="familyName">${family}</p></a>
+								<div class="autocomplete" style="width: 300px; display: none"
+									id="familyInputDiv">
+									<input type="text" id="familyInput" name="family"
+										placeholder="Family">
+								</div>
+								<button type="button" class="btn btn-outline-dark btn-sm "
+									style="display: inline" onclick="editFamily()"
+									data-toggle="tooltip" data-trigger="hover" data-placement="top"
+									title="select the family this genus belongs to"
+									id="editFamilyBtn">
+									<i class="fa fa-pencil" aria-hidden="true" id="editFamilyLogo"></i>
+								</button>
+								<button type="button" class="btn btn-outline-danger btn-sm"
+									onclick="cancelEditFamily()" data-toggle="tooltip"
+									data-trigger="hover" data-placement="top" title="cancel"
+									id="cancelEditFamilyBtn" style="display: none">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tab-pane fade show" id="plantList" role="tabpanel"
 			aria-labelledby="list-home-list">
 			<div class="d-flex justify-content-center">
 				<table class="table table-hover w-25">
@@ -83,8 +123,6 @@
 				</table>
 			</div>
 		</div>
-		<div class="tab-pane fade" id="photos" role="tabpanel"
-			aria-labelledby="list-settings-list">...</div>
 	</div>
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
@@ -146,6 +184,58 @@
 	
 	</script>
 
+	<!-- Script for Edit Family -->
+	<script type="text/javascript">
+	function editFamily(){
+		document.getElementById("familyName").style.display="none";
+		document.getElementById("familyInput").value = document.getElementById("familyName").innerHTML.trim();
+		document.getElementById("familyInputDiv").style.display= "inline";
+		document.getElementById("editFamilyBtn").onclick = function () { saveFamily(); };
+		document.getElementById("editFamilyBtn").classList.remove("btn-outline-dark");
+		document.getElementById("editFamilyBtn").classList.add("btn-success");
+		document.getElementById("editFamilyLogo").classList.remove("fa-pencil");
+		document.getElementById("editFamilyLogo").classList.add("fa-check");  
+		
+		document.getElementById("cancelEditFamilyBtn").style.display="inline";
+	}
+	
+	function cancelEditFamily(){
+		document.getElementById("familyName").style.display="inline";
+		document.getElementById("familyInputDiv").style.display="none";   
+		document.getElementById("editFamilyLogo").classList.remove("fa-check");
+		document.getElementById("editFamilyLogo").classList.add("fa-pencil"); 
+		document.getElementById("editFamilyBtn").onclick = function () { editFamily(); };
+		document.getElementById("editFamilyBtn").classList.remove("btn-success");
+		document.getElementById("editFamilyBtn").classList.add("btn-outline-dark");
+		document.getElementById("cancelEditFamilyBtn").style.display="none";
+	}
+	
+	function saveFamily(){
+		var newFamilyVal = document.getElementById("familyInput").value;
+		var oldFamilyVal = document.getElementById("familyName").innerHTML.trim();
+		var genusVal = document.getElementById("genusName").innerHTML.trim();
+ 		$.ajax({
+			type : "GET",
+			url : 'EditFamily',
+			dataType: "text",
+			data: { 
+				newFamilyVal: newFamilyVal,
+				oldFamilyVal: oldFamilyVal
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Family Successfully Edited"){
+					window.location.href = "ViewGenusServlet?genus="+genusVal; 
+					cancelEditFamily();
+				}else{
+					cancelEditFamily();
+				}
+			}
+			}); 
+		
+	}
+	</script>
+
 	<script type="text/javascript"
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
@@ -203,5 +293,17 @@
 		ddfunc(${searchCategory});
 	</script>
 
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+	<!-- Script to Generate Autocomplete Fields -->
+	<script>	
+		var families = [];
+		autocomplete(document.getElementById("familyInput"), families); 
+	</script>
+
+	<c:forEach items="${allFamilyList}" var="family">
+		<script>
+			families.push("${family}");
+		</script>
+	</c:forEach>
 </body>
 </html>

@@ -44,7 +44,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 		case "/ViewGenusServlet":
 			try {
 				viewGenus(request, response);
-			} catch (OntologyLoadException | ServletException | IOException | FlickrException e1) {
+			} catch (OntologyLoadException | ServletException | IOException | FlickrException | SQWRLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
@@ -75,7 +75,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 	}
 
 	private void viewGenus(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException, FlickrException {
+			throws OntologyLoadException, ServletException, IOException, FlickrException, SQWRLException {
 		String genus = request.getParameter("genus");
 		// TODO Auto-generated method stub
 		OntoQuery q = new OntoQuery();
@@ -92,9 +92,17 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 				}
 			}
 		}
-
+		String family;
+		try {
+			family = q.getGenusFamily(genus).get(0);
+		} catch (Exception e) {
+			family = "";
+		}
 		request.setAttribute("medPlantsList", genusMedPlants);
 		request.setAttribute("genus", genus);
+		request.setAttribute("family", family);
+		List<String> familyList = q.getAllFamily();
+		request.setAttribute("allFamilyList", familyList);
 		request.getRequestDispatcher("5bgenus.jsp").forward(request, response);
 	}
 
@@ -120,10 +128,10 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 
 		List<String> genusList = q.getFamilyGenus(family);
 		request.setAttribute("genusList", genusList);
-		
+
 		List<String> genus = q.getAllGenus();
 		request.setAttribute("allGenusList", genus);
-		
+
 		request.setAttribute("family", family);
 		request.getRequestDispatcher("5cfamily.jsp").forward(request, response);
 	}
