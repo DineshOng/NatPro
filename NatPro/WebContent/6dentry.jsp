@@ -497,11 +497,11 @@
 											data-content="You may edit this compound's attributes in the compound page."></i></td>
 										<td>${compoundsList.getMolForm()}</td>
 										<td>${compoundsList.getMolWeight()}</td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td>${compoundsList.getXlogp()}</td>
+										<td>${compoundsList.getTpsa()}</td>
+										<td>${compoundsList.getHBondAcceptor()}</td>
+										<td>${compoundsList.getHBondDonor()}</td>
+										<td>${compoundsList.getRotBondCount()}</td>
 										<td><button type="button"
 												class="btn btn-outline-dark btn-sm " style="display: none"
 												onclick="editComp(${compNum})" data-toggle="tooltip"
