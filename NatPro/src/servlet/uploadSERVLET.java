@@ -36,7 +36,7 @@ import javax.servlet.http.HttpServlet;
 
 @WebServlet({ "/UploadServlet" })
 @MultipartConfig(maxFileSize = 16177215L)
-public class UploadServlet extends HttpServlet {
+public class uploadSERVLET extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private	String uploadedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\UploadedDocuments\\";
