@@ -53,24 +53,13 @@
 		<a
 			class="list-group-item list-group-item-action list-group-item-success active"
 			id="list-home-list" data-toggle="list" href="#taxInfo" role="tab"
-			aria-controls="TaxonomicInformation">Taxonomic Information</a>
-		<!-- 			<a
+			aria-controls="TaxonomicInformation">Taxonomic Information</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-profile-list" data-toggle="list" href="#plantName"
-			role="tab" aria-controls="ScientificName">Common
-			Name(s)</a> <a
-			class="list-group-item list-group-item-action list-group-item-success"
-			id="list-messages-list" data-toggle="list" href="#location"
-			role="tab" aria-controls="Location">Location(s)</a>  -->
-		<a
+			role="tab" aria-controls="CommonName">Common Name</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#bioAct" role="tab"
-			aria-controls="BiologicalActivities">Biological Activities</a>
-		<!-- 			 <a
-			class="list-group-item list-group-item-action list-group-item-success"
-			id="list-settings-list" data-toggle="list" href="#prep" role="tab"
-			aria-controls="Preparation">Preparation(s)</a>  -->
-		<a
+			aria-controls="BiologicalActivities">Biological Activities</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
 			id="list-settings-list" data-toggle="list" href="#chemComp"
 			role="tab" aria-controls="ChemicalCompounds">Chemical Compound(s)</a>
@@ -106,54 +95,28 @@
 				</table>
 			</div>
 		</div>
-		<%-- 		<div class="tab-pane fade" id="plantName" role="tabpanel"
+		<div class="tab-pane fade" id="plantName" role="tabpanel"
 			aria-labelledby="list-profile-list">
 			<div class="d-flex justify-content-center">
 				<table class="table table-hover w-25 text-center">
 					<thead>
 						<tr>
 							<td>
-								<h4>Scientific Name(s)</h4>
+								<h4>Common Name</h4>
 							</td>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<c:forEach items="${medPlantsList.get(0).getSpecies()}"
-								var="speciesList">
-								<tr>
-									<td><i>${speciesList.getSpecie()}</i></td>
-								</tr>
-							</c:forEach>
+						<tr>
+							<td><a
+								href="ViewPlantServlet?medPlant=${medPlantName}">${medPlantName}</a></td>
+						</tr>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
-		<div class="tab-pane fade" id="location" role="tabpanel"
-			aria-labelledby="list-messages-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25 text-center">
-					<thead>
-						<tr>
-							<td>
-								<h4>Location(s)</h4>
-							</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<c:forEach items="${medPlantsList.get(0).getLocations()}"
-								var="locationsList">
-								<tr>
-									<td>${locationsList}</td>
-								</tr>
-							</c:forEach>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div> --%>
 		<div class="tab-pane fade" id="bioAct" role="tabpanel"
 			aria-labelledby="list-settings-list">
 			<div class="d-flex justify-content-center">

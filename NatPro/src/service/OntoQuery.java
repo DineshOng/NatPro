@@ -398,6 +398,36 @@ public class OntoQuery {
 
 	}
 
+	public String getSynonymMP(String Synonym) throws SQWRLException {
+		String value = "";
+		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
+		RDFProperty datatypeProperty_MedicinalPlant = owlModel.getRDFProperty("datatypeProperty_MedicinalPlant");
+
+		RDFProperty hasScientificName = owlModel.getRDFProperty("hasScientificName");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("MedicinalPlant")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						OWLIndividual synIndiv = (OWLIndividual) individual.getPropertyValue(hasScientificName);
+						// find the synonym
+						if (Synonym.equalsIgnoreCase(synIndiv.getPropertyValue(datatypeProperty_Synonym).toString())) {
+							value = individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString();
+						}
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+
+		return value;
+	}
+
 	public List<String> getSynCompounds(String Synonym) throws SQWRLException {
 		HashSet<String> values = new HashSet<String>();
 

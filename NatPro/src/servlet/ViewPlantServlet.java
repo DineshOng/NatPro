@@ -55,7 +55,7 @@ public class ViewPlantServlet extends HttpServlet {
 		case "/ViewSciPlantServlet":
 			try {
 				viewSciPlant(request, response);
-			} catch (OntologyLoadException | ServletException | IOException | FlickrException e) {
+			} catch (OntologyLoadException | ServletException | IOException | FlickrException | SQWRLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -128,11 +128,14 @@ public class ViewPlantServlet extends HttpServlet {
 	}
 
 	private void viewSciPlant(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException, FlickrException {
+			throws OntologyLoadException, ServletException, IOException, FlickrException, SQWRLException {
 		// TODO Auto-generated method stub
+
 		String specieKey = request.getParameter("specie");
 		OntoQuery q = new OntoQuery();
 		Species specie = q.searchSpecie(specieKey);
+		String medPlantName = q.getSynonymMP(specieKey);
+		request.setAttribute("medPlantName", medPlantName);
 		request.setAttribute("SpecieObject", specie);
 		request.setAttribute("specie", specieKey);
 		request.getRequestDispatcher("6dentry-sci.jsp").forward(request, response);

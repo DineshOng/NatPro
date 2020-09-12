@@ -66,7 +66,16 @@
 				<table class="table table-hover w-auto text-center">
 					<thead>
 						<tr>
-							<th>Genus</th>
+							<th>Genus
+								<button type="button" class="btn btn-outline-dark btn-sm"
+									onclick="editGenusEntry()" data-toggle="tooltip"
+									data-placement="top" title="edit entry" id="editEntryBtn"
+									data-trigger="hover">
+									<i class="fa fa-pencil" aria-hidden="true"
+										id="editGenusEntryLogo"></i>
+								</button>
+							</th>
+
 						</tr>
 					</thead>
 					<tbody>
@@ -77,11 +86,12 @@
 											style="display: inline;" id="genusName${genusNum}">${genusList}</p></a>
 									<div style="display: inline; float: right;">
 										<button type="button" class="btn btn-outline-danger btn-sm "
-											style="display: inline" onclick="removeGenus(${genusNum})"
+											style="display: none" onclick="removeGenus(${genusNum})"
 											data-toggle="tooltip" data-trigger="hover"
 											data-placement="top" title="remove genus"
-											id="removeGenusBtn${locNum}">
-											<i class="fa fa-trash" id="removeGenusLogo" aria-hidden="true"></i>
+											id="removeGenusBtn${genusNum}">
+											<i class="fa fa-trash" id="removeGenusLogo"
+												aria-hidden="true"></i>
 										</button>
 									</div></td>
 							</tr>
@@ -96,7 +106,7 @@
 											placeholder="Genus">
 									</div>
 									<button type="button" class="btn btn-outline-dark btn-sm "
-										style="display: inline" onclick="addGenus()"
+										style="display: none" onclick="addGenus()"
 										data-toggle="tooltip" data-trigger="hover"
 										data-placement="top" title="add genus" id="addGenusBtn">
 										<i class="fa fa-plus" id="addGenusLogo" aria-hidden="true"></i>
@@ -145,7 +155,7 @@
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
 
-	<!-- Script for Add/Delete Location -->
+	<!-- Script for Add/Delete Genus -->
 	<script type="text/javascript">
 	function addGenus(){
 		document.getElementById("genusInputDiv").style.display= "inline";
@@ -166,6 +176,7 @@
 		document.getElementById("addGenusBtn").classList.remove("btn-success");
 		document.getElementById("addGenusBtn").classList.add("btn-outline-dark");
 		document.getElementById("cancelAddGenusBtn").style.display="none";
+		document.getElementById("genusInput").value = "";
 	}
 	
 	function saveGenus(){
@@ -210,11 +221,44 @@
 				  },
 			success : function(data) {
 				alert(data)
-				if(data.trim() == "Location Removed"){
+				if(data.trim() == "Genus Removed"){
 					window.location.href = "ViewFamilyServlet?family="+familyName; 
 				}
 			}
 			});   
+	}
+	</script>
+
+	<script type="text/javascript">
+	function editGenusEntry(){
+		var i;
+		for (i = 1; i < "${genusNum}"; i++) {
+			var id = 'removeGenusBtn'+i;
+			document.getElementById(id).style.display="inline";
+		}
+		document.getElementById("editEntryBtn").onclick = function () { cancelEditGenusEntry(); };
+		document.getElementById("editEntryBtn").classList.remove("btn-outline-dark");
+		document.getElementById("editEntryBtn").classList.add("btn-danger");
+		document.getElementById("editGenusEntryLogo").classList.remove("fa-pencil");
+		document.getElementById("editGenusEntryLogo").classList.add("fa-times");  
+		document.getElementById("addGenusBtn").style.display="inline";
+		
+	}
+	
+	function cancelEditGenusEntry(){
+		var i;
+		for (i = 1; i < "${genusNum}"; i++) {
+			var id = 'removeGenusBtn'+i;
+			document.getElementById(id).style.display="none";
+		}
+		document.getElementById("editEntryBtn").onclick = function () { editGenusEntry(); };
+		document.getElementById("editEntryBtn").classList.remove("btn-danger");
+		document.getElementById("editEntryBtn").classList.add("btn-outline-dark");
+		document.getElementById("editGenusEntryLogo").classList.remove("fa-times");  
+		document.getElementById("editGenusEntryLogo").classList.add("fa-pencil");
+		document.getElementById("addGenusBtn").style.display="none";
+		cancelAddGenus();
+		
 	}
 	</script>
 

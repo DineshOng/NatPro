@@ -441,11 +441,11 @@ public class EditServlet extends HttpServlet {
 			m.removeObjectPropertyValue(checkIfGenusIndivExists, "belongsToFamily", familyIndiv);
 
 			PrintWriter out = response.getWriter();
-			String message = "Location Removed";
+			String message = "Genus Removed";
 			out.println(message);
 		} catch (Exception e) {
 			PrintWriter out = response.getWriter();
-			String message = "Remove Location Failed";
+			String message = "Remove Genus Failed";
 			out.println(message);
 		}
 
