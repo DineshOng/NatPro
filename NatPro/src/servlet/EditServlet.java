@@ -28,9 +28,9 @@ import service.OntoQuery;
 /**
  * Servlet implementation class EditServlet
  */
-@WebServlet({ "/EditServlet", "/EditMedPlant", "/EditFamilyName", "/EditFamily", "/EditGenusName", "/EditGenus",
-		"/AddGenus", "/RemoveGenus", "/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep", "/AddPrep",
-		"/EditComp" })
+@WebServlet({ "/EditServlet", "/EditMedPlant", "/DeletePlant", "/EditFamilyName", "/EditFamily", "/EditGenusName",
+		"/EditGenus", "/AddGenus", "/RemoveGenus", "/EditSci", "/EditSciName", "/AddLoc", "/RemoveLoc", "/EditPrep",
+		"/AddPrep", "/EditComp" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -54,6 +54,15 @@ public class EditServlet extends HttpServlet {
 		case "/EditMedPlant":
 			try {
 				editMedPlant(request, response);
+			} catch (OWLOntologyCreationException | OWLOntologyStorageException | ServletException | IOException
+					| SQWRLException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case "/DeletePlant":
+			try {
+				deleteMedPlant(request, response);
 			} catch (OWLOntologyCreationException | OWLOntologyStorageException | ServletException | IOException
 					| SQWRLException | OntologyLoadException e) {
 				// TODO Auto-generated catch block
@@ -219,6 +228,30 @@ public class EditServlet extends HttpServlet {
 			String message = "Edit Unsuccessful, Plant Name Already Exists!";
 			out.println(message);
 		}
+	}
+
+	private void deleteMedPlant(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException,
+			OntologyLoadException, SQWRLException {
+		String medPlantName = request.getParameter("plantVal");
+
+		// Get the individual name of the MedicinalPlant
+		OntoQuery q = new OntoQuery();
+		String MedPlantNameIndiv = q.getMedPlantIndivName(medPlantName);
+
+		try {
+			OntoMngr m = new OntoMngr();
+			m.deleteMedicinalPlant(MedPlantNameIndiv);
+			PrintWriter out = response.getWriter();
+			String message = "Plant Successfully Removed";
+			out.println(message);
+
+		} catch (Exception e) {
+			PrintWriter out = response.getWriter();
+			String message = "Remove Plant Unsuccessful";
+			out.println(message);
+		}
+
 	}
 
 	private void editFamily(HttpServletRequest request, HttpServletResponse response)

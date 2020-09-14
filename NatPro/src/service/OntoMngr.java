@@ -249,6 +249,18 @@ public class OntoMngr {
 			}
 		}
 	}
+	
+    public void deleteMedicinalPlant(String oldMedPlant) throws OWLOntologyStorageException {
+        //Remove old plant
+        medPlantClass = owlFact.getOWLClass("#MedicinalPlant", pm);
+        medPlantIndiv = owlFact.getOWLNamedIndividual("#" + oldMedPlant, pm);
+        classAssertion = owlFact.getOWLClassAssertionAxiom(medPlantClass, medPlantIndiv);
+            
+        OWLEntityRemover remove = new OWLEntityRemover(owlManager, Collections.singleton(owlOntology));
+        medPlantIndiv.accept(remove);
+        owlManager.applyChanges(remove.getChanges());
+        owlManager.saveOntology(owlOntology);
+    }
 
 	public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();

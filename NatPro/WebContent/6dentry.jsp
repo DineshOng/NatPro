@@ -64,6 +64,42 @@
 				<p style="display: inline;" id="editEntryName">EDIT</p>
 			</button>
 		</div>
+		<div class="d-flex flex-row-reverse bd-highlight"
+			style="margin-top: 40px; margin-bottom: -50px;">
+			<!-- Button trigger modal -->
+			<button style="display: none" id="deletePlantBtn" type="button"
+				class="btn btn-danger" data-toggle="modal"
+				data-target="#deletePlantModal">
+				<i class="fa fa-trash" id="deletePlantLogo" aria-hidden="true"></i>
+				Delete Plant
+			</button>
+		</div>
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="deletePlantModal" tabindex="-1"
+			role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Deleting Plant</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">Are you sure you want to delete plant
+						${medPlantsList.get(0).getMedicinalPlant()}?</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary"
+							data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-danger"
+							onclick="deletePlant('${medPlantsList.get(0).getMedicinalPlant()}')">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 	<div class="d-flex flex-row list-group text-center ">
 		<a
@@ -115,7 +151,7 @@
 								</div> <i id="editGenusTip" style="display: none;"
 								class="fa fa-info-circle" data-toggle="popover"
 								data-placement="top" data-trigger="hover"
-								data-content="You may edit this name in the genus page."></i>
+								data-content="You may edit this genus in the genus page."></i>
 								<button type="button" class="btn btn-outline-dark btn-sm "
 									style="display: none" onclick="editGenus()"
 									data-toggle="tooltip" data-trigger="hover" data-placement="top"
@@ -139,7 +175,8 @@
 							</a> <i id="editFamilyTip" style="display: none;"
 								class="fa fa-info-circle" data-toggle="popover"
 								data-placement="top" data-trigger="hover"
-								data-content="You may edit this name in the family page."></i> <!-- <div class="autocomplete" style="width: 300px; display: none"
+								data-content="You may edit this family in the family page."></i>
+								<!-- <div class="autocomplete" style="width: 300px; display: none"
 									id="familyInputDiv">
 									<input type="text" id="familyInput" name="family"
 										placeholder="Family">
@@ -318,7 +355,13 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th><h4>Biological Activities</h4></th>
+							<th><h4>
+									Biological Activities <i id="editBioActTip"
+										style="display: none;" class="fa fa-info-circle"
+										data-toggle="popover" data-placement="top"
+										data-trigger="hover"
+										data-content="You may edit the biological activity/s in the compound page."></i>
+								</h4></th>
 						</tr>
 						<tr>
 							<th>Chemical Compound</th>
@@ -1237,12 +1280,14 @@
 		document.getElementById("editEntryLogo").classList.add("fa-check");
 		document.getElementById("editEntryName").innerHTML=" Finish Editing";
 		document.getElementById("editEntryBtn").onclick = function () { cancelEditEntry(); };
+		document.getElementById("deletePlantBtn").style.display="inline";
 		document.getElementById("editMedPlantBtn").style.display="inline";
 		document.getElementById("editGenusBtn").style.display="inline";
 		document.getElementById("editGenusTip").style.display="inline";
 		document.getElementById("editFamilyTip").style.display="inline";
 		document.getElementById("editSpecieBtn").style.display="inline";
 		document.getElementById("editSpecieTip").style.display="inline";
+		document.getElementById("editBioActTip").style.display="inline";
 		document.getElementById("addLocBtn").style.display="inline";
 		document.getElementById("addPrepBtn").style.display="inline";
 	}
@@ -1272,6 +1317,7 @@
 		document.getElementById("editFamilyTip").style.display="none";
 		document.getElementById("editSpecieBtn").style.display="none";
 		document.getElementById("editSpecieTip").style.display="none";
+		document.getElementById("editBioActTip").style.display="none";
 		document.getElementById("addLocBtn").style.display="none";
 		document.getElementById("addPrepBtn").style.display="none";
 		
@@ -1279,6 +1325,32 @@
 		document.getElementById("editEntryLogo").classList.remove("fa-check");
 		document.getElementById("editEntryName").innerHTML=" EDIT";
 		document.getElementById("editEntryBtn").onclick = function () { editEntry(); };
+		document.getElementById("deletePlantBtn").style.display="none";
+	}
+	</script>
+
+	<script type="text/javascript">
+	function deletePlant(plantName){
+		var plantVal = plantName;
+		console.log(plantVal);
+		
+		$.ajax({
+			type : "GET",
+			url : 'DeletePlant',
+			dataType: "text",
+			data: {
+				plantVal: plantVal,
+				  },
+			success : function(data) {
+				alert(data)
+				if(data.trim() == "Plant Successfully Removed"){			
+					window.location.href = "index.jsp";
+				}else{
+					cancelEditEntry();
+				}
+			}
+			}); 
+
 	}
 	</script>
 
