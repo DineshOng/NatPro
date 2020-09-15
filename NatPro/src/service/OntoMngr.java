@@ -90,8 +90,11 @@ public class OntoMngr {
 		// loadOntology();
 		owlManager = OWLManager.createOWLOntologyManager();
 		
-		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
-		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl"); // user defined
+//		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
+//		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl"); // user defined
+		
+		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl"); // user defined
 
 //		owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 
@@ -150,10 +153,6 @@ public class OntoMngr {
 
 		String content = new String(Files.readAllBytes(path), charset);
 
-		String str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\">";
-		String str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\">";
-		content = content.replaceAll(str1, str2);
-
 		/*
 		str1 = "<datatypeProperty_Compound rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">"+oldVal+"</datatypeProperty_Compound>";	
 		str2 = "<datatypeProperty_Compound rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">"+newVal+"</datatypeProperty_Compound>";
@@ -165,8 +164,8 @@ public class OntoMngr {
 		 */
 		
 		//Compound
-		str1 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
-		str2 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
+		String str1 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
+		String str2 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
 		content = content.replaceAll(str1, str2);
 		
 		//Genus
@@ -192,6 +191,10 @@ public class OntoMngr {
 		//Specie Part
 		str1 = "<hasChildPlantPart rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal);
 		str2 = "<hasChildPlantPart rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal);
+		content = content.replaceAll(str1, str2);
+		
+		str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\">";
+		str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\">";
 		content = content.replaceAll(str1, str2);
 		
 
