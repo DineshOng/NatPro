@@ -501,6 +501,7 @@ public class EditServlet extends HttpServlet {
 			m.setSpeciesIndiv(oldSciNameIndiv);
 			m.addDataPropSpecies(newSciName);
 			m.removeDataPropertyValue(oldSciNameIndiv, "datatypeProperty_Synonym", oldSciName);
+//			m.changeSpeciePartNameIndividual(oldSciNameIndiv, newSciName);
 			m.changeNameIndividual(oldSciNameIndiv, newSciName);
 
 			PrintWriter out = response.getWriter();

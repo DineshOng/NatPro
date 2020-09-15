@@ -183,18 +183,30 @@ public class OntoMngr {
 		str2 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
 		content = content.replaceAll(str1, str2);
 		
+		
+		
+		str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\">";
+		str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\">";
+		content = content.replaceAll(str1, str2);
+		
+
+		Files.write(path, content.getBytes(charset));
+	}
+	
+	public void changeSpeciePartNameIndividual(String oldVal, String newVal) throws IOException {
+		Path path = Paths.get(owlPath);
+		Charset charset = StandardCharsets.UTF_8;
+
+		String content = new String(Files.readAllBytes(path), charset);
+
 		//Specie Part Indiv Name
-		str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"_";
-		str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"_";
+		String str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"_";
+		String str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"_";
 		content = content.replaceAll(str1, str2);
 		
 		//Specie Part
 		str1 = "<hasChildPlantPart rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal);
 		str2 = "<hasChildPlantPart rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal);
-		content = content.replaceAll(str1, str2);
-		
-		str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\">";
-		str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\">";
 		content = content.replaceAll(str1, str2);
 		
 
