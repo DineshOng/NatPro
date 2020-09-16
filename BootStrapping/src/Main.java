@@ -160,7 +160,7 @@ public class Main {
                         //System.out.println(e1+": "+class1+";"+e2+": "+class2);
                         for (String pLine : lines) {
                             pLine = pLine.toLowerCase();
-                            addRelation(relation,pLine,class1,class2,e1,e2);
+                            addRelation(relation,pLine,class1,class2,e1,e2,ValidationMap);
                             //System.out.println("Relation finished");
 
 
@@ -423,7 +423,7 @@ public class Main {
 
 
 
-                for(String key : seedMap.keySet()) {
+                for(String key : ValidationMap.keySet()) {
                     String class1 = key;
                     File validationOutput = new File("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
                     if(validationOutput.exists()){
@@ -624,7 +624,7 @@ public class Main {
 
                 if(!validation.isEmpty()){
                     //System.out.println("validationmap is "+ValidationMap.isEmpty());
-                    for(String key : seedMap.keySet()) {
+                    for(String key : ValidationMap.keySet()) {
                         String class1 = key;
                         /*if(class1.contains("Ehrlich")){
                             System.out.println(validation);
@@ -657,7 +657,7 @@ public class Main {
                             element.appendChild(B);
 
 
-                            for(String class2 : seedMap.get(key)) {
+                            for(String class2 : ValidationMap.get(key)) {
                                 Element BValues = document.createElement("Name");
                                 BValues.appendChild(document.createTextNode(class2));
                                 B.appendChild(BValues);
@@ -687,6 +687,7 @@ public class Main {
                     }
                 }
                 seedMap.clear();
+                ValidationMap.clear();
 
 
 
@@ -759,7 +760,7 @@ public class Main {
     public static void addRelation(
             TreeSet<String> relation, String pLine,
             String class1, String class2,
-            String e1, String e2){
+            String e1, String e2,Multimap<String,String> ValidationMap){
         e1= e1.toLowerCase();
         e2 = e2.toLowerCase();
         //System.out.println("running Relation");
@@ -768,6 +769,8 @@ public class Main {
             if(e2.contains("pound")){
                 //.println(e1+": "+class1+";"+e2+": "+class2);
             }
+
+            ValidationMap.put(class1,class2);
             //System.out.println(e1+": "+class1+";"+e2+": "+class2);
             Pattern p = Pattern.compile("<\\/["+e1+"]+>.+<["+e2+"]+>");
             Matcher m = p.matcher(pLine);

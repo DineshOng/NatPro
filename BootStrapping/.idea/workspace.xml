@@ -14,16 +14,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8109">
-              <caret line="477" column="17" selection-start-line="477" selection-start-column="17" selection-end-line="477" selection-end-column="17" />
+            <state relative-caret-position="-735">
+              <caret line="771" selection-start-line="771" selection-end-line="771" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3438#3446#0" expanded="true" />
-                <element signature="e#16060#16068#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/8e357cc515603c147bd71bd6dfad1cca.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/702c7c4e97189ae5b79c9b4f2f2d8651.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="289" selection-start-line="4" selection-start-column="285" selection-end-line="4" selection-end-column="289" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/e49d67bbcad547335de0e20ad819c320.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="234" column="280" selection-start-line="234" selection-start-column="272" selection-end-line="234" selection-end-column="280" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Compound.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Family.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Compound.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/7b3956f364562b5ed9f239daa66426a1.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -45,16 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ehrlich</find>
-      <find>I went here</find>
-      <find>System</find>
-      <find>hashxml</find>
-      <find>key</find>
-      <find>class1</find>
-      <find>supp</find>
-      <find>ValidationMap</find>
-      <find>search</find>
-      <find>I am at</find>
       <find>addPreprocessing</find>
       <find>exists</find>
       <find>addprep</find>
@@ -62,8 +122,6 @@
       <find>validationmap</find>
       <find>seedmap</find>
       <find>posTagger</find>
-      <find>seedMap</find>
-      <find>validationMap</find>
       <find>synset</find>
       <find>readxml</find>
       <find>addpreproces</find>
@@ -75,6 +133,18 @@
       <find>matches</find>
       <find>-[</find>
       <find>POSTagger</find>
+      <find>alph</find>
+      <find>class1</find>
+      <find>POSTAGGER</find>
+      <find>seedMap.put</find>
+      <find>addMap</find>
+      <find>addRelation</find>
+      <find>seedMap</find>
+      <find>macro</find>
+      <find>macromitrium</find>
+      <find>validationMap</find>
+      <find>hoya</find>
+      <find>dyso</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -101,9 +171,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="215" />
-    <option name="y" value="6" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
     <option name="width" value="1377" />
     <option name="height" value="959" />
   </component>
@@ -113,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -144,12 +212,18 @@
             </path>
             <path>
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -233,10 +307,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24360341" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24626866" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -245,7 +318,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -375,36 +448,11 @@
     <state x="34" y="23" key="new project wizard/0.23.1280.732@0.23.1280.732" timestamp="1582638934534" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-cycas lacrimans-endotesta.xml" />
-    <entry file="file://$PROJECT_DIR$/validation/bcb94e0ea5a7b7de3b7ce45bbb4afee5-leaves-3beta-friedelinol.xml" />
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Family.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Compound.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-PlantPart.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-cycas edentata-bark.xml" />
-    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-bataan.xml" />
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-bark-brucine.xml" />
     <entry file="file://$PROJECT_DIR$/validation/bcb94e0ea5a7b7de3b7ce45bbb4afee5-leaves-chlorophyll a.xml" />
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-stigmasterol.xml" />
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-bark-rauvomitin.xml" />
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-leaf-6-oxoalstophyllal.xml" />
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Compound.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-bark-strictamin.xml" />
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-campesterol.xml" />
     <entry file="file://$PROJECT_DIR$/validation/788ca68e20b45a467a7f43b2042a058f-cycas lacrimans-bark.xml" />
@@ -470,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="123" selection-start-line="106" selection-start-column="123" selection-end-line="106" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seedOutput/Compound-BioAct.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-969" />
@@ -507,21 +548,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/compound-bioact.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/seedOutput/BioAct-CellLine.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/compound-bioact.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/7b3956f364562b5ed9f239daa66426a1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1ed46617021edead6df621a7b72d2dcd-alpha-amyrin cinnamate-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="95" selection-start-column="91" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/7b3956f364562b5ed9f239daa66426a1-alpha-amyrin cinnamate-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Compound.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Compound.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Family.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8109">
-          <caret line="477" column="17" selection-start-line="477" selection-start-column="17" selection-end-line="477" selection-end-column="17" />
+        <state relative-caret-position="-735">
+          <caret line="771" selection-start-line="771" selection-end-line="771" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3438#3446#0" expanded="true" />
-            <element signature="e#16060#16068#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/8e357cc515603c147bd71bd6dfad1cca.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/702c7c4e97189ae5b79c9b4f2f2d8651.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="289" selection-start-line="4" selection-start-column="285" selection-end-line="4" selection-end-column="289" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/e49d67bbcad547335de0e20ad819c320.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="234" column="280" selection-start-line="234" selection-start-column="272" selection-end-line="234" selection-end-column="280" />
         </state>
       </provider>
     </entry>
