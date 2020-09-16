@@ -44,7 +44,6 @@
 		<p class="display-6 text-dark text-center">${filenameList}</p>
 	</c:forEach>
 	<h4 class="text-dark">Preprocess:</h4>
-	${preprocProg}
 	<div class="container-fluid mt-3">
 		<div class="row">
 			<div class="col">
@@ -91,9 +90,11 @@
 	<br>
 	<h4 class="text-dark">Bootstrap:</h4>
 	<div class="progress" style="height: 30px;">
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id="bar2" role="progressbar"
-			style="width: 0%;" aria-valuenow="25" aria-valuemin="0"
-			aria-valuemax="100">BOOTSRAPPING DOCUMENT${numdocsplural}</div>
+		<div
+			class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+			id="bar2" role="progressbar" style="width: 0%;" aria-valuenow="25"
+			aria-valuemin="0" aria-valuemax="100">BOOTSRAPPING
+			DOCUMENT${numdocsplural}</div>
 	</div>
 
 	<div class="container-fluid mt-3">
@@ -132,6 +133,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<div id="preproc"></div>
 
 
 
@@ -153,6 +156,90 @@
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 	<script type="text/javascript">
+	$(document).ready(function() {
+		var s = document.getElementById("numdocsplural").getAttribute("val");
+        var isare = "is";
+        if(s == "s"){
+        	isare="are";
+        }
+        
+		// Progress
+		$.LoadingOverlay("show", {
+		    image       : "",
+		    progress    : true,
+		    progressColor:"#35b557",
+		    textResizeFactor: 0.3,
+		    text: " ",
+		    size:80
+		});
+		var count     = 0;
+		var i = 0;
+		var interval  = setInterval(function(){
+		    if (count >= 100) {
+		        clearInterval(interval);
+		        $.LoadingOverlay("hide");
+		        return;
+		    }
+		    switch(i){        		
+    		case 0: 
+    			 $.LoadingOverlay("text", "Generating Unique Document ID"+s);
+    			break;
+    		case 1: 
+    			$.LoadingOverlay("text", "Checking for Duplicate Document"+s);
+    			break;
+    		case 2: 
+    			$.LoadingOverlay("text", "Saving Document"+s);
+    			break;
+    		case 3: 
+    			$.LoadingOverlay("text", "Converting Document"+s+" to Text File");
+    			break;
+    		case 4: 
+    			$.LoadingOverlay("text", "Cleaning the Text File"+s);
+    			break;
+    		case 5: 
+    			$.LoadingOverlay("text", "Splitting Sentences");
+    			break;
+    		case 6: 
+    			$.LoadingOverlay("text", "Tagging Document"+s);
+    			break;
+    		case 7: 
+    			$.LoadingOverlay("text", "Processing Document"+s);
+    			break;
+    		case 8: 
+    			$.LoadingOverlay("text", "Loading Tagged Document");
+    			break;
+    		case 9: 
+    			$.LoadingOverlay("text", "Loading Seeds");
+    			break;
+    		case 10: 
+    			$.LoadingOverlay("text", "Processing Tagged Document");
+    			break;
+    		case 11: 
+    			$.LoadingOverlay("text", "Generating Patterns from Document");
+    			break;
+    		case 12: 
+    			$.LoadingOverlay("text", "Tagging POS");
+    			break;
+    		case 13: 
+    			$.LoadingOverlay("text", "Matching Patterns");
+    			break;
+    		case 14: 
+    			$.LoadingOverlay("text", "Saving Seed Patterns");
+    			break;
+    		case 15: 
+    			$.LoadingOverlay("text", "Generating File for Validation");
+    			break;
+    		case 16: 
+    			$.LoadingOverlay("text", "Document"+s+" Ready for Validation");
+    			break;
+		    }
+		    count += 6;
+		    i+=1;
+		    $.LoadingOverlay("progress", count);
+		}, 500);
+    });
+	  
+	
         var i = 0;
         var currPercent = 0;
         var progressBar = $("#bar");
@@ -161,11 +248,7 @@
         var j = 0;
         var currPercent2 = 0;
         
-        var s = document.getElementById("numdocsplural").getAttribute("val");
-        var isare = "is";
-        if(s == "s"){
-        	isare="are";
-        }
+        
         
         var timeout1;
         var timeout2;
@@ -352,8 +435,9 @@
         	}
             timeout2 = setTimeout("bootstrapProgress()", 1000); 
         }
-        
-        uploadProgress();
+       
+         uploadProgress(); 
+      
     </script>
 
 	<script type="text/javascript">
@@ -408,6 +492,7 @@
 		$("#search").val('${searchKey}');
 		ddfunc(${searchCategory});
 	</script>
-
+	<script type="text/javascript" charset="utf8"
+		src="js/loadingoverlay.min.js"></script>
 </body>
 </html>
