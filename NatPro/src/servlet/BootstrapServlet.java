@@ -73,23 +73,13 @@ public class BootstrapServlet extends HttpServlet {
 			Thread uploadThread = (Thread) request.getAttribute("thread");
 			try {
 				uploadThread.join();
-			} catch (InterruptedException e1) {
+			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				e.printStackTrace();
 			}
-			Thread bThread = new Thread(() -> {
-				try {
-					bootstrap(request, response);
-				} catch (ServletException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			});
 
-			bThread.start();
+			bootstrap(request, response);
+
 //			bootstrap(request, response);
 			break;
 		default:
@@ -108,7 +98,7 @@ public class BootstrapServlet extends HttpServlet {
 	}
 
 	private void bootstrap(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException{
+			throws ServletException, IOException {
 		File Folder = new File(taggedFolder);
 		File[] listFiles = Folder.listFiles();
 		Reader fileReader = null;
@@ -590,11 +580,6 @@ public class BootstrapServlet extends HttpServlet {
 				System.out.println("Finish Reading seeds : seedOutput/" + e1 + "-" + e2 + ".xml");
 
 			} // end of seeds loop
-			if (xmlFile.delete()) {
-				System.err.println("Deleted the file: " + xmlFile.getName());
-			} else {
-				System.err.println("Failed to delete the file.");
-			}
 		} // End of file[] Loop
 	}
 

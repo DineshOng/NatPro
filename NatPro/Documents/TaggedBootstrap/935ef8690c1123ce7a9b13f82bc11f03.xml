@@ -14,7 +14,7 @@ Extraction of <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPart
 
 MeOH/DMSO samples of <Synonym>Alstonia macrophylla</Synonym> were used in the selected bioassays.
 
-The samples exhibited efficient free radical scavenging activity (IC50 = 0.71 mg/mL) and were noncytotoxic to normal <CellLine>HDFn</CellLine> (IC50 > 100 g/mL) and neoplastic <CellLine>THP-1</CellLine> cell lines (IC50 = 67.22 g/mL) while highly degenerative to <CellLine>MCF-7</CellLine> (IC50 = 6.34 g/mL), <CellLine>H69PR</CellLine> (IC50 = 7.05 g/mL), and <CellLine>HT-29</CellLine> (IC50 = 9.10 g/mL).
+The samples exhibited efficient free radical scavenging activity (IC50 = 0.71 mg/mL) and were noncytotoxic to normal <CellLine>HDFn</CellLine> (IC50 > 100 g/mL) and neoplastic THP-1 cell lines (IC50 = 67.22 g/mL) while highly degenerative to <CellLine>MCF-7</CellLine> (IC50 = 6.34 g/mL), H69PR (IC50 = 7.05 g/mL), and <CellLine>HT-29</CellLine> (IC50 = 9.10 g/mL).
 
 Most interestingly, the <Synonym>Alstonia macrophylla</Synonym> samples inhibited the northern Philippine Cobra's (<Synonym>Naja philippinensis</Synonym> Taylor) venom (IC50 = 297.27 9.33 g/mL) through a secretory phospholipase A2 assay..
 
@@ -30,7 +30,7 @@ The <PlantPart>bark</PlantPart> of the <Synonym>Alstonia scholaris</Synonym>, th
 
 <Synonym>Alstonia scholaris</Synonym> was also found to relieve anxietyand stress-related incidences through stabilization of distress-induced physiological deviations seen in mice plasma.
 
-In its <Preparation>powdered</Preparation> form, the <PlantPart>bark</PlantPart> of <Synonym>Alstonia macrophylla</Synonym> (<Synonym>Alstonia macrophylla</Synonym>), also known as <MedicinalPlant>hard milkwood</MedicinalPlant> or <MedicinalPlant>batino</MedicinalPlant>, is used in wine preparation and as an antipyretic, traditional remedy and preventive concoction, medicine for dysentery, an aid in the menstrual cycle, treatment in Alzheimer's disease through down regulation of <Compound>acetylcholine</Compound>, and in <Illness>wound</Illness> healing.
+In its <Preparation>powdered</Preparation> form, the <PlantPart>bark</PlantPart> of <Synonym>Alstonia macrophylla</Synonym> (<Synonym>Alstonia macrophylla</Synonym>), also known as <MedicinalPlant>hard milkwood</MedicinalPlant> or <MedicinalPlant>batino</MedicinalPlant>, is used in wine preparation and as an antipyretic, traditional remedy and preventive concoction, medicine for <Illness>dysentery</Illness>, an aid in the menstrual cycle, treatment in Alzheimer's disease through down regulation of <Compound>acetylcholine</Compound>, and in <Illness>wound</Illness> healing.
 
 When <Preparation>mixed</Preparation> with water, the <Preparation>powdered</Preparation> <PlantPart>bark</PlantPart> can be used as an astringent and for treating skin diseases.
 
@@ -52,13 +52,13 @@ Phytochemical investigations of <Synonym>Alstonia macrophylla</Synonym> afforded
 
 A study of the <PlantPart>aerial parts</PlantPart> reported 19 alkaloidal compounds, 15 of which were elucidated.
 
-In another study, also using <PlantPart>leaf</PlantPart> extracts yielded 10 undiscovered <ChemicalClass>indole alkaloids</ChemicalClass>, <Compound>alstomaline</Compound>, <Compound>10,11-dimethoxynareline</Compound>, <Compound>alstohentine</Compound>, <Compound>alstomicine</Compound>, <Compound>16-hydroxyalstonisine</Compound>, 16hydroxyalstonal, <Compound>16-hydroxy-N4-demethylalstophyllal</Compound> oxindole, <Compound>alstophyllal</Compound>, <Compound>6-oxoalstophylline</Compound>, and <Compound>6-oxoalstophyllal</Compound>, in consort with 21 others already discovered by a previous study.
+In another study, also using <PlantPart>leaf</PlantPart> extracts yielded 10 undiscovered <ChemicalClass>indole alkaloids</ChemicalClass>, <Compound>alstomaline</Compound>, <Compound>10,11-dimethoxynareline</Compound>, <Compound>alstohentine</Compound>, <Compound>alstomicine</Compound>, <Compound>16-hydroxyalstonisine</Compound>, <Compound>16hydroxyalstonal</Compound>, <Compound>16-hydroxy-N4-demethylalstophyllal oxindole</Compound>, <Compound>alstophyllal</Compound>, <Compound>6-oxoalstophylline</Compound>, and <Compound>6-oxoalstophyllal</Compound>, in consort with 21 others already discovered by a previous study.
 
 Like <Synonym>Alstonia scholaris</Synonym>, <Synonym>Alstonia macrophylla</Synonym> also has abundant <ChemicalClass>alkaloids</ChemicalClass>.
 
 To date, nearly 70 dissimilar categories of <ChemicalClass>alkaloid</ChemicalClass> derivatives have been described in various organs of <Synonym>Alstonia macrophylla</Synonym>, and a majority of them were isolated from the <PlantPart>stem bark</PlantPart>.
 
-In this work, we established the <BioAct>antioxidant</BioAct> (by a modified assay using <Compound>1,1-diphenyl-2-picrylhydrazyl</Compound> (DPPH)), <BioAct>cytotoxic</BioAct> (<CellLine>HT-29</CellLine>, <CellLine>H69PR</CellLine>, <CellLine>MCF-7</CellLine>, <CellLine>THP-1</CellLine> immortalized cell lines, and normal <CellLine>HDFn</CellLine> primary culture cells), and <BioAct>antivenom</BioAct> activities of crude <Synonym>Alstonia macrophylla</Synonym> extracts.
+In this work, we established the <BioAct>antioxidant</BioAct> (by a modified assay using <Compound>1,1-diphenyl-2-picrylhydrazyl</Compound> (DPPH)), <BioAct>cytotoxic</BioAct> (<CellLine>HT-29</CellLine>, H69PR, <CellLine>MCF-7</CellLine>, THP-1 immortalized cell lines, and normal <CellLine>HDFn</CellLine> primary culture cells), and <BioAct>antivenom</BioAct> activities of crude <Synonym>Alstonia macrophylla</Synonym> extracts.
 
 Chemical characterization was achieved utilizing gas chromatography in tandem with mass spectrometry and energy dispersive X-ray spectroscopy.
 
@@ -134,11 +134,11 @@ A previous report showed that three chief constituents purified from the methano
 
 Cytotoxicity Assays.
 
-The cytotoxicity of the crude <Preparation>extract</Preparation> of <Synonym>Alstonia macrophylla</Synonym> was investigated on <CellLine>MCF-7</CellLine>, <CellLine>H69PR</CellLine>, <CellLine>HT-29</CellLine>, Table 1. Volatile Constituents of DCM Extracts of <Synonym>Alstonia macrophylla</Synonym> compound RT (min) RIa % peak area functionality <Compound>2-ethenyl</Compound>-2-butenal 8.07 890 6.17 aldehyde <Compound>3-ethylpyridine</Compound> 11.38 956 1.21 diverse functional group <Compound>nonanoic acid</Compound> 31.72 1277 0.92 <Compound>carboxylic acid cyclohexylbenzene</Compound> 33.81 1309 4.96 hydrocarbon 3-hydroxy-4methoxybenzyl alcohol 42.38 1445 8.41 alcohol <Compound>hexadecanonic acid methyl ester</Compound> 68.37 1927 10.46 <Compound>ester hexadecanoic acid ethyl ester</Compound> 71.40 1990 12.21 <Compound>ester heptadecanoic acid</Compound> 74.80 2065 16.61 <Compound>carboxylic acid</Compound> aRetention index (HP-5 ms column).
+The cytotoxicity of the crude <Preparation>extract</Preparation> of <Synonym>Alstonia macrophylla</Synonym> was investigated on <CellLine>MCF-7</CellLine>, H69PR, <CellLine>HT-29</CellLine>, Table 1. Volatile Constituents of DCM Extracts of <Synonym>Alstonia macrophylla</Synonym> compound RT (min) RIa % peak area functionality <Compound>2-ethenyl</Compound>-2-butenal 8.07 890 6.17 <Compound>aldehyde 3-ethylpyridine</Compound> 11.38 956 1.21 diverse functional group <Compound>nonanoic acid</Compound> 31.72 1277 0.92 <Compound>carboxylic acid cyclohexylbenzene</Compound> 33.81 1309 4.96 hydrocarbon <Compound>3-hydroxy-4methoxybenzyl</Compound> alcohol 42.38 1445 8.41 alcohol <Compound>hexadecanonic acid methyl ester</Compound> 68.37 1927 10.46 <Compound>ester hexadecanoic acid ethyl ester</Compound> 71.40 1990 12.21 <Compound>ester heptadecanoic acid</Compound> 74.80 2065 16.61 <Compound>carboxylic acid</Compound> aRetention index (HP-5 ms column).
 
 ACS Omega Article DOI: 10.1021/acsomega.
 
-B00082 ACS Omega 2019, 4, 9488-9496 9489 Missing in text-> <CellLine>THP-1</CellLine> immortalized cell lines, and normal <CellLine>HDFn</CellLine> primary culture cells.
+B00082 ACS Omega 2019, 4, 9488-9496 9489 Missing in text-> THP-1 immortalized cell lines, and normal <CellLine>HDFn</CellLine> primary culture cells.
 
 Analyses of the cytotoxicity of <Synonym>Alstonia macrophylla</Synonym> done on normal <CellLine>HDFn</CellLine> resulted in IC50 values exceeding 100 g/mL.
 
@@ -146,9 +146,9 @@ Analyses of the cytotoxicity of <Synonym>Alstonia macrophylla</Synonym> done on 
 
 An illustration of the percent of intact live cells as a correlation to the inverse function to exponentiation of the concentrations used can be found in Figures 4 and 5. The characteristic inhibitory dose-response, which is a sigmoidal curve or function, was found in generally most of the charts.
 
-Plots comparing the <BioAct>cytotoxic</BioAct> properties of <Synonym>Alstonia macrophylla</Synonym> and <Location>Zeocin</Location> on the viability of each specific cell line are found in Figure 4. IC50 values of the isolates and the positive control are synopsized in Table 3. Crude extracts of <Synonym>Alstonia macrophylla</Synonym> gave the highest <BioAct>cytotoxic</BioAct> efficacy toward <CellLine>MCF-7</CellLine> with a half maximal inhibitory concentration of 6.34 g/mL, which was followed by <CellLine>H69PR</CellLine>, <CellLine>HT-29</CellLine>, and <CellLine>THP-1</CellLine> with IC50 values of 7.05, 9.10, and 67.22 g/mL, respectively.
+Plots comparing the <BioAct>cytotoxic</BioAct> properties of <Synonym>Alstonia macrophylla</Synonym> and <Location>Zeocin</Location> on the viability of each specific cell line are found in Figure 4. IC50 values of the isolates and the positive control are synopsized in Table 3. Crude extracts of <Synonym>Alstonia macrophylla</Synonym> gave the highest <BioAct>cytotoxic</BioAct> efficacy toward <CellLine>MCF-7</CellLine> with a half maximal inhibitory concentration of 6.34 g/mL, which was followed by H69PR, <CellLine>HT-29</CellLine>, and THP-1 with IC50 values of 7.05, 9.10, and 67.22 g/mL, respectively.
 
-Significant differences for the degree of potency, as found in Tukey's post hoc multiple comparison, were found between almost all cell lines (p < 0.05) except for the paired treatment of <CellLine>MCF-7</CellLine> versus <CellLine>H69PR</CellLine>, which was displayed to be statistically similar (p > 0.
+Significant differences for the degree of potency, as found in Tukey's post hoc multiple comparison, were found between almost all cell lines (p < 0.05) except for the paired treatment of <CellLine>MCF-7</CellLine> versus H69PR, which was displayed to be statistically similar (p > 0.
 
 05).
 
@@ -164,7 +164,7 @@ In fact, there was no significant difference in the scores for mean values of <S
 
 These results exhibited that the antiproliferative actions of both <Synonym>Alstonia macrophylla</Synonym> and <Location>Zeocin</Location> were comparable.
 
-Trials using <CellLine>H69PR</CellLine> showed that the <Synonym>Alstonia macrophylla</Synonym> <BioAct>cytotoxic</BioAct> activity was comparable to <Location>Zeocin</Location> displaying no significant differences between the two inhibitors (p > 0.05) as found through an independent sample t test comparison.
+Trials using H69PR showed that the <Synonym>Alstonia macrophylla</Synonym> <BioAct>cytotoxic</BioAct> activity was comparable to <Location>Zeocin</Location> displaying no significant differences between the two inhibitors (p > 0.05) as found through an independent sample t test comparison.
 
 Results for the unpaired t test exhibited the mean values of <Synonym>Alstonia macrophylla</Synonym> (M = 52.02, SD = 5.44) and mean values for <Location>Zeocin</Location> (M = 58.22, SD = 6.54) conditions (t (14) = 0.7285, p = 0.
 
@@ -182,7 +182,7 @@ B00082 ACS Omega 2019, 4, 9488-9496 9490 Missing in text-> treated with <Synonym
 
 3090).
 
-The global or shared results of <CellLine>THP-1</CellLine> with inhibitor trials reject the null hypothesis and exemplifies that both data subsets are unique (p < 0.
+The global or shared results of THP-1 with inhibitor trials reject the null hypothesis and exemplifies that both data subsets are unique (p < 0.
 
 05).
 
@@ -200,7 +200,7 @@ Similarly, pertaining to their respective IC50 results, trials with aberrant cel
 
 05).
 
-<Location>Zeocin</Location>, a known <BioAct>cytotoxic</BioAct> agent, gave IC50 values of 3.37, 3.83, 3.78, 3.59, and 4.08 ppm in <CellLine>MCF-7</CellLine>, <CellLine>H69PR</CellLine>, <CellLine>HT29</CellLine>, <CellLine>THP-1</CellLine>, and <CellLine>HDFn</CellLine>, respectively.
+<Location>Zeocin</Location>, a known <BioAct>cytotoxic</BioAct> agent, gave IC50 values of 3.37, 3.83, 3.78, 3.59, and 4.08 ppm in <CellLine>MCF-7</CellLine>, H69PR, <CellLine>HT29</CellLine>, THP-1, and <CellLine>HDFn</CellLine>, respectively.
 
 Multiple comparisons showed negative noteworthy variances in the trials (p > 0.
 
@@ -210,9 +210,9 @@ Post hoc comparison of the dose-response curve fits for the aberrant cell line t
 
 At present, only the <Compound>sulforhodamine B</Compound>(SRB) colorimetric assays for cytotoxicity screening were done on the <PlantPart>bark</PlantPart> or outer covering of <PlantPart>roots</PlantPart> but not on <Synonym>Alstonia macrophylla</Synonym> tree <PlantPart>bark</PlantPart>.
 
-Results from the literature stated that indole derivatives found in the rhizome outer covering of <Synonym>Alstonia macrophylla</Synonym> had antiproliferative action (using the SRB assay) on MOR-P and <CellLine>COR-L23</CellLine> carcinomas because of the bisindole component.
+Results from the literature stated that indole derivatives found in the rhizome outer covering of <Synonym>Alstonia macrophylla</Synonym> had antiproliferative action (using the SRB assay) on MOR-P and COR-L23 carcinomas because of the bisindole component.
 
-<Compound>O-Acetylmacralstonine</Compound>, <Compound>villalstonine</Compound>, and <Compound>macrocarpamine</Compound> were also established to influence definite actions on normal mammary fibroblasts, as well as on these specific immortalized cancers: StMl 1a (skin cancer), <CellLine>Caki-2</CellLine> (<BodyPart>kidney</BodyPart> cancer), <CellLine>MCF-7</CellLine> (<BodyPart>breast</BodyPart> cancer), and <CellLine>LS174T</CellLine> (colon cancer) with IC50 values ranging 2-10 M. Another work showed that methanolic extracts of <PlantPart>root</PlantPart> barks containing <Compound>Omethylmacralstonine</Compound>, <Compound>talcarpine</Compound>, <Compound>villalstonine</Compound>, <Compound>pleiocarpamine</Compound>, and <Compound>macraistonine</Compound> exhibited high cytotoxicity on MOR-P and <CellLine>COR-L23</CellLine>.27 2.
+<Compound>O-Acetylmacralstonine</Compound>, <Compound>villalstonine</Compound>, and <Compound>macrocarpamine</Compound> were also established to influence definite actions on normal mammary fibroblasts, as well as on these specific immortalized cancers: StMl 1a (skin cancer), Caki-2 (<BodyPart>kidney</BodyPart> cancer), <CellLine>MCF-7</CellLine> (<BodyPart>breast</BodyPart> cancer), and LS174T (colon cancer) with IC50 values ranging 2-10 M. Another work showed that methanolic extracts of <PlantPart>root</PlantPart> barks containing <Compound>Omethylmacralstonine</Compound>, <Compound>talcarpine</Compound>, <Compound>villalstonine</Compound>, <Compound>pleiocarpamine</Compound>, and <Compound>macraistonine</Compound> exhibited high cytotoxicity on MOR-P and COR-L23.27 2.
 
 5.
 
@@ -240,7 +240,7 @@ An <ChemicalClass>alkaloid</ChemicalClass> found in the <Family>Solanaceae</Fami
 
 Phytochemical compounds, coumestan and steroids (<Compound>beta-sitosterol</Compound> and <Compound>stigmasterol</Compound>) <Preparation>extracted</Preparation> from the alcoholic rhizome preparations of <Synonym>Pluchea indica</Synonym> bypassed oxidative degradation of lipids and <Compound>superoxide</Compound> dismutase action stimulated through envenoming.
 
-<Compound>Lupeol</Compound> moderately prevented the hemorrhage, edema, procoagulant, and myotoxic events caused by <Synonym>Bothrops venom</Synonym>.
+<Compound>Lupeol</Compound> moderately prevented the <Illness>hemorrhage</Illness>, edema, procoagulant, and myotoxic events caused by <Synonym>Bothrops venom</Synonym>.
 
 These aforementioned constituents could be the cause for the observed <Synonym>Naja philippinensis</Synonym> <BioAct>antivenom</BioAct> activity, which solicits further studies.
 
@@ -248,13 +248,13 @@ A member of the same genus.
 
 <Synonym>Alstonia scholaris</Synonym> (AAS) aqueous solution was found to significantly neutralize <Synonym>Vipera russelli</Synonym> venom (VRV) stimulating an increase in serum <Compound>alanine</Compound> transaminase, <Compound>aspartate</Compound> transaminase, and <Compound>creatinine</Compound> in Swiss albino animal models incubated with VRV (0.5 and 1 g) and AAS concoction (200 mg/kg).
 
-The water <Preparation>decoction</Preparation> of AAS inhibited VRV minimum lethal action, minimum edema activity, minimal defibrinogenating activity, and minimum necrotizing action in mice weighing approximately 18-20 g. In this work, <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPart> was found to be an efficient <BioAct>antioxidant</BioAct>, the assessment of the effectiveness of <Synonym>Alstonia macrophylla</Synonym> on the four immortalized cancer cell lines revealed that the integrity of <CellLine>MCF-7</CellLine>, <CellLine>H69PR</CellLine>, and <CellLine>HT-29</CellLine> consistently decreased in all the trials, and the action of cytotoxicity was analogous to the positive control <Location>Zeocin</Location>.
+The water <Preparation>decoction</Preparation> of AAS inhibited VRV minimum lethal action, minimum edema activity, minimal defibrinogenating activity, and minimum necrotizing action in mice weighing approximately 18-20 g. In this work, <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPart> was found to be an efficient <BioAct>antioxidant</BioAct>, the assessment of the effectiveness of <Synonym>Alstonia macrophylla</Synonym> on the four immortalized cancer cell lines revealed that the integrity of <CellLine>MCF-7</CellLine>, H69PR, and <CellLine>HT-29</CellLine> consistently decreased in all the trials, and the action of cytotoxicity was analogous to the positive control <Location>Zeocin</Location>.
 
 For the most part, trials observed in the mutant cell lines indicated low half maximal inhibitory concentrations (<7 g/mL), which were acquired for all of the Figure 4. <BioAct>Cytotoxic</BioAct> activities of <Synonym>Alstonia macrophylla</Synonym>, <Location>Zeocin</Location>, and DMSO on the cytotoxicity index (CI%) of immortalized cell lines (dose-response curves with data points as mean SEM).
 
 GraphPad Prism 7.01 (GraphPad Software, Inc., <Location>USA</Location>) was employed for extra sum-of-squares F test calculations to (A) appraise the implication of the best-fit-parameter (half maximal inhibitory concentration) between selected trials and to (B) assess the variances amid the dose-response curve fits.
 
-<CellLine>MCF-7</CellLine> F (Dfn, DFd) = (A) F (2, 48) = 3192, p < 0.0001 and (B) F (2, 21) = 34.37, p < 0.0001; <CellLine>H69PR</CellLine> (A) F (2, 48) = 5205, p < 0.0001and (B) F (2, 21) = 29.45, p < 0.0001; <CellLine>HT-29</CellLine> (A) F (2, 46) = 4892, p < 0.0001 and (B) F (2, 21) = 18.81, p < 0.0001; <CellLine>THP-1</CellLine> (A) F (2, 48) = 3511, p < 0.0001 and (B) F (2, 21) = 12.41, p = 0.0003; <CellLine>HDFn</CellLine> (A) F (2, 48) = 1577, p < 0.0001 and (B) F (2, 21) = 27.70, p < 0.
+<CellLine>MCF-7</CellLine> F (Dfn, DFd) = (A) F (2, 48) = 3192, p < 0.0001 and (B) F (2, 21) = 34.37, p < 0.0001; H69PR (A) F (2, 48) = 5205, p < 0.0001and (B) F (2, 21) = 29.45, p < 0.0001; <CellLine>HT-29</CellLine> (A) F (2, 46) = 4892, p < 0.0001 and (B) F (2, 21) = 18.81, p < 0.0001; THP-1 (A) F (2, 48) = 3511, p < 0.0001 and (B) F (2, 21) = 12.41, p = 0.0003; <CellLine>HDFn</CellLine> (A) F (2, 48) = 1577, p < 0.0001 and (B) F (2, 21) = 27.70, p < 0.
 
 0001.
 
@@ -262,7 +262,7 @@ ACS Omega Article DOI: 10.1021/acsomega.
 
 B00082 ACS Omega 2019, 4, 9488-9496 9492 trials.
 
-<CellLine>MCF-7</CellLine> was highly responsive to <Synonym>Alstonia macrophylla</Synonym>, while the least responsive to <Synonym>Alstonia macrophylla</Synonym> was <CellLine>THP-1</CellLine>. Wild-type <CellLine>HDFn</CellLine> trials incubated with <Synonym>Alstonia macrophylla</Synonym> were substantiated to be noncytotoxic and gave half maximal inhibitory concentrations of greater than 100 g/mL, whereas Zeocin-treated normal cells reached their half maximal inhibitory concentrations at less than 5.00 g/ mL.
+<CellLine>MCF-7</CellLine> was highly responsive to <Synonym>Alstonia macrophylla</Synonym>, while the least responsive to <Synonym>Alstonia macrophylla</Synonym> was THP-1. Wild-type <CellLine>HDFn</CellLine> trials incubated with <Synonym>Alstonia macrophylla</Synonym> were substantiated to be noncytotoxic and gave half maximal inhibitory concentrations of greater than 100 g/mL, whereas Zeocin-treated normal cells reached their half maximal inhibitory concentrations at less than 5.00 g/ mL.
 
 The results of this work on the crude MEOH/DMSO extracts from <Synonym>Alstonia macrophylla</Synonym>, which consisted primarily of <ChemicalClass>alkaloids</ChemicalClass> and <ChemicalClass>triterpenoids</ChemicalClass>, could be the rationale for further development of this preparation, through additional bioassays, as a candidate for chemotherapeutic drugs or as a supplementation in the management of human colorectal cancer, human <BodyPart>breast</BodyPart> adenocarcinoma, and human small cell lung carcinoma.
 
@@ -318,9 +318,9 @@ The GraphPad Prism 7.01 software was applied to perform the extra sum-of-squares
 
 0072.
 
-Table 3. <BioAct>Cytotoxic</BioAct> Activities (IC50) of the <Synonym>Alstonia macrophylla</Synonym> Crude <Preparation>Extract</Preparation> and <Location>Zeocin</Location> against Cell Lines IC50 a (g/mL) sample <CellLine>MCF-7</CellLine> <CellLine>H69PR</CellLine> <CellLine>HT-29</CellLine> <CellLine>THP-1</CellLine> <CellLine>HDFn</CellLine> <Synonym>Alstonia macrophylla</Synonym> 6.34 7.05 9.10 67.22 >100 <Location>Zeocin</Location> 3.37 3.83 3.78 3.59 4.08 aIC50 data were deduced from dose-response graphs extrapolated from nonlinear regression analysis by means of GraphPad Prism 7. The unpaired two-tailed t test was the treatment employed for each cell line to evaluate the significant variances among the data groups.
+Table 3. <BioAct>Cytotoxic</BioAct> Activities (IC50) of the <Synonym>Alstonia macrophylla</Synonym> Crude <Preparation>Extract</Preparation> and <Location>Zeocin</Location> against Cell Lines IC50 a (g/mL) sample <CellLine>MCF-7</CellLine> H69PR <CellLine>HT-29</CellLine> THP-1 <CellLine>HDFn</CellLine> <Synonym>Alstonia macrophylla</Synonym> 6.34 7.05 9.10 67.22 >100 <Location>Zeocin</Location> 3.37 3.83 3.78 3.59 4.08 aIC50 data were deduced from dose-response graphs extrapolated from nonlinear regression analysis by means of GraphPad Prism 7. The unpaired two-tailed t test was the treatment employed for each cell line to evaluate the significant variances among the data groups.
 
-The statistical data were as follows: <CellLine>MCF-7</CellLine>, t (14) = 0.7047, p = 0.4925; <CellLine>H69PR</CellLine>, t (14) = 0.7285, p = 0.4783; <CellLine>HT-29</CellLine>, t (14) = 1.056, p = 0.3090; <CellLine>THP-1</CellLine>, t (14) = 2.798, p = 0.0142; <CellLine>HDFn</CellLine>, t (14) = 3.761, p = 0.
+The statistical data were as follows: <CellLine>MCF-7</CellLine>, t (14) = 0.7047, p = 0.4925; H69PR, t (14) = 0.7285, p = 0.4783; <CellLine>HT-29</CellLine>, t (14) = 1.056, p = 0.3090; THP-1, t (14) = 2.798, p = 0.0142; <CellLine>HDFn</CellLine>, t (14) = 3.761, p = 0.
 
 0021.
 
@@ -370,7 +370,7 @@ This is computed by the formula: A A A DPPH scavenging effect (%) or percent inh
 
 Cell Viability Assay.
 
-The pharmacognosy of the <Compound>dichloromethane</Compound> (CH2Cl2) extracts from <Synonym>Alstonia macrophylla</Synonym> was tested on the succeeding immortalized cell lines purchased from ATCC, <Location>Manassas</Location>, <Location>Virginia</Location>, <Location>USA</Location> (<BodyPart>breast</BodyPart> cancer (<CellLine>MCF-7</CellLine>), colon cancer (<CellLine>HT29</CellLine>), small cell lung carcinoma (<CellLine>H69PR</CellLine>), human acute monocytic leukemia (<CellLine>THP-1</CellLine>)) and a primary culture of normal human dermal fibroblast neonatal (<CellLine>HDFn</CellLine>) (Thermo Fisher Scientific, Gibco, <Location>USA</Location>).
+The pharmacognosy of the <Compound>dichloromethane</Compound> (CH2Cl2) extracts from <Synonym>Alstonia macrophylla</Synonym> was tested on the succeeding immortalized cell lines purchased from ATCC, <Location>Manassas</Location>, <Location>Virginia</Location>, <Location>USA</Location> (<BodyPart>breast</BodyPart> cancer (<CellLine>MCF-7</CellLine>), colon cancer (<CellLine>HT29</CellLine>), small cell lung carcinoma (H69PR), human acute monocytic leukemia (THP-1)) and a primary culture of normal human dermal fibroblast neonatal (<CellLine>HDFn</CellLine>) (Thermo Fisher Scientific, Gibco, <Location>USA</Location>).
 
 Culture and maintenance were done in DMEM (Dulbecco's modified Eagle medium and 10% fetal bovine serum with 1 antibiotic- antimycotic) (Thermo Fisher, Invitrogen, <Location>USA</Location>) and were incubated at 37 C with 5% CO2 and 95% humidity.
 
@@ -380,7 +380,7 @@ The protocol detects viable cells by virtue of actively present mitochondrial re
 
 The 96 well culture plates were measured at 570 nm to measure the resorufin produced, which was correlated to the number of viable cells.
 
-Cells passaged in wells with viable counts of 1.0 104 cells/ mL in each well were allowed to form monolayers overnight, except for <CellLine>THP-1</CellLine> that are nonadherent cells.
+Cells passaged in wells with viable counts of 1.0 104 cells/ mL in each well were allowed to form monolayers overnight, except for THP-1 that are nonadherent cells.
 
 After overnight incubation,100, 50, 25, 12.5, 6.25, 3.12, 1.56, and 0.78 g/mL solutions of <Synonym>Alstonia macrophylla</Synonym> extracts were introduced into the wells.
 
@@ -436,4 +436,4 @@ B00082 ACS Omega 2019, 4, 9488-9496 9494 Coordination Office for the research gr
 
 Also, the authors greatly appreciate the indispensable assistance and support that Professor Michio Murata of the Department of Chemistry, Graduate School of Science, <Location>Osaka</Location> University generously gave us.
 
-ABBREVIATIONS <Synonym>Alstonia macrophylla</Synonym> <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPart> DCM <Compound>dichloromethane</Compound> DMSO <Compound>dimethylsulfoxide</Compound> EDX energy dispersive X-ray spectroscopy GC-EI-MS gas chromatography-electron ionization-mass spectrometry IC50 half maximal inhibitory concentration Immortalized cell lines <CellLine>MCF-7</CellLine> human <BodyPart>breast</BodyPart> adenocarcinoma cell line <CellLine>HT-29</CellLine> human colorectal adenocarcinoma cell line <CellLine>H69PR</CellLine> <Synonym>Homo sapiens</Synonym> small cell lung carcinoma <CellLine>THP-1</CellLine> human acute monocytic leukemia cell line <CellLine>HDFn</CellLine> primary culture of normal human dermal fibroblast neonatal MeOH <Compound>methanol</Compound> NPV <Synonym>Naja philippinensis</Synonym> Taylor venom sPLA secretory phospholipase A2 ppm parts per million
+ABBREVIATIONS <Synonym>Alstonia macrophylla</Synonym> <Synonym>Alstonia macrophylla</Synonym> <PlantPart>bark</PlantPart> DCM <Compound>dichloromethane</Compound> DMSO <Compound>dimethylsulfoxide</Compound> EDX energy dispersive X-ray spectroscopy GC-EI-MS gas chromatography-electron ionization-mass spectrometry IC50 half maximal inhibitory concentration Immortalized cell lines <CellLine>MCF-7</CellLine> human <BodyPart>breast</BodyPart> adenocarcinoma cell line <CellLine>HT-29</CellLine> human colorectal adenocarcinoma cell line H69PR <Synonym>Homo sapiens</Synonym> small cell lung carcinoma THP-1 human acute monocytic leukemia cell line <CellLine>HDFn</CellLine> primary culture of normal human dermal fibroblast neonatal MeOH <Compound>methanol</Compound> NPV <Synonym>Naja philippinensis</Synonym> Taylor venom sPLA secretory phospholipase A2 ppm parts per million

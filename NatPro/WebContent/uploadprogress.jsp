@@ -266,7 +266,7 @@
                 document.getElementById("bar").classList.remove("progress-bar-animated"); 
                 document.getElementById("bar").classList.remove("progress-bar-striped");
                 bootstrapProgress();
-                clearTimeout(timeout1);   
+               /*  clearTimeout(timeout1); */   
         	} 
             // Wait for sometime before running this script again
             timeout1 = setTimeout("uploadProgress()", 500);
@@ -274,6 +274,7 @@
         
        
         function bootstrapProgress(){
+        	console.log("hello");
             if(j<=7){
         		switch(j){        		
         		case 0: 

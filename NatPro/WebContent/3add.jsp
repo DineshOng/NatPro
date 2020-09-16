@@ -49,7 +49,7 @@
 									class="fa fa-address-card" aria-hidden="true"></i> Common Plant
 									Name
 								</label> <input type="text" id="CommonPlantName" name="commonPlantName"
-									class="form-control" placeholder="">
+									class="form-control" placeholder="" required>
 							</div>
 						</div>
 						<div class="form-group form-row">
@@ -72,7 +72,7 @@
 								<label for="ScientificName"><i
 									class="fa fa-drivers-license" aria-hidden="true"></i>
 									Scientific Name</label> <input type="text" class="form-control"
-									name="scientificName" id="ScientificName" pattern="^([A-Z][a-z]+) +([a-z-]+).*$" placeholder="">
+									name="scientificName" id="ScientificName" pattern="^([A-Z][a-z]+) +([a-z-]+).*$" placeholder="" required>
 							</div>
 							<div id="locationGroup" class="col-4">
 								<div class="col-13">
