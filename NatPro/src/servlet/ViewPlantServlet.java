@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,16 +82,28 @@ public class ViewPlantServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("medPlant");
 		OntoQuery q = new OntoQuery();
-		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
-//		System.out.println(medPlants.get(0).getSpecies().get(0).getSpeciesParts().get(0).getCompounds().get(0).getBioActs());
-//		for(MedicinalPlant m: medPlants) {
-//			System.out.println(m.getMedicinalPlant().toString());
-//		}
-		// System.out.println(medPlants.get(0).getSpecies());
+		try {
+			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
+			request.setAttribute("medPlantsList", medPlants);
+		} catch (Exception e) {
+		}
 //		List<String> photos = new FlickrService(searchKey).getPhotoURL();
 //		 System.err.println(photos.get(0));
 //		request.setAttribute("photos", photos);
-		request.setAttribute("medPlantsList", medPlants);
+
+		// Get synonyms without individual
+		try {
+			List<String> synIndiv = q.getSynonyms(searchKey.replaceAll("_", ""));
+			List<String> removeSynNoIndiv = new ArrayList<String>();
+			for (String syn : synIndiv) {
+				if (q.getSpeciesIndivName(syn) == null) {
+					removeSynNoIndiv.add(StringUtils.capitalize(syn));
+				}
+			}
+			request.setAttribute("synNoIndiv", removeSynNoIndiv);
+		} catch (Exception e) {
+
+		}
 
 		// retrieve for auto complete
 		List<String> family = q.getAllFamily();
@@ -101,16 +114,6 @@ public class ViewPlantServlet extends HttpServlet {
 
 		List<String> syns = q.getAllSynonyms();
 		request.setAttribute("synList", syns);
-
-		//Get synonyms without individual
-		List <String> synIndiv = q.getSynonyms(searchKey.replaceAll("_", ""));
-		List <String> removeSynNoIndiv = new ArrayList<String>();
-		for(String syn:synIndiv) {
-			if(q.getSpeciesIndivName(syn)==null) {
-				removeSynNoIndiv.add(StringUtils.capitalize(syn));
-			}
-		}
-		request.setAttribute("synNoIndiv", removeSynNoIndiv);
 
 		List<String> locs = q.getAllLocations();
 		request.setAttribute("locList", locs);

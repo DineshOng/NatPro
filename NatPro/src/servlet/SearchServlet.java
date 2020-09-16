@@ -56,7 +56,7 @@ public class SearchServlet extends HttpServlet {
 		case "/SearchServlet":
 			try {
 				performSearch(request, response);
-			} catch (OntologyLoadException e) {
+			} catch (OntologyLoadException | SQWRLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -69,7 +69,7 @@ public class SearchServlet extends HttpServlet {
 	}
 
 	private void performSearch(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException {
+			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("searchKey").trim();
 		System.out.println("hehe" + request.getParameter("searchCategory"));
@@ -96,6 +96,9 @@ public class SearchServlet extends HttpServlet {
 		} else if (request.getParameter("searchCategory").equals("5")) {
 			List<Compound> compoundList = q.searchCompound(searchKey);
 			request.setAttribute("compoundList", compoundList);
+		} else if (request.getParameter("searchCategory").equals("6")) {
+			List<String> locList = q.getAllLocations();
+			request.setAttribute("locList", locList);
 		}
 
 //		for(MedicinalPlant m: medPlants) {

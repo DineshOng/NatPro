@@ -20,11 +20,11 @@
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
 <style>
-	td{
-  max-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+td {
+	max-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 </style>
 
@@ -52,7 +52,8 @@
 									href="ViewPlantServlet?medPlant=${medPlantsList.getMedicinalPlant()}">${medPlantsList.getMedicinalPlant()}</a></td>
 								<td><c:forEach items="${medPlantsList.getSpecies()}"
 										var="speciesList" varStatus="loop">
-										<i><a href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}&medPlant=${medPlantsList.getMedicinalPlant()}">${speciesList.getSpecie()}</a></i>
+										<i><a
+											href="ViewSciPlantServlet?specie=${speciesList.getSpecie()}&medPlant=${medPlantsList.getMedicinalPlant()}">${speciesList.getSpecie()}</a></i>
 										<c:if test="${!loop.last}">, </c:if>
 									</c:forEach></td>
 							</tr>
@@ -68,7 +69,8 @@
 					<tbody>
 						<c:forEach items="${speciesList}" var="speciesList">
 							<tr>
-								<td><i><a href="ViewSciPlantServlet?specie=${speciesList}">${speciesList}</a></i>
+								<td><i><a
+										href="ViewSciPlantServlet?specie=${speciesList}">${speciesList}</a></i>
 								</td>
 							</tr>
 						</c:forEach>
@@ -129,6 +131,24 @@
 										</a>
 										<c:if test="${!loop.last}">, </c:if>
 									</c:forEach></td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+				<c:when test="${searchCategory =='6'}">
+					<thead>
+						<tr>
+							<th class="hid"></th>
+							<th>Location</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${locList}" var="locs">
+							<tr>
+								<td class="hid"><a></a></td>
+								<td><a
+									href="ViewLocationServlet?location=${locs}">${locs}</a></td>
+
 							</tr>
 						</c:forEach>
 					</tbody>

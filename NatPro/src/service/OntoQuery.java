@@ -792,6 +792,39 @@ public class OntoQuery {
 		return values;
 	}
 
+	public List<String> getLocationMP(String location) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		RDFProperty datatypeProperty_Location = owlModel.getRDFProperty("datatypeProperty_Location");
+		RDFProperty datatypeProperty_MedicinalPlant = owlModel.getRDFProperty("datatypeProperty_MedicinalPlant");
+
+		RDFProperty isLocatedIn = owlModel.getRDFProperty("isLocatedIn");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("MedicinalPlant")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					OWLIndividual individual = (OWLIndividual) jt.next();
+					try {
+						Collection locations = individual.getPropertyValues(isLocatedIn);
+						for (Iterator kt = locations.iterator(); kt.hasNext();) {
+							OWLIndividual locIndiv = (OWLIndividual) kt.next();
+							if (location.equalsIgnoreCase(
+									locIndiv.getPropertyValue(datatypeProperty_Location).toString())) {
+								values.add(individual.getPropertyValue(datatypeProperty_MedicinalPlant).toString());
+							}
+						}
+					} catch (Exception e) {
+					}
+
+				}
+			}
+		}
+
+		return values;
+	}
+
 	public List<String> getPreparationIllness(String preparation) throws SQWRLException {
 		List<String> values = new ArrayList<String>();
 		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
@@ -1425,20 +1458,27 @@ public class OntoQuery {
 							}
 							mp.setSpecies(species);
 
-							// get locations
-							ArrayList<String> locations = new ArrayList<String>();
-							locations.addAll(getLocations(medPlantIndiv));
-							mp.setLocations(locations);
+							try {
+								// get locations
+								ArrayList<String> locations = new ArrayList<String>();
+								locations.addAll(getLocations(medPlantIndiv));
+								mp.setLocations(locations);
+							} catch (Exception e) {
 
-							// get preparations
-							ArrayList<Preparation> preparations = new ArrayList<Preparation>();
-							preparations.addAll(getPreparationList(individual));
-							mp.setPreparations(preparations);
+							}
+
+							try {
+								// get preparations
+								ArrayList<Preparation> preparations = new ArrayList<Preparation>();
+								preparations.addAll(getPreparationList(individual));
+								mp.setPreparations(preparations);
+							} catch (Exception e) {
+
+							}
 
 							values.add(mp);
 						}
 					} catch (Exception e) {
-
 					}
 				}
 			}
