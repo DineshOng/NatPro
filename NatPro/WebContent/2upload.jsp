@@ -36,9 +36,9 @@
 				enctype="multipart/form-data" autocomplete="off">
 				<div class="input-group">
 					<div class="custom-file">
-						<input type="file" class="custom-file-input" name="file-upload"
+						<input type="file" required="true" class="custom-file-input" name="file-upload"
 							id="inputGroupFile" multiple accept=".txt,.pdf" /> <label
-							class="custom-file-label" for="inputGroupFile">Choose
+							class="custom-file-label" for="inputGroupFile" >Choose
 							file/s</label>
 					</div>
 					<div class="input-group-append">
