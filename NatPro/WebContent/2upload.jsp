@@ -26,7 +26,7 @@
 <body>
 	<!-- INCLUDE NAV BAR HTML -->
 	<%@include file="navbarnix.html"%>
-
+	${duplicate}
 	<!-- HTML CODE -->
 	<div class="jumbotron jumbotron-fluid" style="text-align: center">
 		<div class="container">
@@ -36,9 +36,10 @@
 				enctype="multipart/form-data" autocomplete="off">
 				<div class="input-group">
 					<div class="custom-file">
-						<input type="file" class="custom-file-input" name="file-upload" id="inputGroupFile"
-							multiple accept=".txt,.pdf"/> <label class="custom-file-label"
-							for="inputGroupFile">Choose file/s</label>
+						<input type="file" class="custom-file-input" name="file-upload"
+							id="inputGroupFile" multiple accept=".txt,.pdf" /> <label
+							class="custom-file-label" for="inputGroupFile">Choose
+							file/s</label>
 					</div>
 					<div class="input-group-append">
 						<button class="btn btn-success">Upload</button>
@@ -166,6 +167,5 @@
     });
 
 	</script>
-
 </body>
 </html>

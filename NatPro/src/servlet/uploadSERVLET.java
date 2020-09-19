@@ -44,9 +44,10 @@ public class uploadSERVLET extends HttpServlet {
 //	private String taggedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Tagged\\";
 //	private String processingTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt";
 
-	private String uploadedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\UploadedDocuments\\";
-	private String taggedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Tagged\\";
-	private String processingTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\processing.txt";
+	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
+	private static String uploadedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\UploadedDocuments\\";
+	private static String taggedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Tagged\\";
+	private static String processingTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\processing.txt";
 
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {
@@ -55,6 +56,7 @@ public class uploadSERVLET extends HttpServlet {
 
 	protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {
+		removeFinishedFiles();
 		List<Part> fileParts = request.getParts().stream()
 				.filter(part -> "file-upload".equals(part.getName()) && part.getSize() > 0)
 				.collect(Collectors.toList()); // Retrieves <input type="file" name="file" multiple="true">
@@ -66,7 +68,7 @@ public class uploadSERVLET extends HttpServlet {
 			request.setAttribute("numdocsplural", "");
 		}
 
-		//Create and check if document unique
+		// Create and check if document unique
 		List<String> fileNameList = new ArrayList<String>();
 		for (Part filePart : fileParts) {
 			String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
@@ -88,6 +90,7 @@ public class uploadSERVLET extends HttpServlet {
 				} else {
 					// files.add(filePart.getName() + fileName);
 					System.out.println("file duplicate: " + fileName);
+					request.getRequestDispatcher("duplicate_upload.jsp").forward(request, response);
 				}
 			} catch (NoSuchAlgorithmException e) {
 				e.printStackTrace();
@@ -98,8 +101,7 @@ public class uploadSERVLET extends HttpServlet {
 		}
 		request.setAttribute("filenamelist", fileNameList);
 
-		
-		//Tag Uploaded Document
+		// Tag Uploaded Document
 		File folder = new File(uploadedDocumentsFolderPath);
 		File[] listOfFiles = folder.listFiles();
 
@@ -155,6 +157,18 @@ public class uploadSERVLET extends HttpServlet {
 		request.setAttribute("threads", threads);
 		request.getRequestDispatcher("/BootstrapServlet").forward(request, response);
 
+	}
+	
+	public void removeFinishedFiles() {
+		File Folder = new File(taggedFolder);
+		File[] listFiles = Folder.listFiles();
+		for (File xmlFile : listFiles) {
+			if (xmlFile.delete()) {
+				System.out.println("Deleted the file: " + xmlFile.getName());
+			} else {
+				System.out.println("Failed to delete the file.");
+			}
+		}
 	}
 
 	public Set<String> getTaggedDocumentsNames() throws IOException {
