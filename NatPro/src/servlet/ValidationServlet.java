@@ -111,33 +111,11 @@ public class ValidationServlet extends HttpServlet {
 			TreeSet<String> CategoryList = new TreeSet<String>();
 			readXML(xmlValidation, xmlFile, "Tag1");
 			readXML(xmlValidation, xmlFile, "Tag2");
-//			System.out.println(CategoryList);
 
-//			for (String pLine : lines) {
-//				pLine = pLine.toLowerCase();
-//				 System.out.println(pLine+"/n");
-//
-//			}
-//			xmlValidation.addSynonyms("hello there");
 			validations.add(xmlValidation);
 		}
 
-//		Validation xmlValidation2 = new Validation(pdfFileName+"2");
-//	
-//		xmlValidation2 = findIfPresent(xmlValidation2,validations);
-//		xmlValidation2.addCompounds("hellohello");
-//		xmlValidation2.addCompounds("hihi");
-//		xmlValidation2.addCompounds("hello2hello2");
-//		xmlValidation2.addCompounds("hellohello");
-//		validations.add(xmlValidation2);
 
-//		for (Validation temp : validations) {
-//			System.out.println(temp.getPdfFileName());
-//			for (String mp : temp.getCompounds()) {
-//				System.out.println(mp);
-//			}
-//		}
-//		System.out.println("HERE:"+validations.iterator().next().getSynonyms().iterator().next().toString());
 		request.setAttribute("Validations", validations);
 		request.getRequestDispatcher("_validation-new.jsp").forward(request, response);
 
@@ -224,63 +202,63 @@ public class ValidationServlet extends HttpServlet {
 //						System.out.println(eElement.getElementsByTagName("Tag1").item(0).getTextContent());
 						String tag1 = eElement.getElementsByTagName(tag).item(j).getTextContent();
 						Element nameElement = (Element) eElement.getElementsByTagName(tag).item(j);
-						if (tag1.contains("plantpart")) {
-							System.out.println("plantpart");
+						if (tag1.contains("PlantPart")) {
+							System.out.println("PlantPart");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addPlantParts(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						} else if (tag1.contains("bioact")) {
-							System.out.println("bioact");
+						} else if (tag1.contains("BioAct")) {
+							System.out.println("BioAct");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addBioActs(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						} else if (tag1.contains("compound")) {
-							System.out.println("compound");
+						} else if (tag1.contains("Compound")) {
+							System.out.println("Compound");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addCompounds(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						} else if (tag1.contains("synonym")) {
-							System.out.println("synonym");
+						} else if (tag1.contains("Synonym")) {
+							System.out.println("Synonym");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addSynonyms(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						} else if (tag1.contains("medicinalplant")) {
-							System.out.println("medicinalplant");
+						} else if (tag1.contains("MedicinalPlant")) {
+							System.out.println("MedicinalPlant");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addMedicinalPlants(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						} else if (tag1.contains("genus")) {
-							System.out.println("genus");
+						} else if (tag1.contains("Genus")) {
+							System.out.println("Genus");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addGenus(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						} else if (tag1.contains("family")) {
-							System.out.println("family");
+						} else if (tag1.contains("Family")) {
+							System.out.println("Family");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addFamily(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						} else if (tag1.contains("preparation")) {
-							System.out.println("preparation");
+						} else if (tag1.contains("Preparation")) {
+							System.out.println("Preparation");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addPreparation(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						} else if (tag1.contains("illness")) {
-							System.out.println("illness");
+						} else if (tag1.contains("Illness")) {
+							System.out.println("Illness");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addIllness(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
 						}
-						else if (tag1.contains("location")) {
-							System.out.println("location");
+						else if (tag1.contains("Location")) {
+							System.out.println("Location");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 								validation.addLocation(nameElement.getElementsByTagName("Name").item(k).getTextContent());
