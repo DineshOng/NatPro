@@ -73,18 +73,16 @@ public class BootstrapServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		switch (request.getServletPath()) {
 		case "/BootstrapServlet":
+
 			request.getRequestDispatcher("uploadprogress.jsp").forward(request, response);
-			Thread uploadThread = (Thread) request.getAttribute("thread");
-			try {
-				uploadThread.join();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+
+			List<Thread> threads = (List<Thread>) request.getAttribute("threads");
+			for (Thread t : threads) {
+				while (t.isAlive()) {
+				}
 			}
 
 			bootstrap(request, response);
-
-//			bootstrap(request, response);
 			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
@@ -211,7 +209,7 @@ public class BootstrapServlet extends HttpServlet {
 						// System.out.println(e1+": "+class1+";"+e2+": "+class2);
 						for (String pLine : lines) {
 							pLine = pLine.toLowerCase();
-							addRelation(relation,pLine,class1,class2,e1,e2,ValidationMap);
+							addRelation(relation, pLine, class1, class2, e1, e2, ValidationMap);
 							// System.out.println("Relation finished");
 
 						} // end of pLine loop of addrelations
@@ -447,7 +445,7 @@ public class BootstrapServlet extends HttpServlet {
 				 * System.out.println("Reading Time Elapsed: "+readTime);
 				 */
 
-				for(String key : ValidationMap.keySet()) {
+				for (String key : ValidationMap.keySet()) {
 					String class1 = key;
 					File validationOutput = new File(validationFolder + hashxml + "-" + class1 + "-" + e2 + ".xml");
 					if (validationOutput.exists()) {
@@ -643,7 +641,7 @@ public class BootstrapServlet extends HttpServlet {
 
 				if (!validation.isEmpty()) {
 					// System.out.println("validationmap is "+ValidationMap.isEmpty());
-					for(String key : ValidationMap.keySet()) {
+					for (String key : ValidationMap.keySet()) {
 						String class1 = key;
 						/*
 						 * if(class1.contains("Ehrlich")){ System.out.println(validation); }
@@ -674,7 +672,7 @@ public class BootstrapServlet extends HttpServlet {
 							B.appendChild(document.createTextNode(e2));
 							element.appendChild(B);
 
-							for(String class2 : ValidationMap.get(key)) {
+							for (String class2 : ValidationMap.get(key)) {
 								Element BValues = document.createElement("Name");
 								BValues.appendChild(document.createTextNode(class2));
 								B.appendChild(BValues);
@@ -712,6 +710,8 @@ public class BootstrapServlet extends HttpServlet {
 
 		}
 	}
+
+
 
 	/*
 	 * ============================= File Reader for Tagged Documents
@@ -772,7 +772,7 @@ public class BootstrapServlet extends HttpServlet {
 	 * ==============================
 	 */
 	public static void addRelation(TreeSet<String> relation, String pLine, String class1, String class2, String e1,
-			String e2,Multimap<String,String> ValidationMap) {
+			String e2, Multimap<String, String> ValidationMap) {
 		e1 = e1.toLowerCase();
 		e2 = e2.toLowerCase();
 		// System.out.println("running Relation");
@@ -782,7 +782,7 @@ public class BootstrapServlet extends HttpServlet {
 			if (e2.contains("pound")) {
 				// .println(e1+": "+class1+";"+e2+": "+class2);
 			}
-			ValidationMap.put(class1,class2);
+			ValidationMap.put(class1, class2);
 			// System.out.println(e1+": "+class1+";"+e2+": "+class2);
 			Pattern p = Pattern.compile("<\\/[" + e1 + "]+>.+<[" + e2 + "]+>");
 			Matcher m = p.matcher(pLine);
