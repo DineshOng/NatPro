@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.io.InputStream;
 import javax.servlet.http.Part;
 
@@ -54,9 +55,6 @@ public class uploadSERVLET extends HttpServlet {
 
 	protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {
-		long startTime, endTime, endGenDocIdTime, endCheckDocTime, saveDocTime = 0, preprocDuration;
-		startTime = System.nanoTime();
-		request.setAttribute("startTime", (double) startTime / 1000000);
 		List<Part> fileParts = request.getParts().stream()
 				.filter(part -> "file-upload".equals(part.getName()) && part.getSize() > 0)
 				.collect(Collectors.toList()); // Retrieves <input type="file" name="file" multiple="true">
@@ -68,6 +66,7 @@ public class uploadSERVLET extends HttpServlet {
 			request.setAttribute("numdocsplural", "");
 		}
 
+		//Create and check if document unique
 		List<String> fileNameList = new ArrayList<String>();
 		for (Part filePart : fileParts) {
 			String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
@@ -79,19 +78,10 @@ public class uploadSERVLET extends HttpServlet {
 
 			try {
 				String uniqueID = new GenUniqueDocID(fileContent).getUniqueID();
-
-				endGenDocIdTime = System.nanoTime();
-				request.setAttribute("genDocIdDuration", (double) (endGenDocIdTime - startTime) / 1000000);
 				if (checkDocument(uniqueID)) {
-					endCheckDocTime = System.nanoTime();
-					request.setAttribute("checkDocDuration", (double) (endCheckDocTime - endGenDocIdTime) / 1000000);
-
 					System.out.println(fileName);
 					if (fileName.endsWith(".pdf")) {
 						new SaveFile(fileContent1, new File(uploadedDocumentsFolderPath + uniqueID + ".pdf"));
-
-						saveDocTime = System.nanoTime();
-						request.setAttribute("saveDocDuration", (double) (saveDocTime - endCheckDocTime) / 1000000);
 					} else if (fileName.endsWith(".txt")) {
 						new SaveFile(fileContent1, new File(uploadedDocumentsFolderPath + uniqueID + ".txt"));
 					}
@@ -108,29 +98,12 @@ public class uploadSERVLET extends HttpServlet {
 		}
 		request.setAttribute("filenamelist", fileNameList);
 
-		String preprocProg = "	<div class=\"progress\">\r\n"
-				+ "		<div class=\"progress-bar bg-success progress-bar-striped progress-bar-animated\" role=\"progressbar\" id=\"bar\"\r\n"
-				+ "			style=\"width: 0%\" aria-valuenow=\"25\" aria-valuemin=\"0\"\r\n"
-				+ "			aria-valuemax=\"100\"></div>\r\n" + "	</div>" + "<span id=\"currentProcess\"></span>";
-
-		request.setAttribute("preprocProg", preprocProg);
-
-		// for(String e :files ) {
-		// System.out.println("hi " + e);
-		// }
-
-		// request.setAttribute("invalidScript", "bootbox.alert('Successfully
-		// Registered!', function(){});");
-		// request.setAttribute("invalidText", "Successfully Registered!");
-		// request.setAttribute("duplicateDoc", files);
-
-		// request.getRequestDispatcher("2acomplete.jsp").forward(request, response);
-
-//		response.sendRedirect("2acomplete.jsp");
-//			
+		
+		//Tag Uploaded Document
 		File folder = new File(uploadedDocumentsFolderPath);
 		File[] listOfFiles = folder.listFiles();
 
+		List<Thread> threads = new ArrayList<Thread>();
 		for (int i = 0; i < listOfFiles.length; i++) {
 			if (listOfFiles[i].isFile()) {
 				String name = listOfFiles[i].getName().replaceAll(".pdf", "").replaceAll(".txt", "");
@@ -165,7 +138,7 @@ public class uploadSERVLET extends HttpServlet {
 						});
 
 						upThread.start();
-						request.setAttribute("thread", upThread);
+						threads.add(upThread);
 
 					} else {
 						System.out.println(name + " already tagged");
@@ -178,13 +151,10 @@ public class uploadSERVLET extends HttpServlet {
 				System.out.println("Directory " + listOfFiles[i].getName());
 			}
 		}
-		preprocDuration = System.nanoTime();
-		request.setAttribute("preprocDuration", (double) (preprocDuration - saveDocTime) / 1000000);
 
-		endTime = System.nanoTime();
-//		System.err.println("Processing Document Duration " + ((double) (endTime - startTime)) / 1000000 + " ms");
-		request.setAttribute("endTime", (double) (endTime - startTime) / 1000000);
+		request.setAttribute("threads", threads);
 		request.getRequestDispatcher("/BootstrapServlet").forward(request, response);
+
 	}
 
 	public Set<String> getTaggedDocumentsNames() throws IOException {

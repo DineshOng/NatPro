@@ -44,6 +44,15 @@
 		<p class="display-6 text-dark text-center">${filenameList}</p>
 	</c:forEach>
 	<h4 class="text-dark">Preprocess:</h4>
+	<div class="progress" style="height: 30px;">
+		<div
+			class="progress-bar bg-success progress-bar-striped
+			progress-bar-animated"
+			role="progressbar" id="bar" style="width: 0%" aria-valuenow="25"
+			aria-valuemin="0" aria-valuemax="100"></div>
+
+	</div>
+	<span id="currentProcess"></span>
 	<div class="container-fluid mt-3">
 		<div class="row">
 			<div class="col">
@@ -133,7 +142,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="preproc"></div>
 
 
@@ -157,6 +166,8 @@
 
 	<script type="text/javascript">
 	$(document).ready(function() {
+        var progressBar = $("#bar");
+        var progressBar2 = $("#bar2");
 		var s = document.getElementById("numdocsplural").getAttribute("val");
         var isare = "is";
         if(s == "s"){
@@ -165,11 +176,21 @@
         
 		// Progress
 		$.LoadingOverlay("show", {
-		    image       : "",
-		    progress    : true,
-		    progressColor:"#35b557",
-		    textResizeFactor: 0.3,
-		    text: " ",
+			background: 'rgba(255, 255, 255, 0.6)',
+			progress    : true,
+			progressColor:"#35b557",
+			textResizeFactor: 0.3,
+			text: " ",
+		    image       : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">'+
+		    '<circle r="80" cx="500" cy="90"/>'+
+		    '<circle r="80" cx="500" cy="910"/>'+
+		    '<circle r="80" cx="90" cy="500"/>'+
+		    '<circle r="80" cx="910" cy="500"/>'+
+		    '<circle r="80" cx="212" cy="212"/>'+
+		    '<circle r="80" cx="788" cy="212"/>'+
+		    '<circle r="80" cx="212" cy="788"/>'+
+		    '<circle r="80" cx="788" cy="788"/></svg>',
+		    imageResizeFactor: 3,
 		    size:80
 		});
 		var count     = 0;
@@ -182,165 +203,68 @@
 		    }
 		    switch(i){        		
     		case 0: 
-    			 $.LoadingOverlay("text", "Generating Unique Document ID"+s);
+    			$.LoadingOverlay("text", "Generating Unique Document ID"+s);
+    			document.getElementById("but1").classList.add("btn-warning");
+     			document.getElementById("but1").innerHTML = "Generating Unique Document ID"+s;
     			break;
     		case 1: 
     			$.LoadingOverlay("text", "Checking for Duplicate Document"+s);
+    			document.getElementById("but1").innerHTML = "Generated Unique Document ID"+s;
+    			document.getElementById("but1").classList.remove("btn-warning");
+    			document.getElementById("but1").classList.add("btn-success");        		
+    			document.getElementById("but2").classList.add("btn-warning");
+    			document.getElementById("but2").innerHTML = "Checking for Duplicate Document"+s;
     			break;
     		case 2: 
     			$.LoadingOverlay("text", "Saving Document"+s);
+    			document.getElementById("but2").innerHTML = "Document"+s+" "+isare+" Unique";
+    			document.getElementById("but2").classList.remove("btn-warning");
+    			document.getElementById("but2").classList.add("btn-success");   
+    			document.getElementById("but3").classList.add("btn-warning");
+    			document.getElementById("but3").innerHTML = "Saving Document"+s;
     			break;
     		case 3: 
     			$.LoadingOverlay("text", "Converting Document"+s+" to Text File");
+    			document.getElementById("but3").innerHTML = "Document"+s+" Saved";
+    			document.getElementById("but3").classList.remove("btn-warning");
+    			document.getElementById("but3").classList.add("btn-success");   
+    			document.getElementById("but4").classList.add("btn-warning");
+    			document.getElementById("but4").innerHTML = "Converting Document"+s+" to Text File"; 
     			break;
     		case 4: 
     			$.LoadingOverlay("text", "Cleaning the Text File"+s);
+    			document.getElementById("but4").innerHTML = "Document"+s+" Converted to Text File";
+    			document.getElementById("but4").classList.remove("btn-warning");
+    			document.getElementById("but4").classList.add("btn-success"); 
+    			document.getElementById("but5").classList.add("btn-warning");
+    			document.getElementById("but5").innerHTML = "Cleaning the Text File"+s;
     			break;
     		case 5: 
     			$.LoadingOverlay("text", "Splitting Sentences");
+    			document.getElementById("but5").innerHTML = "Text File"+s+" Cleaned";
+    			document.getElementById("but5").classList.remove("btn-warning");
+    			document.getElementById("but5").classList.add("btn-success");
+    			document.getElementById("but6").classList.add("btn-warning");
+    			document.getElementById("but6").innerHTML = "Splitting Sentences";
     			break;
     		case 6: 
     			$.LoadingOverlay("text", "Tagging Document"+s);
+    			document.getElementById("but6").innerHTML = "Text File Sentences Split";
+    			document.getElementById("but6").classList.remove("btn-warning");
+    			document.getElementById("but6").classList.add("btn-success");
+    			document.getElementById("but7").classList.add("btn-warning");
+    			document.getElementById("but7").innerHTML = "Tagging Document"+s;
     			break;
     		case 7: 
     			$.LoadingOverlay("text", "Processing Document"+s);
+    			document.getElementById("but7").innerHTML = "Document"+s+" Tagged";
+    			document.getElementById("but7").classList.remove("btn-warning");
+    			document.getElementById("but7").classList.add("btn-success");
+    			document.getElementById("but8").classList.add("btn-warning");
+    			document.getElementById("but8").innerHTML = "Processing Document"+s;
     			break;
     		case 8: 
-    			$.LoadingOverlay("text", "Loading Tagged Document");
-    			break;
-    		case 9: 
-    			$.LoadingOverlay("text", "Loading Seeds");
-    			break;
-    		case 10: 
-    			$.LoadingOverlay("text", "Processing Tagged Document");
-    			break;
-    		case 11: 
-    			$.LoadingOverlay("text", "Generating Patterns from Document");
-    			break;
-    		case 12: 
-    			$.LoadingOverlay("text", "Tagging POS");
-    			break;
-    		case 13: 
-    			$.LoadingOverlay("text", "Matching Patterns");
-    			break;
-    		case 14: 
-    			$.LoadingOverlay("text", "Saving Seed Patterns");
-    			break;
-    		case 15: 
-    			$.LoadingOverlay("text", "Generating File for Validation");
-    			break;
-    		case 16: 
-    			$.LoadingOverlay("text", "Document"+s+" Ready for Validation");
-    			break;
-		    }
-		    count += 6;
-		    i+=1;
-		    $.LoadingOverlay("progress", count);
-		}, 500);
-    });
-	  
-	
-        var i = 0;
-        var currPercent = 0;
-        var progressBar = $("#bar");
-        
-        var progressBar2 = $("#bar2");
-        var j = 0;
-        var currPercent2 = 0;
-        
-        
-        
-        var timeout1;
-        var timeout2;
-        
-        var startTime = document.getElementById("startTime").getAttribute("val");
-        var genDocIdDuration = document.getElementById("genDocIdDuration").getAttribute("val");
-        var checkDocDuration = document.getElementById("checkDocDuration").getAttribute("val");
-        var saveDocDuration = document.getElementById("saveDocDuration").getAttribute("val");
-        var preprocDuration = document.getElementById("preprocDuration").getAttribute("val");
-        var convertTxtDuration = (preprocDuration *0.1)
-        var cleanDuration =  (preprocDuration *0.1)
-        var splitDuration= (preprocDuration * 0.1)
-        var tagDuration =  (preprocDuration * 0.7)
-        var endTime = document.getElementById("endTime").getAttribute("val");
-         console.log("start time"+startTime);
-         console.log("genDocIdDuration"+genDocIdDuration);
-         console.log("checkDocDuration"+checkDocDuration);
-         console.log("saveDocDuration"+saveDocDuration);
-         console.log("preprocDuration"+preprocDuration);
-         console.log("convertTxtDuration"+convertTxtDuration);
-         console.log("cleanDuration"+cleanDuration);
-         console.log("splitDuration"+splitDuration);
-         console.log("tagDuration"+tagDuration);
-         console.log("end time"+endTime);
-         var timeStops = new Array(genDocIdDuration,checkDocDuration,saveDocDuration,convertTxtDuration,cleanDuration,splitDuration,tagDuration);
-        function uploadProgress(){
-        	 
-        	window.onbeforeunload = function(){
-  			  return 'Are you sure you want to leave?';
-  			};
-        	if(i<=7){
-        		switch(i){        		
-        		case 0: 
-        			document.getElementById("but1").classList.add("btn-warning");
-        			document.getElementById("but1").innerHTML = "Generating Unique Document ID"+s;
-        			break;
-        		case 1: 
-        			document.getElementById("but1").innerHTML = "Generated Unique Document ID"+s;
-        			document.getElementById("but1").classList.remove("btn-warning");
-        			document.getElementById("but1").classList.add("btn-success");        		
-        			document.getElementById("but2").classList.add("btn-warning");
-        			document.getElementById("but2").innerHTML = "Checking for Duplicate Document"+s;
-        			break;
-        		case 2: 
-        			document.getElementById("but2").innerHTML = "Document"+s+" "+isare+" Unique";
-        			document.getElementById("but2").classList.remove("btn-warning");
-        			document.getElementById("but2").classList.add("btn-success");   
-        			document.getElementById("but3").classList.add("btn-warning");
-        			document.getElementById("but3").innerHTML = "Saving Document"+s;
-        			break;
-        		case 3: 
-        			document.getElementById("but3").innerHTML = "Document"+s+" Saved";
-        			document.getElementById("but3").classList.remove("btn-warning");
-        			document.getElementById("but3").classList.add("btn-success");   
-        			document.getElementById("but4").classList.add("btn-warning");
-        			document.getElementById("but4").innerHTML = "Converting Document"+s+" to Text File"; 
-        			break;
-        		case 4: 
-        			document.getElementById("but4").innerHTML = "Document"+s+" Converted to Text File";
-        			document.getElementById("but4").classList.remove("btn-warning");
-        			document.getElementById("but4").classList.add("btn-success"); 
-        			document.getElementById("but5").classList.add("btn-warning");
-        			document.getElementById("but5").innerHTML = "Cleaning the Text File"+s;
-        			break;
-        		case 5: 
-        			document.getElementById("but5").innerHTML = "Text File"+s+" Cleaned";
-        			document.getElementById("but5").classList.remove("btn-warning");
-        			document.getElementById("but5").classList.add("btn-success");
-        			document.getElementById("but6").classList.add("btn-warning");
-        			document.getElementById("but6").innerHTML = "Splitting Sentences";
-        			break;
-        		case 6: 
-        			document.getElementById("but6").innerHTML = "Text File Sentences Split";
-        			document.getElementById("but6").classList.remove("btn-warning");
-        			document.getElementById("but6").classList.add("btn-success");
-        			document.getElementById("but7").classList.add("btn-warning");
-        			document.getElementById("but7").innerHTML = "Tagging Document"+s;
-        			break;
-        		case 7: 
-        			document.getElementById("but7").innerHTML = "Document"+s+" Tagged";
-        			document.getElementById("but7").classList.remove("btn-warning");
-        			document.getElementById("but7").classList.add("btn-success");
-        			document.getElementById("but8").classList.add("btn-warning");
-        			document.getElementById("but8").innerHTML = "Processing Document"+s;
-        			break;
-        		}
-        		/* currPercent = currPercent + (timeStops[Math.floor(i)]/endTime)*100; */
-        		currPercent = currPercent + 7.15;
-        		progressBar.css("width", currPercent + "%");        		
-        		i=i+0.5;
-        	}else{
-        		progressBar.css("width", "100%");        		
+    			progressBar.css("width", "100%");     
         		document.getElementById("but8").classList.remove("btn-warning");
     			document.getElementById("but8").classList.add("btn-success");
     			document.getElementById("but8").innerHTML = "Ready for Bootstrapping";
@@ -348,81 +272,70 @@
     			document.getElementById("header").innerHTML = "Bootstrapping Document"+s;
                 document.getElementById("bar").classList.remove("progress-bar-animated"); 
                 document.getElementById("bar").classList.remove("progress-bar-striped");
-                bootstrapProgress();
-               /*  clearTimeout(timeout1); */   
-        	} 
-            // Wait for sometime before running this script again
-            timeout1 = setTimeout("uploadProgress()", 500);
-        }
-        
-       
-        function bootstrapProgress(){
-        	console.log("hello");
-            if(j<=7){
-        		switch(j){        		
-        		case 0: 
-        			document.getElementById("but11").classList.add("btn-warning");
-        			document.getElementById("but11").innerHTML = "Loading Tagged Document";
-        			break;
-        		case 1: 
-        			document.getElementById("but11").innerHTML = "Tagged Document Loaded";
-        			document.getElementById("but11").classList.remove("btn-warning");
-        			document.getElementById("but11").classList.add("btn-success");        		
-        			document.getElementById("but22").classList.add("btn-warning");
-        			document.getElementById("but22").innerHTML = "Loading Seeds";
-        			break;
-        		case 2: 
-        			document.getElementById("but22").innerHTML = "Seeds Loaded";
-        			document.getElementById("but22").classList.remove("btn-warning");
-        			document.getElementById("but22").classList.add("btn-success");   
-        			document.getElementById("but33").classList.add("btn-warning");
-        			document.getElementById("but33").innerHTML = "Processing Tagged Document";
-        			break;
-        		case 3: 
-        			document.getElementById("but33").innerHTML = "Tagged Document Processed";
-        			document.getElementById("but33").classList.remove("btn-warning");
-        			document.getElementById("but33").classList.add("btn-success");   
-        			document.getElementById("but44").classList.add("btn-warning");
-        			document.getElementById("but44").innerHTML = "Generating Patterns from Document"; 
-        			break;
-        		case 4: 
-        			document.getElementById("but44").innerHTML = "Patterns Generated";
-        			document.getElementById("but44").classList.remove("btn-warning");
-        			document.getElementById("but44").classList.add("btn-success"); 
-        			document.getElementById("but55").classList.add("btn-warning");
-        			document.getElementById("but55").innerHTML = "Tagging POS";
-        			break;
-        		case 5: 
-        			document.getElementById("but55").innerHTML = "Document POS Tagged";
-        			document.getElementById("but55").classList.remove("btn-warning");
-        			document.getElementById("but55").classList.add("btn-success");
-        			document.getElementById("but66").classList.add("btn-warning");
-        			document.getElementById("but66").innerHTML = "Matching Patterns";
-        			break;
-        		case 6: 
-        			document.getElementById("but66").innerHTML = "Patterns Matched with Document";
-        			document.getElementById("but66").classList.remove("btn-warning");
-        			document.getElementById("but66").classList.add("btn-success");
-        			document.getElementById("but77").classList.add("btn-warning");
-        			document.getElementById("but77").innerHTML = "Saving Seed Patterns";
-        			break;
-        		case 7: 
-        			document.getElementById("but77").innerHTML = "New Seed Patterns Saved";
-        			document.getElementById("but77").classList.remove("btn-warning");
-        			document.getElementById("but77").classList.add("btn-success");
-        			document.getElementById("but88").classList.add("btn-warning");
-        			document.getElementById("but88").innerHTML = "Generating File for Validation";
-        			break;
-        		}
-        		/* currPercent = currPercent + (timeStops[Math.floor(i)]/endTime)*100; */
-        		currPercent2 = currPercent2 + 3;
-        		progressBar2.css("width", currPercent2 + "%");        		
-        		j=j+0.25;
-        		/* j=j+1; */
-        	}else{
-        		window.onbeforeunload = null; 
-
-        		progressBar2.css("width", "100%");     
+                
+    			$.LoadingOverlay("text", "Loading Tagged Document");
+    			document.getElementById("but11").classList.add("btn-warning");
+    			document.getElementById("but11").innerHTML = "Loading Tagged Document";
+    			break;
+    		case 9: 
+    			$.LoadingOverlay("text", "Loading Seeds");
+    			document.getElementById("but11").innerHTML = "Tagged Document Loaded";
+    			document.getElementById("but11").classList.remove("btn-warning");
+    			document.getElementById("but11").classList.add("btn-success");        		
+    			document.getElementById("but22").classList.add("btn-warning");
+    			document.getElementById("but22").innerHTML = "Loading Seeds";
+    			break;
+    		case 10: 
+    			$.LoadingOverlay("text", "Processing Tagged Document");
+    			document.getElementById("but22").innerHTML = "Seeds Loaded";
+    			document.getElementById("but22").classList.remove("btn-warning");
+    			document.getElementById("but22").classList.add("btn-success");   
+    			document.getElementById("but33").classList.add("btn-warning");
+    			document.getElementById("but33").innerHTML = "Processing Tagged Document";
+    			break;
+    		case 11: 
+    			$.LoadingOverlay("text", "Generating Patterns from Document");
+    			document.getElementById("but33").innerHTML = "Tagged Document Processed";
+    			document.getElementById("but33").classList.remove("btn-warning");
+    			document.getElementById("but33").classList.add("btn-success");   
+    			document.getElementById("but44").classList.add("btn-warning");
+    			document.getElementById("but44").innerHTML = "Generating Patterns from Document"; 
+    			break;
+    		case 12: 
+    			$.LoadingOverlay("text", "Tagging POS");
+    			document.getElementById("but44").innerHTML = "Patterns Generated";
+    			document.getElementById("but44").classList.remove("btn-warning");
+    			document.getElementById("but44").classList.add("btn-success"); 
+    			document.getElementById("but55").classList.add("btn-warning");
+    			document.getElementById("but55").innerHTML = "Tagging POS";
+    			break;
+    		case 13: 
+    			$.LoadingOverlay("text", "Matching Patterns");
+    			document.getElementById("but55").innerHTML = "Document POS Tagged";
+    			document.getElementById("but55").classList.remove("btn-warning");
+    			document.getElementById("but55").classList.add("btn-success");
+    			document.getElementById("but66").classList.add("btn-warning");
+    			document.getElementById("but66").innerHTML = "Matching Patterns";
+    			break;
+    		case 14: 
+    			$.LoadingOverlay("text", "Saving Seed Patterns");
+    			document.getElementById("but66").innerHTML = "Patterns Matched with Document";
+    			document.getElementById("but66").classList.remove("btn-warning");
+    			document.getElementById("but66").classList.add("btn-success");
+    			document.getElementById("but77").classList.add("btn-warning");
+    			document.getElementById("but77").innerHTML = "Saving Seed Patterns";
+    			break;
+    		case 15: 
+    			$.LoadingOverlay("text", "Generating File for Validation");
+    			document.getElementById("but77").innerHTML = "New Seed Patterns Saved";
+    			document.getElementById("but77").classList.remove("btn-warning");
+    			document.getElementById("but77").classList.add("btn-success");
+    			document.getElementById("but88").classList.add("btn-warning");
+    			document.getElementById("but88").innerHTML = "Generating File for Validation";
+    			break;
+    		case 16: 
+    			$.LoadingOverlay("text", "Document"+s+" Ready for Validation");
+    			progressBar2.css("width", "100%");     
         		document.getElementById("but88").classList.remove("btn-warning");
     			document.getElementById("but88").classList.add("btn-success");
     			document.getElementById("but88").innerHTML = "Document"+s+" Ready for Validation";
@@ -431,13 +344,13 @@
                 document.getElementById("spinner").style.display="none";
                 document.getElementById("bar2").classList.remove("progress-bar-animated"); 
                 document.getElementById("bar2").classList.remove("progress-bar-striped"); 
-                clearTimeout(timeout2);
-        	}
-            timeout2 = setTimeout("bootstrapProgress()", 1000); 
-        }
-       
-         uploadProgress(); 
-      
+    			break;
+		    }
+		    count += 6;
+		    i+=1;
+		    $.LoadingOverlay("progress", count);
+		}, 500);
+    });      
     </script>
 
 	<script type="text/javascript">
