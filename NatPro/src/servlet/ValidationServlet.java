@@ -186,19 +186,14 @@ public class ValidationServlet extends HttpServlet {
 			Document doc = builder.parse(xmlFile.getAbsoluteFile());
 
 			doc.getDocumentElement().normalize();
-			// System.out.println("Root element: " +
-			// doc.getDocumentElement().getNodeName());
+
 			NodeList nodeList = doc.getElementsByTagName("Seed");
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				Node nNode = nodeList.item(i);
-				// System.out.println("Node Name: " + nNode.getNodeName());
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-					// System.out.println("I am here");
 					Element eElement = (Element) nNode;
 					int eCount = eElement.getElementsByTagName(tag).getLength();
 					for (int j = 0; j < eCount; j++) {
-						// System.out.println(eElement.getElementsByTagName("Pattern").item(j).getTextContent());
-//						System.out.println(eElement.getElementsByTagName("Tag1").item(0).getTextContent());
 						String tag1 = eElement.getElementsByTagName(tag).item(j).getTextContent();
 						Element nameElement = (Element) eElement.getElementsByTagName(tag).item(j);
 						if (tag1.contains("PlantPart")) {

@@ -36,17 +36,101 @@
 			style="width: 100%">
 			<thead>
 				<tr>
-					<th>Common Name</th>
+					<th>Document Number</th>
 					<th>Scientific Name</th>
 				</tr>
 			</thead>
 			<tbody>
+				<c:set var="docunum" value="1" scope="page" />
+				<c:forEach items="${Validations}" var="Validations">
+					<c:if test="${not empty Validations.getSynonyms()}">
+						<c:set var="modalId" value="1" scope="page" />
+						<c:forEach items="${Validations.getSynonyms()}" var="SynonymsList">
+							<tr>
+								<td><button type="button" class="btn btn-primary btn-sm"
+										data-toggle="modal" data-target="#docuModal${docunum}">Document
+										# ${docunum}</button></td>
+								<td><button type="button" class="btn btn-success btn-sm"
+										data-toggle="modal" data-target="#entryModal${modalId}">${SynonymsList}</button></td>
+							</tr>
 
-				<tr>
-					<td><a href="">hello</a></td>
-					<td><a href="">hi</a></td>
-				</tr>
+							<!-- Modal -->
+							<div class="modal fade" id="entryModal${modalId}" tabindex="-1"
+								aria-labelledby="entryModalLabel${modalId}" aria-hidden="true">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="entryModalLabel${modalId}">Validating
+												Extracted Plant Entry</h5>
+											<button type="button" class="close" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<h3 style="padding-top: 50px; padding-bottom: 20px">Compound(s)</h3>
+											<div class="row" id="substituteCompound" value="1">
+												<div class="col-12">empty.</div>
+											</div>
+											<div class="row" id="toggleCompound" value="0" hidden>
+												<div class="col-12" style="text-align: left">
+													<button id="ccSelect" type="button"
+														class="btn btn-primary btn-sm" onclick="selectAll(0)"
+														value="0">Select All</button>
+													<button id="ccApprove" type="button"
+														class="btn btn-success btn-sm"
+														onclick="approveSelected(0)">Approve Selected</button>
+													<button id="ccReject" type="button"
+														class="btn btn-danger btn-sm" onclick="rejectSelected(0)">Reject
+														Selected</button>
+												</div>
+											</div>
 
+											<div id="CompoundGroup"></div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-outline-danger"
+												data-dismiss="modal">X Reject Entry</button>
+											<button type="submit" class="btn btn-success">&#10003
+												Approve Entry</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<c:set var="modalId" value="${modalId + 1}" scope="page" />
+						</c:forEach>
+					</c:if>
+
+					<!-- Modal -->
+					<div class="modal fade" id="docuModal${docunum}" tabindex="-1"
+						aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<c:set var="pdfFile"
+							value="\\NatPro\\Documents\\UploadedDocuments\\${Validations.getPdfFileName()}"
+							scope="page" />
+						<div class="modal-dialog modal-xl modal-dialog-scrollable">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="docuModalLabel${docunum}">Document</h5>
+									<button type="button" class="close" data-dismiss="modal"
+										aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="embed-responsive embed-responsive-16by9">
+										<iframe id="documentIframe" class="embed-responsive-item"
+											src="${pdfFile}"></iframe>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<c:set var="docunum" value="${docunum + 1}" scope="page" />
+				</c:forEach>
 			</tbody>
 		</table>
 	</div>
@@ -1183,7 +1267,6 @@
 	<c:set var="count" value="0" scope="page" />
 	<c:set var="count1" value="0" scope="page" />
 	<c:forEach items="${Validations}" var="Validations">
-
 		<c:forEach items="${Validations.getCompounds()}" var="CompoundList">
 			<script type="text/javascript">
 				  addEntry(0, "${Validations.getPdfFileName()}", "${docunum}", "${CompoundList}");  

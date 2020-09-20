@@ -20,6 +20,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
 import edu.stanford.nlp.io.EncodingPrintWriter;
@@ -171,8 +172,8 @@ public class BootstrapServlet extends HttpServlet {
 
 				// ArrayList<String> seedMap1 = new ArrayList<String>();//change to MultiMap
 				// ArrayList<String> seedMap2 = new ArrayList<String>();//change to MultiMap
-				Multimap<String, String> seedMap = ArrayListMultimap.create();
-				Multimap<String, String> ValidationMap = ArrayListMultimap.create();
+				Multimap<String, String> seedMap = HashMultimap.create();
+				Multimap<String, String> ValidationMap = HashMultimap.create();
 				for (int i = 3; i < seedEntity.size(); i++) {
 					// System.out.println("I went here");
 					addMap(seedMap, seedEntity, i);
