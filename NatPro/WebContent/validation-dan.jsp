@@ -53,7 +53,7 @@
 								<td><button type="button" class="btn btn-success btn-sm"
 										data-toggle="modal" data-target="#entryModal${modalId}">${SynonymsList}</button></td>
 							</tr>
-
+							
 							<!-- Modal -->
 							<div class="modal fade" id="entryModal${modalId}" tabindex="-1"
 								aria-labelledby="entryModalLabel${modalId}" aria-hidden="true">
@@ -68,25 +68,7 @@
 											</button>
 										</div>
 										<div class="modal-body">
-											<h3 style="padding-top: 50px; padding-bottom: 20px">Compound(s)</h3>
-											<div class="row" id="substituteCompound" value="1">
-												<div class="col-12">empty.</div>
-											</div>
-											<div class="row" id="toggleCompound" value="0" hidden>
-												<div class="col-12" style="text-align: left">
-													<button id="ccSelect" type="button"
-														class="btn btn-primary btn-sm" onclick="selectAll(0)"
-														value="0">Select All</button>
-													<button id="ccApprove" type="button"
-														class="btn btn-success btn-sm"
-														onclick="approveSelected(0)">Approve Selected</button>
-													<button id="ccReject" type="button"
-														class="btn btn-danger btn-sm" onclick="rejectSelected(0)">Reject
-														Selected</button>
-												</div>
-											</div>
 
-											<div id="CompoundGroup"></div>
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-outline-danger"
