@@ -97,7 +97,6 @@ public class ValidationServlet extends HttpServlet {
 			ArrayList<String> lines = new ArrayList<String>();
 			System.out.println(xmlFile.getAbsolutePath());
 			pdfFileName = getPdfFileName(xmlFile) + ".pdf";
-//			System.out.println(pdfFileName);
 			request.setAttribute("pdfFileName", pdfFileName);
 
 			Validation xmlValidation = new Validation(pdfFileName);
@@ -106,7 +105,7 @@ public class ValidationServlet extends HttpServlet {
 			String xmlString = readFile(xmlFile, fileReader).toString();
 			String[] xmlLine = xmlString.split("\\r?\\n");
 			Collections.addAll(lines, xmlLine);
-			System.out.println(lines);
+//			System.out.println(lines);
 
 			TreeSet<String> CategoryList = new TreeSet<String>();
 			readXML(xmlValidation, xmlFile, "Tag1");
@@ -117,7 +116,7 @@ public class ValidationServlet extends HttpServlet {
 
 
 		request.setAttribute("Validations", validations);
-		request.getRequestDispatcher("_validation-new.jsp").forward(request, response);
+		request.getRequestDispatcher("validation-dan.jsp").forward(request, response);
 
 	}
 

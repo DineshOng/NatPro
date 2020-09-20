@@ -31,6 +31,25 @@
 <body>
 	<!-- INCLUDE NAV BAR HTML -->
 	<%@include file="navbarnix.html"%>
+	<div id="firstDiv">
+		<table id="table_id" class="table table-striped table-bordered"
+			style="width: 100%">
+			<thead>
+				<tr>
+					<th>Common Name</th>
+					<th>Scientific Name</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td><a href="">hello</a></td>
+					<td><a href="">hi</a></td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
 
 	<%-- 	<a href="file:///C://Users//eduar//Documents//GitHub//NatPro//NatPro//Documents//UploadedDocuments//${pdfFileName}.pdf">${pdfFileName}</a> --%>
 
@@ -301,6 +320,9 @@
 
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
+	<script type="text/javascript"
+		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 	<script>
     	/* -- GLOBAL VARIABLES -- */
@@ -1185,8 +1207,7 @@
 						  var x = document.getElementById("ccselectPart${count}");
 						  var option = document.createElement("option");
 						  option.text = "${PlantPartsList}";
-						  x.appendChild(option);	
-						  console.log(${count});
+						  x.appendChild(option);
 					</script>
 				</c:forEach>
 			</c:if>
