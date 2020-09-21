@@ -116,13 +116,12 @@
 															<div class="col-13">
 																<label for="Location"><i
 																	class="fa fa-map-marker" aria-hidden="true"></i>
-																	Location</label> <input type="text" class="form-control"
-																	name="location" id="Location${modalId}" placeholder="">
+																	Location</label> 
 															</div>
 															<div>
 																<button id="locationAdd" type="button"
 																	class="btn btn-outline-success btn-sm"
-																	onclick="addLFields()" style="margin-top: 5px">
+																	onclick="addLFields(${modalId},'')" style="margin-top: 5px">
 																	<i class="fa fa-plus" aria-hidden="true"></i> Location
 																</button>
 															</div>
@@ -1475,10 +1474,29 @@
 					  },
 				success : function(data) {
 					console.log(data);
-			        console.log(data[0].Synonyms)
+					document.getElementById("ScientificName"+id).value=data[0].Synonyms[0];
+					var locs = data[0].Location;
+					console.log(locs);
+					locs.forEach(function(elem, index, array) {
+					    addLFields(id,elem);
+					});
+					document.getElementById("Illness"+id).value=data[0].Illness[0];
 				}
 				}); 
 		}
+	</script>
+	<script type="text/javascript">
+	var lCtr = 0;
+	var empty = "\'\'";
+	function addLFields(id, locName) {
+		console.log(id, locName);
+		$('#locationAdd').remove();
+		lCtr++;		
+		var inputField = '<div class="col-13"><input type="text" class="form-control" name="location" id="Location['+id +']['+lCtr+']" placeholder="Location" value="'+locName+'">';
+		var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addLFields('+id+','+empty+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button></div>';
+		
+		$('#locationGroup').append(inputField, buttonAdd);
+	}
 	</script>
 	<script type="text/javascript">
 	   $(document).on('hidden.bs.modal', '.modal', function () {
