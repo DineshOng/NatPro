@@ -1262,8 +1262,11 @@
 	<!-- Script for Edit Entry -->
 	<script type="text/javascript">
 	function editEntry(){
+		var loc_table = $('#table_id_loc').DataTable();
+		var loc_table_length = ${locNum};
+		loc_table.page.len( loc_table_length ).draw();
 		var i;
-		for (i = 1; i < "${locNum}"; i++) {
+		for (i = 1; i < loc_table_length; i++) {
 			var id = 'removeLocBtn'+i;
 			document.getElementById(id).style.display="inline";
 		} 
@@ -1311,6 +1314,8 @@
 			var id = 'removeLocBtn'+i;
 			document.getElementById(id).style.display="none";
 		} 
+		var loc_table = $('#table_id_loc').DataTable();
+		loc_table.page.len(10).draw();
 		
 		var j;
 		for (j = 1; j < "${prepNum}"; j++) {
