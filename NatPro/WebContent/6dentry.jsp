@@ -351,11 +351,12 @@
 		</div>
 		<div class="tab-pane fade" id="bioAct" role="tabpanel"
 			aria-labelledby="list-settings-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id" class="table table-striped table-bordered"
+					style="width: 100%">
 					<thead>
 						<tr>
-							<th><h4>
+							<th colspan="3"><h4>
 									Biological Activities <i id="editBioActTip"
 										style="display: none;" class="fa fa-info-circle"
 										data-toggle="popover" data-placement="top"
