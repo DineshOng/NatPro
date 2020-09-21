@@ -127,8 +127,9 @@
 		</div>
 		<div class="tab-pane fade show" id="plantList" role="tabpanel"
 			aria-labelledby="list-home-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_plantlist" class="table table-striped table-bordered"
+					style="width: 100%">
 					<thead>
 						<tr>
 							<th>Family</th>
@@ -325,7 +326,7 @@
 
 	<script type="text/javascript">
 	    $(document).ready(function() {
-	        $('#table_id').DataTable();
+	        $('#table_id_plantlist').DataTable();
 	        //$('.hid').css('display', 'none');
 	    });
 	    
