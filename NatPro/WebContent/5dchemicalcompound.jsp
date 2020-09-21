@@ -68,13 +68,16 @@
 	<div class="tab-content" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="genInfo" role="tabpanel"
 			aria-labelledby="list-geninfo-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_geninfo"
+					class="table table-striped table-bordered" style="width: 100%">
 					<thead>
 						<tr>
-							<th colspan="3">
+							<th></th>
+							<th>
 								<h4 class="text-center">General Information</h4>
 							</th>
+
 						</tr>
 					</thead>
 					<tbody>
@@ -149,11 +152,13 @@
 
 		<div class="tab-pane fade show" id="chemInfo" role="tabpanel"
 			aria-labelledby="list-cheminfo-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_cheminfo"
+					class="table table-striped table-bordered" style="width: 100%">
 					<thead>
 						<tr>
-							<th colspan="2">
+							<th></th>
+							<th>
 								<h4 class="text-center">Chemical Information</h4>
 							</th>
 						</tr>
@@ -235,8 +240,9 @@
 
 		<div class="tab-pane fade show" id="compSynonyms" role="tabpanel"
 			aria-labelledby="list-compsynonym-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_compsyn"
+					class="table table-striped table-bordered" style="width: 100%">
 					<thead>
 						<tr>
 							<th>Compound Synonyms</th>
@@ -258,8 +264,9 @@
 
 		<div class="tab-pane fade show" id="bioActivities" role="tabpanel"
 			aria-labelledby="list-bioact-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-25">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_bioact"
+					class="table table-striped table-bordered" style="width: 100%">
 					<thead>
 						<tr>
 							<th>Biological Activities</th>
@@ -309,7 +316,18 @@
 
 	<script type="text/javascript">
 	    $(document).ready(function() {
-	        $('#table_id').DataTable();
+	        $('#table_id_geninfo').DataTable({
+	        	"paging":   false,
+	            "ordering": false,
+	            "info":     false
+	        } );
+	        $('#table_id_cheminfo').DataTable({
+	        	"paging":   false,
+	            "ordering": false,
+	            "info":     false
+	        } );
+	        $('#table_id_compsyn').DataTable();
+	        $('#table_id_bioact').DataTable();
 	        //$('.hid').css('display', 'none');
 	    });
 	    
