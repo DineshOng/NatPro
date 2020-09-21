@@ -109,8 +109,7 @@
 					<tbody>
 						<tr>
 						<tr>
-							<td><a
-								href="ViewPlantServlet?medPlant=${medPlantName}">${medPlantName}</a></td>
+							<td><a href="ViewPlantServlet?medPlant=${medPlantName}">${medPlantName}</a></td>
 						</tr>
 						</tr>
 					</tbody>
@@ -119,11 +118,18 @@
 		</div>
 		<div class="tab-pane fade" id="bioAct" role="tabpanel"
 			aria-labelledby="list-settings-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_bioact"
+					class="table table-striped table-bordered" style="width: 100%">
 					<thead>
 						<tr>
-							<th><h4>Biological Activities</h4></th>
+							<th colspan="3"><h4>
+									Biological Activities <i id="editBioActTip"
+										style="display: inline;" class="fa fa-info-circle"
+										data-toggle="popover" data-placement="top"
+										data-trigger="hover"
+										data-content="You may edit the biological activity/s in the compound page."></i>
+								</h4></th>
 						</tr>
 						<tr>
 							<th>Chemical Compound</th>
@@ -183,11 +189,16 @@
 		</div> --%>
 		<div class="tab-pane fade" id="chemComp" role="tabpanel"
 			aria-labelledby="list-settings-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_chem" class="table table-striped table-bordered"
+					style="width: 100%">
 					<thead>
 						<tr>
-							<th><h4>Chemical Compounds</h4></th>
+							<th colspan="11"><h4>Chemical Compounds <i id="editChemTip"
+										style="display: inline;" class="fa fa-info-circle"
+										data-toggle="popover" data-placement="top"
+										data-trigger="hover"
+										data-content="You may edit the set of compounds in the plant (common name) page."></i></h4></th>
 						</tr>
 						<tr>
 							<th>Plant Part</th>
@@ -292,9 +303,26 @@
 		src="DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+	<script>
+	$(function () {
+		  $('[data-toggle="tooltip"]').tooltip();
+		  $('[data-toggle="popover"]').popover();
+		})
+	</script>
+
 	<script type="text/javascript">
 	    $(document).ready(function() {
-	        $('#table_id').DataTable();
+	        $('#table_id_bioact').DataTable();
+	        $('#table_id_chem').DataTable();
 	        //$('.hid').css('display', 'none');
 	    });
 	    
