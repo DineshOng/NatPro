@@ -294,8 +294,10 @@
 		</div>
 		<div class="tab-pane fade" id="location" role="tabpanel"
 			aria-labelledby="list-messages-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover w-auto text-center">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_loc"
+					class="table table-striped table-bordered text-center"
+					style="width: 100%">
 					<thead>
 						<tr>
 							<td>
@@ -352,8 +354,8 @@
 		<div class="tab-pane fade" id="bioAct" role="tabpanel"
 			aria-labelledby="list-settings-list">
 			<div class="d-flex justify-content-center mt-5 pb-5">
-				<table id="table_id" class="table table-striped table-bordered"
-					style="width: 100%">
+				<table id="table_id_bioact"
+					class="table table-striped table-bordered" style="width: 100%">
 					<thead>
 						<tr>
 							<th colspan="3"><h4>
@@ -395,11 +397,12 @@
 		</div>
 		<div class="tab-pane fade" id="prep" role="tabpanel"
 			aria-labelledby="list-settings-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_prep" class="table table-striped table-bordered"
+					style="width: 100%">
 					<thead>
 						<tr>
-							<th><h4>Preparation</h4></th>
+							<th colspan="3"><h4>Preparation</h4></th>
 						</tr>
 						<tr>
 							<th>Preparation</th>
@@ -491,11 +494,12 @@
 		</div>
 		<div class="tab-pane fade" id="chemComp" role="tabpanel"
 			aria-labelledby="list-settings-list">
-			<div class="d-flex justify-content-center">
-				<table class="table table-hover">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<table id="table_id_chem" class="table table-striped table-bordered"
+					style="width: 100%">
 					<thead>
 						<tr>
-							<th><h4>Chemical Compounds</h4></th>
+							<th colspan="11"><h4>Chemical Compounds</h4></th>
 						</tr>
 						<tr>
 							<th>Plant Part</th>
@@ -1263,19 +1267,27 @@
 			var id = 'removeLocBtn'+i;
 			document.getElementById(id).style.display="inline";
 		} 
+		
+		var prep_table = $('#table_id_prep').DataTable();
+		var prep_table_length = ${prepNum};
+		prep_table.page.len( prep_table_length ).draw();
 		var j;
-		for (j = 1; j < "${prepNum}"; j++) {
+		for (j = 1; j < prep_table_length; j++) {
 			var id = 'editPrepBtn'+j;
 			document.getElementById(id).style.display="inline";
 		} 
-		
+				
+		var comp_table = $('#table_id_chem').DataTable();
+		var comp_table_length = ${compNum};
+		comp_table.page.len( comp_table_length ).draw();
 		var k;
-		for (k = 1; k < "${compNum}"; k++) {
+		for (k = 1; k < comp_table_length; k++) {
 			var id = 'editCompBtn'+k;
 			var idTip = 'editSpecieTip'+k;
 			document.getElementById(id).style.display="inline";
 			document.getElementById(idTip).style.display="inline";
 		} 
+		
 		
 		document.getElementById("editEntryLogo").classList.remove("fa-pencil");
 		document.getElementById("editEntryLogo").classList.add("fa-check");
@@ -1299,11 +1311,15 @@
 			var id = 'removeLocBtn'+i;
 			document.getElementById(id).style.display="none";
 		} 
+		
 		var j;
 		for (j = 1; j < "${prepNum}"; j++) {
 			var id = 'editPrepBtn'+j;
 			document.getElementById(id).style.display="none";
-		} 
+		} 		
+		var prep_table = $('#table_id_prep').DataTable();
+		prep_table.page.len(10).draw();
+		
 		
 		var k;
 		for (k = 1; k < "${compNum}"; k++) {
@@ -1312,6 +1328,9 @@
 			document.getElementById(id).style.display="none";
 			document.getElementById(idTip).style.display="none";
 		} 
+		var comp_table = $('#table_id_chem').DataTable();
+		comp_table.page.len(10).draw();
+		
 		document.getElementById("editMedPlantBtn").style.display="none";
 		document.getElementById("editGenusBtn").style.display="none";
 		document.getElementById("editGenusTip").style.display="none";
@@ -1357,7 +1376,11 @@
 
 	<script type="text/javascript">
 	    $(document).ready(function() {
-	        $('#table_id').DataTable();
+	        $('#table_id_loc').DataTable();
+	        $('#table_id_bioact').DataTable();
+	        $('#table_id_prep').DataTable();
+	        $('#table_id_chem').DataTable();
+
 	        //$('.hid').css('display', 'none');
 	    });
 	    
