@@ -37,14 +37,15 @@
 			<thead>
 				<tr>
 					<th>Document Number</th>
-					<th>Scientific Name</th>
+					<th>Plant</th>
+					<th>Compound</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:set var="docunum" value="1" scope="page" />
+				<c:set var="modalId" value="1" scope="page" />
 				<c:forEach items="${Validations}" var="Validations">
 					<c:if test="${not empty Validations.getSynonyms()}">
-						<c:set var="modalId" value="1" scope="page" />
 						<c:forEach items="${Validations.getSynonyms()}" var="SynonymsList">
 							<tr>
 								<td><button type="button" class="btn btn-primary btn-sm"
@@ -52,7 +53,11 @@
 										# ${docunum}</button></td>
 								<td><button type="button" class="btn btn-success btn-sm"
 										data-toggle="modal" data-target="#entryModal${modalId}"
-										data-backdrop='static' data-keyboard='false'>${SynonymsList}</button></td>
+										onclick="getPlantEntity('${Validations.getPdfFileName()}',${modalId})">${SynonymsList}</button></td>
+								<!-- data-backdrop='static' data-keyboard='false' -->
+								<td><button type="button" class="btn btn-warning btn-sm"
+										data-toggle="modal" data-target="" data-backdrop='static'
+										data-keyboard='false'>Compounds</button></td>
 							</tr>
 
 							<!-- Modal -->
@@ -76,7 +81,7 @@
 															<label for="CommonPlantName"> <i
 																class="fa fa-address-card" aria-hidden="true"></i>
 																Common Plant Name
-															</label> <input type="text" id="CommonPlantName"
+															</label> <input type="text" id="CommonPlantName${modalId}"
 																name="commonPlantName" class="form-control"
 																placeholder="" required>
 														</div>
@@ -86,13 +91,13 @@
 														<div class="col-4">
 															<label for="Genus"><i class="fa fa-group"
 																aria-hidden="true"></i> Genus</label> <input type="text"
-																class="form-control" name="genus" id="Genus"
+																class="form-control" name="genus" id="Genus${modalId}"
 																placeholder="">
 														</div>
 														<div class="col-4">
 															<label for="Family"><i class="fa fa-group"
 																aria-hidden="true"></i> Family</label> <input type="text"
-																class="form-control" name="family" id="Family"
+																class="form-control" name="family" id="Family${modalId}"
 																placeholder="">
 														</div>
 													</div>
@@ -103,7 +108,7 @@
 															<label for="ScientificName"><i
 																class="fa fa-drivers-license" aria-hidden="true"></i>
 																Scientific Name</label> <input type="text" class="form-control"
-																name="scientificName" id="ScientificName"
+																name="scientificName" id="ScientificName${modalId}"
 																pattern="^([A-Z][a-z]+) +([a-z-]+).*$" placeholder=""
 																required>
 														</div>
@@ -112,7 +117,7 @@
 																<label for="Location"><i
 																	class="fa fa-map-marker" aria-hidden="true"></i>
 																	Location</label> <input type="text" class="form-control"
-																	name="location" id="Location" placeholder="">
+																	name="location" id="Location${modalId}" placeholder="">
 															</div>
 															<div>
 																<button id="locationAdd" type="button"
@@ -137,16 +142,16 @@
 																<div class="col">
 																	<label for="Preparation"><i class="fa fa-cogs"
 																		aria-hidden="true"></i> Preparation</label> <input type="text"
-																		class="form-control" id="Preparation" placeholder=""
-																		name="preparation[0]"> <input type="hidden"
-																		name="prepCtr" value="0">
+																		class="form-control" id="Preparation${modalId}"
+																		placeholder="" name="preparation[0]"> <input
+																		type="hidden" name="prepCtr" value="0">
 																</div>
 																<div class="col">
 																	<label for="PlantPart"><i class="fa fa-leaf"
 																		aria-hidden="true"></i> Plant Part</label> <select
 																		name="prepPart[0]"
 																		class="custom-select custom-select-md mb-3"
-																		id="PlantPart" onchange="enablePPO(0)">
+																		id="PlantPart${modalId}" onchange="enablePPO(0)">
 																		<option value="" selected disabled>Open this
 																			select menu</option>
 																		<option value="-1">Others (please write on
@@ -160,7 +165,8 @@
 																<div class="col">
 																	<label for="PlantPartOther[0]">Plant Part
 																		(Other)</label> <input type="text" class="form-control"
-																		id="PlantPartOther[0]" placeholder="" disabled>
+																		id="PlantPartOther[0]${modalId}" placeholder=""
+																		disabled>
 																</div>
 																<div class="col-1"></div>
 															</div>
@@ -171,9 +177,10 @@
 																	<i class="fa fa-viruses"></i> <label for="Illness"><i
 																		class="fa fa-thermometer" aria-hidden="true"></i>
 																		Illness</label> <input type="text" class="form-control"
-																		id="Illness" placeholder="" name="illness[0][0]">
-																	<input type="hidden" name="illnessCtr[0]" value="0">
-																	<button id="illnessAdd" type="button"
+																		id="Illness${modalId}" placeholder=""
+																		name="illness[0][0]"> <input type="hidden"
+																		name="illnessCtr[0]" value="0">
+																	<button id="illnessAdd${modalId}" type="button"
 																		class="btn btn-outline-success btn-sm"
 																		style="margin-top: 5px" onclick="addIFields(0)">
 																		<i class="fa fa-plus" aria-hidden="true"></i> Illness
@@ -186,7 +193,7 @@
 															<div class="form-row" style="width: 50%">
 																<button type="button"
 																	class="btn btn-outline-success btn-block"
-																	id="preparationAdd" onclick="addPFields(0)">Add
+																	id="preparationAdd${modalId}" onclick="addPFields(0)">Add
 																	Preparation</button>
 															</div>
 														</div>
@@ -207,7 +214,8 @@
 																		class="fa fa-leaf" aria-hidden="true"></i> Species
 																		Plant Part</label> <select name="plantPart[0]"
 																		class="custom-select custom-select-md mb-3"
-																		id="SpeciesPlantPart" onchange="enableSPPO(0)">
+																		id="SpeciesPlantPart${modalId}"
+																		onchange="enableSPPO(0)">
 																		<option value="" selected disabled>Open this
 																			select menu</option>
 																		<option value="-1">Others (please write on
@@ -221,8 +229,9 @@
 																<div class="col-3">
 																	<label for="SpeciesPlantPartOther[0]">Species
 																		Plant Part (Other)</label> <input type="text"
-																		class="form-control" id="SpeciesPlantPartOther[0]"
-																		placeholder="" disabled>
+																		class="form-control"
+																		id="SpeciesPlantPartOther[0]${modalId}" placeholder=""
+																		disabled>
 																</div>
 															</div>
 
@@ -233,10 +242,10 @@
 																		<label for="ChemicalCompound"><i
 																			class="fa fa-flask" aria-hidden="true"></i> Chemical
 																			Compound</label> <input type="text" class="form-control"
-																			id="ChemicalCompound" placeholder=""
+																			id="ChemicalCompound${modalId}" placeholder=""
 																			name="compound[0][0]">
-																		<button id="chemicalCompoundAdd" type="button"
-																			class="btn btn-outline-success btn-sm"
+																		<button id="chemicalCompoundAdd${modalId}"
+																			type="button" class="btn btn-outline-success btn-sm"
 																			onclick="addCCFields(0)" style="margin-top: 5px">
 																			<i class="fa fa-plus" aria-hidden="true"></i>
 																			Chemical Compound
@@ -251,10 +260,10 @@
 																		<div class="col-4">
 																			<label for="BiologicalActivity">Biological
 																				Activity</label> <input type="text" class="form-control"
-																				id="BiologicalActivity" placeholder=""
+																				id="BiologicalActivity${modalId}" placeholder=""
 																				name="bioAct[0][0][0]">
-																			<button id="biologicalActivityAdd" type="button"
-																				class="btn btn-outline-success btn-sm"
+																			<button id="biologicalActivityAdd${modalId}"
+																				type="button" class="btn btn-outline-success btn-sm"
 																				onclick="addBAFields(0,0,0)" style="margin-top: 5px">
 																				<i class="fa fa-plus" aria-hidden="true"></i>
 																				Biological Activity
@@ -262,8 +271,9 @@
 																		</div>
 																		<div class="col-4">
 																			<label for="CellLine">Cell Line</label> <input
-																				type="text" class="form-control" id="CellLine"
-																				placeholder="" name="cellLine[0][0][0]"> <input
+																				type="text" class="form-control"
+																				id="CellLine${modalId}" placeholder=""
+																				name="cellLine[0][0][0]"> <input
 																				type="hidden" name="bioCellCC0" value="0"> <input
 																				type="hidden" name="lengthBC[0][0]" value="0">
 																		</div>
@@ -275,7 +285,7 @@
 															<div class="form-row" style="width: 50%">
 																<button type="button"
 																	class="btn btn-outline-success btn-block"
-																	id="speciesAdd" onclick="addSFields(0)">Add
+																	id="speciesAdd${modalId}" onclick="addSFields(0)">Add
 																	Species Part</button>
 															</div>
 														</div>
@@ -337,7 +347,8 @@
 	<!-- Cancel Validation Modal -->
 	<div class="modal fade" id="cancelModal" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-md modal-dialog-scrollable rounded border border-secondary">
+		<div
+			class="modal-dialog modal-md modal-dialog-scrollable rounded border border-secondary">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="cancelModalLabel">Cancel
@@ -363,11 +374,12 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Reject Validation Modal -->
 	<div class="modal fade" id="rejectModal" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-md modal-dialog-scrollable rounded border border-danger">
+		<div
+			class="modal-dialog modal-md modal-dialog-scrollable rounded border border-danger">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="confirmModalLabel">Reject
@@ -378,12 +390,11 @@
 					</button>
 				</div>
 				<div class="modal-body">Are you sure you want to reject and
-					discard this entry? </div>
+					discard this entry?</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-outline-secondary"
 						data-dismiss="modal">Go Back</button>
-					<button type="button" class="btn btn-danger"
-						data-dismiss="modal">Reject</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Reject</button>
 				</div>
 			</div>
 		</div>
@@ -392,7 +403,8 @@
 	<!-- Confirm Validation Modal -->
 	<div class="modal fade" id="confirmModal" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-md modal-dialog-scrollable rounded border border-success">
+		<div
+			class="modal-dialog modal-md modal-dialog-scrollable rounded border border-success">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="confirmModalLabel">Approve
@@ -407,8 +419,7 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-outline-secondary"
 						data-dismiss="modal">Go Back</button>
-					<button type="button" class="btn btn-success"
-						data-dismiss="modal">Add</button>
+					<button type="button" class="btn btn-success" data-dismiss="modal">Add</button>
 				</div>
 			</div>
 		</div>
@@ -1451,6 +1462,24 @@
 		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 		crossorigin="anonymous"></script>
 
+	<script type="text/javascript">
+		function getPlantEntity(fileName, id){
+			console.log(fileName);
+			console.log(id);
+	 		$.ajax({
+				type : "GET",
+				url : 'GetPlantEntity',
+				dataType: 'json',
+				data: {
+					fileName: fileName,
+					  },
+				success : function(data) {
+					console.log(data);
+			        console.log(data[0].Synonyms)
+				}
+				}); 
+		}
+	</script>
 	<script type="text/javascript">
 	   $(document).on('hidden.bs.modal', '.modal', function () {
 	        $('.modal:visible').length && $(document.body).addClass('modal-open');

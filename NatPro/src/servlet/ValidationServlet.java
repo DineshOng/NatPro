@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,12 +24,14 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.flickr4java.flickr.FlickrException;
+import com.google.gson.Gson;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import model.Validation;
@@ -37,7 +40,7 @@ import service.OntoQuery;
 /**
  * Servlet implementation class ValidationServlet
  */
-@WebServlet("/ValidationServlet")
+@WebServlet({ "/ValidationServlet", "/GetPlantEntity" })
 public class ValidationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
@@ -58,18 +61,12 @@ public class ValidationServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 		switch (request.getServletPath()) {
 		case "/ValidationServlet":
-			try {
-				getValidationXML(request, response);
-			} catch (ServletException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			getValidationXML(request, response);
+			break;
+		case "/GetPlantEntity":
+			getPlantEntity(request, response);
 			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
@@ -83,7 +80,44 @@ public class ValidationServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+//		doGet(request, response);
+	}
+
+	private void getPlantEntity(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String plantFileName = request.getParameter("fileName");
+		File Folder = new File(validationFolder);
+		File[] listFiles = Folder.listFiles();
+		Reader fileReader = null;
+		String pdfFileName = null;
+		HashSet<Validation> validations = new HashSet<Validation>();
+		for (File xmlFile : listFiles) {
+			ArrayList<String> lines = new ArrayList<String>();
+//			System.out.println(xmlFile.getAbsolutePath());
+			pdfFileName = getPdfFileName(xmlFile) + ".pdf";
+			if (pdfFileName.equalsIgnoreCase(plantFileName)) {
+
+//			request.setAttribute("pdfFileName", pdfFileName);
+				Validation xmlValidation = new Validation(pdfFileName);
+				xmlValidation = findIfPresent(xmlValidation, validations);
+
+				String xmlString = readFile(xmlFile, fileReader).toString();
+				String[] xmlLine = xmlString.split("\\r?\\n");
+				Collections.addAll(lines, xmlLine);
+//			System.out.println(lines);
+
+				TreeSet<String> CategoryList = new TreeSet<String>();
+				readXML(xmlValidation, xmlFile, "Tag1");
+				readXML(xmlValidation, xmlFile, "Tag2");
+
+				validations.add(xmlValidation);
+			}
+		}
+		String jsonString = new Gson().toJson(validations);
+		System.out.println(jsonString);
+		PrintWriter out = response.getWriter();
+		out.println(jsonString);
+
 	}
 
 	private void getValidationXML(HttpServletRequest request, HttpServletResponse response)
@@ -113,7 +147,6 @@ public class ValidationServlet extends HttpServlet {
 
 			validations.add(xmlValidation);
 		}
-
 
 		request.setAttribute("Validations", validations);
 		request.getRequestDispatcher("validation-dan.jsp").forward(request, response);
@@ -200,31 +233,43 @@ public class ValidationServlet extends HttpServlet {
 							System.out.println("PlantPart");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addPlantParts(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addPlantParts(
+										nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
 						} else if (tag1.contains("BioAct")) {
 							System.out.println("BioAct");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addBioActs(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation
+										.addBioActs(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+							}
+						} else if (tag1.contains("CellLine")) {
+							System.out.println("CellLine");
+							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
+								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation
+										.addCellLine(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
 						} else if (tag1.contains("Compound")) {
 							System.out.println("Compound");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addCompounds(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addCompounds(
+										nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
 						} else if (tag1.contains("Synonym")) {
 							System.out.println("Synonym");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addSynonyms(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation
+										.addSynonyms(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
 						} else if (tag1.contains("MedicinalPlant")) {
 							System.out.println("MedicinalPlant");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addMedicinalPlants(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addMedicinalPlants(
+										nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
 						} else if (tag1.contains("Genus")) {
 							System.out.println("Genus");
@@ -242,20 +287,22 @@ public class ValidationServlet extends HttpServlet {
 							System.out.println("Preparation");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addPreparation(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation.addPreparation(
+										nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
 						} else if (tag1.contains("Illness")) {
 							System.out.println("Illness");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addIllness(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation
+										.addIllness(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
-						}
-						else if (tag1.contains("Location")) {
+						} else if (tag1.contains("Location")) {
 							System.out.println("Location");
 							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
 								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addLocation(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+								validation
+										.addLocation(nameElement.getElementsByTagName("Name").item(k).getTextContent());
 							}
 						}
 
