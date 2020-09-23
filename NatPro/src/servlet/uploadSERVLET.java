@@ -90,7 +90,6 @@ public class uploadSERVLET extends HttpServlet {
 				} else {
 					// files.add(filePart.getName() + fileName);
 					System.out.println("file duplicate: " + fileName);
-					request.getRequestDispatcher("duplicate_upload.jsp").forward(request, response);
 				}
 			} catch (NoSuchAlgorithmException e) {
 				e.printStackTrace();

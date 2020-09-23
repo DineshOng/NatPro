@@ -28,7 +28,6 @@
 <body>
 	<!-- INCLUDE NAV BAR HTML -->
 	<%@include file="navbarnix.html"%>
-	<h1>${i}</h1>
 	<div class="jumbotron bg-success">
 		<div class="d-flex justify-content-center">
 			<h1 class="display-4 text-white text-center" id="header">Processing
@@ -165,7 +164,7 @@
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 	<script type="text/javascript">
-	$(document).ready(function() {
+	 $(document).ready(function() {
         var progressBar = $("#bar");
         var progressBar2 = $("#bar2");
 		var s = document.getElementById("numdocsplural").getAttribute("val");
@@ -174,7 +173,7 @@
         	isare="are";
         }
         
-		// Progress
+ 		// Progress
 		$.LoadingOverlay("show", {
 			background: 'rgba(255, 255, 255, 0.6)',
 			progress    : true,
@@ -192,7 +191,7 @@
 		    '<circle r="80" cx="788" cy="788"/></svg>',
 		    imageResizeFactor: 3,
 		    size:80
-		});
+		}); 
 		var count     = 0;
 		var i = 0;
 		var interval  = setInterval(function(){
