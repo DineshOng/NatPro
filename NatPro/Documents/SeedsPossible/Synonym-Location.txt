@@ -1,6 +1,14 @@
 e1:Synonym
 e2:Location
 
+mirabilis dichotoma;Brazil
+mirabilis dichotoma;China
+mirabilis dichotoma;India
+mirabilis dichotoma;Japan
+mirabilis dichotoma;Mexico
+mirabilis dichotoma;Peru
+mirabilis dichotoma;Philippines
+mirabilis dichotoma;South africa
 mirabilis jalapa;Brazil
 mirabilis jalapa;China
 mirabilis jalapa;India
@@ -9,6 +17,14 @@ mirabilis jalapa;Mexico
 mirabilis jalapa;Peru
 mirabilis jalapa;Philippines
 mirabilis jalapa;South africa
+mirabilis lindheimeri;Brazil
+mirabilis lindheimeri;China
+mirabilis lindheimeri;India
+mirabilis lindheimeri;Japan
+mirabilis lindheimeri;Mexico
+mirabilis lindheimeri;Peru
+mirabilis lindheimeri;Philippines
+mirabilis lindheimeri;South africa
 mirabilis longiflora;Brazil
 mirabilis longiflora;China
 mirabilis longiflora;India
@@ -17,20 +33,46 @@ mirabilis longiflora;Mexico
 mirabilis longiflora;Peru
 mirabilis longiflora;Philippines
 mirabilis longiflora;South africa
+mirabilis odorata;Brazil
+mirabilis odorata;China
+mirabilis odorata;India
+mirabilis odorata;Japan
+mirabilis odorata;Mexico
+mirabilis odorata;Peru
+mirabilis odorata;Philippines
+mirabilis odorata;South africa
+alpinia jungle king ;Philippines
+alpinia jungle king ;West indies
 ginger lily ;Philippines
 ginger lily ;West indies
+ostrich plume ;Philippines
+ostrich plume ;West indies
 red ginger ;Philippines
 red ginger ;West indies
+tagetes erecta;Benguet
+tagetes erecta;Philippines
 tagetes patula;Benguet
 tagetes patula;Philippines
+saraca asoca;Asia
+saraca asoca;India
+saraca asoca;Pakistan
+saraca asoca;Philippines
 saraca indica;Asia
 saraca indica;India
 saraca indica;Pakistan
 saraca indica;Philippines
+citronella grass;China
+citronella grass;India
+citronella grass;Japan
+citronella grass;Taiwan
 cymbopogon hamatulus;China
 cymbopogon hamatulus;India
 cymbopogon hamatulus;Japan
 cymbopogon hamatulus;Taiwan
+cymbopogon nardus;China
+cymbopogon nardus;India
+cymbopogon nardus;Japan
+cymbopogon nardus;Taiwan
 cymbopogon tortilis;China
 cymbopogon tortilis;India
 cymbopogon tortilis;Japan
@@ -40,12 +82,38 @@ Alstonia macrophylla;China
 Alstonia macrophylla;Indonesia
 Alstonia macrophylla;Malaysia
 Alstonia macrophylla;Philippines
+madhuca betis;Cagayan
+madhuca betis;Cavite
+madhuca betis;Indonesia
+madhuca betis;Philippines
+madhuca betis;Quezon
+madhuca betis;Rizal
 payena betis;Cagayan
 payena betis;Cavite
 payena betis;Indonesia
 payena betis;Philippines
 payena betis;Quezon
 payena betis;Rizal
+acalypha hispida;Africa
+acalypha hispida;Indonesia
+acalypha hispida;Philippines
+chrysophyllum cainito;Brazil
+chrysophyllum cainito;Costa rica
+chrysophyllum cainito;Mexico
+chrysophyllum cainito;Venezuela
+Caryota sabolifera;Borneo
+Caryota sabolifera;Cambodia
+Caryota sabolifera;Kelantan
+Caryota sabolifera;Malacca
+Caryota sabolifera;Philippines
+polyscias digitata;Albay
+polyscias digitata;Catanduanes
+polyscias digitata;Laguna
+polyscias digitata;Leyte
+polyscias digitata;Masbate
+polyscias digitata;Philippines
+polyscias digitata;Quezon
+polyscias digitata;Sorsogon
 schefflera decidua;Albay
 schefflera decidua;Catanduanes
 schefflera decidua;Laguna
@@ -54,6 +122,14 @@ schefflera decidua;Masbate
 schefflera decidua;Philippines
 schefflera decidua;Quezon
 schefflera decidua;Sorsogon
+schefflera elliptifoliola;Albay
+schefflera elliptifoliola;Catanduanes
+schefflera elliptifoliola;Laguna
+schefflera elliptifoliola;Leyte
+schefflera elliptifoliola;Masbate
+schefflera elliptifoliola;Philippines
+schefflera elliptifoliola;Quezon
+schefflera elliptifoliola;Sorsogon
 schefflera insularum;Albay
 schefflera insularum;Catanduanes
 schefflera insularum;Laguna
@@ -62,6 +138,14 @@ schefflera insularum;Masbate
 schefflera insularum;Philippines
 schefflera insularum;Quezon
 schefflera insularum;Sorsogon
+schefflera mindanaensis;Albay
+schefflera mindanaensis;Catanduanes
+schefflera mindanaensis;Laguna
+schefflera mindanaensis;Leyte
+schefflera mindanaensis;Masbate
+schefflera mindanaensis;Philippines
+schefflera mindanaensis;Quezon
+schefflera mindanaensis;Sorsogon
 schefflera odorata;Albay
 schefflera odorata;Catanduanes
 schefflera odorata;Laguna
@@ -70,12 +154,30 @@ schefflera odorata;Masbate
 schefflera odorata;Philippines
 schefflera odorata;Quezon
 schefflera odorata;Sorsogon
+pterospermum diversifolium;Batangas
+pterospermum diversifolium;Cagayan
+pterospermum diversifolium;Ilocos norte
+pterospermum diversifolium;La union
+cassia carnaval;Philippines
+cassia carnaval;Thailand
 cassia fistula;Philippines
 cassia fistula;Thailand
+cassia speciosa;Philippines
+cassia speciosa;Thailand
 cassia spectabilis;Philippines
 cassia spectabilis;Thailand
+pyrostegia venusta;Philippines
+pyrostegia venusta;Thailand
 senna spectabilis;Philippines
 senna spectabilis;Thailand
+unona setigera;Cambodia
+unona setigera;India
+unona setigera;Indonesia
+unona setigera;Laos
+unona setigera;Malaysia
+unona setigera;Palawan
+unona setigera;Philippines
+unona setigera;Thailand
 uvaria purpurea;Cambodia
 uvaria purpurea;India
 uvaria purpurea;Indonesia
@@ -84,6 +186,14 @@ uvaria purpurea;Malaysia
 uvaria purpurea;Palawan
 uvaria purpurea;Philippines
 uvaria purpurea;Thailand
+uvaria ridleyi;Cambodia
+uvaria ridleyi;India
+uvaria ridleyi;Indonesia
+uvaria ridleyi;Laos
+uvaria ridleyi;Malaysia
+uvaria ridleyi;Palawan
+uvaria ridleyi;Philippines
+uvaria ridleyi;Thailand
 uvaria rufa;Cambodia
 uvaria rufa;India
 uvaria rufa;Indonesia
@@ -93,18 +203,43 @@ uvaria rufa;Palawan
 uvaria rufa;Philippines
 uvaria rufa;Thailand
 Dysoxylum gaudichaudianum;Philippines
+convolvulus umbellatus;Philippines
 ipomoea cymosa;Philippines
+ipomoea polyanthes;Philippines
 merremia umbellata;Philippines
+clerodendrum macrostegium;Quezon
+clerodendrum macrostegium;Rizal
 volkameria grandiflora;Quezon
 volkameria grandiflora;Rizal
+cassytha americana;Africa
+cassytha americana;China
+cassytha americana;India
+cassytha americana;Philippines
 cassytha capillaris;Africa
 cassytha capillaris;China
 cassytha capillaris;India
 cassytha capillaris;Philippines
+cassytha filiformis;Africa
+cassytha filiformis;China
+cassytha filiformis;India
+cassytha filiformis;Philippines
 cuscuta reflexa;Africa
 cuscuta reflexa;China
 cuscuta reflexa;India
 cuscuta reflexa;Philippines
+litsea sebifera;Africa
+litsea sebifera;China
+litsea sebifera;India
+litsea sebifera;Philippines
+clausena anisum-olenas;Basilan
+clausena anisum-olenas;Bataan
+clausena anisum-olenas;Batangas
+clausena anisum-olenas;Benguet
+clausena anisum-olenas;Laguna
+clausena anisum-olenas;Masbate
+clausena anisum-olenas;Pampanga
+clausena anisum-olenas;Rizal
+clausena anisum-olenas;Sorsogon
 clausena anisum-olens;Basilan
 clausena anisum-olens;Bataan
 clausena anisum-olens;Batangas
@@ -114,6 +249,15 @@ clausena anisum-olens;Masbate
 clausena anisum-olens;Pampanga
 clausena anisum-olens;Rizal
 clausena anisum-olens;Sorsogon
+clausena excavata;Basilan
+clausena excavata;Bataan
+clausena excavata;Batangas
+clausena excavata;Benguet
+clausena excavata;Laguna
+clausena excavata;Masbate
+clausena excavata;Pampanga
+clausena excavata;Rizal
+clausena excavata;Sorsogon
 clausena indica;Basilan
 clausena indica;Bataan
 clausena indica;Batangas
@@ -123,6 +267,15 @@ clausena indica;Masbate
 clausena indica;Pampanga
 clausena indica;Rizal
 clausena indica;Sorsogon
+clausena todayensis;Basilan
+clausena todayensis;Bataan
+clausena todayensis;Batangas
+clausena todayensis;Benguet
+clausena todayensis;Laguna
+clausena todayensis;Masbate
+clausena todayensis;Pampanga
+clausena todayensis;Rizal
+clausena todayensis;Sorsogon
 clausena warburgii;Basilan
 clausena warburgii;Bataan
 clausena warburgii;Batangas
@@ -132,10 +285,26 @@ clausena warburgii;Masbate
 clausena warburgii;Pampanga
 clausena warburgii;Rizal
 clausena warburgii;Sorsogon
+dicranopteris linearis;China
+dicranopteris linearis;Philippines
 gleichenia dichotoma;China
 gleichenia dichotoma;Philippines
+gleichenia hermanni;China
+gleichenia hermanni;Philippines
 gleichenia linearis;China
 gleichenia linearis;Philippines
+polypodium lineare;China
+polypodium lineare;Philippines
+hernandia nymphaeifolia;Africa
+hernandia nymphaeifolia;Australia
+hernandia nymphaeifolia;Madagascar
+hernandia nymphaeifolia;Palawan
+hernandia nymphaeifolia;Philippines
+hernandia nymphaeifolia;Quezon
+hernandia nymphaeifolia;Sri lanka
+hernandia nymphaeifolia;Sulu
+hernandia nymphaeifolia;Taiwan
+hernandia nymphaeifolia;Zambales
 hernandia ovigera;Africa
 hernandia ovigera;Australia
 hernandia ovigera;Madagascar
@@ -146,6 +315,16 @@ hernandia ovigera;Sri lanka
 hernandia ovigera;Sulu
 hernandia ovigera;Taiwan
 hernandia ovigera;Zambales
+hernandia peltata;Africa
+hernandia peltata;Australia
+hernandia peltata;Madagascar
+hernandia peltata;Palawan
+hernandia peltata;Philippines
+hernandia peltata;Quezon
+hernandia peltata;Sri lanka
+hernandia peltata;Sulu
+hernandia peltata;Taiwan
+hernandia peltata;Zambales
 hernandia sonora;Africa
 hernandia sonora;Australia
 hernandia sonora;Madagascar
@@ -156,6 +335,16 @@ hernandia sonora;Sri lanka
 hernandia sonora;Sulu
 hernandia sonora;Taiwan
 hernandia sonora;Zambales
+ocimum polystachyon;Africa
+ocimum polystachyon;Asia
+ocimum polystachyon;Australia
+ocimum polystachyon;Bataan
+ocimum polystachyon;Ilocos norte
+ocimum polystachyon;Laguna
+ocimum polystachyon;Niger
+ocimum polystachyon;Pampanga
+ocimum polystachyon;Quezon
+ocimum polystachyon;Rizal
 ocimum tenuiflorum;Africa
 ocimum tenuiflorum;Asia
 ocimum tenuiflorum;Australia
@@ -166,6 +355,16 @@ ocimum tenuiflorum;Niger
 ocimum tenuiflorum;Pampanga
 ocimum tenuiflorum;Quezon
 ocimum tenuiflorum;Rizal
+plectranthus parviflorus;Africa
+plectranthus parviflorus;Asia
+plectranthus parviflorus;Australia
+plectranthus parviflorus;Bataan
+plectranthus parviflorus;Ilocos norte
+plectranthus parviflorus;Laguna
+plectranthus parviflorus;Niger
+plectranthus parviflorus;Pampanga
+plectranthus parviflorus;Quezon
+plectranthus parviflorus;Rizal
 solanum xanthocarpum;Africa
 solanum xanthocarpum;Asia
 solanum xanthocarpum;Australia
@@ -176,25 +375,59 @@ solanum xanthocarpum;Niger
 solanum xanthocarpum;Pampanga
 solanum xanthocarpum;Quezon
 solanum xanthocarpum;Rizal
+jatropha curcas;Africa
+jatropha curcas;China
+jatropha curcas;Nigeria
 jatropha janipha;Africa
 jatropha janipha;China
 jatropha janipha;Nigeria
+jatropha multifida;Africa
+jatropha multifida;China
+jatropha multifida;Nigeria
 jatropha species;Africa
 jatropha species;China
 jatropha species;Nigeria
+manihot folio;Africa
+manihot folio;China
+manihot folio;Nigeria
+trichosanthes amara;China
+trichosanthes amara;India
+trichosanthes amara;Laguna
+trichosanthes amara;Rizal
 trichosanthes anguina;China
 trichosanthes anguina;India
 trichosanthes anguina;Laguna
 trichosanthes anguina;Rizal
+trichosanthes cucumerina;China
+trichosanthes cucumerina;India
+trichosanthes cucumerina;Laguna
+trichosanthes cucumerina;Rizal
 trichosanthes cucurmerina;China
 trichosanthes cucurmerina;India
 trichosanthes cucurmerina;Laguna
 trichosanthes cucurmerina;Rizal
+trichosanthes locuniana;China
+trichosanthes locuniana;India
+trichosanthes locuniana;Laguna
+trichosanthes locuniana;Rizal
+abelmoschus esculentus ;Annam
+abelmoschus esculentus ;Antilles
+abelmoschus esculentus ;Guiana
+abelmoschus esculentus ;India
+abelmoschus esculentus ;Turkey
 hibiscus esculentis linn.;Annam
 hibiscus esculentis linn.;Antilles
 hibiscus esculentis linn.;Guiana
 hibiscus esculentis linn.;India
 hibiscus esculentis linn.;Turkey
+grangea maderaspatana;Africa
+grangea maderaspatana;Asia
+grangea maderaspatana;Bulacan
+grangea maderaspatana;India
+grangea maderaspatana;La union
+grangea maderaspatana;Pampanga
+grangea maderaspatana;Philippines
+grangea maderaspatana;Rizal
 perdicium tomentosum;Africa
 perdicium tomentosum;Asia
 perdicium tomentosum;Bulacan
@@ -203,6 +436,14 @@ perdicium tomentosum;La union
 perdicium tomentosum;Pampanga
 perdicium tomentosum;Philippines
 perdicium tomentosum;Rizal
+phoenix canariensis;Africa
+phoenix canariensis;Asia
+phoenix canariensis;Batanes
+phoenix canariensis;Iran
+phoenix canariensis;Laguna
+phoenix canariensis;Malaysia
+phoenix canariensis;Manila
+phoenix canariensis;Philippines
 phoenix cycadifolia;Africa
 phoenix cycadifolia;Asia
 phoenix cycadifolia;Batanes
@@ -211,6 +452,14 @@ phoenix cycadifolia;Laguna
 phoenix cycadifolia;Malaysia
 phoenix cycadifolia;Manila
 phoenix cycadifolia;Philippines
+phoenix dactylifera;Africa
+phoenix dactylifera;Asia
+phoenix dactylifera;Batanes
+phoenix dactylifera;Iran
+phoenix dactylifera;Laguna
+phoenix dactylifera;Malaysia
+phoenix dactylifera;Manila
+phoenix dactylifera;Philippines
 phoenix hanceana;Africa
 phoenix hanceana;Asia
 phoenix hanceana;Batanes
@@ -219,6 +468,21 @@ phoenix hanceana;Laguna
 phoenix hanceana;Malaysia
 phoenix hanceana;Manila
 phoenix hanceana;Philippines
+phoenix roebelenii;Africa
+phoenix roebelenii;Asia
+phoenix roebelenii;Batanes
+phoenix roebelenii;Iran
+phoenix roebelenii;Laguna
+phoenix roebelenii;Malaysia
+phoenix roebelenii;Manila
+phoenix roebelenii;Philippines
+passiflora foetida;Africa
+passiflora foetida;Argentina
+passiflora foetida;India
+passiflora foetida;Laguna
+passiflora foetida;Malaysia
+passiflora foetida;Quezon
+passiflora foetida;Rizal
 passiflora hibiscifolia;Africa
 passiflora hibiscifolia;Argentina
 passiflora hibiscifolia;India
@@ -226,47 +490,106 @@ passiflora hibiscifolia;Laguna
 passiflora hibiscifolia;Malaysia
 passiflora hibiscifolia;Quezon
 passiflora hibiscifolia;Rizal
+passiflora hispida;Africa
+passiflora hispida;Argentina
+passiflora hispida;India
+passiflora hispida;Laguna
+passiflora hispida;Malaysia
+passiflora hispida;Quezon
+passiflora hispida;Rizal
+davallia mariesii;Fiji
+davallia mariesii;Philippines
+davallia mariesii;Samoa
 davallia solida;Fiji
 davallia solida;Philippines
 davallia solida;Samoa
+drynaria fortunei;Fiji
+drynaria fortunei;Philippines
+drynaria fortunei;Samoa
 humata griffithiana;Fiji
 humata griffithiana;Philippines
 humata griffithiana;Samoa
 Eucalyptus deglupta;Philippines
+ophioglossum pendulum;India
+ophioglossum pendulum;Malaysia
+ehretia beurreria;Palawan
 ehretia philippinensis;Palawan
+perilla ocimoides;Australia
+perilla ocimoides;Fiji
+perilla ocimoides;Guinea
+perilla ocimoides;India
+perilla ocimoides;Palawan
 psidium guajava;Australia
 psidium guajava;Fiji
 psidium guajava;Guinea
 psidium guajava;India
 psidium guajava;Palawan
+rubus apoensis;Australia
+rubus apoensis;Fiji
+rubus apoensis;Guinea
+rubus apoensis;India
+rubus apoensis;Palawan
 rubus comintanus;Australia
 rubus comintanus;Fiji
 rubus comintanus;Guinea
 rubus comintanus;India
 rubus comintanus;Palawan
+rubus commersonii;Australia
+rubus commersonii;Fiji
+rubus commersonii;Guinea
+rubus commersonii;India
+rubus commersonii;Palawan
 rubus hillii;Australia
 rubus hillii;Fiji
 rubus hillii;Guinea
 rubus hillii;India
 rubus hillii;Palawan
+rubus jamaicensis;Australia
+rubus jamaicensis;Fiji
+rubus jamaicensis;Guinea
+rubus jamaicensis;India
+rubus jamaicensis;Palawan
 rubus minusculus;Australia
 rubus minusculus;Fiji
 rubus minusculus;Guinea
 rubus minusculus;India
 rubus minusculus;Palawan
+rubus moluccanus;Australia
+rubus moluccanus;Fiji
+rubus moluccanus;Guinea
+rubus moluccanus;India
+rubus moluccanus;Palawan
 rubus rosaefolius;Australia
 rubus rosaefolius;Fiji
 rubus rosaefolius;Guinea
 rubus rosaefolius;India
 rubus rosaefolius;Palawan
+rubus rosifolium;Australia
+rubus rosifolium;Fiji
+rubus rosifolium;Guinea
+rubus rosifolium;India
+rubus rosifolium;Palawan
 urena lobota;Australia
 urena lobota;Fiji
 urena lobota;Guinea
 urena lobota;India
 urena lobota;Palawan
+vernonia volkameriaefolia;Australia
+vernonia volkameriaefolia;Fiji
+vernonia volkameriaefolia;Guinea
+vernonia volkameriaefolia;India
+vernonia volkameriaefolia;Palawan
+dolichos tetragonolobus;Philippines
 psophocarpus tetragonolobus;Philippines
+psophocarpus tetragonologus;Philippines
+ehretia microphylla lam.;Philippines
+michelia alba;Philippines
 michelia champaca;Philippines
+michelia longiflora;Philippines
 michelia longifolia;Philippines
+abutilon indicum;Guinea
+abutilon indicum;Ireland
+abutilon indicum;Leyte
 Hoya meliflua;Apayao
 Hoya meliflua;Bataan
 Hoya meliflua;La union
