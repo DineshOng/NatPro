@@ -1,4 +1,5 @@
 import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
 import com.sun.deploy.util.ArrayUtil;
@@ -117,8 +118,8 @@ public class Main {
 
                 //ArrayList<String> seedMap1 = new ArrayList<String>();//change to MultiMap
                 //ArrayList<String> seedMap2 = new ArrayList<String>();//change to MultiMap
-                Multimap<String,String> seedMap = ArrayListMultimap.create();
-                Multimap<String,String> ValidationMap = ArrayListMultimap.create();
+                Multimap<String,String> seedMap = HashMultimap.create();
+                Multimap<String,String> ValidationMap = HashMultimap.create();
                 for(int i=3; i<seedEntity.size(); i++){
                     //System.out.println("I went here");
                     addMap(seedMap,seedEntity,i);
@@ -766,18 +767,21 @@ public class Main {
         //System.out.println("running Relation");
         //System.out.println(e1+": "+class1+";"+e2+": "+class2);
         if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && pLine.contains("<"+e2+">"+class2+"</"+e2+">") ){
-            if(e2.contains("pound")){
-                //.println(e1+": "+class1+";"+e2+": "+class2);
-            }
+            //if(pLine.contains("form")){
+             //   System.out.println(e1+": "+class1+";"+e2+": "+class2);
+                //System.out.println(pLine);
+            //}
 
             ValidationMap.put(class1,class2);
             //System.out.println(e1+": "+class1+";"+e2+": "+class2);
             Pattern p = Pattern.compile("<\\/["+e1+"]+>.+<["+e2+"]+>");
             Matcher m = p.matcher(pLine);
+            Pattern pRev = Pattern.compile("<\\/["+e2+"]+>.+<["+e1+"]+>");
+            Matcher mRev = pRev.matcher(pLine);
             //.println(e1+": "+class1+";"+e2+": "+class2);
             while(m.find()) {
-
                 String temp = m.group();
+                //System.out.println("I went here");
                 temp = temp.replaceAll("<\\/?[a-z]+>", "");
                 relation.add(temp);
 
@@ -785,7 +789,18 @@ public class Main {
                 //System.out.println("This is "+ e1Name+" and "+e2Name);
                 //System.out.println(relation.size());
                 //System.out.println(pLine);
-            } // end of matcher while
+            } // end of m while
+            while(mRev.find()) {
+                String temp = mRev.group();
+                //System.out.println("I went here");
+                temp = temp.replaceAll("<\\/?[a-z]+>", "");
+                relation.add(temp);
+
+                //System.out.println(temp);
+                //System.out.println("This is "+ e1Name+" and "+e2Name);
+                //System.out.println(relation.size());
+                //System.out.println(pLine);
+            } // end of m while
         }// end of if pLine
     }
 
@@ -979,9 +994,9 @@ public class Main {
                                  String PN, String DET, String ADP, TreeSet<String> validation){
         //MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
         String tagged = tagger.tagString(rLine);
-        /*if(tagged.contains("0.84")){
+        if(tagged.contains("also known as")){
             System.out.println(tagged);
-        }*/
+        }
 
         String[] tLines= tagged.split(" ");
         //System.out.println("I went here");
