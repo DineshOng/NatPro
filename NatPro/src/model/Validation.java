@@ -5,6 +5,7 @@ import java.util.HashSet;
 public class Validation {
 
 	String pdfFileName;
+	HashSet<MedicinalPlant> medPlants;
 	HashSet<String> MedicinalPlants;
 	HashSet<String> Synonyms;
 	HashSet<String> PlantParts;
@@ -20,6 +21,7 @@ public class Validation {
 	
 	public Validation(String pdfFileName) {
 		// TODO Auto-generated constructor stub
+		this.medPlants = new HashSet<MedicinalPlant>();
 		this.MedicinalPlants = new HashSet<String>();
 		this.PlantParts = new HashSet<String>();
 		this.Synonyms = new HashSet<String>();

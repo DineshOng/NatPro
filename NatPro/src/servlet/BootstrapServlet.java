@@ -787,6 +787,8 @@ public class BootstrapServlet extends HttpServlet {
 			// System.out.println(e1+": "+class1+";"+e2+": "+class2);
 			Pattern p = Pattern.compile("<\\/[" + e1 + "]+>.+<[" + e2 + "]+>");
 			Matcher m = p.matcher(pLine);
+			Pattern pRev = Pattern.compile("<\\/["+e2+"]+>.+<["+e1+"]+>");
+            Matcher mRev = pRev.matcher(pLine);
 			// .println(e1+": "+class1+";"+e2+": "+class2);
 			while (m.find()) {
 
@@ -798,6 +800,13 @@ public class BootstrapServlet extends HttpServlet {
 				// System.out.println("This is "+ e1Name+" and "+e2Name);
 				// System.out.println(relation.size());
 				// System.out.println(pLine);
+			} // end of matcher while
+			while (mRev.find()) {
+
+				String temp = mRev.group();
+				temp = temp.replaceAll("<\\/?[a-z]+>", "");
+				relation.add(temp);
+
 			} // end of matcher while
 		} // end of if pLine
 	}

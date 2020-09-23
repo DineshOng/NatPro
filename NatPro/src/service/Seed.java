@@ -60,11 +60,18 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Synonyms = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Synonym.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/MedicinalPlant-Synonym.txt");
 			writer.print("");
 			writer.print("e1:MedicinalPlant\r\n");
 			writer.print("e2:Synonym\r\n");
 			writer.write("\r\n"); // write new line
+			
+//			PrintWriter writer2 = new PrintWriter("./Documents/SeedsPossible/Synonym-MedicinalPlant.txt");
+//			writer2.print("");
+//			writer2.print("e1:Synonym\r\n");
+//			writer2.print("e2:MedicinalPlant\r\n");
+//			writer2.write("\r\n"); // write new line
+			
 			for (int i = 0; i < MedPlantNames.size(); i++) {
 				Synonyms = q.getSynonyms(MedPlantNames.get(i));
 				for (int j = 0; j < Synonyms.size(); j++) {
@@ -72,9 +79,12 @@ public class Seed {
 					String synonym = removePar(Synonyms.get(j));
 					writer.write(medPlant + ";" + synonym);
 					writer.write("\r\n"); // write new line
+//					writer2.write(synonym + ";" + medPlant);
+//					writer2.write("\r\n"); // write new line
 				}
 			}
 			writer.close();
+//			writer2.close();
 		} catch (
 
 		IOException e) {
@@ -86,7 +96,7 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Locs = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Location.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/MedicinalPlant-Location.txt");
 			writer.print("");
 			writer.print("e1:MedicinalPlant\r\n");
 			writer.print("e2:Location\r\n");
@@ -110,7 +120,7 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Genus = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Genus.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/MedicinalPlant-Genus.txt");
 			writer.print("");
 			writer.print("e1:MedicinalPlant\r\n");
 			writer.print("e2:Genus\r\n");
@@ -136,7 +146,7 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Family = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Family.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/MedicinalPlant-Family.txt");
 			writer.print("");
 			writer.print("e1:MedicinalPlant\r\n");
 			writer.print("e2:Family\r\n");
@@ -162,7 +172,7 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> PlantParts = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-PlantPart.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/MedicinalPlant-PlantPart.txt");
 			writer.print("");
 			writer.print("e1:MedicinalPlant\r\n");
 			writer.print("e2:PlantPart\r\n");
@@ -188,7 +198,7 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> CompoundsList = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Compound.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/MedicinalPlant-Compound.txt");
 			writer.print("");
 			writer.print("e1:MedicinalPlant\r\n");
 			writer.print("e2:Compound\r\n");
@@ -213,7 +223,7 @@ public class Seed {
 		List<String> MedPlantNames = q.getAllMedPlantNames();
 		List<String> Prep = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/MedicinalPlant-Preparation.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/MedicinalPlant-Preparation.txt");
 			writer.print("");
 			writer.print("e1:MedicinalPlant\r\n");
 			writer.print("e2:Preparation\r\n");
@@ -241,7 +251,7 @@ public class Seed {
 		List<String> Locs = new ArrayList<String>();
 		List<String> Synonyms = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-Location.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Synonym-Location.txt");
 			writer.print("");
 			writer.print("e1:Synonym\r\n");
 			writer.print("e2:Location\r\n");
@@ -268,7 +278,7 @@ public class Seed {
 		List<String> Synonyms = q.getAllSynonyms();
 		List<String> Genus = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-Genus.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Synonym-Genus.txt");
 			writer.print("");
 			writer.print("e1:Synonym\r\n");
 			writer.print("e2:Genus\r\n");
@@ -294,7 +304,7 @@ public class Seed {
 		List<String> Synonyms = q.getAllSynonyms();
 		List<String> Family = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-Family.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Synonym-Family.txt");
 			writer.print("");
 			writer.print("e1:Synonym\r\n");
 			writer.print("e2:Family\r\n");
@@ -320,7 +330,7 @@ public class Seed {
 		List<String> Synonyms = q.getAllSynonyms();
 		List<String> PlantParts = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-PlantPart.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Synonym-PlantPart.txt");
 			writer.print("");
 			writer.print("e1:Synonym\r\n");
 			writer.print("e2:PlantPart\r\n");
@@ -346,7 +356,7 @@ public class Seed {
 		List<String> Synonyms = q.getAllSynonyms();
 		List<String> CompoundsList = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Synonym-Compound.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Synonym-Compound.txt");
 			writer.print("");
 			writer.print("e1:Synonym\r\n");
 			writer.print("e2:Compound\r\n");
@@ -373,7 +383,7 @@ public class Seed {
 		List<String> Genus = q.getAllGenus();
 		List<String> Family = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Genus-Family.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Genus-Family.txt");
 			writer.print("");
 			writer.print("e1:Genus\r\n");
 			writer.print("e2:Family\r\n");
@@ -399,7 +409,7 @@ public class Seed {
 		List<String> Prep = q.getAllPreparations();
 		List<String> Illness = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Preparation-Illness.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Preparation-Illness.txt");
 			writer.print("");
 			writer.print("e1:Preparation\r\n");
 			writer.print("e2:Illness\r\n");
@@ -425,7 +435,7 @@ public class Seed {
 		List<String> Prep = q.getAllPreparations();
 		List<String> PlantPart = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Preparation-PlantPart.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Preparation-PlantPart.txt");
 			writer.print("");
 			writer.print("e1:Preparation\r\n");
 			writer.print("e2:PlantPart\r\n");
@@ -452,7 +462,7 @@ public class Seed {
 		List<String> PlantPart = new ArrayList<String>();
 		List<String> Illness = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/PlantPart-Illness.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/PlantPart-Illness.txt");
 			writer.print("");
 			writer.print("e1:PlantPart\r\n");
 			writer.print("e2:Illness\r\n");
@@ -481,7 +491,7 @@ public class Seed {
 		List<String> PlantPart = q.getAllPlantParts();
 		List<String> Compound = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/PlantPart-Compound.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/PlantPart-Compound.txt");
 			writer.print("");
 			writer.print("e1:PlantPart\r\n");
 			writer.print("e2:Compound\r\n");
@@ -507,7 +517,7 @@ public class Seed {
 		List<String> Compound = q.getAllCompounds();
 		List<String> BioAct = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/Compound-BioAct.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Compound-BioAct.txt");
 			writer.print("");
 			writer.print("e1:Compound\r\n");
 			writer.print("e2:BioAct\r\n");
@@ -533,7 +543,7 @@ public class Seed {
 		List<String> BioAct = q.getAllBioAct();
 		List<String> Cell = new ArrayList<String>();
 		try {
-			PrintWriter writer = new PrintWriter("./seeds/BioAct-CellLine.txt");
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/BioAct-CellLine.txt");
 			writer.print("");
 			writer.print("e1:BioAct\r\n");
 			writer.print("e2:CellLine\r\n");
