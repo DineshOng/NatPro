@@ -27,12 +27,19 @@ public class TextCleaner {
         text = text.replaceAll("\\s{2,}", " ");
         
         //text = text.replaceAll("-\\s","");
-        //text = text.replaceAll("\\s\n"," ");
+        //text = text.replaceAll("\\s\n"," "); γ
+        
+        text = text.replaceAll("\\. α",". Alpha");
+        text = text.replaceAll("α","alpha");
+        text = text.replaceAll("\\. β",". Beta");
+        text = text.replaceAll("β","beta");
+        text = text.replaceAll("\\. γ",". Gamma");
+        text = text.replaceAll("γ","gamma");
+        
         text = text.replaceAll("\\. \u03B1",". Alpha");
         text = text.replaceAll("\u03B1","alpha");
         
         text = text.replaceAll("","Beta");
-        
         text = text.replaceAll("\\. \u03B2",". Beta");
         text = text.replaceAll("\u03B2","beta");
         
@@ -42,16 +49,23 @@ public class TextCleaner {
         text = text.replaceAll("[Bb]rgy\\.","Brgy");
         text = text.replaceAll("syn\\.","syn");
         
+        text = text.replaceAll("Ñ","N");
+        text = text.replaceAll("ñ","n");
         text = text.replaceAll("\u00D1","N"); //big enye
         text = text.replaceAll("\u00F1","n"); //small enye
         
+        text = text.replaceAll("′","'");
         text = text.replaceAll("\u2032","'"); //prime
         
+        text = text.replaceAll("–","-");
+        text = text.replaceAll("−","-");
         text = text.replaceAll("\u2013","-"); //en dash
         text = text.replaceAll("\u2212","-"); //minus sign
         text = text.replaceAll("\u02D7","-"); //minus sign
         
-        
+        text = text.replaceAll("’","'");
+        text = text.replaceAll("”","");
+        text = text.replaceAll("“","");
         text = text.replaceAll("\u0027","'");
         text = text.replaceAll("\u02BC","'");
         text = text.replaceAll("\u2019","'");

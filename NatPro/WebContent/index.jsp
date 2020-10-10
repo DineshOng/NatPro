@@ -21,7 +21,7 @@
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
-<title>NatPro : ${searchKey}</title>
+<title>NatPro</title>
 </head>
 <body>
 	<!-- INCLUDE NAV BAR HTML -->
