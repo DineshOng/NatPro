@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13107">
-              <caret line="771" column="18" selection-start-line="771" selection-start-column="18" selection-end-line="771" selection-end-column="18" />
+            <state relative-caret-position="325">
+              <caret line="163" column="101" selection-start-line="163" selection-start-column="101" selection-end-line="163" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,9 +27,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/8e357cc515603c147bd71bd6dfad1cca.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="47" selection-start-line="46" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-Illness.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="537">
               <caret line="106" column="96" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="96" />
             </state>
           </provider>
@@ -38,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaggedSample/33b3eab5b669bb43b47cda6374eea87c.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="476">
               <caret line="28" column="402" selection-start-line="28" selection-start-column="398" selection-end-line="28" selection-end-column="402" />
             </state>
           </provider>
@@ -51,16 +65,12 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Preparation.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-865" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -75,11 +85,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>readxml</find>
-      <find>addpreproces</find>
-      <find>addpre</find>
-      <find>s</find>
-      <find>seedOutput</find>
       <find>, Bird Parker parker</find>
       <find>PosTagger</find>
       <find>matches</find>
@@ -105,6 +110,11 @@
       <find>lines</find>
       <find>preparation</find>
       <find>prep</find>
+      <find>validationM</find>
+      <find>bioact</find>
+      <find>cellline</find>
+      <find>validationmap</find>
+      <find>validation</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -132,7 +142,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="1377" />
     <option name="height" value="959" />
@@ -143,19 +153,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
               <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
-              <item name="seedOutput" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
@@ -179,12 +182,19 @@
             </path>
             <path>
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -268,9 +278,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25692964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -279,7 +289,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -409,7 +419,6 @@
     <state x="34" y="23" key="new project wizard/0.23.1280.732@0.23.1280.732" timestamp="1582638934534" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-inhibited the proliferation of MDA-MB-231-CellLine.xml" />
     <entry file="file://$PROJECT_DIR$/TaggedSample/am-935ef8690c1123ce7a9b13f82bc11f03.xml" />
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-growth inhibition and apoptosis in SMMC7721-CellLine.xml" />
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-therapeutic efficacy against Ehrlich-CellLine.xml" />
@@ -460,18 +469,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/BioAct-CellLine.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation/1ed46617021edead6df621a7b72d2dcd-alpha-amyrin cinnamate-BioAct.xml" />
     <entry file="file://$PROJECT_DIR$/validation/7b3956f364562b5ed9f239daa66426a1-alpha-amyrin cinnamate-BioAct.xml" />
-    <entry file="file://$PROJECT_DIR$/TaggedSample/8e357cc515603c147bd71bd6dfad1cca.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TaggedSample/702c7c4e97189ae5b79c9b4f2f2d8651.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -612,37 +611,46 @@
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-batino-Synonym.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Preparation.txt">
+    <entry file="file://$PROJECT_DIR$/TaggedSample/8e357cc515603c147bd71bd6dfad1cca.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-865" />
+        <state relative-caret-position="799">
+          <caret line="47" selection-start-line="46" selection-end-line="47" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-Illness.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/33b3eab5b669bb43b47cda6374eea87c.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357" />
+        <state relative-caret-position="476">
+          <caret line="28" column="402" selection-start-line="28" selection-start-column="398" selection-end-line="28" selection-end-column="402" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-PlantPart.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Preparation.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/BioAct-CellLine.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="537">
           <caret line="106" column="96" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/33b3eab5b669bb43b47cda6374eea87c.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="28" column="402" selection-start-line="28" selection-start-column="398" selection-end-line="28" selection-end-column="402" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13107">
-          <caret line="771" column="18" selection-start-line="771" selection-start-column="18" selection-end-line="771" selection-end-column="18" />
+        <state relative-caret-position="325">
+          <caret line="163" column="101" selection-start-line="163" selection-start-column="101" selection-end-line="163" selection-end-column="101" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

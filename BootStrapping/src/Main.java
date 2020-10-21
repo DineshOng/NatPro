@@ -161,7 +161,7 @@ public class Main {
                         //System.out.println(e1+": "+class1+";"+e2+": "+class2);
                         for (String pLine : lines) {
                             pLine = pLine.toLowerCase();
-                            addRelation(relation,pLine,class1,class2,e1,e2,ValidationMap);
+                            addRelation(relation,pLine,class1,class2,e1,e2,ValidationMap,validation);
                             //System.out.println("Relation finished");
 
 
@@ -192,7 +192,7 @@ public class Main {
                     //if(rLine.contains("suppress"))
                         //System.out.println("relation: "+rLine+"located in: "+hashxml);
                         //System.out.println("I went here");
-                    if(EntityCheck.contains("compound") || EntityCheck.contains("synonym+location")){
+                    if(EntityCheck.contains("compound") || EntityCheck.contains("synonym+location") || EntityCheck.contains("cellline")){
                         POSTagger(seedPatternV,seedPatternW,seedPatternP,rLine,V2,P,W,tagger,AV,ADJ,PN,DET,ADP,validation);
                     }//else if(EntityCheck.contains("cellline")){
                        // POSTagger(seedPatternV,seedPatternW,seedPatternP,rLine,V,P,W2,tagger,AV,ADJ,PN2,DET,ADP,validation);
@@ -761,11 +761,20 @@ public class Main {
     public static void addRelation(
             TreeSet<String> relation, String pLine,
             String class1, String class2,
-            String e1, String e2,Multimap<String,String> ValidationMap){
+            String e1, String e2,Multimap<String,String> ValidationMap,TreeSet<String> validation){
         e1= e1.toLowerCase();
         e2 = e2.toLowerCase();
         //System.out.println("running Relation");
         //System.out.println(e1+": "+class1+";"+e2+": "+class2);
+        String linetemp = pLine;
+        linetemp = linetemp.replaceAll("<\\/?[a-z]+>","");
+        if(e1.contains("preparation") ){
+            ValidationMap.put(class2,e1);
+            validation.add(linetemp);
+        }else if(e2.contains("preparation")){
+            ValidationMap.put(class1,e2);
+            validation.add(linetemp);
+        }
         if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && pLine.contains("<"+e2+">"+class2+"</"+e2+">") ){
             //if(pLine.contains("form")){
              //   System.out.println(e1+": "+class1+";"+e2+": "+class2);
@@ -773,6 +782,8 @@ public class Main {
             //}
 
             ValidationMap.put(class1,class2);
+
+
             //System.out.println(e1+": "+class1+";"+e2+": "+class2);
             Pattern p = Pattern.compile("<\\/["+e1+"]+>.+<["+e2+"]+>");
             Matcher m = p.matcher(pLine);
