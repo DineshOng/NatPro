@@ -1,4 +1,4 @@
-package brat.ann;
+package bratAnn;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -39,17 +39,21 @@ public class TagToAnn {
 		}
 		System.out.println(stars.size());
 		
-		String[] names = {"Artocarpus_ovatus", "das"};
+		String[] names = {"Artocarpus_ovatus", "Brassica_oleracea_varieties", "Cycas_edentata", "Duranta_erecta", "Dysoxylum_gaudichaudianum", "Eucalyptus_deglupta", "Garcinia_mangostana",
+						  "Aleurites_moluccana", "Cordia_dichotoma", "Cycas_lacrimans", "Cycas_sancti-lasallei", "Dioscorea_luzonensis", "Hoya_meliflua",
+						  "Alstonia_macrophylla", "Andrographis_paniculata", "Ficus_pseudopalma_ulmifolia", "Macromitrium_orthostichum", "Pleurotus_eryngii_Flammulina_velutipes",
+						  "Alstonia_scholaris", "Aphanamixis_polystachya", "Cycas_vespertilio", "Cymodocea_rotundata", "Dracontomelon_dao", "Macaranga_tanarius", "Samanea_saman"};
 		
-		run("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Preprocessed\\" + "Alstonia_macrophylla" + " tag.txt");
+		for(String name : names)
+			run("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Preprocessed\\" + name + " tag.txt", name);
 		
 		endTime = System.nanoTime ();
 	    System.err.println("[PDF to TXT Converter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 	}
 	
-	public static void run(String filename) throws IOException {
-		String annTxt = "";
-		int ctr = 0;
+	public static void run(String filename, String name) throws IOException {
+		String annTxt = "", notag = "";
+		int ctr = 1;
 		
 		FileInputStream inputStream = new FileInputStream(filename);
 		String text = "";
@@ -62,12 +66,11 @@ public class TagToAnn {
 		Pattern pattern = Pattern.compile("<([A-Za-z]+)>([^>]+)(<\\/[A-Za-z]+>)");
 		Matcher matcher = pattern.matcher(text);
 		
-		text = text.replaceAll("<\\/?\\w+>", "");
+		notag = text.replaceAll("<\\/?\\w+>", "");
+		text = notag;
 		
 		while(matcher.find()) {
-			//System.out.println(matcher.group());
 			int len = matcher.group(2).length();
-			int tagLen = matcher.group(3).length();
 			
 			Pattern pattern2 = Pattern.compile(matcher.group(2).replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)").replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]"));
 			Matcher matcher2 = pattern2.matcher(text);
@@ -75,13 +78,18 @@ public class TagToAnn {
 			if(matcher2.find()) {
 				text = text.replaceFirst(matcher2.group().replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)").replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]"), stars.get(len));
 				System.out.println("T"+ctr+"\t"+matcher.group(1)+"\t"+matcher2.start()+"\t"+matcher2.end()+"\t"+matcher.group(2));
+				annTxt += "T"+ctr+"\t"+matcher.group(1)+"\t"+matcher2.start()+"\t"+matcher2.end()+"\t"+matcher.group(2)+"\n";
 				ctr++;
 			}
-			
-			
         }
 		
-		//System.out.println(text);
+		java.io.FileWriter fw2 = new java.io.FileWriter("C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\" + name + " notag.txt");
+        fw2.write(notag);
+        fw2.close();
+		
+		java.io.FileWriter fw3 = new java.io.FileWriter("C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\" + name + " notag.ann");
+        fw3.write(annTxt);
+        fw3.close();	
 	}
 	
 	public void etag() throws NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, IOException {
