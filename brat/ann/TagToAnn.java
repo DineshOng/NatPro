@@ -24,6 +24,9 @@ public class TagToAnn {
 //			e.printStackTrace();
 //		}
 		
+		long startTime, endTime;
+        startTime = System.nanoTime ();
+		
 		String star;
 		stars = new HashMap<Integer, String>();
 		for(int i=1; i<251; i++) {
@@ -36,10 +39,18 @@ public class TagToAnn {
 		}
 		System.out.println(stars.size());
 		
-		run("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Preprocessed\\"+"Alstonia_macrophylla"+" tag.txt");
+		String[] names = {"Artocarpus_ovatus", "das"};
+		
+		run("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Preprocessed\\" + "Alstonia_macrophylla" + " tag.txt");
+		
+		endTime = System.nanoTime ();
+	    System.err.println("[PDF to TXT Converter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 	}
 	
 	public static void run(String filename) throws IOException {
+		String annTxt = "";
+		int ctr = 0;
+		
 		FileInputStream inputStream = new FileInputStream(filename);
 		String text = "";
 		try {
@@ -48,10 +59,29 @@ public class TagToAnn {
 		    inputStream.close();
 		}
 		
-		Pattern pattern = Pattern.compile("<([A-Za-z]+)>([^>]+)<\\/[A-Za-z]+>");
+		Pattern pattern = Pattern.compile("<([A-Za-z]+)>([^>]+)(<\\/[A-Za-z]+>)");
 		Matcher matcher = pattern.matcher(text);
 		
-		System.out.println(text);
+		text = text.replaceAll("<\\/?\\w+>", "");
+		
+		while(matcher.find()) {
+			//System.out.println(matcher.group());
+			int len = matcher.group(2).length();
+			int tagLen = matcher.group(3).length();
+			
+			Pattern pattern2 = Pattern.compile(matcher.group(2).replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)").replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]"));
+			Matcher matcher2 = pattern2.matcher(text);
+			
+			if(matcher2.find()) {
+				text = text.replaceFirst(matcher2.group().replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)").replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]"), stars.get(len));
+				System.out.println("T"+ctr+"\t"+matcher.group(1)+"\t"+matcher2.start()+"\t"+matcher2.end()+"\t"+matcher.group(2));
+				ctr++;
+			}
+			
+			
+        }
+		
+		//System.out.println(text);
 	}
 	
 	public void etag() throws NoSuchAlgorithmException, ClassCastException, ClassNotFoundException, IOException {
