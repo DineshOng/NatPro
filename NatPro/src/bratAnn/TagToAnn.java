@@ -78,17 +78,17 @@ public class TagToAnn {
 			if(matcher2.find()) {
 				text = text.replaceFirst(matcher2.group().replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)").replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]"), stars.get(len));
 				System.out.println("T"+ctr+"\t"+matcher.group(1)+"\t"+matcher2.start()+"\t"+matcher2.end()+"\t"+matcher.group(2));
-				annTxt += "T"+ctr+"\t"+matcher.group(1)+"\t"+matcher2.start()+"\t"+matcher2.end()+"\t"+matcher.group(2)+"\n";
+				annTxt += "T"+ctr+"\t"+matcher.group(1)+" "+matcher2.start()+" "+matcher2.end()+"\t"+matcher.group(2)+"\n";
 				ctr++;
 			}
         }
 		
-		java.io.FileWriter fw2 = new java.io.FileWriter("C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\" + name + " notag.txt");
-        fw2.write(notag);
+		java.io.FileWriter fw2 = new java.io.FileWriter("C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\" + name + "_notag.txt");
+        fw2.write(notag.trim());
         fw2.close();
 		
-		java.io.FileWriter fw3 = new java.io.FileWriter("C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\" + name + " notag.ann");
-        fw3.write(annTxt);
+		java.io.FileWriter fw3 = new java.io.FileWriter("C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\" + name + "_notag.ann");
+        fw3.write(annTxt.trim());
         fw3.close();	
 	}
 	
