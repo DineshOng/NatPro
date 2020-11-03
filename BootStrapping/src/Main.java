@@ -768,14 +768,11 @@ public class Main {
         //System.out.println(e1+": "+class1+";"+e2+": "+class2);
         String linetemp = pLine;
         linetemp = linetemp.replaceAll("<\\/?[a-z]+>","");
-        if(e1.contains("preparation") ){
-            ValidationMap.put(class2,e1);
-            validation.add(linetemp);
-        }else if(e2.contains("preparation")){
-            ValidationMap.put(class1,e2);
+        if(e1.contains("preparation") || e2.contains("preparation") ){
+            ValidationMap.put(class1,class2);
             validation.add(linetemp);
         }
-        if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && pLine.contains("<"+e2+">"+class2+"</"+e2+">") ){
+        else if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && pLine.contains("<"+e2+">"+class2+"</"+e2+">") ){
             //if(pLine.contains("form")){
              //   System.out.println(e1+": "+class1+";"+e2+": "+class2);
                 //System.out.println(pLine);
