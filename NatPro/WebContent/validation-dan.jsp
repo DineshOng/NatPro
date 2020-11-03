@@ -49,7 +49,8 @@
 						<c:forEach items="${Validations.getSynonyms()}" var="SynonymsList">
 							<tr>
 								<td><button type="button" class="btn btn-primary btn-sm"
-										data-toggle="modal" data-target="#docuModal${docunum}">Document
+										data-toggle="modal" data-target="#docuModal"
+										onclick="viewDocument('${Validations.getPdfFileName()}')">Document
 										# ${docunum}</button></td>
 								<td><button type="button" class="btn btn-success btn-sm"
 										data-toggle="modal" data-target="#entryModal${modalId}"
@@ -116,12 +117,13 @@
 															<div class="col-13">
 																<label for="Location"><i
 																	class="fa fa-map-marker" aria-hidden="true"></i>
-																	Location</label> 
+																	Location</label>
 															</div>
 															<div>
 																<button id="locationAdd" type="button"
 																	class="btn btn-outline-success btn-sm"
-																	onclick="addLFields(${modalId},'')" style="margin-top: 5px">
+																	onclick="addLFields(${modalId},'')"
+																	style="margin-top: 5px">
 																	<i class="fa fa-plus" aria-hidden="true"></i> Location
 																</button>
 															</div>
@@ -308,39 +310,35 @@
 							<c:set var="modalId" value="${modalId + 1}" scope="page" />
 						</c:forEach>
 					</c:if>
-
-					<!-- Modal -->
-					<div class="modal fade" id="docuModal${docunum}" tabindex="-1"
-						aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<c:set var="pdfFile"
-							value="\\NatPro\\Documents\\UploadedDocuments\\${Validations.getPdfFileName()}"
-							scope="page" />
-						<div class="modal-dialog modal-xl modal-dialog-scrollable">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="docuModalLabel${docunum}">Document</h5>
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<div class="embed-responsive embed-responsive-16by9">
-										<iframe id="documentIframe" class="embed-responsive-item"
-											src="${pdfFile}"></iframe>
-									</div>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
-										data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
 					<c:set var="docunum" value="${docunum + 1}" scope="page" />
 				</c:forEach>
 			</tbody>
 		</table>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="docuModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="docuModalLabel">Document</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe id="documentIframe1" class="embed-responsive-item" src=""></iframe>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Cancel Validation Modal -->
@@ -1164,6 +1162,18 @@
 	    		code to reject the specific entry using tValue and cValue
 	    	*/
 	    	
+	    }
+	    
+	    function viewDocument(docu) {
+	    	var entryDocument = "\\NatPro\\Documents\\UploadedDocuments\\"+docu;
+	    	var modalIframe = document.getElementById('documentIframe1');
+	    	
+	    	if (entryDocument != null) {
+	    		console.log(entryDocument);
+	    		modalIframe.src = entryDocument;
+	    	} else {
+	    		modalIframe.src = 'https://www.youtube.com/embed/ZKYEQXN_nk0';
+	    	}
 	    }
 	    
 	    function viewEntry(tValue,cValue,docu) {
