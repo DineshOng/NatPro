@@ -76,11 +76,9 @@
 							</div>
 							<div id="locationGroup" class="col-4">
 								<div class="col-13">
-									<label for="Location"><i class="fa fa-map-marker"
-										aria-hidden="true"></i> Location</label> <input type="text"
-										class="form-control" name="location" id="Location"
-										placeholder="">
-								</div>
+									<label for="Location"><i class="fa fa-map-marker" aria-hidden="true"></i>Location</label> 
+									<input type="text" class="form-control" name="location" id="Location" placeholder="">
+								</div>								
 								<div>
 									<button id="locationAdd" type="button"
 										class="btn btn-outline-success btn-sm" onclick="addLFields()"
@@ -354,12 +352,28 @@
 		var compArr = [ 0 ];
 		var prepArr = [ 0 ];
 		
+		function removeFields(pCategory, pValue) {
+			var field, button, label;
+			
+			switch (pCategory) {
+				case 0: //Location
+					field = '#Location' + pValue;
+					button = '#locationDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=Location' + pValue +']').remove();
+					console.log(field, button, 'label[for=Location' + pValue +']');
+					break;
+			}
+		}
+		
 		function addLFields() {
 			$('#locationAdd').remove();
 			lCtr++;
 						
 			var inputField = '<div class="col-13"><label for="Location'+ lCtr +'">Location</label><input type="text" class="form-control" name="location" id="Location'+ lCtr +'" placeholder="">';
-			var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addLFields()" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button></div>';
+			var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addLFields()" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button>' +
+							'<button id="locationDelete'+ lCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(0,'+ lCtr +')" style="margin-top: 5px"><i class="fa fa-plus" aria-hidden="true"></i> Delete</button></div>';
 			
 			$('#locationGroup').append(inputField, buttonAdd);
 			console.log(inputField);
