@@ -364,6 +364,14 @@
 					$('label[for=Location' + pValue +']').remove();
 					console.log(field, button, 'label[for=Location' + pValue +']');
 					break;
+				case 1: // Illness
+					field = '#Illness' + pValue;
+					button = '#illnessDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=Illness' + pValue +']').remove();
+					console.log(field, button, 'label[for=Illness' + pValue +']');
+					break;
 			}
 		}
 		
@@ -373,7 +381,7 @@
 						
 			var inputField = '<div class="col-13"><label for="Location'+ lCtr +'">Location</label><input type="text" class="form-control" name="location" id="Location'+ lCtr +'" placeholder="">';
 			var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addLFields()" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button>' +
-							'<button id="locationDelete'+ lCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(0,'+ lCtr +')" style="margin-top: 5px"><i class="fa fa-plus" aria-hidden="true"></i> Delete</button></div>';
+							'<button id="locationDelete'+ lCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(0,'+ lCtr +')" style="margin-top: 5px"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button></div>';
 			
 			$('#locationGroup').append(inputField, buttonAdd);
 			console.log(inputField);
@@ -394,9 +402,11 @@
 			var inputField = '<div class="col-4"></div><div class="col-4"><label for="Illness'+ iCtr +'">Illness <i class="fa fa-viruses"></i></label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+pValue+']['+prepArr[pValue]+']"><input type="hidden" name="illnessCtr['+pValue+']" value="'+prepArr[pValue]+'">';
 			
 			if (pValue == 0) {
-				var buttonAdd = '<button id="illnessAdd" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>';
+				var buttonAdd = '<div><button id="illnessAdd" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>'+
+								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div></div>';
 			} else {
-				var buttonAdd = '<button id="illnessAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>';
+				var buttonAdd = '<div><button id="illnessAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>'+
+								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div></div>';
 			}
 	
 			var newIllness = inputField + buttonAdd;
