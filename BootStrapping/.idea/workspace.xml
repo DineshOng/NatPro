@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="771" column="35" selection-start-line="771" selection-start-column="35" selection-end-line="771" selection-end-column="35" />
+            <state relative-caret-position="192">
+              <caret line="677" column="37" selection-start-line="677" selection-start-column="37" selection-end-line="677" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,42 +27,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-estrella-Preparation.xml">
+        <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#4331#4336#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="21" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation/fff614b7f12551a41b350789393a6cef-salimomo -Preparation.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#1756#1761#0" expanded="true" />
-                <element signature="e#2551#2556#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation/fff614b7f12551a41b350789393a6cef-rainbow eucalyptus-Location.xml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-Illness.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="3" selection-end-column="14" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
+            <state relative-caret-position="894">
               <caret line="106" column="96" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="96" />
             </state>
           </provider>
@@ -172,7 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -214,6 +198,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -298,8 +283,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2675906" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -308,7 +294,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -438,7 +424,6 @@
     <state x="34" y="23" key="new project wizard/0.23.1280.732@0.23.1280.732" timestamp="1582638934534" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Location.xml" />
     <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Compound.xml" />
     <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Coenzyme Q10-BioAct.xml" />
     <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-alpha-amyrin cinnamate-BioAct.xml" />
@@ -503,9 +488,7 @@
     <entry file="file://$PROJECT_DIR$/validation/74bc8b5ded4b337f2f48505a03eac372-beta-sitosterol-BioAct.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation/e49d67bbcad547335de0e20ad819c320-pluchea indica-Compound.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/e49d67bbcad547335de0e20ad819c320-pluchea indica-Compound.xml" />
     <entry file="file://$PROJECT_DIR$/validation/6931da59fd9c497e637927048ea454df-leaves-Compound.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -516,16 +499,7 @@
     <entry file="file://$PROJECT_DIR$/validation/5ad2f694f6bd8ca27d7092adf86c3ba0-flowers-Compound.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation/6931da59fd9c497e637927048ea454df-duranta erecta-PlantPart.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/6931da59fd9c497e637927048ea454df-duranta erecta-PlantPart.xml" />
     <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Family.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -636,32 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-Illness.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="96" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/33b3eab5b669bb43b47cda6374eea87c.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="402" selection-start-line="28" selection-start-column="398" selection-end-line="28" selection-end-column="402" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-PlantPart.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Preparation.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-tsampakang-puti-Preparation.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -680,23 +628,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation/fff614b7f12551a41b350789393a6cef-salimomo -Preparation.xml">
+    <entry file="file://$PROJECT_DIR$/validation/fff614b7f12551a41b350789393a6cef-salimomo -Preparation.xml" />
+    <entry file="file://$PROJECT_DIR$/validation/fff614b7f12551a41b350789393a6cef-rainbow eucalyptus-Location.xml" />
+    <entry file="file://$PROJECT_DIR$/TaggedSample/33b3eab5b669bb43b47cda6374eea87c.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="402" selection-start-line="28" selection-start-column="398" selection-end-line="28" selection-end-column="402" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-PlantPart.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Preparation.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-Illness.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="894">
+          <caret line="106" column="96" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-balaniu-Preparation.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <element signature="e#1756#1761#0" expanded="true" />
-            <element signature="e#2551#2556#0" expanded="true" />
+            <element signature="e#4219#4224#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation/fff614b7f12551a41b350789393a6cef-rainbow eucalyptus-Location.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="771" column="35" selection-start-line="771" selection-start-column="35" selection-end-line="771" selection-end-column="35" />
+        <state relative-caret-position="192">
+          <caret line="677" column="37" selection-start-line="677" selection-start-column="37" selection-end-line="677" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

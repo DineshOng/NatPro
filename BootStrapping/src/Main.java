@@ -678,9 +678,15 @@ public class Main {
                             Transformer transformer = transformerFactory.newTransformer();
                             DOMSource source = new DOMSource(document);
                             class1 = class1.replaceAll("<\\/?[a-z]+>", "");
+                            if(e1.contains("Preparation")){
+                                StreamResult streamResult = new StreamResult("validation/"+hashxml+"-"+"Preparation"+"-"+e2+".xml");
+                                transformer.transform(source,streamResult);
+                            }
+                            else{
+                                StreamResult streamResult = new StreamResult("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
+                                transformer.transform(source,streamResult);
+                            }
 
-                            StreamResult streamResult = new StreamResult("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
-                            transformer.transform(source,streamResult);
 
                         } catch (ParserConfigurationException | TransformerException e) {
                             e.printStackTrace();
