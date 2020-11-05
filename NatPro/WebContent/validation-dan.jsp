@@ -63,7 +63,7 @@
 										# ${docunum}</button></td>
 								<td><button type="button" class="btn btn-success btn-sm"
 										data-toggle="modal" data-target="#entryModal${modalId}"
-										onclick="getPlantEntity('${Validations.getPdfFileName()}',${modalId})">${SynonymsList}</button></td>
+										onclick="getPlantEntity('${Validations.getPdfFileName()}',${modalId})">${SynonymsList.getSpecie()}</button></td>
 								<!-- data-backdrop='static' data-keyboard='false' -->
 								<td><button type="button" class="btn btn-warning btn-sm"
 										data-toggle="modal" data-target="" data-backdrop='static'

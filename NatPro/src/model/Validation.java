@@ -7,7 +7,8 @@ public class Validation {
 	String pdfFileName;
 	HashSet<MedicinalPlant> medPlants;
 	HashSet<String> MedicinalPlants;
-	HashSet<String> Synonyms;
+	HashSet<Species> Synonyms;
+	HashSet<Species> Synonyms1;
 	HashSet<String> PlantParts;
 	HashSet<String> Compounds;
 	HashSet<String> BioAct;
@@ -24,7 +25,7 @@ public class Validation {
 		this.medPlants = new HashSet<MedicinalPlant>();
 		this.MedicinalPlants = new HashSet<String>();
 		this.PlantParts = new HashSet<String>();
-		this.Synonyms = new HashSet<String>();
+		this.Synonyms = new HashSet<Species>();
 		this.Compounds = new HashSet<String>();
 		this.BioAct = new HashSet<String>();
 		this.CellLine = new HashSet<String>();
@@ -57,7 +58,7 @@ public class Validation {
 		Compounds.add(compound);
 	}
 	
-	public void addSynonyms(String synonym) {
+	public void addSynonyms(Species synonym) {
 		Synonyms.add(synonym);
 	}
 	
@@ -89,7 +90,7 @@ public class Validation {
 		return MedicinalPlants;
 	}
 
-	public HashSet<String> getSynonyms() {
+	public HashSet<Species> getSynonyms() {
 		return Synonyms;
 	}
 

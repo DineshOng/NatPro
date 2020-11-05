@@ -55,4 +55,30 @@ public class Species {
 	public void setGenus(Genus genusObj) {
 		this.genusObj = genusObj;
 	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((specie == null) ? 0 : specie.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Species other = (Species) obj;
+		if (specie == null) {
+			if (other.specie != null)
+				return false;
+		} else if (!specie.equals(other.specie))
+			return false;
+		return true;
+	}
 }
