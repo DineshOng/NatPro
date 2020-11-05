@@ -383,6 +383,12 @@
 				case 3: // Chemical Compound
 					break;
 				case 4: // Biological Activity
+					field = '#biologicalActivityContainer' + pValue;
+					button = '#biologicalActivityDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=BiologicalActivity' + pValue +']').remove();
+					console.log(field, button, 'label[for=' + pValue +']');
 					break;
 				case 5: // Species Part
 					break;
@@ -420,10 +426,10 @@
 									'<button id="illnessAdd" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button>'+
 								'</div>'+
 								'<div class="col-4"></div>'+
-								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div></div>';
+								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button></div><div class="col-4"></div></div>';
 			} else {
 				var buttonAdd = '<div><button id="illnessAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>'+
-								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div></div>';
+								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button></div><div class="col-4"></div></div>';
 			}
 	
 			var newIllness = inputField + buttonAdd;
@@ -517,14 +523,15 @@
 			
 			if (pValue == 0) {
 				
-				var newRow = '<div class="form-group form-row">';
+				var newRow = '<div class="form-group form-row" id="biologicalActivityContainer'+baclCtr+'">';
 				
 				var inputBioAct = '<div class="col-3"> </div>'+
-							  '<div class="col-4">'+
-								  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
-								  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
-								  '<button id="biologicalActivityAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
-					  		  '</div>';
+								  '<div class="col-4">'+
+									  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+									  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+									  '<button id="biologicalActivityAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+						  		  	  '<button id="biologicalActivityDelete'+ baclCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(4, '+ baclCtr +')" style="margin-top: 5px"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button>'+
+								  '</div>';
 					  		  
 		  		var inputCellLine = '<div class="col-4">'+
 											'<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
@@ -532,20 +539,21 @@
 											'<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
 											'<input type="hidden" name="lengthBC['+sVal+']['+cVal+']" value="'+speciesArr2[sVal][cVal]+'">'+
 									'</div>';
-																		
+									
   				var endRow = '</div>';
 				
 				var newBioAct = newRow + inputBioAct + inputCellLine  + endRow;
 	
 				$('#biologicalActivityGroup').append(newBioAct);
 			} else {
-				var newRow = '<div class="form-group form-row">';
+				var newRow = '<div class="form-group form-row" id="biologicalActivityContainer'+baclCtr+'>';
 				
 				var inputBioAct = '<div class="col-3"> </div>'+
 							  	  '<div class="col-4">'+
 									  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
 									  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
 									  '<button id="biologicalActivityAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+									  '<button id="biologicalActivityDelete'+ baclCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(4, '+ baclCtr +')" style="margin-top: 5px"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button>'+
 					  		       '</div>';
 					  		  
 		  		var inputCellLine = '<div class="col-4">'+
