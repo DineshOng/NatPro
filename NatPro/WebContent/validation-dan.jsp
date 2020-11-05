@@ -471,9 +471,9 @@
 					  },
 				success : function(data) {
 					console.log(data);
-					document.getElementById("ScientificName"+id).value=data[0].Synonyms[0];
+					document.getElementById("ScientificName"+id).value=data[0].Synonyms[id-1].specie;
 					var locs = data[0].Location;
-					console.log(locs);
+					/* console.log(locs); */
 					locs.forEach(function(elem, index, array) {
 					    addLFields(id,elem);
 					});
@@ -486,7 +486,7 @@
 	var lCtr = 0;
 	var empty = "\'\'";
 	function addLFields(id, locName) {
-		console.log(id, locName);
+		/* console.log(id, locName); */
 		$('#locationAdd').remove();
 		lCtr++;		
 		var inputField = '<div class="col-13"><input type="text" class="form-control" name="location" id="Location['+id +']['+lCtr+']" placeholder="Location" value="'+locName+'">';
