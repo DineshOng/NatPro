@@ -372,6 +372,20 @@
 					$('label[for=Illness' + pValue +']').remove();
 					console.log(field, button, 'label[for=Illness' + pValue +']');
 					break;
+				case 2: // Preparation
+					field = '#preparationContainer' + pValue;
+					button = '#preparationDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=Preparation' + pValue +']').remove();
+					console.log(field, button, 'label[for=PreparationGroup' + pValue +']');
+					break;
+				case 3: // Chemical Compound
+					break;
+				case 4: // Biological Activity
+					break;
+				case 5: // Species Part
+					break;
 			}
 		}
 		
@@ -402,7 +416,10 @@
 			var inputField = '<div class="col-4"></div><div class="col-4"><label for="Illness'+ iCtr +'">Illness <i class="fa fa-viruses"></i></label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+pValue+']['+prepArr[pValue]+']"><input type="hidden" name="illnessCtr['+pValue+']" value="'+prepArr[pValue]+'">';
 			
 			if (pValue == 0) {
-				var buttonAdd = '<div><button id="illnessAdd" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>'+
+				var buttonAdd = '<div>'+
+									'<button id="illnessAdd" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button>'+
+								'</div>'+
+								'<div class="col-4"></div>'+
 								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div></div>';
 			} else {
 				var buttonAdd = '<div><button id="illnessAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>'+
@@ -432,7 +449,7 @@
 			pbpCtr++;
 			iCtr++;
 	
-			var openingDiv = '<div class="border-bottom border-secondary mb-3"><div class="form-group form-row">';
+			var openingDiv = '<div class="border-bottom border-secondary mb-3" id="preparationContainer'+pbpCtr+'"><div class="form-group form-row">';
 			
 			var inputPreparation = '<div class="col-1"></div>'+
 									'<div class="col">'+
@@ -472,9 +489,15 @@
 								'<div class="form-row" style="width: 50%">'+
 									'<button type="button" class="btn btn-outline-success btn-block btn" id="preparationAdd'+pbpCtr+'" onclick="addPFields('+pbpCtr+')">Add Preparation</button>'
 								'</div>'+
-							'</div>';	 
+							'</div>';	
+							
+			var buttonDelete = '<div class="d-flex justify-content-center">'+
+								   '<div class="form-row" style="width: 50%">'+
+									   '<button type="button" class="btn btn-outline-danger btn-block" id="preparationDelete'+pbpCtr+'" onclick="removeFields(2,'+pbpCtr+')">Delete Preparation</button>'+
+								   '</div>'+
+							   '</div>';
 			
-			var newPrep = openingDiv + inputPreparation + inputUtilizedPlant + inputPlantPartOther + closingDiv + inputIllness + closingDiv  + buttonAdd ;
+			var newPrep = openingDiv + inputPreparation + inputUtilizedPlant + inputPlantPartOther + closingDiv + inputIllness + closingDiv  + buttonAdd + buttonDelete;
 			
 			$('#preparationGroup').append(newPrep);
 	
