@@ -1,0 +1,155 @@
+www.scholarsresearchlibrary.comt Available online a 
+ 
+ 
+ 
+ 
+ 
+ 
+Scholars Research Library 
+ 
+Der Pharmacia Lettre,  2016, 8 (19):234-236 
+(http://scholarsresearchlibrary.com/archive.html) 
+ 
+ 
+ISSN 0975-5071 
+USA CODEN: DPLEB4 
+ 
+234 
+Scholar Research Library 
+Chemical Constituents of Duranta erecta L. Flowers 
+ 
+Julius Leonard A. Vivar1, Mariquit M. De Los Reyes2, Chien-Chang Shen3,  
+and Consolacion Y. Ragasa1,4,* 
+ 
+1Chemistry Department, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines 
+2Biology Department, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines 
+3National Research Institute of Chinese Medicine, Ministry of Health and Welfare, 155-1, Li-
+Nong St., Sec. 2, Taipei 112, Taiwan 
+4Chemistry Department, De La Salle University Science & Technology Complex Leandro V. 
+Locsin Campus, Biñan City, Laguna 4024, Philippines 
+_____________________________________________________________________________________________ 
+ 
+ABSTRACT 
+ 
+Chemical investigation of the dichloromethane extract of the flowers of Duranta erecta L. has led to the isolation of 
+oleanolic acid (1), a mixture of ?-amyrin (2a) and ?-amyrin (2b) in a 3:1 ratio, phytyl fatty acid esters (3), and 
+triacylglycerols (4), The structures of 1-4b were identified by comparison of their NMR data with literature data. 
+ 
+Keywords: Duranta erecta, Verbenaceae, oleanolic acid, phytyl fatty acid esters, ?-amyrin, ?-amyrin, 
+triacylglycerols 
+_____________________________________________________________________________________________ 
+ 
+INTRODUCTION 
+ 
+Duranta erecta L. (syn. D. repens L.) of the family Verbenaceae is  an ornamental plant which originated fom South 
+America [1,2].   In Chinese medicine, the fruits were used for treatment of malaria and the leaves are employed for 
+the treatment of abscesses [3]. The leaves of D. erecta yielded iridoid glucosides, duranterectosides A, B, C and D, 
+durantosides I and II, lamiide, lamiidoside and verbascoside. Duranterectoside A durantosides I, II and III, and 
+lamiidoside were also isolated from the stems [4]. The leaves of D. repens yielded durantoside IV, durantoside V, 
+oleanolic acid, ursolic acid, (E)-cinnamic acid, ?-sitosteryl-3-O-?-D-glucopyranoside, (E)-p-methoxycinnamic acid, 
+kusaginin, glucose, durantoside I, and durantoside II [5]. The chloroform extract of stem and ethanol extract of fruits 
+exhibited potent antishigellosis activity and moderate activity against some pathogenic bacteria and fungi.  A 
+mixture of ?-amyrin and 12-oleanene 3?, 21?-diol from these extracts showed mild to moderate antimicrobial ativity 
+[6].  Phenylethanoid glycoside acteoside, the iridoid lamiide and the saponin pseudo-ginsenoside-RT1 were isolated 
+from the methanol extract of D. repens. Acteoside showed an IC50 of 3.05 +/- 0.09 µg/mL in the DPPH assay, while 
+lamiide and pseudo- ginsenoside-RT1 were inactive [7].  The leaves of D. repens yielded durantanin IV and V, a 
+bidesmosidic saponin, oleanolic acid, three phenylethanoids and five flavonoids [8].  Another study reported the 
+isolation of the flavonoids 3,7,4?-trihydroxy-3?-(4-hydroxy-3-methylbutyl)-5,6-dimethoxyflavone,3,7-dihydroxy-3?-
+(4-hydroxy-3-methylbuty l)-5,6,4?-trimetho xyflavone and diterpenes 6?-hydroxy-15,16-epoxy-5?,8?,9?,10?-
+cleroda-3,13(16),14-trien-18-oic acid and 2?-hydroxy-15,16-epoxy-5?,8?,9?,10?-cleroda-3,13,14-trien-18-oic acid 
+from D. repens [9]. Furthermore, 24-ethylcholest-5-en-3-?-ol, naringenin, 3,4-dihydroxy-?-phenethyl-O-?- 
+Consolacion Y. Ragasa et al Der Pharmacia Lettre, 2016, 8 (19):234-236 
+______________________________________________________________________________ 
+235 
+Scholar Research Library 
+rhamnopyranosyl-4-O-caffeoyl-?-D-glucopyranosid, lamiide, ?-glucopyranosyl-?-fructopyrano side, and ?-
+galactopyranosyl-?-glucopyranosyl-fructopyranoside were isolated from the ethanol extract of D. repens. The 
+petroleum ether extract afforded a mixture of hydrocarbons ranging from C15 - C27, fatty acids methyl esters and 
+fatty acids with palmitic acid as the main component (46%) [10].   Moreover, trans-cinnamic acid was isolated from 
+the methanol extract of the fruits of D. repens [11].  
+ 
+In this study, we report the isolation of oleanolic acid (1), a mixture of ?-amyrin (2a) and ?-amyrin (2b), phytyl fatty 
+acid esters (3), and triacylglycerols (4) from the flowers of D. erecta. The structures of 1-4  are presented in Fig. 1. 
+ 
+ 
+ 
+Fig. 1. Chemical structures of oleanolic acid (1), ?-amyrin (2a) and ?-amyrin (2b), phytyl fatty acid esters (3), and triacylglycerols (4) 
+from the flowers of D. erecta 
+ 
+MATERIALS AND METHODS 
+ 
+General Experimental Procedure 
+NMR spectra were recorded on a Varian VNMRS spectrometer in CDCl3 at 600 MHz for 
+1H NMR and 150 MHz 
+for 13C NMR spectra. Column chromatography was performed with silica gel 60 (70-230 mesh). Thin layer 
+chromatography was performed with plastic backed plates coated with silica gel F254 and the plates were visualized 
+by spraying with vanillin/H2SO4 solution followed by warming. 
+ 
+Sample Collection 
+Samples of the flowers of Duranta erecta were collected from Sta Rosa, Laguna, Plippines in January 2015. The 
+samples were authenticated at the Botany Division, Philippine National Museum. 
+ 
+General Isolation Procedure 
+A glass column 12 inches in height and 0.5 inch internal diameter was used for the chromatography. The crude 
+extracts were fractionated by silica gel chromatography using increasing proportions of acetone in CH2Cl2 at 10% 
+increment by volume as eluents. Five milliliter fractions were collected. All fractions were monitored by thin layer 
+chromatography. Fractions with spots of the same Rf  values were combined and rechromatographed in appropriate 
+Consolacion Y. Ragasa et al Der Pharmacia Lettre, 2016, 8 (19):234-236 
+______________________________________________________________________________ 
+236 
+Scholar Research Library 
+solvent systems until TLC pure isolates were obtained. Final purifications were conducted using Pasteur pipettes as 
+columns. One milliliter fractions were collected. 
+ 
+Isolation of the chemical constituents from the Flowers of Duranta erecta 
+The air-dried D. erecta flowers (70 g) were ground in a blender, soaked in CH2Cl2 for 3 days and then filtered. The 
+solvent was evaporated under vacuum to afford a crude extract (1.86 g) which was chromatographed using 
+increasing proportions of acetone in CH2Cl2 in 10% increments by volume. The 20% acetone in CH2Cl2 fraction was 
+rechromatographed using 7.5% EtOAc in petroleum ether.  The less polar fractions were combined and 
+rechromatographed using  7.5% EtOAc in petroleum ether to afford 3 (4 mg). The more polar fractions were 
+combined and rechromatographed using  7.5% EtOAc in petroleum ether to afford 4 (5 mg).  The 30% acetone in 
+CH2Cl2 fraction was rechromatographed  (2 ×)  using  15% EtOAc in petroleum ether to afford a mixture of 2a and 
+2b (6 mg) after washing with petroleum ether.  The 90% acetone in CH2Cl2 fraction was rechromatographed (2 ×) 
+using CH3CN:Et2O:CH2Cl2 (0.5:0.5:9, v/v) to afford 1 (3 mg) after washing with petroleum ether. 
+ 
+RESULTS AND DISCUSSION 
+ 
+Silica gel chromatography of the dichloromethane extract of the leaves of D. erecta yielded 1–4b.  The NMR spectra 
+of 1 are in accordance with data reported in the literature for olenolic acid [12]; 2a for ?-amyrin [13]; and 2b for ?-
+amyrin  [13]; 3 for phytyl fatty acid esters [14]; and 4 for triacylglycerols [15].  The 3:1 ratio of the mixture of ?-
+amyrin (2a) and ?-amyrin (2b) was deduced from the integrations and intensities of the 1H NMR resonances for the 
+olefinic protons of 2a at ? 5.24 (t, J = 3.6 Hz, H-12) and 2b at ? 5.27 (t, J = 3.6 Hz, H-12) [13].  
+ 
+Acknowledgement 
+A research grant from the Science Foundation through the University Research Coordination Office of De La Salle 
+University is gratefully acknowledged. 
+REFERENCES 
+ 
+[1] Duranta erecta L. - The Plant List. Downloaded from www.theplantlist.org/tpl/record/kew-65221 on November 
+3, 2016. 
+[2] T. Amano.  (1989) Useful Trees in Ryukyu Islands, p. 307. Okinawa Shuppan, Okinawa.  
+[3] X. Peigeng (ed.). (1992). A Pictorial Encyclopaedia of Chinese Medical Herbs, Chuokoron Sha, Inc., Tokyo, 1, 
+158. 
+[4] Y. Takeda, Y. Morimoto, T. Matsumoto, C. Ogimi, E. Hirata, A. Takushi, H. Otsuka. Phytochem., 1995, 39(4), 
+829-833. 
+[5] Y.-H. Kuo, Z.-S. Chen, Y.-L. Lin. Chem. Pharm. Bull., 1996, 44(2), 429-436. 
+[6] F. Nikkon, M. Rowshanul Habib, M. Rezaul Karim, M. Shamim Hossain, M. Ashik Mosaddik, M. Ekramul 
+Haque. Mycobiol., 2008, 36(3), 173–177. 
+[7] A. A. Shahat, N. M. Nazif, I. M. Abousetta, N. A. Ibrahim, P. Cos, S. Van Miert, L. Pieters, A. J. Vlietinck. 
+Phytother. Res., 2005, 19(12), 1071–1073. 
+[8] W. S. Ahmed, M. A. Mohamed, A. Rabab, A. El-Dib 2, M. M. Hamed. Molecules, 2009, 14, 1952–1965. 
+[9] I. Anis, E. Anis, S. Ahmed, G. Mustafa, A. Malik, Z. Amtul, Attaur Rahman. Helv. Chim. Acta, 2001, 84(3), 
+649–655. 
+[10] L. M. Abou-Setta, N. M. Nazif, A. A. Shahat. J. Appl. Sci. Res., 2007, 3(11), 1426–1433. 
+[11] S. E. Januar, P. Sugita, B. Arifin. Int. Res. J. Pure Appl. Chem., 2015, 8(2), 73–80. 
+[12] C. Y. Ragasa, V. D. Ebajo Jr., N. Lazaro-Llanos, R. Brklja?a, S. Urban. Der Pharma Chemica. 2015, 7(10), 
+473–478. 
+[13] Ebajo Jr VD, Shen C-C, Ragasa CY. J. Appl. Pharm. Sci., 2015, 5(3), 33–39.  
+[14] C. Y. Ragasa, J. L. Caro, L. G. Lirio, C. C. Shen. Res. J. Pharm. Biol. Chem. Sci., 2014, 5(6), 344–348. 
+[15] C. Y. Ragasa, J. Caro, C.-C. Shen. Der Pharma Chemica 2015, 7(2), 178–182. 
+ 
+ 
+ 
+ 
+ 
+ 

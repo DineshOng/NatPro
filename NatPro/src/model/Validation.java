@@ -5,32 +5,31 @@ import java.util.HashSet;
 public class Validation {
 
 	String pdfFileName;
-	HashSet<MedicinalPlant> medPlants;
-	HashSet<String> MedicinalPlants;
+	HashSet<MedicinalPlant> MedicinalPlants;
 	HashSet<Species> Synonyms;
-	HashSet<Species> Synonyms1;
-	HashSet<String> PlantParts;
-	HashSet<String> Compounds;
-	HashSet<String> BioAct;
-	HashSet<String> CellLine;
+	HashSet<SpeciesPart> PlantParts;
+	HashSet<Compound> Compounds;
+	HashSet<BiologicalActivity> BioAct;
+	HashSet<CellLine> CellLine;
 	HashSet<String> Family;
 	HashSet<String> Genus;
 	HashSet<String> Location;
-	HashSet<String> Preparation;
+	HashSet<Preparation> Preparation;
 	HashSet<String> Illness;
 	
 	
 	public Validation(String pdfFileName) {
 		// TODO Auto-generated constructor stub
-		this.medPlants = new HashSet<MedicinalPlant>();
-		this.Synonyms = new HashSet<Species>();
-		this.Compounds = new HashSet<String>();
-		this.BioAct = new HashSet<String>();
-		this.CellLine = new HashSet<String>();
+		this.MedicinalPlants = new HashSet<MedicinalPlant>();
+		this.Synonyms = new HashSet<Species>();		
+		this.PlantParts = new HashSet<SpeciesPart>();		
+		this.Compounds = new HashSet<Compound>();
+		this.BioAct = new HashSet<BiologicalActivity>();
+		this.CellLine = new HashSet<CellLine>();
 		this.Family = new HashSet<String>();
 		this.Genus = new HashSet<String>();
 		this.Location = new HashSet<String>();
-		this.Preparation = new HashSet<String>();
+		this.Preparation = new HashSet<Preparation>();
 		this.Illness = new HashSet<String>();
 		this.pdfFileName = pdfFileName;
 	}
@@ -44,15 +43,15 @@ public class Validation {
 		this.pdfFileName = pdfFilePath;
 	}
 	
-	public void addMedicinalPlants(String medicinalPlant) {
+	public void addMedicinalPlants(MedicinalPlant medicinalPlant) {
 		MedicinalPlants.add(medicinalPlant);
 	}
 	
-	public void addPlantParts(String plantPart) {
+	public void addPlantParts(SpeciesPart plantPart) {
 		PlantParts.add(plantPart);
 	}
 	
-	public void addCompounds(String compound) {
+	public void addCompounds(Compound compound) {
 		Compounds.add(compound);
 	}
 	
@@ -60,11 +59,11 @@ public class Validation {
 		Synonyms.add(synonym);
 	}
 	
-	public void addBioActs(String bioact) {
+	public void addBioActs(BiologicalActivity bioact) {
 		BioAct.add(bioact);
 	}
 	
-	public void addCellLine(String cellline) {
+	public void addCellLine(CellLine cellline) {
 		CellLine.add(cellline);
 	}
 	
@@ -76,7 +75,7 @@ public class Validation {
 		Genus.add(genus);
 	}
 	
-	public void addPreparation(String preparation) {
+	public void addPreparation(Preparation preparation) {
 		Preparation.add(preparation);
 	}
 
@@ -84,7 +83,7 @@ public class Validation {
 		Location.add(location);
 	}
 	
-	public HashSet<String> getMedicinalPlants() {
+	public HashSet<MedicinalPlant> getMedicinalPlants() {
 		return MedicinalPlants;
 	}
 
@@ -93,21 +92,20 @@ public class Validation {
 	}
 
 
-	public HashSet<String> getPlantParts() {
+	public HashSet<SpeciesPart> getPlantParts() {
 		return PlantParts;
 	}	
 	
-	public HashSet<String> getCompounds() {
+	public HashSet<Compound> getCompounds() {
 		return Compounds;
 	}
 
-
-	public HashSet<String> getBioAct() {
+	public HashSet<BiologicalActivity> getBioAct() {
 		return BioAct;
 	}
 
 
-	public HashSet<String> getCellLine() {
+	public HashSet<CellLine> getCellLine() {
 		return CellLine;
 	}
 
@@ -122,7 +120,7 @@ public class Validation {
 	}
 
 
-	public HashSet<String> getPreparation() {
+	public HashSet<Preparation> getPreparation() {
 		return Preparation;
 	}
 
