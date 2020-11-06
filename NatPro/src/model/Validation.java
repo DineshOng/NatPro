@@ -23,8 +23,6 @@ public class Validation {
 	public Validation(String pdfFileName) {
 		// TODO Auto-generated constructor stub
 		this.medPlants = new HashSet<MedicinalPlant>();
-		this.MedicinalPlants = new HashSet<String>();
-		this.PlantParts = new HashSet<String>();
 		this.Synonyms = new HashSet<Species>();
 		this.Compounds = new HashSet<String>();
 		this.BioAct = new HashSet<String>();
