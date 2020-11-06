@@ -306,25 +306,26 @@ public class ValidationServlet extends HttpServlet {
 							Iterator<Species> sIt = validation.getSynonyms().iterator();
 							while (sIt.hasNext()) {
 								Species specie = sIt.next();
+
+								Iterator<SpeciesPart> ppIt = validation.getPlantParts().iterator();
+								while (ppIt.hasNext()) {
+									SpeciesPart speciePart = ppIt.next();
+									if (specie.getSpeciesParts() != null)
+										for (SpeciesPart sp : specie.getSpeciesParts()) {
+											if (sp.equals(speciePart)) {
+												sp.setCompounds(speciePart.getCompounds());
+											}
+										}
+
+								}
 								if (specie.equals(s)) {
 									s.setSpeciesParts(specie.getSpeciesParts());
-									sIt.remove();
-									validation.getSynonyms().remove(specie);
+//									sIt.remove();
+//									validation.getSynonyms().remove(specie);
 								}
-							}
-
-							Iterator<SpeciesPart> ppIt = validation.getPlantParts().iterator();
-							while (ppIt.hasNext()) {
-								SpeciesPart speciePart = ppIt.next();
-								if (s.getSpeciesParts() != null)
-									for (SpeciesPart sp : s.getSpeciesParts()) {
-										if (sp.equals(speciePart)) {
-											sp.setCompounds(speciePart.getCompounds());
-//											validation.getPlantParts().remove(speciePart);
-										}
-									}
 
 							}
+
 						}
 
 					}
