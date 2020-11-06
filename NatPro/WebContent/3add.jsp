@@ -217,12 +217,6 @@
 												<input type="text" class="form-control"
 													id="BiologicalActivity" placeholder=""
 													name="bioAct[0][0][0]">
-												<button id="biologicalActivityAdd" type="button"
-													class="btn btn-outline-success btn-sm"
-													onclick="addBAFields(0,0,0)" style="margin-top: 5px">
-													<i class="fa fa-plus" aria-hidden="true"></i> Biological
-													Activity
-												</button>
 											</div>
 											<div class="col-4">
 												<label for="CellLine">Cell Line</label> <input type="text"
@@ -232,6 +226,20 @@
 													name="lengthBC[0][0]" value="0">
 											</div>
 										</div>
+										
+										<div class="form-row">
+											<div class="col-3"></div>
+											<div class="col-4">
+												<button id="biologicalActivityAdd" type="button"
+													class="btn btn-outline-success btn-sm"
+													onclick="addBAFields(0,0,0)" style="margin-top: -17px">
+													<i class="fa fa-plus" aria-hidden="true"></i> Biological
+													Activity
+												</button>
+											</div>
+											<div class="w-100"></div>
+										</div>
+										
 									</div>
 								</div>
 							</div>
@@ -529,8 +537,6 @@
 								  '<div class="col-4">'+
 									  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
 									  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
-									  '<button id="biologicalActivityAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
-						  		  	  '<button id="biologicalActivityDelete'+ baclCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(4, '+ baclCtr +')" style="margin-top: 5px"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button>'+
 								  '</div>';
 					  		  
 		  		var inputCellLine = '<div class="col-4">'+
@@ -540,9 +546,26 @@
 											'<input type="hidden" name="lengthBC['+sVal+']['+cVal+']" value="'+speciesArr2[sVal][cVal]+'">'+
 									'</div>';
 									
+				var inputButtons = '<div class="form-row">'+
+									   '<div class="col-3"></div>'+
+									   '<div class="col-4">'+
+										   '<button id="biologicalActivityDelete'+baclCtr+'" type="button"'+
+											   'class="btn btn-outline-danger btn-sm"'+
+											   'onclick="removeFields(4, '+ baclCtr +')" style="margin-top: -17px">'+
+											   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+										   '</button>'+
+										   '<button id="biologicalActivityAdd" type="button"'+
+											   'class="btn btn-outline-success btn-sm"'+
+											   'onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top: -5px">'+
+											   '<i class="fa fa-plus" aria-hidden="true"></i> Biological'+
+											   'Activity'+
+										   '</button>'+
+									   '</div>'+
+								   '</div>';
+									
   				var endRow = '</div>';
 				
-				var newBioAct = newRow + inputBioAct + inputCellLine  + endRow;
+				var newBioAct = newRow + inputBioAct + inputCellLine  + endRow + inputButtons;
 	
 				$('#biologicalActivityGroup').append(newBioAct);
 			} else {
@@ -564,8 +587,25 @@
 									'</div>';
 									
   				var endRow = '</div>';
+  				
+  				var inputButtons = '<div class="form-row">'+
+									   '<div class="col-3"></div>'+
+									   '<div class="col-4">'+
+										   '<button id="biologicalActivityDelete'+baclCtr+'" type="button"'+
+											   'class="btn btn-outline-danger btn-sm"'+
+											   'onclick="removeFields(4, '+ baclCtr +')" style="margin-top: -17px">'+
+											   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+										   '</button>'+
+										   '<button id="biologicalActivityAdd" type="button"'+
+											   'class="btn btn-outline-success btn-sm"'+
+											   'onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top: -5px">'+
+											   '<i class="fa fa-plus" aria-hidden="true"></i> Biological'+
+											   'Activity'+
+										   '</button>'+
+									   '</div>'+
+								   '</div>';
 				
-				var newBioAct = newRow + inputBioAct + inputCellLine + endRow;
+				var newBioAct = newRow + inputBioAct + inputCellLine + endRow + inputButtons;
 					
 				var inputGroupText = "#biologicalActivityGroup" + pValue;
 	
