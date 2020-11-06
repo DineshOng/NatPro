@@ -10,6 +10,7 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
@@ -34,6 +35,12 @@ import com.flickr4java.flickr.FlickrException;
 import com.google.gson.Gson;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import model.BiologicalActivity;
+import model.CellLine;
+import model.Compound;
+import model.MedicinalPlant;
+import model.Species;
+import model.SpeciesPart;
 import model.Validation;
 import service.OntoQuery;
 
@@ -101,14 +108,13 @@ public class ValidationServlet extends HttpServlet {
 				Validation xmlValidation = new Validation(pdfFileName);
 				xmlValidation = findIfPresent(xmlValidation, validations);
 
-				String xmlString = readFile(xmlFile, fileReader).toString();
-				String[] xmlLine = xmlString.split("\\r?\\n");
-				Collections.addAll(lines, xmlLine);
-//			System.out.println(lines);
-
-				TreeSet<String> CategoryList = new TreeSet<String>();
-				readXML(xmlValidation, xmlFile, "Tag1");
-				readXML(xmlValidation, xmlFile, "Tag2");
+//				String xmlString = readFile(xmlFile, fileReader).toString();
+//				String[] xmlLine = xmlString.split("\\r?\\n");
+//				Collections.addAll(lines, xmlLine);
+////			System.out.println(lines);
+//
+//				TreeSet<String> CategoryList = new TreeSet<String>();
+				readXML(xmlValidation, xmlFile);
 
 				validations.add(xmlValidation);
 			}
@@ -129,9 +135,8 @@ public class ValidationServlet extends HttpServlet {
 		HashSet<Validation> validations = new HashSet<Validation>();
 		for (File xmlFile : listFiles) {
 			ArrayList<String> lines = new ArrayList<String>();
-			System.out.println(xmlFile.getAbsolutePath());
+//			System.out.println(xmlFile.getAbsolutePath());
 			pdfFileName = getPdfFileName(xmlFile) + ".pdf";
-			request.setAttribute("pdfFileName", pdfFileName);
 
 			Validation xmlValidation = new Validation(pdfFileName);
 			xmlValidation = findIfPresent(xmlValidation, validations);
@@ -142,8 +147,8 @@ public class ValidationServlet extends HttpServlet {
 //			System.out.println(lines);
 
 			TreeSet<String> CategoryList = new TreeSet<String>();
-			readXML(xmlValidation, xmlFile, "Tag1");
-			readXML(xmlValidation, xmlFile, "Tag2");
+			readXML(xmlValidation, xmlFile);
+//			readXML(xmlValidation, xmlFile, "Tag2");
 
 			validations.add(xmlValidation);
 		}
@@ -166,7 +171,6 @@ public class ValidationServlet extends HttpServlet {
 
 	public StringBuilder readFile(File xmlFile, Reader fileReader) {
 		try {
-
 			fileReader = new FileReader(xmlFile);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -201,7 +205,7 @@ public class ValidationServlet extends HttpServlet {
 
 	}
 
-	public void readXML(Validation validation, File xmlFile, String tag) {
+	public void readXML(Validation validation, File xmlFile) {
 		// CHECKS IF THE GENERATED XML FILE EXISTS
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		try {
@@ -217,98 +221,114 @@ public class ValidationServlet extends HttpServlet {
 			 * ==========================
 			 */
 			Document doc = builder.parse(xmlFile.getAbsoluteFile());
-
 			doc.getDocumentElement().normalize();
-
 			NodeList nodeList = doc.getElementsByTagName("Seed");
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				Node nNode = nodeList.item(i);
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 					Element eElement = (Element) nNode;
-					int eCount = eElement.getElementsByTagName(tag).getLength();
-					for (int j = 0; j < eCount; j++) {
-						String tag1 = eElement.getElementsByTagName(tag).item(j).getTextContent();
-						Element nameElement = (Element) eElement.getElementsByTagName(tag).item(j);
-						if (tag1.contains("PlantPart")) {
-							System.out.println("PlantPart");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addPlantParts(
-										nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("BioAct")) {
-							System.out.println("BioAct");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation
-										.addBioActs(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("CellLine")) {
-							System.out.println("CellLine");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation
-										.addCellLine(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("Compound")) {
-							System.out.println("Compound");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addCompounds(
-										nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("Synonym")) {
-							System.out.println("Synonym");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation
-										.addSynonyms(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("MedicinalPlant")) {
-							System.out.println("MedicinalPlant");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addMedicinalPlants(
-										nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("Genus")) {
-							System.out.println("Genus");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addGenus(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("Family")) {
-							System.out.println("Family");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addFamily(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("Preparation")) {
-							System.out.println("Preparation");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation.addPreparation(
-										nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("Illness")) {
-							System.out.println("Illness");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation
-										.addIllness(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-							}
-						} else if (tag1.contains("Location")) {
-							System.out.println("Location");
-							for (int k = 0; k < nameElement.getElementsByTagName("Name").getLength(); k++) {
-								System.out.println(nameElement.getElementsByTagName("Name").item(k).getTextContent());
-								validation
-										.addLocation(nameElement.getElementsByTagName("Name").item(k).getTextContent());
+
+					String tag1 = eElement.getElementsByTagName("Tag1").item(0).getTextContent();
+					String tag2 = eElement.getElementsByTagName("Tag2").item(0).getTextContent();
+
+					Element elementTag1 = (Element) eElement.getElementsByTagName("Tag1").item(0);
+					Element elementTag2 = (Element) eElement.getElementsByTagName("Tag2").item(0);
+
+					NodeList nameElementTag1 = elementTag1.getElementsByTagName("Name");
+					NodeList nameElementTag2 = elementTag2.getElementsByTagName("Name");
+
+					if (tag1.contains("MedicinalPlant")) {
+						MedicinalPlant medPlant = new MedicinalPlant(nameElementTag1.item(0).getTextContent());
+						// check if species is already in the hash set, add new if specie is unique
+						if (validation.getMedicinalPlants().contains(medPlant)) {
+							for (MedicinalPlant m : validation.getMedicinalPlants()) {
+								if (m.equals(medPlant))
+									medPlant = m;
 							}
 						}
+						ArrayList<Species> species = new ArrayList<>();
+						if (tag2.contains("Synonym")) {
+							Species specie = new Species(nameElementTag2.item(0).getTextContent());
+							species.add(specie);
 
-//						matches.add(eElement.getElementsByTagName("Tag1").item(j).getTextContent());
+						}
+						medPlant.setSpecies(species);
+						validation.addMedicinalPlants(medPlant);
 					}
 
+					if (tag1.contains("Synonym")) {
+						Species specie = new Species(nameElementTag1.item(0).getTextContent());
+						// check if species is already in the hash set, add new if specie is unique
+						if (validation.getSynonyms().contains(specie)) {
+							for (Species s : validation.getSynonyms()) {
+								if (s.equals(specie))
+									specie = s;
+							}
+						}
+						ArrayList<SpeciesPart> specieParts = new ArrayList<>();
+						if (tag2.contains("PlantPart")) {
+							for (int j = 0; j < nameElementTag2.getLength(); j++) {
+								SpeciesPart speciePart = new SpeciesPart(nameElementTag2.item(j).getTextContent());
+								specieParts.add(speciePart);
+
+							}
+						}
+						specie.setSpeciesParts(specieParts);
+						validation.addSynonyms(specie);
+					}
+
+					if (tag1.contains("PlantPart")) {
+						SpeciesPart speciePart = new SpeciesPart(nameElementTag1.item(0).getTextContent());
+						// check if species is already in the hash set, add new if specie is unique
+						if (validation.getPlantParts().contains(speciePart)) {
+							for (SpeciesPart sp : validation.getPlantParts()) {
+								if (sp.equals(speciePart))
+									speciePart = sp;
+							}
+						}
+						ArrayList<Compound> compounds = new ArrayList<>();
+						if (tag2.contains("Compound")) {
+							for (int j = 0; j < nameElementTag2.getLength(); j++) {
+								Compound compound = new Compound(nameElementTag2.item(j).getTextContent());
+								compounds.add(compound);
+
+							}
+						}
+						speciePart.setCompounds(compounds);
+						validation.addPlantParts(speciePart);
+					}
+
+					// CONNECT HASHSETS TO ITS CORRESPONDING OBJECTS
+					Iterator<MedicinalPlant> mpIt = validation.getMedicinalPlants().iterator();
+					while (mpIt.hasNext()) {
+						MedicinalPlant mp = mpIt.next();
+						for (Species s : mp.getSpecies()) {
+							Iterator<Species> sIt = validation.getSynonyms().iterator();
+							while (sIt.hasNext()) {
+								Species specie = sIt.next();
+
+								Iterator<SpeciesPart> ppIt = validation.getPlantParts().iterator();
+								while (ppIt.hasNext()) {
+									SpeciesPart speciePart = ppIt.next();
+									if (specie.getSpeciesParts() != null)
+										for (SpeciesPart sp : specie.getSpeciesParts()) {
+											if (sp.equals(speciePart)) {
+												sp.setCompounds(speciePart.getCompounds());
+											}
+										}
+
+								}
+								if (specie.equals(s)) {
+									s.setSpeciesParts(specie.getSpeciesParts());
+//									sIt.remove();
+//									validation.getSynonyms().remove(specie);
+								}
+
+							}
+
+						}
+
+					}
 				}
 			}
 		} catch (ParserConfigurationException | IOException e) {
