@@ -36,9 +36,9 @@ public class OntoQuery {
 
 	public OntoQuery() throws OntologyLoadException {
 		/* Change local path */
-//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 //		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
-		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+//		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -1765,6 +1765,30 @@ public class OntoQuery {
 				}
 			}
 
+		}
+		return values;
+	}
+	
+	public List<String> searchLocations(String locs) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		List<String> locations = getAllLocations();
+		for(String loc : locations) {
+			if(loc.toLowerCase().contains(locs.toLowerCase())) {
+				//if(!values.contains(loc.toLowerCase()))
+				values.add(loc);
+			}
+		}
+		return values;
+	}
+	
+	public List<String> searchSynonyms(String name) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		List<String> syns = getAllSynonyms();
+		for(String syn : syns) {
+			if(syn.toLowerCase().contains(name.toLowerCase())) {
+				//if(!values.contains(loc.toLowerCase()))
+				values.add(syn);
+			}
 		}
 		return values;
 	}

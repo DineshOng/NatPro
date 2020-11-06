@@ -45,11 +45,24 @@ public class SearchServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		try {
-			browse(request, response);
-		} catch (OntologyLoadException | SQWRLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+//		try {
+//			browse(request, response);
+//		} catch (OntologyLoadException | SQWRLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		switch (request.getServletPath()) {
+		case "/BrowseServlet":
+			try {
+				browse(request, response);
+			} catch (OntologyLoadException | ServletException | IOException | SQWRLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			break;
+		default:
+			System.out.println("aERROR(Inside userServlet *doPost*): url pattern doesn't match existing patterns.");
 		}
 	}
 
@@ -96,13 +109,7 @@ public class SearchServlet extends HttpServlet {
 //			System.out.println(medPlants.get(0).getPreparations().get(0).getIllness());
 			request.setAttribute("medPlantsList", medPlants);
 		} else if (request.getParameter("searchCategory").equals("2")) {
-			List<String> species = new ArrayList<String>();
-			try {
-				species = q.getAllSynonyms();
-			} catch (SQWRLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			List<String> species = q.searchSynonyms(searchKey);
 			request.setAttribute("speciesList", species);
 		} else if (request.getParameter("searchCategory").equals("3")) {
 			List<Genus> genus = q.searchGenus(searchKey);
@@ -114,7 +121,7 @@ public class SearchServlet extends HttpServlet {
 			List<Compound> compoundList = q.searchCompound(searchKey);
 			request.setAttribute("compoundList", compoundList);
 		} else if (request.getParameter("searchCategory").equals("6")) {
-			List<String> locList = q.getAllLocations();
+			List<String> locList = q.searchLocations(searchKey);
 			request.setAttribute("locList", locList);
 		}
 
