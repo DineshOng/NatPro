@@ -36,9 +36,9 @@ public class OntoQuery {
 
 	public OntoQuery() throws OntologyLoadException {
 		/* Change local path */
-		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 //		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
-//		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
+		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -1086,6 +1086,50 @@ public class OntoQuery {
 
 	}
 
+	public List<String> getCompoundCell(String compound) throws SQWRLException {
+
+		List<String> values = new ArrayList<String>();
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
+		RDFProperty datatypeProperty_CellLine = owlModel.getRDFProperty("datatypeProperty_CellLine");
+
+		RDFProperty hasBiologicalActivity = owlModel.getRDFProperty("hasBiologicalActivity");
+		RDFProperty affects = owlModel.getRDFProperty("affects");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Compound")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						if (compound
+								.equalsIgnoreCase(individual.getPropertyValue(datatypeProperty_Compound).toString())) {
+
+							Collection bioActs = individual.getPropertyValues(hasBiologicalActivity);
+
+							for (Iterator kt = bioActs.iterator(); kt.hasNext();) {
+								OWLIndividual bioActIndiv = (OWLIndividual) kt.next();
+								try {
+									OWLIndividual cellIndiv = (OWLIndividual) bioActIndiv.getPropertyValue(affects);
+									System.out.println(cellIndiv.getPropertyValue(datatypeProperty_CellLine).toString());
+									values.add(cellIndiv.getPropertyValue(datatypeProperty_CellLine).toString());
+								} catch (Exception e) {
+//									values.add(bioActIndiv.getBrowserText().replaceAll("_", " "));
+								}
+
+							}
+						}
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+
+		return values;
+	}
+
 	public Compound getCompound(String compoundName) {
 
 		Compound compound = null;
@@ -1768,25 +1812,25 @@ public class OntoQuery {
 		}
 		return values;
 	}
-	
+
 	public List<String> searchLocations(String locs) throws SQWRLException {
 		List<String> values = new ArrayList<String>();
 		List<String> locations = getAllLocations();
-		for(String loc : locations) {
-			if(loc.toLowerCase().contains(locs.toLowerCase())) {
-				//if(!values.contains(loc.toLowerCase()))
+		for (String loc : locations) {
+			if (loc.toLowerCase().contains(locs.toLowerCase())) {
+				// if(!values.contains(loc.toLowerCase()))
 				values.add(loc);
 			}
 		}
 		return values;
 	}
-	
+
 	public List<String> searchSynonyms(String name) throws SQWRLException {
 		List<String> values = new ArrayList<String>();
 		List<String> syns = getAllSynonyms();
-		for(String syn : syns) {
-			if(syn.toLowerCase().contains(name.toLowerCase())) {
-				//if(!values.contains(loc.toLowerCase()))
+		for (String syn : syns) {
+			if (syn.toLowerCase().contains(name.toLowerCase())) {
+				// if(!values.contains(loc.toLowerCase()))
 				values.add(syn);
 			}
 		}

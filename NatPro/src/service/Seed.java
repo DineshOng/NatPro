@@ -14,31 +14,32 @@ public class Seed {
 
 	public void generateSeed(OntoQuery q) throws OntologyLoadException, SQWRLException {
 
-		genMPWithSyn(q);
-		
-		genMPWithLoc(q);
-		genMPWithGenus(q);
-		genMPWithFamily(q);
-		genMPWithPart(q);
-		genMPWithComp(q);
-		genMPWithPrep(q);
-		
-		genSynWithLoc(q);
-		genSynWithGenus(q);
-		genSynWithFamily(q);
-		genSynWithPart(q);
-		genSynWithComp(q);
-
-		genGenusWithFamily(q);	
-		
-		genPrepWithIllness(q);
-		genPrepWithPlantPart(q);
-
-		genPartWithIllness(q);
-		genPartWithCompound(q);
-
-		genCompWithBioAct(q);
-		genBioActWithCell(q);
+//		genMPWithSyn(q);
+//		
+//		genMPWithLoc(q);
+//		genMPWithGenus(q);
+//		genMPWithFamily(q);
+//		genMPWithPart(q);
+//		genMPWithComp(q);
+//		genMPWithPrep(q);
+//		
+//		genSynWithLoc(q);
+//		genSynWithGenus(q);
+//		genSynWithFamily(q);
+//		genSynWithPart(q);
+//		genSynWithComp(q);
+//
+//		genGenusWithFamily(q);	
+//		
+//		genPrepWithIllness(q);
+//		genPrepWithPlantPart(q);
+//
+//		genPartWithIllness(q);
+//		genPartWithCompound(q);
+//
+//		genCompWithBioAct(q);
+//		genBioActWithCell(q);
+//		genCompWithCellLine(q);
 
 	}
 
@@ -554,6 +555,32 @@ public class Seed {
 					String bioact = removePar(BioAct.get(i));
 					String cell = removePar(Cell.get(j));
 					writer.write(bioact + ";" + cell);
+					writer.write("\r\n"); // write new line
+				}
+			}
+			writer.close();
+		} catch (
+
+		IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void genCompWithCellLine(OntoQuery q) throws SQWRLException {
+		List<String> Compound = q.getAllCompounds();
+		List<String> CellLine = new ArrayList<String>();
+		try {
+			PrintWriter writer = new PrintWriter("./Documents/SeedsPossible/Compound-CellLine.txt");
+			writer.print("");
+			writer.print("e1:Compound\r\n");
+			writer.print("e2:CellLine\r\n");
+			writer.write("\r\n"); // write new line
+			for (int i = 0; i < Compound.size(); i++) {
+				CellLine = q.getCompoundCell(Compound.get(i));
+				for (int j = 0; j < CellLine.size(); j++) {
+					String comp = removePar(Compound.get(i));
+					String cell = removePar(CellLine.get(j));
+					writer.write(comp + ";" + cell);
 					writer.write("\r\n"); // write new line
 				}
 			}
