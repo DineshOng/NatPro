@@ -366,7 +366,7 @@
 		var prepArr = [ 0 ];
 		
 		function removeFields(pCategory, pValue) {
-			var field, button, label;
+			var field, field2, button, label;
 			
 			switch (pCategory) {
 				case 0: //Location
@@ -395,8 +395,10 @@
 					break;
 				case 3: // Chemical Compound
 					field = '#chemicalCompoundContainer' + pValue;
+					field2 = '#biologicalActivityGroup' + pValue;
 					button = '#chemicalCompoundDelete' + pValue;
 					$(field).remove();
+					$(field2).remove();
 					$(button).remove();
 					$('label[for=ChemicalCompound' + pValue +']').remove();
 					console.log(field, button, 'label[for=ChemicalCompound' + pValue +']');
@@ -666,21 +668,25 @@
 									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
 								   '</div>'+
 								   '<div class="w-100"></div>'+
-								   '<div class="col-2"> </div>'+
-								   '<div class="col-10">'+
-									   '<button id="chemicalCompoundDelete'+ccCtr+'" type="button"'+
-										   'class="btn btn-outline-danger btn-sm"'+
-										   'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
-										   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
-									   '</button>'+
-									   '<button id="chemicalCompoundAdd" type="button"'+
-											   'class="btn btn-outline-success btn-sm"'+
-											   'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
-											   '<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
-											   'Compound'+
-									   '</button>'+
-								   '</div>'+
 							   '</div>';
+							   
+				var buttons = '<div class="form-group form-row" id="chemicalCompoundButtonContainer'+ccCtr+'">'+
+								  '<div class="col-2"> </div>'+
+							      '<div class="col-10">'+
+								      '<button id="chemicalCompoundDelete'+ccCtr+'" type="button"'+
+									      'class="btn btn-outline-danger btn-sm"'+
+									      'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
+									      '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+								      '</button>'+
+								      '<button id="chemicalCompoundAdd" type="button"'+
+										      'class="btn btn-outline-success btn-sm"'+
+										      'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
+										      '<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
+										      'Compound'+
+								      '</button>'+
+							      '</div>'+
+						      '</div>';
+						      
 				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
 							 	'<div class="form-group form-row">'+
 									 '<div class="col-3"> </div>'+
@@ -698,7 +704,7 @@
 								 '</div>'+
 							 '</div>';
 					
-				var chemCompFields = chemComp + bioAct;
+				var chemCompFields = chemComp + buttons + bioAct;
 				
 				$('#chemicalCompoundGroup').append(chemCompFields);
 			} else {
