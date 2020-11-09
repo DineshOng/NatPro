@@ -394,6 +394,12 @@
 					console.log(field, button, 'label[for=PreparationGroup' + pValue +']');
 					break;
 				case 3: // Chemical Compound
+					field = '#chemicalCompoundContainer' + pValue;
+					button = '#chemicalCompoundDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=ChemicalCompound' + pValue +']').remove();
+					console.log(field, button, 'label[for=ChemicalCompound' + pValue +']');
 					break;
 				case 4: // Biological Activity
 					field = '#biologicalActivityContainer' + pValue;
@@ -662,16 +668,16 @@
 								   '<div class="w-100"></div>'+
 								   '<div class="col-2"> </div>'+
 								   '<div class="col-10">'+
+									   '<button id="chemicalCompoundDelete'+ccCtr+'" type="button"'+
+										   'class="btn btn-outline-danger btn-sm"'+
+										   'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
+										   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+									   '</button>'+
 									   '<button id="chemicalCompoundAdd" type="button"'+
 											   'class="btn btn-outline-success btn-sm"'+
 											   'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
 											   '<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
 											   'Compound'+
-									   '</button>'+
-									   '<button id="chemicalCompoundDelete'+ccCtr+'" type="button"'+
-										   'class="btn btn-outline-danger btn-sm"'+
-										   'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
-										   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
 									   '</button>'+
 								   '</div>'+
 							   '</div>';
