@@ -154,7 +154,7 @@ public class ValidationServlet extends HttpServlet {
 		}
 
 		request.setAttribute("Validations", validations);
-		request.getRequestDispatcher("validation-dan.jsp").forward(request, response);
+		request.getRequestDispatcher("validation.jsp").forward(request, response);
 
 	}
 
