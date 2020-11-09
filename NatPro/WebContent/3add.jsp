@@ -199,13 +199,18 @@
 												aria-hidden="true"></i> Chemical Compound</label> <input type="text"
 												class="form-control" id="ChemicalCompound" placeholder=""
 												name="compound[0][0]">
-											<button id="chemicalCompoundAdd" type="button"
-												class="btn btn-outline-success btn-sm"
-												onclick="addCCFields(0)" style="margin-top: 5px">
-												<i class="fa fa-plus" aria-hidden="true"></i> Chemical
-												Compound
-											</button>
+											
 											<input type="hidden" name="lengthCC0" value="0">
+										</div>
+										<div class="w-100"></div>
+										<div class="col-2"> </div>
+										<div class="col-10">
+											<button id="chemicalCompoundAdd" type="button"
+													class="btn btn-outline-success btn-sm"
+													onclick="addCCFields(0)" style="margin-top: 5px">
+													<i class="fa fa-plus" aria-hidden="true"></i> Chemical
+													Compound
+											</button>
 										</div>
 									</div>
 
@@ -627,16 +632,47 @@
 			ccCtr++;
 			baclCtr++;
 			
+			/*
+				<div class="w-100"></div>
+				<div class="col-2"> </div>
+				<div class="col-10">
+					<button id="chemicalCompoundAdd" type="button"
+							class="btn btn-outline-success btn-sm"
+							onclick="addCCFields(0)" style="margin-top: 5px">
+							<i class="fa fa-plus" aria-hidden="true"></i> Chemical
+							Compound
+					</button>
+				</div>
+				
+				
+				
+				
+				'<div class="form-group form-row" id="biologicalActivityContainer'+baclCtr+'">';
+			*/
 			
 			if (pValue == 0) {
-				var chemComp = '<div class="form-group form-row">'+
+				var chemComp = '<div class="form-group form-row" id="chemicalCompoundContainer'+ccCtr+'">'+
 								   '<div class="col-2"> </div>'+
 								   '<div class="col-5">'+
 									   '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
 			    					   '<input type="text" class="form-control" id="ChemicalCompound'+ ccCtr +'" placeholder="" name="compound['+pValue+']['+speciesArr[pValue]+']">'+
-			    					   '<button id="chemicalCompoundAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
 									   '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
 									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
+								   '</div>'+
+								   '<div class="w-100"></div>'+
+								   '<div class="col-2"> </div>'+
+								   '<div class="col-10">'+
+									   '<button id="chemicalCompoundAdd" type="button"'+
+											   'class="btn btn-outline-success btn-sm"'+
+											   'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
+											   '<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
+											   'Compound'+
+									   '</button>'+
+									   '<button id="chemicalCompoundDelete'+ccCtr+'" type="button"'+
+										   'class="btn btn-outline-danger btn-sm"'+
+										   'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
+										   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+									   '</button>'+
 								   '</div>'+
 							   '</div>';
 				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
