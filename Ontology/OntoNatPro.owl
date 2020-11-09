@@ -230,6 +230,12 @@
     
 
 
+    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_CellLine -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_CellLine"/>
+    
+
+
     <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Charge -->
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Charge">
@@ -592,6 +598,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#ACF">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>ACF</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -600,6 +607,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#COLO_320_DM">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>COLO 320 DM</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -608,6 +616,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#DU-145">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>DU-145</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -616,6 +625,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#Ehrlich">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>Ehrlich</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -624,6 +634,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#Epstein-Barr_virus_early_antigen">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>Epstein Barr virus early antigen</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -632,6 +643,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HCT-116">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>HCT-116</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -640,6 +652,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HDFn">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>HDFn</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -648,6 +661,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HL60">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>HL60</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -656,6 +670,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#HT-29">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>HT-29</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -664,6 +679,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#MCF-7">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>MCF-7</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -672,6 +688,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#MDA-MB-231">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>MDA-MB-231</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -680,6 +697,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#NCI-H226">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>NCI-H226</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -696,6 +714,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#RPMI8226">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>RPMI8226</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
@@ -704,6 +723,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/PMPlants.owl#SMMC7721">
         <rdf:type rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#CellLine"/>
+        <datatypeProperty_CellLine>SMMC7721</datatypeProperty_CellLine>
     </owl:NamedIndividual>
     
 
