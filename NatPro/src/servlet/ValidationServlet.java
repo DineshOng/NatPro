@@ -237,6 +237,7 @@ public class ValidationServlet extends HttpServlet {
 					NodeList nameElementTag1 = elementTag1.getElementsByTagName("Name");
 					NodeList nameElementTag2 = elementTag2.getElementsByTagName("Name");
 
+					// MEDICINAL PLANT
 					if (tag1.contains("MedicinalPlant")) {
 						MedicinalPlant medPlant = new MedicinalPlant(nameElementTag1.item(0).getTextContent());
 						// check if species is already in the hash set, add new if specie is unique
@@ -246,16 +247,18 @@ public class ValidationServlet extends HttpServlet {
 									medPlant = m;
 							}
 						}
-						ArrayList<Species> species = new ArrayList<>();
+
 						if (tag2.contains("Synonym")) {
+							ArrayList<Species> species = new ArrayList<>();
 							Species specie = new Species(nameElementTag2.item(0).getTextContent());
 							species.add(specie);
-
+							medPlant.setSpecies(species);
 						}
-						medPlant.setSpecies(species);
+
 						validation.addMedicinalPlants(medPlant);
 					}
 
+					// SYNOYNM
 					if (tag1.contains("Synonym")) {
 						Species specie = new Species(nameElementTag1.item(0).getTextContent());
 						// check if species is already in the hash set, add new if specie is unique
@@ -265,18 +268,43 @@ public class ValidationServlet extends HttpServlet {
 									specie = s;
 							}
 						}
-						ArrayList<SpeciesPart> specieParts = new ArrayList<>();
+
 						if (tag2.contains("PlantPart")) {
+							ArrayList<SpeciesPart> specieParts = new ArrayList<>();
 							for (int j = 0; j < nameElementTag2.getLength(); j++) {
 								SpeciesPart speciePart = new SpeciesPart(nameElementTag2.item(j).getTextContent());
 								specieParts.add(speciePart);
 
 							}
+							specie.getSpeciesParts().addAll(specieParts);
 						}
-						specie.setSpeciesParts(specieParts);
+
+						if (tag2.contains("Compound")) {
+							HashSet<Compound> compounds = new HashSet<Compound>();
+							SpeciesPart tempSp = new SpeciesPart("tempSp");
+							for (int j = 0; j < nameElementTag2.getLength(); j++) {
+								Compound compound = new Compound(nameElementTag2.item(j).getTextContent());
+								compounds.add(compound);
+								ArrayList<Compound> compList = new ArrayList<Compound>(compounds);
+								tempSp.setCompounds(compList);
+							}
+
+							specie.getSpeciesParts().add(tempSp);
+
+						}
+
+						if (tag2.contains("Family")) {
+							specie.setFamily(nameElementTag2.item(0).getTextContent());
+						}
+
+						if (tag2.contains("Genus")) {
+							specie.setGenus(nameElementTag2.item(0).getTextContent());
+						}
+
 						validation.addSynonyms(specie);
 					}
 
+					// PLANT PART
 					if (tag1.contains("PlantPart")) {
 						SpeciesPart speciePart = new SpeciesPart(nameElementTag1.item(0).getTextContent());
 						// check if species is already in the hash set, add new if specie is unique
@@ -286,49 +314,141 @@ public class ValidationServlet extends HttpServlet {
 									speciePart = sp;
 							}
 						}
-						ArrayList<Compound> compounds = new ArrayList<>();
+
 						if (tag2.contains("Compound")) {
+							ArrayList<Compound> compounds = new ArrayList<>();
 							for (int j = 0; j < nameElementTag2.getLength(); j++) {
 								Compound compound = new Compound(nameElementTag2.item(j).getTextContent());
 								compounds.add(compound);
 
 							}
+							speciePart.setCompounds(compounds);
 						}
-						speciePart.setCompounds(compounds);
+
 						validation.addPlantParts(speciePart);
 					}
 
-					// CONNECT HASHSETS TO ITS CORRESPONDING OBJECTS
-					Iterator<MedicinalPlant> mpIt = validation.getMedicinalPlants().iterator();
-					while (mpIt.hasNext()) {
-						MedicinalPlant mp = mpIt.next();
-						for (Species s : mp.getSpecies()) {
-							Iterator<Species> sIt = validation.getSynonyms().iterator();
-							while (sIt.hasNext()) {
-								Species specie = sIt.next();
+					// COMPOUND
+					if (tag1.contains("Compound")) {
+						Compound compound = new Compound(nameElementTag1.item(0).getTextContent());
+						// check if bioact is already in the hash set, add new if bioact is unique
+						if (validation.getCompounds().contains(compound)) {
+							for (Compound c : validation.getCompounds()) {
+								if (c.equals(compound))
+									compound = c;
+							}
+						}
 
-								Iterator<SpeciesPart> ppIt = validation.getPlantParts().iterator();
-								while (ppIt.hasNext()) {
-									SpeciesPart speciePart = ppIt.next();
-									if (specie.getSpeciesParts() != null)
-										for (SpeciesPart sp : specie.getSpeciesParts()) {
-											if (sp.equals(speciePart)) {
-												sp.setCompounds(speciePart.getCompounds());
-											}
-										}
+						if (tag2.contains("BioAct")) {
+							HashSet<BiologicalActivity> bioActs = new HashSet<BiologicalActivity>();
+							for (int j = 0; j < nameElementTag2.getLength(); j++) {
+								BiologicalActivity bioAct = new BiologicalActivity(
+										nameElementTag2.item(j).getTextContent());
+								bioActs.add(bioAct);
 
-								}
-								if (specie.equals(s)) {
-									s.setSpeciesParts(specie.getSpeciesParts());
-//									sIt.remove();
-//									validation.getSynonyms().remove(specie);
-								}
+							}
+							compound.setBioActs(bioActs);
+						}
 
+						validation.addCompounds(compound);
+					}
+
+					// BIOLOGICAL ACTIVITY
+					if (tag1.contains("BioAct")) {
+						if (tag2.contains("CellLine")) {
+							for (int j = 0; j < nameElementTag2.getLength(); j++) {
+								BiologicalActivity bioAct = new BiologicalActivity(
+										nameElementTag1.item(0).getTextContent());
+								CellLine cellLine = new CellLine(nameElementTag2.item(j).getTextContent());
+								bioAct.setCellLine(cellLine);
+								validation.addBioActs(bioAct);
 							}
 
 						}
+					}
+
+					// CONNECT HASHSETS TO ITS CORRESPONDING OBJECTS
+//					if (validation.getCompounds().size() > 0) {
+//						Iterator<Compound> cIt = validation.getCompounds().iterator();
+//						while (cIt.hasNext()) {
+//							Compound comp = cIt.next();
+//							for (SpeciesPart sp : validation.getPlantParts()) {
+//								for (Compound c : sp.getCompounds()) {
+//									if (c.getCompoundName().equals(comp.getCompoundName())) {
+//										c.setBioActs(comp.getBioActs());
+//									}
+//								}
+//							}
+//
+//						}
+//					}
+
+					Iterator<Species> sIt = validation.getSynonyms().iterator();
+					while (sIt.hasNext()) {
+						Species specie = sIt.next();
+
+						Iterator<SpeciesPart> ppIt = validation.getPlantParts().iterator();
+						while (ppIt.hasNext()) {
+							SpeciesPart speciePart = ppIt.next();
+							if (specie.getSpeciesParts() != null)
+								for (SpeciesPart sp : specie.getSpeciesParts()) {
+									if (sp.equals(speciePart)) {
+										sp.setCompounds(speciePart.getCompounds());
+									}
+								}
+
+						}
+
+						if (validation.getCompounds().size() > 0) {
+							Iterator<Compound> cIt = validation.getCompounds().iterator();
+							while (cIt.hasNext()) {
+								Compound comp = cIt.next();
+								try {
+									for (SpeciesPart sp : specie.getSpeciesParts()) {
+										for (Compound c : sp.getCompounds()) {
+											if (c.getCompoundName().equals(comp.getCompoundName())) {
+												c.setBioActs(comp.getBioActs());
+											}
+										}
+									}
+								} catch (Exception e) {
+								}
+
+							}
+						}
 
 					}
+
+//					Iterator<MedicinalPlant> mpIt = validation.getMedicinalPlants().iterator();
+//					while (mpIt.hasNext()) {
+//						MedicinalPlant mp = mpIt.next();
+//						for (Species s : mp.getSpecies()) {
+//							Iterator<Species> sIt = validation.getSynonyms().iterator();
+//							while (sIt.hasNext()) {
+//								Species specie = sIt.next();
+//
+//								Iterator<SpeciesPart> ppIt = validation.getPlantParts().iterator();
+//								while (ppIt.hasNext()) {
+//									SpeciesPart speciePart = ppIt.next();
+//									if (specie.getSpeciesParts() != null)
+//										for (SpeciesPart sp : specie.getSpeciesParts()) {
+//											if (sp.equals(speciePart)) {
+//												sp.setCompounds(speciePart.getCompounds());
+//											}
+//										}
+//
+//								}
+//								if (specie.equals(s)) {
+//									s.setSpeciesParts(specie.getSpeciesParts());
+////									sIt.remove();
+////									validation.getSynonyms().remove(specie);
+//								}
+//
+//							}
+//
+//						}
+//
+//					}
 				}
 			}
 		} catch (ParserConfigurationException | IOException e) {

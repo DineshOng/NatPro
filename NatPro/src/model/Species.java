@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -14,6 +15,7 @@ public class Species {
 
 	public Species(String specie) {
 		this.specie = StringUtils.capitalize(specie);
+		speciesParts = new ArrayList<SpeciesPart>();
 	}
 
 	public String getSpecie() {

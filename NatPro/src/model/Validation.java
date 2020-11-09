@@ -10,12 +10,7 @@ public class Validation {
 	HashSet<SpeciesPart> PlantParts;
 	HashSet<Compound> Compounds;
 	HashSet<BiologicalActivity> BioAct;
-	HashSet<CellLine> CellLine;
-	HashSet<String> Family;
-	HashSet<String> Genus;
-	HashSet<String> Location;
 	HashSet<Preparation> Preparation;
-	HashSet<String> Illness;
 	
 	
 	public Validation(String pdfFileName) {
@@ -25,12 +20,7 @@ public class Validation {
 		this.PlantParts = new HashSet<SpeciesPart>();		
 		this.Compounds = new HashSet<Compound>();
 		this.BioAct = new HashSet<BiologicalActivity>();
-		this.CellLine = new HashSet<CellLine>();
-		this.Family = new HashSet<String>();
-		this.Genus = new HashSet<String>();
-		this.Location = new HashSet<String>();
 		this.Preparation = new HashSet<Preparation>();
-		this.Illness = new HashSet<String>();
 		this.pdfFileName = pdfFileName;
 	}
 
@@ -62,25 +52,9 @@ public class Validation {
 	public void addBioActs(BiologicalActivity bioact) {
 		BioAct.add(bioact);
 	}
-	
-	public void addCellLine(CellLine cellline) {
-		CellLine.add(cellline);
-	}
-	
-	public void addFamily(String family) {
-		Family.add(family);
-	}
-	
-	public void addGenus(String genus) {
-		Genus.add(genus);
-	}
-	
+			
 	public void addPreparation(Preparation preparation) {
 		Preparation.add(preparation);
-	}
-
-	public void addLocation(String location) {
-		Location.add(location);
 	}
 	
 	public HashSet<MedicinalPlant> getMedicinalPlants() {
@@ -104,40 +78,10 @@ public class Validation {
 		return BioAct;
 	}
 
-
-	public HashSet<CellLine> getCellLine() {
-		return CellLine;
-	}
-
-
-	public HashSet<String> getFamily() {
-		return Family;
-	}
-
-
-	public HashSet<String> getGenus() {
-		return Genus;
-	}
-
-
 	public HashSet<Preparation> getPreparation() {
 		return Preparation;
 	}
 
-
-	public HashSet<String> getIllness() {
-		return Illness;
-	}
-	
-	public HashSet<String> getLocation() {
-		return Location;
-	}
-
-
-	public void addIllness(String illness) {
-		Illness.add(illness);
-	}
-	
 
 	@Override
 	public int hashCode() {

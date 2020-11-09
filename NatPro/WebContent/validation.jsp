@@ -472,12 +472,11 @@
 				success : function(data) {
 					console.log(data);
 					document.getElementById("ScientificName"+id).value=data[0].Synonyms[id-1].specie;
-					var locs = data[0].Location;
-					/* console.log(locs); */
-					locs.forEach(function(elem, index, array) {
+/* 					var locs = data[0].Location;
+ 					locs.forEach(function(elem, index, array) {
 					    addLFields(id,elem);
 					});
-					document.getElementById("Illness"+id).value=data[0].Illness[0];
+					document.getElementById("Illness"+id).value=data[0].Illness[0];  */
 				}
 				}); 
 		}
