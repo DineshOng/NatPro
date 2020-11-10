@@ -368,20 +368,20 @@ public class ValidationServlet extends HttpServlet {
 					}
 
 					// CONNECT HASHSETS TO ITS CORRESPONDING OBJECTS
-//					if (validation.getCompounds().size() > 0) {
-//						Iterator<Compound> cIt = validation.getCompounds().iterator();
-//						while (cIt.hasNext()) {
-//							Compound comp = cIt.next();
-//							for (SpeciesPart sp : validation.getPlantParts()) {
-//								for (Compound c : sp.getCompounds()) {
-//									if (c.getCompoundName().equals(comp.getCompoundName())) {
-//										c.setBioActs(comp.getBioActs());
-//									}
-//								}
-//							}
-//
-//						}
-//					}
+					if (validation.getCompounds().size() > 0) {
+						Iterator<Compound> cIt = validation.getCompounds().iterator();
+						while (cIt.hasNext()) {
+							Compound comp = cIt.next();
+							for (SpeciesPart sp : validation.getPlantParts()) {
+								for (Compound c : sp.getCompounds()) {
+									if (c.getCompoundName().equals(comp.getCompoundName())) {
+										c.setBioActs(comp.getBioActs());
+									}
+								}
+							}
+
+						}
+					}
 
 					Iterator<Species> sIt = validation.getSynonyms().iterator();
 					while (sIt.hasNext()) {
