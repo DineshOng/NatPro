@@ -269,6 +269,18 @@ public class ValidationServlet extends HttpServlet {
 							}
 						}
 
+						MedicinalPlant medPlant = new MedicinalPlant(specie.getSpecie());
+						ArrayList<Species> sList = new ArrayList<Species>();
+						sList.add(specie);
+						medPlant.setSpecies(sList);
+						try {
+							for (MedicinalPlant mp : validation.getMedicinalPlants()) {
+								if (mp.getSpecies().get(0).getSpecie().equalsIgnoreCase(specie.getSpecie()))
+									medPlant = mp;
+							}
+						} catch (Exception e) {
+						}
+
 						if (tag2.contains("PlantPart")) {
 							ArrayList<SpeciesPart> specieParts = new ArrayList<>();
 							for (int j = 0; j < nameElementTag2.getLength(); j++) {
@@ -293,6 +305,17 @@ public class ValidationServlet extends HttpServlet {
 
 						}
 
+						if (tag2.contains("Location")) {
+							ArrayList<String> locations = new ArrayList<String>();
+
+							for (int j = 0; j < nameElementTag2.getLength(); j++) {
+								locations.add(nameElementTag2.item(j).getTextContent());
+							}
+
+							medPlant.setLocations(locations);
+
+						}
+
 						if (tag2.contains("Family")) {
 							specie.setFamily(nameElementTag2.item(0).getTextContent());
 						}
@@ -302,6 +325,7 @@ public class ValidationServlet extends HttpServlet {
 						}
 
 						validation.addSynonyms(specie);
+						validation.addMedicinalPlants(medPlant);
 					}
 
 					// PLANT PART
@@ -415,6 +439,26 @@ public class ValidationServlet extends HttpServlet {
 								}
 
 							}
+						}
+
+					}
+
+					if (validation.getMedicinalPlants().size() > 0) {
+						Iterator<MedicinalPlant> mIt = validation.getMedicinalPlants().iterator();
+						while (mIt.hasNext()) {
+							MedicinalPlant medPlant = mIt.next();
+							Iterator<MedicinalPlant> mIt2 = validation.getMedicinalPlants().iterator();
+							while (mIt2.hasNext()) {
+								MedicinalPlant medPlant2 = mIt2.next();
+								try {
+									if (medPlant.getMedicinalPlant()
+											.equalsIgnoreCase(medPlant2.getSpecies().get(0).getSpecie())) {
+										medPlant2.setLocations(medPlant.getLocations());
+									}
+								} catch (Exception e) {
+								}
+							}
+
 						}
 
 					}
