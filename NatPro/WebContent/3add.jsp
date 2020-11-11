@@ -414,6 +414,12 @@
 					console.log(field, button, 'label[for=' + pValue +']');
 					break;
 				case 5: // Species Part
+					field = '#SpeciesContainer' + pValue;
+					button = '#speciesDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					//$('label[for=BiologicalActivity' + pValue +']').remove();
+					//console.log(field, button, 'label[for=' + pValue +']');
 					break;
 			}
 		}
@@ -780,9 +786,8 @@
 			sCtr++;
 			ccCtr++;
 			baclCtr++;
-
-			
-			var speciesPPCluster = '<div class="border-bottom border-secondary mb-3"><div class="form-group form-row">'+
+						
+			var speciesPPCluster = '<div class="border-bottom border-secondary mb-3" id="SpeciesContainer'+sCtr+'"><div class="form-group form-row">'+
 									   '<div class="col-1"></div>'+
 									   '<div class="col-3">'+
 										   '<label for="SpeciesPlantPart'+sCtr+'">Species Plant Part</label>'+
@@ -835,6 +840,7 @@
 			var buttonAddSpecies =  '<div class="d-flex justify-content-center">'+
 										'<div class="form-row" style="width: 50%">'+
 											'<button type="button" class="btn btn-outline-success btn-block" id="speciesAdd" onclick="addSFields(0)">Add Species Part</button>'+
+											'<button type="button" class="btn btn-outline-danger btn-block" id="speciesDelete'+sCtr+'" onclick="removeFields(5, '+sCtr+')">Delete Species Part</button>'+
 										'</div>'+
 									'</div>';
 
