@@ -392,6 +392,7 @@ public class ValidationServlet extends HttpServlet {
 					}
 
 					// CONNECT HASHSETS TO ITS CORRESPONDING OBJECTS
+					// connect compounds to bioacts
 					if (validation.getCompounds().size() > 0) {
 						Iterator<Compound> cIt = validation.getCompounds().iterator();
 						while (cIt.hasNext()) {
@@ -407,6 +408,7 @@ public class ValidationServlet extends HttpServlet {
 						}
 					}
 
+					// connect species to compounds
 					Iterator<Species> sIt = validation.getSynonyms().iterator();
 					while (sIt.hasNext()) {
 						Species specie = sIt.next();
@@ -443,6 +445,7 @@ public class ValidationServlet extends HttpServlet {
 
 					}
 
+					// connect locations to medplant
 					if (validation.getMedicinalPlants().size() > 0) {
 						Iterator<MedicinalPlant> mIt = validation.getMedicinalPlants().iterator();
 						while (mIt.hasNext()) {
@@ -463,36 +466,26 @@ public class ValidationServlet extends HttpServlet {
 
 					}
 
-//					Iterator<MedicinalPlant> mpIt = validation.getMedicinalPlants().iterator();
-//					while (mpIt.hasNext()) {
-//						MedicinalPlant mp = mpIt.next();
-//						for (Species s : mp.getSpecies()) {
-//							Iterator<Species> sIt = validation.getSynonyms().iterator();
-//							while (sIt.hasNext()) {
-//								Species specie = sIt.next();
-//
-//								Iterator<SpeciesPart> ppIt = validation.getPlantParts().iterator();
-//								while (ppIt.hasNext()) {
-//									SpeciesPart speciePart = ppIt.next();
-//									if (specie.getSpeciesParts() != null)
-//										for (SpeciesPart sp : specie.getSpeciesParts()) {
-//											if (sp.equals(speciePart)) {
-//												sp.setCompounds(speciePart.getCompounds());
-//											}
-//										}
-//
-//								}
-//								if (specie.equals(s)) {
-//									s.setSpeciesParts(specie.getSpeciesParts());
-////									sIt.remove();
-////									validation.getSynonyms().remove(specie);
-//								}
-//
-//							}
-//
-//						}
-//
-//					}
+					if (validation.getMedicinalPlants().size() > 0) {
+						Iterator<MedicinalPlant> mIt = validation.getMedicinalPlants().iterator();
+						while (mIt.hasNext()) {
+							MedicinalPlant medPlant = mIt.next();
+							Iterator<Species> sIt2 = validation.getSynonyms().iterator();
+							while (sIt2.hasNext()) {
+								Species specie = sIt2.next();
+								try {
+									if (medPlant.getSpecies().get(0).getSpecie().equalsIgnoreCase(specie.getSpecie())) {
+										ArrayList<Species> sList = new ArrayList<Species>();
+										sList.add(specie);
+										medPlant.setSpecies(sList);
+									}
+								} catch (Exception e) {
+								}
+							}
+						}
+
+					}
+
 				}
 			}
 		} catch (ParserConfigurationException | IOException e) {
