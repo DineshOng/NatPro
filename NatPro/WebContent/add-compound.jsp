@@ -19,6 +19,14 @@
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
+<link href="cheminfo/kekule.css" rel="stylesheet" type="text/css">
+		
+	<script src="cheminfo/raphael-min.2.0.1.js"></script>	
+	<script src="cheminfo/Three.js"></script>	
+	
+	<script id="scriptOb" src="cheminfo/openbabel.js"></script>	
+	<script src="kekule/kekule.js?modules=io,chemWidget,openbabel"></script>	
+
 <title>NatPro Compound</title>
 
 	<style>
@@ -97,7 +105,7 @@
 								<script>
 								  var w = $("#cd").width();
 								  let transformStick = new ChemDoodle.TransformCanvas3D('transformStick', w, 340);
-								  transformStick.styles.set3DRepresentation('Ball and Stick');
+								  transformStick.styles.set3DRepresentation('Stick');
 								  transformStick.styles.backgroundColor = 'black';
 								  let molFile = '';
 								  let molecule = ChemDoodle.readMOL(molFile, 1);
@@ -539,6 +547,7 @@
 				console.log("f");
 				update3d();
 				$('input[name="canSMILES"]').val(jsmeApplet.smiles());
+				
 			}
 			
 		}
@@ -557,9 +566,11 @@
 		
 		function update3d() {
 			//$("#3d").attr("src", "3dmodel.html?nixon="+escape(lzw_encode(jsmeApplet.molFile(false))));
-			molFile = jsmeApplet.molFile(false);
+			//molFile = jsmeApplet.molFile(false);
+			gen3d();
+			molFile = obMol3d;
 			molecule = ChemDoodle.readMOL(molFile, 1);
-			  transformStick.loadMolecule(molecule);
+			transformStick.loadMolecule(molecule);
 			 /*	ChemDoodle.iChemLabs.optimize(molecule, {
 	                dimension: 3
 	            }, function(mol) {
@@ -640,7 +651,30 @@
     		}
 		}
 		
-		function lzw_encode(s) {
+		var obMol3d;
+		
+		function gen3d() {
+			var OpenBabel = Kekule.OpenBabel.getModule();
+			var smiles= jsmeApplet.smiles();
+			var conv = new OpenBabel.ObConversionWrapper();
+			conv.setInFormat('', 'smi');
+			var mol = new OpenBabel.OBMol();
+			conv.readString(mol, smiles);
+			var gen3d = OpenBabel.OBOp.FindType('Gen3D');  // FindType is actually a factory constructor, no need to use "new" here
+			if (!gen3d.Do(mol, ''))
+			  console.error('Generate 3D failed');
+			else
+			{
+			  conv.setOutFormat('', 'mol');
+			  var outputData = conv.writeString(mol, false);
+			  //console.log(outputData);
+			  obMol3d = outputData;
+			}
+			conv.delete();
+			mol.delete();
+		}
+		
+		/*function lzw_encode(s) {
 		    var dict = {};
 		    var data = (s + "").split("");
 		    var out = [];
@@ -664,7 +698,7 @@
 		        out[i] = String.fromCharCode(out[i]);
 		    }
 		    return out.join("");
-		}
+		}*/
 	</script>
 
 </body>
