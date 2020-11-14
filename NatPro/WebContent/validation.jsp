@@ -101,13 +101,13 @@
 							<li><a class="nav-link" href="#step-4"> Review Data </a></li>
 						</ul>
 
-						<div class="tab-content">
+						<div class="tab-content overflow-auto">
 							<div id="step-1" class="tab-pane" role="tabpanel">
 								<div class="card">
 									<div class="card-header text-center">
-										<h4 class="mt-1">General</h4>
+										<h4 class="mt-1">General Information</h4>
 									</div>
-									<div class="card-body">
+									<div class="card-body ">
 										<div class="form-group form-row">
 											<div class="col-4"></div>
 											<div class="col-4">
@@ -234,7 +234,7 @@
 							<div id="step-3" class="tab-pane" role="tabpanel">
 								<div class="card">
 									<div class="card-header text-center">
-										<h4 class="mt-1">Species</h4>
+										<h4 class="mt-1">Compound</h4>
 									</div>
 									<div class="card-body">
 										<div id="speciesGroup">
@@ -532,8 +532,9 @@
 	</script>
 
 	<script type="text/javascript">
-		function getPlantEntity(fileName, id){
+		function getPlantEntity(fileName, id, sciName){
 			console.log(fileName);
+			console.log(sciName);
 			console.log(id);
 	 		$.ajax({
 				type : "GET",
@@ -541,15 +542,19 @@
 				dataType: 'json',
 				data: {
 					fileName: fileName,
+					sciName: sciName
 					  },
 				success : function(data) {
 					console.log(data);
-					document.getElementById("ScientificName").value=data[0].Synonyms[id-1].specie;
-/* 					var locs = data[0].Location;
- 					locs.forEach(function(elem, index, array) {
-					    addLFields(id,elem);
-					});
-					document.getElementById("Illness"+id).value=data[0].Illness[0];  */
+					/* console.log(); */
+					document.getElementById("ScientificName").value=data.species[0].specie;
+					document.getElementById("CommonPlantName").value=data.medicinalPlant;
+					var locs = data.locations;
+					if(locs!=null){
+	 					locs.forEach(function(elem, index, array) {
+						    addLFields(id,elem);
+						});
+					}
 				}
 				}); 
 		}

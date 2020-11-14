@@ -25,6 +25,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.WordUtils;
 import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -93,6 +95,7 @@ public class ValidationServlet extends HttpServlet {
 	private void getPlantEntity(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String plantFileName = request.getParameter("fileName");
+		String sciName = request.getParameter("sciName");
 		File Folder = new File(validationFolder);
 		File[] listFiles = Folder.listFiles();
 		Reader fileReader = null;
@@ -100,29 +103,44 @@ public class ValidationServlet extends HttpServlet {
 		HashSet<Validation> validations = new HashSet<Validation>();
 		for (File xmlFile : listFiles) {
 			ArrayList<String> lines = new ArrayList<String>();
-//			System.out.println(xmlFile.getAbsolutePath());
+
 			pdfFileName = getPdfFileName(xmlFile) + ".pdf";
 			if (pdfFileName.equalsIgnoreCase(plantFileName)) {
 
-//			request.setAttribute("pdfFileName", pdfFileName);
 				Validation xmlValidation = new Validation(pdfFileName);
 				xmlValidation = findIfPresent(xmlValidation, validations);
 
-//				String xmlString = readFile(xmlFile, fileReader).toString();
-//				String[] xmlLine = xmlString.split("\\r?\\n");
-//				Collections.addAll(lines, xmlLine);
-////			System.out.println(lines);
-//
-//				TreeSet<String> CategoryList = new TreeSet<String>();
 				readXML(xmlValidation, xmlFile);
 
 				validations.add(xmlValidation);
 			}
 		}
-		String jsonString = new Gson().toJson(validations);
-		System.out.println(jsonString);
+		String jsonEntry = "";
+		Iterator<Validation> vIt = validations.iterator();
+		while (vIt.hasNext()) {
+			Validation v = vIt.next();
+			if (v.getPdfFileName().equalsIgnoreCase(plantFileName)) {
+//				Iterator<Species> sIt = v.getSynonyms().iterator();
+//				while (sIt.hasNext()) {
+//					Species s = sIt.next();
+//					if(s.getSpecie().equalsIgnoreCase(sciName)) {
+//						jsonEntry = new Gson().toJson(s);
+//					}
+//				}
+
+				Iterator<MedicinalPlant> mIt = v.getMedicinalPlants().iterator();
+				while (mIt.hasNext()) {
+					MedicinalPlant m = mIt.next();
+					if (m.getSpecies().get(0).getSpecie().equalsIgnoreCase(sciName)) {
+						jsonEntry = new Gson().toJson(m);
+					}
+				}
+			}
+		}
+//		String jsonValidations = new Gson().toJson(validations);
+//		System.out.println(jsonValidations);
 		PrintWriter out = response.getWriter();
-		out.println(jsonString);
+		out.println(jsonEntry);
 
 	}
 
@@ -309,7 +327,7 @@ public class ValidationServlet extends HttpServlet {
 							ArrayList<String> locations = new ArrayList<String>();
 
 							for (int j = 0; j < nameElementTag2.getLength(); j++) {
-								locations.add(nameElementTag2.item(j).getTextContent());
+								locations.add(WordUtils.capitalizeFully(nameElementTag2.item(j).getTextContent()));
 							}
 
 							medPlant.setLocations(locations);
