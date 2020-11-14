@@ -25,7 +25,9 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
 	crossorigin="anonymous">
-
+<link
+	href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css"
+	rel="stylesheet" type="text/css" />
 <title>NatPro : ${searchKey}</title>
 </head>
 <body>
@@ -47,7 +49,7 @@
 				<tr>
 					<th>Document Number</th>
 					<th>Plant</th>
-					<th>Compound</th>
+					<!-- <th>Compound</th> -->
 				</tr>
 			</thead>
 			<tbody>
@@ -62,260 +64,13 @@
 										onclick="viewDocument('${Validations.getPdfFileName()}')">Document
 										# ${docunum}</button></td>
 								<td><button type="button" class="btn btn-success btn-sm"
-										data-toggle="modal" data-target="#entryModal${modalId}"
-										onclick="getPlantEntity('${Validations.getPdfFileName()}',${modalId})">${SynonymsList.getSpecie()}</button></td>
-								<!-- data-backdrop='static' data-keyboard='false' -->
-								<td><button type="button" class="btn btn-warning btn-sm"
+										data-toggle="modal" data-target="#entryModal"
+										onclick="getPlantEntity('${Validations.getPdfFileName()}',${modalId},'${SynonymsList.getSpecie()}')">${SynonymsList.getSpecie()}</button></td>
+								<!-- <td><button type="button" class="btn btn-warning btn-sm"
 										data-toggle="modal" data-target="" data-backdrop='static'
-										data-keyboard='false'>Compounds</button></td>
+										data-keyboard='false'>Compounds</button></td> -->
 							</tr>
 
-							<!-- Modal -->
-							<div class="modal fade" id="entryModal${modalId}" tabindex="-1"
-								aria-labelledby="entryModalLabel${modalId}" aria-hidden="true">
-								<div class="modal-dialog modal-lg">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title" id="entryModalLabel${modalId}">Validating
-												Extracted Plant Entry</h5>
-										</div>
-										<div class="modal-body">
-											<div class="card">
-												<div class="card-header text-center">
-													<h4 class="mt-1">General</h4>
-												</div>
-												<div class="card-body">
-													<div class="form-group form-row">
-														<div class="col-4"></div>
-														<div class="col-4">
-															<label for="CommonPlantName"> <i
-																class="fa fa-address-card" aria-hidden="true"></i>
-																Common Plant Name
-															</label> <input type="text" id="CommonPlantName${modalId}"
-																name="commonPlantName" class="form-control"
-																placeholder="" required>
-														</div>
-													</div>
-													<div class="form-group form-row">
-														<div class="col-2"></div>
-														<div class="col-4">
-															<label for="Genus"><i class="fa fa-group"
-																aria-hidden="true"></i> Genus</label> <input type="text"
-																class="form-control" name="genus" id="Genus${modalId}"
-																placeholder="">
-														</div>
-														<div class="col-4">
-															<label for="Family"><i class="fa fa-group"
-																aria-hidden="true"></i> Family</label> <input type="text"
-																class="form-control" name="family" id="Family${modalId}"
-																placeholder="">
-														</div>
-													</div>
-
-													<div class="form-group form-row">
-														<div class="col-2"></div>
-														<div class="col-4">
-															<label for="ScientificName"><i
-																class="fa fa-drivers-license" aria-hidden="true"></i>
-																Scientific Name</label> <input type="text" class="form-control"
-																name="scientificName" id="ScientificName${modalId}"
-																pattern="^([A-Z][a-z]+) +([a-z-]+).*$" placeholder=""
-																required>
-														</div>
-														<div id="locationGroup" class="col-4">
-															<div class="col-13">
-																<label for="Location"><i
-																	class="fa fa-map-marker" aria-hidden="true"></i>
-																	Location</label>
-															</div>
-															<div>
-																<button id="locationAdd" type="button"
-																	class="btn btn-outline-success btn-sm"
-																	onclick="addLFields(${modalId},'')"
-																	style="margin-top: 5px">
-																	<i class="fa fa-plus" aria-hidden="true"></i> Location
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="card">
-												<div class="card-header text-center">
-													<h4 class="mt-1">Preparation</h4>
-												</div>
-												<div class="card-body">
-													<div id="preparationGroup">
-														<div class="border-bottom border-secondary mb-3">
-															<div class="form-group form-row">
-																<div class="col-1"></div>
-																<div class="col">
-																	<label for="Preparation"><i class="fa fa-cogs"
-																		aria-hidden="true"></i> Preparation</label> <input type="text"
-																		class="form-control" id="Preparation${modalId}"
-																		placeholder="" name="preparation[0]"> <input
-																		type="hidden" name="prepCtr" value="0">
-																</div>
-																<div class="col">
-																	<label for="PlantPart"><i class="fa fa-leaf"
-																		aria-hidden="true"></i> Plant Part</label> <select
-																		name="prepPart[0]"
-																		class="custom-select custom-select-md mb-3"
-																		id="PlantPart${modalId}" onchange="enablePPO(0)">
-																		<option value="" selected disabled>Open this
-																			select menu</option>
-																		<option value="-1">Others (please write on
-																			the right side)</option>
-																		<c:forEach items="${plantPartsList}"
-																			var="plantPartsList">
-																			<option value="${plantPartsList}">${plantPartsList}</option>
-																		</c:forEach>
-																	</select>
-																</div>
-																<div class="col">
-																	<label for="PlantPartOther[0]">Plant Part
-																		(Other)</label> <input type="text" class="form-control"
-																		id="PlantPartOther[0]${modalId}" placeholder=""
-																		disabled>
-																</div>
-																<div class="col-1"></div>
-															</div>
-
-															<div class="form-group form-row" id="illnessGroup">
-																<div class="col-4"></div>
-																<div class="col-4">
-																	<i class="fa fa-viruses"></i> <label for="Illness"><i
-																		class="fa fa-thermometer" aria-hidden="true"></i>
-																		Illness</label> <input type="text" class="form-control"
-																		id="Illness${modalId}" placeholder=""
-																		name="illness[0][0]"> <input type="hidden"
-																		name="illnessCtr[0]" value="0">
-																	<button id="illnessAdd${modalId}" type="button"
-																		class="btn btn-outline-success btn-sm"
-																		style="margin-top: 5px" onclick="addIFields(0)">
-																		<i class="fa fa-plus" aria-hidden="true"></i> Illness
-																	</button>
-																</div>
-																<div class="col-4"></div>
-															</div>
-														</div>
-														<div class="d-flex justify-content-center">
-															<div class="form-row" style="width: 50%">
-																<button type="button"
-																	class="btn btn-outline-success btn-block"
-																	id="preparationAdd${modalId}" onclick="addPFields(0)">Add
-																	Preparation</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="card">
-												<div class="card-header text-center">
-													<h4 class="mt-1">Species</h4>
-												</div>
-												<div class="card-body">
-													<div id="speciesGroup">
-														<div class="border-bottom border-secondary mb-3">
-															<div class="form-group form-row">
-																<div class="col-1"></div>
-																<div class="col-3">
-																	<label for="SpeciesPlantPart"><i
-																		class="fa fa-leaf" aria-hidden="true"></i> Species
-																		Plant Part</label> <select name="plantPart[0]"
-																		class="custom-select custom-select-md mb-3"
-																		id="SpeciesPlantPart${modalId}"
-																		onchange="enableSPPO(0)">
-																		<option value="" selected disabled>Open this
-																			select menu</option>
-																		<option value="-1">Others (please write on
-																			the right side)</option>
-																		<c:forEach items="${plantPartsList}"
-																			var="plantPartsList">
-																			<option value="${plantPartsList}">${plantPartsList}</option>
-																		</c:forEach>
-																	</select> <input type="hidden" name="speciesCtr" value="0">
-																</div>
-																<div class="col-3">
-																	<label for="SpeciesPlantPartOther[0]">Species
-																		Plant Part (Other)</label> <input type="text"
-																		class="form-control"
-																		id="SpeciesPlantPartOther[0]${modalId}" placeholder=""
-																		disabled>
-																</div>
-															</div>
-
-															<div id="chemicalCompoundGroup">
-																<div class="form-group form-row">
-																	<div class="col-2"></div>
-																	<div class="col-5">
-																		<label for="ChemicalCompound"><i
-																			class="fa fa-flask" aria-hidden="true"></i> Chemical
-																			Compound</label> <input type="text" class="form-control"
-																			id="ChemicalCompound${modalId}" placeholder=""
-																			name="compound[0][0]">
-																		<button id="chemicalCompoundAdd${modalId}"
-																			type="button" class="btn btn-outline-success btn-sm"
-																			onclick="addCCFields(0)" style="margin-top: 5px">
-																			<i class="fa fa-plus" aria-hidden="true"></i>
-																			Chemical Compound
-																		</button>
-																		<input type="hidden" name="lengthCC0" value="0">
-																	</div>
-																</div>
-
-																<div id="biologicalActivityGroup">
-																	<div class="form-group form-row">
-																		<div class="col-3"></div>
-																		<div class="col-4">
-																			<label for="BiologicalActivity">Biological
-																				Activity</label> <input type="text" class="form-control"
-																				id="BiologicalActivity${modalId}" placeholder=""
-																				name="bioAct[0][0][0]">
-																			<button id="biologicalActivityAdd${modalId}"
-																				type="button" class="btn btn-outline-success btn-sm"
-																				onclick="addBAFields(0,0,0)" style="margin-top: 5px">
-																				<i class="fa fa-plus" aria-hidden="true"></i>
-																				Biological Activity
-																			</button>
-																		</div>
-																		<div class="col-4">
-																			<label for="CellLine">Cell Line</label> <input
-																				type="text" class="form-control"
-																				id="CellLine${modalId}" placeholder=""
-																				name="cellLine[0][0][0]"> <input
-																				type="hidden" name="bioCellCC0" value="0"> <input
-																				type="hidden" name="lengthBC[0][0]" value="0">
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="d-flex justify-content-center">
-															<div class="form-row" style="width: 50%">
-																<button type="button"
-																	class="btn btn-outline-success btn-block"
-																	id="speciesAdd${modalId}" onclick="addSFields(0)">Add
-																	Species Part</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-outline-danger"
-												data-toggle="modal" data-target="#cancelModal">Cancel</button>
-											<button type="button" class="btn btn-danger"
-												data-toggle="modal" data-target="#rejectModal">X
-												Reject Entry</button>
-											<button type="submit" class="btn btn-success"
-												data-toggle="modal" data-target="#confirmModal">&#10003
-												Approve Entry</button>
-										</div>
-									</div>
-								</div>
-							</div>
 							<c:set var="modalId" value="${modalId + 1}" scope="page" />
 						</c:forEach>
 					</c:if>
@@ -325,7 +80,268 @@
 		</table>
 	</div>
 
-	<!-- Modal -->
+	<!-- Entry Modal -->
+	<div class="modal fade" id="entryModal" tabindex="-1"
+		aria-labelledby="entryModalLabel" aria-hidden="true"
+		data-backdrop="static" data-keyboard="false"
+		onmouseenter="call_wizard()">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="entryModalLabel">Validating
+						Extracted Plant Entry</h5>
+				</div>
+				<div class="modal-body">
+					<div id="smartwizard">
+						<ul class="nav">
+							<li><a class="nav-link" href="#step-1"> General
+									Information </a></li>
+							<li><a class="nav-link" href="#step-2"> Preparation </a></li>
+							<li><a class="nav-link" href="#step-3"> Compound </a></li>
+							<li><a class="nav-link" href="#step-4"> Review Data </a></li>
+						</ul>
+
+						<div class="tab-content">
+							<div id="step-1" class="tab-pane" role="tabpanel">
+								<div class="card">
+									<div class="card-header text-center">
+										<h4 class="mt-1">General</h4>
+									</div>
+									<div class="card-body">
+										<div class="form-group form-row">
+											<div class="col-4"></div>
+											<div class="col-4">
+												<label for="CommonPlantName"> <i
+													class="fa fa-address-card" aria-hidden="true"></i> Common
+													Plant Name
+												</label> <input type="text" id="CommonPlantName"
+													name="commonPlantName" class="form-control" placeholder=""
+													required>
+											</div>
+										</div>
+										<div class="form-group form-row">
+											<div class="col-2"></div>
+											<div class="col-4">
+												<label for="Genus"><i class="fa fa-group"
+													aria-hidden="true"></i> Genus</label> <input type="text"
+													class="form-control" name="genus" id="Genus" placeholder="">
+											</div>
+											<div class="col-4">
+												<label for="Family"><i class="fa fa-group"
+													aria-hidden="true"></i> Family</label> <input type="text"
+													class="form-control" name="family" id="Family"
+													placeholder="">
+											</div>
+										</div>
+
+										<div class="form-group form-row">
+											<div class="col-2"></div>
+											<div class="col-4">
+												<label for="ScientificName"><i
+													class="fa fa-drivers-license" aria-hidden="true"></i>
+													Scientific Name</label> <input type="text" class="form-control"
+													name="scientificName" id="ScientificName"
+													pattern="^([A-Z][a-z]+) +([a-z-]+).*$" placeholder=""
+													required>
+											</div>
+											<div id="locationGroup" class="col-4">
+												<div class="col-13">
+													<label for="Location"><i class="fa fa-map-marker"
+														aria-hidden="true"></i> Location</label>
+												</div>
+												<div>
+													<button id="locationAdd" type="button"
+														class="btn btn-outline-success btn-sm"
+														onclick="addLFields(${modalId},'')"
+														style="margin-top: 5px">
+														<i class="fa fa-plus" aria-hidden="true"></i> Location
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="step-2" class="tab-pane" role="tabpanel">
+								<div class="card">
+									<div class="card-header text-center">
+										<h4 class="mt-1">Preparation</h4>
+									</div>
+									<div class="card-body">
+										<div id="preparationGroup">
+											<div class="border-bottom border-secondary mb-3">
+												<div class="form-group form-row">
+													<div class="col-1"></div>
+													<div class="col">
+														<label for="Preparation"><i class="fa fa-cogs"
+															aria-hidden="true"></i> Preparation</label> <input type="text"
+															class="form-control" id="Preparation" placeholder=""
+															name="preparation[0]"> <input type="hidden"
+															name="prepCtr" value="0">
+													</div>
+													<div class="col">
+														<label for="PlantPart"><i class="fa fa-leaf"
+															aria-hidden="true"></i> Plant Part</label> <select
+															name="prepPart[0]"
+															class="custom-select custom-select-md mb-3"
+															id="PlantPart" onchange="enablePPO(0)">
+															<option value="" selected disabled>Open this
+																select menu</option>
+															<option value="-1">Others (please write on the
+																right side)</option>
+															<c:forEach items="${plantPartsList}" var="plantPartsList">
+																<option value="${plantPartsList}">${plantPartsList}</option>
+															</c:forEach>
+														</select>
+													</div>
+													<div class="col">
+														<label for="PlantPartOther[0]">Plant Part (Other)</label>
+														<input type="text" class="form-control"
+															id="PlantPartOther[0]" placeholder="" disabled>
+													</div>
+													<div class="col-1"></div>
+												</div>
+
+												<div class="form-group form-row" id="illnessGroup">
+													<div class="col-4"></div>
+													<div class="col-4">
+														<i class="fa fa-viruses"></i> <label for="Illness"><i
+															class="fa fa-thermometer" aria-hidden="true"></i> Illness</label>
+														<input type="text" class="form-control" id="Illness"
+															placeholder="" name="illness[0][0]"> <input
+															type="hidden" name="illnessCtr[0]" value="0">
+														<button id="illnessAdd" type="button"
+															class="btn btn-outline-success btn-sm"
+															style="margin-top: 5px" onclick="addIFields(0)">
+															<i class="fa fa-plus" aria-hidden="true"></i> Illness
+														</button>
+													</div>
+													<div class="col-4"></div>
+												</div>
+											</div>
+											<div class="d-flex justify-content-center">
+												<div class="form-row" style="width: 50%">
+													<button type="button"
+														class="btn btn-outline-success btn-block"
+														id="preparationAdd" onclick="addPFields(0)">Add
+														Preparation</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="step-3" class="tab-pane" role="tabpanel">
+								<div class="card">
+									<div class="card-header text-center">
+										<h4 class="mt-1">Species</h4>
+									</div>
+									<div class="card-body">
+										<div id="speciesGroup">
+											<div class="border-bottom border-secondary mb-3">
+												<div class="form-group form-row">
+													<div class="col-1"></div>
+													<div class="col-3">
+														<label for="SpeciesPlantPart"><i
+															class="fa fa-leaf" aria-hidden="true"></i> Species Plant
+															Part</label> <select name="plantPart[0]"
+															class="custom-select custom-select-md mb-3"
+															id="SpeciesPlantPart" onchange="enableSPPO(0)">
+															<option value="" selected disabled>Open this
+																select menu</option>
+															<option value="-1">Others (please write on the
+																right side)</option>
+															<c:forEach items="${plantPartsList}" var="plantPartsList">
+																<option value="${plantPartsList}">${plantPartsList}</option>
+															</c:forEach>
+														</select> <input type="hidden" name="speciesCtr" value="0">
+													</div>
+													<div class="col-3">
+														<label for="SpeciesPlantPartOther[0]">Species
+															Plant Part (Other)</label> <input type="text"
+															class="form-control" id="SpeciesPlantPartOther[0]"
+															placeholder="" disabled>
+													</div>
+												</div>
+
+												<div id="chemicalCompoundGroup">
+													<div class="form-group form-row">
+														<div class="col-2"></div>
+														<div class="col-5">
+															<label for="ChemicalCompound"><i
+																class="fa fa-flask" aria-hidden="true"></i> Chemical
+																Compound</label> <input type="text" class="form-control"
+																id="ChemicalCompound${modalId}" placeholder=""
+																name="compound[0][0]">
+															<button id="chemicalCompoundAdd" type="button"
+																class="btn btn-outline-success btn-sm"
+																onclick="addCCFields(0)" style="margin-top: 5px">
+																<i class="fa fa-plus" aria-hidden="true"></i> Chemical
+																Compound
+															</button>
+															<input type="hidden" name="lengthCC0" value="0">
+														</div>
+													</div>
+
+													<div id="biologicalActivityGroup">
+														<div class="form-group form-row">
+															<div class="col-3"></div>
+															<div class="col-4">
+																<label for="BiologicalActivity">Biological
+																	Activity</label> <input type="text" class="form-control"
+																	id="BiologicalActivity" placeholder=""
+																	name="bioAct[0][0][0]">
+																<button id="biologicalActivityAdd" type="button"
+																	class="btn btn-outline-success btn-sm"
+																	onclick="addBAFields(0,0,0)" style="margin-top: 5px">
+																	<i class="fa fa-plus" aria-hidden="true"></i>
+																	Biological Activity
+																</button>
+															</div>
+															<div class="col-4">
+																<label for="CellLine">Cell Line</label> <input
+																	type="text" class="form-control" id="CellLine"
+																	placeholder="" name="cellLine[0][0][0]"> <input
+																	type="hidden" name="bioCellCC0" value="0"> <input
+																	type="hidden" name="lengthBC[0][0]" value="0">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="d-flex justify-content-center">
+												<div class="form-row" style="width: 50%">
+													<button type="button"
+														class="btn btn-outline-success btn-block" id="speciesAdd"
+														onclick="addSFields(0)">Add Species Part</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="step-4" class="tab-pane" role="tabpanel">Step
+								content</div>
+						</div>
+					</div>
+
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-danger"
+						data-toggle="modal" data-target="#cancelModal">Cancel</button>
+					<button type="button" class="btn btn-danger" data-toggle="modal"
+						data-target="#rejectModal">X Reject Entry</button>
+					<button type="submit" class="btn btn-success disabled"
+						data-toggle="modal" id="approveEntry">&#10003 Approve
+						Entry</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Document Modal -->
 	<div class="modal fade" id="docuModal" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-xl modal-dialog-scrollable">
@@ -444,6 +460,63 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 		crossorigin="anonymous"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js"
+		type="text/javascript"></script>
+
+	<script> $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
+            if(anchorObject.prevObject.length - 1 == nextStepIndex){
+    			document.getElementById("approveEntry").classList.remove("disabled");
+    			$('#approveEntry').attr("data-target","#confirmModal");
+                /* alert('this is the last step');  */
+            }
+        });</script>
+	<script>function call_wizard(){
+		$('#smartwizard').smartWizard({
+			  selected: 0, // Initial selected step, 0 = first step
+			  theme: 'arrows', // theme for the wizard, related css need to include for other than default theme
+			  justified: true, // Nav menu justification. true/false
+			  darkMode:false, // Enable/disable Dark Mode if the theme supports. true/false
+			  autoAdjustHeight: true, // Automatically adjust content height
+			  cycleSteps: false, // Allows to cycle the navigation of steps
+			  backButtonSupport: true, // Enable the back button support
+			  enableURLhash: true, // Enable selection of the step based on url hash
+			  transition: {
+			      animation: 'fade', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
+			      speed: '400', // Transion animation speed
+			      easing:'' // Transition animation easing. Not supported without a jQuery easing plugin
+			  },
+			  toolbarSettings: {
+			      toolbarPosition: 'bottom', // none, top, bottom, both
+			      toolbarButtonPosition: 'right', // left, right, center
+			      showNextButton: true, // show/hide a Next button
+			      showPreviousButton: true, // show/hide a Previous button
+			      toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+			  },
+			  anchorSettings: {
+			      anchorClickable: true, // Enable/Disable anchor navigation
+			      enableAllAnchors: false, // Activates all anchors clickable all times
+			      markDoneStep: true, // Add done state on navigation
+			      markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
+			      removeDoneStepOnNavigateBack: false, // While navigate back done step after active step will be cleared
+			      enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
+			  },
+			  keyboardSettings: {
+			      keyNavigation: true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
+			      keyLeft: [37], // Left key code
+			      keyRight: [39] // Right key code
+			  },
+			  lang: { // Language variables for button
+			      next: 'Next',
+			      previous: 'Previous'
+			  },
+			  disabledSteps: [], // Array Steps disabled
+			  errorSteps: [], // Highlight step with errors
+			  hiddenSteps: [] // Hidden steps
+			});
+	}
+	</script>
 	<script type="text/javascript">
 	    function viewDocument(docu) {
 	    	var entryDocument = "\\NatPro\\Documents\\UploadedDocuments\\"+docu;
@@ -457,7 +530,7 @@
 	    	}
 	    }
 	</script>
-	 
+
 	<script type="text/javascript">
 		function getPlantEntity(fileName, id){
 			console.log(fileName);
@@ -471,7 +544,7 @@
 					  },
 				success : function(data) {
 					console.log(data);
-					document.getElementById("ScientificName"+id).value=data[0].Synonyms[id-1].specie;
+					document.getElementById("ScientificName").value=data[0].Synonyms[id-1].specie;
 /* 					var locs = data[0].Location;
  					locs.forEach(function(elem, index, array) {
 					    addLFields(id,elem);
@@ -498,8 +571,13 @@
 	<script type="text/javascript">
 	   $(document).on('hidden.bs.modal', '.modal', function () {
 	        $('.modal:visible').length && $(document.body).addClass('modal-open');
+	       
 	   });
-		
+	   
+	   $(document).ready(function() { 
+		   $('#smartwizard').smartWizard("reset"); 
+	   });
+	   		
 	    $(document).ready(function() {
 	        $('#table_id').DataTable();
 	        //$('.hid').css('display', 'none');
