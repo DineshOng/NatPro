@@ -90,6 +90,11 @@
 				<div class="modal-header">
 					<h5 class="modal-title" id="entryModalLabel">Validating
 						Extracted Plant Entry</h5>
+					<button type="button" class="btn btn-primary btn-sm"
+						data-toggle="modal" data-target="#docuModal"
+						id="entryViewDocument"
+						onclick="viewDocument('935ef8690c1123ce7a9b13f82bc11f03.pdf')">View
+						Document</button>
 				</div>
 				<div class="modal-body">
 					<div id="smartwizard">
@@ -355,7 +360,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe id="documentIframe1" class="embed-responsive-item" src=""></iframe>
+						<iframe id="documentIframe" class="embed-responsive-item" src=""></iframe>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -471,8 +476,11 @@
     			$('#approveEntry').attr("data-target","#confirmModal");
                 /* alert('this is the last step');  */
             }
-        });</script>
-	<script>function call_wizard(){
+        });
+	</script>
+
+	<script>
+	function call_wizard(){
 		$('#smartwizard').smartWizard({
 			  selected: 0, // Initial selected step, 0 = first step
 			  theme: 'arrows', // theme for the wizard, related css need to include for other than default theme
@@ -520,7 +528,7 @@
 	<script type="text/javascript">
 	    function viewDocument(docu) {
 	    	var entryDocument = "\\NatPro\\Documents\\UploadedDocuments\\"+docu;
-	    	var modalIframe = document.getElementById('documentIframe1');
+	    	var modalIframe = document.getElementById('documentIframe');
 	    	
 	    	if (entryDocument != null) {
 	    		console.log(entryDocument);
@@ -547,8 +555,10 @@
 				success : function(data) {
 					console.log(data);
 					/* console.log(); */
+					$("#entryViewDocument").attr("onclick","viewDocument('"+fileName+"')");
 					document.getElementById("ScientificName").value=data.species[0].specie;
 					document.getElementById("CommonPlantName").value=data.medicinalPlant;
+					
 					var locs = data.locations;
 					if(locs!=null){
 	 					locs.forEach(function(elem, index, array) {
