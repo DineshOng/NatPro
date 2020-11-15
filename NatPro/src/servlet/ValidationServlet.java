@@ -72,7 +72,12 @@ public class ValidationServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		switch (request.getServletPath()) {
 		case "/ValidationServlet":
-			getValidationXML(request, response);
+			try {
+				getValidationXML(request, response);
+			} catch (ServletException | IOException | OntologyLoadException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			break;
 		case "/GetPlantEntity":
 			getPlantEntity(request, response);
@@ -145,7 +150,7 @@ public class ValidationServlet extends HttpServlet {
 	}
 
 	private void getValidationXML(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException, OntologyLoadException {
 		File Folder = new File(validationFolder);
 		File[] listFiles = Folder.listFiles();
 		Reader fileReader = null;
@@ -172,6 +177,11 @@ public class ValidationServlet extends HttpServlet {
 		}
 
 		request.setAttribute("Validations", validations);
+		
+		OntoQuery q = new OntoQuery();
+		List<String> plantParts = q.getAllPlantParts();
+		request.setAttribute("plantPartsList", plantParts);
+		
 		request.getRequestDispatcher("validation.jsp").forward(request, response);
 
 	}

@@ -28,6 +28,9 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css"
 	rel="stylesheet" type="text/css" />
+	
+<link href="css/autocomplete.css" type="text/css" rel="stylesheet"
+	media="screen,projection" />
 <title>NatPro : ${searchKey}</title>
 </head>
 <body>
@@ -246,7 +249,13 @@
 											<div class="border-bottom border-secondary mb-3">
 												<div class="form-group form-row">
 													<div class="col-1"></div>
-													<div class="col-3">
+													<div class="autocomplete" id="plantPartInputDiv">
+														<label for="SpeciesPlantPart"><i
+															class="fa fa-leaf" aria-hidden="true"></i> Species Plant
+															Part</label> <input type="text" id="SpeciesPart"
+															name="speciesPart[0]" class="form-control">
+													</div>
+													<%-- 													<div class="col-3">
 														<label for="SpeciesPlantPart"><i
 															class="fa fa-leaf" aria-hidden="true"></i> Species Plant
 															Part</label> <select name="plantPart[0]"
@@ -266,7 +275,7 @@
 															Plant Part (Other)</label> <input type="text"
 															class="form-control" id="SpeciesPlantPartOther[0]"
 															placeholder="" disabled>
-													</div>
+													</div> --%>
 												</div>
 
 												<div id="chemicalCompoundGroup">
@@ -276,7 +285,7 @@
 															<label for="ChemicalCompound"><i
 																class="fa fa-flask" aria-hidden="true"></i> Chemical
 																Compound</label> <input type="text" class="form-control"
-																id="ChemicalCompound${modalId}" placeholder=""
+																id="ChemicalCompound" placeholder=""
 																name="compound[0][0]">
 															<button id="chemicalCompoundAdd" type="button"
 																class="btn btn-outline-success btn-sm"
@@ -470,6 +479,8 @@
 		src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js"
 		type="text/javascript"></script>
 
+	<script type="text/javascript" src="js/autocomplete.js"></script>
+
 	<script> $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
             if(anchorObject.prevObject.length - 1 == nextStepIndex){
     			document.getElementById("approveEntry").classList.remove("disabled");
@@ -541,6 +552,7 @@
 
 	<script type="text/javascript">
 		function getPlantEntity(fileName, id, sciName){
+			autocomplete(document.getElementById("SpeciesPart"), plantParts); 
 			console.log(fileName);
 			console.log(sciName);
 			console.log(id);
@@ -558,7 +570,7 @@
 					$("#entryViewDocument").attr("onclick","viewDocument('"+fileName+"')");
 					document.getElementById("ScientificName").value=data.species[0].specie;
 					document.getElementById("CommonPlantName").value=data.medicinalPlant;
-					
+					document.getElementById("SpeciesPart").value=data.species[0].speciesParts[0].plantPart;
 					var locs = data.locations;
 					if(locs!=null){
 	 					locs.forEach(function(elem, index, array) {
@@ -645,5 +657,15 @@
 		ddfunc(${searchCategory});
 	</script>
 
+	<!-- Script to Generate Autocomplete Fields -->
+	<script>	
+		var plantParts = [];
+	</script>
+
+	<c:forEach items="${plantPartsList}" var="plantPart">
+		<script>	
+			plantParts.push("${plantPart}")
+		</script>
+	</c:forEach>
 </body>
 </html>
