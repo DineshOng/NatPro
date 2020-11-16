@@ -28,7 +28,7 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css"
 	rel="stylesheet" type="text/css" />
-	
+
 <link href="css/autocomplete.css" type="text/css" rel="stylesheet"
 	media="screen,projection" />
 <title>NatPro : ${searchKey}</title>
@@ -88,7 +88,8 @@
 		aria-labelledby="entryModalLabel" aria-hidden="true"
 		data-backdrop="static" data-keyboard="false"
 		onmouseenter="call_wizard()">
-		<div class="modal-dialog modal-lg">
+		<div class="modal-dialog modal-lg"
+			style="overflow-y: initial !important">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="entryModalLabel">Validating
@@ -99,7 +100,7 @@
 						onclick="viewDocument('935ef8690c1123ce7a9b13f82bc11f03.pdf')">View
 						Document</button>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body" style="height: 80vh; overflow-y: auto;">
 					<div id="smartwizard">
 						<ul class="nav">
 							<li><a class="nav-link" href="#step-1"> General
@@ -240,102 +241,200 @@
 								</div>
 							</div>
 							<div id="step-3" class="tab-pane" role="tabpanel">
-								<div class="card">
-									<div class="card-header text-center">
-										<h4 class="mt-1">Compound</h4>
+								<div class="row" style="height: auto">
+									<div class="col-4">
+										<nav id="navbarScrollspy" class="navbar navbar-light bg-light">
+											<a class="navbar-brand" href="#">Plant Parts</a>
+											<nav class="nav nav-pills flex-column" id="plantPartsNav">
+											</nav>
+										</nav>
 									</div>
-									<div class="card-body">
-										<div id="speciesGroup">
-											<div class="border-bottom border-secondary mb-3">
-												<div class="form-group form-row">
-													<div class="col-1"></div>
-													<div class="autocomplete" id="plantPartInputDiv">
-														<label for="SpeciesPlantPart"><i
-															class="fa fa-leaf" aria-hidden="true"></i> Species Plant
-															Part</label> <input type="text" id="SpeciesPart"
-															name="speciesPart[0]" class="form-control">
-													</div>
-													<%-- 													<div class="col-3">
-														<label for="SpeciesPlantPart"><i
-															class="fa fa-leaf" aria-hidden="true"></i> Species Plant
-															Part</label> <select name="plantPart[0]"
-															class="custom-select custom-select-md mb-3"
-															id="SpeciesPlantPart" onchange="enableSPPO(0)">
-															<option value="" selected disabled>Open this
-																select menu</option>
-															<option value="-1">Others (please write on the
-																right side)</option>
-															<c:forEach items="${plantPartsList}" var="plantPartsList">
-																<option value="${plantPartsList}">${plantPartsList}</option>
-															</c:forEach>
-														</select> <input type="hidden" name="speciesCtr" value="0">
-													</div>
-													<div class="col-3">
-														<label for="SpeciesPlantPartOther[0]">Species
-															Plant Part (Other)</label> <input type="text"
-															class="form-control" id="SpeciesPlantPartOther[0]"
-															placeholder="" disabled>
-													</div> --%>
-												</div>
-
-												<div id="chemicalCompoundGroup">
-													<div class="form-group form-row">
-														<div class="col-2"></div>
-														<div class="col-5">
-															<label for="ChemicalCompound"><i
-																class="fa fa-flask" aria-hidden="true"></i> Chemical
-																Compound</label> <input type="text" class="form-control"
-																id="ChemicalCompound" placeholder=""
-																name="compound[0][0]">
-															<button id="chemicalCompoundAdd" type="button"
-																class="btn btn-outline-success btn-sm"
-																onclick="addCCFields(0)" style="margin-top: 5px">
-																<i class="fa fa-plus" aria-hidden="true"></i> Chemical
-																Compound
-															</button>
-															<input type="hidden" name="lengthCC0" value="0">
-														</div>
-													</div>
-
-													<div id="biologicalActivityGroup">
-														<div class="form-group form-row">
-															<div class="col-3"></div>
-															<div class="col-4">
-																<label for="BiologicalActivity">Biological
-																	Activity</label> <input type="text" class="form-control"
-																	id="BiologicalActivity" placeholder=""
-																	name="bioAct[0][0][0]">
-																<button id="biologicalActivityAdd" type="button"
-																	class="btn btn-outline-success btn-sm"
-																	onclick="addBAFields(0,0,0)" style="margin-top: 5px">
-																	<i class="fa fa-plus" aria-hidden="true"></i>
-																	Biological Activity
-																</button>
-															</div>
-															<div class="col-4">
-																<label for="CellLine">Cell Line</label> <input
-																	type="text" class="form-control" id="CellLine"
-																	placeholder="" name="cellLine[0][0][0]"> <input
-																	type="hidden" name="bioCellCC0" value="0"> <input
-																	type="hidden" name="lengthBC[0][0]" value="0">
-															</div>
-														</div>
-													</div>
-												</div>
+									<div class="col" data-spy="scroll"
+										data-target="#navbarScrollspy" data-offset="0"
+										style="height: 60vh; overflow-y: scroll;">
+										<div class="card">
+											<div class="card-header text-center">
+												<h4 class="mt-1">Compound</h4>
 											</div>
-											<div class="d-flex justify-content-center">
-												<div class="form-row" style="width: 50%">
-													<button type="button"
-														class="btn btn-outline-success btn-block" id="speciesAdd"
-														onclick="addSFields(0)">Add Species Part</button>
+											<div class="card-body">
+												<div id="speciesGroup">
+													<div class="d-flex justify-content-center">
+														<div class="form-row" style="width: 50%">
+															<button type="button"
+																class="btn btn-outline-success btn-block"
+																id="speciesAdd" onclick="addSFields(0)">Add
+																Species Part</button>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+
 							</div>
-							<div id="step-4" class="tab-pane" role="tabpanel">Step
-								content</div>
+							<div id="step-4" class="tab-pane" role="tabpanel">
+								<nav id="navbar-example2" class="navbar navbar-light bg-light">
+									<a class="navbar-brand" href="#">Navbar</a>
+									<ul class="nav nav-pills">
+										<li class="nav-item"><a class="nav-link" href="#fat">@fat</a>
+										</li>
+										<li class="nav-item"><a class="nav-link" href="#mdo">@mdo</a>
+										</li>
+										<li class="nav-item dropdown"><a
+											class="nav-link dropdown-toggle" data-toggle="dropdown"
+											href="#" role="button" aria-haspopup="true"
+											aria-expanded="false">Dropdown</a>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#one">one</a> <a
+													class="dropdown-item" href="#two">two</a>
+												<div role="separator" class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#three">three</a>
+											</div></li>
+									</ul>
+								</nav>
+								<div data-spy="scroll" data-target="#navbar-example2"
+									data-offset="0" style="height: 80vh; overflow-y: scroll;">
+									<h4 id="fat">@fat</h4>
+									<p>Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.</p>
+									<h4 id="mdo">@mdo</h4>
+									<p>Ad leggings keytar, brunch id art party dolor labore.
+										Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+										farm-to-table bicycle rights whatever. Anim keffiyeh carles
+										cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon
+										irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+										minim qui you probably haven't heard of them et cardigan trust
+										fund culpa biodiesel wes anderson aesthetic. Nihil tattooed
+										accusamus, cred irony biodiesel keffiyeh artisan ullamco
+										consequatVeniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt.Veniam marfa mustache skateboard, adipisicing fugiat
+										velit pitchfork beard. Freegan beard aliqua cupidatat
+										mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla
+										carles. Tattooed cosby sweater food truck, mcsweeney's quis
+										non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non
+										aesthetic exercitation quis gentrify. Brooklyn adipisicing
+										craft beer vice keytar deserunt..</p>
+									<h4 id="one">one</h4>
+									<p>Ad leggings keytar, brunch id art party dolor labore.
+										Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+										farm-to-table bicycle rights whatever. Anim keffiyeh carles
+										cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon
+										irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+										minim qui you probably haven't heard of them et cardigan trust
+										fund culpa biodiesel wes anderson aesthetic. Nihil tattooed
+										accusamus, cred irony biodiesel keffiyeh artisan ullamco
+										consequat.</p>
+									<h4 id="two">two</h4>
+									<p>Ad leggings keytar, brunch id art party dolor labore.
+										Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+										farm-to-table bicycle rights whatever. Anim keffiyeh carles
+										cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon
+										irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+										minim qui you probably haven't heard of them et cardigan trust
+										fund culpa biodiesel wes anderson aesthetic. Nihil tattooed
+										accusamus, cred irony biodiesel keffiyeh artisan ullamco
+										consequat.</p>
+									<h4 id="three">three</h4>
+									<p>Ad leggings keytar, brunch id art party dolor labore.
+										Pitchfork yr enim lo-fi before they sold out qui. Tumblr
+										farm-to-table bicycle rights whatever. Anim keffiyeh carles
+										cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon
+										irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+										minim qui you probably haven't heard of them et cardigan trust
+										fund culpa biodiesel wes anderson aesthetic. Nihil tattooed
+										accusamus, cred irony biodiesel keffiyeh artisan ullamco
+										consequat.</p>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -496,7 +595,7 @@
 			  selected: 0, // Initial selected step, 0 = first step
 			  theme: 'arrows', // theme for the wizard, related css need to include for other than default theme
 			  justified: true, // Nav menu justification. true/false
-			  darkMode:false, // Enable/disable Dark Mode if the theme supports. true/false
+			  darkMode: false, // Enable/disable Dark Mode if the theme supports. true/false
 			  autoAdjustHeight: true, // Automatically adjust content height
 			  cycleSteps: false, // Allows to cycle the navigation of steps
 			  backButtonSupport: true, // Enable the back button support
@@ -518,7 +617,7 @@
 			      enableAllAnchors: false, // Activates all anchors clickable all times
 			      markDoneStep: true, // Add done state on navigation
 			      markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
-			      removeDoneStepOnNavigateBack: false, // While navigate back done step after active step will be cleared
+			      removeDoneStepOnNavigateBack: true, // While navigate back done step after active step will be cleared
 			      enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
 			  },
 			  keyboardSettings: {
@@ -552,7 +651,7 @@
 
 	<script type="text/javascript">
 		function getPlantEntity(fileName, id, sciName){
-			autocomplete(document.getElementById("SpeciesPart"), plantParts); 
+			/* autocomplete(document.getElementById("SpeciesPart"), plantParts);  */
 			console.log(fileName);
 			console.log(sciName);
 			console.log(id);
@@ -570,13 +669,47 @@
 					$("#entryViewDocument").attr("onclick","viewDocument('"+fileName+"')");
 					document.getElementById("ScientificName").value=data.species[0].specie;
 					document.getElementById("CommonPlantName").value=data.medicinalPlant;
-					document.getElementById("SpeciesPart").value=data.species[0].speciesParts[0].plantPart;
+					
+					if(data.species[0].family!=null){
+						document.getElementById("Family").value=data.species[0].family;
+					}
+					
 					var locs = data.locations;
 					if(locs!=null){
 	 					locs.forEach(function(elem, index, array) {
 						    addLFields(id,elem);
 						});
 					}
+					
+					var speciesParts = data.species[0].speciesParts;
+					
+					if(speciesParts!=null){
+						speciesParts.forEach(function(elem, spIndex, array) {
+							var plantPart = data.species[0].speciesParts[spIndex].plantPart;
+						    addSFields(spIndex); 
+						    document.getElementById("SpeciesPart"+spIndex).value = plantPart;							
+						    var compounds = data.species[0].speciesParts[spIndex].compounds;
+						    var compoundDropdown = '<li class="nav-item dropdown">'+
+							'<a	class="nav-link dropdown-toggle" data-toggle="dropdown"	href="#" role="button" aria-haspopup="true"	aria-expanded="false">'+plantPart+'</a>'+
+					    	'<div class="dropdown-menu">'+
+					    	'<a class="dropdown-item" href="#SpeciesContainer'+spIndex+'">'+plantPart+'</a>'+
+					    	'<div role="separator" class="dropdown-divider"></div>';
+					    	var compoundDropdownEnd = '</div></li>';
+						    if(compounds!=null){
+								var compoundItems="";
+						    	compounds.forEach(function(elem, cIndex, array) {
+						    		var compound = data.species[0].speciesParts[spIndex].compounds[cIndex].compoundName;
+						    		compoundItems = compoundItems+'<a class="dropdown-item" href="#ChemicalCompound['+spIndex+']['+cIndex+']">'+compound+'</a>';
+						    		addCCFields(spIndex);
+						    		document.getElementById("ChemicalCompound["+spIndex+"]["+cIndex+"]").value=compound;
+						    	});
+						    	compoundDropdown = compoundDropdown + compoundItems;
+						    	
+						    }
+						    compoundDropdown = compoundDropdown + compoundDropdownEnd;
+						    $('#plantPartsNav').append(compoundDropdown);
+						});
+					} 
 				}
 				}); 
 		}
@@ -667,5 +800,511 @@
 			plantParts.push("${plantPart}")
 		</script>
 	</c:forEach>
+
+	<script>
+	
+		var speciestPartsList = "${speciesPartsList}";
+	
+		var snCtr, lCtr, pbpCtr, iCtr, baclCtr, ccCtr, sCtr;
+		snCtr = lCtr = pbpCtr = iCtr = baclCtr = 0;
+		var sCtr = ccCtr = -1; //id's starts at 0;
+		var speciesArr = [];
+		var speciesArr2 = [ ]
+		var compArr = [ ];
+		var prepArr = [ 0 ];
+		
+		function removeFields(pCategory, pValue) {
+			var field, field2, field3, button, label;
+			
+			switch (pCategory) {
+				case 0: //Location
+					field = '#Location' + pValue;
+					button = '#locationDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=Location' + pValue +']').remove();
+					console.log(field, button, 'label[for=Location' + pValue +']');
+					break;
+				case 1: // Illness
+					field = '#Illness' + pValue;
+					button = '#illnessDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=Illness' + pValue +']').remove();
+					console.log(field, button, 'label[for=Illness' + pValue +']');
+					break;
+				case 2: // Preparation
+					field = '#preparationContainer' + pValue;
+					button = '#preparationDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=Preparation' + pValue +']').remove();
+					console.log(field, button, 'label[for=PreparationGroup' + pValue +']');
+					break;
+				case 3: // Chemical Compound
+					field = '#chemicalCompoundContainer' + pValue;
+					field2 = '#biologicalActivityGroup' + pValue;
+					field3 = '#chemicalCompoundButtonContainer' + pValue;
+					button = '#chemicalCompoundDelete' + pValue;
+					$(field).remove();
+					$(field2).remove();
+					//$(field3).remove();
+					$(button).remove();
+					$('label[for=ChemicalCompound' + pValue +']').remove();
+					console.log(field, button, 'label[for=ChemicalCompound' + pValue +']');
+					break;
+				case 4: // Biological Activity
+					field = '#biologicalActivityContainer' + pValue;
+					button = '#biologicalActivityDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					$('label[for=BiologicalActivity' + pValue +']').remove();
+					console.log(field, button, 'label[for=' + pValue +']');
+					break;
+				case 5: // Species Part
+					field = '#SpeciesContainer' + pValue;
+					button = '#speciesDelete' + pValue;
+					$(field).remove();
+					$(button).remove();
+					//$('label[for=BiologicalActivity' + pValue +']').remove();
+					//console.log(field, button, 'label[for=' + pValue +']');
+					break;
+			}
+		}
+				
+		function addIFields(pValue) {
+			prepArr[pValue]++;
+			var buttonAddText = "#illnessAdd" + pValue;
+	
+			if (pValue == 0) {
+				$('#illnessAdd').remove();
+			} else {
+				$(buttonAddText).remove();
+			}
+	
+			iCtr++;
+						   
+			var inputField = '<div class="col-4"></div><div class="col-4"><label for="Illness'+ iCtr +'">Illness <i class="fa fa-viruses"></i></label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+pValue+']['+prepArr[pValue]+']"><input type="hidden" name="illnessCtr['+pValue+']" value="'+prepArr[pValue]+'">';
+			
+			if (pValue == 0) {
+				var buttonAdd = '<div>'+
+									'<button id="illnessAdd" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button>'+
+								'</div>'+
+								'<div class="col-4"></div>'+
+								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button></div><div class="col-4"></div></div>';
+			} else {
+				var buttonAdd = '<div><button id="illnessAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pValue+')"><i class="fa fa-plus" aria-hidden="true"></i> Illness</button></div><div class="col-4"></div>'+
+								'<button id="illnessDelete'+iCtr+'" type="button" class="btn btn-outline-danger btn-sm" style="margin-top:5px" onclick="removeFields(1,'+iCtr+')"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button></div><div class="col-4"></div></div>';
+			}
+	
+			var newIllness = inputField + buttonAdd;
+			var groupAddText = "#illnessGroup" + pValue;
+	
+			if (pValue == 0) {
+				$('#illnessGroup').append(newIllness);
+			} else {
+				$(groupAddText).append(newIllness);
+			}
+		}
+		
+		function addPFields(pValue) {
+			prepArr.push(0);
+			console.log(prepArr);
+			var buttonAddText = "#preparationAdd" + pValue;
+	
+			if (pValue == 0) {
+				$('#preparationAdd').remove();
+			} else
+				$(buttonAddText).remove(); 
+	
+			pbpCtr++;
+			iCtr++;
+	
+			var openingDiv = '<div class="border-bottom border-secondary mb-3" id="preparationContainer'+pbpCtr+'"><div class="form-group form-row">';
+			
+			var inputPreparation = '<div class="col-1"></div>'+
+									'<div class="col">'+
+									   '<label for="Preparation'+ pbpCtr+'">Preparation</label>'+
+									   '<input type="text" class="form-control" id="Preparation'+ pbpCtr+'" placeholder="" name="preparation['+ (pValue + 1) +']">'+
+									   '<input type="hidden" name="prepCtr" value="'+(pValue+1)+'">'+
+								   '</div>';		
+			
+			var inputUtilizedPlant = '<div class="col">'+
+									  '<label for="PlantPart'+ pbpCtr+'">Plant Part</label>'+
+										'<select name="prepPart['+(pValue + 1)+']" class="custom-select custom-select-md mb-3" id="PlantPart'+ pbpCtr+'" onchange="enablePPO('+ pbpCtr+')">'+
+										  	'<option value="" selected disabled>Open this select menu</option>'+
+										  	'<option value="-1">Others (please write on the right side)</option>'+
+										  	'<c:forEach items="${plantPartsList}" var="plantPartsList">'+
+												'<option value="${plantPartsList}">${plantPartsList}</option>'+
+											'</c:forEach>'+
+										'</select>'+
+									'</div>';
+									
+			var inputPlantPartOther = '<div class="col">'+
+										  '<label for="PlantPartOther['+ pbpCtr+']">Plant Part (Other)</label>'+
+										  '<input type="text" class="form-control" id="PlantPartOther['+ pbpCtr+']" placeholder="" disabled>'+
+									  '</div>'+
+									  '<div class="col-1"> </div>';
+									  
+			var closingDiv = '</div>';
+			
+			
+			var inputIllness = '<div class="form-group form-row" id="illnessGroup'+ pbpCtr +'">'+	
+							   '<div class="col-4"> </div>'+
+							   '<div class="col-4"><label for="Illness'+ iCtr +'">Illness <i class="fa fa-viruses"></i></label><input type="text" class="form-control" id="Illness'+ iCtr +'" placeholder="" name="illness['+(pValue + 1)+'][0]"><input type="hidden" name="illnessCtr['+(pValue + 1)+']" value="'+prepArr[pValue]+'">'+
+							   '<button id="illnessAdd'+pbpCtr+'" type="button" class="btn btn-outline-success btn-sm" style="margin-top:5px" onclick="addIFields('+pbpCtr+')">Illness</button></div>'+
+							   '<div class="col-4"></div>' +
+							   '</div>';
+							   
+			var buttonAdd = '<div class="d-flex justify-content-center">'+
+								'<div class="form-row" style="width: 50%">'+
+									'<button type="button" class="btn btn-outline-success btn-block btn" id="preparationAdd'+pbpCtr+'" onclick="addPFields('+pbpCtr+')">Add Preparation</button>'
+								'</div>'+
+							'</div>';	
+							
+			var buttonDelete = '<div class="d-flex justify-content-center">'+
+								   '<div class="form-row" style="width: 50%">'+
+									   '<button type="button" class="btn btn-outline-danger btn-block" id="preparationDelete'+pbpCtr+'" onclick="removeFields(2,'+pbpCtr+')">Delete Preparation</button>'+
+								   '</div>'+
+							   '</div>';
+			
+			var newPrep = openingDiv + inputPreparation + inputUtilizedPlant + inputPlantPartOther + closingDiv + inputIllness + closingDiv  + buttonAdd + buttonDelete;
+			
+			$('#preparationGroup').append(newPrep);
+	
+		}
+		
+		function addBAFields(pValue, sVal, cVal) {
+			var buttonAddText = "#biologicalActivityAdd" + pValue;
+			speciesArr2[sVal][cVal]++;
+			console.log(speciesArr2);
+			if (pValue == 0) {
+				$('#biologicalActivityAdd').remove();
+			} else {
+				$(buttonAddText).remove();
+			}
+	
+			baclCtr++;
+			
+			if (pValue == 0) {
+				
+				var newRow = '<div class="form-group form-row" id="biologicalActivityContainer'+baclCtr+'">';
+				
+				var inputBioAct = '<div class="col-3"> </div>'+
+								  '<div class="col-4">'+
+									  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+									  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+								  '</div>';
+					  		  
+		  		var inputCellLine = '<div class="col-4">'+
+											'<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
+											'<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+											'<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
+											'<input type="hidden" name="lengthBC['+sVal+']['+cVal+']" value="'+speciesArr2[sVal][cVal]+'">'+
+									'</div>';
+									
+				var inputButtons = '<div class="form-row">'+
+									   '<div class="col-3"></div>'+
+									   '<div class="col-4">'+
+										   '<button id="biologicalActivityDelete'+baclCtr+'" type="button"'+
+											   'class="btn btn-outline-danger btn-sm"'+
+											   'onclick="removeFields(4, '+ baclCtr +')" style="margin-top: -17px">'+
+											   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+										   '</button>'+
+										   '<button id="biologicalActivityAdd" type="button"'+
+											   'class="btn btn-outline-success btn-sm"'+
+											   'onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top: -5px">'+
+											   '<i class="fa fa-plus" aria-hidden="true"></i> Biological'+
+											   'Activity'+
+										   '</button>'+
+									   '</div>'+
+								   '</div>';
+									
+  				var endRow = '</div>';
+				
+				var newBioAct = newRow + inputBioAct + inputCellLine  + endRow + inputButtons;
+	
+				$('#biologicalActivityGroup').append(newBioAct);
+			} else {
+				var newRow = '<div class="form-group form-row" id="biologicalActivityContainer'+baclCtr+'">';
+				
+				var inputBioAct = '<div class="col-3"> </div>'+
+							  	  '<div class="col-4">'+
+									  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+									  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+									  //'<button id="biologicalActivityAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+									  //'<button id="biologicalActivityDelete'+ baclCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(4, '+ baclCtr +')" style="margin-top: 5px"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button>'+
+					  		       '</div>';
+					  		  
+		  		var inputCellLine = '<div class="col-4">'+
+											'<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
+											'<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+											'<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
+											'<input type="hidden" name="lengthBC['+sVal+']['+cVal+']" value="'+speciesArr2[sVal][cVal]+'">'+
+									'</div>';
+									
+  				var endRow = '</div>';
+  				
+  				var inputButtons = '<div class="form-row">'+
+									   '<div class="col-3"></div>'+
+									   '<div class="col-4">'+
+										   '<button id="biologicalActivityDelete'+baclCtr+'" type="button"'+
+											   'class="btn btn-outline-danger btn-sm"'+
+											   'onclick="removeFields(4, '+ baclCtr +')" style="margin-top: -17px">'+
+											   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+										   '</button>'+
+										   '<button id="biologicalActivityAdd" type="button"'+
+											   'class="btn btn-outline-success btn-sm"'+
+											   'onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top: -5px">'+
+											   '<i class="fa fa-plus" aria-hidden="true"></i> Biological'+
+											   'Activity'+
+										   '</button>'+
+									   '</div>'+
+								   '</div>';
+				
+				var newBioAct = newRow + inputBioAct + inputCellLine + endRow + inputButtons;
+					
+				var inputGroupText = "#biologicalActivityGroup" + pValue;
+	
+				$(inputGroupText).append(newBioAct);
+			}
+		}
+		
+		function addCCFields(pValue) {		
+			speciesArr[pValue]++;
+			speciesArr2[pValue].push(0);
+			/* console.log(speciesArr2); */
+			var buttonAddText = "#chemicalCompoundAdd" + pValue;
+	
+			if (pValue == 1) {
+				$('#chemicalCompoundAdd').remove();
+			} else {
+				$(buttonAddText).remove();
+			}
+			ccCtr++;
+			baclCtr++;
+
+/* 			if (pValue == 0) {
+				var chemComp = '<div class="form-group form-row" id="chemicalCompoundContainer'+ccCtr+'">'+
+								   '<div class="col-2"> </div>'+
+								   '<div class="col-5">'+
+									   '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
+			    					   '<input type="text" class="form-control" id="ChemicalCompound'+ ccCtr +'" placeholder="" name="compound['+pValue+']['+speciesArr[pValue]+']">'+
+									   '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
+									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
+								   '</div>'+
+								   '<div class="w-100"></div>'+
+							   '</div>';
+							   
+				var buttons = '<div class="form-group form-row" id="chemicalCompoundButtonContainer'+ccCtr+'">'+
+								  '<div class="col-2"> </div>'+
+							      '<div class="col-10">'+
+								      '<button id="chemicalCompoundDelete'+ccCtr+'" type="button"'+
+									      'class="btn btn-outline-danger btn-sm"'+
+									      'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
+									      '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+								      '</button>'+
+								      '<button id="chemicalCompoundAdd" type="button"'+
+										      'class="btn btn-outline-success btn-sm"'+
+										      'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
+										      '<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
+										      'Compound'+
+								      '</button>'+
+							      '</div>'+
+						      '</div>';
+						      
+				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
+							 	'<div class="form-group form-row">'+
+									 '<div class="col-3"> </div>'+
+									 '<div class="col-4">'+
+										 '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+					  					 '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  				  	 '<button id="biologicalActivityAdd'+ ccCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+					  				 '</div>'+
+									 '<div class="col-4">'+
+										 '<label for="CellLine">Cell Line</label>'+
+					  						 '<input type="text" class="form-control" id="CellLine" placeholder="" name="cellLine['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  						 '<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
+					  						 '<input type="hidden" name="lengthBC['+pValue+']['+speciesArr[pValue]+']" value="'+speciesArr2[pValue][speciesArr[pValue]]+'">'+
+									 '</div>'+
+								 '</div>'+
+							 '</div>';
+					
+				var chemCompFields = chemComp + buttons + bioAct;
+				
+				$('#chemicalCompoundGroup').append(chemCompFields);
+			} else { */
+				var chemComp = '<div class="form-group form-row" id="chemicalCompoundContainer'+ccCtr+'">'+
+								   '<div class="col-2"> </div>'+
+								   '<div class="col-5">'+
+									   '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
+									   '<input type="text" class="form-control" id="ChemicalCompound['+pValue+']['+speciesArr[pValue]+']" placeholder="" name="compound['+pValue+']['+speciesArr[pValue]+']">'+
+									   //'<button id="chemicalCompoundAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+pValue+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
+									   '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
+									   '<input type="hidden" name="lengthCC'+pValue+'" value="'+speciesArr[pValue]+'">'+
+								   '</div>'+
+							   '</div>';
+							   
+			   var buttons = '<div class="form-group form-row" id="chemicalCompoundButtonContainer'+ccCtr+'">'+
+								  '<div class="col-2"> </div>'+
+							      '<div class="col-10">'+
+								      '<button id="chemicalCompoundDelete'+ccCtr+'" type="button"'+
+									      'class="btn btn-outline-danger btn-sm"'+
+									      'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
+									      '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
+								      '</button>'+
+								      '<button id="chemicalCompoundAdd" type="button"'+
+										      'class="btn btn-outline-success btn-sm"'+
+										      'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
+										      '<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
+										      'Compound'+
+								      '</button>'+
+							      '</div>'+
+						      '</div>';
+							  
+				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
+							 	'<div class="form-group form-row">'+
+									 '<div class="col-3"> </div>'+
+									 '<div class="col-4">'+
+										 '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+					  					 '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  					 '<button id="biologicalActivityAdd'+ baclCtr +'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+					  				 '</div>'+
+									 '<div class="col-4">'+
+										 '<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
+					  						 '<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  						 '<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
+					  						 '<input type="hidden" name="lengthBC['+pValue+']['+speciesArr[pValue]+']" value="'+speciesArr2[pValue][speciesArr[pValue]]+'">'+
+									 '</div>'+
+								 '</div>'+
+							 '</div>';							
+							 /* console.log(speciesArr[pValue]); */
+								
+				var chemCompFields = chemComp + buttons + bioAct;
+	
+				var inputGroupText = "#chemicalCompoundGroup" + pValue;
+	
+				$(inputGroupText).append(chemCompFields);
+			/* } */
+	
+		}
+		
+		function addSFields(pValue) {
+			speciesArr.push(0);
+			speciesArr2.push([ 0 ]);
+			/* console.log(speciesArr2); */
+			var buttonAddText = "#speciesAdd";
+	
+			if (pValue == 0) {
+				$('#speciesAdd').remove();
+			} else {
+				$(buttonAddText).remove();
+			}
+	
+			sCtr++;
+			ccCtr++;
+			baclCtr++;
+			
+			var speciesPPCluster = '<div class="border-bottom border-secondary mb-3" id="SpeciesContainer'+sCtr+'"><div class="form-group form-row">'+
+									   '<div class="col-1"></div>'+
+									   '<div class="autocomplete" id="plantPartInputDiv'+sCtr+'">'+
+										   '<label for="SpeciesPlantPart"><i class="fa fa-leaf" aria-hidden="true"></i> Species Plant Part</label> '+
+										   '<input type="text" id="SpeciesPart'+sCtr+'"	name="speciesPart['+sCtr+']" class="form-control">'+
+									   '</div>'+
+								   '</div>';
+			
+			var chemcompCluster = '<div id="chemicalCompoundGroup'+ sCtr+'">'+
+									  '<div class="form-group form-row">'+
+										  '<div class="col-2"> </div>'+
+										  '<div class="col-5">'+
+											  '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
+											  '<input type="text" class="form-control" id="ChemicalCompound['+sCtr+']['+speciesArr[pValue]+']" placeholder="" name="compound['+sCtr+']['+speciesArr[pValue]+']">'+
+											  '<button id="chemicalCompoundAdd'+sCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+sCtr+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
+											  '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
+											  '<input type="hidden" name="lengthCC'+sCtr+'" value="'+speciesArr[pValue]+'">'+
+										  '</div>'+
+									  '</div>'+
+								
+									  '<div id="biologicalActivityGroup'+ ccCtr+'">'+
+										  '<div class="form-group form-row">'+
+											  '<div class="col-3"> </div>'+
+											  '<div class="col-4">'+
+												  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
+							  					  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sCtr+']['+speciesArr[pValue]+'][0]">'+
+							  					  '<button id="biologicalActivityAdd'+ccCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+sCtr+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+							  				  '</div>'+
+											  '<div class="col-4">'+
+												  '<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
+							  						  '<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+sCtr+']['+speciesArr[pValue]+'][0]">'+
+							  						  '<input type="hidden" name="bioCellCC0" value="0">'+ //NOT YET USED (?)
+							  						  '<input type="hidden" name="lengthBC['+sCtr+']['+speciesArr[pValue]+']" value="'+speciesArr2[sCtr][speciesArr[pValue]]+'">'+
+											  '</div>'+
+										  '</div>'+
+									  '</div>'+
+								  '</div>'+
+								'</div>'; 
+									
+			var buttonAddSpecies =  '<div class="d-flex justify-content-center">'+
+										'<div class="form-row" style="width: 50%">'+
+											'<button type="button" class="btn btn-outline-success btn-block" id="speciesAdd" onclick="addSFields(0)">Add Species Part</button>'+
+											'<button type="button" class="btn btn-outline-danger btn-block" id="speciesDelete'+sCtr+'" onclick="removeFields(5, '+sCtr+')">Delete Species Part</button>'+
+										'</div>'+
+									'</div>';
+
+			var speciesComponent = speciesPPCluster + chemcompCluster + buttonAddSpecies +"</div>";
+			
+			$('#speciesGroup').append(speciesComponent);
+			autocomplete(document.getElementById("SpeciesPart"+sCtr), plantParts);
+		}
+		
+		function enablePPO(pValue) {
+			var selectPlantPart = "#PlantPart" + pValue;
+			var selectPlantPartOther = "#PlantPartOther[" + pValue + "]";			
+			
+			if (pValue == 0) {
+				console.log($('#PlantPart').val());
+				
+				if ($('#PlantPart').val() == -1) {
+					document.getElementById("PlantPartOther[0]").disabled = false;
+				} else {
+					document.getElementById("PlantPartOther[0]").disabled = true;
+				}
+			} else {
+				console.log($(selectPlantPart).val());
+				var selectPlantPartOtherTemp = "PlantPartOther[" + pValue + "]";
+				
+				if ($(selectPlantPart).val() == -1) {
+					document.getElementById(selectPlantPartOtherTemp).disabled = false;
+				} else {
+					document.getElementById(selectPlantPartOtherTemp).disabled = true;
+				}
+			}
+		}
+		
+		function enableSPPO(pValue) {
+			var selectSpeciesPlantPart = "#SpeciesPlantPart" + pValue;
+			var selectSpeciesPlantPartOther = "#SpeciesPlantPartOther[" + pValue + "]";			
+			
+			if (pValue == 0) {
+				console.log($('#SpeciesPlantPart').val());
+				
+				if ($('#SpeciesPlantPart').val() == -1) {
+					document.getElementById("SpeciesPlantPartOther[0]").disabled = false;
+				} else {
+					document.getElementById("SpeciesPlantPartOther[0]").disabled = true;
+				}
+			} else {
+				console.log($(selectSpeciesPlantPart).val());
+				var selectPlantPartOtherTemp = "SpeciesPlantPartOther[" + pValue + "]";
+				
+				if ($(selectSpeciesPlantPart).val() == -1) {
+					document.getElementById(selectPlantPartOtherTemp).disabled = false;
+				} else {
+					document.getElementById(selectPlantPartOtherTemp).disabled = true;
+				}
+			}
+		}
+	
+	</script>
 </body>
 </html>

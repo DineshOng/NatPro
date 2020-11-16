@@ -177,11 +177,11 @@ public class ValidationServlet extends HttpServlet {
 		}
 
 		request.setAttribute("Validations", validations);
-		
+
 		OntoQuery q = new OntoQuery();
 		List<String> plantParts = q.getAllPlantParts();
 		request.setAttribute("plantPartsList", plantParts);
-		
+
 		request.getRequestDispatcher("validation.jsp").forward(request, response);
 
 	}
@@ -345,11 +345,11 @@ public class ValidationServlet extends HttpServlet {
 						}
 
 						if (tag2.contains("Family")) {
-							specie.setFamily(nameElementTag2.item(0).getTextContent());
+							specie.setFamily(WordUtils.capitalizeFully(nameElementTag2.item(0).getTextContent()));
 						}
 
 						if (tag2.contains("Genus")) {
-							specie.setGenus(nameElementTag2.item(0).getTextContent());
+							specie.setGenus(WordUtils.capitalizeFully(nameElementTag2.item(0).getTextContent()));
 						}
 
 						validation.addSynonyms(specie);
