@@ -109,172 +109,179 @@
 							<li><a class="nav-link" href="#step-3"> Compound </a></li>
 							<li><a class="nav-link" href="#step-4"> Review Data </a></li>
 						</ul>
-
-						<div class="tab-content overflow-auto">
-							<div id="step-1" class="tab-pane" role="tabpanel">
-								<div class="card">
-									<div class="card-header text-center">
-										<h4 class="mt-1">General Information</h4>
-									</div>
-									<div class="card-body ">
-										<div class="form-group form-row">
-											<div class="col-4"></div>
-											<div class="col-4">
-												<label for="CommonPlantName"> <i
-													class="fa fa-address-card" aria-hidden="true"></i> Common
-													Plant Name
-												</label> <input type="text" id="CommonPlantName"
-													name="commonPlantName" class="form-control" placeholder=""
-													required>
-											</div>
+						<form action="AddPlantServlet" method="POST" id="addPlant">
+							<div class="tab-content overflow-auto">
+								<div id="step-1" class="tab-pane" role="tabpanel">
+									<div class="card">
+										<div class="card-header text-center">
+											<h4 class="mt-1">General Information</h4>
 										</div>
-										<div class="form-group form-row">
-											<div class="col-2"></div>
-											<div class="col-4">
-												<label for="Genus"><i class="fa fa-group"
-													aria-hidden="true"></i> Genus</label> <input type="text"
-													class="form-control" name="genus" id="Genus" placeholder="">
-											</div>
-											<div class="col-4">
-												<label for="Family"><i class="fa fa-group"
-													aria-hidden="true"></i> Family</label> <input type="text"
-													class="form-control" name="family" id="Family"
-													placeholder="">
-											</div>
-										</div>
-
-										<div class="form-group form-row">
-											<div class="col-2"></div>
-											<div class="col-4">
-												<label for="ScientificName"><i
-													class="fa fa-drivers-license" aria-hidden="true"></i>
-													Scientific Name</label> <input type="text" class="form-control"
-													name="scientificName" id="ScientificName"
-													pattern="^([A-Z][a-z]+) +([a-z-]+).*$" placeholder=""
-													required>
-											</div>
-											<div id="locationGroup" class="col-4">
-												<div class="col-13">
-													<label for="Location"><i class="fa fa-map-marker"
-														aria-hidden="true"></i> Location</label>
-												</div>
-												<div>
-													<button id="locationAdd" type="button"
-														class="btn btn-outline-success btn-sm"
-														onclick="addLFields(${modalId},'')"
-														style="margin-top: 5px">
-														<i class="fa fa-plus" aria-hidden="true"></i> Location
-													</button>
+										<div class="card-body ">
+											<div class="form-group form-row">
+												<div class="col-4"></div>
+												<div class="col-4">
+													<label for="CommonPlantName"> <i
+														class="fa fa-address-card" aria-hidden="true"></i> Common
+														Plant Name
+													</label> <input type="text" id="CommonPlantName"
+														name="commonPlantName" class="form-control" placeholder=""
+														required>
 												</div>
 											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div id="step-2" class="tab-pane" role="tabpanel">
-								<div class="card">
-									<div class="card-header text-center">
-										<h4 class="mt-1">Preparation</h4>
-									</div>
-									<div class="card-body">
-										<div id="preparationGroup">
-											<div class="border-bottom border-secondary mb-3">
-												<div class="form-group form-row">
-													<div class="col-1"></div>
-													<div class="col">
-														<label for="Preparation"><i class="fa fa-cogs"
-															aria-hidden="true"></i> Preparation</label> <input type="text"
-															class="form-control" id="Preparation" placeholder=""
-															name="preparation[0]"> <input type="hidden"
-															name="prepCtr" value="0">
-													</div>
-													<div class="col">
-														<label for="PlantPart"><i class="fa fa-leaf"
-															aria-hidden="true"></i> Plant Part</label> <select
-															name="prepPart[0]"
-															class="custom-select custom-select-md mb-3"
-															id="PlantPart" onchange="enablePPO(0)">
-															<option value="" selected disabled>Open this
-																select menu</option>
-															<option value="-1">Others (please write on the
-																right side)</option>
-															<c:forEach items="${plantPartsList}" var="plantPartsList">
-																<option value="${plantPartsList}">${plantPartsList}</option>
-															</c:forEach>
-														</select>
-													</div>
-													<div class="col">
-														<label for="PlantPartOther[0]">Plant Part (Other)</label>
-														<input type="text" class="form-control"
-															id="PlantPartOther[0]" placeholder="" disabled>
-													</div>
-													<div class="col-1"></div>
+											<div class="form-group form-row">
+												<div class="col-2"></div>
+												<div class="col-4">
+													<label for="Genus"><i class="fa fa-group"
+														aria-hidden="true"></i> Genus</label> <input type="text"
+														class="form-control" name="genus" id="Genus"
+														placeholder="">
 												</div>
+												<div class="col-4">
+													<label for="Family"><i class="fa fa-group"
+														aria-hidden="true"></i> Family</label> <input type="text"
+														class="form-control" name="family" id="Family"
+														placeholder="">
+												</div>
+											</div>
 
-												<div class="form-group form-row" id="illnessGroup">
-													<div class="col-4"></div>
-													<div class="col-4">
-														<i class="fa fa-viruses"></i> <label for="Illness"><i
-															class="fa fa-thermometer" aria-hidden="true"></i> Illness</label>
-														<input type="text" class="form-control" id="Illness"
-															placeholder="" name="illness[0][0]"> <input
-															type="hidden" name="illnessCtr[0]" value="0">
-														<button id="illnessAdd" type="button"
+											<div class="form-group form-row">
+												<div class="col-2"></div>
+												<div class="col-4">
+													<label for="ScientificName"><i
+														class="fa fa-drivers-license" aria-hidden="true"></i>
+														Scientific Name</label> <input type="text" class="form-control"
+														name="scientificName" id="ScientificName"
+														pattern="^([A-Z][a-z]+) +([a-z-]+).*$" placeholder=""
+														required>
+												</div>
+												<div id="locationGroup" class="col-4">
+													<div class="col-13">
+														<label for="Location"><i class="fa fa-map-marker"
+															aria-hidden="true"></i> Location</label> <input type="text"
+															class="form-control" name="location" id="Location"
+															placeholder="">
+													</div>
+													<div>
+														<button id="locationAdd" type="button"
 															class="btn btn-outline-success btn-sm"
-															style="margin-top: 5px" onclick="addIFields(0)">
-															<i class="fa fa-plus" aria-hidden="true"></i> Illness
+															onclick="addLFields(${modalId},'')"
+															style="margin-top: 5px">
+															<i class="fa fa-plus" aria-hidden="true"></i> Location
 														</button>
 													</div>
-													<div class="col-4"></div>
-												</div>
-											</div>
-											<div class="d-flex justify-content-center">
-												<div class="form-row" style="width: 50%">
-													<button type="button"
-														class="btn btn-outline-success btn-block"
-														id="preparationAdd" onclick="addPFields(0)">Add
-														Preparation</button>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div id="step-3" class="tab-pane" role="tabpanel">
-								<div class="row" style="height: auto">
-									<div class="col-4">
-										<nav id="navbarScrollspy" class="navbar navbar-light bg-light">
-											<a class="navbar-brand" href="#">Plant Parts</a>
-											<nav class="nav nav-pills flex-column" id="plantPartsNav">
-											</nav>
-										</nav>
-									</div>
-									<div class="col" data-spy="scroll"
-										data-target="#navbarScrollspy"
-										style="height: 60vh; overflow-y: scroll;">
-										<div class="card">
-											<div class="card-header text-center">
-												<h4 class="mt-1">Compound</h4>
+								<div id="step-2" class="tab-pane" role="tabpanel">
+									<div class="card">
+										<div class="card-header text-center">
+											<h4 class="mt-1">Preparation</h4>
+										</div>
+										<div class="card-body">
+											<div id="preparationGroup">
+												<div class="border-bottom border-secondary mb-3">
+													<div class="form-group form-row">
+														<div class="col-1"></div>
+														<div class="col">
+															<label for="Preparation"><i class="fa fa-cogs"
+																aria-hidden="true"></i> Preparation</label> <input type="text"
+																class="form-control" id="Preparation" placeholder=""
+																name="preparation[0]"> <input type="hidden"
+																name="prepCtr" value="0">
+														</div>
+														<div class="col">
+															<label for="PlantPart"><i class="fa fa-leaf"
+																aria-hidden="true"></i> Plant Part</label> <select
+																name="prepPart[0]"
+																class="custom-select custom-select-md mb-3"
+																id="PlantPart" onchange="enablePPO(0)">
+																<option value="" selected disabled>Open this
+																	select menu</option>
+																<option value="-1">Others (please write on the
+																	right side)</option>
+																<c:forEach items="${plantPartsList}"
+																	var="plantPartsList">
+																	<option value="${plantPartsList}">${plantPartsList}</option>
+																</c:forEach>
+															</select>
+														</div>
+														<div class="col">
+															<label for="PlantPartOther[0]">Plant Part (Other)</label>
+															<input type="text" class="form-control"
+																id="PlantPartOther[0]" placeholder="" disabled>
+														</div>
+														<div class="col-1"></div>
+													</div>
+
+													<div class="form-group form-row" id="illnessGroup">
+														<div class="col-4"></div>
+														<div class="col-4">
+															<i class="fa fa-viruses"></i> <label for="Illness"><i
+																class="fa fa-thermometer" aria-hidden="true"></i>
+																Illness</label> <input type="text" class="form-control"
+																id="Illness" placeholder="" name="illness[0][0]">
+															<input type="hidden" name="illnessCtr[0]" value="0">
+															<button id="illnessAdd" type="button"
+																class="btn btn-outline-success btn-sm"
+																style="margin-top: 5px" onclick="addIFields(0)">
+																<i class="fa fa-plus" aria-hidden="true"></i> Illness
+															</button>
+														</div>
+														<div class="col-4"></div>
+													</div>
+												</div>
+												<div class="d-flex justify-content-center">
+													<div class="form-row" style="width: 50%">
+														<button type="button"
+															class="btn btn-outline-success btn-block"
+															id="preparationAdd" onclick="addPFields(0)">Add
+															Preparation</button>
+													</div>
+												</div>
 											</div>
-											<div class="card-body">
-												<div id="speciesGroup">
-													<div class="d-flex justify-content-center">
-														<div class="form-row" style="width: 50%">
-															<button type="button"
-																class="btn btn-outline-success btn-block"
-																id="speciesAdd" onclick="addSFields(0)">Add
-																Species Part</button>
+										</div>
+									</div>
+								</div>
+								<div id="step-3" class="tab-pane" role="tabpanel">
+									<div class="row" style="height: auto">
+										<div class="col-4">
+											<nav id="navbarScrollspy"
+												class="navbar navbar-light bg-light">
+												<a class="navbar-brand" href="#">Plant Parts</a>
+												<nav class="nav nav-pills flex-column" id="plantPartsNav">
+												</nav>
+											</nav>
+										</div>
+										<div class="col" data-spy="scroll"
+											data-target="#navbarScrollspy"
+											style="height: 60vh; overflow-y: scroll;">
+											<div class="card">
+												<div class="card-header text-center">
+													<h4 class="mt-1">Compound</h4>
+												</div>
+												<div class="card-body">
+													<div id="speciesGroup">
+														<input type="hidden" name="speciesCtr" value="0">
+														<div class="d-flex justify-content-center">
+															<div class="form-row" style="width: 50%">
+																<button type="button"
+																	class="btn btn-outline-success btn-block"
+																	id="speciesAdd" onclick="addSFields(0)">Add
+																	Species Part</button>
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
 
+								</div>
+								<div id="step-4" class="tab-pane" role="tabpanel"></div>
 							</div>
-							<div id="step-4" class="tab-pane" role="tabpanel"></div>
-						</div>
+						</form>
 					</div>
 
 
@@ -393,7 +400,9 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-outline-secondary"
 						data-dismiss="modal">Go Back</button>
-					<button type="button" class="btn btn-success" data-dismiss="modal">Add</button>
+
+					<button type="submit" class="btn btn-success" form="addPlant">Add</button>
+
 				</div>
 			</div>
 		</div>
@@ -424,6 +433,9 @@
     			document.getElementById("approveEntry").classList.remove("disabled");
     			$('#approveEntry').attr("data-target","#confirmModal");
                 /* alert('this is the last step');  */
+            }else{
+            	document.getElementById("approveEntry").classList.add("disabled");
+            	$('#approveEntry').attr("data-target","");
             }
         });
 	</script>
@@ -505,6 +517,7 @@
 				success : function(data) {
 					console.log(data);
 					/* console.log(); */
+					document.getElementById("entryModalLabel").innerHTML =  "Validating "+data.species[0].specie+" Entry";					
 					$("#entryViewDocument").attr("onclick","viewDocument('"+fileName+"')");
 					document.getElementById("ScientificName").value=data.species[0].specie;
 					document.getElementById("CommonPlantName").value=data.medicinalPlant;
@@ -525,6 +538,9 @@
 					if(speciesParts!=null){
 						speciesParts.forEach(function(elem, spIndex, array) {
 							var plantPart = data.species[0].speciesParts[spIndex].plantPart;
+							if(plantPart == "tempSp"){
+								plantPart = "plant";
+							}
 						    addSFields(spIndex); 
 						    document.getElementById("SpeciesPart"+spIndex).value = plantPart;							
 						    var compounds = data.species[0].speciesParts[spIndex].compounds;
@@ -560,7 +576,7 @@
 		/* console.log(id, locName); */
 		$('#locationAdd').remove();
 		lCtr++;		
-		var inputField = '<div class="col-13"><input type="text" class="form-control" name="location" id="Location['+id +']['+lCtr+']" placeholder="Location" value="'+locName+'">';
+		var inputField = '<div class="col-13"><input type="text" class="form-control" name="location" id="Location['+id +']['+lCtr+']" placeholder="" value="'+locName+'">';
 		var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addLFields('+id+','+empty+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button></div>';
 		
 		$('#locationGroup').append(inputField, buttonAdd);
@@ -915,7 +931,8 @@
 			/* console.log(speciesArr2); */
 			var buttonAddText = "#chemicalCompoundAdd" + pValue;
 	
-			if (pValue == 1) {
+			$(buttonAddText).remove();
+			if (pValue == 0) {
 				$('#chemicalCompoundAdd').remove();
 			} else {
 				$(buttonAddText).remove();
@@ -992,7 +1009,7 @@
 									      'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
 									      '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
 								      '</button>'+
-								      '<button id="chemicalCompoundAdd" type="button"'+
+								      '<button id="chemicalCompoundAdd'+pValue+'" type="button"'+
 										      'class="btn btn-outline-success btn-sm"'+
 										      'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
 										      '<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
@@ -1048,8 +1065,9 @@
 									   '<div class="col-1"></div>'+
 									   '<div class="autocomplete" id="plantPartInputDiv'+sCtr+'">'+
 										   '<label for="SpeciesPlantPart"><i class="fa fa-leaf" aria-hidden="true"></i> Species Plant Part</label> '+
-										   '<input type="text" id="SpeciesPart'+sCtr+'"	name="speciesPart['+sCtr+']" class="form-control">'+
-									   '</div>'+
+										   '<input type="text" id="SpeciesPart'+sCtr+'"	name="plantPart['+sCtr+']" class="form-control">'+
+										   '<input type="hidden" name="speciesCtr" value="'+sCtr+'">'+
+										'</div>'+
 								   '</div>';
 			
 			var chemcompCluster = '<div id="chemicalCompoundGroup'+ sCtr+'">'+
