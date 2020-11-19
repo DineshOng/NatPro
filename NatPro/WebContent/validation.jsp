@@ -88,7 +88,7 @@
 		aria-labelledby="entryModalLabel" aria-hidden="true"
 		data-backdrop="static" data-keyboard="false"
 		onmouseenter="call_wizard()">
-		<div class="modal-dialog modal-lg"
+		<div class="modal-dialog modal-xl"
 			style="overflow-y: initial !important">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -124,7 +124,8 @@
 														class="fa fa-address-card" aria-hidden="true"></i> Common
 														Plant Name
 													</label> <input type="text" id="CommonPlantName"
-														name="commonPlantName" class="form-control" placeholder=""
+														name="commonPlantName"
+														class="form-control outline-warning" placeholder=""
 														required>
 												</div>
 											</div>
@@ -159,7 +160,7 @@
 														<label for="Location"><i class="fa fa-map-marker"
 															aria-hidden="true"></i> Location</label> <input type="text"
 															class="form-control" name="location" id="Location"
-															placeholder="">
+															placeholder="" style="display: none;">
 													</div>
 													<div>
 														<button id="locationAdd" type="button"
@@ -246,17 +247,17 @@
 								</div>
 								<div id="step-3" class="tab-pane" role="tabpanel">
 									<div class="row" style="height: auto">
-										<div class="col-4">
+										<div class="col-2">
 											<nav id="navbarScrollspy"
 												class="navbar navbar-light bg-light">
-												<a class="navbar-brand" href="#">Plant Parts</a>
+												<span class="navbar-brand">Plant Parts</span>
 												<nav class="nav nav-pills flex-column" id="plantPartsNav">
 												</nav>
 											</nav>
 										</div>
-										<div class="col" data-spy="scroll"
+										<div class="container" data-spy="scroll" data-offset="60"
 											data-target="#navbarScrollspy"
-											style="height: 60vh; overflow-y: scroll;">
+											style="height: 60vh; width: 80%; overflow-y: scroll; float: right;">
 											<div class="card">
 												<div class="card-header text-center">
 													<h4 class="mt-1">Compound</h4>
@@ -264,14 +265,14 @@
 												<div class="card-body">
 													<div id="speciesGroup">
 														<input type="hidden" name="speciesCtr" value="0">
-														<div class="d-flex justify-content-center">
+														<!-- <div class="d-flex justify-content-center">
 															<div class="form-row" style="width: 50%">
 																<button type="button"
 																	class="btn btn-outline-success btn-block"
 																	id="speciesAdd" onclick="addSFields(0)">Add
 																	Species Part</button>
 															</div>
-														</div>
+														</div> -->
 													</div>
 												</div>
 											</div>
@@ -438,6 +439,7 @@
             	$('#approveEntry').attr("data-target","");
             }
         });
+
 	</script>
 
 	<script>
@@ -501,6 +503,29 @@
 	</script>
 
 	<script type="text/javascript">
+		function checkIfFieldChanged(data){
+			$("#CommonPlantName").keyup(function () { 
+				if($("#CommonPlantName").val()!=data.medicinalPlant)
+					document.getElementById("CommonPlantName").style.borderColor  = "#ff9900";
+				else
+					document.getElementById("CommonPlantName").style.borderColor  = null;
+			});
+			
+			$("#Genus").keyup(function () { 
+				if($("#Genus").val()!=data.species[0].genus)
+					document.getElementById("Genus").style.borderColor  = "#ff9900";
+				else
+					document.getElementById("Genus").style.borderColor  = null;
+			});
+			
+			$("#ScientificName").keyup(function () { 
+				if($("#ScientificName").val()!=data.species[0].specie)
+					document.getElementById("ScientificName").style.borderColor  = "#ff9900";
+				else
+					document.getElementById("ScientificName").style.borderColor  = null;
+			});
+			
+		}
 		function getPlantEntity(fileName, id, sciName){
 			/* autocomplete(document.getElementById("SpeciesPart"), plantParts);  */
 			console.log(fileName);
@@ -521,7 +546,6 @@
 					$("#entryViewDocument").attr("onclick","viewDocument('"+fileName+"')");
 					document.getElementById("ScientificName").value=data.species[0].specie;
 					document.getElementById("CommonPlantName").value=data.medicinalPlant;
-					
 					if(data.species[0].family!=null){
 						document.getElementById("Family").value=data.species[0].family;
 					}
@@ -536,14 +560,16 @@
 					var speciesParts = data.species[0].speciesParts;
 					
 					if(speciesParts!=null){
-						speciesParts.forEach(function(elem, spIndex, array) {
+						var cCtr = 0;
+						speciesParts.forEach(function(elem, spIndex, array) { 
 							var plantPart = data.species[0].speciesParts[spIndex].plantPart;
 							if(plantPart == "tempSp"){
 								plantPart = "plant";
 							}
 						    addSFields(spIndex); 
-						    document.getElementById("SpeciesPart"+spIndex).value = plantPart;							
-						    var compounds = data.species[0].speciesParts[spIndex].compounds;
+						    document.getElementById("SpeciesPart"+spIndex).value = plantPart;	
+						   
+ 						    var compounds = data.species[0].speciesParts[spIndex].compounds;
 						    var compoundDropdown = '<li class="nav-item dropdown">'+
 							'<a	class="nav-link dropdown-toggle" data-toggle="dropdown"	href="#" role="button" aria-haspopup="true"	aria-expanded="false">'+plantPart+'</a>'+
 					    	'<div class="dropdown-menu">'+
@@ -557,6 +583,18 @@
 						    		compoundItems = compoundItems+'<a class="dropdown-item" href="#ChemicalCompound['+spIndex+']['+cIndex+']">'+compound+'</a>';
 						    		addCCFields(spIndex);
 						    		document.getElementById("ChemicalCompound["+spIndex+"]["+cIndex+"]").value=compound;
+						    		
+						    		var bioActs = data.species[0].speciesParts[spIndex].compounds[cIndex].bioActs;
+						    		bioActs.forEach(function(elem, bIndex, array) {
+						    			addBAFields(cCtr,spIndex,cIndex);
+						    			var bioAct = data.species[0].speciesParts[spIndex].compounds[cIndex].bioActs[bIndex].biologicalActivity;						    			
+						    			document.getElementById("BiologicalActivity["+spIndex+"]["+cIndex+"]["+bIndex+"]").value=bioAct;
+						    			try {
+						    				var cellLine = data.species[0].speciesParts[spIndex].compounds[cIndex].bioActs[bIndex].cellLine.cellLine; 
+						    				document.getElementById("CellLine["+spIndex+"]["+cIndex+"]["+bIndex+"]").value=cellLine;
+						    			}catch(err) {}
+						    		});		
+						    		cCtr++;
 						    	});
 						    	compoundDropdown = compoundDropdown + compoundItems;
 						    	
@@ -565,6 +603,7 @@
 						    $('#plantPartsNav').append(compoundDropdown);
 						});
 					} 
+					checkIfFieldChanged(data);
 				}
 				}); 
 		}
@@ -584,6 +623,8 @@
 	</script>
 
 	<script type="text/javascript">
+
+	
 	   $(document).on('hidden.bs.modal', '.modal', function () {
 	        $('.modal:visible').length && $(document.body).addClass('modal-open');
 	       
@@ -591,6 +632,7 @@
 	   
 	   $(document).ready(function() { 
 		   $('#smartwizard').smartWizard("reset"); 
+		   console.log(${JsonValidations});
 	   });
 	   		
 	    $(document).ready(function() {
@@ -662,7 +704,7 @@
 	
 		var snCtr, lCtr, pbpCtr, iCtr, baclCtr, ccCtr, sCtr;
 		snCtr = lCtr = pbpCtr = iCtr = baclCtr = 0;
-		var sCtr = ccCtr = -1; //id's starts at 0;
+		var sCtr = ccCtr = 0; //id's starts at 0;
 		var speciesArr = [];
 		var speciesArr2 = [ ]
 		var compArr = [ ];
@@ -830,18 +872,18 @@
 		}
 		
 		function addBAFields(pValue, sVal, cVal) {
-			var buttonAddText = "#biologicalActivityAdd" + pValue;
+			var buttonAddText = "#biologicalActivityAdd\\["+sVal+"\\]\\["+cVal+"\\]";
+			$(buttonAddText).remove();
 			speciesArr2[sVal][cVal]++;
-			console.log(speciesArr2);
-			if (pValue == 0) {
+			/* if (pValue == 0) {
 				$('#biologicalActivityAdd').remove();
 			} else {
 				$(buttonAddText).remove();
-			}
+			} */
 	
 			baclCtr++;
 			
-			if (pValue == 0) {
+			/* if (pValue == 0) {
 				
 				var newRow = '<div class="form-group form-row" id="biologicalActivityContainer'+baclCtr+'">';
 				
@@ -880,20 +922,20 @@
 				var newBioAct = newRow + inputBioAct + inputCellLine  + endRow + inputButtons;
 	
 				$('#biologicalActivityGroup').append(newBioAct);
-			} else {
+			} else { */
 				var newRow = '<div class="form-group form-row" id="biologicalActivityContainer'+baclCtr+'">';
 				
 				var inputBioAct = '<div class="col-3"> </div>'+
 							  	  '<div class="col-4">'+
 									  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
-									  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+									  '<input type="text" class="form-control" id="BiologicalActivity['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']" placeholder="" name="bioAct['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
 									  //'<button id="biologicalActivityAdd'+pValue+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 									  //'<button id="biologicalActivityDelete'+ baclCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(4, '+ baclCtr +')" style="margin-top: 5px"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button>'+
 					  		       '</div>';
 					  		  
 		  		var inputCellLine = '<div class="col-4">'+
 											'<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
-											'<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
+											'<input type="text" class="form-control" id="CellLine['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']" placeholder="" name="cellLine['+sVal+']['+cVal+']['+speciesArr2[sVal][cVal]+']">'+
 											'<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
 											'<input type="hidden" name="lengthBC['+sVal+']['+cVal+']" value="'+speciesArr2[sVal][cVal]+'">'+
 									'</div>';
@@ -908,7 +950,7 @@
 											   'onclick="removeFields(4, '+ baclCtr +')" style="margin-top: -17px">'+
 											   '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
 										   '</button>'+
-										   '<button id="biologicalActivityAdd" type="button"'+
+										   '<button id="biologicalActivityAdd['+sVal+']['+cVal+']" type="button"'+
 											   'class="btn btn-outline-success btn-sm"'+
 											   'onclick="addBAFields('+pValue+','+sVal+','+cVal+')" style="margin-top: -5px">'+
 											   '<i class="fa fa-plus" aria-hidden="true"></i> Biological'+
@@ -917,15 +959,14 @@
 									   '</div>'+
 								   '</div>';
 				
-				var newBioAct = newRow + inputBioAct + inputCellLine + endRow + inputButtons;
-					
-				var inputGroupText = "#biologicalActivityGroup" + pValue;
-	
+				var newBioAct = newRow + inputBioAct + inputCellLine + endRow + inputButtons;				
+				var inputGroupText = '#biologicalActivityGroup\\['+sVal+'\\]\\['+cVal+'\\]';
+				
 				$(inputGroupText).append(newBioAct);
-			}
+			/* } */
 		}
 		
-		function addCCFields(pValue) {		
+		function addCCFields(pValue) {
 			speciesArr[pValue]++;
 			speciesArr2[pValue].push(0);
 			/* console.log(speciesArr2); */
@@ -1018,17 +1059,17 @@
 							      '</div>'+
 						      '</div>';
 							  
-				var bioAct = '<div id="biologicalActivityGroup'+ ccCtr+'">'+
+				var bioAct = '<div id="biologicalActivityGroup['+pValue+']['+speciesArr[pValue]+']">'+
 							 	'<div class="form-group form-row">'+
 									 '<div class="col-3"> </div>'+
 									 '<div class="col-4">'+
 										 '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
-					  					 '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+pValue+']['+speciesArr[pValue]+'][0]">'+
-					  					 '<button id="biologicalActivityAdd'+ baclCtr +'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+					  					 '<input type="text" class="form-control" id="BiologicalActivity['+pValue+']['+speciesArr[pValue]+'][0]" placeholder="" name="bioAct['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  					 '<button id="biologicalActivityAdd['+pValue+']['+speciesArr[pValue]+']" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+pValue+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 					  				 '</div>'+
 									 '<div class="col-4">'+
 										 '<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
-					  						 '<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+pValue+']['+speciesArr[pValue]+'][0]">'+
+					  						 '<input type="text" class="form-control" id="CellLine['+pValue+']['+speciesArr[pValue]+'][0]" placeholder="" name="cellLine['+pValue+']['+speciesArr[pValue]+'][0]">'+
 					  						 '<input type="hidden" name="bioCellCC0" value="0">'+ // NOT YET USED(?)
 					  						 '<input type="hidden" name="lengthBC['+pValue+']['+speciesArr[pValue]+']" value="'+speciesArr2[pValue][speciesArr[pValue]]+'">'+
 									 '</div>'+
@@ -1057,10 +1098,7 @@
 				$(buttonAddText).remove();
 			}
 	
-			sCtr++;
-			ccCtr++;
-			baclCtr++;
-			
+
 			var speciesPPCluster = '<div class="border-bottom border-secondary mb-3" id="SpeciesContainer'+sCtr+'"><div class="form-group form-row">'+
 									   '<div class="col-1"></div>'+
 									   '<div class="autocomplete" id="plantPartInputDiv'+sCtr+'">'+
@@ -1075,24 +1113,24 @@
 										  '<div class="col-2"> </div>'+
 										  '<div class="col-5">'+
 											  '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
-											  '<input type="text" class="form-control" id="ChemicalCompound['+sCtr+']['+speciesArr[pValue]+']" placeholder="" name="compound['+sCtr+']['+speciesArr[pValue]+']">'+
+											  '<input type="text" class="form-control" id="ChemicalCompound['+sCtr+'][0]" placeholder="" name="compound['+sCtr+'][0]">'+
 											  '<button id="chemicalCompoundAdd'+sCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+sCtr+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
 											  '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
 											  '<input type="hidden" name="lengthCC'+sCtr+'" value="'+speciesArr[pValue]+'">'+
 										  '</div>'+
 									  '</div>'+
 								
-									  '<div id="biologicalActivityGroup'+ ccCtr+'">'+
+									  '<div id="biologicalActivityGroup['+sCtr+']['+speciesArr[pValue]+']">'+
 										  '<div class="form-group form-row">'+
 											  '<div class="col-3"> </div>'+
 											  '<div class="col-4">'+
 												  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
-							  					  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sCtr+']['+speciesArr[pValue]+'][0]">'+
-							  					  '<button id="biologicalActivityAdd'+ccCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+sCtr+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
+							  					  '<input type="text" class="form-control" id="BiologicalActivity['+sCtr+'][0][0]" placeholder="" name="bioAct['+sCtr+'][0][0]">'+
+							  					  '<button id="biologicalActivityAdd['+sCtr+']['+speciesArr[pValue]+']" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+sCtr+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 							  				  '</div>'+
 											  '<div class="col-4">'+
 												  '<label for="CellLine'+ baclCtr +'">Cell Line</label>'+
-							  						  '<input type="text" class="form-control" id="CellLine'+ baclCtr +'" placeholder="" name="cellLine['+sCtr+']['+speciesArr[pValue]+'][0]">'+
+							  						  '<input type="text" class="form-control" id="CellLine['+sCtr+'][0][0]" placeholder="" name="cellLine['+sCtr+'][0][0]">'+
 							  						  '<input type="hidden" name="bioCellCC0" value="0">'+ //NOT YET USED (?)
 							  						  '<input type="hidden" name="lengthBC['+sCtr+']['+speciesArr[pValue]+']" value="'+speciesArr2[sCtr][speciesArr[pValue]]+'">'+
 											  '</div>'+
@@ -1112,6 +1150,9 @@
 			
 			$('#speciesGroup').append(speciesComponent);
 			autocomplete(document.getElementById("SpeciesPart"+sCtr), plantParts);
+			sCtr++;
+			ccCtr++;
+			baclCtr++;
 		}
 		
 		function enablePPO(pValue) {

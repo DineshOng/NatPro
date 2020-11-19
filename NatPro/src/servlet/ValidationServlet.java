@@ -177,7 +177,8 @@ public class ValidationServlet extends HttpServlet {
 		}
 
 		request.setAttribute("Validations", validations);
-
+		String jsonValidations = new Gson().toJson(validations);
+		request.setAttribute("JsonValidations", jsonValidations);
 		OntoQuery q = new OntoQuery();
 		List<String> plantParts = q.getAllPlantParts();
 		request.setAttribute("plantPartsList", plantParts);
@@ -400,9 +401,9 @@ public class ValidationServlet extends HttpServlet {
 
 							}
 							compound.setBioActs(bioActs);
+							validation.addCompounds(compound);
 						}
 
-						validation.addCompounds(compound);
 					}
 
 					// BIOLOGICAL ACTIVITY
@@ -490,6 +491,31 @@ public class ValidationServlet extends HttpServlet {
 								}
 							}
 
+						}
+
+					}
+
+					if (validation.getCompounds().size() > 0) {
+						Iterator<Compound> cIt = validation.getCompounds().iterator();
+						while (cIt.hasNext()) {
+							Compound compound = cIt.next();
+							HashSet<BiologicalActivity> baHs = new HashSet<BiologicalActivity>();
+							Iterator<BiologicalActivity> cbIt = compound.getBioActs().iterator();
+							while (cbIt.hasNext()) {
+								BiologicalActivity compoundBioAct = cbIt.next();
+								baHs.add(compoundBioAct);
+								Iterator<BiologicalActivity> bIt = validation.getBioAct().iterator();
+								while (bIt.hasNext()) {
+									BiologicalActivity bioAct = bIt.next();
+									if (compoundBioAct.getBiologicalActivity()
+											.equalsIgnoreCase(bioAct.getBiologicalActivity())) {
+										baHs.add(bioAct);
+										baHs.remove(compoundBioAct);
+									}
+								}
+
+							}
+							compound.setBioActs(baHs);
 						}
 
 					}

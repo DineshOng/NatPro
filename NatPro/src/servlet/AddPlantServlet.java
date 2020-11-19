@@ -160,7 +160,7 @@ public class AddPlantServlet extends HttpServlet {
 							temp = "plant";
 						}
 						if (temp != null) { // check if a plant part is selected
-							String plantPart = temp;
+							String plantPart = temp.replaceAll(" ", "_");
 							String speciesPartIndiv = speciesNameIndiv + "_" + plantPart;
 							// create individual for SpeciesPart
 							m.addIndiv_SpeciesPart(speciesPartIndiv);

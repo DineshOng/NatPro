@@ -811,7 +811,7 @@
 										  '<div class="col-2"> </div>'+
 										  '<div class="col-5">'+
 											  '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
-											  '<input type="text" class="form-control" id="ChemicalCompound'+ ccCtr +'" placeholder="" name="compound['+sCtr+']['+speciesArr[pValue]+']">'+
+											  '<input type="text" class="form-control" id="ChemicalCompound'+ ccCtr +'" placeholder="" name="compound['+sCtr+'][0]">'+
 											  '<button id="chemicalCompoundAdd'+sCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+sCtr+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
 											  '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
 											  '<input type="hidden" name="lengthCC'+sCtr+'" value="'+speciesArr[pValue]+'">'+
@@ -823,7 +823,7 @@
 											  '<div class="col-3"> </div>'+
 											  '<div class="col-4">'+
 												  '<label for="BiologicalActivity'+ baclCtr +'">Biological Activity</label>'+
-							  					  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sCtr+']['+speciesArr[pValue]+'][0]">'+
+							  					  '<input type="text" class="form-control" id="BiologicalActivity'+ baclCtr +'" placeholder="" name="bioAct['+sCtr+'][0][0]">'+
 							  					  '<button id="biologicalActivityAdd'+ccCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addBAFields('+ccCtr+','+sCtr+','+speciesArr[pValue]+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Biological Activity</button>'+
 							  				  '</div>'+
 											  '<div class="col-4">'+
