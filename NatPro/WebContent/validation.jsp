@@ -107,7 +107,7 @@
 									Information </a></li>
 							<li><a class="nav-link" href="#step-2"> Preparation </a></li>
 							<li><a class="nav-link" href="#step-3"> Compound </a></li>
-							<li><a class="nav-link" href="#step-4"> Review Data </a></li>
+							<!-- <li><a class="nav-link" href="#step-4"> Review Data </a></li> -->
 						</ul>
 						<form action="AddPlantServlet" method="POST" id="addPlant">
 							<div class="tab-content overflow-auto">
@@ -280,7 +280,7 @@
 									</div>
 
 								</div>
-								<div id="step-4" class="tab-pane" role="tabpanel"></div>
+								<!-- <div id="step-4" class="tab-pane" role="tabpanel"></div> -->
 							</div>
 						</form>
 					</div>
