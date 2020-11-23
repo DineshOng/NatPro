@@ -37,6 +37,7 @@ import com.flickr4java.flickr.FlickrException;
 import com.google.gson.Gson;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
 import model.BiologicalActivity;
 import model.CellLine;
 import model.Compound;
@@ -74,7 +75,7 @@ public class ValidationServlet extends HttpServlet {
 		case "/ValidationServlet":
 			try {
 				getValidationXML(request, response);
-			} catch (ServletException | IOException | OntologyLoadException e) {
+			} catch (ServletException | IOException | OntologyLoadException | SQWRLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -150,7 +151,7 @@ public class ValidationServlet extends HttpServlet {
 	}
 
 	private void getValidationXML(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException, OntologyLoadException {
+			throws ServletException, IOException, OntologyLoadException, SQWRLException {
 		File Folder = new File(validationFolder);
 		File[] listFiles = Folder.listFiles();
 		Reader fileReader = null;
@@ -182,6 +183,10 @@ public class ValidationServlet extends HttpServlet {
 		OntoQuery q = new OntoQuery();
 		List<String> plantParts = q.getAllPlantParts();
 		request.setAttribute("plantPartsList", plantParts);
+		List<String> sciNames = q.getAllSynonyms();
+		request.setAttribute("sciNameList", sciNames);
+		List<String> medPlantNames = q.getAllMedPlantNames();
+		request.setAttribute("medPlantNameList", medPlantNames);
 
 		request.getRequestDispatcher("validation.jsp").forward(request, response);
 

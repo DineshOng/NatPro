@@ -116,7 +116,7 @@
 										<div class="card-header text-center">
 											<h4 class="mt-1">General Information</h4>
 										</div>
-										<div class="card-body ">
+										<div class="card-body">
 											<div class="form-group form-row">
 												<div class="col-4"></div>
 												<div class="col-4">
@@ -173,6 +173,7 @@
 												</div>
 											</div>
 										</div>
+										<div id="generalError" class="card-footer"></div>
 									</div>
 								</div>
 								<div id="step-2" class="tab-pane" role="tabpanel">
@@ -429,7 +430,8 @@
 
 	<script type="text/javascript" src="js/autocomplete.js"></script>
 
-	<script> $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
+	<script> 
+		$("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
             if(anchorObject.prevObject.length - 1 == nextStepIndex){
     			document.getElementById("approveEntry").classList.remove("disabled");
     			$('#approveEntry').attr("data-target","#confirmModal");
@@ -439,6 +441,64 @@
             	$('#approveEntry').attr("data-target","");
             }
         });
+		
+		$("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, nextStepIndex, stepDirection) {
+			if($("#ScientificName").css("border-color") == 	"rgb(255, 0, 0)")
+				document.getElementById("ScientificName").style.borderColor = null;
+			if($("#CommonPlantName").css("border-color") == 	"rgb(255, 0, 0)")
+				document.getElementById("CommonPlantName").style.borderColor = null;
+			if($("#Genus").css("border-color") == 	"rgb(255, 0, 0)")
+				document.getElementById("Genus").style.borderColor = null;
+			if($("#Family").css("border-color") == 	"rgb(255, 0, 0)")
+				document.getElementById("Family").style.borderColor = null;
+        	document.getElementById("generalError").innerHTML ="";
+            console.log(currentStepIndex);
+            var hasError = false;
+            if(currentStepIndex==0){
+            	if(document.getElementById("ScientificName").value == ""){
+            		document.getElementById("ScientificName").style.borderColor  = "rgb(255, 0, 0)";
+            		
+            	}
+            	if(document.getElementById("CommonPlantName").value == ""){
+            		document.getElementById("CommonPlantName").style.borderColor  = "rgb(255, 0, 0)";
+            		$('#generalError').append('<div class="alert alert-danger" role="alert">Please input a common name.</div>');
+            		hasError = true;
+            	}
+            	if(document.getElementById("CommonPlantName").value == document.getElementById("ScientificName").value){
+            		document.getElementById("CommonPlantName").style.borderColor  = "rgb(255, 0, 0)";
+            		document.getElementById("ScientificName").style.borderColor  = "rgb(255, 0, 0)";
+            		$('#generalError').append('<div class="alert alert-danger" role="alert">Same common and scientific name is not allowed.</div>');
+            		hasError = true;
+            	}
+	            if(document.getElementById("Genus").value == document.getElementById("Family").value && document.getElementById("Genus").value!=""){
+	        		document.getElementById("Genus").style.borderColor  = "rgb(255, 0, 0)";
+	        		document.getElementById("Family").style.borderColor  = "rgb(255, 0, 0)";
+	        		$('#generalError').append('<div class="alert alert-danger" role="alert">Same genus and family name is not allowed.</div>');
+	        		hasError = true;
+	        	}
+	            
+/* 	            for (var i = 0; i < sciNames.length; i++) {
+	            	if(document.getElementById("ScientificName").value.toLowerCase() == sciNames[i].toLowerCase()){
+	            		$('#generalError').append('<div class="alert alert-danger" role="alert">Scientific name already exists in the ontology.</div>');
+	            		hasError = true;
+	            	}
+	            		
+	            }
+	            
+	            for (var i = 0; i < medPlantNames.length; i++) {
+	            	if(document.getElementById("CommonPlantName").value.toLowerCase() == medPlantNames[i].toLowerCase()){
+	            		$('#generalError').append('<div class="alert alert-danger" role="alert">Common plant name is already exists in the ontology.</div>');
+	            		hasError = true;
+	            	}
+	            		
+	            } */
+            }else if(currentStepIndex==1){
+
+            }
+
+	        return !hasError;
+        });
+		
 
 	</script>
 
@@ -514,7 +574,7 @@
 			$("#Genus").keyup(function () { 
 				if($("#Genus").val()!=data.species[0].genus)
 					document.getElementById("Genus").style.borderColor  = "#ff9900";
-				else
+				else 
 					document.getElementById("Genus").style.borderColor  = null;
 			});
 			
@@ -545,7 +605,11 @@
 					document.getElementById("entryModalLabel").innerHTML =  "Validating "+data.species[0].specie+" Entry";					
 					$("#entryViewDocument").attr("onclick","viewDocument('"+fileName+"')");
 					document.getElementById("ScientificName").value=data.species[0].specie;
-					document.getElementById("CommonPlantName").value=data.medicinalPlant;
+					if(data.species[0].specie == data.medicinalPlant){
+						document.getElementById("CommonPlantName").value = "";
+					}else{
+						document.getElementById("CommonPlantName").value=data.medicinalPlant;
+					}
 					if(data.species[0].family!=null){
 						document.getElementById("Family").value=data.species[0].family;
 					}
@@ -603,7 +667,7 @@
 						    $('#plantPartsNav').append(compoundDropdown);
 						});
 					} 
-					checkIfFieldChanged(data);
+					/* checkIfFieldChanged(data); */
 				}
 				}); 
 		}
@@ -690,11 +754,25 @@
 	<!-- Script to Generate Autocomplete Fields -->
 	<script>	
 		var plantParts = [];
+		var sciNames = [];
+		var medPlantNames = [];
 	</script>
 
 	<c:forEach items="${plantPartsList}" var="plantPart">
 		<script>	
 			plantParts.push("${plantPart}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${medPlantNameList}" var="medPlantName">
+		<script>	
+		medPlantNames.push("${medPlantName}")
+		</script>
+	</c:forEach>
+
+	<c:forEach items="${sciNameList}" var="sciName">
+		<script>	
+		sciNames.push("${sciName}")
 		</script>
 	</c:forEach>
 
@@ -1204,5 +1282,7 @@
 		}
 	
 	</script>
+
+
 </body>
 </html>
