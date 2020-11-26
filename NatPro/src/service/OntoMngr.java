@@ -93,8 +93,8 @@ public class OntoMngr {
 //		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
 //		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl"); // user defined
 		
-		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl";
-		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.owl"); // user defined
+		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
+		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro.owl"); // user defined
 
 //		owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 

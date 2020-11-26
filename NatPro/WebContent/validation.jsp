@@ -109,7 +109,7 @@
 							<li><a class="nav-link" href="#step-3"> Compound </a></li>
 							<!-- <li><a class="nav-link" href="#step-4"> Review Data </a></li> -->
 						</ul>
-						<form action="AddPlantServlet" method="POST" id="addPlant">
+						<form action="ApprovePlantServlet" method="POST" id="addPlant">
 							<div class="tab-content overflow-auto">
 								<div id="step-1" class="tab-pane" role="tabpanel">
 									<div class="card">
@@ -283,6 +283,10 @@
 								</div>
 								<!-- <div id="step-4" class="tab-pane" role="tabpanel"></div> -->
 							</div>
+							<input type="hidden" id="sNameApprove"
+								name="specieNameApprove" value="null"> <input
+								type="hidden" id="fNameApprove" name="fileNameApprove"
+								value="null">
 						</form>
 					</div>
 
@@ -357,7 +361,11 @@
 			</div>
 		</div>
 	</div>
-
+	<form action="RejectPlantServlet" method="GET" id="rejectPlant">
+		<input type="hidden" id="sNameReject" name="specieNameReject"
+			value="null"> <input type="hidden" id="fNameReject"
+			name="fileNameReject" value="null">
+	</form>
 	<!-- Reject Validation Modal -->
 	<div class="modal fade" id="rejectModal" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -376,8 +384,8 @@
 					discard this entry?</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-outline-secondary"
-						data-dismiss="modal">Go Back</button>
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Reject</button>
+						data-dismiss="modal">Go back</button>
+					<button type="submit" class="btn btn-danger" form="rejectPlant">Reject</button>
 				</div>
 			</div>
 		</div>
@@ -401,7 +409,7 @@
 					add this entry to the ontology?</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-outline-secondary"
-						data-dismiss="modal">Go Back</button>
+						data-dismiss="modal">Go back</button>
 
 					<button type="submit" class="btn btn-success" form="addPlant">Add</button>
 
@@ -602,6 +610,10 @@
 				success : function(data) {
 					console.log(data);
 					/* console.log(); */
+					document.getElementById("sNameApprove").value = data.species[0].specie;
+					document.getElementById("sNameReject").value = data.species[0].specie;
+					document.getElementById("fNameApprove").value = fileName;
+					document.getElementById("fNameReject").value = fileName;
 					document.getElementById("entryModalLabel").innerHTML =  "Validating "+data.species[0].specie+" Entry";					
 					$("#entryViewDocument").attr("onclick","viewDocument('"+fileName+"')");
 					document.getElementById("ScientificName").value=data.species[0].specie;

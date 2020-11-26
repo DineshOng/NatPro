@@ -137,8 +137,12 @@ public class ValidationServlet extends HttpServlet {
 				Iterator<MedicinalPlant> mIt = v.getMedicinalPlants().iterator();
 				while (mIt.hasNext()) {
 					MedicinalPlant m = mIt.next();
-					if (m.getSpecies().get(0).getSpecie().equalsIgnoreCase(sciName)) {
-						jsonEntry = new Gson().toJson(m);
+					try {
+						if (m.getSpecies().get(0).getSpecie().equalsIgnoreCase(sciName)) {
+							jsonEntry = new Gson().toJson(m);
+						}
+					} catch (Exception e) {
+
 					}
 				}
 			}
@@ -552,6 +556,8 @@ public class ValidationServlet extends HttpServlet {
 		} catch (org.xml.sax.SAXException e) {
 			e.printStackTrace();
 		}
+		
+		
 	}
 
 }

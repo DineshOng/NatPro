@@ -279,9 +279,9 @@
 							</div>
 							<div class="modal-body">Are you sure you want to proceed and add this plant?</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-outline-danger"
-									data-dismiss="modal">X  Go Back</button>
-								<button type="submit" class="btn btn-success">&#10003 Add</button>
+								<button type="button" class="btn btn-outline-secondary"
+									data-dismiss="modal">Go back</button>
+								<button type="submit" class="btn btn-success">Add</button>
 							</div>
 						</div>
 					</div>

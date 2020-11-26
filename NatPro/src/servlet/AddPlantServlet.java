@@ -1,29 +1,60 @@
 package servlet;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.commons.lang.WordUtils;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
+import model.BiologicalActivity;
+import model.CellLine;
+import model.Compound;
 import model.MedicinalPlant;
+import model.Species;
+import model.SpeciesPart;
+import model.Validation;
 import service.OntoMngr;
 import service.OntoQuery;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 /**
  * Servlet implementation class AddPlantServlet
  */
-@WebServlet({ "/AddPlantServlet", "/AddPlantPageServlet" })
+@WebServlet({ "/AddPlantServlet", "/AddPlantPageServlet", "/ApprovePlantServlet", "/RejectPlantServlet" })
 public class AddPlantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
+	private static final String validationFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -45,15 +76,10 @@ public class AddPlantServlet extends HttpServlet {
 		case "/AddPlantServlet":
 			try {
 				addPlant(request, response);
-			} catch (OntologyLoadException e) {
+			} catch (OWLOntologyCreationException | OWLOntologyStorageException | OntologyLoadException
+					| ServletException | IOException e1) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (OWLOntologyCreationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (OWLOntologyStorageException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				e1.printStackTrace();
 			}
 			break;
 		case "/AddPlantPageServlet":
@@ -63,6 +89,19 @@ public class AddPlantServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			break;
+		case "/ApprovePlantServlet":
+			removeApproved(request, response);
+			try {
+				addPlant(request, response);
+			} catch (OWLOntologyCreationException | OWLOntologyStorageException | OntologyLoadException
+					| ServletException | IOException e1) {
+			}
+
+			break;
+		case "/RejectPlantServlet":
+			removeRejected(request, response);
+			request.getRequestDispatcher("/ValidationServlet").forward(request, response);
 			break;
 		default:
 			System.out.println("URL pattern doesn't match existing patterns.");
@@ -156,7 +195,7 @@ public class AddPlantServlet extends HttpServlet {
 					plantPartCtrMax++; // add one since incremention starts at 0 at front end
 					for (int i = 0; i < plantPartCtrMax; i++) { // traverse through the list of all plant parts selected
 						String temp = request.getParameter("plantPart[" + i + "]");
-						if(temp == null || temp.equals("")) {
+						if (temp == null || temp.equals("")) {
 							temp = "plant";
 						}
 						if (temp != null) { // check if a plant part is selected
@@ -245,10 +284,10 @@ public class AddPlantServlet extends HttpServlet {
 				if (request.getParameter("preparation[" + i + "]") != null
 						&& !request.getParameter("preparation[" + i + "]").equals("")) {
 					String preparation = request.getParameter("preparation[" + i + "]");
-					allPreparation = allPreparation.concat(preparation +  " ");
-					
+					allPreparation = allPreparation.concat(preparation + " ");
+
 					String temp = request.getParameter("prepPart[" + i + "]");
-					if(temp == null || temp.equals("")) {
+					if (temp == null || temp.equals("")) {
 						temp = "plant";
 					}
 					if (temp != null) {
@@ -317,6 +356,108 @@ public class AddPlantServlet extends HttpServlet {
 //			System.out.println("Location#" + (i + 1) + ": " + locs[i]);
 //		}
 		request.getRequestDispatcher("3aadded.jsp").forward(request, response);
+
+	}
+
+	private void removeApproved(HttpServletRequest request, HttpServletResponse response) {
+		String fileName = request.getParameter("fileNameApprove").replaceAll(".pdf", "");
+		String specieName = request.getParameter("specieNameApprove").toLowerCase();
+		removeValidationFile(fileName, specieName);
+	}
+
+	private void removeRejected(HttpServletRequest request, HttpServletResponse response) {
+		String fileName = request.getParameter("fileNameReject").replaceAll(".pdf", "");
+		String specieName = request.getParameter("specieNameReject").toLowerCase();
+		removeValidationFile(fileName, specieName);
+	}
+
+	private void removeValidationFile(String fileName, String specieName) {
+		File Folder = new File(validationFolder);
+		File[] listFiles = Folder.listFiles();
+		List<File> deleteFiles = new ArrayList<>();
+		for (File xmlFile : listFiles) {
+			String deleteFile = fileName + "-" + specieName;
+			Pattern p = Pattern.compile("^(.)*(" + deleteFile + ")(.)*");
+			Matcher m = p.matcher(xmlFile.toString());
+			boolean b = m.matches();
+			System.out.println(b);
+			System.out.println(deleteFile);
+			System.out.println(xmlFile);
+			if (b) {
+				deleteFiles.add(xmlFile);
+//				if (xmlFile.delete()) {
+//					System.out.println("Deleted the file: " + xmlFile.getName());
+//				} else {
+//					System.out.println("Failed to delete the file.");
+//				}
+			}
+
+			Pattern p1 = Pattern.compile("^(.)*(" + fileName + ")(.)*");
+			Matcher m1 = p1.matcher(xmlFile.toString());
+			boolean b1 = m1.matches();
+			if (b1) {
+				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+				boolean delete = false;
+				try {
+					DocumentBuilder builder = factory.newDocumentBuilder();
+					/*
+					 * =============================================================================
+					 * ==========================
+					 * =============================================================================
+					 * ========================== NOTE: CHECK IF FOLDER EXISTS
+					 * =============================================================================
+					 * ==========================
+					 * =============================================================================
+					 * ==========================
+					 */
+					Document doc = builder.parse(xmlFile.getAbsoluteFile());
+					doc.getDocumentElement().normalize();
+					NodeList nodeList = doc.getElementsByTagName("Seed");
+
+					for (int i = 0; i < nodeList.getLength(); i++) {
+						Node nNode = nodeList.item(i);
+						if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+							Element eElement = (Element) nNode;
+
+							String tag1 = eElement.getElementsByTagName("Tag1").item(0).getTextContent();
+							String tag2 = eElement.getElementsByTagName("Tag2").item(0).getTextContent();
+
+							Element elementTag1 = (Element) eElement.getElementsByTagName("Tag1").item(0);
+							Element elementTag2 = (Element) eElement.getElementsByTagName("Tag2").item(0);
+
+							NodeList nameElementTag1 = elementTag1.getElementsByTagName("Name");
+							NodeList nameElementTag2 = elementTag2.getElementsByTagName("Name");
+
+							// MEDICINAL PLANT
+							if (tag1.contains("MedicinalPlant")) {
+								if (tag2.contains("Synonym")) {
+									if (nameElementTag2.item(0).getTextContent().equalsIgnoreCase(specieName)) {
+										delete = true;
+									}
+								}
+							}
+						}
+					}
+				} catch (ParserConfigurationException | IOException | org.xml.sax.SAXException e) {
+					e.printStackTrace();
+				}
+
+				if (delete) {
+					deleteFiles.add(xmlFile);
+				}
+			}
+
+		}
+		System.out.println(deleteFiles);
+		System.gc();
+		for(File deleteXml : deleteFiles) {			
+			if (deleteXml.delete()) {
+				System.out.println("Deleted the file");
+			} else {
+				System.err.println("Failed to delete the file.");
+			}
+		}
+		
 
 	}
 
