@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>Synonym<Name>coccinia grandis</Name></Tag1><Tag2>Compound<Name>polyprenol</Name></Tag2><Relation><Pattern>conducted on</Pattern><Pattern>identified as</Pattern><Pattern>identified by</Pattern><Pattern>is used for</Pattern><Pattern>led to</Pattern><Pattern>reads</Pattern><Pattern>reported on</Pattern><Pattern>soaked in</Pattern><Pattern>used for</Pattern><Pattern>was identified as</Pattern><Pattern>were ground in</Pattern><Pattern>were identified by</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>coccinia grandis</Name>
+  </Tag1>
+  <Tag2>Compound<Name>polyprenol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>conducted on</Pattern>
+    <Pattern>identified as</Pattern>
+    <Pattern>identified by</Pattern>
+    <Pattern>is used for</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>reads</Pattern>
+    <Pattern>reported on</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>used for</Pattern>
+    <Pattern>was identified as</Pattern>
+    <Pattern>were ground in</Pattern>
+    <Pattern>were identified by</Pattern>
+  </Relation>
+</Seed>

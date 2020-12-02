@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>PlantPart<Name>flowers</Name></Tag1><Tag2>Compound<Name>betasitosteryl fatty acid esters</Name></Tag2><Relation><Pattern>collected from</Pattern><Pattern>elucidated by</Pattern><Pattern>identified by</Pattern><Pattern>leaves</Pattern><Pattern>observed to</Pattern><Pattern>soaked in</Pattern><Pattern>was observed to</Pattern><Pattern>were collected from</Pattern><Pattern>were elucidated by</Pattern><Pattern>were ground in</Pattern><Pattern>were identified by</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>flowers</Name>
+  </Tag1>
+  <Tag2>Compound<Name>betasitosteryl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>elucidated by</Pattern>
+    <Pattern>identified by</Pattern>
+    <Pattern>leaves</Pattern>
+    <Pattern>observed to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>was observed to</Pattern>
+    <Pattern>were collected from</Pattern>
+    <Pattern>were elucidated by</Pattern>
+    <Pattern>were ground in</Pattern>
+    <Pattern>were identified by</Pattern>
+  </Relation>
+</Seed>

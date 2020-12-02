@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>Synonym<Name>naja philippinensis</Name></Tag1><Tag2>Compound<Name>n-hexadecanoic acid</Name><Name>5,2'-dihydroxy,8-dimethoxyflavone</Name><Name>3,5-dimethylphenyl isocyanate</Name><Name>dichloromethane</Name></Tag2><Relation><Pattern>administered orally as</Pattern><Pattern>be of</Pattern><Pattern>found in</Pattern><Pattern>found to</Pattern><Pattern>isolated from</Pattern><Pattern>malabed</Pattern><Pattern>stems of</Pattern><Pattern>was found to</Pattern><Pattern>was isolated from</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>naja philippinensis</Name>
+  </Tag1>
+  <Tag2>Compound<Name>n-hexadecanoic acid</Name>
+    <Name>5,2'-dihydroxy,8-dimethoxyflavone</Name>
+    <Name>3,5-dimethylphenyl isocyanate</Name>
+    <Name>dichloromethane</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>administered orally as</Pattern>
+    <Pattern>be of</Pattern>
+    <Pattern>found in</Pattern>
+    <Pattern>found to</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>malabed</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>was found to</Pattern>
+    <Pattern>was isolated from</Pattern>
+  </Relation>
+</Seed>

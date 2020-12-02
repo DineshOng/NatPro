@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>PlantPart<Name>twigs</Name></Tag1><Tag2>Compound<Name>5-hydroxy-7,4'-dimethoxy-6,8dimethylflavone</Name><Name>dichloromethane</Name><Name>5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone</Name></Tag2><Relation><Pattern>collected from</Pattern><Pattern>composed of</Pattern><Pattern>contain as</Pattern><Pattern>found to</Pattern><Pattern>fractionated by</Pattern><Pattern>increasing proportions of</Pattern><Pattern>isolated from</Pattern><Pattern>led to</Pattern><Pattern>revealed that</Pattern><Pattern>were found to</Pattern><Pattern>were fractionated by</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>twigs</Name>
+  </Tag1>
+  <Tag2>Compound<Name>5-hydroxy-7,4'-dimethoxy-6,8dimethylflavone</Name>
+    <Name>dichloromethane</Name>
+    <Name>5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>composed of</Pattern>
+    <Pattern>contain as</Pattern>
+    <Pattern>found to</Pattern>
+    <Pattern>fractionated by</Pattern>
+    <Pattern>increasing proportions of</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>revealed that</Pattern>
+    <Pattern>were found to</Pattern>
+    <Pattern>were fractionated by</Pattern>
+  </Relation>
+</Seed>

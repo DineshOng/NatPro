@@ -31,6 +31,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -610,6 +611,8 @@ public class Main {
 
                         TransformerFactory transformerFactory = TransformerFactory.newInstance();
                         Transformer transformer = transformerFactory.newTransformer();
+                        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+                        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
                         DOMSource source = new DOMSource(document);
 
                         StreamResult streamResult = new StreamResult("seedOutput/"+e1+"-"+e2+".xml");
@@ -676,6 +679,8 @@ public class Main {
 
                             TransformerFactory transformerFactory = TransformerFactory.newInstance();
                             Transformer transformer = transformerFactory.newTransformer();
+                            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+                            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
                             DOMSource source = new DOMSource(document);
                             class1 = class1.replaceAll("<\\/?[a-z]+>", "");
                             if(e1.contains("Preparation")){
@@ -773,10 +778,19 @@ public class Main {
         //System.out.println("running Relation");
         //System.out.println(e1+": "+class1+";"+e2+": "+class2);
         String linetemp = pLine;
-        linetemp = linetemp.replaceAll("<\\/?[a-z]+>","");
-        if(e1.contains("preparation") || e2.contains("preparation") ){
-            ValidationMap.put(class1,class2);
-            validation.add(linetemp);
+        if(linetemp.contains("preparation")){
+            linetemp = linetemp.replaceAll("<\\/?[a-z]+>","");
+            if(e1.contains("preparation") ||  e2.contains("preparation") ){
+                if(e1.contains("preparation") && pLine.contains("<"+e2+">"+class2+"</"+e2+">")) {
+                    ValidationMap.put(class2, linetemp);
+                    validation.add(linetemp);
+                }
+                else if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && e2.contains("preparation")){
+                    ValidationMap.put(class1, linetemp);
+                    validation.add(linetemp);
+                }
+
+            }
         }
         else if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && pLine.contains("<"+e2+">"+class2+"</"+e2+">") ){
             //if(pLine.contains("form")){

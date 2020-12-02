@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>PlantPart<Name>twigs</Name></Tag1><Tag2>Compound<Name>triglycerides</Name><Name>acetone</Name><Name>chlorophyll a</Name><Name>alpha-spinasterone</Name><Name>lupenone</Name></Tag2><Relation><Pattern>combined</Pattern><Pattern>filtered to</Pattern><Pattern>rechromatographed</Pattern><Pattern>soaked in</Pattern><Pattern>stems</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>twigs</Name>
+  </Tag1>
+  <Tag2>Compound<Name>triglycerides</Name>
+    <Name>acetone</Name>
+    <Name>chlorophyll a</Name>
+    <Name>alpha-spinasterone</Name>
+    <Name>lupenone</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>combined</Pattern>
+    <Pattern>filtered to</Pattern>
+    <Pattern>rechromatographed</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>stems</Pattern>
+  </Relation>
+</Seed>

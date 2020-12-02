@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>PlantPart<Name>bark</Name></Tag1><Tag2>Compound<Name>dichloromethane</Name><Name>beta-sitosterol</Name><Name>oleic acid</Name><Name>beta-sitosteryl fatty acid ester</Name><Name>9alphah-isopimara,15-diene</Name><Name>isopimaran-ol</Name><Name>betasitosteryl fatty acid ester</Name><Name>1,2-dioleylglycerol</Name><Name>9alphah-isopimara-7,15diene</Name><Name>megasporophyll</Name><Name>triacylglycerols</Name><Name>stigmasterol</Name><Name>9alphah-isopimara-7,15-diene</Name></Tag2><Relation><Pattern>yielded 1-3b from</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>bark</Name>
+  </Tag1>
+  <Tag2>Compound<Name>dichloromethane</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>oleic acid</Name>
+    <Name>beta-sitosteryl fatty acid ester</Name>
+    <Name>9alphah-isopimara,15-diene</Name>
+    <Name>isopimaran-ol</Name>
+    <Name>betasitosteryl fatty acid ester</Name>
+    <Name>1,2-dioleylglycerol</Name>
+    <Name>9alphah-isopimara-7,15diene</Name>
+    <Name>megasporophyll</Name>
+    <Name>triacylglycerols</Name>
+    <Name>stigmasterol</Name>
+    <Name>9alphah-isopimara-7,15-diene</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>yielded 1-3b from</Pattern>
+  </Relation>
+</Seed>

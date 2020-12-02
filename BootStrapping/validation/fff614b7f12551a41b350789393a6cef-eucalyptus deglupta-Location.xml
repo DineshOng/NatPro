@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>Synonym<Name>eucalyptus deglupta</Name></Tag1><Tag2>Location<Name>silang</Name><Name>philippines</Name><Name>pacific</Name><Name>cavite</Name></Tag2><Relation><Pattern>collected from</Pattern><Pattern>is native to</Pattern><Pattern>known as</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>eucalyptus deglupta</Name>
+  </Tag1>
+  <Tag2>Location<Name>silang</Name>
+    <Name>philippines</Name>
+    <Name>pacific</Name>
+    <Name>cavite</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>is native to</Pattern>
+    <Pattern>known as</Pattern>
+  </Relation>
+</Seed>

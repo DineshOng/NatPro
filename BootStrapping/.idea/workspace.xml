@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="677" column="37" selection-start-line="677" selection-start-column="37" selection-end-line="677" selection-end-column="37" />
+            <state relative-caret-position="292">
+              <caret line="614" column="104" selection-start-line="614" selection-start-column="104" selection-end-line="614" selection-end-column="104" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,9 +27,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Preparation-Illness.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validation/7b3956f364562b5ed9f239daa66426a1-garcinia mangostana-Compound.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="306">
               <caret line="18" column="21" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="21" />
             </state>
           </provider>
@@ -47,24 +57,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="894">
+            <state relative-caret-position="1802">
               <caret line="106" column="96" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="96" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TaggedSample/33b3eab5b669bb43b47cda6374eea87c.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="402" selection-start-line="28" selection-start-column="398" selection-end-line="28" selection-end-column="402" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-PlantPart.txt">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -89,10 +85,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>, Bird Parker parker</find>
-      <find>PosTagger</find>
-      <find>matches</find>
-      <find>-[</find>
       <find>POSTagger</find>
       <find>alph</find>
       <find>class1</find>
@@ -117,8 +109,12 @@
       <find>bioact</find>
       <find>cellline</find>
       <find>validationmap</find>
-      <find>validation</find>
+      <find>prepara</find>
+      <find>prepat</find>
       <find>validationMap</find>
+      <find>validation</find>
+      <find>relation</find>
+      <find>transformer</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -136,6 +132,8 @@
         <option value="$PROJECT_DIR$/seedOutput/BioAct-CellLine.xml" />
         <option value="$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-therapeutic efficacy against Ehrlich-CellLine.xml" />
         <option value="$PROJECT_DIR$/TaggedSample/e49d67bbcad547335de0e20ad819c320.xml" />
+        <option value="$PROJECT_DIR$/validation/8e357cc515603c147bd71bd6dfad1cca-yerba buena-Preparation.xml" />
+        <option value="$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-amarillo-Preparation.xml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -157,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +195,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -285,7 +283,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2675906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27292112" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -424,51 +422,6 @@
     <state x="34" y="23" key="new project wizard/0.23.1280.732@0.23.1280.732" timestamp="1582638934534" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Compound.xml" />
-    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Coenzyme Q10-BioAct.xml" />
-    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-alpha-amyrin cinnamate-BioAct.xml" />
-    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Alstonia macrophylla-Compound.xml" />
-    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Family.xml" />
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/BioAct-CellLine.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/788ca68e20b45a467a7f43b2042a058f.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="119" selection-start-line="42" selection-start-column="119" selection-end-line="42" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/Compound-BioAct.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969" />
-      </provider>
-    </entry>
-    <entry file="file://D:/Github/NatPro/BootStrapping/src/BootStrap_New.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1428">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Github/NatPro/BootStrapping/src/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/PlantPart-Compound.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret column="810" selection-start-column="810" selection-end-column="810" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation/1ed46617021edead6df621a7b72d2dcd-alpha-amyrin cinnamate-BioAct.xml" />
     <entry file="file://$PROJECT_DIR$/validation/7b3956f364562b5ed9f239daa66426a1-alpha-amyrin cinnamate-BioAct.xml" />
     <entry file="file://$PROJECT_DIR$/TaggedSample/702c7c4e97189ae5b79c9b4f2f2d8651.xml">
@@ -640,33 +593,6 @@
     <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-PlantPart.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Preparation.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-Illness.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="106" column="96" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-balaniu-Preparation.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -676,10 +602,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/validation/8e357cc515603c147bd71bd6dfad1cca-yerba buena-Preparation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-PlantPart.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Location.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/1aafb6cfc01a874531a6cfaee2c35c0d.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/Preparation-Illness.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="106" column="96" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Preparation.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-kayumanis-Preparation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#4208#4213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-aequous extract of acalypha hispida leaves suggest trypanocidal effect-Preparation.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/5ad2f694f6bd8ca27d7092adf86c3ba0-gargle for stronger teeth and prevent cavities-Preparation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#10637#10642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-amarillo-Preparation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1753#1758#0" expanded="true" />
+            <element signature="e#3148#3153#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-alas cuatro-Preparation.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1756#1761#0" expanded="true" />
+            <element signature="e#3151#3156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-Location.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Preparation-Illness.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/7b3956f364562b5ed9f239daa66426a1-garcinia mangostana-Compound.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="677" column="37" selection-start-line="677" selection-start-column="37" selection-end-line="677" selection-end-column="37" />
+        <state relative-caret-position="292">
+          <caret line="614" column="104" selection-start-line="614" selection-start-column="104" selection-end-line="614" selection-end-column="104" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>Synonym<Name>brassica juncea</Name></Tag1><Tag2>Location<Name>hebei</Name><Name>shaanxi</Name><Name>shandong province</Name></Tag2><Relation><Pattern>grown in</Pattern><Pattern>identified as</Pattern><Pattern>was identified as</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>brassica juncea</Name>
+  </Tag1>
+  <Tag2>Location<Name>hebei</Name>
+    <Name>shaanxi</Name>
+    <Name>shandong province</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>grown in</Pattern>
+    <Pattern>identified as</Pattern>
+    <Pattern>was identified as</Pattern>
+  </Relation>
+</Seed>

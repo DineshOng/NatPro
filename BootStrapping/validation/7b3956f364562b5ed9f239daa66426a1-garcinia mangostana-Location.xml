@@ -1,1 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>Synonym<Name>garcinia mangostana</Name></Tag1><Tag2>Location<Name>usa coden</Name><Name>davao</Name><Name>philippines</Name></Tag2><Relation><Pattern>collected from</Pattern><Pattern>was collected from</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>garcinia mangostana</Name>
+  </Tag1>
+  <Tag2>Location<Name>usa coden</Name>
+    <Name>davao</Name>
+    <Name>philippines</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>was collected from</Pattern>
+  </Relation>
+</Seed>

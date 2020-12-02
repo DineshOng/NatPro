@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Tag1>MedicinalPlant</Tag1><Tag2>Location</Tag2><Relation><Pattern>be</Pattern><Pattern>be eucalyptus to</Pattern><Pattern>be to</Pattern><Pattern>eucalyptus</Pattern><Pattern>eucalyptus eucalyptus to</Pattern><Pattern>eucalyptus to</Pattern><Pattern>is</Pattern><Pattern>is eucalyptus to</Pattern><Pattern>is to</Pattern><Pattern>philippines</Pattern><Pattern>philippines eucalyptus to</Pattern><Pattern>philippines to</Pattern><Pattern>rainbow</Pattern><Pattern>rainbow eucalyptus to</Pattern><Pattern>rainbow to</Pattern><Pattern>to</Pattern><Pattern>to eucalyptus to</Pattern><Pattern>to to</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Tag1>MedicinalPlant</Tag1>
+  <Tag2>Location</Tag2>
+  <Relation>
+    <Pattern>be</Pattern>
+    <Pattern>be eucalyptus to</Pattern>
+    <Pattern>be to</Pattern>
+    <Pattern>eucalyptus</Pattern>
+    <Pattern>eucalyptus eucalyptus to</Pattern>
+    <Pattern>eucalyptus to</Pattern>
+    <Pattern>is</Pattern>
+    <Pattern>is eucalyptus to</Pattern>
+    <Pattern>is to</Pattern>
+    <Pattern>philippines</Pattern>
+    <Pattern>philippines eucalyptus to</Pattern>
+    <Pattern>philippines to</Pattern>
+    <Pattern>rainbow</Pattern>
+    <Pattern>rainbow eucalyptus to</Pattern>
+    <Pattern>rainbow to</Pattern>
+    <Pattern>to</Pattern>
+    <Pattern>to eucalyptus to</Pattern>
+    <Pattern>to to</Pattern>
+  </Relation>
+</Seed>

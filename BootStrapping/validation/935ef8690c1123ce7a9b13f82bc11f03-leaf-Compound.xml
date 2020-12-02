@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>PlantPart<Name>leaf</Name></Tag1><Tag2>Compound<Name>16hydroxyalstonal</Name><Name>fatty acids</Name><Name>6-oxoalstophylline</Name><Name>6-oxoalstophyllal</Name><Name>alstohentine</Name><Name>10,11-dimethoxynareline</Name><Name>alstomaline</Name><Name>alstomicine</Name><Name>ursolic acid</Name><Name>alstophyllal</Name><Name>16-hydroxyalstonisine</Name><Name>betasitosterol</Name><Name>1,1-diphenyl-2-picrylhydrazyl</Name><Name>beta-sitosteryl-beta-d-glucoside</Name><Name>16-hydroxy-n4-demethylalstophyllal oxindole</Name><Name>superoxide</Name></Tag2><Relation><Pattern>done on</Pattern><Pattern>extracted with</Pattern><Pattern>followed by</Pattern><Pattern>found to</Pattern><Pattern>is used in</Pattern><Pattern>known as</Pattern><Pattern>measured by</Pattern><Pattern>resulted in</Pattern><Pattern>soaking</Pattern><Pattern>used in</Pattern><Pattern>was measured by</Pattern><Pattern>were done on</Pattern><Pattern>yielded</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>leaf</Name>
+  </Tag1>
+  <Tag2>Compound<Name>16hydroxyalstonal</Name>
+    <Name>fatty acids</Name>
+    <Name>6-oxoalstophylline</Name>
+    <Name>6-oxoalstophyllal</Name>
+    <Name>alstohentine</Name>
+    <Name>10,11-dimethoxynareline</Name>
+    <Name>alstomaline</Name>
+    <Name>alstomicine</Name>
+    <Name>ursolic acid</Name>
+    <Name>alstophyllal</Name>
+    <Name>16-hydroxyalstonisine</Name>
+    <Name>betasitosterol</Name>
+    <Name>1,1-diphenyl-2-picrylhydrazyl</Name>
+    <Name>beta-sitosteryl-beta-d-glucoside</Name>
+    <Name>16-hydroxy-n4-demethylalstophyllal oxindole</Name>
+    <Name>superoxide</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>done on</Pattern>
+    <Pattern>extracted with</Pattern>
+    <Pattern>followed by</Pattern>
+    <Pattern>found to</Pattern>
+    <Pattern>is used in</Pattern>
+    <Pattern>known as</Pattern>
+    <Pattern>measured by</Pattern>
+    <Pattern>resulted in</Pattern>
+    <Pattern>soaking</Pattern>
+    <Pattern>used in</Pattern>
+    <Pattern>was measured by</Pattern>
+    <Pattern>were done on</Pattern>
+    <Pattern>yielded</Pattern>
+  </Relation>
+</Seed>

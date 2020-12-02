@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Seed><Category/><Tag1>Synonym<Name>dracontomelon dao</Name></Tag1><Tag2>Compound<Name>linoleic acid</Name><Name>anacardic acid</Name></Tag2><Relation><Pattern>collected from</Pattern><Pattern>soaked in</Pattern><Pattern>were collected from</Pattern><Pattern>were ground in</Pattern></Relation></Seed>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>dracontomelon dao</Name>
+  </Tag1>
+  <Tag2>Compound<Name>linoleic acid</Name>
+    <Name>anacardic acid</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were collected from</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>
