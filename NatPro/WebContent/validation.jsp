@@ -266,14 +266,6 @@
 												<div class="card-body">
 													<div id="speciesGroup">
 														<input type="hidden" name="speciesCtr" value="0">
-														<!-- <div class="d-flex justify-content-center">
-															<div class="form-row" style="width: 50%">
-																<button type="button"
-																	class="btn btn-outline-success btn-block"
-																	id="speciesAdd" onclick="addSFields(0)">Add
-																	Species Part</button>
-															</div>
-														</div> -->
 													</div>
 												</div>
 											</div>
@@ -283,10 +275,9 @@
 								</div>
 								<!-- <div id="step-4" class="tab-pane" role="tabpanel"></div> -->
 							</div>
-							<input type="hidden" id="sNameApprove"
-								name="specieNameApprove" value="null"> <input
-								type="hidden" id="fNameApprove" name="fileNameApprove"
-								value="null">
+							<input type="hidden" id="sNameApprove" name="specieNameApprove"
+								value="null"> <input type="hidden" id="fNameApprove"
+								name="fileNameApprove" value="null">
 						</form>
 					</div>
 
@@ -691,8 +682,9 @@
 		/* console.log(id, locName); */
 		$('#locationAdd').remove();
 		lCtr++;		
-		var inputField = '<div class="col-13"><input type="text" class="form-control" name="location" id="Location['+id +']['+lCtr+']" placeholder="" value="'+locName+'">';
-		var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addLFields('+id+','+empty+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button></div>';
+		var inputField = '<div class="col-13"><input type="text" class="form-control" name="location" id="Location'+lCtr+'" placeholder="" value="'+locName+'">';
+		var buttonAdd = '<div><button id="locationAdd" type="button" class="btn btn-outline-success btn-sm" onclick="addLFields('+id+','+empty+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Location</button>'+
+						'<button id="locationDelete'+ lCtr +'" type="button" class="btn btn-outline-danger btn-sm" onclick="removeFields(0,'+ lCtr +')" style="margin-top: 5px"><i class="fa fa-minus" aria-hidden="true"></i> Delete</button></div>';
 		
 		$('#locationGroup').append(inputField, buttonAdd);
 	}
@@ -1121,7 +1113,8 @@
 				
 				$('#chemicalCompoundGroup').append(chemCompFields);
 			} else { */
-				var chemComp = '<div class="form-group form-row" id="chemicalCompoundContainer'+ccCtr+'">'+
+				var chemComp = '<div id="chemicalCompoundContainer'+ccCtr+'">'+
+								'<div class="form-group form-row">'+
 								   '<div class="col-2"> </div>'+
 								   '<div class="col-5">'+
 									   '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
@@ -1139,12 +1132,6 @@
 									      'class="btn btn-outline-danger btn-sm"'+
 									      'onclick="removeFields(3,'+ccCtr+')" style="margin-top: 5px">'+
 									      '<i class="fa fa-minus" aria-hidden="true"></i> Delete'+
-								      '</button>'+
-								      '<button id="chemicalCompoundAdd'+pValue+'" type="button"'+
-										      'class="btn btn-outline-success btn-sm"'+
-										      'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
-										      '<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
-										      'Compound'+
 								      '</button>'+
 							      '</div>'+
 						      '</div>';
@@ -1164,6 +1151,7 @@
 					  						 '<input type="hidden" name="lengthBC['+pValue+']['+speciesArr[pValue]+']" value="'+speciesArr2[pValue][speciesArr[pValue]]+'">'+
 									 '</div>'+
 								 '</div>'+
+							 '</div>'+
 							 '</div>';							
 							 /* console.log(speciesArr[pValue]); */
 								
@@ -1199,12 +1187,12 @@
 								   '</div>';
 			
 			var chemcompCluster = '<div id="chemicalCompoundGroup'+ sCtr+'">'+
+									'<div id="chemicalCompoundContainer1">'+
 									  '<div class="form-group form-row">'+
 										  '<div class="col-2"> </div>'+
 										  '<div class="col-5">'+
 											  '<label for="ChemicalCompound'+ ccCtr +'">Chemical Compound</label>'+
 											  '<input type="text" class="form-control" id="ChemicalCompound['+sCtr+'][0]" placeholder="" name="compound['+sCtr+'][0]">'+
-											  '<button id="chemicalCompoundAdd'+sCtr+'" type="button" class="btn btn-outline-success btn-sm" onclick="addCCFields('+sCtr+')" style="margin-top:5px"><i class="fa fa-plus" aria-hidden="true"></i> Chemical Compound</button>'+
 											  '<input type="hidden" name="compoundCtr" value="'+ccCtr+'">'+
 											  '<input type="hidden" name="lengthCC'+sCtr+'" value="'+speciesArr[pValue]+'">'+
 										  '</div>'+
@@ -1226,8 +1214,20 @@
 											  '</div>'+
 										  '</div>'+
 									  '</div>'+
+									'</div>'+
 								  '</div>'; 
-									
+			var buttonAddComp = '<div class="form-group form-row">'+
+								  '<div class="col-2"> </div>'+
+								  '<div class="col-5">'+
+									'<button type="button"'+
+										'class="btn btn-outline-success btn-sm"'+
+										'onclick="addCCFields('+pValue+')" style="margin-top: 5px">'+
+										'<i class="fa fa-plus" aria-hidden="true"></i> Chemical'+
+										'Compound'+
+									'</button>'+
+									'</div>'+
+						      '</div>';
+						      
 			var buttonAddSpecies =  '<div class="d-flex justify-content-center" style="padding-top:5%; padding-bottom:5%;">'+
 										'<div class="form-row">'+											
 											'<button type="button" class="btn btn-outline-danger btn-block" id="speciesDelete'+sCtr+'" onclick="removeFields(5, '+sCtr+')">Delete Species Part</button>'+
@@ -1236,7 +1236,7 @@
 									'</div>'+
 									'<button type="button" class="btn btn-outline-success btn-block" id="speciesAdd" onclick="addSFields(0)">Add Species Part</button>';
 
-			var speciesComponent = speciesPPCluster + chemcompCluster + buttonAddSpecies +"</div>";
+			var speciesComponent = speciesPPCluster + chemcompCluster + buttonAddComp+ buttonAddSpecies +"</div>";
 			
 			$('#speciesGroup').append(speciesComponent);
 			autocomplete(document.getElementById("SpeciesPart"+sCtr), plantParts);
