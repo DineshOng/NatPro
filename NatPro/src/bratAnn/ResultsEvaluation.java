@@ -4,10 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,28 +13,20 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.apache.commons.lang.WordUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import com.google.common.collect.SetMultimap;
-
-import model.BiologicalActivity;
-import model.CellLine;
-import model.Compound;
-import model.MedicinalPlant;
-import model.Species;
-import model.SpeciesPart;
-import model.Validation;
 
 public class ResultsEvaluation {
 	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\";
 	private static SetMultimap<String, String> GoldRelationships;
+	private static HashMap<String, String> entityType;
+	private static HashMap<String, String> relationshipType;
+	private static HashSet<String> pairTruePositive;
 	private static int count;
 
 	public static void main(String[] args) throws IOException {
@@ -45,12 +34,17 @@ public class ResultsEvaluation {
         long startTime, endTime;
         startTime = System.nanoTime();
         
+        entityType = new HashMap<String, String>();
+        relationshipType = new HashMap<String, String>();
+        pairTruePositive = new HashSet<String>();
+        
         count = 0;
         
 		ReadGoldAnn();
 		ReadXMLFiles();
 		
-		System.out.println("True Positive: " + count);
+		//System.out.println("True Positive: " + count);
+		System.out.println("True Positive: " + pairTruePositive.size());
 		
 		endTime = System.nanoTime();
         System.err.println("Main Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
@@ -92,6 +86,7 @@ public class ResultsEvaluation {
 		        while(matcher1.find()) {
 		        	//System.out.println(matcher.group(1) + " " + matcher.group(3));
 		        	Ts.put(matcher1.group(1), matcher1.group(3).toLowerCase());
+		        	entityType.put(matcher1.group(3).toLowerCase(), matcher1.group(2));
 		        }
 		        
 		        Pattern pattern2 = Pattern.compile("(R\\d+)\\t(\\w+)\\sArg1:(T\\d+)\\sArg2:(T\\d+)");
@@ -101,6 +96,7 @@ public class ResultsEvaluation {
 		        	//System.out.println(matcher2.group(3) + " " + matcher2.group(4));
 		        	GoldRelationships.put(Ts.get(matcher2.group(3)), Ts.get(matcher2.group(4)));
 		        	//GoldRelationships.put(Ts.get(matcher2.group(4)), Ts.get(matcher2.group(3)));
+		        	relationshipType.put(Ts.get(matcher2.group(3)) + " : " + Ts.get(matcher2.group(4)), matcher2.group(2));
 		        }
 		   
 		        reader.close();
@@ -110,7 +106,7 @@ public class ResultsEvaluation {
 //		for(String i : GoldRelationships.keySet()) {
 //			System.out.println("value: " + GoldRelationships.get(i) + "\tkey: " + i);
 //		}
-		System.out.println(GoldRelationships);
+		//System.out.println(GoldRelationships);
 		System.out.println("Size: " + GoldRelationships.size());
 		//System.out.println("Size: " + GoldRelationships.keySet().size());
 		//System.out.println("Actual Size: " + GoldRelationships.size()*GoldRelationships.keySet().size());
@@ -126,14 +122,11 @@ public class ResultsEvaluation {
         startTime = System.nanoTime();
         
 		String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
-		String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
-		//String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\validation\\";
+		//String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
+		String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\validation\\";
 		
 		File Folder = new File(validationFolder);
 		File[] listFiles = Folder.listFiles();
-		Reader fileReader = null;
-		String pdfFileName = null;
-		HashSet<Validation> validations = new HashSet<Validation>();
 		for (File xmlFile : listFiles) {
 			//System.out.println(xmlFile.getName());
 			readXML(xmlFile);
@@ -171,8 +164,15 @@ public class ResultsEvaluation {
 						if(GoldRelationships.containsEntry(nameElementTag1.item(0).getTextContent().toLowerCase(), nameElementTag2.item(j).getTextContent().toLowerCase())) {
 						//if(GoldRelationships.containsEntry(nameElementTag2.item(j).getTextContent().toLowerCase(), nameElementTag1.item(0).getTextContent().toLowerCase())) {
 							//System.out.println(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent());
-							count++;
-						}
+							//if(pairTruePositive.contains(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent()))
+							//	count++;
+							//else {
+								pairTruePositive.add(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent());
+								//System.out.println("Type: " + relationshipType.get(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent()) + "\t\t\t" + nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent());
+								//System.out.format("Type: %21s Pair: %40s:%14s %54s:%16s\n", relationshipType.get(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent()), nameElementTag1.item(0).getTextContent(), entityType.get(nameElementTag1.item(0).getTextContent()), nameElementTag2.item(j).getTextContent(), entityType.get(nameElementTag2.item(j).getTextContent()));
+								//pairTruePositive.add(nameElementTag2.item(j).getTextContent()  + " : " + nameElementTag1.item(0).getTextContent() );
+							
+						} //else count++;
 					}
 				}
 			}
