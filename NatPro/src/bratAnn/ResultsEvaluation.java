@@ -117,7 +117,7 @@ public class ResultsEvaluation {
 		//System.out.println(GoldRelationships.containsEntry("alstonia macrophylla", "alstonerine"));
 		
 		endTime = System.nanoTime();
-        System.err.println("ReadGoldAnn Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
+        //System.err.println("ReadGoldAnn Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 	}
 	
 	public static void ReadXMLFiles() {
@@ -140,7 +140,7 @@ public class ResultsEvaluation {
 		}
 		
 		endTime = System.nanoTime();
-        System.err.println("ReadXMLFiles Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
+        //System.err.println("ReadXMLFiles Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 	}
 	
 	public static void readXML(File xmlFile) {
