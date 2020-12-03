@@ -6,21 +6,54 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.Multimap;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.lang.WordUtils;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.SetMultimap;
+
+import model.BiologicalActivity;
+import model.CellLine;
+import model.Compound;
+import model.MedicinalPlant;
+import model.Species;
+import model.SpeciesPart;
 import model.Validation;
 
 public class ResultsEvaluation {
 	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\";
-	private static Multimap<String, String> GoldRelationships;
+	private static SetMultimap<String, String> GoldRelationships;
+	private static int count;
 
 	public static void main(String[] args) throws IOException {
+		System.out.println("Main...");
+        long startTime, endTime;
+        startTime = System.nanoTime();
+        
+        count = 0;
+        
 		ReadGoldAnn();
+		ReadXMLFiles();
+		
+		System.out.println("True Positive: " + count);
+		
+		endTime = System.nanoTime();
+        System.err.println("Main Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 	}
 	
 	public static void ReadGoldAnn() throws IOException {
@@ -28,7 +61,7 @@ public class ResultsEvaluation {
         long startTime, endTime;
         startTime = System.nanoTime();
 		
-        GoldRelationships = ArrayListMultimap.create();
+        GoldRelationships = HashMultimap.create();
         
 		File Folder = new File(annFolder);
 		File[] listFiles = Folder.listFiles();
@@ -67,7 +100,7 @@ public class ResultsEvaluation {
 		        while(matcher2.find()) {
 		        	//System.out.println(matcher2.group(3) + " " + matcher2.group(4));
 		        	GoldRelationships.put(Ts.get(matcher2.group(3)), Ts.get(matcher2.group(4)));
-		        	GoldRelationships.put(Ts.get(matcher2.group(4)), Ts.get(matcher2.group(3)));
+		        	//GoldRelationships.put(Ts.get(matcher2.group(4)), Ts.get(matcher2.group(3)));
 		        }
 		   
 		        reader.close();
@@ -79,16 +112,22 @@ public class ResultsEvaluation {
 //		}
 		System.out.println(GoldRelationships);
 		System.out.println("Size: " + GoldRelationships.size());
-		System.out.println(GoldRelationships.containsEntry("alstonia macrophylla", "alstonerine"));
+		//System.out.println("Size: " + GoldRelationships.keySet().size());
+		//System.out.println("Actual Size: " + GoldRelationships.size()*GoldRelationships.keySet().size());
+		//System.out.println(GoldRelationships.containsEntry("alstonia macrophylla", "alstonerine"));
 		
 		endTime = System.nanoTime();
-        System.err.println("Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
+        System.err.println("ReadGoldAnn Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 	}
 	
 	public static void ReadXMLFiles() {
-		// TODO Auto-generated method stub
+		System.out.println("ReadXMLFiles...");
+        long startTime, endTime;
+        startTime = System.nanoTime();
+        
 		String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
 		String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
+		//String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\validation\\";
 		
 		File Folder = new File(validationFolder);
 		File[] listFiles = Folder.listFiles();
@@ -96,7 +135,51 @@ public class ResultsEvaluation {
 		String pdfFileName = null;
 		HashSet<Validation> validations = new HashSet<Validation>();
 		for (File xmlFile : listFiles) {
-			System.out.println(xmlFile.getName());
+			//System.out.println(xmlFile.getName());
+			readXML(xmlFile);
+		}
+		
+		endTime = System.nanoTime();
+        System.err.println("ReadXMLFiles Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
+	}
+	
+	public static void readXML(File xmlFile) {
+		// CHECKS IF THE GENERATED XML FILE EXISTS
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		try {
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			Document doc = builder.parse(xmlFile.getAbsoluteFile());
+			doc.getDocumentElement().normalize();
+			NodeList nodeList = doc.getElementsByTagName("Seed");
+			for (int i = 0; i < nodeList.getLength(); i++) {
+				Node nNode = nodeList.item(i);
+				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+					Element eElement = (Element) nNode;
+
+					String tag1 = eElement.getElementsByTagName("Tag1").item(0).getTextContent();
+					String tag2 = eElement.getElementsByTagName("Tag2").item(0).getTextContent();
+
+					Element elementTag1 = (Element) eElement.getElementsByTagName("Tag1").item(0);
+					Element elementTag2 = (Element) eElement.getElementsByTagName("Tag2").item(0);
+
+					NodeList nameElementTag1 = elementTag1.getElementsByTagName("Name");
+					NodeList nameElementTag2 = elementTag2.getElementsByTagName("Name");
+					
+					//System.out.println(nameElementTag1.item(0).getTextContent());
+					for(int j = 0; j < nameElementTag2.getLength(); j++) {
+						//System.out.println(nameElementTag2.item(j).getTextContent());
+						if(GoldRelationships.containsEntry(nameElementTag1.item(0).getTextContent().toLowerCase(), nameElementTag2.item(j).getTextContent().toLowerCase())) {
+						//if(GoldRelationships.containsEntry(nameElementTag2.item(j).getTextContent().toLowerCase(), nameElementTag1.item(0).getTextContent().toLowerCase())) {
+							//System.out.println(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent());
+							count++;
+						}
+					}
+				}
+			}
+		} catch (ParserConfigurationException | IOException e) {
+			e.printStackTrace();
+		} catch (org.xml.sax.SAXException e) {
+			e.printStackTrace();
 		}
 	}
 }
