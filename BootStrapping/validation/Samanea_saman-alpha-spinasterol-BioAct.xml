@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Compound<Name>alpha-spinasterol</Name>
+  </Tag1>
+  <Tag2>BioAct<Name>anti-inflammatory</Name>
+    <Name>antinociceptive</Name>
+    <Name>antiangiogenic</Name>
+    <Name>anti-ulcerogenic</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>exhibit</Pattern>
+    <Pattern>exhibited</Pattern>
+    <Pattern>found to</Pattern>
+    <Pattern>reported to</Pattern>
+  </Relation>
+</Seed>

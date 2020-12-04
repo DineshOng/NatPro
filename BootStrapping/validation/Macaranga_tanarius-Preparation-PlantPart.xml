@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Preparation<Name>leaves</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>compound 1 was a dark violet crystalline substance isolated from the dichloromethane extract of the air-dried leaves of macaranga tanarius.</Name>
+    <Name>the dichloromethane extract of the air-dried leaves of macaranga tanarius afforded chlorophyllide a , chlorophyll a, and polyprenol .</Name>
+    <Name>isolation of secondary metabolites the air-dried aerial leaves of macaranga tanarius (377 g) were cut and homogenized, soaked in ch2cl2 for three days, then filtered.</Name>
+    <Name>the dichloromethane extract of the air-dried leaves of macaranga tanarius afforded chlorophyllide a , chlorophyll a, and polyprenol by silica gel chromatography.</Name>
+    <Name>the 70% acetone extract of the leaves of macaranga tanarius was reported to have in vivo hepatoprotective activity in mice and in vitro antihepatotoxic activity.</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>a recent study reported that macaranga tanarius methanolic leaf extract exhibited antimicrobial property against gram-positive bacteria, but was inactive against gram-negative bacteria.</Pattern>
+    <Pattern>compound 1 was a dark violet crystalline substance isolated from the dichloromethane extract of the air-dried leaves of macaranga tanarius.</Pattern>
+    <Pattern>isolation of secondary metabolites the air-dried aerial leaves of macaranga tanarius (377 g) were cut and homogenized, soaked in ch2cl2 for three days, then filtered.</Pattern>
+    <Pattern>the 70% acetone extract of the leaves of macaranga tanarius was reported to have in vivo hepatoprotective activity in mice and in vitro antihepatotoxic activity.</Pattern>
+    <Pattern>the dichloromethane extract of the air-dried leaves of macaranga tanarius afforded chlorophyllide a , chlorophyll a, and polyprenol .</Pattern>
+    <Pattern>the dichloromethane extract of the air-dried leaves of macaranga tanarius afforded chlorophyllide a , chlorophyll a, and polyprenol by silica gel chromatography.</Pattern>
+  </Relation>
+</Seed>

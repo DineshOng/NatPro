@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>MedicinalPlant<Name>lumbang</Name>
+  </Tag1>
+  <Tag2>Family<Name>euphorbiaceae</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>bark</Pattern>
+    <Pattern>known as</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>cone base</Name>
+  </Tag1>
+  <Tag2>Compound<Name>cis-4-hydroxycinnamate fatty acid esters</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>pinoresinol</Name>
+    <Name>lariciresinol</Name>
+    <Name>paulownin</Name>
+    <Name>triacylglycerols</Name>
+    <Name>sesamin</Name>
+    <Name>megasporophyll</Name>
+    <Name>trans-4-hydroxycinnamate fatty acid esters</Name>
+    <Name>stigmasterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Preparation<Name>fruit</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>this study reports on the isolation of garcinone d from the dichloromethane extract of the pulp of the freeze-dried ripe fruit of garcinia mangostana.</Name>
+    <Name>silica gel chromatography of the dichloromethane extract of the freeze-dried pulp of the ripe fruit of garcinia mangostana has led to the isolation of garcinone d.</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>silica gel chromatography of the dichloromethane extract of the freeze-dried pulp of the ripe fruit of garcinia mangostana has led to the isolation of garcinone d.</Pattern>
+    <Pattern>this study reports on the isolation of garcinone d from the dichloromethane extract of the pulp of the freeze-dried ripe fruit of garcinia mangostana.</Pattern>
+  </Relation>
+</Seed>

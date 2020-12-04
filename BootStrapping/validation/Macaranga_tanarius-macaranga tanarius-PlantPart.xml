@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>macaranga tanarius</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>leaves</Name>
+    <Name>leaf</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>1,4-digalloylglucoside</Pattern>
+    <Pattern>3,4-digalloylglucoside</Pattern>
+    <Pattern>acid</Pattern>
+    <Pattern>assay of</Pattern>
+    <Pattern>b</Pattern>
+    <Pattern>beta-amyrenone</Pattern>
+    <Pattern>beta-amyrin</Pattern>
+    <Pattern>c</Pattern>
+    <Pattern>carboxylate</Pattern>
+    <Pattern>chlorophyllide a from</Pattern>
+    <Pattern>corilagin</Pattern>
+    <Pattern>d</Pattern>
+    <Pattern>elucidation</Pattern>
+    <Pattern>euphorbiasteroid</Pattern>
+    <Pattern>fiedelan-3beta-ol</Pattern>
+    <Pattern>flavone</Pattern>
+    <Pattern>friedel-3-ene</Pattern>
+    <Pattern>friedelin</Pattern>
+    <Pattern>geraniin</Pattern>
+    <Pattern>hyperin</Pattern>
+    <Pattern>isolation</Pattern>
+    <Pattern>isolation of</Pattern>
+    <Pattern>isoquercitrin</Pattern>
+    <Pattern>macaranganin</Pattern>
+    <Pattern>macarangioside</Pattern>
+    <Pattern>macarangonol</Pattern>
+    <Pattern>roseoside</Pattern>
+    <Pattern>tanarifuranonol</Pattern>
+    <Pattern>tanarinin</Pattern>
+  </Relation>
+</Seed>

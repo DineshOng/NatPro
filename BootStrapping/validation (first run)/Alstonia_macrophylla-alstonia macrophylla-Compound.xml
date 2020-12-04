@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>alstonia macrophylla</Name>
+  </Tag1>
+  <Tag2>Compound<Name>echitovenidine</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>gamma-sitosterol</Name>
+    <Name>brucine</Name>
+    <Name>echitamine</Name>
+    <Name>lupeol</Name>
+    <Name>strictamin</Name>
+    <Name>24-methylenecycloartanol</Name>
+    <Name>beta-amyrin</Name>
+    <Name>venenatine</Name>
+    <Name>rauvomitin</Name>
+    <Name>beta-sitosteryl-beta-d-glucoside</Name>
+    <Name>stigmasterol</Name>
+    <Name>alstonerine</Name>
+    <Name>campesterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>be rich in</Pattern>
+    <Pattern>composed primarily of</Pattern>
+    <Pattern>found to</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>resulted in</Pattern>
+    <Pattern>was found to</Pattern>
+    <Pattern>were reported to</Pattern>
+  </Relation>
+</Seed>

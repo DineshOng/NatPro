@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>leaf</Name>
+  </Tag1>
+  <Tag2>Compound<Name>alstophyllal</Name>
+    <Name>16-hydroxyalstonisine</Name>
+    <Name>6-oxoalstophyllal</Name>
+    <Name>6-oxoalstophylline</Name>
+    <Name>alstohentine</Name>
+    <Name>10,11-dimethoxynareline</Name>
+    <Name>beta-sitosteryl-beta-d-glucoside</Name>
+    <Name>alstomaline</Name>
+    <Name>alstomicine</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>found to</Pattern>
+    <Pattern>resulted in</Pattern>
+    <Pattern>yielded</Pattern>
+  </Relation>
+</Seed>

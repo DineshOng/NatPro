@@ -4,35 +4,59 @@
   <Tag2>BioAct</Tag2>
   <Relation>
     <Pattern>accompanied</Pattern>
-    <Pattern>accompanied against</Pattern>
     <Pattern>accompanied by</Pattern>
-    <Pattern>accompanied evaluated against</Pattern>
     <Pattern>accompanied evaluated by</Pattern>
-    <Pattern>accompanied evaluated for</Pattern>
     <Pattern>accompanied evaluated from</Pattern>
+    <Pattern>accompanied evaluated in</Pattern>
+    <Pattern>accompanied evaluated inward</Pattern>
+    <Pattern>accompanied evaluated inwards</Pattern>
     <Pattern>accompanied evaluated past</Pattern>
-    <Pattern>accompanied evaluated that</Pattern>
     <Pattern>accompanied evaluated to</Pattern>
     <Pattern>accompanied evaluated with</Pattern>
-    <Pattern>accompanied for</Pattern>
     <Pattern>accompanied from</Pattern>
+    <Pattern>accompanied in</Pattern>
+    <Pattern>accompanied inward</Pattern>
+    <Pattern>accompanied inwards</Pattern>
+    <Pattern>accompanied observed by</Pattern>
+    <Pattern>accompanied observed from</Pattern>
+    <Pattern>accompanied observed in</Pattern>
+    <Pattern>accompanied observed inward</Pattern>
+    <Pattern>accompanied observed inwards</Pattern>
+    <Pattern>accompanied observed past</Pattern>
+    <Pattern>accompanied observed to</Pattern>
+    <Pattern>accompanied observed with</Pattern>
     <Pattern>accompanied past</Pattern>
-    <Pattern>accompanied reported against</Pattern>
     <Pattern>accompanied reported by</Pattern>
-    <Pattern>accompanied reported for</Pattern>
     <Pattern>accompanied reported from</Pattern>
+    <Pattern>accompanied reported in</Pattern>
+    <Pattern>accompanied reported inward</Pattern>
+    <Pattern>accompanied reported inwards</Pattern>
     <Pattern>accompanied reported past</Pattern>
-    <Pattern>accompanied reported that</Pattern>
     <Pattern>accompanied reported to</Pattern>
     <Pattern>accompanied reported with</Pattern>
-    <Pattern>accompanied that</Pattern>
+    <Pattern>accompanied seen by</Pattern>
+    <Pattern>accompanied seen from</Pattern>
+    <Pattern>accompanied seen in</Pattern>
+    <Pattern>accompanied seen inward</Pattern>
+    <Pattern>accompanied seen inwards</Pattern>
+    <Pattern>accompanied seen past</Pattern>
+    <Pattern>accompanied seen to</Pattern>
+    <Pattern>accompanied seen with</Pattern>
+    <Pattern>accompanied squalene by</Pattern>
+    <Pattern>accompanied squalene from</Pattern>
+    <Pattern>accompanied squalene in</Pattern>
+    <Pattern>accompanied squalene inward</Pattern>
+    <Pattern>accompanied squalene inwards</Pattern>
+    <Pattern>accompanied squalene past</Pattern>
+    <Pattern>accompanied squalene to</Pattern>
+    <Pattern>accompanied squalene with</Pattern>
     <Pattern>accompanied to</Pattern>
-    <Pattern>accompanied varying against</Pattern>
     <Pattern>accompanied varying by</Pattern>
-    <Pattern>accompanied varying for</Pattern>
     <Pattern>accompanied varying from</Pattern>
+    <Pattern>accompanied varying in</Pattern>
+    <Pattern>accompanied varying inward</Pattern>
+    <Pattern>accompanied varying inwards</Pattern>
     <Pattern>accompanied varying past</Pattern>
-    <Pattern>accompanied varying that</Pattern>
     <Pattern>accompanied varying to</Pattern>
     <Pattern>accompanied varying with</Pattern>
     <Pattern>accompanied with</Pattern>
@@ -160,12 +184,6 @@
     <Pattern>ai tested to</Pattern>
     <Pattern>ai to</Pattern>
     <Pattern>analyze</Pattern>
-    <Pattern>analyze Q along</Pattern>
-    <Pattern>analyze Q by</Pattern>
-    <Pattern>analyze Q for</Pattern>
-    <Pattern>analyze Q on</Pattern>
-    <Pattern>analyze Q past</Pattern>
-    <Pattern>analyze Q to</Pattern>
     <Pattern>analyze along</Pattern>
     <Pattern>analyze been along</Pattern>
     <Pattern>analyze been by</Pattern>
@@ -213,20 +231,8 @@
     <Pattern>analyze identified on</Pattern>
     <Pattern>analyze identified past</Pattern>
     <Pattern>analyze identified to</Pattern>
-    <Pattern>analyze letter q along</Pattern>
-    <Pattern>analyze letter q by</Pattern>
-    <Pattern>analyze letter q for</Pattern>
-    <Pattern>analyze letter q on</Pattern>
-    <Pattern>analyze letter q past</Pattern>
-    <Pattern>analyze letter q to</Pattern>
     <Pattern>analyze on</Pattern>
     <Pattern>analyze past</Pattern>
-    <Pattern>analyze q10 along</Pattern>
-    <Pattern>analyze q10 by</Pattern>
-    <Pattern>analyze q10 for</Pattern>
-    <Pattern>analyze q10 on</Pattern>
-    <Pattern>analyze q10 past</Pattern>
-    <Pattern>analyze q10 to</Pattern>
     <Pattern>analyze radical for</Pattern>
     <Pattern>analyze radical to</Pattern>
     <Pattern>analyze studied along</Pattern>
@@ -292,40 +298,63 @@
     <Pattern>are triglycerides that</Pattern>
     <Pattern>are triglycerides to</Pattern>
     <Pattern>attach to</Pattern>
-    <Pattern>attach to against</Pattern>
     <Pattern>attach to by</Pattern>
-    <Pattern>attach to evaluated against</Pattern>
     <Pattern>attach to evaluated by</Pattern>
-    <Pattern>attach to evaluated for</Pattern>
     <Pattern>attach to evaluated from</Pattern>
+    <Pattern>attach to evaluated in</Pattern>
+    <Pattern>attach to evaluated inward</Pattern>
+    <Pattern>attach to evaluated inwards</Pattern>
     <Pattern>attach to evaluated past</Pattern>
-    <Pattern>attach to evaluated that</Pattern>
     <Pattern>attach to evaluated to</Pattern>
     <Pattern>attach to evaluated with</Pattern>
-    <Pattern>attach to for</Pattern>
     <Pattern>attach to from</Pattern>
+    <Pattern>attach to in</Pattern>
+    <Pattern>attach to inward</Pattern>
+    <Pattern>attach to inwards</Pattern>
+    <Pattern>attach to observed by</Pattern>
+    <Pattern>attach to observed from</Pattern>
+    <Pattern>attach to observed in</Pattern>
+    <Pattern>attach to observed inward</Pattern>
+    <Pattern>attach to observed inwards</Pattern>
+    <Pattern>attach to observed past</Pattern>
+    <Pattern>attach to observed to</Pattern>
+    <Pattern>attach to observed with</Pattern>
     <Pattern>attach to past</Pattern>
-    <Pattern>attach to reported against</Pattern>
     <Pattern>attach to reported by</Pattern>
-    <Pattern>attach to reported for</Pattern>
     <Pattern>attach to reported from</Pattern>
+    <Pattern>attach to reported in</Pattern>
+    <Pattern>attach to reported inward</Pattern>
+    <Pattern>attach to reported inwards</Pattern>
     <Pattern>attach to reported past</Pattern>
-    <Pattern>attach to reported that</Pattern>
     <Pattern>attach to reported to</Pattern>
     <Pattern>attach to reported with</Pattern>
-    <Pattern>attach to that</Pattern>
+    <Pattern>attach to seen by</Pattern>
+    <Pattern>attach to seen from</Pattern>
+    <Pattern>attach to seen in</Pattern>
+    <Pattern>attach to seen inward</Pattern>
+    <Pattern>attach to seen inwards</Pattern>
+    <Pattern>attach to seen past</Pattern>
+    <Pattern>attach to seen to</Pattern>
+    <Pattern>attach to seen with</Pattern>
+    <Pattern>attach to squalene by</Pattern>
+    <Pattern>attach to squalene from</Pattern>
+    <Pattern>attach to squalene in</Pattern>
+    <Pattern>attach to squalene inward</Pattern>
+    <Pattern>attach to squalene inwards</Pattern>
+    <Pattern>attach to squalene past</Pattern>
+    <Pattern>attach to squalene to</Pattern>
+    <Pattern>attach to squalene with</Pattern>
     <Pattern>attach to to</Pattern>
-    <Pattern>attach to varying against</Pattern>
     <Pattern>attach to varying by</Pattern>
-    <Pattern>attach to varying for</Pattern>
     <Pattern>attach to varying from</Pattern>
+    <Pattern>attach to varying in</Pattern>
+    <Pattern>attach to varying inward</Pattern>
+    <Pattern>attach to varying inwards</Pattern>
     <Pattern>attach to varying past</Pattern>
-    <Pattern>attach to varying that</Pattern>
     <Pattern>attach to varying to</Pattern>
     <Pattern>attach to varying with</Pattern>
     <Pattern>attach to with</Pattern>
     <Pattern>attenuate</Pattern>
-    <Pattern>attenuate Q to</Pattern>
     <Pattern>attenuate as</Pattern>
     <Pattern>attenuate been for</Pattern>
     <Pattern>attenuate been to</Pattern>
@@ -387,12 +416,10 @@
     <Pattern>attenuate in</Pattern>
     <Pattern>attenuate inward</Pattern>
     <Pattern>attenuate inwards</Pattern>
-    <Pattern>attenuate letter q to</Pattern>
     <Pattern>attenuate neoplasm in</Pattern>
     <Pattern>attenuate neoplasm inward</Pattern>
     <Pattern>attenuate neoplasm inwards</Pattern>
     <Pattern>attenuate neoplasm to</Pattern>
-    <Pattern>attenuate q10 to</Pattern>
     <Pattern>attenuate radical as</Pattern>
     <Pattern>attenuate radical equally</Pattern>
     <Pattern>attenuate radical every bit</Pattern>
@@ -542,13 +569,6 @@
     <Pattern>attributed triglycerides that</Pattern>
     <Pattern>attributed triglycerides to</Pattern>
     <Pattern>be</Pattern>
-    <Pattern>be Q along</Pattern>
-    <Pattern>be Q by</Pattern>
-    <Pattern>be Q for</Pattern>
-    <Pattern>be Q on</Pattern>
-    <Pattern>be Q past</Pattern>
-    <Pattern>be Q to</Pattern>
-    <Pattern>be against</Pattern>
     <Pattern>be alkaloid to</Pattern>
     <Pattern>be along</Pattern>
     <Pattern>be as</Pattern>
@@ -586,8 +606,6 @@
     <Pattern>be beta-sitosterol to</Pattern>
     <Pattern>be betacatenin for</Pattern>
     <Pattern>be betacatenin to</Pattern>
-    <Pattern>be burn from</Pattern>
-    <Pattern>be burn through</Pattern>
     <Pattern>be by</Pattern>
     <Pattern>be cell to</Pattern>
     <Pattern>be chemical compound along</Pattern>
@@ -602,6 +620,14 @@
     <Pattern>be chemical group for</Pattern>
     <Pattern>be chemical group that</Pattern>
     <Pattern>be chemical group to</Pattern>
+    <Pattern>be cholesterin as</Pattern>
+    <Pattern>be cholesterin equally</Pattern>
+    <Pattern>be cholesterin every bit</Pattern>
+    <Pattern>be cholesterin for</Pattern>
+    <Pattern>be cholesterol as</Pattern>
+    <Pattern>be cholesterol equally</Pattern>
+    <Pattern>be cholesterol every bit</Pattern>
+    <Pattern>be cholesterol for</Pattern>
     <Pattern>be compound along</Pattern>
     <Pattern>be compound by</Pattern>
     <Pattern>be compound for</Pattern>
@@ -623,12 +649,12 @@
     <Pattern>be downer inwards</Pattern>
     <Pattern>be downer to</Pattern>
     <Pattern>be equally</Pattern>
-    <Pattern>be evaluated against</Pattern>
     <Pattern>be evaluated by</Pattern>
-    <Pattern>be evaluated for</Pattern>
     <Pattern>be evaluated from</Pattern>
+    <Pattern>be evaluated in</Pattern>
+    <Pattern>be evaluated inward</Pattern>
+    <Pattern>be evaluated inwards</Pattern>
     <Pattern>be evaluated past</Pattern>
-    <Pattern>be evaluated that</Pattern>
     <Pattern>be evaluated to</Pattern>
     <Pattern>be evaluated with</Pattern>
     <Pattern>be every bit</Pattern>
@@ -662,38 +688,48 @@
     <Pattern>be isolated from</Pattern>
     <Pattern>be isolated through</Pattern>
     <Pattern>be lesion to</Pattern>
-    <Pattern>be letter q along</Pattern>
-    <Pattern>be letter q by</Pattern>
-    <Pattern>be letter q for</Pattern>
-    <Pattern>be letter q on</Pattern>
-    <Pattern>be letter q past</Pattern>
-    <Pattern>be letter q to</Pattern>
+    <Pattern>be neoplasm as</Pattern>
+    <Pattern>be neoplasm equally</Pattern>
+    <Pattern>be neoplasm every bit</Pattern>
+    <Pattern>be neoplasm for</Pattern>
     <Pattern>be neoplasm in</Pattern>
     <Pattern>be neoplasm inward</Pattern>
     <Pattern>be neoplasm inwards</Pattern>
     <Pattern>be neoplasm to</Pattern>
+    <Pattern>be observed by</Pattern>
+    <Pattern>be observed from</Pattern>
+    <Pattern>be observed in</Pattern>
+    <Pattern>be observed inward</Pattern>
+    <Pattern>be observed inwards</Pattern>
+    <Pattern>be observed past</Pattern>
+    <Pattern>be observed to</Pattern>
+    <Pattern>be observed with</Pattern>
     <Pattern>be on</Pattern>
     <Pattern>be past</Pattern>
+    <Pattern>be potency as</Pattern>
+    <Pattern>be potency equally</Pattern>
+    <Pattern>be potency every bit</Pattern>
+    <Pattern>be potency for</Pattern>
+    <Pattern>be potential as</Pattern>
+    <Pattern>be potential equally</Pattern>
+    <Pattern>be potential every bit</Pattern>
+    <Pattern>be potential for</Pattern>
+    <Pattern>be potentiality as</Pattern>
+    <Pattern>be potentiality equally</Pattern>
+    <Pattern>be potentiality every bit</Pattern>
+    <Pattern>be potentiality for</Pattern>
     <Pattern>be proved from</Pattern>
     <Pattern>be proved through</Pattern>
-    <Pattern>be q10 along</Pattern>
-    <Pattern>be q10 by</Pattern>
-    <Pattern>be q10 for</Pattern>
-    <Pattern>be q10 on</Pattern>
-    <Pattern>be q10 past</Pattern>
-    <Pattern>be q10 to</Pattern>
     <Pattern>be radical as</Pattern>
     <Pattern>be radical equally</Pattern>
     <Pattern>be radical every bit</Pattern>
     <Pattern>be radical for</Pattern>
     <Pattern>be radical that</Pattern>
     <Pattern>be radical to</Pattern>
-    <Pattern>be reported against</Pattern>
     <Pattern>be reported as</Pattern>
     <Pattern>be reported by</Pattern>
     <Pattern>be reported equally</Pattern>
     <Pattern>be reported every bit</Pattern>
-    <Pattern>be reported for</Pattern>
     <Pattern>be reported from</Pattern>
     <Pattern>be reported in</Pattern>
     <Pattern>be reported inward</Pattern>
@@ -710,20 +746,28 @@
     <Pattern>be sedative inward</Pattern>
     <Pattern>be sedative inwards</Pattern>
     <Pattern>be sedative to</Pattern>
+    <Pattern>be seen by</Pattern>
+    <Pattern>be seen from</Pattern>
+    <Pattern>be seen in</Pattern>
+    <Pattern>be seen inward</Pattern>
+    <Pattern>be seen inwards</Pattern>
+    <Pattern>be seen past</Pattern>
+    <Pattern>be seen to</Pattern>
+    <Pattern>be seen with</Pattern>
+    <Pattern>be squalene by</Pattern>
+    <Pattern>be squalene from</Pattern>
+    <Pattern>be squalene in</Pattern>
+    <Pattern>be squalene inward</Pattern>
+    <Pattern>be squalene inwards</Pattern>
+    <Pattern>be squalene past</Pattern>
+    <Pattern>be squalene to</Pattern>
+    <Pattern>be squalene with</Pattern>
     <Pattern>be studied along</Pattern>
     <Pattern>be studied by</Pattern>
     <Pattern>be studied for</Pattern>
     <Pattern>be studied on</Pattern>
     <Pattern>be studied past</Pattern>
     <Pattern>be studied to</Pattern>
-    <Pattern>be sunburn from</Pattern>
-    <Pattern>be sunburn through</Pattern>
-    <Pattern>be suntan from</Pattern>
-    <Pattern>be suntan through</Pattern>
-    <Pattern>be tan from</Pattern>
-    <Pattern>be tan through</Pattern>
-    <Pattern>be tan1 from</Pattern>
-    <Pattern>be tan1 through</Pattern>
     <Pattern>be tested along</Pattern>
     <Pattern>be tested for</Pattern>
     <Pattern>be tested on</Pattern>
@@ -741,31 +785,33 @@
     <Pattern>be triglycerides every bit</Pattern>
     <Pattern>be triglycerides that</Pattern>
     <Pattern>be triglycerides to</Pattern>
+    <Pattern>be tumor as</Pattern>
+    <Pattern>be tumor equally</Pattern>
+    <Pattern>be tumor every bit</Pattern>
+    <Pattern>be tumor for</Pattern>
     <Pattern>be tumor in</Pattern>
     <Pattern>be tumor inward</Pattern>
     <Pattern>be tumor inwards</Pattern>
     <Pattern>be tumor to</Pattern>
+    <Pattern>be tumour as</Pattern>
+    <Pattern>be tumour equally</Pattern>
+    <Pattern>be tumour every bit</Pattern>
+    <Pattern>be tumour for</Pattern>
     <Pattern>be tumour in</Pattern>
     <Pattern>be tumour inward</Pattern>
     <Pattern>be tumour inwards</Pattern>
     <Pattern>be tumour to</Pattern>
-    <Pattern>be varying against</Pattern>
     <Pattern>be varying by</Pattern>
-    <Pattern>be varying for</Pattern>
     <Pattern>be varying from</Pattern>
+    <Pattern>be varying in</Pattern>
+    <Pattern>be varying inward</Pattern>
+    <Pattern>be varying inwards</Pattern>
     <Pattern>be varying past</Pattern>
-    <Pattern>be varying that</Pattern>
     <Pattern>be varying to</Pattern>
     <Pattern>be varying with</Pattern>
     <Pattern>be with</Pattern>
     <Pattern>be wound to</Pattern>
     <Pattern>been</Pattern>
-    <Pattern>been Q along</Pattern>
-    <Pattern>been Q by</Pattern>
-    <Pattern>been Q for</Pattern>
-    <Pattern>been Q on</Pattern>
-    <Pattern>been Q past</Pattern>
-    <Pattern>been Q to</Pattern>
     <Pattern>been along</Pattern>
     <Pattern>been been along</Pattern>
     <Pattern>been been by</Pattern>
@@ -813,20 +859,8 @@
     <Pattern>been identified on</Pattern>
     <Pattern>been identified past</Pattern>
     <Pattern>been identified to</Pattern>
-    <Pattern>been letter q along</Pattern>
-    <Pattern>been letter q by</Pattern>
-    <Pattern>been letter q for</Pattern>
-    <Pattern>been letter q on</Pattern>
-    <Pattern>been letter q past</Pattern>
-    <Pattern>been letter q to</Pattern>
     <Pattern>been on</Pattern>
     <Pattern>been past</Pattern>
-    <Pattern>been q10 along</Pattern>
-    <Pattern>been q10 by</Pattern>
-    <Pattern>been q10 for</Pattern>
-    <Pattern>been q10 on</Pattern>
-    <Pattern>been q10 past</Pattern>
-    <Pattern>been q10 to</Pattern>
     <Pattern>been radical for</Pattern>
     <Pattern>been radical to</Pattern>
     <Pattern>been studied along</Pattern>
@@ -841,187 +875,67 @@
     <Pattern>been tested to</Pattern>
     <Pattern>been to</Pattern>
     <Pattern>change</Pattern>
-    <Pattern>change against</Pattern>
     <Pattern>change by</Pattern>
-    <Pattern>change evaluated against</Pattern>
     <Pattern>change evaluated by</Pattern>
-    <Pattern>change evaluated for</Pattern>
     <Pattern>change evaluated from</Pattern>
+    <Pattern>change evaluated in</Pattern>
+    <Pattern>change evaluated inward</Pattern>
+    <Pattern>change evaluated inwards</Pattern>
     <Pattern>change evaluated past</Pattern>
-    <Pattern>change evaluated that</Pattern>
     <Pattern>change evaluated to</Pattern>
     <Pattern>change evaluated with</Pattern>
-    <Pattern>change for</Pattern>
     <Pattern>change from</Pattern>
+    <Pattern>change in</Pattern>
+    <Pattern>change inward</Pattern>
+    <Pattern>change inwards</Pattern>
+    <Pattern>change observed by</Pattern>
+    <Pattern>change observed from</Pattern>
+    <Pattern>change observed in</Pattern>
+    <Pattern>change observed inward</Pattern>
+    <Pattern>change observed inwards</Pattern>
+    <Pattern>change observed past</Pattern>
+    <Pattern>change observed to</Pattern>
+    <Pattern>change observed with</Pattern>
     <Pattern>change past</Pattern>
-    <Pattern>change reported against</Pattern>
     <Pattern>change reported by</Pattern>
-    <Pattern>change reported for</Pattern>
     <Pattern>change reported from</Pattern>
+    <Pattern>change reported in</Pattern>
+    <Pattern>change reported inward</Pattern>
+    <Pattern>change reported inwards</Pattern>
     <Pattern>change reported past</Pattern>
-    <Pattern>change reported that</Pattern>
     <Pattern>change reported to</Pattern>
     <Pattern>change reported with</Pattern>
-    <Pattern>change that</Pattern>
+    <Pattern>change seen by</Pattern>
+    <Pattern>change seen from</Pattern>
+    <Pattern>change seen in</Pattern>
+    <Pattern>change seen inward</Pattern>
+    <Pattern>change seen inwards</Pattern>
+    <Pattern>change seen past</Pattern>
+    <Pattern>change seen to</Pattern>
+    <Pattern>change seen with</Pattern>
+    <Pattern>change squalene by</Pattern>
+    <Pattern>change squalene from</Pattern>
+    <Pattern>change squalene in</Pattern>
+    <Pattern>change squalene inward</Pattern>
+    <Pattern>change squalene inwards</Pattern>
+    <Pattern>change squalene past</Pattern>
+    <Pattern>change squalene to</Pattern>
+    <Pattern>change squalene with</Pattern>
     <Pattern>change to</Pattern>
-    <Pattern>change varying against</Pattern>
     <Pattern>change varying by</Pattern>
-    <Pattern>change varying for</Pattern>
     <Pattern>change varying from</Pattern>
+    <Pattern>change varying in</Pattern>
+    <Pattern>change varying inward</Pattern>
+    <Pattern>change varying inwards</Pattern>
     <Pattern>change varying past</Pattern>
-    <Pattern>change varying that</Pattern>
     <Pattern>change varying to</Pattern>
     <Pattern>change varying with</Pattern>
     <Pattern>change with</Pattern>
-    <Pattern>coenzyme</Pattern>
-    <Pattern>coenzyme Q along</Pattern>
-    <Pattern>coenzyme Q by</Pattern>
-    <Pattern>coenzyme Q for</Pattern>
-    <Pattern>coenzyme Q on</Pattern>
-    <Pattern>coenzyme Q past</Pattern>
-    <Pattern>coenzyme Q to</Pattern>
-    <Pattern>coenzyme along</Pattern>
-    <Pattern>coenzyme been along</Pattern>
-    <Pattern>coenzyme been by</Pattern>
-    <Pattern>coenzyme been for</Pattern>
-    <Pattern>coenzyme been on</Pattern>
-    <Pattern>coenzyme been past</Pattern>
-    <Pattern>coenzyme been to</Pattern>
-    <Pattern>coenzyme beta to</Pattern>
-    <Pattern>coenzyme beta-catenin to</Pattern>
-    <Pattern>coenzyme beta-sitosterol to</Pattern>
-    <Pattern>coenzyme betacatenin to</Pattern>
-    <Pattern>coenzyme by</Pattern>
-    <Pattern>coenzyme chemical compound along</Pattern>
-    <Pattern>coenzyme chemical compound by</Pattern>
-    <Pattern>coenzyme chemical compound for</Pattern>
-    <Pattern>coenzyme chemical compound on</Pattern>
-    <Pattern>coenzyme chemical compound past</Pattern>
-    <Pattern>coenzyme chemical compound to</Pattern>
-    <Pattern>coenzyme chemical group to</Pattern>
-    <Pattern>coenzyme compound along</Pattern>
-    <Pattern>coenzyme compound by</Pattern>
-    <Pattern>coenzyme compound for</Pattern>
-    <Pattern>coenzyme compound on</Pattern>
-    <Pattern>coenzyme compound past</Pattern>
-    <Pattern>coenzyme compound to</Pattern>
-    <Pattern>coenzyme compounds along</Pattern>
-    <Pattern>coenzyme compounds by</Pattern>
-    <Pattern>coenzyme compounds for</Pattern>
-    <Pattern>coenzyme compounds on</Pattern>
-    <Pattern>coenzyme compounds past</Pattern>
-    <Pattern>coenzyme compounds to</Pattern>
-    <Pattern>coenzyme for</Pattern>
-    <Pattern>coenzyme group to</Pattern>
-    <Pattern>coenzyme identified along</Pattern>
-    <Pattern>coenzyme identified by</Pattern>
-    <Pattern>coenzyme identified for</Pattern>
-    <Pattern>coenzyme identified on</Pattern>
-    <Pattern>coenzyme identified past</Pattern>
-    <Pattern>coenzyme identified to</Pattern>
-    <Pattern>coenzyme letter q along</Pattern>
-    <Pattern>coenzyme letter q by</Pattern>
-    <Pattern>coenzyme letter q for</Pattern>
-    <Pattern>coenzyme letter q on</Pattern>
-    <Pattern>coenzyme letter q past</Pattern>
-    <Pattern>coenzyme letter q to</Pattern>
-    <Pattern>coenzyme neoplasm to</Pattern>
-    <Pattern>coenzyme on</Pattern>
-    <Pattern>coenzyme past</Pattern>
-    <Pattern>coenzyme q10 along</Pattern>
-    <Pattern>coenzyme q10 by</Pattern>
-    <Pattern>coenzyme q10 for</Pattern>
-    <Pattern>coenzyme q10 on</Pattern>
-    <Pattern>coenzyme q10 past</Pattern>
-    <Pattern>coenzyme q10 to</Pattern>
-    <Pattern>coenzyme radical to</Pattern>
-    <Pattern>coenzyme reported to</Pattern>
-    <Pattern>coenzyme studied along</Pattern>
-    <Pattern>coenzyme studied by</Pattern>
-    <Pattern>coenzyme studied for</Pattern>
-    <Pattern>coenzyme studied on</Pattern>
-    <Pattern>coenzyme studied past</Pattern>
-    <Pattern>coenzyme studied to</Pattern>
-    <Pattern>coenzyme to</Pattern>
-    <Pattern>coenzyme tumor to</Pattern>
-    <Pattern>coenzyme tumour to</Pattern>
     <Pattern>commemorate</Pattern>
     <Pattern>commemorate alkaloid to</Pattern>
     <Pattern>commemorate cell to</Pattern>
     <Pattern>commemorate to</Pattern>
-    <Pattern>compare</Pattern>
-    <Pattern>compare against</Pattern>
-    <Pattern>compare by</Pattern>
-    <Pattern>compare evaluated against</Pattern>
-    <Pattern>compare evaluated by</Pattern>
-    <Pattern>compare evaluated for</Pattern>
-    <Pattern>compare evaluated from</Pattern>
-    <Pattern>compare evaluated past</Pattern>
-    <Pattern>compare evaluated that</Pattern>
-    <Pattern>compare evaluated to</Pattern>
-    <Pattern>compare evaluated with</Pattern>
-    <Pattern>compare for</Pattern>
-    <Pattern>compare from</Pattern>
-    <Pattern>compare past</Pattern>
-    <Pattern>compare reported against</Pattern>
-    <Pattern>compare reported by</Pattern>
-    <Pattern>compare reported for</Pattern>
-    <Pattern>compare reported from</Pattern>
-    <Pattern>compare reported past</Pattern>
-    <Pattern>compare reported that</Pattern>
-    <Pattern>compare reported to</Pattern>
-    <Pattern>compare reported with</Pattern>
-    <Pattern>compare that</Pattern>
-    <Pattern>compare to</Pattern>
-    <Pattern>compare varying against</Pattern>
-    <Pattern>compare varying by</Pattern>
-    <Pattern>compare varying for</Pattern>
-    <Pattern>compare varying from</Pattern>
-    <Pattern>compare varying past</Pattern>
-    <Pattern>compare varying that</Pattern>
-    <Pattern>compare varying to</Pattern>
-    <Pattern>compare varying with</Pattern>
-    <Pattern>compare with</Pattern>
-    <Pattern>compares</Pattern>
-    <Pattern>compares against</Pattern>
-    <Pattern>compares by</Pattern>
-    <Pattern>compares evaluated against</Pattern>
-    <Pattern>compares evaluated by</Pattern>
-    <Pattern>compares evaluated for</Pattern>
-    <Pattern>compares evaluated from</Pattern>
-    <Pattern>compares evaluated past</Pattern>
-    <Pattern>compares evaluated that</Pattern>
-    <Pattern>compares evaluated to</Pattern>
-    <Pattern>compares evaluated with</Pattern>
-    <Pattern>compares for</Pattern>
-    <Pattern>compares from</Pattern>
-    <Pattern>compares past</Pattern>
-    <Pattern>compares reported against</Pattern>
-    <Pattern>compares reported by</Pattern>
-    <Pattern>compares reported for</Pattern>
-    <Pattern>compares reported from</Pattern>
-    <Pattern>compares reported past</Pattern>
-    <Pattern>compares reported that</Pattern>
-    <Pattern>compares reported to</Pattern>
-    <Pattern>compares reported with</Pattern>
-    <Pattern>compares that</Pattern>
-    <Pattern>compares to</Pattern>
-    <Pattern>compares varying against</Pattern>
-    <Pattern>compares varying by</Pattern>
-    <Pattern>compares varying for</Pattern>
-    <Pattern>compares varying from</Pattern>
-    <Pattern>compares varying past</Pattern>
-    <Pattern>compares varying that</Pattern>
-    <Pattern>compares varying to</Pattern>
-    <Pattern>compares varying with</Pattern>
-    <Pattern>compares with</Pattern>
     <Pattern>conduct</Pattern>
-    <Pattern>conduct Q along</Pattern>
-    <Pattern>conduct Q by</Pattern>
-    <Pattern>conduct Q for</Pattern>
-    <Pattern>conduct Q on</Pattern>
-    <Pattern>conduct Q past</Pattern>
-    <Pattern>conduct Q to</Pattern>
     <Pattern>conduct along</Pattern>
     <Pattern>conduct been along</Pattern>
     <Pattern>conduct been by</Pattern>
@@ -1055,20 +969,8 @@
     <Pattern>conduct identified on</Pattern>
     <Pattern>conduct identified past</Pattern>
     <Pattern>conduct identified to</Pattern>
-    <Pattern>conduct letter q along</Pattern>
-    <Pattern>conduct letter q by</Pattern>
-    <Pattern>conduct letter q for</Pattern>
-    <Pattern>conduct letter q on</Pattern>
-    <Pattern>conduct letter q past</Pattern>
-    <Pattern>conduct letter q to</Pattern>
     <Pattern>conduct on</Pattern>
     <Pattern>conduct past</Pattern>
-    <Pattern>conduct q10 along</Pattern>
-    <Pattern>conduct q10 by</Pattern>
-    <Pattern>conduct q10 for</Pattern>
-    <Pattern>conduct q10 on</Pattern>
-    <Pattern>conduct q10 past</Pattern>
-    <Pattern>conduct q10 to</Pattern>
     <Pattern>conduct studied along</Pattern>
     <Pattern>conduct studied by</Pattern>
     <Pattern>conduct studied for</Pattern>
@@ -1077,12 +979,6 @@
     <Pattern>conduct studied to</Pattern>
     <Pattern>conduct to</Pattern>
     <Pattern>conducted</Pattern>
-    <Pattern>conducted Q along</Pattern>
-    <Pattern>conducted Q by</Pattern>
-    <Pattern>conducted Q for</Pattern>
-    <Pattern>conducted Q on</Pattern>
-    <Pattern>conducted Q past</Pattern>
-    <Pattern>conducted Q to</Pattern>
     <Pattern>conducted along</Pattern>
     <Pattern>conducted been along</Pattern>
     <Pattern>conducted been by</Pattern>
@@ -1116,20 +1012,8 @@
     <Pattern>conducted identified on</Pattern>
     <Pattern>conducted identified past</Pattern>
     <Pattern>conducted identified to</Pattern>
-    <Pattern>conducted letter q along</Pattern>
-    <Pattern>conducted letter q by</Pattern>
-    <Pattern>conducted letter q for</Pattern>
-    <Pattern>conducted letter q on</Pattern>
-    <Pattern>conducted letter q past</Pattern>
-    <Pattern>conducted letter q to</Pattern>
     <Pattern>conducted on</Pattern>
     <Pattern>conducted past</Pattern>
-    <Pattern>conducted q10 along</Pattern>
-    <Pattern>conducted q10 by</Pattern>
-    <Pattern>conducted q10 for</Pattern>
-    <Pattern>conducted q10 on</Pattern>
-    <Pattern>conducted q10 past</Pattern>
-    <Pattern>conducted q10 to</Pattern>
     <Pattern>conducted studied along</Pattern>
     <Pattern>conducted studied by</Pattern>
     <Pattern>conducted studied for</Pattern>
@@ -1137,6 +1021,63 @@
     <Pattern>conducted studied past</Pattern>
     <Pattern>conducted studied to</Pattern>
     <Pattern>conducted to</Pattern>
+    <Pattern>detect</Pattern>
+    <Pattern>detect by</Pattern>
+    <Pattern>detect evaluated by</Pattern>
+    <Pattern>detect evaluated from</Pattern>
+    <Pattern>detect evaluated in</Pattern>
+    <Pattern>detect evaluated inward</Pattern>
+    <Pattern>detect evaluated inwards</Pattern>
+    <Pattern>detect evaluated past</Pattern>
+    <Pattern>detect evaluated to</Pattern>
+    <Pattern>detect evaluated with</Pattern>
+    <Pattern>detect from</Pattern>
+    <Pattern>detect in</Pattern>
+    <Pattern>detect inward</Pattern>
+    <Pattern>detect inwards</Pattern>
+    <Pattern>detect observed by</Pattern>
+    <Pattern>detect observed from</Pattern>
+    <Pattern>detect observed in</Pattern>
+    <Pattern>detect observed inward</Pattern>
+    <Pattern>detect observed inwards</Pattern>
+    <Pattern>detect observed past</Pattern>
+    <Pattern>detect observed to</Pattern>
+    <Pattern>detect observed with</Pattern>
+    <Pattern>detect past</Pattern>
+    <Pattern>detect reported by</Pattern>
+    <Pattern>detect reported from</Pattern>
+    <Pattern>detect reported in</Pattern>
+    <Pattern>detect reported inward</Pattern>
+    <Pattern>detect reported inwards</Pattern>
+    <Pattern>detect reported past</Pattern>
+    <Pattern>detect reported to</Pattern>
+    <Pattern>detect reported with</Pattern>
+    <Pattern>detect seen by</Pattern>
+    <Pattern>detect seen from</Pattern>
+    <Pattern>detect seen in</Pattern>
+    <Pattern>detect seen inward</Pattern>
+    <Pattern>detect seen inwards</Pattern>
+    <Pattern>detect seen past</Pattern>
+    <Pattern>detect seen to</Pattern>
+    <Pattern>detect seen with</Pattern>
+    <Pattern>detect squalene by</Pattern>
+    <Pattern>detect squalene from</Pattern>
+    <Pattern>detect squalene in</Pattern>
+    <Pattern>detect squalene inward</Pattern>
+    <Pattern>detect squalene inwards</Pattern>
+    <Pattern>detect squalene past</Pattern>
+    <Pattern>detect squalene to</Pattern>
+    <Pattern>detect squalene with</Pattern>
+    <Pattern>detect to</Pattern>
+    <Pattern>detect varying by</Pattern>
+    <Pattern>detect varying from</Pattern>
+    <Pattern>detect varying in</Pattern>
+    <Pattern>detect varying inward</Pattern>
+    <Pattern>detect varying inwards</Pattern>
+    <Pattern>detect varying past</Pattern>
+    <Pattern>detect varying to</Pattern>
+    <Pattern>detect varying with</Pattern>
+    <Pattern>detect with</Pattern>
     <Pattern>disrupting</Pattern>
     <Pattern>disrupting beta in</Pattern>
     <Pattern>disrupting beta inward</Pattern>
@@ -1270,46 +1211,63 @@
     <Pattern>establish tumour inwards</Pattern>
     <Pattern>establish tumour to</Pattern>
     <Pattern>evaluated</Pattern>
-    <Pattern>evaluated against</Pattern>
     <Pattern>evaluated by</Pattern>
-    <Pattern>evaluated evaluated against</Pattern>
     <Pattern>evaluated evaluated by</Pattern>
-    <Pattern>evaluated evaluated for</Pattern>
     <Pattern>evaluated evaluated from</Pattern>
+    <Pattern>evaluated evaluated in</Pattern>
+    <Pattern>evaluated evaluated inward</Pattern>
+    <Pattern>evaluated evaluated inwards</Pattern>
     <Pattern>evaluated evaluated past</Pattern>
-    <Pattern>evaluated evaluated that</Pattern>
     <Pattern>evaluated evaluated to</Pattern>
     <Pattern>evaluated evaluated with</Pattern>
-    <Pattern>evaluated for</Pattern>
     <Pattern>evaluated from</Pattern>
+    <Pattern>evaluated in</Pattern>
+    <Pattern>evaluated inward</Pattern>
+    <Pattern>evaluated inwards</Pattern>
+    <Pattern>evaluated observed by</Pattern>
+    <Pattern>evaluated observed from</Pattern>
+    <Pattern>evaluated observed in</Pattern>
+    <Pattern>evaluated observed inward</Pattern>
+    <Pattern>evaluated observed inwards</Pattern>
+    <Pattern>evaluated observed past</Pattern>
+    <Pattern>evaluated observed to</Pattern>
+    <Pattern>evaluated observed with</Pattern>
     <Pattern>evaluated past</Pattern>
-    <Pattern>evaluated reported against</Pattern>
     <Pattern>evaluated reported by</Pattern>
-    <Pattern>evaluated reported for</Pattern>
     <Pattern>evaluated reported from</Pattern>
+    <Pattern>evaluated reported in</Pattern>
+    <Pattern>evaluated reported inward</Pattern>
+    <Pattern>evaluated reported inwards</Pattern>
     <Pattern>evaluated reported past</Pattern>
-    <Pattern>evaluated reported that</Pattern>
     <Pattern>evaluated reported to</Pattern>
     <Pattern>evaluated reported with</Pattern>
-    <Pattern>evaluated that</Pattern>
+    <Pattern>evaluated seen by</Pattern>
+    <Pattern>evaluated seen from</Pattern>
+    <Pattern>evaluated seen in</Pattern>
+    <Pattern>evaluated seen inward</Pattern>
+    <Pattern>evaluated seen inwards</Pattern>
+    <Pattern>evaluated seen past</Pattern>
+    <Pattern>evaluated seen to</Pattern>
+    <Pattern>evaluated seen with</Pattern>
+    <Pattern>evaluated squalene by</Pattern>
+    <Pattern>evaluated squalene from</Pattern>
+    <Pattern>evaluated squalene in</Pattern>
+    <Pattern>evaluated squalene inward</Pattern>
+    <Pattern>evaluated squalene inwards</Pattern>
+    <Pattern>evaluated squalene past</Pattern>
+    <Pattern>evaluated squalene to</Pattern>
+    <Pattern>evaluated squalene with</Pattern>
     <Pattern>evaluated to</Pattern>
-    <Pattern>evaluated varying against</Pattern>
     <Pattern>evaluated varying by</Pattern>
-    <Pattern>evaluated varying for</Pattern>
     <Pattern>evaluated varying from</Pattern>
+    <Pattern>evaluated varying in</Pattern>
+    <Pattern>evaluated varying inward</Pattern>
+    <Pattern>evaluated varying inwards</Pattern>
     <Pattern>evaluated varying past</Pattern>
-    <Pattern>evaluated varying that</Pattern>
     <Pattern>evaluated varying to</Pattern>
     <Pattern>evaluated varying with</Pattern>
     <Pattern>evaluated with</Pattern>
     <Pattern>exhibit</Pattern>
-    <Pattern>exhibit Q along</Pattern>
-    <Pattern>exhibit Q by</Pattern>
-    <Pattern>exhibit Q for</Pattern>
-    <Pattern>exhibit Q on</Pattern>
-    <Pattern>exhibit Q past</Pattern>
-    <Pattern>exhibit Q to</Pattern>
-    <Pattern>exhibit against</Pattern>
     <Pattern>exhibit alkaloid to</Pattern>
     <Pattern>exhibit along</Pattern>
     <Pattern>exhibit as</Pattern>
@@ -1357,6 +1315,14 @@
     <Pattern>exhibit chemical group every bit</Pattern>
     <Pattern>exhibit chemical group that</Pattern>
     <Pattern>exhibit chemical group to</Pattern>
+    <Pattern>exhibit cholesterin as</Pattern>
+    <Pattern>exhibit cholesterin equally</Pattern>
+    <Pattern>exhibit cholesterin every bit</Pattern>
+    <Pattern>exhibit cholesterin for</Pattern>
+    <Pattern>exhibit cholesterol as</Pattern>
+    <Pattern>exhibit cholesterol equally</Pattern>
+    <Pattern>exhibit cholesterol every bit</Pattern>
+    <Pattern>exhibit cholesterol for</Pattern>
     <Pattern>exhibit compound along</Pattern>
     <Pattern>exhibit compound by</Pattern>
     <Pattern>exhibit compound for</Pattern>
@@ -1378,12 +1344,12 @@
     <Pattern>exhibit downer inwards</Pattern>
     <Pattern>exhibit downer to</Pattern>
     <Pattern>exhibit equally</Pattern>
-    <Pattern>exhibit evaluated against</Pattern>
     <Pattern>exhibit evaluated by</Pattern>
-    <Pattern>exhibit evaluated for</Pattern>
     <Pattern>exhibit evaluated from</Pattern>
+    <Pattern>exhibit evaluated in</Pattern>
+    <Pattern>exhibit evaluated inward</Pattern>
+    <Pattern>exhibit evaluated inwards</Pattern>
     <Pattern>exhibit evaluated past</Pattern>
-    <Pattern>exhibit evaluated that</Pattern>
     <Pattern>exhibit evaluated to</Pattern>
     <Pattern>exhibit evaluated with</Pattern>
     <Pattern>exhibit every bit</Pattern>
@@ -1414,35 +1380,45 @@
     <Pattern>exhibit inward</Pattern>
     <Pattern>exhibit inwards</Pattern>
     <Pattern>exhibit lesion to</Pattern>
-    <Pattern>exhibit letter q along</Pattern>
-    <Pattern>exhibit letter q by</Pattern>
-    <Pattern>exhibit letter q for</Pattern>
-    <Pattern>exhibit letter q on</Pattern>
-    <Pattern>exhibit letter q past</Pattern>
-    <Pattern>exhibit letter q to</Pattern>
+    <Pattern>exhibit neoplasm as</Pattern>
+    <Pattern>exhibit neoplasm equally</Pattern>
+    <Pattern>exhibit neoplasm every bit</Pattern>
+    <Pattern>exhibit neoplasm for</Pattern>
     <Pattern>exhibit neoplasm in</Pattern>
     <Pattern>exhibit neoplasm inward</Pattern>
     <Pattern>exhibit neoplasm inwards</Pattern>
     <Pattern>exhibit neoplasm to</Pattern>
+    <Pattern>exhibit observed by</Pattern>
+    <Pattern>exhibit observed from</Pattern>
+    <Pattern>exhibit observed in</Pattern>
+    <Pattern>exhibit observed inward</Pattern>
+    <Pattern>exhibit observed inwards</Pattern>
+    <Pattern>exhibit observed past</Pattern>
+    <Pattern>exhibit observed to</Pattern>
+    <Pattern>exhibit observed with</Pattern>
     <Pattern>exhibit on</Pattern>
     <Pattern>exhibit past</Pattern>
-    <Pattern>exhibit q10 along</Pattern>
-    <Pattern>exhibit q10 by</Pattern>
-    <Pattern>exhibit q10 for</Pattern>
-    <Pattern>exhibit q10 on</Pattern>
-    <Pattern>exhibit q10 past</Pattern>
-    <Pattern>exhibit q10 to</Pattern>
+    <Pattern>exhibit potency as</Pattern>
+    <Pattern>exhibit potency equally</Pattern>
+    <Pattern>exhibit potency every bit</Pattern>
+    <Pattern>exhibit potency for</Pattern>
+    <Pattern>exhibit potential as</Pattern>
+    <Pattern>exhibit potential equally</Pattern>
+    <Pattern>exhibit potential every bit</Pattern>
+    <Pattern>exhibit potential for</Pattern>
+    <Pattern>exhibit potentiality as</Pattern>
+    <Pattern>exhibit potentiality equally</Pattern>
+    <Pattern>exhibit potentiality every bit</Pattern>
+    <Pattern>exhibit potentiality for</Pattern>
     <Pattern>exhibit radical as</Pattern>
     <Pattern>exhibit radical equally</Pattern>
     <Pattern>exhibit radical every bit</Pattern>
     <Pattern>exhibit radical that</Pattern>
     <Pattern>exhibit radical to</Pattern>
-    <Pattern>exhibit reported against</Pattern>
     <Pattern>exhibit reported as</Pattern>
     <Pattern>exhibit reported by</Pattern>
     <Pattern>exhibit reported equally</Pattern>
     <Pattern>exhibit reported every bit</Pattern>
-    <Pattern>exhibit reported for</Pattern>
     <Pattern>exhibit reported from</Pattern>
     <Pattern>exhibit reported in</Pattern>
     <Pattern>exhibit reported inward</Pattern>
@@ -1459,6 +1435,22 @@
     <Pattern>exhibit sedative inward</Pattern>
     <Pattern>exhibit sedative inwards</Pattern>
     <Pattern>exhibit sedative to</Pattern>
+    <Pattern>exhibit seen by</Pattern>
+    <Pattern>exhibit seen from</Pattern>
+    <Pattern>exhibit seen in</Pattern>
+    <Pattern>exhibit seen inward</Pattern>
+    <Pattern>exhibit seen inwards</Pattern>
+    <Pattern>exhibit seen past</Pattern>
+    <Pattern>exhibit seen to</Pattern>
+    <Pattern>exhibit seen with</Pattern>
+    <Pattern>exhibit squalene by</Pattern>
+    <Pattern>exhibit squalene from</Pattern>
+    <Pattern>exhibit squalene in</Pattern>
+    <Pattern>exhibit squalene inward</Pattern>
+    <Pattern>exhibit squalene inwards</Pattern>
+    <Pattern>exhibit squalene past</Pattern>
+    <Pattern>exhibit squalene to</Pattern>
+    <Pattern>exhibit squalene with</Pattern>
     <Pattern>exhibit studied along</Pattern>
     <Pattern>exhibit studied by</Pattern>
     <Pattern>exhibit studied for</Pattern>
@@ -1481,32 +1473,33 @@
     <Pattern>exhibit triglycerides every bit</Pattern>
     <Pattern>exhibit triglycerides that</Pattern>
     <Pattern>exhibit triglycerides to</Pattern>
+    <Pattern>exhibit tumor as</Pattern>
+    <Pattern>exhibit tumor equally</Pattern>
+    <Pattern>exhibit tumor every bit</Pattern>
+    <Pattern>exhibit tumor for</Pattern>
     <Pattern>exhibit tumor in</Pattern>
     <Pattern>exhibit tumor inward</Pattern>
     <Pattern>exhibit tumor inwards</Pattern>
     <Pattern>exhibit tumor to</Pattern>
+    <Pattern>exhibit tumour as</Pattern>
+    <Pattern>exhibit tumour equally</Pattern>
+    <Pattern>exhibit tumour every bit</Pattern>
+    <Pattern>exhibit tumour for</Pattern>
     <Pattern>exhibit tumour in</Pattern>
     <Pattern>exhibit tumour inward</Pattern>
     <Pattern>exhibit tumour inwards</Pattern>
     <Pattern>exhibit tumour to</Pattern>
-    <Pattern>exhibit varying against</Pattern>
     <Pattern>exhibit varying by</Pattern>
-    <Pattern>exhibit varying for</Pattern>
     <Pattern>exhibit varying from</Pattern>
+    <Pattern>exhibit varying in</Pattern>
+    <Pattern>exhibit varying inward</Pattern>
+    <Pattern>exhibit varying inwards</Pattern>
     <Pattern>exhibit varying past</Pattern>
-    <Pattern>exhibit varying that</Pattern>
     <Pattern>exhibit varying to</Pattern>
     <Pattern>exhibit varying with</Pattern>
     <Pattern>exhibit with</Pattern>
     <Pattern>exhibit wound to</Pattern>
     <Pattern>exhibited</Pattern>
-    <Pattern>exhibited Q along</Pattern>
-    <Pattern>exhibited Q by</Pattern>
-    <Pattern>exhibited Q for</Pattern>
-    <Pattern>exhibited Q on</Pattern>
-    <Pattern>exhibited Q past</Pattern>
-    <Pattern>exhibited Q to</Pattern>
-    <Pattern>exhibited against</Pattern>
     <Pattern>exhibited alkaloid to</Pattern>
     <Pattern>exhibited along</Pattern>
     <Pattern>exhibited as</Pattern>
@@ -1554,6 +1547,14 @@
     <Pattern>exhibited chemical group every bit</Pattern>
     <Pattern>exhibited chemical group that</Pattern>
     <Pattern>exhibited chemical group to</Pattern>
+    <Pattern>exhibited cholesterin as</Pattern>
+    <Pattern>exhibited cholesterin equally</Pattern>
+    <Pattern>exhibited cholesterin every bit</Pattern>
+    <Pattern>exhibited cholesterin for</Pattern>
+    <Pattern>exhibited cholesterol as</Pattern>
+    <Pattern>exhibited cholesterol equally</Pattern>
+    <Pattern>exhibited cholesterol every bit</Pattern>
+    <Pattern>exhibited cholesterol for</Pattern>
     <Pattern>exhibited compound along</Pattern>
     <Pattern>exhibited compound by</Pattern>
     <Pattern>exhibited compound for</Pattern>
@@ -1575,12 +1576,12 @@
     <Pattern>exhibited downer inwards</Pattern>
     <Pattern>exhibited downer to</Pattern>
     <Pattern>exhibited equally</Pattern>
-    <Pattern>exhibited evaluated against</Pattern>
     <Pattern>exhibited evaluated by</Pattern>
-    <Pattern>exhibited evaluated for</Pattern>
     <Pattern>exhibited evaluated from</Pattern>
+    <Pattern>exhibited evaluated in</Pattern>
+    <Pattern>exhibited evaluated inward</Pattern>
+    <Pattern>exhibited evaluated inwards</Pattern>
     <Pattern>exhibited evaluated past</Pattern>
-    <Pattern>exhibited evaluated that</Pattern>
     <Pattern>exhibited evaluated to</Pattern>
     <Pattern>exhibited evaluated with</Pattern>
     <Pattern>exhibited every bit</Pattern>
@@ -1607,35 +1608,45 @@
     <Pattern>exhibited in</Pattern>
     <Pattern>exhibited inward</Pattern>
     <Pattern>exhibited inwards</Pattern>
-    <Pattern>exhibited letter q along</Pattern>
-    <Pattern>exhibited letter q by</Pattern>
-    <Pattern>exhibited letter q for</Pattern>
-    <Pattern>exhibited letter q on</Pattern>
-    <Pattern>exhibited letter q past</Pattern>
-    <Pattern>exhibited letter q to</Pattern>
+    <Pattern>exhibited neoplasm as</Pattern>
+    <Pattern>exhibited neoplasm equally</Pattern>
+    <Pattern>exhibited neoplasm every bit</Pattern>
+    <Pattern>exhibited neoplasm for</Pattern>
     <Pattern>exhibited neoplasm in</Pattern>
     <Pattern>exhibited neoplasm inward</Pattern>
     <Pattern>exhibited neoplasm inwards</Pattern>
     <Pattern>exhibited neoplasm to</Pattern>
+    <Pattern>exhibited observed by</Pattern>
+    <Pattern>exhibited observed from</Pattern>
+    <Pattern>exhibited observed in</Pattern>
+    <Pattern>exhibited observed inward</Pattern>
+    <Pattern>exhibited observed inwards</Pattern>
+    <Pattern>exhibited observed past</Pattern>
+    <Pattern>exhibited observed to</Pattern>
+    <Pattern>exhibited observed with</Pattern>
     <Pattern>exhibited on</Pattern>
     <Pattern>exhibited past</Pattern>
-    <Pattern>exhibited q10 along</Pattern>
-    <Pattern>exhibited q10 by</Pattern>
-    <Pattern>exhibited q10 for</Pattern>
-    <Pattern>exhibited q10 on</Pattern>
-    <Pattern>exhibited q10 past</Pattern>
-    <Pattern>exhibited q10 to</Pattern>
+    <Pattern>exhibited potency as</Pattern>
+    <Pattern>exhibited potency equally</Pattern>
+    <Pattern>exhibited potency every bit</Pattern>
+    <Pattern>exhibited potency for</Pattern>
+    <Pattern>exhibited potential as</Pattern>
+    <Pattern>exhibited potential equally</Pattern>
+    <Pattern>exhibited potential every bit</Pattern>
+    <Pattern>exhibited potential for</Pattern>
+    <Pattern>exhibited potentiality as</Pattern>
+    <Pattern>exhibited potentiality equally</Pattern>
+    <Pattern>exhibited potentiality every bit</Pattern>
+    <Pattern>exhibited potentiality for</Pattern>
     <Pattern>exhibited radical as</Pattern>
     <Pattern>exhibited radical equally</Pattern>
     <Pattern>exhibited radical every bit</Pattern>
     <Pattern>exhibited radical that</Pattern>
     <Pattern>exhibited radical to</Pattern>
-    <Pattern>exhibited reported against</Pattern>
     <Pattern>exhibited reported as</Pattern>
     <Pattern>exhibited reported by</Pattern>
     <Pattern>exhibited reported equally</Pattern>
     <Pattern>exhibited reported every bit</Pattern>
-    <Pattern>exhibited reported for</Pattern>
     <Pattern>exhibited reported from</Pattern>
     <Pattern>exhibited reported in</Pattern>
     <Pattern>exhibited reported inward</Pattern>
@@ -1652,6 +1663,22 @@
     <Pattern>exhibited sedative inward</Pattern>
     <Pattern>exhibited sedative inwards</Pattern>
     <Pattern>exhibited sedative to</Pattern>
+    <Pattern>exhibited seen by</Pattern>
+    <Pattern>exhibited seen from</Pattern>
+    <Pattern>exhibited seen in</Pattern>
+    <Pattern>exhibited seen inward</Pattern>
+    <Pattern>exhibited seen inwards</Pattern>
+    <Pattern>exhibited seen past</Pattern>
+    <Pattern>exhibited seen to</Pattern>
+    <Pattern>exhibited seen with</Pattern>
+    <Pattern>exhibited squalene by</Pattern>
+    <Pattern>exhibited squalene from</Pattern>
+    <Pattern>exhibited squalene in</Pattern>
+    <Pattern>exhibited squalene inward</Pattern>
+    <Pattern>exhibited squalene inwards</Pattern>
+    <Pattern>exhibited squalene past</Pattern>
+    <Pattern>exhibited squalene to</Pattern>
+    <Pattern>exhibited squalene with</Pattern>
     <Pattern>exhibited studied along</Pattern>
     <Pattern>exhibited studied by</Pattern>
     <Pattern>exhibited studied for</Pattern>
@@ -1670,89 +1697,31 @@
     <Pattern>exhibited triglycerides every bit</Pattern>
     <Pattern>exhibited triglycerides that</Pattern>
     <Pattern>exhibited triglycerides to</Pattern>
+    <Pattern>exhibited tumor as</Pattern>
+    <Pattern>exhibited tumor equally</Pattern>
+    <Pattern>exhibited tumor every bit</Pattern>
+    <Pattern>exhibited tumor for</Pattern>
     <Pattern>exhibited tumor in</Pattern>
     <Pattern>exhibited tumor inward</Pattern>
     <Pattern>exhibited tumor inwards</Pattern>
     <Pattern>exhibited tumor to</Pattern>
+    <Pattern>exhibited tumour as</Pattern>
+    <Pattern>exhibited tumour equally</Pattern>
+    <Pattern>exhibited tumour every bit</Pattern>
+    <Pattern>exhibited tumour for</Pattern>
     <Pattern>exhibited tumour in</Pattern>
     <Pattern>exhibited tumour inward</Pattern>
     <Pattern>exhibited tumour inwards</Pattern>
     <Pattern>exhibited tumour to</Pattern>
-    <Pattern>exhibited varying against</Pattern>
     <Pattern>exhibited varying by</Pattern>
-    <Pattern>exhibited varying for</Pattern>
     <Pattern>exhibited varying from</Pattern>
+    <Pattern>exhibited varying in</Pattern>
+    <Pattern>exhibited varying inward</Pattern>
+    <Pattern>exhibited varying inwards</Pattern>
     <Pattern>exhibited varying past</Pattern>
-    <Pattern>exhibited varying that</Pattern>
     <Pattern>exhibited varying to</Pattern>
     <Pattern>exhibited varying with</Pattern>
     <Pattern>exhibited with</Pattern>
-    <Pattern>follow</Pattern>
-    <Pattern>follow against</Pattern>
-    <Pattern>follow by</Pattern>
-    <Pattern>follow evaluated against</Pattern>
-    <Pattern>follow evaluated by</Pattern>
-    <Pattern>follow evaluated for</Pattern>
-    <Pattern>follow evaluated from</Pattern>
-    <Pattern>follow evaluated past</Pattern>
-    <Pattern>follow evaluated that</Pattern>
-    <Pattern>follow evaluated to</Pattern>
-    <Pattern>follow evaluated with</Pattern>
-    <Pattern>follow for</Pattern>
-    <Pattern>follow from</Pattern>
-    <Pattern>follow past</Pattern>
-    <Pattern>follow reported against</Pattern>
-    <Pattern>follow reported by</Pattern>
-    <Pattern>follow reported for</Pattern>
-    <Pattern>follow reported from</Pattern>
-    <Pattern>follow reported past</Pattern>
-    <Pattern>follow reported that</Pattern>
-    <Pattern>follow reported to</Pattern>
-    <Pattern>follow reported with</Pattern>
-    <Pattern>follow that</Pattern>
-    <Pattern>follow to</Pattern>
-    <Pattern>follow varying against</Pattern>
-    <Pattern>follow varying by</Pattern>
-    <Pattern>follow varying for</Pattern>
-    <Pattern>follow varying from</Pattern>
-    <Pattern>follow varying past</Pattern>
-    <Pattern>follow varying that</Pattern>
-    <Pattern>follow varying to</Pattern>
-    <Pattern>follow varying with</Pattern>
-    <Pattern>follow with</Pattern>
-    <Pattern>followed</Pattern>
-    <Pattern>followed against</Pattern>
-    <Pattern>followed by</Pattern>
-    <Pattern>followed evaluated against</Pattern>
-    <Pattern>followed evaluated by</Pattern>
-    <Pattern>followed evaluated for</Pattern>
-    <Pattern>followed evaluated from</Pattern>
-    <Pattern>followed evaluated past</Pattern>
-    <Pattern>followed evaluated that</Pattern>
-    <Pattern>followed evaluated to</Pattern>
-    <Pattern>followed evaluated with</Pattern>
-    <Pattern>followed for</Pattern>
-    <Pattern>followed from</Pattern>
-    <Pattern>followed past</Pattern>
-    <Pattern>followed reported against</Pattern>
-    <Pattern>followed reported by</Pattern>
-    <Pattern>followed reported for</Pattern>
-    <Pattern>followed reported from</Pattern>
-    <Pattern>followed reported past</Pattern>
-    <Pattern>followed reported that</Pattern>
-    <Pattern>followed reported to</Pattern>
-    <Pattern>followed reported with</Pattern>
-    <Pattern>followed that</Pattern>
-    <Pattern>followed to</Pattern>
-    <Pattern>followed varying against</Pattern>
-    <Pattern>followed varying by</Pattern>
-    <Pattern>followed varying for</Pattern>
-    <Pattern>followed varying from</Pattern>
-    <Pattern>followed varying past</Pattern>
-    <Pattern>followed varying that</Pattern>
-    <Pattern>followed varying to</Pattern>
-    <Pattern>followed varying with</Pattern>
-    <Pattern>followed with</Pattern>
     <Pattern>found</Pattern>
     <Pattern>found alkaloid to</Pattern>
     <Pattern>found along</Pattern>
@@ -1836,12 +1805,6 @@
     <Pattern>has reported to</Pattern>
     <Pattern>has to</Pattern>
     <Pattern>have</Pattern>
-    <Pattern>have Q along</Pattern>
-    <Pattern>have Q by</Pattern>
-    <Pattern>have Q for</Pattern>
-    <Pattern>have Q on</Pattern>
-    <Pattern>have Q past</Pattern>
-    <Pattern>have Q to</Pattern>
     <Pattern>have alkaloid to</Pattern>
     <Pattern>have along</Pattern>
     <Pattern>have been along</Pattern>
@@ -1915,24 +1878,12 @@
     <Pattern>have in</Pattern>
     <Pattern>have inward</Pattern>
     <Pattern>have inwards</Pattern>
-    <Pattern>have letter q along</Pattern>
-    <Pattern>have letter q by</Pattern>
-    <Pattern>have letter q for</Pattern>
-    <Pattern>have letter q on</Pattern>
-    <Pattern>have letter q past</Pattern>
-    <Pattern>have letter q to</Pattern>
     <Pattern>have neoplasm in</Pattern>
     <Pattern>have neoplasm inward</Pattern>
     <Pattern>have neoplasm inwards</Pattern>
     <Pattern>have neoplasm to</Pattern>
     <Pattern>have on</Pattern>
     <Pattern>have past</Pattern>
-    <Pattern>have q10 along</Pattern>
-    <Pattern>have q10 by</Pattern>
-    <Pattern>have q10 for</Pattern>
-    <Pattern>have q10 on</Pattern>
-    <Pattern>have q10 past</Pattern>
-    <Pattern>have q10 to</Pattern>
     <Pattern>have radical for</Pattern>
     <Pattern>have radical to</Pattern>
     <Pattern>have reported in</Pattern>
@@ -1967,12 +1918,6 @@
     <Pattern>have tumour inwards</Pattern>
     <Pattern>have tumour to</Pattern>
     <Pattern>identified</Pattern>
-    <Pattern>identified Q along</Pattern>
-    <Pattern>identified Q by</Pattern>
-    <Pattern>identified Q for</Pattern>
-    <Pattern>identified Q on</Pattern>
-    <Pattern>identified Q past</Pattern>
-    <Pattern>identified Q to</Pattern>
     <Pattern>identified along</Pattern>
     <Pattern>identified been along</Pattern>
     <Pattern>identified been by</Pattern>
@@ -2006,20 +1951,8 @@
     <Pattern>identified identified on</Pattern>
     <Pattern>identified identified past</Pattern>
     <Pattern>identified identified to</Pattern>
-    <Pattern>identified letter q along</Pattern>
-    <Pattern>identified letter q by</Pattern>
-    <Pattern>identified letter q for</Pattern>
-    <Pattern>identified letter q on</Pattern>
-    <Pattern>identified letter q past</Pattern>
-    <Pattern>identified letter q to</Pattern>
     <Pattern>identified on</Pattern>
     <Pattern>identified past</Pattern>
-    <Pattern>identified q10 along</Pattern>
-    <Pattern>identified q10 by</Pattern>
-    <Pattern>identified q10 for</Pattern>
-    <Pattern>identified q10 on</Pattern>
-    <Pattern>identified q10 past</Pattern>
-    <Pattern>identified q10 to</Pattern>
     <Pattern>identified studied along</Pattern>
     <Pattern>identified studied by</Pattern>
     <Pattern>identified studied for</Pattern>
@@ -2028,12 +1961,6 @@
     <Pattern>identified studied to</Pattern>
     <Pattern>identified to</Pattern>
     <Pattern>identify</Pattern>
-    <Pattern>identify Q along</Pattern>
-    <Pattern>identify Q by</Pattern>
-    <Pattern>identify Q for</Pattern>
-    <Pattern>identify Q on</Pattern>
-    <Pattern>identify Q past</Pattern>
-    <Pattern>identify Q to</Pattern>
     <Pattern>identify along</Pattern>
     <Pattern>identify been along</Pattern>
     <Pattern>identify been by</Pattern>
@@ -2067,20 +1994,8 @@
     <Pattern>identify identified on</Pattern>
     <Pattern>identify identified past</Pattern>
     <Pattern>identify identified to</Pattern>
-    <Pattern>identify letter q along</Pattern>
-    <Pattern>identify letter q by</Pattern>
-    <Pattern>identify letter q for</Pattern>
-    <Pattern>identify letter q on</Pattern>
-    <Pattern>identify letter q past</Pattern>
-    <Pattern>identify letter q to</Pattern>
     <Pattern>identify on</Pattern>
     <Pattern>identify past</Pattern>
-    <Pattern>identify q10 along</Pattern>
-    <Pattern>identify q10 by</Pattern>
-    <Pattern>identify q10 for</Pattern>
-    <Pattern>identify q10 on</Pattern>
-    <Pattern>identify q10 past</Pattern>
-    <Pattern>identify q10 to</Pattern>
     <Pattern>identify studied along</Pattern>
     <Pattern>identify studied by</Pattern>
     <Pattern>identify studied for</Pattern>
@@ -2144,68 +2059,116 @@
     <Pattern>impute triglycerides that</Pattern>
     <Pattern>impute triglycerides to</Pattern>
     <Pattern>include</Pattern>
-    <Pattern>include against</Pattern>
     <Pattern>include by</Pattern>
-    <Pattern>include evaluated against</Pattern>
     <Pattern>include evaluated by</Pattern>
-    <Pattern>include evaluated for</Pattern>
     <Pattern>include evaluated from</Pattern>
+    <Pattern>include evaluated in</Pattern>
+    <Pattern>include evaluated inward</Pattern>
+    <Pattern>include evaluated inwards</Pattern>
     <Pattern>include evaluated past</Pattern>
-    <Pattern>include evaluated that</Pattern>
     <Pattern>include evaluated to</Pattern>
     <Pattern>include evaluated with</Pattern>
-    <Pattern>include for</Pattern>
     <Pattern>include from</Pattern>
+    <Pattern>include in</Pattern>
+    <Pattern>include inward</Pattern>
+    <Pattern>include inwards</Pattern>
+    <Pattern>include observed by</Pattern>
+    <Pattern>include observed from</Pattern>
+    <Pattern>include observed in</Pattern>
+    <Pattern>include observed inward</Pattern>
+    <Pattern>include observed inwards</Pattern>
+    <Pattern>include observed past</Pattern>
+    <Pattern>include observed to</Pattern>
+    <Pattern>include observed with</Pattern>
     <Pattern>include past</Pattern>
-    <Pattern>include reported against</Pattern>
     <Pattern>include reported by</Pattern>
-    <Pattern>include reported for</Pattern>
     <Pattern>include reported from</Pattern>
+    <Pattern>include reported in</Pattern>
+    <Pattern>include reported inward</Pattern>
+    <Pattern>include reported inwards</Pattern>
     <Pattern>include reported past</Pattern>
-    <Pattern>include reported that</Pattern>
     <Pattern>include reported to</Pattern>
     <Pattern>include reported with</Pattern>
-    <Pattern>include that</Pattern>
+    <Pattern>include seen by</Pattern>
+    <Pattern>include seen from</Pattern>
+    <Pattern>include seen in</Pattern>
+    <Pattern>include seen inward</Pattern>
+    <Pattern>include seen inwards</Pattern>
+    <Pattern>include seen past</Pattern>
+    <Pattern>include seen to</Pattern>
+    <Pattern>include seen with</Pattern>
+    <Pattern>include squalene by</Pattern>
+    <Pattern>include squalene from</Pattern>
+    <Pattern>include squalene in</Pattern>
+    <Pattern>include squalene inward</Pattern>
+    <Pattern>include squalene inwards</Pattern>
+    <Pattern>include squalene past</Pattern>
+    <Pattern>include squalene to</Pattern>
+    <Pattern>include squalene with</Pattern>
     <Pattern>include to</Pattern>
-    <Pattern>include varying against</Pattern>
     <Pattern>include varying by</Pattern>
-    <Pattern>include varying for</Pattern>
     <Pattern>include varying from</Pattern>
+    <Pattern>include varying in</Pattern>
+    <Pattern>include varying inward</Pattern>
+    <Pattern>include varying inwards</Pattern>
     <Pattern>include varying past</Pattern>
-    <Pattern>include varying that</Pattern>
     <Pattern>include varying to</Pattern>
     <Pattern>include varying with</Pattern>
     <Pattern>include with</Pattern>
     <Pattern>including</Pattern>
-    <Pattern>including against</Pattern>
     <Pattern>including by</Pattern>
-    <Pattern>including evaluated against</Pattern>
     <Pattern>including evaluated by</Pattern>
-    <Pattern>including evaluated for</Pattern>
     <Pattern>including evaluated from</Pattern>
+    <Pattern>including evaluated in</Pattern>
+    <Pattern>including evaluated inward</Pattern>
+    <Pattern>including evaluated inwards</Pattern>
     <Pattern>including evaluated past</Pattern>
-    <Pattern>including evaluated that</Pattern>
     <Pattern>including evaluated to</Pattern>
     <Pattern>including evaluated with</Pattern>
-    <Pattern>including for</Pattern>
     <Pattern>including from</Pattern>
+    <Pattern>including in</Pattern>
+    <Pattern>including inward</Pattern>
+    <Pattern>including inwards</Pattern>
+    <Pattern>including observed by</Pattern>
+    <Pattern>including observed from</Pattern>
+    <Pattern>including observed in</Pattern>
+    <Pattern>including observed inward</Pattern>
+    <Pattern>including observed inwards</Pattern>
+    <Pattern>including observed past</Pattern>
+    <Pattern>including observed to</Pattern>
+    <Pattern>including observed with</Pattern>
     <Pattern>including past</Pattern>
-    <Pattern>including reported against</Pattern>
     <Pattern>including reported by</Pattern>
-    <Pattern>including reported for</Pattern>
     <Pattern>including reported from</Pattern>
+    <Pattern>including reported in</Pattern>
+    <Pattern>including reported inward</Pattern>
+    <Pattern>including reported inwards</Pattern>
     <Pattern>including reported past</Pattern>
-    <Pattern>including reported that</Pattern>
     <Pattern>including reported to</Pattern>
     <Pattern>including reported with</Pattern>
-    <Pattern>including that</Pattern>
+    <Pattern>including seen by</Pattern>
+    <Pattern>including seen from</Pattern>
+    <Pattern>including seen in</Pattern>
+    <Pattern>including seen inward</Pattern>
+    <Pattern>including seen inwards</Pattern>
+    <Pattern>including seen past</Pattern>
+    <Pattern>including seen to</Pattern>
+    <Pattern>including seen with</Pattern>
+    <Pattern>including squalene by</Pattern>
+    <Pattern>including squalene from</Pattern>
+    <Pattern>including squalene in</Pattern>
+    <Pattern>including squalene inward</Pattern>
+    <Pattern>including squalene inwards</Pattern>
+    <Pattern>including squalene past</Pattern>
+    <Pattern>including squalene to</Pattern>
+    <Pattern>including squalene with</Pattern>
     <Pattern>including to</Pattern>
-    <Pattern>including varying against</Pattern>
     <Pattern>including varying by</Pattern>
-    <Pattern>including varying for</Pattern>
     <Pattern>including varying from</Pattern>
+    <Pattern>including varying in</Pattern>
+    <Pattern>including varying inward</Pattern>
+    <Pattern>including varying inwards</Pattern>
     <Pattern>including varying past</Pattern>
-    <Pattern>including varying that</Pattern>
     <Pattern>including varying to</Pattern>
     <Pattern>including varying with</Pattern>
     <Pattern>including with</Pattern>
@@ -2218,23 +2181,19 @@
     <Pattern>induced cell to</Pattern>
     <Pattern>induced to</Pattern>
     <Pattern>inhibit</Pattern>
-    <Pattern>inhibit Q to</Pattern>
     <Pattern>inhibit beta to</Pattern>
     <Pattern>inhibit beta-catenin to</Pattern>
     <Pattern>inhibit beta-sitosterol to</Pattern>
     <Pattern>inhibit chemical group to</Pattern>
     <Pattern>inhibit group to</Pattern>
-    <Pattern>inhibit letter q to</Pattern>
     <Pattern>inhibit neoplasm to</Pattern>
-    <Pattern>inhibit q10 to</Pattern>
     <Pattern>inhibit radical to</Pattern>
     <Pattern>inhibit reported to</Pattern>
     <Pattern>inhibit to</Pattern>
     <Pattern>inhibit tumor to</Pattern>
     <Pattern>inhibit tumour to</Pattern>
     <Pattern>inhibited</Pattern>
-    <Pattern>inhibited Q to</Pattern>
-    <Pattern>inhibited against</Pattern>
+    <Pattern>inhibited as</Pattern>
     <Pattern>inhibited beta in</Pattern>
     <Pattern>inhibited beta inward</Pattern>
     <Pattern>inhibited beta inwards</Pattern>
@@ -2250,6 +2209,14 @@
     <Pattern>inhibited betacatenin to</Pattern>
     <Pattern>inhibited by</Pattern>
     <Pattern>inhibited chemical group to</Pattern>
+    <Pattern>inhibited cholesterin as</Pattern>
+    <Pattern>inhibited cholesterin equally</Pattern>
+    <Pattern>inhibited cholesterin every bit</Pattern>
+    <Pattern>inhibited cholesterin for</Pattern>
+    <Pattern>inhibited cholesterol as</Pattern>
+    <Pattern>inhibited cholesterol equally</Pattern>
+    <Pattern>inhibited cholesterol every bit</Pattern>
+    <Pattern>inhibited cholesterol for</Pattern>
     <Pattern>inhibited depressant in</Pattern>
     <Pattern>inhibited depressant inward</Pattern>
     <Pattern>inhibited depressant inwards</Pattern>
@@ -2258,14 +2225,16 @@
     <Pattern>inhibited downer inward</Pattern>
     <Pattern>inhibited downer inwards</Pattern>
     <Pattern>inhibited downer to</Pattern>
-    <Pattern>inhibited evaluated against</Pattern>
+    <Pattern>inhibited equally</Pattern>
     <Pattern>inhibited evaluated by</Pattern>
-    <Pattern>inhibited evaluated for</Pattern>
     <Pattern>inhibited evaluated from</Pattern>
+    <Pattern>inhibited evaluated in</Pattern>
+    <Pattern>inhibited evaluated inward</Pattern>
+    <Pattern>inhibited evaluated inwards</Pattern>
     <Pattern>inhibited evaluated past</Pattern>
-    <Pattern>inhibited evaluated that</Pattern>
     <Pattern>inhibited evaluated to</Pattern>
     <Pattern>inhibited evaluated with</Pattern>
+    <Pattern>inhibited every bit</Pattern>
     <Pattern>inhibited for</Pattern>
     <Pattern>inhibited found in</Pattern>
     <Pattern>inhibited found inward</Pattern>
@@ -2276,23 +2245,42 @@
     <Pattern>inhibited in</Pattern>
     <Pattern>inhibited inward</Pattern>
     <Pattern>inhibited inwards</Pattern>
-    <Pattern>inhibited letter q to</Pattern>
+    <Pattern>inhibited neoplasm as</Pattern>
+    <Pattern>inhibited neoplasm equally</Pattern>
+    <Pattern>inhibited neoplasm every bit</Pattern>
+    <Pattern>inhibited neoplasm for</Pattern>
     <Pattern>inhibited neoplasm in</Pattern>
     <Pattern>inhibited neoplasm inward</Pattern>
     <Pattern>inhibited neoplasm inwards</Pattern>
     <Pattern>inhibited neoplasm to</Pattern>
+    <Pattern>inhibited observed by</Pattern>
+    <Pattern>inhibited observed from</Pattern>
+    <Pattern>inhibited observed in</Pattern>
+    <Pattern>inhibited observed inward</Pattern>
+    <Pattern>inhibited observed inwards</Pattern>
+    <Pattern>inhibited observed past</Pattern>
+    <Pattern>inhibited observed to</Pattern>
+    <Pattern>inhibited observed with</Pattern>
     <Pattern>inhibited past</Pattern>
-    <Pattern>inhibited q10 to</Pattern>
+    <Pattern>inhibited potency as</Pattern>
+    <Pattern>inhibited potency equally</Pattern>
+    <Pattern>inhibited potency every bit</Pattern>
+    <Pattern>inhibited potency for</Pattern>
+    <Pattern>inhibited potential as</Pattern>
+    <Pattern>inhibited potential equally</Pattern>
+    <Pattern>inhibited potential every bit</Pattern>
+    <Pattern>inhibited potential for</Pattern>
+    <Pattern>inhibited potentiality as</Pattern>
+    <Pattern>inhibited potentiality equally</Pattern>
+    <Pattern>inhibited potentiality every bit</Pattern>
+    <Pattern>inhibited potentiality for</Pattern>
     <Pattern>inhibited radical to</Pattern>
-    <Pattern>inhibited reported against</Pattern>
     <Pattern>inhibited reported by</Pattern>
-    <Pattern>inhibited reported for</Pattern>
     <Pattern>inhibited reported from</Pattern>
     <Pattern>inhibited reported in</Pattern>
     <Pattern>inhibited reported inward</Pattern>
     <Pattern>inhibited reported inwards</Pattern>
     <Pattern>inhibited reported past</Pattern>
-    <Pattern>inhibited reported that</Pattern>
     <Pattern>inhibited reported to</Pattern>
     <Pattern>inhibited reported with</Pattern>
     <Pattern>inhibited sedative drug in</Pattern>
@@ -2303,22 +2291,45 @@
     <Pattern>inhibited sedative inward</Pattern>
     <Pattern>inhibited sedative inwards</Pattern>
     <Pattern>inhibited sedative to</Pattern>
-    <Pattern>inhibited that</Pattern>
+    <Pattern>inhibited seen by</Pattern>
+    <Pattern>inhibited seen from</Pattern>
+    <Pattern>inhibited seen in</Pattern>
+    <Pattern>inhibited seen inward</Pattern>
+    <Pattern>inhibited seen inwards</Pattern>
+    <Pattern>inhibited seen past</Pattern>
+    <Pattern>inhibited seen to</Pattern>
+    <Pattern>inhibited seen with</Pattern>
+    <Pattern>inhibited squalene by</Pattern>
+    <Pattern>inhibited squalene from</Pattern>
+    <Pattern>inhibited squalene in</Pattern>
+    <Pattern>inhibited squalene inward</Pattern>
+    <Pattern>inhibited squalene inwards</Pattern>
+    <Pattern>inhibited squalene past</Pattern>
+    <Pattern>inhibited squalene to</Pattern>
+    <Pattern>inhibited squalene with</Pattern>
     <Pattern>inhibited to</Pattern>
+    <Pattern>inhibited tumor as</Pattern>
+    <Pattern>inhibited tumor equally</Pattern>
+    <Pattern>inhibited tumor every bit</Pattern>
+    <Pattern>inhibited tumor for</Pattern>
     <Pattern>inhibited tumor in</Pattern>
     <Pattern>inhibited tumor inward</Pattern>
     <Pattern>inhibited tumor inwards</Pattern>
     <Pattern>inhibited tumor to</Pattern>
+    <Pattern>inhibited tumour as</Pattern>
+    <Pattern>inhibited tumour equally</Pattern>
+    <Pattern>inhibited tumour every bit</Pattern>
+    <Pattern>inhibited tumour for</Pattern>
     <Pattern>inhibited tumour in</Pattern>
     <Pattern>inhibited tumour inward</Pattern>
     <Pattern>inhibited tumour inwards</Pattern>
     <Pattern>inhibited tumour to</Pattern>
-    <Pattern>inhibited varying against</Pattern>
     <Pattern>inhibited varying by</Pattern>
-    <Pattern>inhibited varying for</Pattern>
     <Pattern>inhibited varying from</Pattern>
+    <Pattern>inhibited varying in</Pattern>
+    <Pattern>inhibited varying inward</Pattern>
+    <Pattern>inhibited varying inwards</Pattern>
     <Pattern>inhibited varying past</Pattern>
-    <Pattern>inhibited varying that</Pattern>
     <Pattern>inhibited varying to</Pattern>
     <Pattern>inhibited varying with</Pattern>
     <Pattern>inhibited with</Pattern>
@@ -2376,12 +2387,6 @@
     <Pattern>interrupt tumour inwards</Pattern>
     <Pattern>interrupt tumour to</Pattern>
     <Pattern>is</Pattern>
-    <Pattern>is Q along</Pattern>
-    <Pattern>is Q by</Pattern>
-    <Pattern>is Q for</Pattern>
-    <Pattern>is Q on</Pattern>
-    <Pattern>is Q past</Pattern>
-    <Pattern>is Q to</Pattern>
     <Pattern>is along</Pattern>
     <Pattern>is as</Pattern>
     <Pattern>is been along</Pattern>
@@ -2444,21 +2449,9 @@
     <Pattern>is identified on</Pattern>
     <Pattern>is identified past</Pattern>
     <Pattern>is identified to</Pattern>
-    <Pattern>is letter q along</Pattern>
-    <Pattern>is letter q by</Pattern>
-    <Pattern>is letter q for</Pattern>
-    <Pattern>is letter q on</Pattern>
-    <Pattern>is letter q past</Pattern>
-    <Pattern>is letter q to</Pattern>
     <Pattern>is neoplasm to</Pattern>
     <Pattern>is on</Pattern>
     <Pattern>is past</Pattern>
-    <Pattern>is q10 along</Pattern>
-    <Pattern>is q10 by</Pattern>
-    <Pattern>is q10 for</Pattern>
-    <Pattern>is q10 on</Pattern>
-    <Pattern>is q10 past</Pattern>
-    <Pattern>is q10 to</Pattern>
     <Pattern>is radical as</Pattern>
     <Pattern>is radical equally</Pattern>
     <Pattern>is radical every bit</Pattern>
@@ -2490,13 +2483,6 @@
     <Pattern>is tumor to</Pattern>
     <Pattern>is tumour to</Pattern>
     <Pattern>isolate</Pattern>
-    <Pattern>isolate Q along</Pattern>
-    <Pattern>isolate Q by</Pattern>
-    <Pattern>isolate Q for</Pattern>
-    <Pattern>isolate Q on</Pattern>
-    <Pattern>isolate Q past</Pattern>
-    <Pattern>isolate Q to</Pattern>
-    <Pattern>isolate against</Pattern>
     <Pattern>isolate along</Pattern>
     <Pattern>isolate been along</Pattern>
     <Pattern>isolate been by</Pattern>
@@ -2504,8 +2490,6 @@
     <Pattern>isolate been on</Pattern>
     <Pattern>isolate been past</Pattern>
     <Pattern>isolate been to</Pattern>
-    <Pattern>isolate burn from</Pattern>
-    <Pattern>isolate burn through</Pattern>
     <Pattern>isolate by</Pattern>
     <Pattern>isolate chemical compound along</Pattern>
     <Pattern>isolate chemical compound by</Pattern>
@@ -2525,12 +2509,12 @@
     <Pattern>isolate compounds on</Pattern>
     <Pattern>isolate compounds past</Pattern>
     <Pattern>isolate compounds to</Pattern>
-    <Pattern>isolate evaluated against</Pattern>
     <Pattern>isolate evaluated by</Pattern>
-    <Pattern>isolate evaluated for</Pattern>
     <Pattern>isolate evaluated from</Pattern>
+    <Pattern>isolate evaluated in</Pattern>
+    <Pattern>isolate evaluated inward</Pattern>
+    <Pattern>isolate evaluated inwards</Pattern>
     <Pattern>isolate evaluated past</Pattern>
-    <Pattern>isolate evaluated that</Pattern>
     <Pattern>isolate evaluated to</Pattern>
     <Pattern>isolate evaluated with</Pattern>
     <Pattern>isolate for</Pattern>
@@ -2541,66 +2525,65 @@
     <Pattern>isolate identified on</Pattern>
     <Pattern>isolate identified past</Pattern>
     <Pattern>isolate identified to</Pattern>
+    <Pattern>isolate in</Pattern>
+    <Pattern>isolate inward</Pattern>
+    <Pattern>isolate inwards</Pattern>
     <Pattern>isolate isolated from</Pattern>
     <Pattern>isolate isolated through</Pattern>
-    <Pattern>isolate letter q along</Pattern>
-    <Pattern>isolate letter q by</Pattern>
-    <Pattern>isolate letter q for</Pattern>
-    <Pattern>isolate letter q on</Pattern>
-    <Pattern>isolate letter q past</Pattern>
-    <Pattern>isolate letter q to</Pattern>
+    <Pattern>isolate observed by</Pattern>
+    <Pattern>isolate observed from</Pattern>
+    <Pattern>isolate observed in</Pattern>
+    <Pattern>isolate observed inward</Pattern>
+    <Pattern>isolate observed inwards</Pattern>
+    <Pattern>isolate observed past</Pattern>
+    <Pattern>isolate observed to</Pattern>
+    <Pattern>isolate observed with</Pattern>
     <Pattern>isolate on</Pattern>
     <Pattern>isolate past</Pattern>
     <Pattern>isolate proved from</Pattern>
     <Pattern>isolate proved through</Pattern>
-    <Pattern>isolate q10 along</Pattern>
-    <Pattern>isolate q10 by</Pattern>
-    <Pattern>isolate q10 for</Pattern>
-    <Pattern>isolate q10 on</Pattern>
-    <Pattern>isolate q10 past</Pattern>
-    <Pattern>isolate q10 to</Pattern>
-    <Pattern>isolate reported against</Pattern>
     <Pattern>isolate reported by</Pattern>
-    <Pattern>isolate reported for</Pattern>
     <Pattern>isolate reported from</Pattern>
+    <Pattern>isolate reported in</Pattern>
+    <Pattern>isolate reported inward</Pattern>
+    <Pattern>isolate reported inwards</Pattern>
     <Pattern>isolate reported past</Pattern>
-    <Pattern>isolate reported that</Pattern>
     <Pattern>isolate reported to</Pattern>
     <Pattern>isolate reported with</Pattern>
+    <Pattern>isolate seen by</Pattern>
+    <Pattern>isolate seen from</Pattern>
+    <Pattern>isolate seen in</Pattern>
+    <Pattern>isolate seen inward</Pattern>
+    <Pattern>isolate seen inwards</Pattern>
+    <Pattern>isolate seen past</Pattern>
+    <Pattern>isolate seen to</Pattern>
+    <Pattern>isolate seen with</Pattern>
+    <Pattern>isolate squalene by</Pattern>
+    <Pattern>isolate squalene from</Pattern>
+    <Pattern>isolate squalene in</Pattern>
+    <Pattern>isolate squalene inward</Pattern>
+    <Pattern>isolate squalene inwards</Pattern>
+    <Pattern>isolate squalene past</Pattern>
+    <Pattern>isolate squalene to</Pattern>
+    <Pattern>isolate squalene with</Pattern>
     <Pattern>isolate studied along</Pattern>
     <Pattern>isolate studied by</Pattern>
     <Pattern>isolate studied for</Pattern>
     <Pattern>isolate studied on</Pattern>
     <Pattern>isolate studied past</Pattern>
     <Pattern>isolate studied to</Pattern>
-    <Pattern>isolate sunburn from</Pattern>
-    <Pattern>isolate sunburn through</Pattern>
-    <Pattern>isolate suntan from</Pattern>
-    <Pattern>isolate suntan through</Pattern>
-    <Pattern>isolate tan from</Pattern>
-    <Pattern>isolate tan through</Pattern>
-    <Pattern>isolate tan1 from</Pattern>
-    <Pattern>isolate tan1 through</Pattern>
-    <Pattern>isolate that</Pattern>
     <Pattern>isolate through</Pattern>
     <Pattern>isolate to</Pattern>
-    <Pattern>isolate varying against</Pattern>
     <Pattern>isolate varying by</Pattern>
-    <Pattern>isolate varying for</Pattern>
     <Pattern>isolate varying from</Pattern>
+    <Pattern>isolate varying in</Pattern>
+    <Pattern>isolate varying inward</Pattern>
+    <Pattern>isolate varying inwards</Pattern>
     <Pattern>isolate varying past</Pattern>
-    <Pattern>isolate varying that</Pattern>
     <Pattern>isolate varying to</Pattern>
     <Pattern>isolate varying with</Pattern>
     <Pattern>isolate with</Pattern>
     <Pattern>isolated</Pattern>
-    <Pattern>isolated Q along</Pattern>
-    <Pattern>isolated Q by</Pattern>
-    <Pattern>isolated Q for</Pattern>
-    <Pattern>isolated Q on</Pattern>
-    <Pattern>isolated Q past</Pattern>
-    <Pattern>isolated Q to</Pattern>
-    <Pattern>isolated against</Pattern>
     <Pattern>isolated along</Pattern>
     <Pattern>isolated been along</Pattern>
     <Pattern>isolated been by</Pattern>
@@ -2608,8 +2591,6 @@
     <Pattern>isolated been on</Pattern>
     <Pattern>isolated been past</Pattern>
     <Pattern>isolated been to</Pattern>
-    <Pattern>isolated burn from</Pattern>
-    <Pattern>isolated burn through</Pattern>
     <Pattern>isolated by</Pattern>
     <Pattern>isolated chemical compound along</Pattern>
     <Pattern>isolated chemical compound by</Pattern>
@@ -2629,12 +2610,12 @@
     <Pattern>isolated compounds on</Pattern>
     <Pattern>isolated compounds past</Pattern>
     <Pattern>isolated compounds to</Pattern>
-    <Pattern>isolated evaluated against</Pattern>
     <Pattern>isolated evaluated by</Pattern>
-    <Pattern>isolated evaluated for</Pattern>
     <Pattern>isolated evaluated from</Pattern>
+    <Pattern>isolated evaluated in</Pattern>
+    <Pattern>isolated evaluated inward</Pattern>
+    <Pattern>isolated evaluated inwards</Pattern>
     <Pattern>isolated evaluated past</Pattern>
-    <Pattern>isolated evaluated that</Pattern>
     <Pattern>isolated evaluated to</Pattern>
     <Pattern>isolated evaluated with</Pattern>
     <Pattern>isolated for</Pattern>
@@ -2645,65 +2626,65 @@
     <Pattern>isolated identified on</Pattern>
     <Pattern>isolated identified past</Pattern>
     <Pattern>isolated identified to</Pattern>
+    <Pattern>isolated in</Pattern>
+    <Pattern>isolated inward</Pattern>
+    <Pattern>isolated inwards</Pattern>
     <Pattern>isolated isolated from</Pattern>
     <Pattern>isolated isolated through</Pattern>
-    <Pattern>isolated letter q along</Pattern>
-    <Pattern>isolated letter q by</Pattern>
-    <Pattern>isolated letter q for</Pattern>
-    <Pattern>isolated letter q on</Pattern>
-    <Pattern>isolated letter q past</Pattern>
-    <Pattern>isolated letter q to</Pattern>
+    <Pattern>isolated observed by</Pattern>
+    <Pattern>isolated observed from</Pattern>
+    <Pattern>isolated observed in</Pattern>
+    <Pattern>isolated observed inward</Pattern>
+    <Pattern>isolated observed inwards</Pattern>
+    <Pattern>isolated observed past</Pattern>
+    <Pattern>isolated observed to</Pattern>
+    <Pattern>isolated observed with</Pattern>
     <Pattern>isolated on</Pattern>
     <Pattern>isolated past</Pattern>
     <Pattern>isolated proved from</Pattern>
     <Pattern>isolated proved through</Pattern>
-    <Pattern>isolated q10 along</Pattern>
-    <Pattern>isolated q10 by</Pattern>
-    <Pattern>isolated q10 for</Pattern>
-    <Pattern>isolated q10 on</Pattern>
-    <Pattern>isolated q10 past</Pattern>
-    <Pattern>isolated q10 to</Pattern>
-    <Pattern>isolated reported against</Pattern>
     <Pattern>isolated reported by</Pattern>
-    <Pattern>isolated reported for</Pattern>
     <Pattern>isolated reported from</Pattern>
+    <Pattern>isolated reported in</Pattern>
+    <Pattern>isolated reported inward</Pattern>
+    <Pattern>isolated reported inwards</Pattern>
     <Pattern>isolated reported past</Pattern>
-    <Pattern>isolated reported that</Pattern>
     <Pattern>isolated reported to</Pattern>
     <Pattern>isolated reported with</Pattern>
+    <Pattern>isolated seen by</Pattern>
+    <Pattern>isolated seen from</Pattern>
+    <Pattern>isolated seen in</Pattern>
+    <Pattern>isolated seen inward</Pattern>
+    <Pattern>isolated seen inwards</Pattern>
+    <Pattern>isolated seen past</Pattern>
+    <Pattern>isolated seen to</Pattern>
+    <Pattern>isolated seen with</Pattern>
+    <Pattern>isolated squalene by</Pattern>
+    <Pattern>isolated squalene from</Pattern>
+    <Pattern>isolated squalene in</Pattern>
+    <Pattern>isolated squalene inward</Pattern>
+    <Pattern>isolated squalene inwards</Pattern>
+    <Pattern>isolated squalene past</Pattern>
+    <Pattern>isolated squalene to</Pattern>
+    <Pattern>isolated squalene with</Pattern>
     <Pattern>isolated studied along</Pattern>
     <Pattern>isolated studied by</Pattern>
     <Pattern>isolated studied for</Pattern>
     <Pattern>isolated studied on</Pattern>
     <Pattern>isolated studied past</Pattern>
     <Pattern>isolated studied to</Pattern>
-    <Pattern>isolated sunburn from</Pattern>
-    <Pattern>isolated sunburn through</Pattern>
-    <Pattern>isolated suntan from</Pattern>
-    <Pattern>isolated suntan through</Pattern>
-    <Pattern>isolated tan from</Pattern>
-    <Pattern>isolated tan through</Pattern>
-    <Pattern>isolated tan1 from</Pattern>
-    <Pattern>isolated tan1 through</Pattern>
-    <Pattern>isolated that</Pattern>
     <Pattern>isolated through</Pattern>
     <Pattern>isolated to</Pattern>
-    <Pattern>isolated varying against</Pattern>
     <Pattern>isolated varying by</Pattern>
-    <Pattern>isolated varying for</Pattern>
     <Pattern>isolated varying from</Pattern>
+    <Pattern>isolated varying in</Pattern>
+    <Pattern>isolated varying inward</Pattern>
+    <Pattern>isolated varying inwards</Pattern>
     <Pattern>isolated varying past</Pattern>
-    <Pattern>isolated varying that</Pattern>
     <Pattern>isolated varying to</Pattern>
     <Pattern>isolated varying with</Pattern>
     <Pattern>isolated with</Pattern>
     <Pattern>lead</Pattern>
-    <Pattern>lead Q along</Pattern>
-    <Pattern>lead Q by</Pattern>
-    <Pattern>lead Q for</Pattern>
-    <Pattern>lead Q on</Pattern>
-    <Pattern>lead Q past</Pattern>
-    <Pattern>lead Q to</Pattern>
     <Pattern>lead along</Pattern>
     <Pattern>lead been along</Pattern>
     <Pattern>lead been by</Pattern>
@@ -2737,20 +2718,8 @@
     <Pattern>lead identified on</Pattern>
     <Pattern>lead identified past</Pattern>
     <Pattern>lead identified to</Pattern>
-    <Pattern>lead letter q along</Pattern>
-    <Pattern>lead letter q by</Pattern>
-    <Pattern>lead letter q for</Pattern>
-    <Pattern>lead letter q on</Pattern>
-    <Pattern>lead letter q past</Pattern>
-    <Pattern>lead letter q to</Pattern>
     <Pattern>lead on</Pattern>
     <Pattern>lead past</Pattern>
-    <Pattern>lead q10 along</Pattern>
-    <Pattern>lead q10 by</Pattern>
-    <Pattern>lead q10 for</Pattern>
-    <Pattern>lead q10 on</Pattern>
-    <Pattern>lead q10 past</Pattern>
-    <Pattern>lead q10 to</Pattern>
     <Pattern>lead studied along</Pattern>
     <Pattern>lead studied by</Pattern>
     <Pattern>lead studied for</Pattern>
@@ -2759,78 +2728,120 @@
     <Pattern>lead studied to</Pattern>
     <Pattern>lead to</Pattern>
     <Pattern>leave</Pattern>
-    <Pattern>leave against</Pattern>
     <Pattern>leave by</Pattern>
-    <Pattern>leave evaluated against</Pattern>
     <Pattern>leave evaluated by</Pattern>
-    <Pattern>leave evaluated for</Pattern>
     <Pattern>leave evaluated from</Pattern>
+    <Pattern>leave evaluated in</Pattern>
+    <Pattern>leave evaluated inward</Pattern>
+    <Pattern>leave evaluated inwards</Pattern>
     <Pattern>leave evaluated past</Pattern>
-    <Pattern>leave evaluated that</Pattern>
     <Pattern>leave evaluated to</Pattern>
     <Pattern>leave evaluated with</Pattern>
-    <Pattern>leave for</Pattern>
     <Pattern>leave from</Pattern>
+    <Pattern>leave in</Pattern>
+    <Pattern>leave inward</Pattern>
+    <Pattern>leave inwards</Pattern>
+    <Pattern>leave observed by</Pattern>
+    <Pattern>leave observed from</Pattern>
+    <Pattern>leave observed in</Pattern>
+    <Pattern>leave observed inward</Pattern>
+    <Pattern>leave observed inwards</Pattern>
+    <Pattern>leave observed past</Pattern>
+    <Pattern>leave observed to</Pattern>
+    <Pattern>leave observed with</Pattern>
     <Pattern>leave past</Pattern>
-    <Pattern>leave reported against</Pattern>
     <Pattern>leave reported by</Pattern>
-    <Pattern>leave reported for</Pattern>
     <Pattern>leave reported from</Pattern>
+    <Pattern>leave reported in</Pattern>
+    <Pattern>leave reported inward</Pattern>
+    <Pattern>leave reported inwards</Pattern>
     <Pattern>leave reported past</Pattern>
-    <Pattern>leave reported that</Pattern>
     <Pattern>leave reported to</Pattern>
     <Pattern>leave reported with</Pattern>
-    <Pattern>leave that</Pattern>
+    <Pattern>leave seen by</Pattern>
+    <Pattern>leave seen from</Pattern>
+    <Pattern>leave seen in</Pattern>
+    <Pattern>leave seen inward</Pattern>
+    <Pattern>leave seen inwards</Pattern>
+    <Pattern>leave seen past</Pattern>
+    <Pattern>leave seen to</Pattern>
+    <Pattern>leave seen with</Pattern>
+    <Pattern>leave squalene by</Pattern>
+    <Pattern>leave squalene from</Pattern>
+    <Pattern>leave squalene in</Pattern>
+    <Pattern>leave squalene inward</Pattern>
+    <Pattern>leave squalene inwards</Pattern>
+    <Pattern>leave squalene past</Pattern>
+    <Pattern>leave squalene to</Pattern>
+    <Pattern>leave squalene with</Pattern>
     <Pattern>leave to</Pattern>
-    <Pattern>leave varying against</Pattern>
     <Pattern>leave varying by</Pattern>
-    <Pattern>leave varying for</Pattern>
     <Pattern>leave varying from</Pattern>
+    <Pattern>leave varying in</Pattern>
+    <Pattern>leave varying inward</Pattern>
+    <Pattern>leave varying inwards</Pattern>
     <Pattern>leave varying past</Pattern>
-    <Pattern>leave varying that</Pattern>
     <Pattern>leave varying to</Pattern>
     <Pattern>leave varying with</Pattern>
     <Pattern>leave with</Pattern>
     <Pattern>leaves</Pattern>
-    <Pattern>leaves against</Pattern>
     <Pattern>leaves by</Pattern>
-    <Pattern>leaves evaluated against</Pattern>
     <Pattern>leaves evaluated by</Pattern>
-    <Pattern>leaves evaluated for</Pattern>
     <Pattern>leaves evaluated from</Pattern>
+    <Pattern>leaves evaluated in</Pattern>
+    <Pattern>leaves evaluated inward</Pattern>
+    <Pattern>leaves evaluated inwards</Pattern>
     <Pattern>leaves evaluated past</Pattern>
-    <Pattern>leaves evaluated that</Pattern>
     <Pattern>leaves evaluated to</Pattern>
     <Pattern>leaves evaluated with</Pattern>
-    <Pattern>leaves for</Pattern>
     <Pattern>leaves from</Pattern>
+    <Pattern>leaves in</Pattern>
+    <Pattern>leaves inward</Pattern>
+    <Pattern>leaves inwards</Pattern>
+    <Pattern>leaves observed by</Pattern>
+    <Pattern>leaves observed from</Pattern>
+    <Pattern>leaves observed in</Pattern>
+    <Pattern>leaves observed inward</Pattern>
+    <Pattern>leaves observed inwards</Pattern>
+    <Pattern>leaves observed past</Pattern>
+    <Pattern>leaves observed to</Pattern>
+    <Pattern>leaves observed with</Pattern>
     <Pattern>leaves past</Pattern>
-    <Pattern>leaves reported against</Pattern>
     <Pattern>leaves reported by</Pattern>
-    <Pattern>leaves reported for</Pattern>
     <Pattern>leaves reported from</Pattern>
+    <Pattern>leaves reported in</Pattern>
+    <Pattern>leaves reported inward</Pattern>
+    <Pattern>leaves reported inwards</Pattern>
     <Pattern>leaves reported past</Pattern>
-    <Pattern>leaves reported that</Pattern>
     <Pattern>leaves reported to</Pattern>
     <Pattern>leaves reported with</Pattern>
-    <Pattern>leaves that</Pattern>
+    <Pattern>leaves seen by</Pattern>
+    <Pattern>leaves seen from</Pattern>
+    <Pattern>leaves seen in</Pattern>
+    <Pattern>leaves seen inward</Pattern>
+    <Pattern>leaves seen inwards</Pattern>
+    <Pattern>leaves seen past</Pattern>
+    <Pattern>leaves seen to</Pattern>
+    <Pattern>leaves seen with</Pattern>
+    <Pattern>leaves squalene by</Pattern>
+    <Pattern>leaves squalene from</Pattern>
+    <Pattern>leaves squalene in</Pattern>
+    <Pattern>leaves squalene inward</Pattern>
+    <Pattern>leaves squalene inwards</Pattern>
+    <Pattern>leaves squalene past</Pattern>
+    <Pattern>leaves squalene to</Pattern>
+    <Pattern>leaves squalene with</Pattern>
     <Pattern>leaves to</Pattern>
-    <Pattern>leaves varying against</Pattern>
     <Pattern>leaves varying by</Pattern>
-    <Pattern>leaves varying for</Pattern>
     <Pattern>leaves varying from</Pattern>
+    <Pattern>leaves varying in</Pattern>
+    <Pattern>leaves varying inward</Pattern>
+    <Pattern>leaves varying inwards</Pattern>
     <Pattern>leaves varying past</Pattern>
-    <Pattern>leaves varying that</Pattern>
     <Pattern>leaves varying to</Pattern>
     <Pattern>leaves varying with</Pattern>
     <Pattern>leaves with</Pattern>
     <Pattern>led</Pattern>
-    <Pattern>led Q along</Pattern>
-    <Pattern>led Q by</Pattern>
-    <Pattern>led Q for</Pattern>
-    <Pattern>led Q on</Pattern>
-    <Pattern>led Q past</Pattern>
-    <Pattern>led Q to</Pattern>
     <Pattern>led along</Pattern>
     <Pattern>led been along</Pattern>
     <Pattern>led been by</Pattern>
@@ -2864,20 +2875,8 @@
     <Pattern>led identified on</Pattern>
     <Pattern>led identified past</Pattern>
     <Pattern>led identified to</Pattern>
-    <Pattern>led letter q along</Pattern>
-    <Pattern>led letter q by</Pattern>
-    <Pattern>led letter q for</Pattern>
-    <Pattern>led letter q on</Pattern>
-    <Pattern>led letter q past</Pattern>
-    <Pattern>led letter q to</Pattern>
     <Pattern>led on</Pattern>
     <Pattern>led past</Pattern>
-    <Pattern>led q10 along</Pattern>
-    <Pattern>led q10 by</Pattern>
-    <Pattern>led q10 for</Pattern>
-    <Pattern>led q10 on</Pattern>
-    <Pattern>led q10 past</Pattern>
-    <Pattern>led q10 to</Pattern>
     <Pattern>led studied along</Pattern>
     <Pattern>led studied by</Pattern>
     <Pattern>led studied for</Pattern>
@@ -2886,7 +2885,6 @@
     <Pattern>led studied to</Pattern>
     <Pattern>led to</Pattern>
     <Pattern>make</Pattern>
-    <Pattern>make Q to</Pattern>
     <Pattern>make as</Pattern>
     <Pattern>make been for</Pattern>
     <Pattern>make been to</Pattern>
@@ -2948,12 +2946,10 @@
     <Pattern>make in</Pattern>
     <Pattern>make inward</Pattern>
     <Pattern>make inwards</Pattern>
-    <Pattern>make letter q to</Pattern>
     <Pattern>make neoplasm in</Pattern>
     <Pattern>make neoplasm inward</Pattern>
     <Pattern>make neoplasm inwards</Pattern>
     <Pattern>make neoplasm to</Pattern>
-    <Pattern>make q10 to</Pattern>
     <Pattern>make radical as</Pattern>
     <Pattern>make radical equally</Pattern>
     <Pattern>make radical every bit</Pattern>
@@ -2999,7 +2995,6 @@
     <Pattern>make tumour inwards</Pattern>
     <Pattern>make tumour to</Pattern>
     <Pattern>making</Pattern>
-    <Pattern>making Q to</Pattern>
     <Pattern>making as</Pattern>
     <Pattern>making been for</Pattern>
     <Pattern>making been to</Pattern>
@@ -3061,12 +3056,10 @@
     <Pattern>making in</Pattern>
     <Pattern>making inward</Pattern>
     <Pattern>making inwards</Pattern>
-    <Pattern>making letter q to</Pattern>
     <Pattern>making neoplasm in</Pattern>
     <Pattern>making neoplasm inward</Pattern>
     <Pattern>making neoplasm inwards</Pattern>
     <Pattern>making neoplasm to</Pattern>
-    <Pattern>making q10 to</Pattern>
     <Pattern>making radical as</Pattern>
     <Pattern>making radical equally</Pattern>
     <Pattern>making radical every bit</Pattern>
@@ -3111,53 +3104,60 @@
     <Pattern>making tumour inward</Pattern>
     <Pattern>making tumour inwards</Pattern>
     <Pattern>making tumour to</Pattern>
-    <Pattern>malabed</Pattern>
-    <Pattern>malabed burn from</Pattern>
-    <Pattern>malabed burn through</Pattern>
-    <Pattern>malabed from</Pattern>
-    <Pattern>malabed isolated from</Pattern>
-    <Pattern>malabed isolated through</Pattern>
-    <Pattern>malabed proved from</Pattern>
-    <Pattern>malabed proved through</Pattern>
-    <Pattern>malabed sunburn from</Pattern>
-    <Pattern>malabed sunburn through</Pattern>
-    <Pattern>malabed suntan from</Pattern>
-    <Pattern>malabed suntan through</Pattern>
-    <Pattern>malabed tan from</Pattern>
-    <Pattern>malabed tan through</Pattern>
-    <Pattern>malabed tan1 from</Pattern>
-    <Pattern>malabed tan1 through</Pattern>
-    <Pattern>malabed through</Pattern>
     <Pattern>measure</Pattern>
-    <Pattern>measure against</Pattern>
     <Pattern>measure by</Pattern>
-    <Pattern>measure evaluated against</Pattern>
     <Pattern>measure evaluated by</Pattern>
-    <Pattern>measure evaluated for</Pattern>
     <Pattern>measure evaluated from</Pattern>
+    <Pattern>measure evaluated in</Pattern>
+    <Pattern>measure evaluated inward</Pattern>
+    <Pattern>measure evaluated inwards</Pattern>
     <Pattern>measure evaluated past</Pattern>
-    <Pattern>measure evaluated that</Pattern>
     <Pattern>measure evaluated to</Pattern>
     <Pattern>measure evaluated with</Pattern>
-    <Pattern>measure for</Pattern>
     <Pattern>measure from</Pattern>
+    <Pattern>measure in</Pattern>
+    <Pattern>measure inward</Pattern>
+    <Pattern>measure inwards</Pattern>
+    <Pattern>measure observed by</Pattern>
+    <Pattern>measure observed from</Pattern>
+    <Pattern>measure observed in</Pattern>
+    <Pattern>measure observed inward</Pattern>
+    <Pattern>measure observed inwards</Pattern>
+    <Pattern>measure observed past</Pattern>
+    <Pattern>measure observed to</Pattern>
+    <Pattern>measure observed with</Pattern>
     <Pattern>measure past</Pattern>
-    <Pattern>measure reported against</Pattern>
     <Pattern>measure reported by</Pattern>
-    <Pattern>measure reported for</Pattern>
     <Pattern>measure reported from</Pattern>
+    <Pattern>measure reported in</Pattern>
+    <Pattern>measure reported inward</Pattern>
+    <Pattern>measure reported inwards</Pattern>
     <Pattern>measure reported past</Pattern>
-    <Pattern>measure reported that</Pattern>
     <Pattern>measure reported to</Pattern>
     <Pattern>measure reported with</Pattern>
-    <Pattern>measure that</Pattern>
+    <Pattern>measure seen by</Pattern>
+    <Pattern>measure seen from</Pattern>
+    <Pattern>measure seen in</Pattern>
+    <Pattern>measure seen inward</Pattern>
+    <Pattern>measure seen inwards</Pattern>
+    <Pattern>measure seen past</Pattern>
+    <Pattern>measure seen to</Pattern>
+    <Pattern>measure seen with</Pattern>
+    <Pattern>measure squalene by</Pattern>
+    <Pattern>measure squalene from</Pattern>
+    <Pattern>measure squalene in</Pattern>
+    <Pattern>measure squalene inward</Pattern>
+    <Pattern>measure squalene inwards</Pattern>
+    <Pattern>measure squalene past</Pattern>
+    <Pattern>measure squalene to</Pattern>
+    <Pattern>measure squalene with</Pattern>
     <Pattern>measure to</Pattern>
-    <Pattern>measure varying against</Pattern>
     <Pattern>measure varying by</Pattern>
-    <Pattern>measure varying for</Pattern>
     <Pattern>measure varying from</Pattern>
+    <Pattern>measure varying in</Pattern>
+    <Pattern>measure varying inward</Pattern>
+    <Pattern>measure varying inwards</Pattern>
     <Pattern>measure varying past</Pattern>
-    <Pattern>measure varying that</Pattern>
     <Pattern>measure varying to</Pattern>
     <Pattern>measure varying with</Pattern>
     <Pattern>measure with</Pattern>
@@ -3212,11 +3212,68 @@
     <Pattern>note triglycerides every bit</Pattern>
     <Pattern>note triglycerides that</Pattern>
     <Pattern>note triglycerides to</Pattern>
+    <Pattern>observed</Pattern>
+    <Pattern>observed by</Pattern>
+    <Pattern>observed evaluated by</Pattern>
+    <Pattern>observed evaluated from</Pattern>
+    <Pattern>observed evaluated in</Pattern>
+    <Pattern>observed evaluated inward</Pattern>
+    <Pattern>observed evaluated inwards</Pattern>
+    <Pattern>observed evaluated past</Pattern>
+    <Pattern>observed evaluated to</Pattern>
+    <Pattern>observed evaluated with</Pattern>
+    <Pattern>observed from</Pattern>
+    <Pattern>observed in</Pattern>
+    <Pattern>observed inward</Pattern>
+    <Pattern>observed inwards</Pattern>
+    <Pattern>observed observed by</Pattern>
+    <Pattern>observed observed from</Pattern>
+    <Pattern>observed observed in</Pattern>
+    <Pattern>observed observed inward</Pattern>
+    <Pattern>observed observed inwards</Pattern>
+    <Pattern>observed observed past</Pattern>
+    <Pattern>observed observed to</Pattern>
+    <Pattern>observed observed with</Pattern>
+    <Pattern>observed past</Pattern>
+    <Pattern>observed reported by</Pattern>
+    <Pattern>observed reported from</Pattern>
+    <Pattern>observed reported in</Pattern>
+    <Pattern>observed reported inward</Pattern>
+    <Pattern>observed reported inwards</Pattern>
+    <Pattern>observed reported past</Pattern>
+    <Pattern>observed reported to</Pattern>
+    <Pattern>observed reported with</Pattern>
+    <Pattern>observed seen by</Pattern>
+    <Pattern>observed seen from</Pattern>
+    <Pattern>observed seen in</Pattern>
+    <Pattern>observed seen inward</Pattern>
+    <Pattern>observed seen inwards</Pattern>
+    <Pattern>observed seen past</Pattern>
+    <Pattern>observed seen to</Pattern>
+    <Pattern>observed seen with</Pattern>
+    <Pattern>observed squalene by</Pattern>
+    <Pattern>observed squalene from</Pattern>
+    <Pattern>observed squalene in</Pattern>
+    <Pattern>observed squalene inward</Pattern>
+    <Pattern>observed squalene inwards</Pattern>
+    <Pattern>observed squalene past</Pattern>
+    <Pattern>observed squalene to</Pattern>
+    <Pattern>observed squalene with</Pattern>
+    <Pattern>observed to</Pattern>
+    <Pattern>observed varying by</Pattern>
+    <Pattern>observed varying from</Pattern>
+    <Pattern>observed varying in</Pattern>
+    <Pattern>observed varying inward</Pattern>
+    <Pattern>observed varying inwards</Pattern>
+    <Pattern>observed varying past</Pattern>
+    <Pattern>observed varying to</Pattern>
+    <Pattern>observed varying with</Pattern>
+    <Pattern>observed with</Pattern>
     <Pattern>posses</Pattern>
     <Pattern>posses reported to</Pattern>
     <Pattern>posses to</Pattern>
     <Pattern>possess</Pattern>
-    <Pattern>possess Q to</Pattern>
+    <Pattern>possess as</Pattern>
     <Pattern>possess beta in</Pattern>
     <Pattern>possess beta inward</Pattern>
     <Pattern>possess beta inwards</Pattern>
@@ -3230,6 +3287,14 @@
     <Pattern>possess beta-sitosterol inwards</Pattern>
     <Pattern>possess beta-sitosterol to</Pattern>
     <Pattern>possess chemical group to</Pattern>
+    <Pattern>possess cholesterin as</Pattern>
+    <Pattern>possess cholesterin equally</Pattern>
+    <Pattern>possess cholesterin every bit</Pattern>
+    <Pattern>possess cholesterin for</Pattern>
+    <Pattern>possess cholesterol as</Pattern>
+    <Pattern>possess cholesterol equally</Pattern>
+    <Pattern>possess cholesterol every bit</Pattern>
+    <Pattern>possess cholesterol for</Pattern>
     <Pattern>possess depressant in</Pattern>
     <Pattern>possess depressant inward</Pattern>
     <Pattern>possess depressant inwards</Pattern>
@@ -3238,6 +3303,9 @@
     <Pattern>possess downer inward</Pattern>
     <Pattern>possess downer inwards</Pattern>
     <Pattern>possess downer to</Pattern>
+    <Pattern>possess equally</Pattern>
+    <Pattern>possess every bit</Pattern>
+    <Pattern>possess for</Pattern>
     <Pattern>possess found in</Pattern>
     <Pattern>possess found inward</Pattern>
     <Pattern>possess found inwards</Pattern>
@@ -3247,12 +3315,26 @@
     <Pattern>possess inward</Pattern>
     <Pattern>possess inwards</Pattern>
     <Pattern>possess lesion to</Pattern>
-    <Pattern>possess letter q to</Pattern>
+    <Pattern>possess neoplasm as</Pattern>
+    <Pattern>possess neoplasm equally</Pattern>
+    <Pattern>possess neoplasm every bit</Pattern>
+    <Pattern>possess neoplasm for</Pattern>
     <Pattern>possess neoplasm in</Pattern>
     <Pattern>possess neoplasm inward</Pattern>
     <Pattern>possess neoplasm inwards</Pattern>
     <Pattern>possess neoplasm to</Pattern>
-    <Pattern>possess q10 to</Pattern>
+    <Pattern>possess potency as</Pattern>
+    <Pattern>possess potency equally</Pattern>
+    <Pattern>possess potency every bit</Pattern>
+    <Pattern>possess potency for</Pattern>
+    <Pattern>possess potential as</Pattern>
+    <Pattern>possess potential equally</Pattern>
+    <Pattern>possess potential every bit</Pattern>
+    <Pattern>possess potential for</Pattern>
+    <Pattern>possess potentiality as</Pattern>
+    <Pattern>possess potentiality equally</Pattern>
+    <Pattern>possess potentiality every bit</Pattern>
+    <Pattern>possess potentiality for</Pattern>
     <Pattern>possess radical to</Pattern>
     <Pattern>possess reported in</Pattern>
     <Pattern>possess reported inward</Pattern>
@@ -3267,120 +3349,192 @@
     <Pattern>possess sedative inwards</Pattern>
     <Pattern>possess sedative to</Pattern>
     <Pattern>possess to</Pattern>
+    <Pattern>possess tumor as</Pattern>
+    <Pattern>possess tumor equally</Pattern>
+    <Pattern>possess tumor every bit</Pattern>
+    <Pattern>possess tumor for</Pattern>
     <Pattern>possess tumor in</Pattern>
     <Pattern>possess tumor inward</Pattern>
     <Pattern>possess tumor inwards</Pattern>
     <Pattern>possess tumor to</Pattern>
+    <Pattern>possess tumour as</Pattern>
+    <Pattern>possess tumour equally</Pattern>
+    <Pattern>possess tumour every bit</Pattern>
+    <Pattern>possess tumour for</Pattern>
     <Pattern>possess tumour in</Pattern>
     <Pattern>possess tumour inward</Pattern>
     <Pattern>possess tumour inwards</Pattern>
     <Pattern>possess tumour to</Pattern>
     <Pattern>possess wound to</Pattern>
+    <Pattern>possessed</Pattern>
+    <Pattern>possessed as</Pattern>
+    <Pattern>possessed cholesterin as</Pattern>
+    <Pattern>possessed cholesterin equally</Pattern>
+    <Pattern>possessed cholesterin every bit</Pattern>
+    <Pattern>possessed cholesterin for</Pattern>
+    <Pattern>possessed cholesterol as</Pattern>
+    <Pattern>possessed cholesterol equally</Pattern>
+    <Pattern>possessed cholesterol every bit</Pattern>
+    <Pattern>possessed cholesterol for</Pattern>
+    <Pattern>possessed equally</Pattern>
+    <Pattern>possessed every bit</Pattern>
+    <Pattern>possessed for</Pattern>
+    <Pattern>possessed neoplasm as</Pattern>
+    <Pattern>possessed neoplasm equally</Pattern>
+    <Pattern>possessed neoplasm every bit</Pattern>
+    <Pattern>possessed neoplasm for</Pattern>
+    <Pattern>possessed potency as</Pattern>
+    <Pattern>possessed potency equally</Pattern>
+    <Pattern>possessed potency every bit</Pattern>
+    <Pattern>possessed potency for</Pattern>
+    <Pattern>possessed potential as</Pattern>
+    <Pattern>possessed potential equally</Pattern>
+    <Pattern>possessed potential every bit</Pattern>
+    <Pattern>possessed potential for</Pattern>
+    <Pattern>possessed potentiality as</Pattern>
+    <Pattern>possessed potentiality equally</Pattern>
+    <Pattern>possessed potentiality every bit</Pattern>
+    <Pattern>possessed potentiality for</Pattern>
+    <Pattern>possessed tumor as</Pattern>
+    <Pattern>possessed tumor equally</Pattern>
+    <Pattern>possessed tumor every bit</Pattern>
+    <Pattern>possessed tumor for</Pattern>
+    <Pattern>possessed tumour as</Pattern>
+    <Pattern>possessed tumour equally</Pattern>
+    <Pattern>possessed tumour every bit</Pattern>
+    <Pattern>possessed tumour for</Pattern>
     <Pattern>possesses</Pattern>
     <Pattern>possesses reported to</Pattern>
     <Pattern>possesses to</Pattern>
     <Pattern>promise</Pattern>
-    <Pattern>promise against</Pattern>
     <Pattern>promise by</Pattern>
-    <Pattern>promise evaluated against</Pattern>
     <Pattern>promise evaluated by</Pattern>
-    <Pattern>promise evaluated for</Pattern>
     <Pattern>promise evaluated from</Pattern>
+    <Pattern>promise evaluated in</Pattern>
+    <Pattern>promise evaluated inward</Pattern>
+    <Pattern>promise evaluated inwards</Pattern>
     <Pattern>promise evaluated past</Pattern>
-    <Pattern>promise evaluated that</Pattern>
     <Pattern>promise evaluated to</Pattern>
     <Pattern>promise evaluated with</Pattern>
-    <Pattern>promise for</Pattern>
     <Pattern>promise from</Pattern>
+    <Pattern>promise in</Pattern>
+    <Pattern>promise inward</Pattern>
+    <Pattern>promise inwards</Pattern>
+    <Pattern>promise observed by</Pattern>
+    <Pattern>promise observed from</Pattern>
+    <Pattern>promise observed in</Pattern>
+    <Pattern>promise observed inward</Pattern>
+    <Pattern>promise observed inwards</Pattern>
+    <Pattern>promise observed past</Pattern>
+    <Pattern>promise observed to</Pattern>
+    <Pattern>promise observed with</Pattern>
     <Pattern>promise past</Pattern>
-    <Pattern>promise reported against</Pattern>
     <Pattern>promise reported by</Pattern>
-    <Pattern>promise reported for</Pattern>
     <Pattern>promise reported from</Pattern>
+    <Pattern>promise reported in</Pattern>
+    <Pattern>promise reported inward</Pattern>
+    <Pattern>promise reported inwards</Pattern>
     <Pattern>promise reported past</Pattern>
-    <Pattern>promise reported that</Pattern>
     <Pattern>promise reported to</Pattern>
     <Pattern>promise reported with</Pattern>
-    <Pattern>promise that</Pattern>
+    <Pattern>promise seen by</Pattern>
+    <Pattern>promise seen from</Pattern>
+    <Pattern>promise seen in</Pattern>
+    <Pattern>promise seen inward</Pattern>
+    <Pattern>promise seen inwards</Pattern>
+    <Pattern>promise seen past</Pattern>
+    <Pattern>promise seen to</Pattern>
+    <Pattern>promise seen with</Pattern>
+    <Pattern>promise squalene by</Pattern>
+    <Pattern>promise squalene from</Pattern>
+    <Pattern>promise squalene in</Pattern>
+    <Pattern>promise squalene inward</Pattern>
+    <Pattern>promise squalene inwards</Pattern>
+    <Pattern>promise squalene past</Pattern>
+    <Pattern>promise squalene to</Pattern>
+    <Pattern>promise squalene with</Pattern>
     <Pattern>promise to</Pattern>
-    <Pattern>promise varying against</Pattern>
     <Pattern>promise varying by</Pattern>
-    <Pattern>promise varying for</Pattern>
     <Pattern>promise varying from</Pattern>
+    <Pattern>promise varying in</Pattern>
+    <Pattern>promise varying inward</Pattern>
+    <Pattern>promise varying inwards</Pattern>
     <Pattern>promise varying past</Pattern>
-    <Pattern>promise varying that</Pattern>
     <Pattern>promise varying to</Pattern>
     <Pattern>promise varying with</Pattern>
     <Pattern>promise with</Pattern>
     <Pattern>promising</Pattern>
-    <Pattern>promising against</Pattern>
     <Pattern>promising by</Pattern>
-    <Pattern>promising evaluated against</Pattern>
     <Pattern>promising evaluated by</Pattern>
-    <Pattern>promising evaluated for</Pattern>
     <Pattern>promising evaluated from</Pattern>
+    <Pattern>promising evaluated in</Pattern>
+    <Pattern>promising evaluated inward</Pattern>
+    <Pattern>promising evaluated inwards</Pattern>
     <Pattern>promising evaluated past</Pattern>
-    <Pattern>promising evaluated that</Pattern>
     <Pattern>promising evaluated to</Pattern>
     <Pattern>promising evaluated with</Pattern>
-    <Pattern>promising for</Pattern>
     <Pattern>promising from</Pattern>
+    <Pattern>promising in</Pattern>
+    <Pattern>promising inward</Pattern>
+    <Pattern>promising inwards</Pattern>
+    <Pattern>promising observed by</Pattern>
+    <Pattern>promising observed from</Pattern>
+    <Pattern>promising observed in</Pattern>
+    <Pattern>promising observed inward</Pattern>
+    <Pattern>promising observed inwards</Pattern>
+    <Pattern>promising observed past</Pattern>
+    <Pattern>promising observed to</Pattern>
+    <Pattern>promising observed with</Pattern>
     <Pattern>promising past</Pattern>
-    <Pattern>promising reported against</Pattern>
     <Pattern>promising reported by</Pattern>
-    <Pattern>promising reported for</Pattern>
     <Pattern>promising reported from</Pattern>
+    <Pattern>promising reported in</Pattern>
+    <Pattern>promising reported inward</Pattern>
+    <Pattern>promising reported inwards</Pattern>
     <Pattern>promising reported past</Pattern>
-    <Pattern>promising reported that</Pattern>
     <Pattern>promising reported to</Pattern>
     <Pattern>promising reported with</Pattern>
-    <Pattern>promising that</Pattern>
+    <Pattern>promising seen by</Pattern>
+    <Pattern>promising seen from</Pattern>
+    <Pattern>promising seen in</Pattern>
+    <Pattern>promising seen inward</Pattern>
+    <Pattern>promising seen inwards</Pattern>
+    <Pattern>promising seen past</Pattern>
+    <Pattern>promising seen to</Pattern>
+    <Pattern>promising seen with</Pattern>
+    <Pattern>promising squalene by</Pattern>
+    <Pattern>promising squalene from</Pattern>
+    <Pattern>promising squalene in</Pattern>
+    <Pattern>promising squalene inward</Pattern>
+    <Pattern>promising squalene inwards</Pattern>
+    <Pattern>promising squalene past</Pattern>
+    <Pattern>promising squalene to</Pattern>
+    <Pattern>promising squalene with</Pattern>
     <Pattern>promising to</Pattern>
-    <Pattern>promising varying against</Pattern>
     <Pattern>promising varying by</Pattern>
-    <Pattern>promising varying for</Pattern>
     <Pattern>promising varying from</Pattern>
+    <Pattern>promising varying in</Pattern>
+    <Pattern>promising varying inward</Pattern>
+    <Pattern>promising varying inwards</Pattern>
     <Pattern>promising varying past</Pattern>
-    <Pattern>promising varying that</Pattern>
     <Pattern>promising varying to</Pattern>
     <Pattern>promising varying with</Pattern>
     <Pattern>promising with</Pattern>
     <Pattern>prove</Pattern>
-    <Pattern>prove burn from</Pattern>
-    <Pattern>prove burn through</Pattern>
     <Pattern>prove from</Pattern>
     <Pattern>prove isolated from</Pattern>
     <Pattern>prove isolated through</Pattern>
     <Pattern>prove proved from</Pattern>
     <Pattern>prove proved through</Pattern>
-    <Pattern>prove sunburn from</Pattern>
-    <Pattern>prove sunburn through</Pattern>
-    <Pattern>prove suntan from</Pattern>
-    <Pattern>prove suntan through</Pattern>
-    <Pattern>prove tan from</Pattern>
-    <Pattern>prove tan through</Pattern>
-    <Pattern>prove tan1 from</Pattern>
-    <Pattern>prove tan1 through</Pattern>
     <Pattern>prove through</Pattern>
     <Pattern>proved</Pattern>
-    <Pattern>proved burn from</Pattern>
-    <Pattern>proved burn through</Pattern>
     <Pattern>proved from</Pattern>
     <Pattern>proved isolated from</Pattern>
     <Pattern>proved isolated through</Pattern>
     <Pattern>proved proved from</Pattern>
     <Pattern>proved proved through</Pattern>
-    <Pattern>proved sunburn from</Pattern>
-    <Pattern>proved sunburn through</Pattern>
-    <Pattern>proved suntan from</Pattern>
-    <Pattern>proved suntan through</Pattern>
-    <Pattern>proved tan from</Pattern>
-    <Pattern>proved tan through</Pattern>
-    <Pattern>proved tan1 from</Pattern>
-    <Pattern>proved tan1 through</Pattern>
     <Pattern>proved through</Pattern>
     <Pattern>quench</Pattern>
-    <Pattern>quench Q to</Pattern>
     <Pattern>quench as</Pattern>
     <Pattern>quench been for</Pattern>
     <Pattern>quench been to</Pattern>
@@ -3418,9 +3572,7 @@
     <Pattern>quench group for</Pattern>
     <Pattern>quench group that</Pattern>
     <Pattern>quench group to</Pattern>
-    <Pattern>quench letter q to</Pattern>
     <Pattern>quench neoplasm to</Pattern>
-    <Pattern>quench q10 to</Pattern>
     <Pattern>quench radical as</Pattern>
     <Pattern>quench radical equally</Pattern>
     <Pattern>quench radical every bit</Pattern>
@@ -3448,74 +3600,7 @@
     <Pattern>quench triglycerides to</Pattern>
     <Pattern>quench tumor to</Pattern>
     <Pattern>quench tumour to</Pattern>
-    <Pattern>range</Pattern>
-    <Pattern>range against</Pattern>
-    <Pattern>range by</Pattern>
-    <Pattern>range evaluated against</Pattern>
-    <Pattern>range evaluated by</Pattern>
-    <Pattern>range evaluated for</Pattern>
-    <Pattern>range evaluated from</Pattern>
-    <Pattern>range evaluated past</Pattern>
-    <Pattern>range evaluated that</Pattern>
-    <Pattern>range evaluated to</Pattern>
-    <Pattern>range evaluated with</Pattern>
-    <Pattern>range for</Pattern>
-    <Pattern>range from</Pattern>
-    <Pattern>range past</Pattern>
-    <Pattern>range reported against</Pattern>
-    <Pattern>range reported by</Pattern>
-    <Pattern>range reported for</Pattern>
-    <Pattern>range reported from</Pattern>
-    <Pattern>range reported past</Pattern>
-    <Pattern>range reported that</Pattern>
-    <Pattern>range reported to</Pattern>
-    <Pattern>range reported with</Pattern>
-    <Pattern>range that</Pattern>
-    <Pattern>range to</Pattern>
-    <Pattern>range varying against</Pattern>
-    <Pattern>range varying by</Pattern>
-    <Pattern>range varying for</Pattern>
-    <Pattern>range varying from</Pattern>
-    <Pattern>range varying past</Pattern>
-    <Pattern>range varying that</Pattern>
-    <Pattern>range varying to</Pattern>
-    <Pattern>range varying with</Pattern>
-    <Pattern>range with</Pattern>
-    <Pattern>ranging</Pattern>
-    <Pattern>ranging against</Pattern>
-    <Pattern>ranging by</Pattern>
-    <Pattern>ranging evaluated against</Pattern>
-    <Pattern>ranging evaluated by</Pattern>
-    <Pattern>ranging evaluated for</Pattern>
-    <Pattern>ranging evaluated from</Pattern>
-    <Pattern>ranging evaluated past</Pattern>
-    <Pattern>ranging evaluated that</Pattern>
-    <Pattern>ranging evaluated to</Pattern>
-    <Pattern>ranging evaluated with</Pattern>
-    <Pattern>ranging for</Pattern>
-    <Pattern>ranging from</Pattern>
-    <Pattern>ranging past</Pattern>
-    <Pattern>ranging reported against</Pattern>
-    <Pattern>ranging reported by</Pattern>
-    <Pattern>ranging reported for</Pattern>
-    <Pattern>ranging reported from</Pattern>
-    <Pattern>ranging reported past</Pattern>
-    <Pattern>ranging reported that</Pattern>
-    <Pattern>ranging reported to</Pattern>
-    <Pattern>ranging reported with</Pattern>
-    <Pattern>ranging that</Pattern>
-    <Pattern>ranging to</Pattern>
-    <Pattern>ranging varying against</Pattern>
-    <Pattern>ranging varying by</Pattern>
-    <Pattern>ranging varying for</Pattern>
-    <Pattern>ranging varying from</Pattern>
-    <Pattern>ranging varying past</Pattern>
-    <Pattern>ranging varying that</Pattern>
-    <Pattern>ranging varying to</Pattern>
-    <Pattern>ranging varying with</Pattern>
-    <Pattern>ranging with</Pattern>
     <Pattern>rarefy</Pattern>
-    <Pattern>rarefy Q to</Pattern>
     <Pattern>rarefy as</Pattern>
     <Pattern>rarefy been for</Pattern>
     <Pattern>rarefy been to</Pattern>
@@ -3577,12 +3662,10 @@
     <Pattern>rarefy in</Pattern>
     <Pattern>rarefy inward</Pattern>
     <Pattern>rarefy inwards</Pattern>
-    <Pattern>rarefy letter q to</Pattern>
     <Pattern>rarefy neoplasm in</Pattern>
     <Pattern>rarefy neoplasm inward</Pattern>
     <Pattern>rarefy neoplasm inwards</Pattern>
     <Pattern>rarefy neoplasm to</Pattern>
-    <Pattern>rarefy q10 to</Pattern>
     <Pattern>rarefy radical as</Pattern>
     <Pattern>rarefy radical equally</Pattern>
     <Pattern>rarefy radical every bit</Pattern>
@@ -3628,13 +3711,6 @@
     <Pattern>rarefy tumour inwards</Pattern>
     <Pattern>rarefy tumour to</Pattern>
     <Pattern>report</Pattern>
-    <Pattern>report Q along</Pattern>
-    <Pattern>report Q by</Pattern>
-    <Pattern>report Q for</Pattern>
-    <Pattern>report Q on</Pattern>
-    <Pattern>report Q past</Pattern>
-    <Pattern>report Q to</Pattern>
-    <Pattern>report against</Pattern>
     <Pattern>report along</Pattern>
     <Pattern>report as</Pattern>
     <Pattern>report been along</Pattern>
@@ -3705,12 +3781,12 @@
     <Pattern>report downer inwards</Pattern>
     <Pattern>report downer to</Pattern>
     <Pattern>report equally</Pattern>
-    <Pattern>report evaluated against</Pattern>
     <Pattern>report evaluated by</Pattern>
-    <Pattern>report evaluated for</Pattern>
     <Pattern>report evaluated from</Pattern>
+    <Pattern>report evaluated in</Pattern>
+    <Pattern>report evaluated inward</Pattern>
+    <Pattern>report evaluated inwards</Pattern>
     <Pattern>report evaluated past</Pattern>
-    <Pattern>report evaluated that</Pattern>
     <Pattern>report evaluated to</Pattern>
     <Pattern>report evaluated with</Pattern>
     <Pattern>report every bit</Pattern>
@@ -3742,36 +3818,30 @@
     <Pattern>report inward</Pattern>
     <Pattern>report inwards</Pattern>
     <Pattern>report lesion to</Pattern>
-    <Pattern>report letter q along</Pattern>
-    <Pattern>report letter q by</Pattern>
-    <Pattern>report letter q for</Pattern>
-    <Pattern>report letter q on</Pattern>
-    <Pattern>report letter q past</Pattern>
-    <Pattern>report letter q to</Pattern>
     <Pattern>report neoplasm in</Pattern>
     <Pattern>report neoplasm inward</Pattern>
     <Pattern>report neoplasm inwards</Pattern>
     <Pattern>report neoplasm to</Pattern>
+    <Pattern>report observed by</Pattern>
+    <Pattern>report observed from</Pattern>
+    <Pattern>report observed in</Pattern>
+    <Pattern>report observed inward</Pattern>
+    <Pattern>report observed inwards</Pattern>
+    <Pattern>report observed past</Pattern>
+    <Pattern>report observed to</Pattern>
+    <Pattern>report observed with</Pattern>
     <Pattern>report on</Pattern>
     <Pattern>report past</Pattern>
-    <Pattern>report q10 along</Pattern>
-    <Pattern>report q10 by</Pattern>
-    <Pattern>report q10 for</Pattern>
-    <Pattern>report q10 on</Pattern>
-    <Pattern>report q10 past</Pattern>
-    <Pattern>report q10 to</Pattern>
     <Pattern>report radical as</Pattern>
     <Pattern>report radical equally</Pattern>
     <Pattern>report radical every bit</Pattern>
     <Pattern>report radical for</Pattern>
     <Pattern>report radical that</Pattern>
     <Pattern>report radical to</Pattern>
-    <Pattern>report reported against</Pattern>
     <Pattern>report reported as</Pattern>
     <Pattern>report reported by</Pattern>
     <Pattern>report reported equally</Pattern>
     <Pattern>report reported every bit</Pattern>
-    <Pattern>report reported for</Pattern>
     <Pattern>report reported from</Pattern>
     <Pattern>report reported in</Pattern>
     <Pattern>report reported inward</Pattern>
@@ -3788,6 +3858,22 @@
     <Pattern>report sedative inward</Pattern>
     <Pattern>report sedative inwards</Pattern>
     <Pattern>report sedative to</Pattern>
+    <Pattern>report seen by</Pattern>
+    <Pattern>report seen from</Pattern>
+    <Pattern>report seen in</Pattern>
+    <Pattern>report seen inward</Pattern>
+    <Pattern>report seen inwards</Pattern>
+    <Pattern>report seen past</Pattern>
+    <Pattern>report seen to</Pattern>
+    <Pattern>report seen with</Pattern>
+    <Pattern>report squalene by</Pattern>
+    <Pattern>report squalene from</Pattern>
+    <Pattern>report squalene in</Pattern>
+    <Pattern>report squalene inward</Pattern>
+    <Pattern>report squalene inwards</Pattern>
+    <Pattern>report squalene past</Pattern>
+    <Pattern>report squalene to</Pattern>
+    <Pattern>report squalene with</Pattern>
     <Pattern>report studied along</Pattern>
     <Pattern>report studied by</Pattern>
     <Pattern>report studied for</Pattern>
@@ -3818,24 +3904,17 @@
     <Pattern>report tumour inward</Pattern>
     <Pattern>report tumour inwards</Pattern>
     <Pattern>report tumour to</Pattern>
-    <Pattern>report varying against</Pattern>
     <Pattern>report varying by</Pattern>
-    <Pattern>report varying for</Pattern>
     <Pattern>report varying from</Pattern>
+    <Pattern>report varying in</Pattern>
+    <Pattern>report varying inward</Pattern>
+    <Pattern>report varying inwards</Pattern>
     <Pattern>report varying past</Pattern>
-    <Pattern>report varying that</Pattern>
     <Pattern>report varying to</Pattern>
     <Pattern>report varying with</Pattern>
     <Pattern>report with</Pattern>
     <Pattern>report wound to</Pattern>
     <Pattern>reported</Pattern>
-    <Pattern>reported Q along</Pattern>
-    <Pattern>reported Q by</Pattern>
-    <Pattern>reported Q for</Pattern>
-    <Pattern>reported Q on</Pattern>
-    <Pattern>reported Q past</Pattern>
-    <Pattern>reported Q to</Pattern>
-    <Pattern>reported against</Pattern>
     <Pattern>reported along</Pattern>
     <Pattern>reported as</Pattern>
     <Pattern>reported been along</Pattern>
@@ -3906,12 +3985,12 @@
     <Pattern>reported downer inwards</Pattern>
     <Pattern>reported downer to</Pattern>
     <Pattern>reported equally</Pattern>
-    <Pattern>reported evaluated against</Pattern>
     <Pattern>reported evaluated by</Pattern>
-    <Pattern>reported evaluated for</Pattern>
     <Pattern>reported evaluated from</Pattern>
+    <Pattern>reported evaluated in</Pattern>
+    <Pattern>reported evaluated inward</Pattern>
+    <Pattern>reported evaluated inwards</Pattern>
     <Pattern>reported evaluated past</Pattern>
-    <Pattern>reported evaluated that</Pattern>
     <Pattern>reported evaluated to</Pattern>
     <Pattern>reported evaluated with</Pattern>
     <Pattern>reported every bit</Pattern>
@@ -3940,36 +4019,30 @@
     <Pattern>reported inward</Pattern>
     <Pattern>reported inwards</Pattern>
     <Pattern>reported lesion to</Pattern>
-    <Pattern>reported letter q along</Pattern>
-    <Pattern>reported letter q by</Pattern>
-    <Pattern>reported letter q for</Pattern>
-    <Pattern>reported letter q on</Pattern>
-    <Pattern>reported letter q past</Pattern>
-    <Pattern>reported letter q to</Pattern>
     <Pattern>reported neoplasm in</Pattern>
     <Pattern>reported neoplasm inward</Pattern>
     <Pattern>reported neoplasm inwards</Pattern>
     <Pattern>reported neoplasm to</Pattern>
+    <Pattern>reported observed by</Pattern>
+    <Pattern>reported observed from</Pattern>
+    <Pattern>reported observed in</Pattern>
+    <Pattern>reported observed inward</Pattern>
+    <Pattern>reported observed inwards</Pattern>
+    <Pattern>reported observed past</Pattern>
+    <Pattern>reported observed to</Pattern>
+    <Pattern>reported observed with</Pattern>
     <Pattern>reported on</Pattern>
     <Pattern>reported past</Pattern>
-    <Pattern>reported q10 along</Pattern>
-    <Pattern>reported q10 by</Pattern>
-    <Pattern>reported q10 for</Pattern>
-    <Pattern>reported q10 on</Pattern>
-    <Pattern>reported q10 past</Pattern>
-    <Pattern>reported q10 to</Pattern>
     <Pattern>reported radical as</Pattern>
     <Pattern>reported radical equally</Pattern>
     <Pattern>reported radical every bit</Pattern>
     <Pattern>reported radical for</Pattern>
     <Pattern>reported radical that</Pattern>
     <Pattern>reported radical to</Pattern>
-    <Pattern>reported reported against</Pattern>
     <Pattern>reported reported as</Pattern>
     <Pattern>reported reported by</Pattern>
     <Pattern>reported reported equally</Pattern>
     <Pattern>reported reported every bit</Pattern>
-    <Pattern>reported reported for</Pattern>
     <Pattern>reported reported from</Pattern>
     <Pattern>reported reported in</Pattern>
     <Pattern>reported reported inward</Pattern>
@@ -3986,6 +4059,22 @@
     <Pattern>reported sedative inward</Pattern>
     <Pattern>reported sedative inwards</Pattern>
     <Pattern>reported sedative to</Pattern>
+    <Pattern>reported seen by</Pattern>
+    <Pattern>reported seen from</Pattern>
+    <Pattern>reported seen in</Pattern>
+    <Pattern>reported seen inward</Pattern>
+    <Pattern>reported seen inwards</Pattern>
+    <Pattern>reported seen past</Pattern>
+    <Pattern>reported seen to</Pattern>
+    <Pattern>reported seen with</Pattern>
+    <Pattern>reported squalene by</Pattern>
+    <Pattern>reported squalene from</Pattern>
+    <Pattern>reported squalene in</Pattern>
+    <Pattern>reported squalene inward</Pattern>
+    <Pattern>reported squalene inwards</Pattern>
+    <Pattern>reported squalene past</Pattern>
+    <Pattern>reported squalene to</Pattern>
+    <Pattern>reported squalene with</Pattern>
     <Pattern>reported studied along</Pattern>
     <Pattern>reported studied by</Pattern>
     <Pattern>reported studied for</Pattern>
@@ -4012,12 +4101,12 @@
     <Pattern>reported tumour inward</Pattern>
     <Pattern>reported tumour inwards</Pattern>
     <Pattern>reported tumour to</Pattern>
-    <Pattern>reported varying against</Pattern>
     <Pattern>reported varying by</Pattern>
-    <Pattern>reported varying for</Pattern>
     <Pattern>reported varying from</Pattern>
+    <Pattern>reported varying in</Pattern>
+    <Pattern>reported varying inward</Pattern>
+    <Pattern>reported varying inwards</Pattern>
     <Pattern>reported varying past</Pattern>
-    <Pattern>reported varying that</Pattern>
     <Pattern>reported varying to</Pattern>
     <Pattern>reported varying with</Pattern>
     <Pattern>reported with</Pattern>
@@ -4064,32 +4153,123 @@
     <Pattern>results tested on</Pattern>
     <Pattern>results tested to</Pattern>
     <Pattern>results to</Pattern>
-    <Pattern>s.</Pattern>
-    <Pattern>s. burn from</Pattern>
-    <Pattern>s. burn through</Pattern>
-    <Pattern>s. from</Pattern>
-    <Pattern>s. isolated from</Pattern>
-    <Pattern>s. isolated through</Pattern>
-    <Pattern>s. proved from</Pattern>
-    <Pattern>s. proved through</Pattern>
-    <Pattern>s. sunburn from</Pattern>
-    <Pattern>s. sunburn through</Pattern>
-    <Pattern>s. suntan from</Pattern>
-    <Pattern>s. suntan through</Pattern>
-    <Pattern>s. tan from</Pattern>
-    <Pattern>s. tan through</Pattern>
-    <Pattern>s. tan1 from</Pattern>
-    <Pattern>s. tan1 through</Pattern>
-    <Pattern>s. through</Pattern>
+    <Pattern>see</Pattern>
+    <Pattern>see by</Pattern>
+    <Pattern>see evaluated by</Pattern>
+    <Pattern>see evaluated from</Pattern>
+    <Pattern>see evaluated in</Pattern>
+    <Pattern>see evaluated inward</Pattern>
+    <Pattern>see evaluated inwards</Pattern>
+    <Pattern>see evaluated past</Pattern>
+    <Pattern>see evaluated to</Pattern>
+    <Pattern>see evaluated with</Pattern>
+    <Pattern>see from</Pattern>
+    <Pattern>see in</Pattern>
+    <Pattern>see inward</Pattern>
+    <Pattern>see inwards</Pattern>
+    <Pattern>see observed by</Pattern>
+    <Pattern>see observed from</Pattern>
+    <Pattern>see observed in</Pattern>
+    <Pattern>see observed inward</Pattern>
+    <Pattern>see observed inwards</Pattern>
+    <Pattern>see observed past</Pattern>
+    <Pattern>see observed to</Pattern>
+    <Pattern>see observed with</Pattern>
+    <Pattern>see past</Pattern>
+    <Pattern>see reported by</Pattern>
+    <Pattern>see reported from</Pattern>
+    <Pattern>see reported in</Pattern>
+    <Pattern>see reported inward</Pattern>
+    <Pattern>see reported inwards</Pattern>
+    <Pattern>see reported past</Pattern>
+    <Pattern>see reported to</Pattern>
+    <Pattern>see reported with</Pattern>
+    <Pattern>see seen by</Pattern>
+    <Pattern>see seen from</Pattern>
+    <Pattern>see seen in</Pattern>
+    <Pattern>see seen inward</Pattern>
+    <Pattern>see seen inwards</Pattern>
+    <Pattern>see seen past</Pattern>
+    <Pattern>see seen to</Pattern>
+    <Pattern>see seen with</Pattern>
+    <Pattern>see squalene by</Pattern>
+    <Pattern>see squalene from</Pattern>
+    <Pattern>see squalene in</Pattern>
+    <Pattern>see squalene inward</Pattern>
+    <Pattern>see squalene inwards</Pattern>
+    <Pattern>see squalene past</Pattern>
+    <Pattern>see squalene to</Pattern>
+    <Pattern>see squalene with</Pattern>
+    <Pattern>see to</Pattern>
+    <Pattern>see varying by</Pattern>
+    <Pattern>see varying from</Pattern>
+    <Pattern>see varying in</Pattern>
+    <Pattern>see varying inward</Pattern>
+    <Pattern>see varying inwards</Pattern>
+    <Pattern>see varying past</Pattern>
+    <Pattern>see varying to</Pattern>
+    <Pattern>see varying with</Pattern>
+    <Pattern>see with</Pattern>
+    <Pattern>seen</Pattern>
+    <Pattern>seen by</Pattern>
+    <Pattern>seen evaluated by</Pattern>
+    <Pattern>seen evaluated from</Pattern>
+    <Pattern>seen evaluated in</Pattern>
+    <Pattern>seen evaluated inward</Pattern>
+    <Pattern>seen evaluated inwards</Pattern>
+    <Pattern>seen evaluated past</Pattern>
+    <Pattern>seen evaluated to</Pattern>
+    <Pattern>seen evaluated with</Pattern>
+    <Pattern>seen from</Pattern>
+    <Pattern>seen in</Pattern>
+    <Pattern>seen inward</Pattern>
+    <Pattern>seen inwards</Pattern>
+    <Pattern>seen observed by</Pattern>
+    <Pattern>seen observed from</Pattern>
+    <Pattern>seen observed in</Pattern>
+    <Pattern>seen observed inward</Pattern>
+    <Pattern>seen observed inwards</Pattern>
+    <Pattern>seen observed past</Pattern>
+    <Pattern>seen observed to</Pattern>
+    <Pattern>seen observed with</Pattern>
+    <Pattern>seen past</Pattern>
+    <Pattern>seen reported by</Pattern>
+    <Pattern>seen reported from</Pattern>
+    <Pattern>seen reported in</Pattern>
+    <Pattern>seen reported inward</Pattern>
+    <Pattern>seen reported inwards</Pattern>
+    <Pattern>seen reported past</Pattern>
+    <Pattern>seen reported to</Pattern>
+    <Pattern>seen reported with</Pattern>
+    <Pattern>seen seen by</Pattern>
+    <Pattern>seen seen from</Pattern>
+    <Pattern>seen seen in</Pattern>
+    <Pattern>seen seen inward</Pattern>
+    <Pattern>seen seen inwards</Pattern>
+    <Pattern>seen seen past</Pattern>
+    <Pattern>seen seen to</Pattern>
+    <Pattern>seen seen with</Pattern>
+    <Pattern>seen squalene by</Pattern>
+    <Pattern>seen squalene from</Pattern>
+    <Pattern>seen squalene in</Pattern>
+    <Pattern>seen squalene inward</Pattern>
+    <Pattern>seen squalene inwards</Pattern>
+    <Pattern>seen squalene past</Pattern>
+    <Pattern>seen squalene to</Pattern>
+    <Pattern>seen squalene with</Pattern>
+    <Pattern>seen to</Pattern>
+    <Pattern>seen varying by</Pattern>
+    <Pattern>seen varying from</Pattern>
+    <Pattern>seen varying in</Pattern>
+    <Pattern>seen varying inward</Pattern>
+    <Pattern>seen varying inwards</Pattern>
+    <Pattern>seen varying past</Pattern>
+    <Pattern>seen varying to</Pattern>
+    <Pattern>seen varying with</Pattern>
+    <Pattern>seen with</Pattern>
     <Pattern>show</Pattern>
-    <Pattern>show Q along</Pattern>
-    <Pattern>show Q by</Pattern>
-    <Pattern>show Q for</Pattern>
-    <Pattern>show Q on</Pattern>
-    <Pattern>show Q past</Pattern>
-    <Pattern>show Q to</Pattern>
-    <Pattern>show against</Pattern>
     <Pattern>show along</Pattern>
+    <Pattern>show as</Pattern>
     <Pattern>show been along</Pattern>
     <Pattern>show been by</Pattern>
     <Pattern>show been for</Pattern>
@@ -4117,6 +4297,14 @@
     <Pattern>show chemical compound past</Pattern>
     <Pattern>show chemical compound to</Pattern>
     <Pattern>show chemical group to</Pattern>
+    <Pattern>show cholesterin as</Pattern>
+    <Pattern>show cholesterin equally</Pattern>
+    <Pattern>show cholesterin every bit</Pattern>
+    <Pattern>show cholesterin for</Pattern>
+    <Pattern>show cholesterol as</Pattern>
+    <Pattern>show cholesterol equally</Pattern>
+    <Pattern>show cholesterol every bit</Pattern>
+    <Pattern>show cholesterol for</Pattern>
     <Pattern>show compound along</Pattern>
     <Pattern>show compound by</Pattern>
     <Pattern>show compound for</Pattern>
@@ -4137,14 +4325,16 @@
     <Pattern>show downer inward</Pattern>
     <Pattern>show downer inwards</Pattern>
     <Pattern>show downer to</Pattern>
-    <Pattern>show evaluated against</Pattern>
+    <Pattern>show equally</Pattern>
     <Pattern>show evaluated by</Pattern>
-    <Pattern>show evaluated for</Pattern>
     <Pattern>show evaluated from</Pattern>
+    <Pattern>show evaluated in</Pattern>
+    <Pattern>show evaluated inward</Pattern>
+    <Pattern>show evaluated inwards</Pattern>
     <Pattern>show evaluated past</Pattern>
-    <Pattern>show evaluated that</Pattern>
     <Pattern>show evaluated to</Pattern>
     <Pattern>show evaluated with</Pattern>
+    <Pattern>show every bit</Pattern>
     <Pattern>show for</Pattern>
     <Pattern>show found in</Pattern>
     <Pattern>show found inward</Pattern>
@@ -4161,34 +4351,43 @@
     <Pattern>show in</Pattern>
     <Pattern>show inward</Pattern>
     <Pattern>show inwards</Pattern>
-    <Pattern>show letter q along</Pattern>
-    <Pattern>show letter q by</Pattern>
-    <Pattern>show letter q for</Pattern>
-    <Pattern>show letter q on</Pattern>
-    <Pattern>show letter q past</Pattern>
-    <Pattern>show letter q to</Pattern>
+    <Pattern>show neoplasm as</Pattern>
+    <Pattern>show neoplasm equally</Pattern>
+    <Pattern>show neoplasm every bit</Pattern>
+    <Pattern>show neoplasm for</Pattern>
     <Pattern>show neoplasm in</Pattern>
     <Pattern>show neoplasm inward</Pattern>
     <Pattern>show neoplasm inwards</Pattern>
     <Pattern>show neoplasm to</Pattern>
+    <Pattern>show observed by</Pattern>
+    <Pattern>show observed from</Pattern>
+    <Pattern>show observed in</Pattern>
+    <Pattern>show observed inward</Pattern>
+    <Pattern>show observed inwards</Pattern>
+    <Pattern>show observed past</Pattern>
+    <Pattern>show observed to</Pattern>
+    <Pattern>show observed with</Pattern>
     <Pattern>show on</Pattern>
     <Pattern>show past</Pattern>
-    <Pattern>show q10 along</Pattern>
-    <Pattern>show q10 by</Pattern>
-    <Pattern>show q10 for</Pattern>
-    <Pattern>show q10 on</Pattern>
-    <Pattern>show q10 past</Pattern>
-    <Pattern>show q10 to</Pattern>
+    <Pattern>show potency as</Pattern>
+    <Pattern>show potency equally</Pattern>
+    <Pattern>show potency every bit</Pattern>
+    <Pattern>show potency for</Pattern>
+    <Pattern>show potential as</Pattern>
+    <Pattern>show potential equally</Pattern>
+    <Pattern>show potential every bit</Pattern>
+    <Pattern>show potential for</Pattern>
+    <Pattern>show potentiality as</Pattern>
+    <Pattern>show potentiality equally</Pattern>
+    <Pattern>show potentiality every bit</Pattern>
+    <Pattern>show potentiality for</Pattern>
     <Pattern>show radical to</Pattern>
-    <Pattern>show reported against</Pattern>
     <Pattern>show reported by</Pattern>
-    <Pattern>show reported for</Pattern>
     <Pattern>show reported from</Pattern>
     <Pattern>show reported in</Pattern>
     <Pattern>show reported inward</Pattern>
     <Pattern>show reported inwards</Pattern>
     <Pattern>show reported past</Pattern>
-    <Pattern>show reported that</Pattern>
     <Pattern>show reported to</Pattern>
     <Pattern>show reported with</Pattern>
     <Pattern>show sedative drug in</Pattern>
@@ -4199,40 +4398,57 @@
     <Pattern>show sedative inward</Pattern>
     <Pattern>show sedative inwards</Pattern>
     <Pattern>show sedative to</Pattern>
+    <Pattern>show seen by</Pattern>
+    <Pattern>show seen from</Pattern>
+    <Pattern>show seen in</Pattern>
+    <Pattern>show seen inward</Pattern>
+    <Pattern>show seen inwards</Pattern>
+    <Pattern>show seen past</Pattern>
+    <Pattern>show seen to</Pattern>
+    <Pattern>show seen with</Pattern>
+    <Pattern>show squalene by</Pattern>
+    <Pattern>show squalene from</Pattern>
+    <Pattern>show squalene in</Pattern>
+    <Pattern>show squalene inward</Pattern>
+    <Pattern>show squalene inwards</Pattern>
+    <Pattern>show squalene past</Pattern>
+    <Pattern>show squalene to</Pattern>
+    <Pattern>show squalene with</Pattern>
     <Pattern>show studied along</Pattern>
     <Pattern>show studied by</Pattern>
     <Pattern>show studied for</Pattern>
     <Pattern>show studied on</Pattern>
     <Pattern>show studied past</Pattern>
     <Pattern>show studied to</Pattern>
-    <Pattern>show that</Pattern>
     <Pattern>show to</Pattern>
+    <Pattern>show tumor as</Pattern>
+    <Pattern>show tumor equally</Pattern>
+    <Pattern>show tumor every bit</Pattern>
+    <Pattern>show tumor for</Pattern>
     <Pattern>show tumor in</Pattern>
     <Pattern>show tumor inward</Pattern>
     <Pattern>show tumor inwards</Pattern>
     <Pattern>show tumor to</Pattern>
+    <Pattern>show tumour as</Pattern>
+    <Pattern>show tumour equally</Pattern>
+    <Pattern>show tumour every bit</Pattern>
+    <Pattern>show tumour for</Pattern>
     <Pattern>show tumour in</Pattern>
     <Pattern>show tumour inward</Pattern>
     <Pattern>show tumour inwards</Pattern>
     <Pattern>show tumour to</Pattern>
-    <Pattern>show varying against</Pattern>
     <Pattern>show varying by</Pattern>
-    <Pattern>show varying for</Pattern>
     <Pattern>show varying from</Pattern>
+    <Pattern>show varying in</Pattern>
+    <Pattern>show varying inward</Pattern>
+    <Pattern>show varying inwards</Pattern>
     <Pattern>show varying past</Pattern>
-    <Pattern>show varying that</Pattern>
     <Pattern>show varying to</Pattern>
     <Pattern>show varying with</Pattern>
     <Pattern>show with</Pattern>
     <Pattern>showed</Pattern>
-    <Pattern>showed Q along</Pattern>
-    <Pattern>showed Q by</Pattern>
-    <Pattern>showed Q for</Pattern>
-    <Pattern>showed Q on</Pattern>
-    <Pattern>showed Q past</Pattern>
-    <Pattern>showed Q to</Pattern>
-    <Pattern>showed against</Pattern>
     <Pattern>showed along</Pattern>
+    <Pattern>showed as</Pattern>
     <Pattern>showed been along</Pattern>
     <Pattern>showed been by</Pattern>
     <Pattern>showed been for</Pattern>
@@ -4260,6 +4476,14 @@
     <Pattern>showed chemical compound past</Pattern>
     <Pattern>showed chemical compound to</Pattern>
     <Pattern>showed chemical group to</Pattern>
+    <Pattern>showed cholesterin as</Pattern>
+    <Pattern>showed cholesterin equally</Pattern>
+    <Pattern>showed cholesterin every bit</Pattern>
+    <Pattern>showed cholesterin for</Pattern>
+    <Pattern>showed cholesterol as</Pattern>
+    <Pattern>showed cholesterol equally</Pattern>
+    <Pattern>showed cholesterol every bit</Pattern>
+    <Pattern>showed cholesterol for</Pattern>
     <Pattern>showed compound along</Pattern>
     <Pattern>showed compound by</Pattern>
     <Pattern>showed compound for</Pattern>
@@ -4280,14 +4504,16 @@
     <Pattern>showed downer inward</Pattern>
     <Pattern>showed downer inwards</Pattern>
     <Pattern>showed downer to</Pattern>
-    <Pattern>showed evaluated against</Pattern>
+    <Pattern>showed equally</Pattern>
     <Pattern>showed evaluated by</Pattern>
-    <Pattern>showed evaluated for</Pattern>
     <Pattern>showed evaluated from</Pattern>
+    <Pattern>showed evaluated in</Pattern>
+    <Pattern>showed evaluated inward</Pattern>
+    <Pattern>showed evaluated inwards</Pattern>
     <Pattern>showed evaluated past</Pattern>
-    <Pattern>showed evaluated that</Pattern>
     <Pattern>showed evaluated to</Pattern>
     <Pattern>showed evaluated with</Pattern>
+    <Pattern>showed every bit</Pattern>
     <Pattern>showed for</Pattern>
     <Pattern>showed found in</Pattern>
     <Pattern>showed found inward</Pattern>
@@ -4304,34 +4530,43 @@
     <Pattern>showed in</Pattern>
     <Pattern>showed inward</Pattern>
     <Pattern>showed inwards</Pattern>
-    <Pattern>showed letter q along</Pattern>
-    <Pattern>showed letter q by</Pattern>
-    <Pattern>showed letter q for</Pattern>
-    <Pattern>showed letter q on</Pattern>
-    <Pattern>showed letter q past</Pattern>
-    <Pattern>showed letter q to</Pattern>
+    <Pattern>showed neoplasm as</Pattern>
+    <Pattern>showed neoplasm equally</Pattern>
+    <Pattern>showed neoplasm every bit</Pattern>
+    <Pattern>showed neoplasm for</Pattern>
     <Pattern>showed neoplasm in</Pattern>
     <Pattern>showed neoplasm inward</Pattern>
     <Pattern>showed neoplasm inwards</Pattern>
     <Pattern>showed neoplasm to</Pattern>
+    <Pattern>showed observed by</Pattern>
+    <Pattern>showed observed from</Pattern>
+    <Pattern>showed observed in</Pattern>
+    <Pattern>showed observed inward</Pattern>
+    <Pattern>showed observed inwards</Pattern>
+    <Pattern>showed observed past</Pattern>
+    <Pattern>showed observed to</Pattern>
+    <Pattern>showed observed with</Pattern>
     <Pattern>showed on</Pattern>
     <Pattern>showed past</Pattern>
-    <Pattern>showed q10 along</Pattern>
-    <Pattern>showed q10 by</Pattern>
-    <Pattern>showed q10 for</Pattern>
-    <Pattern>showed q10 on</Pattern>
-    <Pattern>showed q10 past</Pattern>
-    <Pattern>showed q10 to</Pattern>
+    <Pattern>showed potency as</Pattern>
+    <Pattern>showed potency equally</Pattern>
+    <Pattern>showed potency every bit</Pattern>
+    <Pattern>showed potency for</Pattern>
+    <Pattern>showed potential as</Pattern>
+    <Pattern>showed potential equally</Pattern>
+    <Pattern>showed potential every bit</Pattern>
+    <Pattern>showed potential for</Pattern>
+    <Pattern>showed potentiality as</Pattern>
+    <Pattern>showed potentiality equally</Pattern>
+    <Pattern>showed potentiality every bit</Pattern>
+    <Pattern>showed potentiality for</Pattern>
     <Pattern>showed radical to</Pattern>
-    <Pattern>showed reported against</Pattern>
     <Pattern>showed reported by</Pattern>
-    <Pattern>showed reported for</Pattern>
     <Pattern>showed reported from</Pattern>
     <Pattern>showed reported in</Pattern>
     <Pattern>showed reported inward</Pattern>
     <Pattern>showed reported inwards</Pattern>
     <Pattern>showed reported past</Pattern>
-    <Pattern>showed reported that</Pattern>
     <Pattern>showed reported to</Pattern>
     <Pattern>showed reported with</Pattern>
     <Pattern>showed sedative drug in</Pattern>
@@ -4342,61 +4577,108 @@
     <Pattern>showed sedative inward</Pattern>
     <Pattern>showed sedative inwards</Pattern>
     <Pattern>showed sedative to</Pattern>
+    <Pattern>showed seen by</Pattern>
+    <Pattern>showed seen from</Pattern>
+    <Pattern>showed seen in</Pattern>
+    <Pattern>showed seen inward</Pattern>
+    <Pattern>showed seen inwards</Pattern>
+    <Pattern>showed seen past</Pattern>
+    <Pattern>showed seen to</Pattern>
+    <Pattern>showed seen with</Pattern>
+    <Pattern>showed squalene by</Pattern>
+    <Pattern>showed squalene from</Pattern>
+    <Pattern>showed squalene in</Pattern>
+    <Pattern>showed squalene inward</Pattern>
+    <Pattern>showed squalene inwards</Pattern>
+    <Pattern>showed squalene past</Pattern>
+    <Pattern>showed squalene to</Pattern>
+    <Pattern>showed squalene with</Pattern>
     <Pattern>showed studied along</Pattern>
     <Pattern>showed studied by</Pattern>
     <Pattern>showed studied for</Pattern>
     <Pattern>showed studied on</Pattern>
     <Pattern>showed studied past</Pattern>
     <Pattern>showed studied to</Pattern>
-    <Pattern>showed that</Pattern>
     <Pattern>showed to</Pattern>
+    <Pattern>showed tumor as</Pattern>
+    <Pattern>showed tumor equally</Pattern>
+    <Pattern>showed tumor every bit</Pattern>
+    <Pattern>showed tumor for</Pattern>
     <Pattern>showed tumor in</Pattern>
     <Pattern>showed tumor inward</Pattern>
     <Pattern>showed tumor inwards</Pattern>
     <Pattern>showed tumor to</Pattern>
+    <Pattern>showed tumour as</Pattern>
+    <Pattern>showed tumour equally</Pattern>
+    <Pattern>showed tumour every bit</Pattern>
+    <Pattern>showed tumour for</Pattern>
     <Pattern>showed tumour in</Pattern>
     <Pattern>showed tumour inward</Pattern>
     <Pattern>showed tumour inwards</Pattern>
     <Pattern>showed tumour to</Pattern>
-    <Pattern>showed varying against</Pattern>
     <Pattern>showed varying by</Pattern>
-    <Pattern>showed varying for</Pattern>
     <Pattern>showed varying from</Pattern>
+    <Pattern>showed varying in</Pattern>
+    <Pattern>showed varying inward</Pattern>
+    <Pattern>showed varying inwards</Pattern>
     <Pattern>showed varying past</Pattern>
-    <Pattern>showed varying that</Pattern>
     <Pattern>showed varying to</Pattern>
     <Pattern>showed varying with</Pattern>
     <Pattern>showed with</Pattern>
     <Pattern>showing</Pattern>
-    <Pattern>showing against</Pattern>
     <Pattern>showing by</Pattern>
-    <Pattern>showing evaluated against</Pattern>
     <Pattern>showing evaluated by</Pattern>
-    <Pattern>showing evaluated for</Pattern>
     <Pattern>showing evaluated from</Pattern>
+    <Pattern>showing evaluated in</Pattern>
+    <Pattern>showing evaluated inward</Pattern>
+    <Pattern>showing evaluated inwards</Pattern>
     <Pattern>showing evaluated past</Pattern>
-    <Pattern>showing evaluated that</Pattern>
     <Pattern>showing evaluated to</Pattern>
     <Pattern>showing evaluated with</Pattern>
-    <Pattern>showing for</Pattern>
     <Pattern>showing from</Pattern>
+    <Pattern>showing in</Pattern>
+    <Pattern>showing inward</Pattern>
+    <Pattern>showing inwards</Pattern>
+    <Pattern>showing observed by</Pattern>
+    <Pattern>showing observed from</Pattern>
+    <Pattern>showing observed in</Pattern>
+    <Pattern>showing observed inward</Pattern>
+    <Pattern>showing observed inwards</Pattern>
+    <Pattern>showing observed past</Pattern>
+    <Pattern>showing observed to</Pattern>
+    <Pattern>showing observed with</Pattern>
     <Pattern>showing past</Pattern>
-    <Pattern>showing reported against</Pattern>
     <Pattern>showing reported by</Pattern>
-    <Pattern>showing reported for</Pattern>
     <Pattern>showing reported from</Pattern>
+    <Pattern>showing reported in</Pattern>
+    <Pattern>showing reported inward</Pattern>
+    <Pattern>showing reported inwards</Pattern>
     <Pattern>showing reported past</Pattern>
-    <Pattern>showing reported that</Pattern>
     <Pattern>showing reported to</Pattern>
     <Pattern>showing reported with</Pattern>
-    <Pattern>showing that</Pattern>
+    <Pattern>showing seen by</Pattern>
+    <Pattern>showing seen from</Pattern>
+    <Pattern>showing seen in</Pattern>
+    <Pattern>showing seen inward</Pattern>
+    <Pattern>showing seen inwards</Pattern>
+    <Pattern>showing seen past</Pattern>
+    <Pattern>showing seen to</Pattern>
+    <Pattern>showing seen with</Pattern>
+    <Pattern>showing squalene by</Pattern>
+    <Pattern>showing squalene from</Pattern>
+    <Pattern>showing squalene in</Pattern>
+    <Pattern>showing squalene inward</Pattern>
+    <Pattern>showing squalene inwards</Pattern>
+    <Pattern>showing squalene past</Pattern>
+    <Pattern>showing squalene to</Pattern>
+    <Pattern>showing squalene with</Pattern>
     <Pattern>showing to</Pattern>
-    <Pattern>showing varying against</Pattern>
     <Pattern>showing varying by</Pattern>
-    <Pattern>showing varying for</Pattern>
     <Pattern>showing varying from</Pattern>
+    <Pattern>showing varying in</Pattern>
+    <Pattern>showing varying inward</Pattern>
+    <Pattern>showing varying inwards</Pattern>
     <Pattern>showing varying past</Pattern>
-    <Pattern>showing varying that</Pattern>
     <Pattern>showing varying to</Pattern>
     <Pattern>showing varying with</Pattern>
     <Pattern>showing with</Pattern>
@@ -4454,62 +4736,70 @@
     <Pattern>shown tumour inwards</Pattern>
     <Pattern>shown tumour to</Pattern>
     <Pattern>ski</Pattern>
-    <Pattern>ski burn from</Pattern>
-    <Pattern>ski burn through</Pattern>
     <Pattern>ski from</Pattern>
     <Pattern>ski isolated from</Pattern>
     <Pattern>ski isolated through</Pattern>
     <Pattern>ski proved from</Pattern>
     <Pattern>ski proved through</Pattern>
-    <Pattern>ski sunburn from</Pattern>
-    <Pattern>ski sunburn through</Pattern>
-    <Pattern>ski suntan from</Pattern>
-    <Pattern>ski suntan through</Pattern>
-    <Pattern>ski tan from</Pattern>
-    <Pattern>ski tan through</Pattern>
-    <Pattern>ski tan1 from</Pattern>
-    <Pattern>ski tan1 through</Pattern>
     <Pattern>ski through</Pattern>
     <Pattern>solated</Pattern>
-    <Pattern>solated against</Pattern>
     <Pattern>solated by</Pattern>
-    <Pattern>solated evaluated against</Pattern>
     <Pattern>solated evaluated by</Pattern>
-    <Pattern>solated evaluated for</Pattern>
     <Pattern>solated evaluated from</Pattern>
+    <Pattern>solated evaluated in</Pattern>
+    <Pattern>solated evaluated inward</Pattern>
+    <Pattern>solated evaluated inwards</Pattern>
     <Pattern>solated evaluated past</Pattern>
-    <Pattern>solated evaluated that</Pattern>
     <Pattern>solated evaluated to</Pattern>
     <Pattern>solated evaluated with</Pattern>
-    <Pattern>solated for</Pattern>
     <Pattern>solated from</Pattern>
+    <Pattern>solated in</Pattern>
+    <Pattern>solated inward</Pattern>
+    <Pattern>solated inwards</Pattern>
+    <Pattern>solated observed by</Pattern>
+    <Pattern>solated observed from</Pattern>
+    <Pattern>solated observed in</Pattern>
+    <Pattern>solated observed inward</Pattern>
+    <Pattern>solated observed inwards</Pattern>
+    <Pattern>solated observed past</Pattern>
+    <Pattern>solated observed to</Pattern>
+    <Pattern>solated observed with</Pattern>
     <Pattern>solated past</Pattern>
-    <Pattern>solated reported against</Pattern>
     <Pattern>solated reported by</Pattern>
-    <Pattern>solated reported for</Pattern>
     <Pattern>solated reported from</Pattern>
+    <Pattern>solated reported in</Pattern>
+    <Pattern>solated reported inward</Pattern>
+    <Pattern>solated reported inwards</Pattern>
     <Pattern>solated reported past</Pattern>
-    <Pattern>solated reported that</Pattern>
     <Pattern>solated reported to</Pattern>
     <Pattern>solated reported with</Pattern>
-    <Pattern>solated that</Pattern>
+    <Pattern>solated seen by</Pattern>
+    <Pattern>solated seen from</Pattern>
+    <Pattern>solated seen in</Pattern>
+    <Pattern>solated seen inward</Pattern>
+    <Pattern>solated seen inwards</Pattern>
+    <Pattern>solated seen past</Pattern>
+    <Pattern>solated seen to</Pattern>
+    <Pattern>solated seen with</Pattern>
+    <Pattern>solated squalene by</Pattern>
+    <Pattern>solated squalene from</Pattern>
+    <Pattern>solated squalene in</Pattern>
+    <Pattern>solated squalene inward</Pattern>
+    <Pattern>solated squalene inwards</Pattern>
+    <Pattern>solated squalene past</Pattern>
+    <Pattern>solated squalene to</Pattern>
+    <Pattern>solated squalene with</Pattern>
     <Pattern>solated to</Pattern>
-    <Pattern>solated varying against</Pattern>
     <Pattern>solated varying by</Pattern>
-    <Pattern>solated varying for</Pattern>
     <Pattern>solated varying from</Pattern>
+    <Pattern>solated varying in</Pattern>
+    <Pattern>solated varying inward</Pattern>
+    <Pattern>solated varying inwards</Pattern>
     <Pattern>solated varying past</Pattern>
-    <Pattern>solated varying that</Pattern>
     <Pattern>solated varying to</Pattern>
     <Pattern>solated varying with</Pattern>
     <Pattern>solated with</Pattern>
     <Pattern>studied</Pattern>
-    <Pattern>studied Q along</Pattern>
-    <Pattern>studied Q by</Pattern>
-    <Pattern>studied Q for</Pattern>
-    <Pattern>studied Q on</Pattern>
-    <Pattern>studied Q past</Pattern>
-    <Pattern>studied Q to</Pattern>
     <Pattern>studied along</Pattern>
     <Pattern>studied been along</Pattern>
     <Pattern>studied been by</Pattern>
@@ -4557,20 +4847,8 @@
     <Pattern>studied identified on</Pattern>
     <Pattern>studied identified past</Pattern>
     <Pattern>studied identified to</Pattern>
-    <Pattern>studied letter q along</Pattern>
-    <Pattern>studied letter q by</Pattern>
-    <Pattern>studied letter q for</Pattern>
-    <Pattern>studied letter q on</Pattern>
-    <Pattern>studied letter q past</Pattern>
-    <Pattern>studied letter q to</Pattern>
     <Pattern>studied on</Pattern>
     <Pattern>studied past</Pattern>
-    <Pattern>studied q10 along</Pattern>
-    <Pattern>studied q10 by</Pattern>
-    <Pattern>studied q10 for</Pattern>
-    <Pattern>studied q10 on</Pattern>
-    <Pattern>studied q10 past</Pattern>
-    <Pattern>studied q10 to</Pattern>
     <Pattern>studied radical for</Pattern>
     <Pattern>studied radical to</Pattern>
     <Pattern>studied studied along</Pattern>
@@ -4585,8 +4863,7 @@
     <Pattern>studied tested to</Pattern>
     <Pattern>studied to</Pattern>
     <Pattern>suppress</Pattern>
-    <Pattern>suppress Q to</Pattern>
-    <Pattern>suppress against</Pattern>
+    <Pattern>suppress as</Pattern>
     <Pattern>suppress beta in</Pattern>
     <Pattern>suppress beta inward</Pattern>
     <Pattern>suppress beta inwards</Pattern>
@@ -4602,6 +4879,14 @@
     <Pattern>suppress betacatenin to</Pattern>
     <Pattern>suppress by</Pattern>
     <Pattern>suppress chemical group to</Pattern>
+    <Pattern>suppress cholesterin as</Pattern>
+    <Pattern>suppress cholesterin equally</Pattern>
+    <Pattern>suppress cholesterin every bit</Pattern>
+    <Pattern>suppress cholesterin for</Pattern>
+    <Pattern>suppress cholesterol as</Pattern>
+    <Pattern>suppress cholesterol equally</Pattern>
+    <Pattern>suppress cholesterol every bit</Pattern>
+    <Pattern>suppress cholesterol for</Pattern>
     <Pattern>suppress depressant in</Pattern>
     <Pattern>suppress depressant inward</Pattern>
     <Pattern>suppress depressant inwards</Pattern>
@@ -4610,14 +4895,16 @@
     <Pattern>suppress downer inward</Pattern>
     <Pattern>suppress downer inwards</Pattern>
     <Pattern>suppress downer to</Pattern>
-    <Pattern>suppress evaluated against</Pattern>
+    <Pattern>suppress equally</Pattern>
     <Pattern>suppress evaluated by</Pattern>
-    <Pattern>suppress evaluated for</Pattern>
     <Pattern>suppress evaluated from</Pattern>
+    <Pattern>suppress evaluated in</Pattern>
+    <Pattern>suppress evaluated inward</Pattern>
+    <Pattern>suppress evaluated inwards</Pattern>
     <Pattern>suppress evaluated past</Pattern>
-    <Pattern>suppress evaluated that</Pattern>
     <Pattern>suppress evaluated to</Pattern>
     <Pattern>suppress evaluated with</Pattern>
+    <Pattern>suppress every bit</Pattern>
     <Pattern>suppress for</Pattern>
     <Pattern>suppress found in</Pattern>
     <Pattern>suppress found inward</Pattern>
@@ -4628,23 +4915,42 @@
     <Pattern>suppress in</Pattern>
     <Pattern>suppress inward</Pattern>
     <Pattern>suppress inwards</Pattern>
-    <Pattern>suppress letter q to</Pattern>
+    <Pattern>suppress neoplasm as</Pattern>
+    <Pattern>suppress neoplasm equally</Pattern>
+    <Pattern>suppress neoplasm every bit</Pattern>
+    <Pattern>suppress neoplasm for</Pattern>
     <Pattern>suppress neoplasm in</Pattern>
     <Pattern>suppress neoplasm inward</Pattern>
     <Pattern>suppress neoplasm inwards</Pattern>
     <Pattern>suppress neoplasm to</Pattern>
+    <Pattern>suppress observed by</Pattern>
+    <Pattern>suppress observed from</Pattern>
+    <Pattern>suppress observed in</Pattern>
+    <Pattern>suppress observed inward</Pattern>
+    <Pattern>suppress observed inwards</Pattern>
+    <Pattern>suppress observed past</Pattern>
+    <Pattern>suppress observed to</Pattern>
+    <Pattern>suppress observed with</Pattern>
     <Pattern>suppress past</Pattern>
-    <Pattern>suppress q10 to</Pattern>
+    <Pattern>suppress potency as</Pattern>
+    <Pattern>suppress potency equally</Pattern>
+    <Pattern>suppress potency every bit</Pattern>
+    <Pattern>suppress potency for</Pattern>
+    <Pattern>suppress potential as</Pattern>
+    <Pattern>suppress potential equally</Pattern>
+    <Pattern>suppress potential every bit</Pattern>
+    <Pattern>suppress potential for</Pattern>
+    <Pattern>suppress potentiality as</Pattern>
+    <Pattern>suppress potentiality equally</Pattern>
+    <Pattern>suppress potentiality every bit</Pattern>
+    <Pattern>suppress potentiality for</Pattern>
     <Pattern>suppress radical to</Pattern>
-    <Pattern>suppress reported against</Pattern>
     <Pattern>suppress reported by</Pattern>
-    <Pattern>suppress reported for</Pattern>
     <Pattern>suppress reported from</Pattern>
     <Pattern>suppress reported in</Pattern>
     <Pattern>suppress reported inward</Pattern>
     <Pattern>suppress reported inwards</Pattern>
     <Pattern>suppress reported past</Pattern>
-    <Pattern>suppress reported that</Pattern>
     <Pattern>suppress reported to</Pattern>
     <Pattern>suppress reported with</Pattern>
     <Pattern>suppress sedative drug in</Pattern>
@@ -4655,40 +4961,98 @@
     <Pattern>suppress sedative inward</Pattern>
     <Pattern>suppress sedative inwards</Pattern>
     <Pattern>suppress sedative to</Pattern>
-    <Pattern>suppress that</Pattern>
+    <Pattern>suppress seen by</Pattern>
+    <Pattern>suppress seen from</Pattern>
+    <Pattern>suppress seen in</Pattern>
+    <Pattern>suppress seen inward</Pattern>
+    <Pattern>suppress seen inwards</Pattern>
+    <Pattern>suppress seen past</Pattern>
+    <Pattern>suppress seen to</Pattern>
+    <Pattern>suppress seen with</Pattern>
+    <Pattern>suppress squalene by</Pattern>
+    <Pattern>suppress squalene from</Pattern>
+    <Pattern>suppress squalene in</Pattern>
+    <Pattern>suppress squalene inward</Pattern>
+    <Pattern>suppress squalene inwards</Pattern>
+    <Pattern>suppress squalene past</Pattern>
+    <Pattern>suppress squalene to</Pattern>
+    <Pattern>suppress squalene with</Pattern>
     <Pattern>suppress to</Pattern>
+    <Pattern>suppress tumor as</Pattern>
+    <Pattern>suppress tumor equally</Pattern>
+    <Pattern>suppress tumor every bit</Pattern>
+    <Pattern>suppress tumor for</Pattern>
     <Pattern>suppress tumor in</Pattern>
     <Pattern>suppress tumor inward</Pattern>
     <Pattern>suppress tumor inwards</Pattern>
     <Pattern>suppress tumor to</Pattern>
+    <Pattern>suppress tumour as</Pattern>
+    <Pattern>suppress tumour equally</Pattern>
+    <Pattern>suppress tumour every bit</Pattern>
+    <Pattern>suppress tumour for</Pattern>
     <Pattern>suppress tumour in</Pattern>
     <Pattern>suppress tumour inward</Pattern>
     <Pattern>suppress tumour inwards</Pattern>
     <Pattern>suppress tumour to</Pattern>
-    <Pattern>suppress varying against</Pattern>
     <Pattern>suppress varying by</Pattern>
-    <Pattern>suppress varying for</Pattern>
     <Pattern>suppress varying from</Pattern>
+    <Pattern>suppress varying in</Pattern>
+    <Pattern>suppress varying inward</Pattern>
+    <Pattern>suppress varying inwards</Pattern>
     <Pattern>suppress varying past</Pattern>
-    <Pattern>suppress varying that</Pattern>
     <Pattern>suppress varying to</Pattern>
     <Pattern>suppress varying with</Pattern>
     <Pattern>suppress with</Pattern>
     <Pattern>suppressed</Pattern>
+    <Pattern>suppressed as</Pattern>
+    <Pattern>suppressed cholesterin as</Pattern>
+    <Pattern>suppressed cholesterin equally</Pattern>
+    <Pattern>suppressed cholesterin every bit</Pattern>
+    <Pattern>suppressed cholesterin for</Pattern>
+    <Pattern>suppressed cholesterol as</Pattern>
+    <Pattern>suppressed cholesterol equally</Pattern>
+    <Pattern>suppressed cholesterol every bit</Pattern>
+    <Pattern>suppressed cholesterol for</Pattern>
+    <Pattern>suppressed equally</Pattern>
+    <Pattern>suppressed every bit</Pattern>
+    <Pattern>suppressed for</Pattern>
+    <Pattern>suppressed neoplasm as</Pattern>
+    <Pattern>suppressed neoplasm equally</Pattern>
+    <Pattern>suppressed neoplasm every bit</Pattern>
+    <Pattern>suppressed neoplasm for</Pattern>
+    <Pattern>suppressed potency as</Pattern>
+    <Pattern>suppressed potency equally</Pattern>
+    <Pattern>suppressed potency every bit</Pattern>
+    <Pattern>suppressed potency for</Pattern>
+    <Pattern>suppressed potential as</Pattern>
+    <Pattern>suppressed potential equally</Pattern>
+    <Pattern>suppressed potential every bit</Pattern>
+    <Pattern>suppressed potential for</Pattern>
+    <Pattern>suppressed potentiality as</Pattern>
+    <Pattern>suppressed potentiality equally</Pattern>
+    <Pattern>suppressed potentiality every bit</Pattern>
+    <Pattern>suppressed potentiality for</Pattern>
+    <Pattern>suppressed tumor as</Pattern>
+    <Pattern>suppressed tumor equally</Pattern>
+    <Pattern>suppressed tumor every bit</Pattern>
+    <Pattern>suppressed tumor for</Pattern>
+    <Pattern>suppressed tumour as</Pattern>
+    <Pattern>suppressed tumour equally</Pattern>
+    <Pattern>suppressed tumour every bit</Pattern>
+    <Pattern>suppressed tumour for</Pattern>
     <Pattern>test</Pattern>
-    <Pattern>test against</Pattern>
     <Pattern>test along</Pattern>
     <Pattern>test been along</Pattern>
     <Pattern>test been for</Pattern>
     <Pattern>test been on</Pattern>
     <Pattern>test been to</Pattern>
     <Pattern>test by</Pattern>
-    <Pattern>test evaluated against</Pattern>
     <Pattern>test evaluated by</Pattern>
-    <Pattern>test evaluated for</Pattern>
     <Pattern>test evaluated from</Pattern>
+    <Pattern>test evaluated in</Pattern>
+    <Pattern>test evaluated inward</Pattern>
+    <Pattern>test evaluated inwards</Pattern>
     <Pattern>test evaluated past</Pattern>
-    <Pattern>test evaluated that</Pattern>
     <Pattern>test evaluated to</Pattern>
     <Pattern>test evaluated with</Pattern>
     <Pattern>test for</Pattern>
@@ -4697,16 +5061,43 @@
     <Pattern>test found on</Pattern>
     <Pattern>test found to</Pattern>
     <Pattern>test from</Pattern>
+    <Pattern>test in</Pattern>
+    <Pattern>test inward</Pattern>
+    <Pattern>test inwards</Pattern>
+    <Pattern>test observed by</Pattern>
+    <Pattern>test observed from</Pattern>
+    <Pattern>test observed in</Pattern>
+    <Pattern>test observed inward</Pattern>
+    <Pattern>test observed inwards</Pattern>
+    <Pattern>test observed past</Pattern>
+    <Pattern>test observed to</Pattern>
+    <Pattern>test observed with</Pattern>
     <Pattern>test on</Pattern>
     <Pattern>test past</Pattern>
-    <Pattern>test reported against</Pattern>
     <Pattern>test reported by</Pattern>
-    <Pattern>test reported for</Pattern>
     <Pattern>test reported from</Pattern>
+    <Pattern>test reported in</Pattern>
+    <Pattern>test reported inward</Pattern>
+    <Pattern>test reported inwards</Pattern>
     <Pattern>test reported past</Pattern>
-    <Pattern>test reported that</Pattern>
     <Pattern>test reported to</Pattern>
     <Pattern>test reported with</Pattern>
+    <Pattern>test seen by</Pattern>
+    <Pattern>test seen from</Pattern>
+    <Pattern>test seen in</Pattern>
+    <Pattern>test seen inward</Pattern>
+    <Pattern>test seen inwards</Pattern>
+    <Pattern>test seen past</Pattern>
+    <Pattern>test seen to</Pattern>
+    <Pattern>test seen with</Pattern>
+    <Pattern>test squalene by</Pattern>
+    <Pattern>test squalene from</Pattern>
+    <Pattern>test squalene in</Pattern>
+    <Pattern>test squalene inward</Pattern>
+    <Pattern>test squalene inwards</Pattern>
+    <Pattern>test squalene past</Pattern>
+    <Pattern>test squalene to</Pattern>
+    <Pattern>test squalene with</Pattern>
     <Pattern>test studied along</Pattern>
     <Pattern>test studied for</Pattern>
     <Pattern>test studied on</Pattern>
@@ -4715,31 +5106,29 @@
     <Pattern>test tested for</Pattern>
     <Pattern>test tested on</Pattern>
     <Pattern>test tested to</Pattern>
-    <Pattern>test that</Pattern>
     <Pattern>test to</Pattern>
-    <Pattern>test varying against</Pattern>
     <Pattern>test varying by</Pattern>
-    <Pattern>test varying for</Pattern>
     <Pattern>test varying from</Pattern>
+    <Pattern>test varying in</Pattern>
+    <Pattern>test varying inward</Pattern>
+    <Pattern>test varying inwards</Pattern>
     <Pattern>test varying past</Pattern>
-    <Pattern>test varying that</Pattern>
     <Pattern>test varying to</Pattern>
     <Pattern>test varying with</Pattern>
     <Pattern>test with</Pattern>
     <Pattern>tested</Pattern>
-    <Pattern>tested against</Pattern>
     <Pattern>tested along</Pattern>
     <Pattern>tested been along</Pattern>
     <Pattern>tested been for</Pattern>
     <Pattern>tested been on</Pattern>
     <Pattern>tested been to</Pattern>
     <Pattern>tested by</Pattern>
-    <Pattern>tested evaluated against</Pattern>
     <Pattern>tested evaluated by</Pattern>
-    <Pattern>tested evaluated for</Pattern>
     <Pattern>tested evaluated from</Pattern>
+    <Pattern>tested evaluated in</Pattern>
+    <Pattern>tested evaluated inward</Pattern>
+    <Pattern>tested evaluated inwards</Pattern>
     <Pattern>tested evaluated past</Pattern>
-    <Pattern>tested evaluated that</Pattern>
     <Pattern>tested evaluated to</Pattern>
     <Pattern>tested evaluated with</Pattern>
     <Pattern>tested for</Pattern>
@@ -4748,16 +5137,43 @@
     <Pattern>tested found on</Pattern>
     <Pattern>tested found to</Pattern>
     <Pattern>tested from</Pattern>
+    <Pattern>tested in</Pattern>
+    <Pattern>tested inward</Pattern>
+    <Pattern>tested inwards</Pattern>
+    <Pattern>tested observed by</Pattern>
+    <Pattern>tested observed from</Pattern>
+    <Pattern>tested observed in</Pattern>
+    <Pattern>tested observed inward</Pattern>
+    <Pattern>tested observed inwards</Pattern>
+    <Pattern>tested observed past</Pattern>
+    <Pattern>tested observed to</Pattern>
+    <Pattern>tested observed with</Pattern>
     <Pattern>tested on</Pattern>
     <Pattern>tested past</Pattern>
-    <Pattern>tested reported against</Pattern>
     <Pattern>tested reported by</Pattern>
-    <Pattern>tested reported for</Pattern>
     <Pattern>tested reported from</Pattern>
+    <Pattern>tested reported in</Pattern>
+    <Pattern>tested reported inward</Pattern>
+    <Pattern>tested reported inwards</Pattern>
     <Pattern>tested reported past</Pattern>
-    <Pattern>tested reported that</Pattern>
     <Pattern>tested reported to</Pattern>
     <Pattern>tested reported with</Pattern>
+    <Pattern>tested seen by</Pattern>
+    <Pattern>tested seen from</Pattern>
+    <Pattern>tested seen in</Pattern>
+    <Pattern>tested seen inward</Pattern>
+    <Pattern>tested seen inwards</Pattern>
+    <Pattern>tested seen past</Pattern>
+    <Pattern>tested seen to</Pattern>
+    <Pattern>tested seen with</Pattern>
+    <Pattern>tested squalene by</Pattern>
+    <Pattern>tested squalene from</Pattern>
+    <Pattern>tested squalene in</Pattern>
+    <Pattern>tested squalene inward</Pattern>
+    <Pattern>tested squalene inwards</Pattern>
+    <Pattern>tested squalene past</Pattern>
+    <Pattern>tested squalene to</Pattern>
+    <Pattern>tested squalene with</Pattern>
     <Pattern>tested studied along</Pattern>
     <Pattern>tested studied for</Pattern>
     <Pattern>tested studied on</Pattern>
@@ -4766,86 +5182,359 @@
     <Pattern>tested tested for</Pattern>
     <Pattern>tested tested on</Pattern>
     <Pattern>tested tested to</Pattern>
-    <Pattern>tested that</Pattern>
     <Pattern>tested to</Pattern>
-    <Pattern>tested varying against</Pattern>
     <Pattern>tested varying by</Pattern>
-    <Pattern>tested varying for</Pattern>
     <Pattern>tested varying from</Pattern>
+    <Pattern>tested varying in</Pattern>
+    <Pattern>tested varying inward</Pattern>
+    <Pattern>tested varying inwards</Pattern>
     <Pattern>tested varying past</Pattern>
-    <Pattern>tested varying that</Pattern>
     <Pattern>tested varying to</Pattern>
     <Pattern>tested varying with</Pattern>
     <Pattern>tested with</Pattern>
+    <Pattern>treat</Pattern>
+    <Pattern>treat by</Pattern>
+    <Pattern>treat evaluated by</Pattern>
+    <Pattern>treat evaluated from</Pattern>
+    <Pattern>treat evaluated in</Pattern>
+    <Pattern>treat evaluated inward</Pattern>
+    <Pattern>treat evaluated inwards</Pattern>
+    <Pattern>treat evaluated past</Pattern>
+    <Pattern>treat evaluated to</Pattern>
+    <Pattern>treat evaluated with</Pattern>
+    <Pattern>treat from</Pattern>
+    <Pattern>treat in</Pattern>
+    <Pattern>treat inward</Pattern>
+    <Pattern>treat inwards</Pattern>
+    <Pattern>treat observed by</Pattern>
+    <Pattern>treat observed from</Pattern>
+    <Pattern>treat observed in</Pattern>
+    <Pattern>treat observed inward</Pattern>
+    <Pattern>treat observed inwards</Pattern>
+    <Pattern>treat observed past</Pattern>
+    <Pattern>treat observed to</Pattern>
+    <Pattern>treat observed with</Pattern>
+    <Pattern>treat past</Pattern>
+    <Pattern>treat reported by</Pattern>
+    <Pattern>treat reported from</Pattern>
+    <Pattern>treat reported in</Pattern>
+    <Pattern>treat reported inward</Pattern>
+    <Pattern>treat reported inwards</Pattern>
+    <Pattern>treat reported past</Pattern>
+    <Pattern>treat reported to</Pattern>
+    <Pattern>treat reported with</Pattern>
+    <Pattern>treat seen by</Pattern>
+    <Pattern>treat seen from</Pattern>
+    <Pattern>treat seen in</Pattern>
+    <Pattern>treat seen inward</Pattern>
+    <Pattern>treat seen inwards</Pattern>
+    <Pattern>treat seen past</Pattern>
+    <Pattern>treat seen to</Pattern>
+    <Pattern>treat seen with</Pattern>
+    <Pattern>treat squalene by</Pattern>
+    <Pattern>treat squalene from</Pattern>
+    <Pattern>treat squalene in</Pattern>
+    <Pattern>treat squalene inward</Pattern>
+    <Pattern>treat squalene inwards</Pattern>
+    <Pattern>treat squalene past</Pattern>
+    <Pattern>treat squalene to</Pattern>
+    <Pattern>treat squalene with</Pattern>
+    <Pattern>treat to</Pattern>
+    <Pattern>treat varying by</Pattern>
+    <Pattern>treat varying from</Pattern>
+    <Pattern>treat varying in</Pattern>
+    <Pattern>treat varying inward</Pattern>
+    <Pattern>treat varying inwards</Pattern>
+    <Pattern>treat varying past</Pattern>
+    <Pattern>treat varying to</Pattern>
+    <Pattern>treat varying with</Pattern>
+    <Pattern>treat with</Pattern>
+    <Pattern>treated</Pattern>
+    <Pattern>treated by</Pattern>
+    <Pattern>treated evaluated by</Pattern>
+    <Pattern>treated evaluated from</Pattern>
+    <Pattern>treated evaluated in</Pattern>
+    <Pattern>treated evaluated inward</Pattern>
+    <Pattern>treated evaluated inwards</Pattern>
+    <Pattern>treated evaluated past</Pattern>
+    <Pattern>treated evaluated to</Pattern>
+    <Pattern>treated evaluated with</Pattern>
+    <Pattern>treated from</Pattern>
+    <Pattern>treated in</Pattern>
+    <Pattern>treated inward</Pattern>
+    <Pattern>treated inwards</Pattern>
+    <Pattern>treated observed by</Pattern>
+    <Pattern>treated observed from</Pattern>
+    <Pattern>treated observed in</Pattern>
+    <Pattern>treated observed inward</Pattern>
+    <Pattern>treated observed inwards</Pattern>
+    <Pattern>treated observed past</Pattern>
+    <Pattern>treated observed to</Pattern>
+    <Pattern>treated observed with</Pattern>
+    <Pattern>treated past</Pattern>
+    <Pattern>treated reported by</Pattern>
+    <Pattern>treated reported from</Pattern>
+    <Pattern>treated reported in</Pattern>
+    <Pattern>treated reported inward</Pattern>
+    <Pattern>treated reported inwards</Pattern>
+    <Pattern>treated reported past</Pattern>
+    <Pattern>treated reported to</Pattern>
+    <Pattern>treated reported with</Pattern>
+    <Pattern>treated seen by</Pattern>
+    <Pattern>treated seen from</Pattern>
+    <Pattern>treated seen in</Pattern>
+    <Pattern>treated seen inward</Pattern>
+    <Pattern>treated seen inwards</Pattern>
+    <Pattern>treated seen past</Pattern>
+    <Pattern>treated seen to</Pattern>
+    <Pattern>treated seen with</Pattern>
+    <Pattern>treated squalene by</Pattern>
+    <Pattern>treated squalene from</Pattern>
+    <Pattern>treated squalene in</Pattern>
+    <Pattern>treated squalene inward</Pattern>
+    <Pattern>treated squalene inwards</Pattern>
+    <Pattern>treated squalene past</Pattern>
+    <Pattern>treated squalene to</Pattern>
+    <Pattern>treated squalene with</Pattern>
+    <Pattern>treated to</Pattern>
+    <Pattern>treated varying by</Pattern>
+    <Pattern>treated varying from</Pattern>
+    <Pattern>treated varying in</Pattern>
+    <Pattern>treated varying inward</Pattern>
+    <Pattern>treated varying inwards</Pattern>
+    <Pattern>treated varying past</Pattern>
+    <Pattern>treated varying to</Pattern>
+    <Pattern>treated varying with</Pattern>
+    <Pattern>treated with</Pattern>
     <Pattern>trypsinized</Pattern>
-    <Pattern>trypsinized against</Pattern>
     <Pattern>trypsinized by</Pattern>
-    <Pattern>trypsinized evaluated against</Pattern>
     <Pattern>trypsinized evaluated by</Pattern>
-    <Pattern>trypsinized evaluated for</Pattern>
     <Pattern>trypsinized evaluated from</Pattern>
+    <Pattern>trypsinized evaluated in</Pattern>
+    <Pattern>trypsinized evaluated inward</Pattern>
+    <Pattern>trypsinized evaluated inwards</Pattern>
     <Pattern>trypsinized evaluated past</Pattern>
-    <Pattern>trypsinized evaluated that</Pattern>
     <Pattern>trypsinized evaluated to</Pattern>
     <Pattern>trypsinized evaluated with</Pattern>
-    <Pattern>trypsinized for</Pattern>
     <Pattern>trypsinized from</Pattern>
+    <Pattern>trypsinized in</Pattern>
+    <Pattern>trypsinized inward</Pattern>
+    <Pattern>trypsinized inwards</Pattern>
+    <Pattern>trypsinized observed by</Pattern>
+    <Pattern>trypsinized observed from</Pattern>
+    <Pattern>trypsinized observed in</Pattern>
+    <Pattern>trypsinized observed inward</Pattern>
+    <Pattern>trypsinized observed inwards</Pattern>
+    <Pattern>trypsinized observed past</Pattern>
+    <Pattern>trypsinized observed to</Pattern>
+    <Pattern>trypsinized observed with</Pattern>
     <Pattern>trypsinized past</Pattern>
-    <Pattern>trypsinized reported against</Pattern>
     <Pattern>trypsinized reported by</Pattern>
-    <Pattern>trypsinized reported for</Pattern>
     <Pattern>trypsinized reported from</Pattern>
+    <Pattern>trypsinized reported in</Pattern>
+    <Pattern>trypsinized reported inward</Pattern>
+    <Pattern>trypsinized reported inwards</Pattern>
     <Pattern>trypsinized reported past</Pattern>
-    <Pattern>trypsinized reported that</Pattern>
     <Pattern>trypsinized reported to</Pattern>
     <Pattern>trypsinized reported with</Pattern>
-    <Pattern>trypsinized that</Pattern>
+    <Pattern>trypsinized seen by</Pattern>
+    <Pattern>trypsinized seen from</Pattern>
+    <Pattern>trypsinized seen in</Pattern>
+    <Pattern>trypsinized seen inward</Pattern>
+    <Pattern>trypsinized seen inwards</Pattern>
+    <Pattern>trypsinized seen past</Pattern>
+    <Pattern>trypsinized seen to</Pattern>
+    <Pattern>trypsinized seen with</Pattern>
+    <Pattern>trypsinized squalene by</Pattern>
+    <Pattern>trypsinized squalene from</Pattern>
+    <Pattern>trypsinized squalene in</Pattern>
+    <Pattern>trypsinized squalene inward</Pattern>
+    <Pattern>trypsinized squalene inwards</Pattern>
+    <Pattern>trypsinized squalene past</Pattern>
+    <Pattern>trypsinized squalene to</Pattern>
+    <Pattern>trypsinized squalene with</Pattern>
     <Pattern>trypsinized to</Pattern>
-    <Pattern>trypsinized varying against</Pattern>
     <Pattern>trypsinized varying by</Pattern>
-    <Pattern>trypsinized varying for</Pattern>
     <Pattern>trypsinized varying from</Pattern>
+    <Pattern>trypsinized varying in</Pattern>
+    <Pattern>trypsinized varying inward</Pattern>
+    <Pattern>trypsinized varying inwards</Pattern>
     <Pattern>trypsinized varying past</Pattern>
-    <Pattern>trypsinized varying that</Pattern>
     <Pattern>trypsinized varying to</Pattern>
     <Pattern>trypsinized varying with</Pattern>
     <Pattern>trypsinized with</Pattern>
+    <Pattern>use</Pattern>
+    <Pattern>use by</Pattern>
+    <Pattern>use evaluated by</Pattern>
+    <Pattern>use evaluated from</Pattern>
+    <Pattern>use evaluated in</Pattern>
+    <Pattern>use evaluated inward</Pattern>
+    <Pattern>use evaluated inwards</Pattern>
+    <Pattern>use evaluated past</Pattern>
+    <Pattern>use evaluated to</Pattern>
+    <Pattern>use evaluated with</Pattern>
+    <Pattern>use from</Pattern>
+    <Pattern>use in</Pattern>
+    <Pattern>use inward</Pattern>
+    <Pattern>use inwards</Pattern>
+    <Pattern>use observed by</Pattern>
+    <Pattern>use observed from</Pattern>
+    <Pattern>use observed in</Pattern>
+    <Pattern>use observed inward</Pattern>
+    <Pattern>use observed inwards</Pattern>
+    <Pattern>use observed past</Pattern>
+    <Pattern>use observed to</Pattern>
+    <Pattern>use observed with</Pattern>
+    <Pattern>use past</Pattern>
+    <Pattern>use reported by</Pattern>
+    <Pattern>use reported from</Pattern>
+    <Pattern>use reported in</Pattern>
+    <Pattern>use reported inward</Pattern>
+    <Pattern>use reported inwards</Pattern>
+    <Pattern>use reported past</Pattern>
+    <Pattern>use reported to</Pattern>
+    <Pattern>use reported with</Pattern>
+    <Pattern>use seen by</Pattern>
+    <Pattern>use seen from</Pattern>
+    <Pattern>use seen in</Pattern>
+    <Pattern>use seen inward</Pattern>
+    <Pattern>use seen inwards</Pattern>
+    <Pattern>use seen past</Pattern>
+    <Pattern>use seen to</Pattern>
+    <Pattern>use seen with</Pattern>
+    <Pattern>use squalene by</Pattern>
+    <Pattern>use squalene from</Pattern>
+    <Pattern>use squalene in</Pattern>
+    <Pattern>use squalene inward</Pattern>
+    <Pattern>use squalene inwards</Pattern>
+    <Pattern>use squalene past</Pattern>
+    <Pattern>use squalene to</Pattern>
+    <Pattern>use squalene with</Pattern>
+    <Pattern>use to</Pattern>
+    <Pattern>use varying by</Pattern>
+    <Pattern>use varying from</Pattern>
+    <Pattern>use varying in</Pattern>
+    <Pattern>use varying inward</Pattern>
+    <Pattern>use varying inwards</Pattern>
+    <Pattern>use varying past</Pattern>
+    <Pattern>use varying to</Pattern>
+    <Pattern>use varying with</Pattern>
+    <Pattern>use with</Pattern>
+    <Pattern>using</Pattern>
+    <Pattern>using by</Pattern>
+    <Pattern>using evaluated by</Pattern>
+    <Pattern>using evaluated from</Pattern>
+    <Pattern>using evaluated in</Pattern>
+    <Pattern>using evaluated inward</Pattern>
+    <Pattern>using evaluated inwards</Pattern>
+    <Pattern>using evaluated past</Pattern>
+    <Pattern>using evaluated to</Pattern>
+    <Pattern>using evaluated with</Pattern>
+    <Pattern>using from</Pattern>
+    <Pattern>using in</Pattern>
+    <Pattern>using inward</Pattern>
+    <Pattern>using inwards</Pattern>
+    <Pattern>using observed by</Pattern>
+    <Pattern>using observed from</Pattern>
+    <Pattern>using observed in</Pattern>
+    <Pattern>using observed inward</Pattern>
+    <Pattern>using observed inwards</Pattern>
+    <Pattern>using observed past</Pattern>
+    <Pattern>using observed to</Pattern>
+    <Pattern>using observed with</Pattern>
+    <Pattern>using past</Pattern>
+    <Pattern>using reported by</Pattern>
+    <Pattern>using reported from</Pattern>
+    <Pattern>using reported in</Pattern>
+    <Pattern>using reported inward</Pattern>
+    <Pattern>using reported inwards</Pattern>
+    <Pattern>using reported past</Pattern>
+    <Pattern>using reported to</Pattern>
+    <Pattern>using reported with</Pattern>
+    <Pattern>using seen by</Pattern>
+    <Pattern>using seen from</Pattern>
+    <Pattern>using seen in</Pattern>
+    <Pattern>using seen inward</Pattern>
+    <Pattern>using seen inwards</Pattern>
+    <Pattern>using seen past</Pattern>
+    <Pattern>using seen to</Pattern>
+    <Pattern>using seen with</Pattern>
+    <Pattern>using squalene by</Pattern>
+    <Pattern>using squalene from</Pattern>
+    <Pattern>using squalene in</Pattern>
+    <Pattern>using squalene inward</Pattern>
+    <Pattern>using squalene inwards</Pattern>
+    <Pattern>using squalene past</Pattern>
+    <Pattern>using squalene to</Pattern>
+    <Pattern>using squalene with</Pattern>
+    <Pattern>using to</Pattern>
+    <Pattern>using varying by</Pattern>
+    <Pattern>using varying from</Pattern>
+    <Pattern>using varying in</Pattern>
+    <Pattern>using varying inward</Pattern>
+    <Pattern>using varying inwards</Pattern>
+    <Pattern>using varying past</Pattern>
+    <Pattern>using varying to</Pattern>
+    <Pattern>using varying with</Pattern>
+    <Pattern>using with</Pattern>
     <Pattern>varying</Pattern>
-    <Pattern>varying against</Pattern>
     <Pattern>varying by</Pattern>
-    <Pattern>varying evaluated against</Pattern>
     <Pattern>varying evaluated by</Pattern>
-    <Pattern>varying evaluated for</Pattern>
     <Pattern>varying evaluated from</Pattern>
+    <Pattern>varying evaluated in</Pattern>
+    <Pattern>varying evaluated inward</Pattern>
+    <Pattern>varying evaluated inwards</Pattern>
     <Pattern>varying evaluated past</Pattern>
-    <Pattern>varying evaluated that</Pattern>
     <Pattern>varying evaluated to</Pattern>
     <Pattern>varying evaluated with</Pattern>
-    <Pattern>varying for</Pattern>
     <Pattern>varying from</Pattern>
+    <Pattern>varying in</Pattern>
+    <Pattern>varying inward</Pattern>
+    <Pattern>varying inwards</Pattern>
+    <Pattern>varying observed by</Pattern>
+    <Pattern>varying observed from</Pattern>
+    <Pattern>varying observed in</Pattern>
+    <Pattern>varying observed inward</Pattern>
+    <Pattern>varying observed inwards</Pattern>
+    <Pattern>varying observed past</Pattern>
+    <Pattern>varying observed to</Pattern>
+    <Pattern>varying observed with</Pattern>
     <Pattern>varying past</Pattern>
-    <Pattern>varying reported against</Pattern>
     <Pattern>varying reported by</Pattern>
-    <Pattern>varying reported for</Pattern>
     <Pattern>varying reported from</Pattern>
+    <Pattern>varying reported in</Pattern>
+    <Pattern>varying reported inward</Pattern>
+    <Pattern>varying reported inwards</Pattern>
     <Pattern>varying reported past</Pattern>
-    <Pattern>varying reported that</Pattern>
     <Pattern>varying reported to</Pattern>
     <Pattern>varying reported with</Pattern>
-    <Pattern>varying that</Pattern>
+    <Pattern>varying seen by</Pattern>
+    <Pattern>varying seen from</Pattern>
+    <Pattern>varying seen in</Pattern>
+    <Pattern>varying seen inward</Pattern>
+    <Pattern>varying seen inwards</Pattern>
+    <Pattern>varying seen past</Pattern>
+    <Pattern>varying seen to</Pattern>
+    <Pattern>varying seen with</Pattern>
+    <Pattern>varying squalene by</Pattern>
+    <Pattern>varying squalene from</Pattern>
+    <Pattern>varying squalene in</Pattern>
+    <Pattern>varying squalene inward</Pattern>
+    <Pattern>varying squalene inwards</Pattern>
+    <Pattern>varying squalene past</Pattern>
+    <Pattern>varying squalene to</Pattern>
+    <Pattern>varying squalene with</Pattern>
     <Pattern>varying to</Pattern>
-    <Pattern>varying varying against</Pattern>
     <Pattern>varying varying by</Pattern>
-    <Pattern>varying varying for</Pattern>
     <Pattern>varying varying from</Pattern>
+    <Pattern>varying varying in</Pattern>
+    <Pattern>varying varying inward</Pattern>
+    <Pattern>varying varying inwards</Pattern>
     <Pattern>varying varying past</Pattern>
-    <Pattern>varying varying that</Pattern>
     <Pattern>varying varying to</Pattern>
     <Pattern>varying varying with</Pattern>
     <Pattern>varying with</Pattern>
     <Pattern>was</Pattern>
-    <Pattern>was Q to</Pattern>
-    <Pattern>was against</Pattern>
     <Pattern>was along</Pattern>
     <Pattern>was as</Pattern>
     <Pattern>was been along</Pattern>
@@ -4880,8 +5569,6 @@
     <Pattern>was beta-sitosterol to</Pattern>
     <Pattern>was betacatenin for</Pattern>
     <Pattern>was betacatenin to</Pattern>
-    <Pattern>was burn from</Pattern>
-    <Pattern>was burn through</Pattern>
     <Pattern>was by</Pattern>
     <Pattern>was chemical group as</Pattern>
     <Pattern>was chemical group equally</Pattern>
@@ -4889,6 +5576,14 @@
     <Pattern>was chemical group for</Pattern>
     <Pattern>was chemical group that</Pattern>
     <Pattern>was chemical group to</Pattern>
+    <Pattern>was cholesterin as</Pattern>
+    <Pattern>was cholesterin equally</Pattern>
+    <Pattern>was cholesterin every bit</Pattern>
+    <Pattern>was cholesterin for</Pattern>
+    <Pattern>was cholesterol as</Pattern>
+    <Pattern>was cholesterol equally</Pattern>
+    <Pattern>was cholesterol every bit</Pattern>
+    <Pattern>was cholesterol for</Pattern>
     <Pattern>was depressant in</Pattern>
     <Pattern>was depressant inward</Pattern>
     <Pattern>was depressant inwards</Pattern>
@@ -4898,12 +5593,12 @@
     <Pattern>was downer inwards</Pattern>
     <Pattern>was downer to</Pattern>
     <Pattern>was equally</Pattern>
-    <Pattern>was evaluated against</Pattern>
     <Pattern>was evaluated by</Pattern>
-    <Pattern>was evaluated for</Pattern>
     <Pattern>was evaluated from</Pattern>
+    <Pattern>was evaluated in</Pattern>
+    <Pattern>was evaluated inward</Pattern>
+    <Pattern>was evaluated inwards</Pattern>
     <Pattern>was evaluated past</Pattern>
-    <Pattern>was evaluated that</Pattern>
     <Pattern>was evaluated to</Pattern>
     <Pattern>was evaluated with</Pattern>
     <Pattern>was every bit</Pattern>
@@ -4930,28 +5625,48 @@
     <Pattern>was inwards</Pattern>
     <Pattern>was isolated from</Pattern>
     <Pattern>was isolated through</Pattern>
-    <Pattern>was letter q to</Pattern>
+    <Pattern>was neoplasm as</Pattern>
+    <Pattern>was neoplasm equally</Pattern>
+    <Pattern>was neoplasm every bit</Pattern>
+    <Pattern>was neoplasm for</Pattern>
     <Pattern>was neoplasm in</Pattern>
     <Pattern>was neoplasm inward</Pattern>
     <Pattern>was neoplasm inwards</Pattern>
     <Pattern>was neoplasm to</Pattern>
+    <Pattern>was observed by</Pattern>
+    <Pattern>was observed from</Pattern>
+    <Pattern>was observed in</Pattern>
+    <Pattern>was observed inward</Pattern>
+    <Pattern>was observed inwards</Pattern>
+    <Pattern>was observed past</Pattern>
+    <Pattern>was observed to</Pattern>
+    <Pattern>was observed with</Pattern>
     <Pattern>was on</Pattern>
     <Pattern>was past</Pattern>
+    <Pattern>was potency as</Pattern>
+    <Pattern>was potency equally</Pattern>
+    <Pattern>was potency every bit</Pattern>
+    <Pattern>was potency for</Pattern>
+    <Pattern>was potential as</Pattern>
+    <Pattern>was potential equally</Pattern>
+    <Pattern>was potential every bit</Pattern>
+    <Pattern>was potential for</Pattern>
+    <Pattern>was potentiality as</Pattern>
+    <Pattern>was potentiality equally</Pattern>
+    <Pattern>was potentiality every bit</Pattern>
+    <Pattern>was potentiality for</Pattern>
     <Pattern>was proved from</Pattern>
     <Pattern>was proved through</Pattern>
-    <Pattern>was q10 to</Pattern>
     <Pattern>was radical as</Pattern>
     <Pattern>was radical equally</Pattern>
     <Pattern>was radical every bit</Pattern>
     <Pattern>was radical for</Pattern>
     <Pattern>was radical that</Pattern>
     <Pattern>was radical to</Pattern>
-    <Pattern>was reported against</Pattern>
     <Pattern>was reported as</Pattern>
     <Pattern>was reported by</Pattern>
     <Pattern>was reported equally</Pattern>
     <Pattern>was reported every bit</Pattern>
-    <Pattern>was reported for</Pattern>
     <Pattern>was reported from</Pattern>
     <Pattern>was reported in</Pattern>
     <Pattern>was reported inward</Pattern>
@@ -4968,18 +5683,26 @@
     <Pattern>was sedative inward</Pattern>
     <Pattern>was sedative inwards</Pattern>
     <Pattern>was sedative to</Pattern>
+    <Pattern>was seen by</Pattern>
+    <Pattern>was seen from</Pattern>
+    <Pattern>was seen in</Pattern>
+    <Pattern>was seen inward</Pattern>
+    <Pattern>was seen inwards</Pattern>
+    <Pattern>was seen past</Pattern>
+    <Pattern>was seen to</Pattern>
+    <Pattern>was seen with</Pattern>
+    <Pattern>was squalene by</Pattern>
+    <Pattern>was squalene from</Pattern>
+    <Pattern>was squalene in</Pattern>
+    <Pattern>was squalene inward</Pattern>
+    <Pattern>was squalene inwards</Pattern>
+    <Pattern>was squalene past</Pattern>
+    <Pattern>was squalene to</Pattern>
+    <Pattern>was squalene with</Pattern>
     <Pattern>was studied along</Pattern>
     <Pattern>was studied for</Pattern>
     <Pattern>was studied on</Pattern>
     <Pattern>was studied to</Pattern>
-    <Pattern>was sunburn from</Pattern>
-    <Pattern>was sunburn through</Pattern>
-    <Pattern>was suntan from</Pattern>
-    <Pattern>was suntan through</Pattern>
-    <Pattern>was tan from</Pattern>
-    <Pattern>was tan through</Pattern>
-    <Pattern>was tan1 from</Pattern>
-    <Pattern>was tan1 through</Pattern>
     <Pattern>was tested along</Pattern>
     <Pattern>was tested for</Pattern>
     <Pattern>was tested on</Pattern>
@@ -4997,31 +5720,32 @@
     <Pattern>was triglycerides every bit</Pattern>
     <Pattern>was triglycerides that</Pattern>
     <Pattern>was triglycerides to</Pattern>
+    <Pattern>was tumor as</Pattern>
+    <Pattern>was tumor equally</Pattern>
+    <Pattern>was tumor every bit</Pattern>
+    <Pattern>was tumor for</Pattern>
     <Pattern>was tumor in</Pattern>
     <Pattern>was tumor inward</Pattern>
     <Pattern>was tumor inwards</Pattern>
     <Pattern>was tumor to</Pattern>
+    <Pattern>was tumour as</Pattern>
+    <Pattern>was tumour equally</Pattern>
+    <Pattern>was tumour every bit</Pattern>
+    <Pattern>was tumour for</Pattern>
     <Pattern>was tumour in</Pattern>
     <Pattern>was tumour inward</Pattern>
     <Pattern>was tumour inwards</Pattern>
     <Pattern>was tumour to</Pattern>
-    <Pattern>was varying against</Pattern>
     <Pattern>was varying by</Pattern>
-    <Pattern>was varying for</Pattern>
     <Pattern>was varying from</Pattern>
+    <Pattern>was varying in</Pattern>
+    <Pattern>was varying inward</Pattern>
+    <Pattern>was varying inwards</Pattern>
     <Pattern>was varying past</Pattern>
-    <Pattern>was varying that</Pattern>
     <Pattern>was varying to</Pattern>
     <Pattern>was varying with</Pattern>
     <Pattern>was with</Pattern>
     <Pattern>were</Pattern>
-    <Pattern>were Q along</Pattern>
-    <Pattern>were Q by</Pattern>
-    <Pattern>were Q for</Pattern>
-    <Pattern>were Q on</Pattern>
-    <Pattern>were Q past</Pattern>
-    <Pattern>were Q to</Pattern>
-    <Pattern>were against</Pattern>
     <Pattern>were alkaloid to</Pattern>
     <Pattern>were along</Pattern>
     <Pattern>were as</Pattern>
@@ -5073,12 +5797,12 @@
     <Pattern>were compounds past</Pattern>
     <Pattern>were compounds to</Pattern>
     <Pattern>were equally</Pattern>
-    <Pattern>were evaluated against</Pattern>
     <Pattern>were evaluated by</Pattern>
-    <Pattern>were evaluated for</Pattern>
     <Pattern>were evaluated from</Pattern>
+    <Pattern>were evaluated in</Pattern>
+    <Pattern>were evaluated inward</Pattern>
+    <Pattern>were evaluated inwards</Pattern>
     <Pattern>were evaluated past</Pattern>
-    <Pattern>were evaluated that</Pattern>
     <Pattern>were evaluated to</Pattern>
     <Pattern>were evaluated with</Pattern>
     <Pattern>were every bit</Pattern>
@@ -5102,38 +5826,54 @@
     <Pattern>were identified on</Pattern>
     <Pattern>were identified past</Pattern>
     <Pattern>were identified to</Pattern>
+    <Pattern>were in</Pattern>
+    <Pattern>were inward</Pattern>
+    <Pattern>were inwards</Pattern>
     <Pattern>were lesion to</Pattern>
-    <Pattern>were letter q along</Pattern>
-    <Pattern>were letter q by</Pattern>
-    <Pattern>were letter q for</Pattern>
-    <Pattern>were letter q on</Pattern>
-    <Pattern>were letter q past</Pattern>
-    <Pattern>were letter q to</Pattern>
     <Pattern>were neoplasm to</Pattern>
+    <Pattern>were observed by</Pattern>
+    <Pattern>were observed from</Pattern>
+    <Pattern>were observed in</Pattern>
+    <Pattern>were observed inward</Pattern>
+    <Pattern>were observed inwards</Pattern>
+    <Pattern>were observed past</Pattern>
+    <Pattern>were observed to</Pattern>
+    <Pattern>were observed with</Pattern>
     <Pattern>were on</Pattern>
     <Pattern>were past</Pattern>
-    <Pattern>were q10 along</Pattern>
-    <Pattern>were q10 by</Pattern>
-    <Pattern>were q10 for</Pattern>
-    <Pattern>were q10 on</Pattern>
-    <Pattern>were q10 past</Pattern>
-    <Pattern>were q10 to</Pattern>
     <Pattern>were radical as</Pattern>
     <Pattern>were radical equally</Pattern>
     <Pattern>were radical every bit</Pattern>
     <Pattern>were radical that</Pattern>
     <Pattern>were radical to</Pattern>
-    <Pattern>were reported against</Pattern>
     <Pattern>were reported as</Pattern>
     <Pattern>were reported by</Pattern>
     <Pattern>were reported equally</Pattern>
     <Pattern>were reported every bit</Pattern>
-    <Pattern>were reported for</Pattern>
     <Pattern>were reported from</Pattern>
+    <Pattern>were reported in</Pattern>
+    <Pattern>were reported inward</Pattern>
+    <Pattern>were reported inwards</Pattern>
     <Pattern>were reported past</Pattern>
     <Pattern>were reported that</Pattern>
     <Pattern>were reported to</Pattern>
     <Pattern>were reported with</Pattern>
+    <Pattern>were seen by</Pattern>
+    <Pattern>were seen from</Pattern>
+    <Pattern>were seen in</Pattern>
+    <Pattern>were seen inward</Pattern>
+    <Pattern>were seen inwards</Pattern>
+    <Pattern>were seen past</Pattern>
+    <Pattern>were seen to</Pattern>
+    <Pattern>were seen with</Pattern>
+    <Pattern>were squalene by</Pattern>
+    <Pattern>were squalene from</Pattern>
+    <Pattern>were squalene in</Pattern>
+    <Pattern>were squalene inward</Pattern>
+    <Pattern>were squalene inwards</Pattern>
+    <Pattern>were squalene past</Pattern>
+    <Pattern>were squalene to</Pattern>
+    <Pattern>were squalene with</Pattern>
     <Pattern>were studied along</Pattern>
     <Pattern>were studied by</Pattern>
     <Pattern>were studied for</Pattern>
@@ -5158,12 +5898,12 @@
     <Pattern>were triglycerides to</Pattern>
     <Pattern>were tumor to</Pattern>
     <Pattern>were tumour to</Pattern>
-    <Pattern>were varying against</Pattern>
     <Pattern>were varying by</Pattern>
-    <Pattern>were varying for</Pattern>
     <Pattern>were varying from</Pattern>
+    <Pattern>were varying in</Pattern>
+    <Pattern>were varying inward</Pattern>
+    <Pattern>were varying inwards</Pattern>
     <Pattern>were varying past</Pattern>
-    <Pattern>were varying that</Pattern>
     <Pattern>were varying to</Pattern>
     <Pattern>were varying with</Pattern>
     <Pattern>were with</Pattern>

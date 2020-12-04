@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>ginkgo biloba</Name>
+  </Tag1>
+  <Tag2>Compound<Name>polyprenol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>found to</Pattern>
+    <Pattern>identified as</Pattern>
+    <Pattern>indicated that</Pattern>
+    <Pattern>was found to</Pattern>
+    <Pattern>was identified as</Pattern>
+    <Pattern>was inactive against</Pattern>
+  </Relation>
+</Seed>

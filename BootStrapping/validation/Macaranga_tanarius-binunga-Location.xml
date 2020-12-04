@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>MedicinalPlant<Name>binunga</Name>
+  </Tag1>
+  <Tag2>Location<Name>philippines</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>altitudes throughout</Pattern>
+    <Pattern>groves at</Pattern>
+    <Pattern>grows in</Pattern>
+    <Pattern>thickets</Pattern>
+  </Relation>
+</Seed>

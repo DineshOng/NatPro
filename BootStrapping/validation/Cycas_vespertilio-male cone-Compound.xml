@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>male cone</Name>
+  </Tag1>
+  <Tag2>Compound<Name>affordedpinoresinol</Name>
+    <Name>pinoresinol</Name>
+    <Name>lariciresinol</Name>
+    <Name>alpha-amyrin acetate</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>dichloromethane</Name>
+    <Name>betasitosterol</Name>
+    <Name>lupeol acetate</Name>
+    <Name>triglycerides</Name>
+    <Name>stigmasterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>confirmed by</Pattern>
+    <Pattern>elucidated by</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>reported in</Pattern>
+    <Pattern>were elucidated by</Pattern>
+  </Relation>
+</Seed>

@@ -125,7 +125,7 @@
     <Pattern>be United States Intelligence Community inwards</Pattern>
     <Pattern>be United States Intelligence Community past</Pattern>
     <Pattern>be United States Intelligence Community that</Pattern>
-    <Pattern>be against</Pattern>
+    <Pattern>be as</Pattern>
     <Pattern>be assay by</Pattern>
     <Pattern>be assay in</Pattern>
     <Pattern>be assay inward</Pattern>
@@ -151,12 +151,23 @@
     <Pattern>be check inwards</Pattern>
     <Pattern>be check past</Pattern>
     <Pattern>be check that</Pattern>
+    <Pattern>be cholesterin as</Pattern>
+    <Pattern>be cholesterin equally</Pattern>
+    <Pattern>be cholesterin every bit</Pattern>
+    <Pattern>be cholesterin for</Pattern>
+    <Pattern>be cholesterol as</Pattern>
+    <Pattern>be cholesterol equally</Pattern>
+    <Pattern>be cholesterol every bit</Pattern>
+    <Pattern>be cholesterol for</Pattern>
+    <Pattern>be equally</Pattern>
+    <Pattern>be every bit</Pattern>
     <Pattern>be followed by</Pattern>
     <Pattern>be followed in</Pattern>
     <Pattern>be followed inward</Pattern>
     <Pattern>be followed inwards</Pattern>
     <Pattern>be followed past</Pattern>
     <Pattern>be followed that</Pattern>
+    <Pattern>be for</Pattern>
     <Pattern>be found by</Pattern>
     <Pattern>be found in</Pattern>
     <Pattern>be found inward</Pattern>
@@ -179,14 +190,16 @@
     <Pattern>be malignant neoplastic disease inwards</Pattern>
     <Pattern>be malignant neoplastic disease past</Pattern>
     <Pattern>be malignant neoplastic disease that</Pattern>
-    <Pattern>be observed against</Pattern>
+    <Pattern>be neoplasm as</Pattern>
+    <Pattern>be neoplasm equally</Pattern>
+    <Pattern>be neoplasm every bit</Pattern>
+    <Pattern>be neoplasm for</Pattern>
     <Pattern>be observed by</Pattern>
     <Pattern>be observed from</Pattern>
     <Pattern>be observed in</Pattern>
     <Pattern>be observed inward</Pattern>
     <Pattern>be observed inwards</Pattern>
     <Pattern>be observed past</Pattern>
-    <Pattern>be our against</Pattern>
     <Pattern>be our by</Pattern>
     <Pattern>be our from</Pattern>
     <Pattern>be our in</Pattern>
@@ -194,14 +207,24 @@
     <Pattern>be our inwards</Pattern>
     <Pattern>be our past</Pattern>
     <Pattern>be past</Pattern>
-    <Pattern>be seen against</Pattern>
+    <Pattern>be potency as</Pattern>
+    <Pattern>be potency equally</Pattern>
+    <Pattern>be potency every bit</Pattern>
+    <Pattern>be potency for</Pattern>
+    <Pattern>be potential as</Pattern>
+    <Pattern>be potential equally</Pattern>
+    <Pattern>be potential every bit</Pattern>
+    <Pattern>be potential for</Pattern>
+    <Pattern>be potentiality as</Pattern>
+    <Pattern>be potentiality equally</Pattern>
+    <Pattern>be potentiality every bit</Pattern>
+    <Pattern>be potentiality for</Pattern>
     <Pattern>be seen by</Pattern>
     <Pattern>be seen from</Pattern>
     <Pattern>be seen in</Pattern>
     <Pattern>be seen inward</Pattern>
     <Pattern>be seen inwards</Pattern>
     <Pattern>be seen past</Pattern>
-    <Pattern>be squalene against</Pattern>
     <Pattern>be squalene by</Pattern>
     <Pattern>be squalene from</Pattern>
     <Pattern>be squalene in</Pattern>
@@ -215,6 +238,14 @@
     <Pattern>be synopsized past</Pattern>
     <Pattern>be synopsized that</Pattern>
     <Pattern>be that</Pattern>
+    <Pattern>be tumor as</Pattern>
+    <Pattern>be tumor equally</Pattern>
+    <Pattern>be tumor every bit</Pattern>
+    <Pattern>be tumor for</Pattern>
+    <Pattern>be tumour as</Pattern>
+    <Pattern>be tumour equally</Pattern>
+    <Pattern>be tumour every bit</Pattern>
+    <Pattern>be tumour for</Pattern>
     <Pattern>commemorate</Pattern>
     <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
     <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
@@ -307,20 +338,17 @@
     <Pattern>commemorate synopsized that</Pattern>
     <Pattern>commemorate that</Pattern>
     <Pattern>confirm</Pattern>
-    <Pattern>confirm against</Pattern>
     <Pattern>confirm by</Pattern>
     <Pattern>confirm from</Pattern>
     <Pattern>confirm in</Pattern>
     <Pattern>confirm inward</Pattern>
     <Pattern>confirm inwards</Pattern>
-    <Pattern>confirm observed against</Pattern>
     <Pattern>confirm observed by</Pattern>
     <Pattern>confirm observed from</Pattern>
     <Pattern>confirm observed in</Pattern>
     <Pattern>confirm observed inward</Pattern>
     <Pattern>confirm observed inwards</Pattern>
     <Pattern>confirm observed past</Pattern>
-    <Pattern>confirm our against</Pattern>
     <Pattern>confirm our by</Pattern>
     <Pattern>confirm our from</Pattern>
     <Pattern>confirm our in</Pattern>
@@ -328,14 +356,12 @@
     <Pattern>confirm our inwards</Pattern>
     <Pattern>confirm our past</Pattern>
     <Pattern>confirm past</Pattern>
-    <Pattern>confirm seen against</Pattern>
     <Pattern>confirm seen by</Pattern>
     <Pattern>confirm seen from</Pattern>
     <Pattern>confirm seen in</Pattern>
     <Pattern>confirm seen inward</Pattern>
     <Pattern>confirm seen inwards</Pattern>
     <Pattern>confirm seen past</Pattern>
-    <Pattern>confirm squalene against</Pattern>
     <Pattern>confirm squalene by</Pattern>
     <Pattern>confirm squalene from</Pattern>
     <Pattern>confirm squalene in</Pattern>
@@ -343,20 +369,17 @@
     <Pattern>confirm squalene inwards</Pattern>
     <Pattern>confirm squalene past</Pattern>
     <Pattern>corroborate</Pattern>
-    <Pattern>corroborate against</Pattern>
     <Pattern>corroborate by</Pattern>
     <Pattern>corroborate from</Pattern>
     <Pattern>corroborate in</Pattern>
     <Pattern>corroborate inward</Pattern>
     <Pattern>corroborate inwards</Pattern>
-    <Pattern>corroborate observed against</Pattern>
     <Pattern>corroborate observed by</Pattern>
     <Pattern>corroborate observed from</Pattern>
     <Pattern>corroborate observed in</Pattern>
     <Pattern>corroborate observed inward</Pattern>
     <Pattern>corroborate observed inwards</Pattern>
     <Pattern>corroborate observed past</Pattern>
-    <Pattern>corroborate our against</Pattern>
     <Pattern>corroborate our by</Pattern>
     <Pattern>corroborate our from</Pattern>
     <Pattern>corroborate our in</Pattern>
@@ -364,14 +387,12 @@
     <Pattern>corroborate our inwards</Pattern>
     <Pattern>corroborate our past</Pattern>
     <Pattern>corroborate past</Pattern>
-    <Pattern>corroborate seen against</Pattern>
     <Pattern>corroborate seen by</Pattern>
     <Pattern>corroborate seen from</Pattern>
     <Pattern>corroborate seen in</Pattern>
     <Pattern>corroborate seen inward</Pattern>
     <Pattern>corroborate seen inwards</Pattern>
     <Pattern>corroborate seen past</Pattern>
-    <Pattern>corroborate squalene against</Pattern>
     <Pattern>corroborate squalene by</Pattern>
     <Pattern>corroborate squalene from</Pattern>
     <Pattern>corroborate squalene in</Pattern>
@@ -379,20 +400,17 @@
     <Pattern>corroborate squalene inwards</Pattern>
     <Pattern>corroborate squalene past</Pattern>
     <Pattern>detect</Pattern>
-    <Pattern>detect against</Pattern>
     <Pattern>detect by</Pattern>
     <Pattern>detect from</Pattern>
     <Pattern>detect in</Pattern>
     <Pattern>detect inward</Pattern>
     <Pattern>detect inwards</Pattern>
-    <Pattern>detect observed against</Pattern>
     <Pattern>detect observed by</Pattern>
     <Pattern>detect observed from</Pattern>
     <Pattern>detect observed in</Pattern>
     <Pattern>detect observed inward</Pattern>
     <Pattern>detect observed inwards</Pattern>
     <Pattern>detect observed past</Pattern>
-    <Pattern>detect our against</Pattern>
     <Pattern>detect our by</Pattern>
     <Pattern>detect our from</Pattern>
     <Pattern>detect our in</Pattern>
@@ -400,14 +418,12 @@
     <Pattern>detect our inwards</Pattern>
     <Pattern>detect our past</Pattern>
     <Pattern>detect past</Pattern>
-    <Pattern>detect seen against</Pattern>
     <Pattern>detect seen by</Pattern>
     <Pattern>detect seen from</Pattern>
     <Pattern>detect seen in</Pattern>
     <Pattern>detect seen inward</Pattern>
     <Pattern>detect seen inwards</Pattern>
     <Pattern>detect seen past</Pattern>
-    <Pattern>detect squalene against</Pattern>
     <Pattern>detect squalene by</Pattern>
     <Pattern>detect squalene from</Pattern>
     <Pattern>detect squalene in</Pattern>
@@ -506,7 +522,139 @@
     <Pattern>establish synopsized that</Pattern>
     <Pattern>establish that</Pattern>
     <Pattern>exhibit</Pattern>
+    <Pattern>exhibit as</Pattern>
+    <Pattern>exhibit by</Pattern>
+    <Pattern>exhibit cholesterin as</Pattern>
+    <Pattern>exhibit cholesterin equally</Pattern>
+    <Pattern>exhibit cholesterin every bit</Pattern>
+    <Pattern>exhibit cholesterin for</Pattern>
+    <Pattern>exhibit cholesterol as</Pattern>
+    <Pattern>exhibit cholesterol equally</Pattern>
+    <Pattern>exhibit cholesterol every bit</Pattern>
+    <Pattern>exhibit cholesterol for</Pattern>
+    <Pattern>exhibit equally</Pattern>
+    <Pattern>exhibit every bit</Pattern>
+    <Pattern>exhibit for</Pattern>
+    <Pattern>exhibit from</Pattern>
+    <Pattern>exhibit in</Pattern>
+    <Pattern>exhibit inward</Pattern>
+    <Pattern>exhibit inwards</Pattern>
+    <Pattern>exhibit neoplasm as</Pattern>
+    <Pattern>exhibit neoplasm equally</Pattern>
+    <Pattern>exhibit neoplasm every bit</Pattern>
+    <Pattern>exhibit neoplasm for</Pattern>
+    <Pattern>exhibit observed by</Pattern>
+    <Pattern>exhibit observed from</Pattern>
+    <Pattern>exhibit observed in</Pattern>
+    <Pattern>exhibit observed inward</Pattern>
+    <Pattern>exhibit observed inwards</Pattern>
+    <Pattern>exhibit observed past</Pattern>
+    <Pattern>exhibit our by</Pattern>
+    <Pattern>exhibit our from</Pattern>
+    <Pattern>exhibit our in</Pattern>
+    <Pattern>exhibit our inward</Pattern>
+    <Pattern>exhibit our inwards</Pattern>
+    <Pattern>exhibit our past</Pattern>
+    <Pattern>exhibit past</Pattern>
+    <Pattern>exhibit potency as</Pattern>
+    <Pattern>exhibit potency equally</Pattern>
+    <Pattern>exhibit potency every bit</Pattern>
+    <Pattern>exhibit potency for</Pattern>
+    <Pattern>exhibit potential as</Pattern>
+    <Pattern>exhibit potential equally</Pattern>
+    <Pattern>exhibit potential every bit</Pattern>
+    <Pattern>exhibit potential for</Pattern>
+    <Pattern>exhibit potentiality as</Pattern>
+    <Pattern>exhibit potentiality equally</Pattern>
+    <Pattern>exhibit potentiality every bit</Pattern>
+    <Pattern>exhibit potentiality for</Pattern>
+    <Pattern>exhibit seen by</Pattern>
+    <Pattern>exhibit seen from</Pattern>
+    <Pattern>exhibit seen in</Pattern>
+    <Pattern>exhibit seen inward</Pattern>
+    <Pattern>exhibit seen inwards</Pattern>
+    <Pattern>exhibit seen past</Pattern>
+    <Pattern>exhibit squalene by</Pattern>
+    <Pattern>exhibit squalene from</Pattern>
+    <Pattern>exhibit squalene in</Pattern>
+    <Pattern>exhibit squalene inward</Pattern>
+    <Pattern>exhibit squalene inwards</Pattern>
+    <Pattern>exhibit squalene past</Pattern>
+    <Pattern>exhibit tumor as</Pattern>
+    <Pattern>exhibit tumor equally</Pattern>
+    <Pattern>exhibit tumor every bit</Pattern>
+    <Pattern>exhibit tumor for</Pattern>
+    <Pattern>exhibit tumour as</Pattern>
+    <Pattern>exhibit tumour equally</Pattern>
+    <Pattern>exhibit tumour every bit</Pattern>
+    <Pattern>exhibit tumour for</Pattern>
     <Pattern>exhibited</Pattern>
+    <Pattern>exhibited as</Pattern>
+    <Pattern>exhibited by</Pattern>
+    <Pattern>exhibited cholesterin as</Pattern>
+    <Pattern>exhibited cholesterin equally</Pattern>
+    <Pattern>exhibited cholesterin every bit</Pattern>
+    <Pattern>exhibited cholesterin for</Pattern>
+    <Pattern>exhibited cholesterol as</Pattern>
+    <Pattern>exhibited cholesterol equally</Pattern>
+    <Pattern>exhibited cholesterol every bit</Pattern>
+    <Pattern>exhibited cholesterol for</Pattern>
+    <Pattern>exhibited equally</Pattern>
+    <Pattern>exhibited every bit</Pattern>
+    <Pattern>exhibited for</Pattern>
+    <Pattern>exhibited from</Pattern>
+    <Pattern>exhibited in</Pattern>
+    <Pattern>exhibited inward</Pattern>
+    <Pattern>exhibited inwards</Pattern>
+    <Pattern>exhibited neoplasm as</Pattern>
+    <Pattern>exhibited neoplasm equally</Pattern>
+    <Pattern>exhibited neoplasm every bit</Pattern>
+    <Pattern>exhibited neoplasm for</Pattern>
+    <Pattern>exhibited observed by</Pattern>
+    <Pattern>exhibited observed from</Pattern>
+    <Pattern>exhibited observed in</Pattern>
+    <Pattern>exhibited observed inward</Pattern>
+    <Pattern>exhibited observed inwards</Pattern>
+    <Pattern>exhibited observed past</Pattern>
+    <Pattern>exhibited our by</Pattern>
+    <Pattern>exhibited our from</Pattern>
+    <Pattern>exhibited our in</Pattern>
+    <Pattern>exhibited our inward</Pattern>
+    <Pattern>exhibited our inwards</Pattern>
+    <Pattern>exhibited our past</Pattern>
+    <Pattern>exhibited past</Pattern>
+    <Pattern>exhibited potency as</Pattern>
+    <Pattern>exhibited potency equally</Pattern>
+    <Pattern>exhibited potency every bit</Pattern>
+    <Pattern>exhibited potency for</Pattern>
+    <Pattern>exhibited potential as</Pattern>
+    <Pattern>exhibited potential equally</Pattern>
+    <Pattern>exhibited potential every bit</Pattern>
+    <Pattern>exhibited potential for</Pattern>
+    <Pattern>exhibited potentiality as</Pattern>
+    <Pattern>exhibited potentiality equally</Pattern>
+    <Pattern>exhibited potentiality every bit</Pattern>
+    <Pattern>exhibited potentiality for</Pattern>
+    <Pattern>exhibited seen by</Pattern>
+    <Pattern>exhibited seen from</Pattern>
+    <Pattern>exhibited seen in</Pattern>
+    <Pattern>exhibited seen inward</Pattern>
+    <Pattern>exhibited seen inwards</Pattern>
+    <Pattern>exhibited seen past</Pattern>
+    <Pattern>exhibited squalene by</Pattern>
+    <Pattern>exhibited squalene from</Pattern>
+    <Pattern>exhibited squalene in</Pattern>
+    <Pattern>exhibited squalene inward</Pattern>
+    <Pattern>exhibited squalene inwards</Pattern>
+    <Pattern>exhibited squalene past</Pattern>
+    <Pattern>exhibited tumor as</Pattern>
+    <Pattern>exhibited tumor equally</Pattern>
+    <Pattern>exhibited tumor every bit</Pattern>
+    <Pattern>exhibited tumor for</Pattern>
+    <Pattern>exhibited tumour as</Pattern>
+    <Pattern>exhibited tumour equally</Pattern>
+    <Pattern>exhibited tumour every bit</Pattern>
+    <Pattern>exhibited tumour for</Pattern>
     <Pattern>follow</Pattern>
     <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
     <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
@@ -538,7 +686,6 @@
     <Pattern>follow United States Intelligence Community inwards</Pattern>
     <Pattern>follow United States Intelligence Community past</Pattern>
     <Pattern>follow United States Intelligence Community that</Pattern>
-    <Pattern>follow against</Pattern>
     <Pattern>follow assay by</Pattern>
     <Pattern>follow assay in</Pattern>
     <Pattern>follow assay inward</Pattern>
@@ -592,14 +739,12 @@
     <Pattern>follow malignant neoplastic disease inwards</Pattern>
     <Pattern>follow malignant neoplastic disease past</Pattern>
     <Pattern>follow malignant neoplastic disease that</Pattern>
-    <Pattern>follow observed against</Pattern>
     <Pattern>follow observed by</Pattern>
     <Pattern>follow observed from</Pattern>
     <Pattern>follow observed in</Pattern>
     <Pattern>follow observed inward</Pattern>
     <Pattern>follow observed inwards</Pattern>
     <Pattern>follow observed past</Pattern>
-    <Pattern>follow our against</Pattern>
     <Pattern>follow our by</Pattern>
     <Pattern>follow our from</Pattern>
     <Pattern>follow our in</Pattern>
@@ -607,14 +752,12 @@
     <Pattern>follow our inwards</Pattern>
     <Pattern>follow our past</Pattern>
     <Pattern>follow past</Pattern>
-    <Pattern>follow seen against</Pattern>
     <Pattern>follow seen by</Pattern>
     <Pattern>follow seen from</Pattern>
     <Pattern>follow seen in</Pattern>
     <Pattern>follow seen inward</Pattern>
     <Pattern>follow seen inwards</Pattern>
     <Pattern>follow seen past</Pattern>
-    <Pattern>follow squalene against</Pattern>
     <Pattern>follow squalene by</Pattern>
     <Pattern>follow squalene from</Pattern>
     <Pattern>follow squalene in</Pattern>
@@ -659,7 +802,6 @@
     <Pattern>followed United States Intelligence Community inwards</Pattern>
     <Pattern>followed United States Intelligence Community past</Pattern>
     <Pattern>followed United States Intelligence Community that</Pattern>
-    <Pattern>followed against</Pattern>
     <Pattern>followed assay by</Pattern>
     <Pattern>followed assay in</Pattern>
     <Pattern>followed assay inward</Pattern>
@@ -713,14 +855,12 @@
     <Pattern>followed malignant neoplastic disease inwards</Pattern>
     <Pattern>followed malignant neoplastic disease past</Pattern>
     <Pattern>followed malignant neoplastic disease that</Pattern>
-    <Pattern>followed observed against</Pattern>
     <Pattern>followed observed by</Pattern>
     <Pattern>followed observed from</Pattern>
     <Pattern>followed observed in</Pattern>
     <Pattern>followed observed inward</Pattern>
     <Pattern>followed observed inwards</Pattern>
     <Pattern>followed observed past</Pattern>
-    <Pattern>followed our against</Pattern>
     <Pattern>followed our by</Pattern>
     <Pattern>followed our from</Pattern>
     <Pattern>followed our in</Pattern>
@@ -728,14 +868,12 @@
     <Pattern>followed our inwards</Pattern>
     <Pattern>followed our past</Pattern>
     <Pattern>followed past</Pattern>
-    <Pattern>followed seen against</Pattern>
     <Pattern>followed seen by</Pattern>
     <Pattern>followed seen from</Pattern>
     <Pattern>followed seen in</Pattern>
     <Pattern>followed seen inward</Pattern>
     <Pattern>followed seen inwards</Pattern>
     <Pattern>followed seen past</Pattern>
-    <Pattern>followed squalene against</Pattern>
     <Pattern>followed squalene by</Pattern>
     <Pattern>followed squalene from</Pattern>
     <Pattern>followed squalene in</Pattern>
@@ -1205,21 +1343,54 @@
     <Pattern>immortalized synopsized that</Pattern>
     <Pattern>immortalized that</Pattern>
     <Pattern>inhibited</Pattern>
+    <Pattern>inhibited as</Pattern>
+    <Pattern>inhibited cholesterin as</Pattern>
+    <Pattern>inhibited cholesterin equally</Pattern>
+    <Pattern>inhibited cholesterin every bit</Pattern>
+    <Pattern>inhibited cholesterin for</Pattern>
+    <Pattern>inhibited cholesterol as</Pattern>
+    <Pattern>inhibited cholesterol equally</Pattern>
+    <Pattern>inhibited cholesterol every bit</Pattern>
+    <Pattern>inhibited cholesterol for</Pattern>
+    <Pattern>inhibited equally</Pattern>
+    <Pattern>inhibited every bit</Pattern>
+    <Pattern>inhibited for</Pattern>
+    <Pattern>inhibited neoplasm as</Pattern>
+    <Pattern>inhibited neoplasm equally</Pattern>
+    <Pattern>inhibited neoplasm every bit</Pattern>
+    <Pattern>inhibited neoplasm for</Pattern>
+    <Pattern>inhibited potency as</Pattern>
+    <Pattern>inhibited potency equally</Pattern>
+    <Pattern>inhibited potency every bit</Pattern>
+    <Pattern>inhibited potency for</Pattern>
+    <Pattern>inhibited potential as</Pattern>
+    <Pattern>inhibited potential equally</Pattern>
+    <Pattern>inhibited potential every bit</Pattern>
+    <Pattern>inhibited potential for</Pattern>
+    <Pattern>inhibited potentiality as</Pattern>
+    <Pattern>inhibited potentiality equally</Pattern>
+    <Pattern>inhibited potentiality every bit</Pattern>
+    <Pattern>inhibited potentiality for</Pattern>
+    <Pattern>inhibited tumor as</Pattern>
+    <Pattern>inhibited tumor equally</Pattern>
+    <Pattern>inhibited tumor every bit</Pattern>
+    <Pattern>inhibited tumor for</Pattern>
+    <Pattern>inhibited tumour as</Pattern>
+    <Pattern>inhibited tumour equally</Pattern>
+    <Pattern>inhibited tumour every bit</Pattern>
+    <Pattern>inhibited tumour for</Pattern>
     <Pattern>isolate</Pattern>
-    <Pattern>isolate against</Pattern>
     <Pattern>isolate by</Pattern>
     <Pattern>isolate from</Pattern>
     <Pattern>isolate in</Pattern>
     <Pattern>isolate inward</Pattern>
     <Pattern>isolate inwards</Pattern>
-    <Pattern>isolate observed against</Pattern>
     <Pattern>isolate observed by</Pattern>
     <Pattern>isolate observed from</Pattern>
     <Pattern>isolate observed in</Pattern>
     <Pattern>isolate observed inward</Pattern>
     <Pattern>isolate observed inwards</Pattern>
     <Pattern>isolate observed past</Pattern>
-    <Pattern>isolate our against</Pattern>
     <Pattern>isolate our by</Pattern>
     <Pattern>isolate our from</Pattern>
     <Pattern>isolate our in</Pattern>
@@ -1227,14 +1398,12 @@
     <Pattern>isolate our inwards</Pattern>
     <Pattern>isolate our past</Pattern>
     <Pattern>isolate past</Pattern>
-    <Pattern>isolate seen against</Pattern>
     <Pattern>isolate seen by</Pattern>
     <Pattern>isolate seen from</Pattern>
     <Pattern>isolate seen in</Pattern>
     <Pattern>isolate seen inward</Pattern>
     <Pattern>isolate seen inwards</Pattern>
     <Pattern>isolate seen past</Pattern>
-    <Pattern>isolate squalene against</Pattern>
     <Pattern>isolate squalene by</Pattern>
     <Pattern>isolate squalene from</Pattern>
     <Pattern>isolate squalene in</Pattern>
@@ -1242,20 +1411,17 @@
     <Pattern>isolate squalene inwards</Pattern>
     <Pattern>isolate squalene past</Pattern>
     <Pattern>isolated</Pattern>
-    <Pattern>isolated against</Pattern>
     <Pattern>isolated by</Pattern>
     <Pattern>isolated from</Pattern>
     <Pattern>isolated in</Pattern>
     <Pattern>isolated inward</Pattern>
     <Pattern>isolated inwards</Pattern>
-    <Pattern>isolated observed against</Pattern>
     <Pattern>isolated observed by</Pattern>
     <Pattern>isolated observed from</Pattern>
     <Pattern>isolated observed in</Pattern>
     <Pattern>isolated observed inward</Pattern>
     <Pattern>isolated observed inwards</Pattern>
     <Pattern>isolated observed past</Pattern>
-    <Pattern>isolated our against</Pattern>
     <Pattern>isolated our by</Pattern>
     <Pattern>isolated our from</Pattern>
     <Pattern>isolated our in</Pattern>
@@ -1263,14 +1429,12 @@
     <Pattern>isolated our inwards</Pattern>
     <Pattern>isolated our past</Pattern>
     <Pattern>isolated past</Pattern>
-    <Pattern>isolated seen against</Pattern>
     <Pattern>isolated seen by</Pattern>
     <Pattern>isolated seen from</Pattern>
     <Pattern>isolated seen in</Pattern>
     <Pattern>isolated seen inward</Pattern>
     <Pattern>isolated seen inwards</Pattern>
     <Pattern>isolated seen past</Pattern>
-    <Pattern>isolated squalene against</Pattern>
     <Pattern>isolated squalene by</Pattern>
     <Pattern>isolated squalene from</Pattern>
     <Pattern>isolated squalene in</Pattern>
@@ -1278,20 +1442,17 @@
     <Pattern>isolated squalene inwards</Pattern>
     <Pattern>isolated squalene past</Pattern>
     <Pattern>leave</Pattern>
-    <Pattern>leave against</Pattern>
     <Pattern>leave by</Pattern>
     <Pattern>leave from</Pattern>
     <Pattern>leave in</Pattern>
     <Pattern>leave inward</Pattern>
     <Pattern>leave inwards</Pattern>
-    <Pattern>leave observed against</Pattern>
     <Pattern>leave observed by</Pattern>
     <Pattern>leave observed from</Pattern>
     <Pattern>leave observed in</Pattern>
     <Pattern>leave observed inward</Pattern>
     <Pattern>leave observed inwards</Pattern>
     <Pattern>leave observed past</Pattern>
-    <Pattern>leave our against</Pattern>
     <Pattern>leave our by</Pattern>
     <Pattern>leave our from</Pattern>
     <Pattern>leave our in</Pattern>
@@ -1299,14 +1460,12 @@
     <Pattern>leave our inwards</Pattern>
     <Pattern>leave our past</Pattern>
     <Pattern>leave past</Pattern>
-    <Pattern>leave seen against</Pattern>
     <Pattern>leave seen by</Pattern>
     <Pattern>leave seen from</Pattern>
     <Pattern>leave seen in</Pattern>
     <Pattern>leave seen inward</Pattern>
     <Pattern>leave seen inwards</Pattern>
     <Pattern>leave seen past</Pattern>
-    <Pattern>leave squalene against</Pattern>
     <Pattern>leave squalene by</Pattern>
     <Pattern>leave squalene from</Pattern>
     <Pattern>leave squalene in</Pattern>
@@ -1314,20 +1473,17 @@
     <Pattern>leave squalene inwards</Pattern>
     <Pattern>leave squalene past</Pattern>
     <Pattern>leaves</Pattern>
-    <Pattern>leaves against</Pattern>
     <Pattern>leaves by</Pattern>
     <Pattern>leaves from</Pattern>
     <Pattern>leaves in</Pattern>
     <Pattern>leaves inward</Pattern>
     <Pattern>leaves inwards</Pattern>
-    <Pattern>leaves observed against</Pattern>
     <Pattern>leaves observed by</Pattern>
     <Pattern>leaves observed from</Pattern>
     <Pattern>leaves observed in</Pattern>
     <Pattern>leaves observed inward</Pattern>
     <Pattern>leaves observed inwards</Pattern>
     <Pattern>leaves observed past</Pattern>
-    <Pattern>leaves our against</Pattern>
     <Pattern>leaves our by</Pattern>
     <Pattern>leaves our from</Pattern>
     <Pattern>leaves our in</Pattern>
@@ -1335,14 +1491,12 @@
     <Pattern>leaves our inwards</Pattern>
     <Pattern>leaves our past</Pattern>
     <Pattern>leaves past</Pattern>
-    <Pattern>leaves seen against</Pattern>
     <Pattern>leaves seen by</Pattern>
     <Pattern>leaves seen from</Pattern>
     <Pattern>leaves seen in</Pattern>
     <Pattern>leaves seen inward</Pattern>
     <Pattern>leaves seen inwards</Pattern>
     <Pattern>leaves seen past</Pattern>
-    <Pattern>leaves squalene against</Pattern>
     <Pattern>leaves squalene by</Pattern>
     <Pattern>leaves squalene from</Pattern>
     <Pattern>leaves squalene in</Pattern>
@@ -1532,20 +1686,17 @@
     <Pattern>modify synopsized that</Pattern>
     <Pattern>modify that</Pattern>
     <Pattern>observed</Pattern>
-    <Pattern>observed against</Pattern>
     <Pattern>observed by</Pattern>
     <Pattern>observed from</Pattern>
     <Pattern>observed in</Pattern>
     <Pattern>observed inward</Pattern>
     <Pattern>observed inwards</Pattern>
-    <Pattern>observed observed against</Pattern>
     <Pattern>observed observed by</Pattern>
     <Pattern>observed observed from</Pattern>
     <Pattern>observed observed in</Pattern>
     <Pattern>observed observed inward</Pattern>
     <Pattern>observed observed inwards</Pattern>
     <Pattern>observed observed past</Pattern>
-    <Pattern>observed our against</Pattern>
     <Pattern>observed our by</Pattern>
     <Pattern>observed our from</Pattern>
     <Pattern>observed our in</Pattern>
@@ -1553,92 +1704,18 @@
     <Pattern>observed our inwards</Pattern>
     <Pattern>observed our past</Pattern>
     <Pattern>observed past</Pattern>
-    <Pattern>observed seen against</Pattern>
     <Pattern>observed seen by</Pattern>
     <Pattern>observed seen from</Pattern>
     <Pattern>observed seen in</Pattern>
     <Pattern>observed seen inward</Pattern>
     <Pattern>observed seen inwards</Pattern>
     <Pattern>observed seen past</Pattern>
-    <Pattern>observed squalene against</Pattern>
     <Pattern>observed squalene by</Pattern>
     <Pattern>observed squalene from</Pattern>
     <Pattern>observed squalene in</Pattern>
     <Pattern>observed squalene inward</Pattern>
     <Pattern>observed squalene inwards</Pattern>
     <Pattern>observed squalene past</Pattern>
-    <Pattern>range</Pattern>
-    <Pattern>range against</Pattern>
-    <Pattern>range by</Pattern>
-    <Pattern>range from</Pattern>
-    <Pattern>range in</Pattern>
-    <Pattern>range inward</Pattern>
-    <Pattern>range inwards</Pattern>
-    <Pattern>range observed against</Pattern>
-    <Pattern>range observed by</Pattern>
-    <Pattern>range observed from</Pattern>
-    <Pattern>range observed in</Pattern>
-    <Pattern>range observed inward</Pattern>
-    <Pattern>range observed inwards</Pattern>
-    <Pattern>range observed past</Pattern>
-    <Pattern>range our against</Pattern>
-    <Pattern>range our by</Pattern>
-    <Pattern>range our from</Pattern>
-    <Pattern>range our in</Pattern>
-    <Pattern>range our inward</Pattern>
-    <Pattern>range our inwards</Pattern>
-    <Pattern>range our past</Pattern>
-    <Pattern>range past</Pattern>
-    <Pattern>range seen against</Pattern>
-    <Pattern>range seen by</Pattern>
-    <Pattern>range seen from</Pattern>
-    <Pattern>range seen in</Pattern>
-    <Pattern>range seen inward</Pattern>
-    <Pattern>range seen inwards</Pattern>
-    <Pattern>range seen past</Pattern>
-    <Pattern>range squalene against</Pattern>
-    <Pattern>range squalene by</Pattern>
-    <Pattern>range squalene from</Pattern>
-    <Pattern>range squalene in</Pattern>
-    <Pattern>range squalene inward</Pattern>
-    <Pattern>range squalene inwards</Pattern>
-    <Pattern>range squalene past</Pattern>
-    <Pattern>ranging</Pattern>
-    <Pattern>ranging against</Pattern>
-    <Pattern>ranging by</Pattern>
-    <Pattern>ranging from</Pattern>
-    <Pattern>ranging in</Pattern>
-    <Pattern>ranging inward</Pattern>
-    <Pattern>ranging inwards</Pattern>
-    <Pattern>ranging observed against</Pattern>
-    <Pattern>ranging observed by</Pattern>
-    <Pattern>ranging observed from</Pattern>
-    <Pattern>ranging observed in</Pattern>
-    <Pattern>ranging observed inward</Pattern>
-    <Pattern>ranging observed inwards</Pattern>
-    <Pattern>ranging observed past</Pattern>
-    <Pattern>ranging our against</Pattern>
-    <Pattern>ranging our by</Pattern>
-    <Pattern>ranging our from</Pattern>
-    <Pattern>ranging our in</Pattern>
-    <Pattern>ranging our inward</Pattern>
-    <Pattern>ranging our inwards</Pattern>
-    <Pattern>ranging our past</Pattern>
-    <Pattern>ranging past</Pattern>
-    <Pattern>ranging seen against</Pattern>
-    <Pattern>ranging seen by</Pattern>
-    <Pattern>ranging seen from</Pattern>
-    <Pattern>ranging seen in</Pattern>
-    <Pattern>ranging seen inward</Pattern>
-    <Pattern>ranging seen inwards</Pattern>
-    <Pattern>ranging seen past</Pattern>
-    <Pattern>ranging squalene against</Pattern>
-    <Pattern>ranging squalene by</Pattern>
-    <Pattern>ranging squalene from</Pattern>
-    <Pattern>ranging squalene in</Pattern>
-    <Pattern>ranging squalene inward</Pattern>
-    <Pattern>ranging squalene inwards</Pattern>
-    <Pattern>ranging squalene past</Pattern>
     <Pattern>revealed</Pattern>
     <Pattern>revealed 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
     <Pattern>revealed 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
@@ -1731,20 +1808,17 @@
     <Pattern>revealed synopsized that</Pattern>
     <Pattern>revealed that</Pattern>
     <Pattern>see</Pattern>
-    <Pattern>see against</Pattern>
     <Pattern>see by</Pattern>
     <Pattern>see from</Pattern>
     <Pattern>see in</Pattern>
     <Pattern>see inward</Pattern>
     <Pattern>see inwards</Pattern>
-    <Pattern>see observed against</Pattern>
     <Pattern>see observed by</Pattern>
     <Pattern>see observed from</Pattern>
     <Pattern>see observed in</Pattern>
     <Pattern>see observed inward</Pattern>
     <Pattern>see observed inwards</Pattern>
     <Pattern>see observed past</Pattern>
-    <Pattern>see our against</Pattern>
     <Pattern>see our by</Pattern>
     <Pattern>see our from</Pattern>
     <Pattern>see our in</Pattern>
@@ -1752,14 +1826,12 @@
     <Pattern>see our inwards</Pattern>
     <Pattern>see our past</Pattern>
     <Pattern>see past</Pattern>
-    <Pattern>see seen against</Pattern>
     <Pattern>see seen by</Pattern>
     <Pattern>see seen from</Pattern>
     <Pattern>see seen in</Pattern>
     <Pattern>see seen inward</Pattern>
     <Pattern>see seen inwards</Pattern>
     <Pattern>see seen past</Pattern>
-    <Pattern>see squalene against</Pattern>
     <Pattern>see squalene by</Pattern>
     <Pattern>see squalene from</Pattern>
     <Pattern>see squalene in</Pattern>
@@ -1767,20 +1839,17 @@
     <Pattern>see squalene inwards</Pattern>
     <Pattern>see squalene past</Pattern>
     <Pattern>seen</Pattern>
-    <Pattern>seen against</Pattern>
     <Pattern>seen by</Pattern>
     <Pattern>seen from</Pattern>
     <Pattern>seen in</Pattern>
     <Pattern>seen inward</Pattern>
     <Pattern>seen inwards</Pattern>
-    <Pattern>seen observed against</Pattern>
     <Pattern>seen observed by</Pattern>
     <Pattern>seen observed from</Pattern>
     <Pattern>seen observed in</Pattern>
     <Pattern>seen observed inward</Pattern>
     <Pattern>seen observed inwards</Pattern>
     <Pattern>seen observed past</Pattern>
-    <Pattern>seen our against</Pattern>
     <Pattern>seen our by</Pattern>
     <Pattern>seen our from</Pattern>
     <Pattern>seen our in</Pattern>
@@ -1788,14 +1857,12 @@
     <Pattern>seen our inwards</Pattern>
     <Pattern>seen our past</Pattern>
     <Pattern>seen past</Pattern>
-    <Pattern>seen seen against</Pattern>
     <Pattern>seen seen by</Pattern>
     <Pattern>seen seen from</Pattern>
     <Pattern>seen seen in</Pattern>
     <Pattern>seen seen inward</Pattern>
     <Pattern>seen seen inwards</Pattern>
     <Pattern>seen seen past</Pattern>
-    <Pattern>seen squalene against</Pattern>
     <Pattern>seen squalene by</Pattern>
     <Pattern>seen squalene from</Pattern>
     <Pattern>seen squalene in</Pattern>
@@ -1803,20 +1870,111 @@
     <Pattern>seen squalene inwards</Pattern>
     <Pattern>seen squalene past</Pattern>
     <Pattern>show</Pattern>
-    <Pattern>show against</Pattern>
+    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
+    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
+    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
+    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
+    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
+    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
+    <Pattern>show IC by</Pattern>
+    <Pattern>show IC in</Pattern>
+    <Pattern>show IC inward</Pattern>
+    <Pattern>show IC inwards</Pattern>
+    <Pattern>show IC past</Pattern>
+    <Pattern>show IC that</Pattern>
+    <Pattern>show Intelligence Community by</Pattern>
+    <Pattern>show Intelligence Community in</Pattern>
+    <Pattern>show Intelligence Community inward</Pattern>
+    <Pattern>show Intelligence Community inwards</Pattern>
+    <Pattern>show Intelligence Community past</Pattern>
+    <Pattern>show Intelligence Community that</Pattern>
+    <Pattern>show National Intelligence Community by</Pattern>
+    <Pattern>show National Intelligence Community in</Pattern>
+    <Pattern>show National Intelligence Community inward</Pattern>
+    <Pattern>show National Intelligence Community inwards</Pattern>
+    <Pattern>show National Intelligence Community past</Pattern>
+    <Pattern>show National Intelligence Community that</Pattern>
+    <Pattern>show United States Intelligence Community by</Pattern>
+    <Pattern>show United States Intelligence Community in</Pattern>
+    <Pattern>show United States Intelligence Community inward</Pattern>
+    <Pattern>show United States Intelligence Community inwards</Pattern>
+    <Pattern>show United States Intelligence Community past</Pattern>
+    <Pattern>show United States Intelligence Community that</Pattern>
+    <Pattern>show as</Pattern>
+    <Pattern>show assay by</Pattern>
+    <Pattern>show assay in</Pattern>
+    <Pattern>show assay inward</Pattern>
+    <Pattern>show assay inwards</Pattern>
+    <Pattern>show assay past</Pattern>
+    <Pattern>show assay that</Pattern>
     <Pattern>show by</Pattern>
+    <Pattern>show cancer by</Pattern>
+    <Pattern>show cancer in</Pattern>
+    <Pattern>show cancer inward</Pattern>
+    <Pattern>show cancer inwards</Pattern>
+    <Pattern>show cancer past</Pattern>
+    <Pattern>show cancer that</Pattern>
+    <Pattern>show cell by</Pattern>
+    <Pattern>show cell in</Pattern>
+    <Pattern>show cell inward</Pattern>
+    <Pattern>show cell inwards</Pattern>
+    <Pattern>show cell past</Pattern>
+    <Pattern>show cell that</Pattern>
+    <Pattern>show check by</Pattern>
+    <Pattern>show check in</Pattern>
+    <Pattern>show check inward</Pattern>
+    <Pattern>show check inwards</Pattern>
+    <Pattern>show check past</Pattern>
+    <Pattern>show check that</Pattern>
+    <Pattern>show cholesterin as</Pattern>
+    <Pattern>show cholesterin equally</Pattern>
+    <Pattern>show cholesterin every bit</Pattern>
+    <Pattern>show cholesterin for</Pattern>
+    <Pattern>show cholesterol as</Pattern>
+    <Pattern>show cholesterol equally</Pattern>
+    <Pattern>show cholesterol every bit</Pattern>
+    <Pattern>show cholesterol for</Pattern>
+    <Pattern>show equally</Pattern>
+    <Pattern>show every bit</Pattern>
+    <Pattern>show followed by</Pattern>
+    <Pattern>show followed in</Pattern>
+    <Pattern>show followed inward</Pattern>
+    <Pattern>show followed inwards</Pattern>
+    <Pattern>show followed past</Pattern>
+    <Pattern>show followed that</Pattern>
+    <Pattern>show for</Pattern>
+    <Pattern>show found by</Pattern>
+    <Pattern>show found in</Pattern>
+    <Pattern>show found inward</Pattern>
+    <Pattern>show found inwards</Pattern>
+    <Pattern>show found past</Pattern>
+    <Pattern>show found that</Pattern>
     <Pattern>show from</Pattern>
+    <Pattern>show ic50 by</Pattern>
+    <Pattern>show ic50 in</Pattern>
+    <Pattern>show ic50 inward</Pattern>
+    <Pattern>show ic50 inwards</Pattern>
+    <Pattern>show ic50 past</Pattern>
+    <Pattern>show ic50 that</Pattern>
     <Pattern>show in</Pattern>
     <Pattern>show inward</Pattern>
     <Pattern>show inwards</Pattern>
-    <Pattern>show observed against</Pattern>
+    <Pattern>show malignant neoplastic disease by</Pattern>
+    <Pattern>show malignant neoplastic disease in</Pattern>
+    <Pattern>show malignant neoplastic disease inward</Pattern>
+    <Pattern>show malignant neoplastic disease inwards</Pattern>
+    <Pattern>show malignant neoplastic disease past</Pattern>
+    <Pattern>show malignant neoplastic disease that</Pattern>
+    <Pattern>show neoplasm as</Pattern>
+    <Pattern>show neoplasm equally</Pattern>
+    <Pattern>show neoplasm every bit</Pattern>
+    <Pattern>show neoplasm for</Pattern>
     <Pattern>show observed by</Pattern>
     <Pattern>show observed from</Pattern>
     <Pattern>show observed in</Pattern>
     <Pattern>show observed inward</Pattern>
     <Pattern>show observed inwards</Pattern>
     <Pattern>show observed past</Pattern>
-    <Pattern>show our against</Pattern>
     <Pattern>show our by</Pattern>
     <Pattern>show our from</Pattern>
     <Pattern>show our in</Pattern>
@@ -1824,35 +1982,151 @@
     <Pattern>show our inwards</Pattern>
     <Pattern>show our past</Pattern>
     <Pattern>show past</Pattern>
-    <Pattern>show seen against</Pattern>
+    <Pattern>show potency as</Pattern>
+    <Pattern>show potency equally</Pattern>
+    <Pattern>show potency every bit</Pattern>
+    <Pattern>show potency for</Pattern>
+    <Pattern>show potential as</Pattern>
+    <Pattern>show potential equally</Pattern>
+    <Pattern>show potential every bit</Pattern>
+    <Pattern>show potential for</Pattern>
+    <Pattern>show potentiality as</Pattern>
+    <Pattern>show potentiality equally</Pattern>
+    <Pattern>show potentiality every bit</Pattern>
+    <Pattern>show potentiality for</Pattern>
     <Pattern>show seen by</Pattern>
     <Pattern>show seen from</Pattern>
     <Pattern>show seen in</Pattern>
     <Pattern>show seen inward</Pattern>
     <Pattern>show seen inwards</Pattern>
     <Pattern>show seen past</Pattern>
-    <Pattern>show squalene against</Pattern>
     <Pattern>show squalene by</Pattern>
     <Pattern>show squalene from</Pattern>
     <Pattern>show squalene in</Pattern>
     <Pattern>show squalene inward</Pattern>
     <Pattern>show squalene inwards</Pattern>
     <Pattern>show squalene past</Pattern>
+    <Pattern>show synopsized by</Pattern>
+    <Pattern>show synopsized in</Pattern>
+    <Pattern>show synopsized inward</Pattern>
+    <Pattern>show synopsized inwards</Pattern>
+    <Pattern>show synopsized past</Pattern>
+    <Pattern>show synopsized that</Pattern>
+    <Pattern>show that</Pattern>
+    <Pattern>show tumor as</Pattern>
+    <Pattern>show tumor equally</Pattern>
+    <Pattern>show tumor every bit</Pattern>
+    <Pattern>show tumor for</Pattern>
+    <Pattern>show tumour as</Pattern>
+    <Pattern>show tumour equally</Pattern>
+    <Pattern>show tumour every bit</Pattern>
+    <Pattern>show tumour for</Pattern>
     <Pattern>showed</Pattern>
-    <Pattern>showed against</Pattern>
+    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
+    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
+    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
+    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
+    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
+    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
+    <Pattern>showed IC by</Pattern>
+    <Pattern>showed IC in</Pattern>
+    <Pattern>showed IC inward</Pattern>
+    <Pattern>showed IC inwards</Pattern>
+    <Pattern>showed IC past</Pattern>
+    <Pattern>showed IC that</Pattern>
+    <Pattern>showed Intelligence Community by</Pattern>
+    <Pattern>showed Intelligence Community in</Pattern>
+    <Pattern>showed Intelligence Community inward</Pattern>
+    <Pattern>showed Intelligence Community inwards</Pattern>
+    <Pattern>showed Intelligence Community past</Pattern>
+    <Pattern>showed Intelligence Community that</Pattern>
+    <Pattern>showed National Intelligence Community by</Pattern>
+    <Pattern>showed National Intelligence Community in</Pattern>
+    <Pattern>showed National Intelligence Community inward</Pattern>
+    <Pattern>showed National Intelligence Community inwards</Pattern>
+    <Pattern>showed National Intelligence Community past</Pattern>
+    <Pattern>showed National Intelligence Community that</Pattern>
+    <Pattern>showed United States Intelligence Community by</Pattern>
+    <Pattern>showed United States Intelligence Community in</Pattern>
+    <Pattern>showed United States Intelligence Community inward</Pattern>
+    <Pattern>showed United States Intelligence Community inwards</Pattern>
+    <Pattern>showed United States Intelligence Community past</Pattern>
+    <Pattern>showed United States Intelligence Community that</Pattern>
+    <Pattern>showed as</Pattern>
+    <Pattern>showed assay by</Pattern>
+    <Pattern>showed assay in</Pattern>
+    <Pattern>showed assay inward</Pattern>
+    <Pattern>showed assay inwards</Pattern>
+    <Pattern>showed assay past</Pattern>
+    <Pattern>showed assay that</Pattern>
     <Pattern>showed by</Pattern>
+    <Pattern>showed cancer by</Pattern>
+    <Pattern>showed cancer in</Pattern>
+    <Pattern>showed cancer inward</Pattern>
+    <Pattern>showed cancer inwards</Pattern>
+    <Pattern>showed cancer past</Pattern>
+    <Pattern>showed cancer that</Pattern>
+    <Pattern>showed cell by</Pattern>
+    <Pattern>showed cell in</Pattern>
+    <Pattern>showed cell inward</Pattern>
+    <Pattern>showed cell inwards</Pattern>
+    <Pattern>showed cell past</Pattern>
+    <Pattern>showed cell that</Pattern>
+    <Pattern>showed check by</Pattern>
+    <Pattern>showed check in</Pattern>
+    <Pattern>showed check inward</Pattern>
+    <Pattern>showed check inwards</Pattern>
+    <Pattern>showed check past</Pattern>
+    <Pattern>showed check that</Pattern>
+    <Pattern>showed cholesterin as</Pattern>
+    <Pattern>showed cholesterin equally</Pattern>
+    <Pattern>showed cholesterin every bit</Pattern>
+    <Pattern>showed cholesterin for</Pattern>
+    <Pattern>showed cholesterol as</Pattern>
+    <Pattern>showed cholesterol equally</Pattern>
+    <Pattern>showed cholesterol every bit</Pattern>
+    <Pattern>showed cholesterol for</Pattern>
+    <Pattern>showed equally</Pattern>
+    <Pattern>showed every bit</Pattern>
+    <Pattern>showed followed by</Pattern>
+    <Pattern>showed followed in</Pattern>
+    <Pattern>showed followed inward</Pattern>
+    <Pattern>showed followed inwards</Pattern>
+    <Pattern>showed followed past</Pattern>
+    <Pattern>showed followed that</Pattern>
+    <Pattern>showed for</Pattern>
+    <Pattern>showed found by</Pattern>
+    <Pattern>showed found in</Pattern>
+    <Pattern>showed found inward</Pattern>
+    <Pattern>showed found inwards</Pattern>
+    <Pattern>showed found past</Pattern>
+    <Pattern>showed found that</Pattern>
     <Pattern>showed from</Pattern>
+    <Pattern>showed ic50 by</Pattern>
+    <Pattern>showed ic50 in</Pattern>
+    <Pattern>showed ic50 inward</Pattern>
+    <Pattern>showed ic50 inwards</Pattern>
+    <Pattern>showed ic50 past</Pattern>
+    <Pattern>showed ic50 that</Pattern>
     <Pattern>showed in</Pattern>
     <Pattern>showed inward</Pattern>
     <Pattern>showed inwards</Pattern>
-    <Pattern>showed observed against</Pattern>
+    <Pattern>showed malignant neoplastic disease by</Pattern>
+    <Pattern>showed malignant neoplastic disease in</Pattern>
+    <Pattern>showed malignant neoplastic disease inward</Pattern>
+    <Pattern>showed malignant neoplastic disease inwards</Pattern>
+    <Pattern>showed malignant neoplastic disease past</Pattern>
+    <Pattern>showed malignant neoplastic disease that</Pattern>
+    <Pattern>showed neoplasm as</Pattern>
+    <Pattern>showed neoplasm equally</Pattern>
+    <Pattern>showed neoplasm every bit</Pattern>
+    <Pattern>showed neoplasm for</Pattern>
     <Pattern>showed observed by</Pattern>
     <Pattern>showed observed from</Pattern>
     <Pattern>showed observed in</Pattern>
     <Pattern>showed observed inward</Pattern>
     <Pattern>showed observed inwards</Pattern>
     <Pattern>showed observed past</Pattern>
-    <Pattern>showed our against</Pattern>
     <Pattern>showed our by</Pattern>
     <Pattern>showed our from</Pattern>
     <Pattern>showed our in</Pattern>
@@ -1860,21 +2134,119 @@
     <Pattern>showed our inwards</Pattern>
     <Pattern>showed our past</Pattern>
     <Pattern>showed past</Pattern>
-    <Pattern>showed seen against</Pattern>
+    <Pattern>showed potency as</Pattern>
+    <Pattern>showed potency equally</Pattern>
+    <Pattern>showed potency every bit</Pattern>
+    <Pattern>showed potency for</Pattern>
+    <Pattern>showed potential as</Pattern>
+    <Pattern>showed potential equally</Pattern>
+    <Pattern>showed potential every bit</Pattern>
+    <Pattern>showed potential for</Pattern>
+    <Pattern>showed potentiality as</Pattern>
+    <Pattern>showed potentiality equally</Pattern>
+    <Pattern>showed potentiality every bit</Pattern>
+    <Pattern>showed potentiality for</Pattern>
     <Pattern>showed seen by</Pattern>
     <Pattern>showed seen from</Pattern>
     <Pattern>showed seen in</Pattern>
     <Pattern>showed seen inward</Pattern>
     <Pattern>showed seen inwards</Pattern>
     <Pattern>showed seen past</Pattern>
-    <Pattern>showed squalene against</Pattern>
     <Pattern>showed squalene by</Pattern>
     <Pattern>showed squalene from</Pattern>
     <Pattern>showed squalene in</Pattern>
     <Pattern>showed squalene inward</Pattern>
     <Pattern>showed squalene inwards</Pattern>
     <Pattern>showed squalene past</Pattern>
+    <Pattern>showed synopsized by</Pattern>
+    <Pattern>showed synopsized in</Pattern>
+    <Pattern>showed synopsized inward</Pattern>
+    <Pattern>showed synopsized inwards</Pattern>
+    <Pattern>showed synopsized past</Pattern>
+    <Pattern>showed synopsized that</Pattern>
+    <Pattern>showed that</Pattern>
+    <Pattern>showed tumor as</Pattern>
+    <Pattern>showed tumor equally</Pattern>
+    <Pattern>showed tumor every bit</Pattern>
+    <Pattern>showed tumor for</Pattern>
+    <Pattern>showed tumour as</Pattern>
+    <Pattern>showed tumour equally</Pattern>
+    <Pattern>showed tumour every bit</Pattern>
+    <Pattern>showed tumour for</Pattern>
     <Pattern>suppress</Pattern>
+    <Pattern>suppress as</Pattern>
+    <Pattern>suppress cholesterin as</Pattern>
+    <Pattern>suppress cholesterin equally</Pattern>
+    <Pattern>suppress cholesterin every bit</Pattern>
+    <Pattern>suppress cholesterin for</Pattern>
+    <Pattern>suppress cholesterol as</Pattern>
+    <Pattern>suppress cholesterol equally</Pattern>
+    <Pattern>suppress cholesterol every bit</Pattern>
+    <Pattern>suppress cholesterol for</Pattern>
+    <Pattern>suppress equally</Pattern>
+    <Pattern>suppress every bit</Pattern>
+    <Pattern>suppress for</Pattern>
+    <Pattern>suppress neoplasm as</Pattern>
+    <Pattern>suppress neoplasm equally</Pattern>
+    <Pattern>suppress neoplasm every bit</Pattern>
+    <Pattern>suppress neoplasm for</Pattern>
+    <Pattern>suppress potency as</Pattern>
+    <Pattern>suppress potency equally</Pattern>
+    <Pattern>suppress potency every bit</Pattern>
+    <Pattern>suppress potency for</Pattern>
+    <Pattern>suppress potential as</Pattern>
+    <Pattern>suppress potential equally</Pattern>
+    <Pattern>suppress potential every bit</Pattern>
+    <Pattern>suppress potential for</Pattern>
+    <Pattern>suppress potentiality as</Pattern>
+    <Pattern>suppress potentiality equally</Pattern>
+    <Pattern>suppress potentiality every bit</Pattern>
+    <Pattern>suppress potentiality for</Pattern>
+    <Pattern>suppress tumor as</Pattern>
+    <Pattern>suppress tumor equally</Pattern>
+    <Pattern>suppress tumor every bit</Pattern>
+    <Pattern>suppress tumor for</Pattern>
+    <Pattern>suppress tumour as</Pattern>
+    <Pattern>suppress tumour equally</Pattern>
+    <Pattern>suppress tumour every bit</Pattern>
+    <Pattern>suppress tumour for</Pattern>
+    <Pattern>suppressed</Pattern>
+    <Pattern>suppressed as</Pattern>
+    <Pattern>suppressed cholesterin as</Pattern>
+    <Pattern>suppressed cholesterin equally</Pattern>
+    <Pattern>suppressed cholesterin every bit</Pattern>
+    <Pattern>suppressed cholesterin for</Pattern>
+    <Pattern>suppressed cholesterol as</Pattern>
+    <Pattern>suppressed cholesterol equally</Pattern>
+    <Pattern>suppressed cholesterol every bit</Pattern>
+    <Pattern>suppressed cholesterol for</Pattern>
+    <Pattern>suppressed equally</Pattern>
+    <Pattern>suppressed every bit</Pattern>
+    <Pattern>suppressed for</Pattern>
+    <Pattern>suppressed neoplasm as</Pattern>
+    <Pattern>suppressed neoplasm equally</Pattern>
+    <Pattern>suppressed neoplasm every bit</Pattern>
+    <Pattern>suppressed neoplasm for</Pattern>
+    <Pattern>suppressed potency as</Pattern>
+    <Pattern>suppressed potency equally</Pattern>
+    <Pattern>suppressed potency every bit</Pattern>
+    <Pattern>suppressed potency for</Pattern>
+    <Pattern>suppressed potential as</Pattern>
+    <Pattern>suppressed potential equally</Pattern>
+    <Pattern>suppressed potential every bit</Pattern>
+    <Pattern>suppressed potential for</Pattern>
+    <Pattern>suppressed potentiality as</Pattern>
+    <Pattern>suppressed potentiality equally</Pattern>
+    <Pattern>suppressed potentiality every bit</Pattern>
+    <Pattern>suppressed potentiality for</Pattern>
+    <Pattern>suppressed tumor as</Pattern>
+    <Pattern>suppressed tumor equally</Pattern>
+    <Pattern>suppressed tumor every bit</Pattern>
+    <Pattern>suppressed tumor for</Pattern>
+    <Pattern>suppressed tumour as</Pattern>
+    <Pattern>suppressed tumour equally</Pattern>
+    <Pattern>suppressed tumour every bit</Pattern>
+    <Pattern>suppressed tumour for</Pattern>
     <Pattern>synopsized</Pattern>
     <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
     <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
@@ -2088,7 +2460,6 @@
     <Pattern>use United States Intelligence Community inwards</Pattern>
     <Pattern>use United States Intelligence Community past</Pattern>
     <Pattern>use United States Intelligence Community that</Pattern>
-    <Pattern>use against</Pattern>
     <Pattern>use assay by</Pattern>
     <Pattern>use assay in</Pattern>
     <Pattern>use assay inward</Pattern>
@@ -2142,14 +2513,12 @@
     <Pattern>use malignant neoplastic disease inwards</Pattern>
     <Pattern>use malignant neoplastic disease past</Pattern>
     <Pattern>use malignant neoplastic disease that</Pattern>
-    <Pattern>use observed against</Pattern>
     <Pattern>use observed by</Pattern>
     <Pattern>use observed from</Pattern>
     <Pattern>use observed in</Pattern>
     <Pattern>use observed inward</Pattern>
     <Pattern>use observed inwards</Pattern>
     <Pattern>use observed past</Pattern>
-    <Pattern>use our against</Pattern>
     <Pattern>use our by</Pattern>
     <Pattern>use our from</Pattern>
     <Pattern>use our in</Pattern>
@@ -2157,14 +2526,12 @@
     <Pattern>use our inwards</Pattern>
     <Pattern>use our past</Pattern>
     <Pattern>use past</Pattern>
-    <Pattern>use seen against</Pattern>
     <Pattern>use seen by</Pattern>
     <Pattern>use seen from</Pattern>
     <Pattern>use seen in</Pattern>
     <Pattern>use seen inward</Pattern>
     <Pattern>use seen inwards</Pattern>
     <Pattern>use seen past</Pattern>
-    <Pattern>use squalene against</Pattern>
     <Pattern>use squalene by</Pattern>
     <Pattern>use squalene from</Pattern>
     <Pattern>use squalene in</Pattern>
@@ -2209,7 +2576,6 @@
     <Pattern>using United States Intelligence Community inwards</Pattern>
     <Pattern>using United States Intelligence Community past</Pattern>
     <Pattern>using United States Intelligence Community that</Pattern>
-    <Pattern>using against</Pattern>
     <Pattern>using assay by</Pattern>
     <Pattern>using assay in</Pattern>
     <Pattern>using assay inward</Pattern>
@@ -2263,14 +2629,12 @@
     <Pattern>using malignant neoplastic disease inwards</Pattern>
     <Pattern>using malignant neoplastic disease past</Pattern>
     <Pattern>using malignant neoplastic disease that</Pattern>
-    <Pattern>using observed against</Pattern>
     <Pattern>using observed by</Pattern>
     <Pattern>using observed from</Pattern>
     <Pattern>using observed in</Pattern>
     <Pattern>using observed inward</Pattern>
     <Pattern>using observed inwards</Pattern>
     <Pattern>using observed past</Pattern>
-    <Pattern>using our against</Pattern>
     <Pattern>using our by</Pattern>
     <Pattern>using our from</Pattern>
     <Pattern>using our in</Pattern>
@@ -2278,14 +2642,12 @@
     <Pattern>using our inwards</Pattern>
     <Pattern>using our past</Pattern>
     <Pattern>using past</Pattern>
-    <Pattern>using seen against</Pattern>
     <Pattern>using seen by</Pattern>
     <Pattern>using seen from</Pattern>
     <Pattern>using seen in</Pattern>
     <Pattern>using seen inward</Pattern>
     <Pattern>using seen inwards</Pattern>
     <Pattern>using seen past</Pattern>
-    <Pattern>using squalene against</Pattern>
     <Pattern>using squalene by</Pattern>
     <Pattern>using squalene from</Pattern>
     <Pattern>using squalene in</Pattern>
@@ -2330,7 +2692,7 @@
     <Pattern>was United States Intelligence Community inwards</Pattern>
     <Pattern>was United States Intelligence Community past</Pattern>
     <Pattern>was United States Intelligence Community that</Pattern>
-    <Pattern>was against</Pattern>
+    <Pattern>was as</Pattern>
     <Pattern>was assay by</Pattern>
     <Pattern>was assay in</Pattern>
     <Pattern>was assay inward</Pattern>
@@ -2356,12 +2718,23 @@
     <Pattern>was check inwards</Pattern>
     <Pattern>was check past</Pattern>
     <Pattern>was check that</Pattern>
+    <Pattern>was cholesterin as</Pattern>
+    <Pattern>was cholesterin equally</Pattern>
+    <Pattern>was cholesterin every bit</Pattern>
+    <Pattern>was cholesterin for</Pattern>
+    <Pattern>was cholesterol as</Pattern>
+    <Pattern>was cholesterol equally</Pattern>
+    <Pattern>was cholesterol every bit</Pattern>
+    <Pattern>was cholesterol for</Pattern>
+    <Pattern>was equally</Pattern>
+    <Pattern>was every bit</Pattern>
     <Pattern>was followed by</Pattern>
     <Pattern>was followed in</Pattern>
     <Pattern>was followed inward</Pattern>
     <Pattern>was followed inwards</Pattern>
     <Pattern>was followed past</Pattern>
     <Pattern>was followed that</Pattern>
+    <Pattern>was for</Pattern>
     <Pattern>was found by</Pattern>
     <Pattern>was found in</Pattern>
     <Pattern>was found inward</Pattern>
@@ -2384,14 +2757,16 @@
     <Pattern>was malignant neoplastic disease inwards</Pattern>
     <Pattern>was malignant neoplastic disease past</Pattern>
     <Pattern>was malignant neoplastic disease that</Pattern>
-    <Pattern>was observed against</Pattern>
+    <Pattern>was neoplasm as</Pattern>
+    <Pattern>was neoplasm equally</Pattern>
+    <Pattern>was neoplasm every bit</Pattern>
+    <Pattern>was neoplasm for</Pattern>
     <Pattern>was observed by</Pattern>
     <Pattern>was observed from</Pattern>
     <Pattern>was observed in</Pattern>
     <Pattern>was observed inward</Pattern>
     <Pattern>was observed inwards</Pattern>
     <Pattern>was observed past</Pattern>
-    <Pattern>was our against</Pattern>
     <Pattern>was our by</Pattern>
     <Pattern>was our from</Pattern>
     <Pattern>was our in</Pattern>
@@ -2399,14 +2774,24 @@
     <Pattern>was our inwards</Pattern>
     <Pattern>was our past</Pattern>
     <Pattern>was past</Pattern>
-    <Pattern>was seen against</Pattern>
+    <Pattern>was potency as</Pattern>
+    <Pattern>was potency equally</Pattern>
+    <Pattern>was potency every bit</Pattern>
+    <Pattern>was potency for</Pattern>
+    <Pattern>was potential as</Pattern>
+    <Pattern>was potential equally</Pattern>
+    <Pattern>was potential every bit</Pattern>
+    <Pattern>was potential for</Pattern>
+    <Pattern>was potentiality as</Pattern>
+    <Pattern>was potentiality equally</Pattern>
+    <Pattern>was potentiality every bit</Pattern>
+    <Pattern>was potentiality for</Pattern>
     <Pattern>was seen by</Pattern>
     <Pattern>was seen from</Pattern>
     <Pattern>was seen in</Pattern>
     <Pattern>was seen inward</Pattern>
     <Pattern>was seen inwards</Pattern>
     <Pattern>was seen past</Pattern>
-    <Pattern>was squalene against</Pattern>
     <Pattern>was squalene by</Pattern>
     <Pattern>was squalene from</Pattern>
     <Pattern>was squalene in</Pattern>
@@ -2420,21 +2805,26 @@
     <Pattern>was synopsized past</Pattern>
     <Pattern>was synopsized that</Pattern>
     <Pattern>was that</Pattern>
+    <Pattern>was tumor as</Pattern>
+    <Pattern>was tumor equally</Pattern>
+    <Pattern>was tumor every bit</Pattern>
+    <Pattern>was tumor for</Pattern>
+    <Pattern>was tumour as</Pattern>
+    <Pattern>was tumour equally</Pattern>
+    <Pattern>was tumour every bit</Pattern>
+    <Pattern>was tumour for</Pattern>
     <Pattern>were</Pattern>
-    <Pattern>were against</Pattern>
     <Pattern>were by</Pattern>
     <Pattern>were from</Pattern>
     <Pattern>were in</Pattern>
     <Pattern>were inward</Pattern>
     <Pattern>were inwards</Pattern>
-    <Pattern>were observed against</Pattern>
     <Pattern>were observed by</Pattern>
     <Pattern>were observed from</Pattern>
     <Pattern>were observed in</Pattern>
     <Pattern>were observed inward</Pattern>
     <Pattern>were observed inwards</Pattern>
     <Pattern>were observed past</Pattern>
-    <Pattern>were our against</Pattern>
     <Pattern>were our by</Pattern>
     <Pattern>were our from</Pattern>
     <Pattern>were our in</Pattern>
@@ -2442,14 +2832,12 @@
     <Pattern>were our inwards</Pattern>
     <Pattern>were our past</Pattern>
     <Pattern>were past</Pattern>
-    <Pattern>were seen against</Pattern>
     <Pattern>were seen by</Pattern>
     <Pattern>were seen from</Pattern>
     <Pattern>were seen in</Pattern>
     <Pattern>were seen inward</Pattern>
     <Pattern>were seen inwards</Pattern>
     <Pattern>were seen past</Pattern>
-    <Pattern>were squalene against</Pattern>
     <Pattern>were squalene by</Pattern>
     <Pattern>were squalene from</Pattern>
     <Pattern>were squalene in</Pattern>

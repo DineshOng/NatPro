@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>aphanamixis polystachya</Name>
+  </Tag1>
+  <Tag2>Location<Name>philippines</Name>
+    <Name>bacnotan</Name>
+    <Name>la union</Name>
+    <Name>quezon city</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>authenticated at</Pattern>
+    <Pattern>collected from</Pattern>
+    <Pattern>was authenticated at</Pattern>
+    <Pattern>were collected from</Pattern>
+  </Relation>
+</Seed>

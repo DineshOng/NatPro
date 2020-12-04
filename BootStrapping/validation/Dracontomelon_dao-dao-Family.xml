@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>MedicinalPlant<Name>dao</Name>
+  </Tag1>
+  <Tag2>Family<Name>anacardiaceae</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>known as</Pattern>
+  </Relation>
+</Seed>

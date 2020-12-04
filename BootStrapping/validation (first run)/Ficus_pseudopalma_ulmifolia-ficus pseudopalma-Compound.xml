@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>ficus pseudopalma</Name>
+  </Tag1>
+  <Tag2>Compound<Name>phytol</Name>
+    <Name>acetone</Name>
+    <Name>dichloromethane</Name>
+    <Name>alpha-amyrin acetate</Name>
+    <Name>beta-carotene</Name>
+    <Name>polyprenol</Name>
+    <Name>lupeol acetate</Name>
+    <Name>alpha-amyrin fatty acid ester</Name>
+    <Name>lupeol</Name>
+    <Name>squalene</Name>
+    <Name>lupeol fatty acid ester</Name>
+    <Name>lutein</Name>
+    <Name>lupenone</Name>
+    <Name>oleanone</Name>
+    <Name>ursenone</Name>
+    <Name>stigmasterol</Name>
+    <Name>beta-amyrin fatty acid ester</Name>
+    <Name>beta-amyrin acetate</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>be</Pattern>
+    <Pattern>chromatographed on</Pattern>
+    <Pattern>increasing proportions of</Pattern>
+    <Pattern>indicates that</Pattern>
+    <Pattern>was chromatographed on</Pattern>
+  </Relation>
+</Seed>

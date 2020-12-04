@@ -63,7 +63,13 @@
     <Pattern>discovered impede to</Pattern>
     <Pattern>discovered of</Pattern>
     <Pattern>discovered to</Pattern>
+    <Pattern>duranta</Pattern>
     <Pattern>family</Pattern>
+    <Pattern>family Bird Parker of</Pattern>
+    <Pattern>family Charles Christopher Parker of</Pattern>
+    <Pattern>family Charlie Parker of</Pattern>
+    <Pattern>family Parker of</Pattern>
+    <Pattern>family Yardbird Parker of</Pattern>
     <Pattern>family belongs to</Pattern>
     <Pattern>family characteristic of</Pattern>
     <Pattern>family characteristic with</Pattern>
@@ -79,7 +85,9 @@
     <Pattern>family juss of</Pattern>
     <Pattern>family merr of</Pattern>
     <Pattern>family of</Pattern>
+    <Pattern>family parker of</Pattern>
     <Pattern>family to</Pattern>
+    <Pattern>family willd. of</Pattern>
     <Pattern>family with</Pattern>
     <Pattern>forst</Pattern>
     <Pattern>forst belongs to</Pattern>
@@ -107,7 +115,11 @@
     <Pattern>juss juss of</Pattern>
     <Pattern>juss of</Pattern>
     <Pattern>l</Pattern>
+    <Pattern>l of</Pattern>
+    <Pattern>l willd. of</Pattern>
     <Pattern>l.</Pattern>
+    <Pattern>l. of</Pattern>
+    <Pattern>l. willd. of</Pattern>
     <Pattern>members</Pattern>
     <Pattern>members characteristic of</Pattern>
     <Pattern>members characteristic with</Pattern>
@@ -125,7 +137,16 @@
     <Pattern>miq of</Pattern>
     <Pattern>mustard</Pattern>
     <Pattern>oleracea</Pattern>
+    <Pattern>parker</Pattern>
+    <Pattern>parker Bird Parker of</Pattern>
+    <Pattern>parker Charles Christopher Parker of</Pattern>
+    <Pattern>parker Charlie Parker of</Pattern>
+    <Pattern>parker Parker of</Pattern>
+    <Pattern>parker Yardbird Parker of</Pattern>
+    <Pattern>parker of</Pattern>
+    <Pattern>parker parker of</Pattern>
     <Pattern>pilfer</Pattern>
+    <Pattern>repens</Pattern>
     <Pattern>share</Pattern>
     <Pattern>share characteristic of</Pattern>
     <Pattern>share characteristic with</Pattern>
@@ -144,6 +165,7 @@
     <Pattern>shares feature with</Pattern>
     <Pattern>shares of</Pattern>
     <Pattern>shares with</Pattern>
+    <Pattern>syn</Pattern>
     <Pattern>to</Pattern>
     <Pattern>to belongs to</Pattern>
     <Pattern>to discovered of</Pattern>
@@ -161,6 +183,14 @@
     <Pattern>venom impede to</Pattern>
     <Pattern>venom of</Pattern>
     <Pattern>venom to</Pattern>
+    <Pattern>wall</Pattern>
+    <Pattern>wall Bird Parker of</Pattern>
+    <Pattern>wall Charles Christopher Parker of</Pattern>
+    <Pattern>wall Charlie Parker of</Pattern>
+    <Pattern>wall Parker of</Pattern>
+    <Pattern>wall Yardbird Parker of</Pattern>
+    <Pattern>wall of</Pattern>
+    <Pattern>wall parker of</Pattern>
     <Pattern>was</Pattern>
     <Pattern>was discovered of</Pattern>
     <Pattern>was discovered to</Pattern>
@@ -168,5 +198,11 @@
     <Pattern>was impede to</Pattern>
     <Pattern>was of</Pattern>
     <Pattern>was to</Pattern>
+    <Pattern>willd</Pattern>
+    <Pattern>willd of</Pattern>
+    <Pattern>willd willd. of</Pattern>
+    <Pattern>willd.</Pattern>
+    <Pattern>willd. of</Pattern>
+    <Pattern>willd. willd. of</Pattern>
   </Relation>
 </Seed>

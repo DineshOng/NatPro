@@ -587,11 +587,38 @@
     <Pattern>are XI from</Pattern>
     <Pattern>are XI to</Pattern>
     <Pattern>are along</Pattern>
+    <Pattern>are as</Pattern>
+    <Pattern>are at</Pattern>
     <Pattern>are collected from</Pattern>
     <Pattern>are collected to</Pattern>
+    <Pattern>are determined along</Pattern>
+    <Pattern>are determined as</Pattern>
+    <Pattern>are determined at</Pattern>
+    <Pattern>are determined equally</Pattern>
+    <Pattern>are determined every bit</Pattern>
+    <Pattern>are determined from</Pattern>
+    <Pattern>are determined in</Pattern>
+    <Pattern>are determined inward</Pattern>
+    <Pattern>are determined inwards</Pattern>
+    <Pattern>are determined on</Pattern>
     <Pattern>are eleven from</Pattern>
     <Pattern>are eleven to</Pattern>
+    <Pattern>are equally</Pattern>
+    <Pattern>are every bit</Pattern>
+    <Pattern>are found along</Pattern>
+    <Pattern>are found as</Pattern>
+    <Pattern>are found at</Pattern>
+    <Pattern>are found equally</Pattern>
+    <Pattern>are found every bit</Pattern>
+    <Pattern>are found from</Pattern>
+    <Pattern>are found in</Pattern>
+    <Pattern>are found inward</Pattern>
+    <Pattern>are found inwards</Pattern>
+    <Pattern>are found on</Pattern>
     <Pattern>are from</Pattern>
+    <Pattern>are in</Pattern>
+    <Pattern>are inward</Pattern>
+    <Pattern>are inwards</Pattern>
     <Pattern>are labor along</Pattern>
     <Pattern>are labor on</Pattern>
     <Pattern>are nanogram from</Pattern>
@@ -601,6 +628,16 @@
     <Pattern>are ng1 from</Pattern>
     <Pattern>are ng1 to</Pattern>
     <Pattern>are on</Pattern>
+    <Pattern>are prestoblue along</Pattern>
+    <Pattern>are prestoblue as</Pattern>
+    <Pattern>are prestoblue at</Pattern>
+    <Pattern>are prestoblue equally</Pattern>
+    <Pattern>are prestoblue every bit</Pattern>
+    <Pattern>are prestoblue from</Pattern>
+    <Pattern>are prestoblue in</Pattern>
+    <Pattern>are prestoblue inward</Pattern>
+    <Pattern>are prestoblue inwards</Pattern>
+    <Pattern>are prestoblue on</Pattern>
     <Pattern>are profile along</Pattern>
     <Pattern>are profile on</Pattern>
     <Pattern>are project along</Pattern>
@@ -609,12 +646,40 @@
     <Pattern>are species to</Pattern>
     <Pattern>are task along</Pattern>
     <Pattern>are task on</Pattern>
+    <Pattern>are tested along</Pattern>
+    <Pattern>are tested as</Pattern>
+    <Pattern>are tested at</Pattern>
+    <Pattern>are tested equally</Pattern>
+    <Pattern>are tested every bit</Pattern>
+    <Pattern>are tested from</Pattern>
+    <Pattern>are tested in</Pattern>
+    <Pattern>are tested inward</Pattern>
+    <Pattern>are tested inwards</Pattern>
+    <Pattern>are tested on</Pattern>
     <Pattern>are to</Pattern>
     <Pattern>are undertaking along</Pattern>
     <Pattern>are undertaking on</Pattern>
+    <Pattern>authenticate</Pattern>
+    <Pattern>authenticate at</Pattern>
+    <Pattern>authenticate authenticated at</Pattern>
+    <Pattern>authenticate authenticated from</Pattern>
+    <Pattern>authenticate collected at</Pattern>
+    <Pattern>authenticate collected from</Pattern>
+    <Pattern>authenticate from</Pattern>
+    <Pattern>authenticated</Pattern>
+    <Pattern>authenticated at</Pattern>
+    <Pattern>authenticated authenticated at</Pattern>
+    <Pattern>authenticated authenticated from</Pattern>
+    <Pattern>authenticated collected at</Pattern>
+    <Pattern>authenticated collected from</Pattern>
+    <Pattern>authenticated from</Pattern>
     <Pattern>be</Pattern>
     <Pattern>be 11 from</Pattern>
     <Pattern>be 11 to</Pattern>
+    <Pattern>be Filipino at</Pattern>
+    <Pattern>be Filipino end-to-end</Pattern>
+    <Pattern>be Filipino throughout</Pattern>
+    <Pattern>be Filipino to</Pattern>
     <Pattern>be IC along</Pattern>
     <Pattern>be IC as</Pattern>
     <Pattern>be IC equally</Pattern>
@@ -662,6 +727,10 @@
     <Pattern>be National Intelligence Community that</Pattern>
     <Pattern>be National Intelligence Community to</Pattern>
     <Pattern>be National Intelligence Community with</Pattern>
+    <Pattern>be Philippine at</Pattern>
+    <Pattern>be Philippine end-to-end</Pattern>
+    <Pattern>be Philippine throughout</Pattern>
+    <Pattern>be Philippine to</Pattern>
     <Pattern>be Provisional IRA from</Pattern>
     <Pattern>be Provisional IRA in</Pattern>
     <Pattern>be Provisional IRA inward</Pattern>
@@ -691,6 +760,17 @@
     <Pattern>be XI to</Pattern>
     <Pattern>be along</Pattern>
     <Pattern>be as</Pattern>
+    <Pattern>be at</Pattern>
+    <Pattern>be authenticated at</Pattern>
+    <Pattern>be authenticated from</Pattern>
+    <Pattern>be author at</Pattern>
+    <Pattern>be author end-to-end</Pattern>
+    <Pattern>be author throughout</Pattern>
+    <Pattern>be author to</Pattern>
+    <Pattern>be been at</Pattern>
+    <Pattern>be been end-to-end</Pattern>
+    <Pattern>be been throughout</Pattern>
+    <Pattern>be been to</Pattern>
     <Pattern>be burn along</Pattern>
     <Pattern>be burn as</Pattern>
     <Pattern>be burn equally</Pattern>
@@ -731,6 +811,7 @@
     <Pattern>be cell to</Pattern>
     <Pattern>be cell with</Pattern>
     <Pattern>be collected as</Pattern>
+    <Pattern>be collected at</Pattern>
     <Pattern>be collected equally</Pattern>
     <Pattern>be collected every bit</Pattern>
     <Pattern>be collected from</Pattern>
@@ -739,6 +820,8 @@
     <Pattern>be collected inwards</Pattern>
     <Pattern>be collected through</Pattern>
     <Pattern>be collected to</Pattern>
+    <Pattern>be cubic decimeter from</Pattern>
+    <Pattern>be cubic decimetre from</Pattern>
     <Pattern>be cultivated as</Pattern>
     <Pattern>be cultivated equally</Pattern>
     <Pattern>be cultivated every bit</Pattern>
@@ -748,13 +831,30 @@
     <Pattern>be cultivated inwards</Pattern>
     <Pattern>be cultivated that</Pattern>
     <Pattern>be cultivated to</Pattern>
+    <Pattern>be deposited at</Pattern>
+    <Pattern>be deposited end-to-end</Pattern>
+    <Pattern>be deposited throughout</Pattern>
+    <Pattern>be deposited to</Pattern>
+    <Pattern>be determined along</Pattern>
+    <Pattern>be determined as</Pattern>
+    <Pattern>be determined at</Pattern>
+    <Pattern>be determined equally</Pattern>
+    <Pattern>be determined every bit</Pattern>
+    <Pattern>be determined from</Pattern>
+    <Pattern>be determined in</Pattern>
+    <Pattern>be determined inward</Pattern>
+    <Pattern>be determined inwards</Pattern>
+    <Pattern>be determined on</Pattern>
     <Pattern>be eleven from</Pattern>
     <Pattern>be eleven to</Pattern>
+    <Pattern>be end-to-end</Pattern>
     <Pattern>be equally</Pattern>
     <Pattern>be every bit</Pattern>
+    <Pattern>be fom from</Pattern>
     <Pattern>be for</Pattern>
     <Pattern>be found along</Pattern>
     <Pattern>be found as</Pattern>
+    <Pattern>be found at</Pattern>
     <Pattern>be found equally</Pattern>
     <Pattern>be found every bit</Pattern>
     <Pattern>be found for</Pattern>
@@ -823,8 +923,12 @@
     <Pattern>be ira in</Pattern>
     <Pattern>be ira inward</Pattern>
     <Pattern>be ira inwards</Pattern>
+    <Pattern>be l from</Pattern>
+    <Pattern>be l. from</Pattern>
     <Pattern>be labor along</Pattern>
     <Pattern>be labor on</Pattern>
+    <Pattern>be liter from</Pattern>
+    <Pattern>be litre from</Pattern>
     <Pattern>be malignant neoplastic disease along</Pattern>
     <Pattern>be malignant neoplastic disease as</Pattern>
     <Pattern>be malignant neoplastic disease equally</Pattern>
@@ -845,6 +949,20 @@
     <Pattern>be ng1 from</Pattern>
     <Pattern>be ng1 to</Pattern>
     <Pattern>be on</Pattern>
+    <Pattern>be philippine at</Pattern>
+    <Pattern>be philippine end-to-end</Pattern>
+    <Pattern>be philippine throughout</Pattern>
+    <Pattern>be philippine to</Pattern>
+    <Pattern>be prestoblue along</Pattern>
+    <Pattern>be prestoblue as</Pattern>
+    <Pattern>be prestoblue at</Pattern>
+    <Pattern>be prestoblue equally</Pattern>
+    <Pattern>be prestoblue every bit</Pattern>
+    <Pattern>be prestoblue from</Pattern>
+    <Pattern>be prestoblue in</Pattern>
+    <Pattern>be prestoblue inward</Pattern>
+    <Pattern>be prestoblue inwards</Pattern>
+    <Pattern>be prestoblue on</Pattern>
     <Pattern>be procured from</Pattern>
     <Pattern>be procured in</Pattern>
     <Pattern>be procured inward</Pattern>
@@ -853,6 +971,14 @@
     <Pattern>be profile on</Pattern>
     <Pattern>be project along</Pattern>
     <Pattern>be project on</Pattern>
+    <Pattern>be ragasa from</Pattern>
+    <Pattern>be recorded in</Pattern>
+    <Pattern>be recorded inward</Pattern>
+    <Pattern>be recorded inwards</Pattern>
+    <Pattern>be reported at</Pattern>
+    <Pattern>be reported end-to-end</Pattern>
+    <Pattern>be reported throughout</Pattern>
+    <Pattern>be reported to</Pattern>
     <Pattern>be served along</Pattern>
     <Pattern>be served as</Pattern>
     <Pattern>be served equally</Pattern>
@@ -877,6 +1003,7 @@
     <Pattern>be squalene inwards</Pattern>
     <Pattern>be squalene that</Pattern>
     <Pattern>be squalene to</Pattern>
+    <Pattern>be st. from</Pattern>
     <Pattern>be sunburn along</Pattern>
     <Pattern>be sunburn as</Pattern>
     <Pattern>be sunburn equally</Pattern>
@@ -927,6 +1054,7 @@
     <Pattern>be task on</Pattern>
     <Pattern>be tested along</Pattern>
     <Pattern>be tested as</Pattern>
+    <Pattern>be tested at</Pattern>
     <Pattern>be tested equally</Pattern>
     <Pattern>be tested every bit</Pattern>
     <Pattern>be tested for</Pattern>
@@ -940,6 +1068,7 @@
     <Pattern>be tested with</Pattern>
     <Pattern>be that</Pattern>
     <Pattern>be through</Pattern>
+    <Pattern>be throughout</Pattern>
     <Pattern>be to</Pattern>
     <Pattern>be undertaking along</Pattern>
     <Pattern>be undertaking on</Pattern>
@@ -969,7 +1098,49 @@
     <Pattern>be values that</Pattern>
     <Pattern>be values to</Pattern>
     <Pattern>be values with</Pattern>
+    <Pattern>be were from</Pattern>
     <Pattern>be with</Pattern>
+    <Pattern>be writer at</Pattern>
+    <Pattern>be writer end-to-end</Pattern>
+    <Pattern>be writer throughout</Pattern>
+    <Pattern>be writer to</Pattern>
+    <Pattern>been</Pattern>
+    <Pattern>been Filipino at</Pattern>
+    <Pattern>been Filipino end-to-end</Pattern>
+    <Pattern>been Filipino throughout</Pattern>
+    <Pattern>been Filipino to</Pattern>
+    <Pattern>been Philippine at</Pattern>
+    <Pattern>been Philippine end-to-end</Pattern>
+    <Pattern>been Philippine throughout</Pattern>
+    <Pattern>been Philippine to</Pattern>
+    <Pattern>been at</Pattern>
+    <Pattern>been author at</Pattern>
+    <Pattern>been author end-to-end</Pattern>
+    <Pattern>been author throughout</Pattern>
+    <Pattern>been author to</Pattern>
+    <Pattern>been been at</Pattern>
+    <Pattern>been been end-to-end</Pattern>
+    <Pattern>been been throughout</Pattern>
+    <Pattern>been been to</Pattern>
+    <Pattern>been deposited at</Pattern>
+    <Pattern>been deposited end-to-end</Pattern>
+    <Pattern>been deposited throughout</Pattern>
+    <Pattern>been deposited to</Pattern>
+    <Pattern>been end-to-end</Pattern>
+    <Pattern>been philippine at</Pattern>
+    <Pattern>been philippine end-to-end</Pattern>
+    <Pattern>been philippine throughout</Pattern>
+    <Pattern>been philippine to</Pattern>
+    <Pattern>been reported at</Pattern>
+    <Pattern>been reported end-to-end</Pattern>
+    <Pattern>been reported throughout</Pattern>
+    <Pattern>been reported to</Pattern>
+    <Pattern>been throughout</Pattern>
+    <Pattern>been to</Pattern>
+    <Pattern>been writer at</Pattern>
+    <Pattern>been writer end-to-end</Pattern>
+    <Pattern>been writer throughout</Pattern>
+    <Pattern>been writer to</Pattern>
     <Pattern>bespeak</Pattern>
     <Pattern>bespeak as</Pattern>
     <Pattern>bespeak cultivated as</Pattern>
@@ -1265,7 +1436,11 @@
     <Pattern>collected XI from</Pattern>
     <Pattern>collected XI to</Pattern>
     <Pattern>collected as</Pattern>
+    <Pattern>collected at</Pattern>
+    <Pattern>collected authenticated at</Pattern>
+    <Pattern>collected authenticated from</Pattern>
     <Pattern>collected collected as</Pattern>
+    <Pattern>collected collected at</Pattern>
     <Pattern>collected collected equally</Pattern>
     <Pattern>collected collected every bit</Pattern>
     <Pattern>collected collected from</Pattern>
@@ -1274,24 +1449,34 @@
     <Pattern>collected collected inwards</Pattern>
     <Pattern>collected collected through</Pattern>
     <Pattern>collected collected to</Pattern>
+    <Pattern>collected cubic decimeter from</Pattern>
+    <Pattern>collected cubic decimetre from</Pattern>
     <Pattern>collected eleven from</Pattern>
     <Pattern>collected eleven to</Pattern>
     <Pattern>collected equally</Pattern>
     <Pattern>collected every bit</Pattern>
+    <Pattern>collected fom from</Pattern>
     <Pattern>collected from</Pattern>
     <Pattern>collected in</Pattern>
     <Pattern>collected inward</Pattern>
     <Pattern>collected inwards</Pattern>
+    <Pattern>collected l from</Pattern>
+    <Pattern>collected l. from</Pattern>
+    <Pattern>collected liter from</Pattern>
+    <Pattern>collected litre from</Pattern>
     <Pattern>collected nanogram from</Pattern>
     <Pattern>collected nanogram to</Pattern>
     <Pattern>collected ng from</Pattern>
     <Pattern>collected ng to</Pattern>
     <Pattern>collected ng1 from</Pattern>
     <Pattern>collected ng1 to</Pattern>
+    <Pattern>collected ragasa from</Pattern>
     <Pattern>collected species from</Pattern>
     <Pattern>collected species to</Pattern>
+    <Pattern>collected st. from</Pattern>
     <Pattern>collected through</Pattern>
     <Pattern>collected to</Pattern>
+    <Pattern>collected were from</Pattern>
     <Pattern>commemorate</Pattern>
     <Pattern>commemorate IC along</Pattern>
     <Pattern>commemorate IC as</Pattern>
@@ -1553,6 +1738,43 @@
     <Pattern>commemorate values to</Pattern>
     <Pattern>commemorate values with</Pattern>
     <Pattern>commemorate with</Pattern>
+    <Pattern>corresponding</Pattern>
+    <Pattern>corresponding Filipino at</Pattern>
+    <Pattern>corresponding Filipino end-to-end</Pattern>
+    <Pattern>corresponding Filipino throughout</Pattern>
+    <Pattern>corresponding Filipino to</Pattern>
+    <Pattern>corresponding Philippine at</Pattern>
+    <Pattern>corresponding Philippine end-to-end</Pattern>
+    <Pattern>corresponding Philippine throughout</Pattern>
+    <Pattern>corresponding Philippine to</Pattern>
+    <Pattern>corresponding at</Pattern>
+    <Pattern>corresponding author at</Pattern>
+    <Pattern>corresponding author end-to-end</Pattern>
+    <Pattern>corresponding author throughout</Pattern>
+    <Pattern>corresponding author to</Pattern>
+    <Pattern>corresponding been at</Pattern>
+    <Pattern>corresponding been end-to-end</Pattern>
+    <Pattern>corresponding been throughout</Pattern>
+    <Pattern>corresponding been to</Pattern>
+    <Pattern>corresponding deposited at</Pattern>
+    <Pattern>corresponding deposited end-to-end</Pattern>
+    <Pattern>corresponding deposited throughout</Pattern>
+    <Pattern>corresponding deposited to</Pattern>
+    <Pattern>corresponding end-to-end</Pattern>
+    <Pattern>corresponding philippine at</Pattern>
+    <Pattern>corresponding philippine end-to-end</Pattern>
+    <Pattern>corresponding philippine throughout</Pattern>
+    <Pattern>corresponding philippine to</Pattern>
+    <Pattern>corresponding reported at</Pattern>
+    <Pattern>corresponding reported end-to-end</Pattern>
+    <Pattern>corresponding reported throughout</Pattern>
+    <Pattern>corresponding reported to</Pattern>
+    <Pattern>corresponding throughout</Pattern>
+    <Pattern>corresponding to</Pattern>
+    <Pattern>corresponding writer at</Pattern>
+    <Pattern>corresponding writer end-to-end</Pattern>
+    <Pattern>corresponding writer throughout</Pattern>
+    <Pattern>corresponding writer to</Pattern>
     <Pattern>cultivate</Pattern>
     <Pattern>cultivate 11 from</Pattern>
     <Pattern>cultivate 11 to</Pattern>
@@ -2182,6 +2404,145 @@
     <Pattern>decreased values to</Pattern>
     <Pattern>decreased values with</Pattern>
     <Pattern>decreased with</Pattern>
+    <Pattern>deposited</Pattern>
+    <Pattern>deposited Filipino at</Pattern>
+    <Pattern>deposited Filipino end-to-end</Pattern>
+    <Pattern>deposited Filipino throughout</Pattern>
+    <Pattern>deposited Filipino to</Pattern>
+    <Pattern>deposited Philippine at</Pattern>
+    <Pattern>deposited Philippine end-to-end</Pattern>
+    <Pattern>deposited Philippine throughout</Pattern>
+    <Pattern>deposited Philippine to</Pattern>
+    <Pattern>deposited at</Pattern>
+    <Pattern>deposited author at</Pattern>
+    <Pattern>deposited author end-to-end</Pattern>
+    <Pattern>deposited author throughout</Pattern>
+    <Pattern>deposited author to</Pattern>
+    <Pattern>deposited been at</Pattern>
+    <Pattern>deposited been end-to-end</Pattern>
+    <Pattern>deposited been throughout</Pattern>
+    <Pattern>deposited been to</Pattern>
+    <Pattern>deposited deposited at</Pattern>
+    <Pattern>deposited deposited end-to-end</Pattern>
+    <Pattern>deposited deposited throughout</Pattern>
+    <Pattern>deposited deposited to</Pattern>
+    <Pattern>deposited end-to-end</Pattern>
+    <Pattern>deposited philippine at</Pattern>
+    <Pattern>deposited philippine end-to-end</Pattern>
+    <Pattern>deposited philippine throughout</Pattern>
+    <Pattern>deposited philippine to</Pattern>
+    <Pattern>deposited reported at</Pattern>
+    <Pattern>deposited reported end-to-end</Pattern>
+    <Pattern>deposited reported throughout</Pattern>
+    <Pattern>deposited reported to</Pattern>
+    <Pattern>deposited throughout</Pattern>
+    <Pattern>deposited to</Pattern>
+    <Pattern>deposited writer at</Pattern>
+    <Pattern>deposited writer end-to-end</Pattern>
+    <Pattern>deposited writer throughout</Pattern>
+    <Pattern>deposited writer to</Pattern>
+    <Pattern>determine</Pattern>
+    <Pattern>determine along</Pattern>
+    <Pattern>determine as</Pattern>
+    <Pattern>determine at</Pattern>
+    <Pattern>determine determined along</Pattern>
+    <Pattern>determine determined as</Pattern>
+    <Pattern>determine determined at</Pattern>
+    <Pattern>determine determined equally</Pattern>
+    <Pattern>determine determined every bit</Pattern>
+    <Pattern>determine determined from</Pattern>
+    <Pattern>determine determined in</Pattern>
+    <Pattern>determine determined inward</Pattern>
+    <Pattern>determine determined inwards</Pattern>
+    <Pattern>determine determined on</Pattern>
+    <Pattern>determine equally</Pattern>
+    <Pattern>determine every bit</Pattern>
+    <Pattern>determine found along</Pattern>
+    <Pattern>determine found as</Pattern>
+    <Pattern>determine found at</Pattern>
+    <Pattern>determine found equally</Pattern>
+    <Pattern>determine found every bit</Pattern>
+    <Pattern>determine found from</Pattern>
+    <Pattern>determine found in</Pattern>
+    <Pattern>determine found inward</Pattern>
+    <Pattern>determine found inwards</Pattern>
+    <Pattern>determine found on</Pattern>
+    <Pattern>determine from</Pattern>
+    <Pattern>determine in</Pattern>
+    <Pattern>determine inward</Pattern>
+    <Pattern>determine inwards</Pattern>
+    <Pattern>determine on</Pattern>
+    <Pattern>determine prestoblue along</Pattern>
+    <Pattern>determine prestoblue as</Pattern>
+    <Pattern>determine prestoblue at</Pattern>
+    <Pattern>determine prestoblue equally</Pattern>
+    <Pattern>determine prestoblue every bit</Pattern>
+    <Pattern>determine prestoblue from</Pattern>
+    <Pattern>determine prestoblue in</Pattern>
+    <Pattern>determine prestoblue inward</Pattern>
+    <Pattern>determine prestoblue inwards</Pattern>
+    <Pattern>determine prestoblue on</Pattern>
+    <Pattern>determine tested along</Pattern>
+    <Pattern>determine tested as</Pattern>
+    <Pattern>determine tested at</Pattern>
+    <Pattern>determine tested equally</Pattern>
+    <Pattern>determine tested every bit</Pattern>
+    <Pattern>determine tested from</Pattern>
+    <Pattern>determine tested in</Pattern>
+    <Pattern>determine tested inward</Pattern>
+    <Pattern>determine tested inwards</Pattern>
+    <Pattern>determine tested on</Pattern>
+    <Pattern>determined</Pattern>
+    <Pattern>determined along</Pattern>
+    <Pattern>determined as</Pattern>
+    <Pattern>determined at</Pattern>
+    <Pattern>determined determined along</Pattern>
+    <Pattern>determined determined as</Pattern>
+    <Pattern>determined determined at</Pattern>
+    <Pattern>determined determined equally</Pattern>
+    <Pattern>determined determined every bit</Pattern>
+    <Pattern>determined determined from</Pattern>
+    <Pattern>determined determined in</Pattern>
+    <Pattern>determined determined inward</Pattern>
+    <Pattern>determined determined inwards</Pattern>
+    <Pattern>determined determined on</Pattern>
+    <Pattern>determined equally</Pattern>
+    <Pattern>determined every bit</Pattern>
+    <Pattern>determined found along</Pattern>
+    <Pattern>determined found as</Pattern>
+    <Pattern>determined found at</Pattern>
+    <Pattern>determined found equally</Pattern>
+    <Pattern>determined found every bit</Pattern>
+    <Pattern>determined found from</Pattern>
+    <Pattern>determined found in</Pattern>
+    <Pattern>determined found inward</Pattern>
+    <Pattern>determined found inwards</Pattern>
+    <Pattern>determined found on</Pattern>
+    <Pattern>determined from</Pattern>
+    <Pattern>determined in</Pattern>
+    <Pattern>determined inward</Pattern>
+    <Pattern>determined inwards</Pattern>
+    <Pattern>determined on</Pattern>
+    <Pattern>determined prestoblue along</Pattern>
+    <Pattern>determined prestoblue as</Pattern>
+    <Pattern>determined prestoblue at</Pattern>
+    <Pattern>determined prestoblue equally</Pattern>
+    <Pattern>determined prestoblue every bit</Pattern>
+    <Pattern>determined prestoblue from</Pattern>
+    <Pattern>determined prestoblue in</Pattern>
+    <Pattern>determined prestoblue inward</Pattern>
+    <Pattern>determined prestoblue inwards</Pattern>
+    <Pattern>determined prestoblue on</Pattern>
+    <Pattern>determined tested along</Pattern>
+    <Pattern>determined tested as</Pattern>
+    <Pattern>determined tested at</Pattern>
+    <Pattern>determined tested equally</Pattern>
+    <Pattern>determined tested every bit</Pattern>
+    <Pattern>determined tested from</Pattern>
+    <Pattern>determined tested in</Pattern>
+    <Pattern>determined tested inward</Pattern>
+    <Pattern>determined tested inwards</Pattern>
+    <Pattern>determined tested on</Pattern>
     <Pattern>distribute</Pattern>
     <Pattern>distribute as</Pattern>
     <Pattern>distribute collected as</Pattern>
@@ -2204,7 +2565,85 @@
     <Pattern>distributed every bit</Pattern>
     <Pattern>distributed from</Pattern>
     <Pattern>distributed through</Pattern>
+    <Pattern>endanger</Pattern>
+    <Pattern>endanger Filipino at</Pattern>
+    <Pattern>endanger Filipino end-to-end</Pattern>
+    <Pattern>endanger Filipino throughout</Pattern>
+    <Pattern>endanger Filipino to</Pattern>
+    <Pattern>endanger Philippine at</Pattern>
+    <Pattern>endanger Philippine end-to-end</Pattern>
+    <Pattern>endanger Philippine throughout</Pattern>
+    <Pattern>endanger Philippine to</Pattern>
+    <Pattern>endanger at</Pattern>
+    <Pattern>endanger author at</Pattern>
+    <Pattern>endanger author end-to-end</Pattern>
+    <Pattern>endanger author throughout</Pattern>
+    <Pattern>endanger author to</Pattern>
+    <Pattern>endanger been at</Pattern>
+    <Pattern>endanger been end-to-end</Pattern>
+    <Pattern>endanger been throughout</Pattern>
+    <Pattern>endanger been to</Pattern>
+    <Pattern>endanger deposited at</Pattern>
+    <Pattern>endanger deposited end-to-end</Pattern>
+    <Pattern>endanger deposited throughout</Pattern>
+    <Pattern>endanger deposited to</Pattern>
+    <Pattern>endanger end-to-end</Pattern>
+    <Pattern>endanger philippine at</Pattern>
+    <Pattern>endanger philippine end-to-end</Pattern>
+    <Pattern>endanger philippine throughout</Pattern>
+    <Pattern>endanger philippine to</Pattern>
+    <Pattern>endanger reported at</Pattern>
+    <Pattern>endanger reported end-to-end</Pattern>
+    <Pattern>endanger reported throughout</Pattern>
+    <Pattern>endanger reported to</Pattern>
+    <Pattern>endanger throughout</Pattern>
+    <Pattern>endanger to</Pattern>
+    <Pattern>endanger writer at</Pattern>
+    <Pattern>endanger writer end-to-end</Pattern>
+    <Pattern>endanger writer throughout</Pattern>
+    <Pattern>endanger writer to</Pattern>
+    <Pattern>endangered</Pattern>
+    <Pattern>endangered Filipino at</Pattern>
+    <Pattern>endangered Filipino end-to-end</Pattern>
+    <Pattern>endangered Filipino throughout</Pattern>
+    <Pattern>endangered Filipino to</Pattern>
+    <Pattern>endangered Philippine at</Pattern>
+    <Pattern>endangered Philippine end-to-end</Pattern>
+    <Pattern>endangered Philippine throughout</Pattern>
+    <Pattern>endangered Philippine to</Pattern>
+    <Pattern>endangered at</Pattern>
+    <Pattern>endangered author at</Pattern>
+    <Pattern>endangered author end-to-end</Pattern>
+    <Pattern>endangered author throughout</Pattern>
+    <Pattern>endangered author to</Pattern>
+    <Pattern>endangered been at</Pattern>
+    <Pattern>endangered been end-to-end</Pattern>
+    <Pattern>endangered been throughout</Pattern>
+    <Pattern>endangered been to</Pattern>
+    <Pattern>endangered deposited at</Pattern>
+    <Pattern>endangered deposited end-to-end</Pattern>
+    <Pattern>endangered deposited throughout</Pattern>
+    <Pattern>endangered deposited to</Pattern>
+    <Pattern>endangered end-to-end</Pattern>
+    <Pattern>endangered philippine at</Pattern>
+    <Pattern>endangered philippine end-to-end</Pattern>
+    <Pattern>endangered philippine throughout</Pattern>
+    <Pattern>endangered philippine to</Pattern>
+    <Pattern>endangered reported at</Pattern>
+    <Pattern>endangered reported end-to-end</Pattern>
+    <Pattern>endangered reported throughout</Pattern>
+    <Pattern>endangered reported to</Pattern>
+    <Pattern>endangered throughout</Pattern>
+    <Pattern>endangered to</Pattern>
+    <Pattern>endangered writer at</Pattern>
+    <Pattern>endangered writer end-to-end</Pattern>
+    <Pattern>endangered writer throughout</Pattern>
+    <Pattern>endangered writer to</Pattern>
     <Pattern>establish</Pattern>
+    <Pattern>establish Filipino at</Pattern>
+    <Pattern>establish Filipino end-to-end</Pattern>
+    <Pattern>establish Filipino throughout</Pattern>
+    <Pattern>establish Filipino to</Pattern>
     <Pattern>establish IC along</Pattern>
     <Pattern>establish IC as</Pattern>
     <Pattern>establish IC equally</Pattern>
@@ -2244,6 +2683,10 @@
     <Pattern>establish National Intelligence Community that</Pattern>
     <Pattern>establish National Intelligence Community to</Pattern>
     <Pattern>establish National Intelligence Community with</Pattern>
+    <Pattern>establish Philippine at</Pattern>
+    <Pattern>establish Philippine end-to-end</Pattern>
+    <Pattern>establish Philippine throughout</Pattern>
+    <Pattern>establish Philippine to</Pattern>
     <Pattern>establish United States Intelligence Community along</Pattern>
     <Pattern>establish United States Intelligence Community as</Pattern>
     <Pattern>establish United States Intelligence Community equally</Pattern>
@@ -2259,6 +2702,15 @@
     <Pattern>establish United States Intelligence Community with</Pattern>
     <Pattern>establish along</Pattern>
     <Pattern>establish as</Pattern>
+    <Pattern>establish at</Pattern>
+    <Pattern>establish author at</Pattern>
+    <Pattern>establish author end-to-end</Pattern>
+    <Pattern>establish author throughout</Pattern>
+    <Pattern>establish author to</Pattern>
+    <Pattern>establish been at</Pattern>
+    <Pattern>establish been end-to-end</Pattern>
+    <Pattern>establish been throughout</Pattern>
+    <Pattern>establish been to</Pattern>
     <Pattern>establish burn along</Pattern>
     <Pattern>establish burn as</Pattern>
     <Pattern>establish burn equally</Pattern>
@@ -2307,11 +2759,27 @@
     <Pattern>establish cultivated inwards</Pattern>
     <Pattern>establish cultivated that</Pattern>
     <Pattern>establish cultivated to</Pattern>
+    <Pattern>establish deposited at</Pattern>
+    <Pattern>establish deposited end-to-end</Pattern>
+    <Pattern>establish deposited throughout</Pattern>
+    <Pattern>establish deposited to</Pattern>
+    <Pattern>establish determined along</Pattern>
+    <Pattern>establish determined as</Pattern>
+    <Pattern>establish determined at</Pattern>
+    <Pattern>establish determined equally</Pattern>
+    <Pattern>establish determined every bit</Pattern>
+    <Pattern>establish determined from</Pattern>
+    <Pattern>establish determined in</Pattern>
+    <Pattern>establish determined inward</Pattern>
+    <Pattern>establish determined inwards</Pattern>
+    <Pattern>establish determined on</Pattern>
+    <Pattern>establish end-to-end</Pattern>
     <Pattern>establish equally</Pattern>
     <Pattern>establish every bit</Pattern>
     <Pattern>establish for</Pattern>
     <Pattern>establish found along</Pattern>
     <Pattern>establish found as</Pattern>
+    <Pattern>establish found at</Pattern>
     <Pattern>establish found equally</Pattern>
     <Pattern>establish found every bit</Pattern>
     <Pattern>establish found for</Pattern>
@@ -2380,6 +2848,24 @@
     <Pattern>establish malignant neoplastic disease to</Pattern>
     <Pattern>establish malignant neoplastic disease with</Pattern>
     <Pattern>establish on</Pattern>
+    <Pattern>establish philippine at</Pattern>
+    <Pattern>establish philippine end-to-end</Pattern>
+    <Pattern>establish philippine throughout</Pattern>
+    <Pattern>establish philippine to</Pattern>
+    <Pattern>establish prestoblue along</Pattern>
+    <Pattern>establish prestoblue as</Pattern>
+    <Pattern>establish prestoblue at</Pattern>
+    <Pattern>establish prestoblue equally</Pattern>
+    <Pattern>establish prestoblue every bit</Pattern>
+    <Pattern>establish prestoblue from</Pattern>
+    <Pattern>establish prestoblue in</Pattern>
+    <Pattern>establish prestoblue inward</Pattern>
+    <Pattern>establish prestoblue inwards</Pattern>
+    <Pattern>establish prestoblue on</Pattern>
+    <Pattern>establish reported at</Pattern>
+    <Pattern>establish reported end-to-end</Pattern>
+    <Pattern>establish reported throughout</Pattern>
+    <Pattern>establish reported to</Pattern>
     <Pattern>establish served along</Pattern>
     <Pattern>establish served as</Pattern>
     <Pattern>establish served equally</Pattern>
@@ -2443,6 +2929,7 @@
     <Pattern>establish tan with</Pattern>
     <Pattern>establish tested along</Pattern>
     <Pattern>establish tested as</Pattern>
+    <Pattern>establish tested at</Pattern>
     <Pattern>establish tested equally</Pattern>
     <Pattern>establish tested every bit</Pattern>
     <Pattern>establish tested for</Pattern>
@@ -2455,6 +2942,7 @@
     <Pattern>establish tested to</Pattern>
     <Pattern>establish tested with</Pattern>
     <Pattern>establish that</Pattern>
+    <Pattern>establish throughout</Pattern>
     <Pattern>establish to</Pattern>
     <Pattern>establish used along</Pattern>
     <Pattern>establish used as</Pattern>
@@ -2483,7 +2971,216 @@
     <Pattern>establish values to</Pattern>
     <Pattern>establish values with</Pattern>
     <Pattern>establish with</Pattern>
+    <Pattern>establish writer at</Pattern>
+    <Pattern>establish writer end-to-end</Pattern>
+    <Pattern>establish writer throughout</Pattern>
+    <Pattern>establish writer to</Pattern>
+    <Pattern>exhibit</Pattern>
+    <Pattern>exhibit Filipino at</Pattern>
+    <Pattern>exhibit Filipino end-to-end</Pattern>
+    <Pattern>exhibit Filipino throughout</Pattern>
+    <Pattern>exhibit Filipino to</Pattern>
+    <Pattern>exhibit Philippine at</Pattern>
+    <Pattern>exhibit Philippine end-to-end</Pattern>
+    <Pattern>exhibit Philippine throughout</Pattern>
+    <Pattern>exhibit Philippine to</Pattern>
+    <Pattern>exhibit at</Pattern>
+    <Pattern>exhibit author at</Pattern>
+    <Pattern>exhibit author end-to-end</Pattern>
+    <Pattern>exhibit author throughout</Pattern>
+    <Pattern>exhibit author to</Pattern>
+    <Pattern>exhibit been at</Pattern>
+    <Pattern>exhibit been end-to-end</Pattern>
+    <Pattern>exhibit been throughout</Pattern>
+    <Pattern>exhibit been to</Pattern>
+    <Pattern>exhibit deposited at</Pattern>
+    <Pattern>exhibit deposited end-to-end</Pattern>
+    <Pattern>exhibit deposited throughout</Pattern>
+    <Pattern>exhibit deposited to</Pattern>
+    <Pattern>exhibit end-to-end</Pattern>
+    <Pattern>exhibit philippine at</Pattern>
+    <Pattern>exhibit philippine end-to-end</Pattern>
+    <Pattern>exhibit philippine throughout</Pattern>
+    <Pattern>exhibit philippine to</Pattern>
+    <Pattern>exhibit reported at</Pattern>
+    <Pattern>exhibit reported end-to-end</Pattern>
+    <Pattern>exhibit reported throughout</Pattern>
+    <Pattern>exhibit reported to</Pattern>
+    <Pattern>exhibit throughout</Pattern>
+    <Pattern>exhibit to</Pattern>
+    <Pattern>exhibit writer at</Pattern>
+    <Pattern>exhibit writer end-to-end</Pattern>
+    <Pattern>exhibit writer throughout</Pattern>
+    <Pattern>exhibit writer to</Pattern>
+    <Pattern>exhibited</Pattern>
+    <Pattern>exhibited Filipino at</Pattern>
+    <Pattern>exhibited Filipino end-to-end</Pattern>
+    <Pattern>exhibited Filipino throughout</Pattern>
+    <Pattern>exhibited Filipino to</Pattern>
+    <Pattern>exhibited Philippine at</Pattern>
+    <Pattern>exhibited Philippine end-to-end</Pattern>
+    <Pattern>exhibited Philippine throughout</Pattern>
+    <Pattern>exhibited Philippine to</Pattern>
+    <Pattern>exhibited at</Pattern>
+    <Pattern>exhibited author at</Pattern>
+    <Pattern>exhibited author end-to-end</Pattern>
+    <Pattern>exhibited author throughout</Pattern>
+    <Pattern>exhibited author to</Pattern>
+    <Pattern>exhibited been at</Pattern>
+    <Pattern>exhibited been end-to-end</Pattern>
+    <Pattern>exhibited been throughout</Pattern>
+    <Pattern>exhibited been to</Pattern>
+    <Pattern>exhibited deposited at</Pattern>
+    <Pattern>exhibited deposited end-to-end</Pattern>
+    <Pattern>exhibited deposited throughout</Pattern>
+    <Pattern>exhibited deposited to</Pattern>
+    <Pattern>exhibited end-to-end</Pattern>
+    <Pattern>exhibited philippine at</Pattern>
+    <Pattern>exhibited philippine end-to-end</Pattern>
+    <Pattern>exhibited philippine throughout</Pattern>
+    <Pattern>exhibited philippine to</Pattern>
+    <Pattern>exhibited reported at</Pattern>
+    <Pattern>exhibited reported end-to-end</Pattern>
+    <Pattern>exhibited reported throughout</Pattern>
+    <Pattern>exhibited reported to</Pattern>
+    <Pattern>exhibited throughout</Pattern>
+    <Pattern>exhibited to</Pattern>
+    <Pattern>exhibited writer at</Pattern>
+    <Pattern>exhibited writer end-to-end</Pattern>
+    <Pattern>exhibited writer throughout</Pattern>
+    <Pattern>exhibited writer to</Pattern>
+    <Pattern>find</Pattern>
+    <Pattern>find burn in</Pattern>
+    <Pattern>find burn inward</Pattern>
+    <Pattern>find burn inwards</Pattern>
+    <Pattern>find burn to</Pattern>
+    <Pattern>find gathered in</Pattern>
+    <Pattern>find gathered inward</Pattern>
+    <Pattern>find gathered inwards</Pattern>
+    <Pattern>find gathered to</Pattern>
+    <Pattern>find in</Pattern>
+    <Pattern>find inward</Pattern>
+    <Pattern>find inwards</Pattern>
+    <Pattern>find sunburn in</Pattern>
+    <Pattern>find sunburn inward</Pattern>
+    <Pattern>find sunburn inwards</Pattern>
+    <Pattern>find sunburn to</Pattern>
+    <Pattern>find suntan in</Pattern>
+    <Pattern>find suntan inward</Pattern>
+    <Pattern>find suntan inwards</Pattern>
+    <Pattern>find suntan to</Pattern>
+    <Pattern>find tan in</Pattern>
+    <Pattern>find tan inward</Pattern>
+    <Pattern>find tan inwards</Pattern>
+    <Pattern>find tan to</Pattern>
+    <Pattern>find to</Pattern>
+    <Pattern>follow</Pattern>
+    <Pattern>follow along</Pattern>
+    <Pattern>follow as</Pattern>
+    <Pattern>follow at</Pattern>
+    <Pattern>follow determined along</Pattern>
+    <Pattern>follow determined as</Pattern>
+    <Pattern>follow determined at</Pattern>
+    <Pattern>follow determined equally</Pattern>
+    <Pattern>follow determined every bit</Pattern>
+    <Pattern>follow determined from</Pattern>
+    <Pattern>follow determined in</Pattern>
+    <Pattern>follow determined inward</Pattern>
+    <Pattern>follow determined inwards</Pattern>
+    <Pattern>follow determined on</Pattern>
+    <Pattern>follow equally</Pattern>
+    <Pattern>follow every bit</Pattern>
+    <Pattern>follow found along</Pattern>
+    <Pattern>follow found as</Pattern>
+    <Pattern>follow found at</Pattern>
+    <Pattern>follow found equally</Pattern>
+    <Pattern>follow found every bit</Pattern>
+    <Pattern>follow found from</Pattern>
+    <Pattern>follow found in</Pattern>
+    <Pattern>follow found inward</Pattern>
+    <Pattern>follow found inwards</Pattern>
+    <Pattern>follow found on</Pattern>
+    <Pattern>follow from</Pattern>
+    <Pattern>follow in</Pattern>
+    <Pattern>follow inward</Pattern>
+    <Pattern>follow inwards</Pattern>
+    <Pattern>follow on</Pattern>
+    <Pattern>follow prestoblue along</Pattern>
+    <Pattern>follow prestoblue as</Pattern>
+    <Pattern>follow prestoblue at</Pattern>
+    <Pattern>follow prestoblue equally</Pattern>
+    <Pattern>follow prestoblue every bit</Pattern>
+    <Pattern>follow prestoblue from</Pattern>
+    <Pattern>follow prestoblue in</Pattern>
+    <Pattern>follow prestoblue inward</Pattern>
+    <Pattern>follow prestoblue inwards</Pattern>
+    <Pattern>follow prestoblue on</Pattern>
+    <Pattern>follow tested along</Pattern>
+    <Pattern>follow tested as</Pattern>
+    <Pattern>follow tested at</Pattern>
+    <Pattern>follow tested equally</Pattern>
+    <Pattern>follow tested every bit</Pattern>
+    <Pattern>follow tested from</Pattern>
+    <Pattern>follow tested in</Pattern>
+    <Pattern>follow tested inward</Pattern>
+    <Pattern>follow tested inwards</Pattern>
+    <Pattern>follow tested on</Pattern>
+    <Pattern>following</Pattern>
+    <Pattern>following along</Pattern>
+    <Pattern>following as</Pattern>
+    <Pattern>following at</Pattern>
+    <Pattern>following determined along</Pattern>
+    <Pattern>following determined as</Pattern>
+    <Pattern>following determined at</Pattern>
+    <Pattern>following determined equally</Pattern>
+    <Pattern>following determined every bit</Pattern>
+    <Pattern>following determined from</Pattern>
+    <Pattern>following determined in</Pattern>
+    <Pattern>following determined inward</Pattern>
+    <Pattern>following determined inwards</Pattern>
+    <Pattern>following determined on</Pattern>
+    <Pattern>following equally</Pattern>
+    <Pattern>following every bit</Pattern>
+    <Pattern>following found along</Pattern>
+    <Pattern>following found as</Pattern>
+    <Pattern>following found at</Pattern>
+    <Pattern>following found equally</Pattern>
+    <Pattern>following found every bit</Pattern>
+    <Pattern>following found from</Pattern>
+    <Pattern>following found in</Pattern>
+    <Pattern>following found inward</Pattern>
+    <Pattern>following found inwards</Pattern>
+    <Pattern>following found on</Pattern>
+    <Pattern>following from</Pattern>
+    <Pattern>following in</Pattern>
+    <Pattern>following inward</Pattern>
+    <Pattern>following inwards</Pattern>
+    <Pattern>following on</Pattern>
+    <Pattern>following prestoblue along</Pattern>
+    <Pattern>following prestoblue as</Pattern>
+    <Pattern>following prestoblue at</Pattern>
+    <Pattern>following prestoblue equally</Pattern>
+    <Pattern>following prestoblue every bit</Pattern>
+    <Pattern>following prestoblue from</Pattern>
+    <Pattern>following prestoblue in</Pattern>
+    <Pattern>following prestoblue inward</Pattern>
+    <Pattern>following prestoblue inwards</Pattern>
+    <Pattern>following prestoblue on</Pattern>
+    <Pattern>following tested along</Pattern>
+    <Pattern>following tested as</Pattern>
+    <Pattern>following tested at</Pattern>
+    <Pattern>following tested equally</Pattern>
+    <Pattern>following tested every bit</Pattern>
+    <Pattern>following tested from</Pattern>
+    <Pattern>following tested in</Pattern>
+    <Pattern>following tested inward</Pattern>
+    <Pattern>following tested inwards</Pattern>
+    <Pattern>following tested on</Pattern>
     <Pattern>found</Pattern>
+    <Pattern>found Filipino at</Pattern>
+    <Pattern>found Filipino end-to-end</Pattern>
+    <Pattern>found Filipino throughout</Pattern>
+    <Pattern>found Filipino to</Pattern>
     <Pattern>found IC along</Pattern>
     <Pattern>found IC as</Pattern>
     <Pattern>found IC equally</Pattern>
@@ -2523,6 +3220,10 @@
     <Pattern>found National Intelligence Community that</Pattern>
     <Pattern>found National Intelligence Community to</Pattern>
     <Pattern>found National Intelligence Community with</Pattern>
+    <Pattern>found Philippine at</Pattern>
+    <Pattern>found Philippine end-to-end</Pattern>
+    <Pattern>found Philippine throughout</Pattern>
+    <Pattern>found Philippine to</Pattern>
     <Pattern>found United States Intelligence Community along</Pattern>
     <Pattern>found United States Intelligence Community as</Pattern>
     <Pattern>found United States Intelligence Community equally</Pattern>
@@ -2538,6 +3239,15 @@
     <Pattern>found United States Intelligence Community with</Pattern>
     <Pattern>found along</Pattern>
     <Pattern>found as</Pattern>
+    <Pattern>found at</Pattern>
+    <Pattern>found author at</Pattern>
+    <Pattern>found author end-to-end</Pattern>
+    <Pattern>found author throughout</Pattern>
+    <Pattern>found author to</Pattern>
+    <Pattern>found been at</Pattern>
+    <Pattern>found been end-to-end</Pattern>
+    <Pattern>found been throughout</Pattern>
+    <Pattern>found been to</Pattern>
     <Pattern>found burn along</Pattern>
     <Pattern>found burn as</Pattern>
     <Pattern>found burn equally</Pattern>
@@ -2586,11 +3296,27 @@
     <Pattern>found cultivated inwards</Pattern>
     <Pattern>found cultivated that</Pattern>
     <Pattern>found cultivated to</Pattern>
+    <Pattern>found deposited at</Pattern>
+    <Pattern>found deposited end-to-end</Pattern>
+    <Pattern>found deposited throughout</Pattern>
+    <Pattern>found deposited to</Pattern>
+    <Pattern>found determined along</Pattern>
+    <Pattern>found determined as</Pattern>
+    <Pattern>found determined at</Pattern>
+    <Pattern>found determined equally</Pattern>
+    <Pattern>found determined every bit</Pattern>
+    <Pattern>found determined from</Pattern>
+    <Pattern>found determined in</Pattern>
+    <Pattern>found determined inward</Pattern>
+    <Pattern>found determined inwards</Pattern>
+    <Pattern>found determined on</Pattern>
+    <Pattern>found end-to-end</Pattern>
     <Pattern>found equally</Pattern>
     <Pattern>found every bit</Pattern>
     <Pattern>found for</Pattern>
     <Pattern>found found along</Pattern>
     <Pattern>found found as</Pattern>
+    <Pattern>found found at</Pattern>
     <Pattern>found found equally</Pattern>
     <Pattern>found found every bit</Pattern>
     <Pattern>found found for</Pattern>
@@ -2659,6 +3385,24 @@
     <Pattern>found malignant neoplastic disease to</Pattern>
     <Pattern>found malignant neoplastic disease with</Pattern>
     <Pattern>found on</Pattern>
+    <Pattern>found philippine at</Pattern>
+    <Pattern>found philippine end-to-end</Pattern>
+    <Pattern>found philippine throughout</Pattern>
+    <Pattern>found philippine to</Pattern>
+    <Pattern>found prestoblue along</Pattern>
+    <Pattern>found prestoblue as</Pattern>
+    <Pattern>found prestoblue at</Pattern>
+    <Pattern>found prestoblue equally</Pattern>
+    <Pattern>found prestoblue every bit</Pattern>
+    <Pattern>found prestoblue from</Pattern>
+    <Pattern>found prestoblue in</Pattern>
+    <Pattern>found prestoblue inward</Pattern>
+    <Pattern>found prestoblue inwards</Pattern>
+    <Pattern>found prestoblue on</Pattern>
+    <Pattern>found reported at</Pattern>
+    <Pattern>found reported end-to-end</Pattern>
+    <Pattern>found reported throughout</Pattern>
+    <Pattern>found reported to</Pattern>
     <Pattern>found served along</Pattern>
     <Pattern>found served as</Pattern>
     <Pattern>found served equally</Pattern>
@@ -2722,6 +3466,7 @@
     <Pattern>found tan with</Pattern>
     <Pattern>found tested along</Pattern>
     <Pattern>found tested as</Pattern>
+    <Pattern>found tested at</Pattern>
     <Pattern>found tested equally</Pattern>
     <Pattern>found tested every bit</Pattern>
     <Pattern>found tested for</Pattern>
@@ -2734,6 +3479,7 @@
     <Pattern>found tested to</Pattern>
     <Pattern>found tested with</Pattern>
     <Pattern>found that</Pattern>
+    <Pattern>found throughout</Pattern>
     <Pattern>found to</Pattern>
     <Pattern>found used along</Pattern>
     <Pattern>found used as</Pattern>
@@ -2762,6 +3508,10 @@
     <Pattern>found values to</Pattern>
     <Pattern>found values with</Pattern>
     <Pattern>found with</Pattern>
+    <Pattern>found writer at</Pattern>
+    <Pattern>found writer end-to-end</Pattern>
+    <Pattern>found writer throughout</Pattern>
+    <Pattern>found writer to</Pattern>
     <Pattern>gather</Pattern>
     <Pattern>gather IC along</Pattern>
     <Pattern>gather IC as</Pattern>
@@ -3453,8 +4203,62 @@
     <Pattern>harvested tan1 in</Pattern>
     <Pattern>harvested tan1 inward</Pattern>
     <Pattern>harvested tan1 inwards</Pattern>
+    <Pattern>has</Pattern>
+    <Pattern>has Filipino at</Pattern>
+    <Pattern>has Filipino end-to-end</Pattern>
+    <Pattern>has Filipino throughout</Pattern>
+    <Pattern>has Filipino to</Pattern>
+    <Pattern>has Philippine at</Pattern>
+    <Pattern>has Philippine end-to-end</Pattern>
+    <Pattern>has Philippine throughout</Pattern>
+    <Pattern>has Philippine to</Pattern>
+    <Pattern>has at</Pattern>
+    <Pattern>has author at</Pattern>
+    <Pattern>has author end-to-end</Pattern>
+    <Pattern>has author throughout</Pattern>
+    <Pattern>has author to</Pattern>
+    <Pattern>has been at</Pattern>
+    <Pattern>has been end-to-end</Pattern>
+    <Pattern>has been throughout</Pattern>
+    <Pattern>has been to</Pattern>
+    <Pattern>has deposited at</Pattern>
+    <Pattern>has deposited end-to-end</Pattern>
+    <Pattern>has deposited throughout</Pattern>
+    <Pattern>has deposited to</Pattern>
+    <Pattern>has end-to-end</Pattern>
+    <Pattern>has philippine at</Pattern>
+    <Pattern>has philippine end-to-end</Pattern>
+    <Pattern>has philippine throughout</Pattern>
+    <Pattern>has philippine to</Pattern>
+    <Pattern>has reported at</Pattern>
+    <Pattern>has reported end-to-end</Pattern>
+    <Pattern>has reported throughout</Pattern>
+    <Pattern>has reported to</Pattern>
+    <Pattern>has throughout</Pattern>
+    <Pattern>has to</Pattern>
+    <Pattern>has writer at</Pattern>
+    <Pattern>has writer end-to-end</Pattern>
+    <Pattern>has writer throughout</Pattern>
+    <Pattern>has writer to</Pattern>
     <Pattern>have</Pattern>
+    <Pattern>have Filipino at</Pattern>
+    <Pattern>have Filipino end-to-end</Pattern>
+    <Pattern>have Filipino throughout</Pattern>
+    <Pattern>have Filipino to</Pattern>
+    <Pattern>have Philippine at</Pattern>
+    <Pattern>have Philippine end-to-end</Pattern>
+    <Pattern>have Philippine throughout</Pattern>
+    <Pattern>have Philippine to</Pattern>
     <Pattern>have as</Pattern>
+    <Pattern>have at</Pattern>
+    <Pattern>have author at</Pattern>
+    <Pattern>have author end-to-end</Pattern>
+    <Pattern>have author throughout</Pattern>
+    <Pattern>have author to</Pattern>
+    <Pattern>have been at</Pattern>
+    <Pattern>have been end-to-end</Pattern>
+    <Pattern>have been throughout</Pattern>
+    <Pattern>have been to</Pattern>
     <Pattern>have cultivated as</Pattern>
     <Pattern>have cultivated equally</Pattern>
     <Pattern>have cultivated every bit</Pattern>
@@ -3464,12 +4268,25 @@
     <Pattern>have cultivated inwards</Pattern>
     <Pattern>have cultivated that</Pattern>
     <Pattern>have cultivated to</Pattern>
+    <Pattern>have deposited at</Pattern>
+    <Pattern>have deposited end-to-end</Pattern>
+    <Pattern>have deposited throughout</Pattern>
+    <Pattern>have deposited to</Pattern>
+    <Pattern>have end-to-end</Pattern>
     <Pattern>have equally</Pattern>
     <Pattern>have every bit</Pattern>
     <Pattern>have from</Pattern>
     <Pattern>have in</Pattern>
     <Pattern>have inward</Pattern>
     <Pattern>have inwards</Pattern>
+    <Pattern>have philippine at</Pattern>
+    <Pattern>have philippine end-to-end</Pattern>
+    <Pattern>have philippine throughout</Pattern>
+    <Pattern>have philippine to</Pattern>
+    <Pattern>have reported at</Pattern>
+    <Pattern>have reported end-to-end</Pattern>
+    <Pattern>have reported throughout</Pattern>
+    <Pattern>have reported to</Pattern>
     <Pattern>have squalene as</Pattern>
     <Pattern>have squalene equally</Pattern>
     <Pattern>have squalene every bit</Pattern>
@@ -3480,7 +4297,12 @@
     <Pattern>have squalene that</Pattern>
     <Pattern>have squalene to</Pattern>
     <Pattern>have that</Pattern>
+    <Pattern>have throughout</Pattern>
     <Pattern>have to</Pattern>
+    <Pattern>have writer at</Pattern>
+    <Pattern>have writer end-to-end</Pattern>
+    <Pattern>have writer throughout</Pattern>
+    <Pattern>have writer to</Pattern>
     <Pattern>ic50</Pattern>
     <Pattern>ic50 IC along</Pattern>
     <Pattern>ic50 IC as</Pattern>
@@ -4166,6 +4988,10 @@
     <Pattern>is</Pattern>
     <Pattern>is 11 from</Pattern>
     <Pattern>is 11 to</Pattern>
+    <Pattern>is Filipino at</Pattern>
+    <Pattern>is Filipino end-to-end</Pattern>
+    <Pattern>is Filipino throughout</Pattern>
+    <Pattern>is Filipino to</Pattern>
     <Pattern>is IRA from</Pattern>
     <Pattern>is IRA in</Pattern>
     <Pattern>is IRA inward</Pattern>
@@ -4174,6 +5000,10 @@
     <Pattern>is Irish Republican Army in</Pattern>
     <Pattern>is Irish Republican Army inward</Pattern>
     <Pattern>is Irish Republican Army inwards</Pattern>
+    <Pattern>is Philippine at</Pattern>
+    <Pattern>is Philippine end-to-end</Pattern>
+    <Pattern>is Philippine throughout</Pattern>
+    <Pattern>is Philippine to</Pattern>
     <Pattern>is Provisional IRA from</Pattern>
     <Pattern>is Provisional IRA in</Pattern>
     <Pattern>is Provisional IRA inward</Pattern>
@@ -4188,7 +5018,19 @@
     <Pattern>is Provos inwards</Pattern>
     <Pattern>is XI from</Pattern>
     <Pattern>is XI to</Pattern>
+    <Pattern>is along</Pattern>
     <Pattern>is as</Pattern>
+    <Pattern>is at</Pattern>
+    <Pattern>is authenticated at</Pattern>
+    <Pattern>is authenticated from</Pattern>
+    <Pattern>is author at</Pattern>
+    <Pattern>is author end-to-end</Pattern>
+    <Pattern>is author throughout</Pattern>
+    <Pattern>is author to</Pattern>
+    <Pattern>is been at</Pattern>
+    <Pattern>is been end-to-end</Pattern>
+    <Pattern>is been throughout</Pattern>
+    <Pattern>is been to</Pattern>
     <Pattern>is burn as</Pattern>
     <Pattern>is burn equally</Pattern>
     <Pattern>is burn every bit</Pattern>
@@ -4197,6 +5039,7 @@
     <Pattern>is burn inward</Pattern>
     <Pattern>is burn inwards</Pattern>
     <Pattern>is collected as</Pattern>
+    <Pattern>is collected at</Pattern>
     <Pattern>is collected equally</Pattern>
     <Pattern>is collected every bit</Pattern>
     <Pattern>is collected from</Pattern>
@@ -4205,6 +5048,8 @@
     <Pattern>is collected inwards</Pattern>
     <Pattern>is collected through</Pattern>
     <Pattern>is collected to</Pattern>
+    <Pattern>is cubic decimeter from</Pattern>
+    <Pattern>is cubic decimetre from</Pattern>
     <Pattern>is cultivated as</Pattern>
     <Pattern>is cultivated equally</Pattern>
     <Pattern>is cultivated every bit</Pattern>
@@ -4214,16 +5059,36 @@
     <Pattern>is cultivated inwards</Pattern>
     <Pattern>is cultivated that</Pattern>
     <Pattern>is cultivated to</Pattern>
+    <Pattern>is deposited at</Pattern>
+    <Pattern>is deposited end-to-end</Pattern>
+    <Pattern>is deposited throughout</Pattern>
+    <Pattern>is deposited to</Pattern>
+    <Pattern>is determined along</Pattern>
+    <Pattern>is determined as</Pattern>
+    <Pattern>is determined at</Pattern>
+    <Pattern>is determined equally</Pattern>
+    <Pattern>is determined every bit</Pattern>
+    <Pattern>is determined from</Pattern>
+    <Pattern>is determined in</Pattern>
+    <Pattern>is determined inward</Pattern>
+    <Pattern>is determined inwards</Pattern>
+    <Pattern>is determined on</Pattern>
     <Pattern>is eleven from</Pattern>
     <Pattern>is eleven to</Pattern>
+    <Pattern>is end-to-end</Pattern>
     <Pattern>is equally</Pattern>
     <Pattern>is every bit</Pattern>
+    <Pattern>is fom from</Pattern>
+    <Pattern>is found along</Pattern>
     <Pattern>is found as</Pattern>
+    <Pattern>is found at</Pattern>
     <Pattern>is found equally</Pattern>
     <Pattern>is found every bit</Pattern>
+    <Pattern>is found from</Pattern>
     <Pattern>is found in</Pattern>
     <Pattern>is found inward</Pattern>
     <Pattern>is found inwards</Pattern>
+    <Pattern>is found on</Pattern>
     <Pattern>is from</Pattern>
     <Pattern>is grown from</Pattern>
     <Pattern>is grown in</Pattern>
@@ -4236,16 +5101,43 @@
     <Pattern>is ira in</Pattern>
     <Pattern>is ira inward</Pattern>
     <Pattern>is ira inwards</Pattern>
+    <Pattern>is l from</Pattern>
+    <Pattern>is l. from</Pattern>
+    <Pattern>is liter from</Pattern>
+    <Pattern>is litre from</Pattern>
     <Pattern>is nanogram from</Pattern>
     <Pattern>is nanogram to</Pattern>
     <Pattern>is ng from</Pattern>
     <Pattern>is ng to</Pattern>
     <Pattern>is ng1 from</Pattern>
     <Pattern>is ng1 to</Pattern>
+    <Pattern>is on</Pattern>
+    <Pattern>is philippine at</Pattern>
+    <Pattern>is philippine end-to-end</Pattern>
+    <Pattern>is philippine throughout</Pattern>
+    <Pattern>is philippine to</Pattern>
+    <Pattern>is prestoblue along</Pattern>
+    <Pattern>is prestoblue as</Pattern>
+    <Pattern>is prestoblue at</Pattern>
+    <Pattern>is prestoblue equally</Pattern>
+    <Pattern>is prestoblue every bit</Pattern>
+    <Pattern>is prestoblue from</Pattern>
+    <Pattern>is prestoblue in</Pattern>
+    <Pattern>is prestoblue inward</Pattern>
+    <Pattern>is prestoblue inwards</Pattern>
+    <Pattern>is prestoblue on</Pattern>
     <Pattern>is procured from</Pattern>
     <Pattern>is procured in</Pattern>
     <Pattern>is procured inward</Pattern>
     <Pattern>is procured inwards</Pattern>
+    <Pattern>is ragasa from</Pattern>
+    <Pattern>is recorded in</Pattern>
+    <Pattern>is recorded inward</Pattern>
+    <Pattern>is recorded inwards</Pattern>
+    <Pattern>is reported at</Pattern>
+    <Pattern>is reported end-to-end</Pattern>
+    <Pattern>is reported throughout</Pattern>
+    <Pattern>is reported to</Pattern>
     <Pattern>is species from</Pattern>
     <Pattern>is species to</Pattern>
     <Pattern>is squalene as</Pattern>
@@ -4257,6 +5149,7 @@
     <Pattern>is squalene inwards</Pattern>
     <Pattern>is squalene that</Pattern>
     <Pattern>is squalene to</Pattern>
+    <Pattern>is st. from</Pattern>
     <Pattern>is sunburn as</Pattern>
     <Pattern>is sunburn equally</Pattern>
     <Pattern>is sunburn every bit</Pattern>
@@ -4285,11 +5178,28 @@
     <Pattern>is tan1 in</Pattern>
     <Pattern>is tan1 inward</Pattern>
     <Pattern>is tan1 inwards</Pattern>
+    <Pattern>is tested along</Pattern>
+    <Pattern>is tested as</Pattern>
+    <Pattern>is tested at</Pattern>
+    <Pattern>is tested equally</Pattern>
+    <Pattern>is tested every bit</Pattern>
+    <Pattern>is tested from</Pattern>
+    <Pattern>is tested in</Pattern>
+    <Pattern>is tested inward</Pattern>
+    <Pattern>is tested inwards</Pattern>
+    <Pattern>is tested on</Pattern>
     <Pattern>is that</Pattern>
     <Pattern>is through</Pattern>
+    <Pattern>is throughout</Pattern>
     <Pattern>is to</Pattern>
+    <Pattern>is writer at</Pattern>
+    <Pattern>is writer end-to-end</Pattern>
+    <Pattern>is writer throughout</Pattern>
+    <Pattern>is writer to</Pattern>
     <Pattern>isolate</Pattern>
+    <Pattern>isolate along</Pattern>
     <Pattern>isolate as</Pattern>
+    <Pattern>isolate at</Pattern>
     <Pattern>isolate cultivated as</Pattern>
     <Pattern>isolate cultivated equally</Pattern>
     <Pattern>isolate cultivated every bit</Pattern>
@@ -4299,12 +5209,43 @@
     <Pattern>isolate cultivated inwards</Pattern>
     <Pattern>isolate cultivated that</Pattern>
     <Pattern>isolate cultivated to</Pattern>
+    <Pattern>isolate determined along</Pattern>
+    <Pattern>isolate determined as</Pattern>
+    <Pattern>isolate determined at</Pattern>
+    <Pattern>isolate determined equally</Pattern>
+    <Pattern>isolate determined every bit</Pattern>
+    <Pattern>isolate determined from</Pattern>
+    <Pattern>isolate determined in</Pattern>
+    <Pattern>isolate determined inward</Pattern>
+    <Pattern>isolate determined inwards</Pattern>
+    <Pattern>isolate determined on</Pattern>
     <Pattern>isolate equally</Pattern>
     <Pattern>isolate every bit</Pattern>
+    <Pattern>isolate found along</Pattern>
+    <Pattern>isolate found as</Pattern>
+    <Pattern>isolate found at</Pattern>
+    <Pattern>isolate found equally</Pattern>
+    <Pattern>isolate found every bit</Pattern>
+    <Pattern>isolate found from</Pattern>
+    <Pattern>isolate found in</Pattern>
+    <Pattern>isolate found inward</Pattern>
+    <Pattern>isolate found inwards</Pattern>
+    <Pattern>isolate found on</Pattern>
     <Pattern>isolate from</Pattern>
     <Pattern>isolate in</Pattern>
     <Pattern>isolate inward</Pattern>
     <Pattern>isolate inwards</Pattern>
+    <Pattern>isolate on</Pattern>
+    <Pattern>isolate prestoblue along</Pattern>
+    <Pattern>isolate prestoblue as</Pattern>
+    <Pattern>isolate prestoblue at</Pattern>
+    <Pattern>isolate prestoblue equally</Pattern>
+    <Pattern>isolate prestoblue every bit</Pattern>
+    <Pattern>isolate prestoblue from</Pattern>
+    <Pattern>isolate prestoblue in</Pattern>
+    <Pattern>isolate prestoblue inward</Pattern>
+    <Pattern>isolate prestoblue inwards</Pattern>
+    <Pattern>isolate prestoblue on</Pattern>
     <Pattern>isolate squalene as</Pattern>
     <Pattern>isolate squalene equally</Pattern>
     <Pattern>isolate squalene every bit</Pattern>
@@ -4314,10 +5255,22 @@
     <Pattern>isolate squalene inwards</Pattern>
     <Pattern>isolate squalene that</Pattern>
     <Pattern>isolate squalene to</Pattern>
+    <Pattern>isolate tested along</Pattern>
+    <Pattern>isolate tested as</Pattern>
+    <Pattern>isolate tested at</Pattern>
+    <Pattern>isolate tested equally</Pattern>
+    <Pattern>isolate tested every bit</Pattern>
+    <Pattern>isolate tested from</Pattern>
+    <Pattern>isolate tested in</Pattern>
+    <Pattern>isolate tested inward</Pattern>
+    <Pattern>isolate tested inwards</Pattern>
+    <Pattern>isolate tested on</Pattern>
     <Pattern>isolate that</Pattern>
     <Pattern>isolate to</Pattern>
     <Pattern>isolated</Pattern>
+    <Pattern>isolated along</Pattern>
     <Pattern>isolated as</Pattern>
+    <Pattern>isolated at</Pattern>
     <Pattern>isolated cultivated as</Pattern>
     <Pattern>isolated cultivated equally</Pattern>
     <Pattern>isolated cultivated every bit</Pattern>
@@ -4327,12 +5280,43 @@
     <Pattern>isolated cultivated inwards</Pattern>
     <Pattern>isolated cultivated that</Pattern>
     <Pattern>isolated cultivated to</Pattern>
+    <Pattern>isolated determined along</Pattern>
+    <Pattern>isolated determined as</Pattern>
+    <Pattern>isolated determined at</Pattern>
+    <Pattern>isolated determined equally</Pattern>
+    <Pattern>isolated determined every bit</Pattern>
+    <Pattern>isolated determined from</Pattern>
+    <Pattern>isolated determined in</Pattern>
+    <Pattern>isolated determined inward</Pattern>
+    <Pattern>isolated determined inwards</Pattern>
+    <Pattern>isolated determined on</Pattern>
     <Pattern>isolated equally</Pattern>
     <Pattern>isolated every bit</Pattern>
+    <Pattern>isolated found along</Pattern>
+    <Pattern>isolated found as</Pattern>
+    <Pattern>isolated found at</Pattern>
+    <Pattern>isolated found equally</Pattern>
+    <Pattern>isolated found every bit</Pattern>
+    <Pattern>isolated found from</Pattern>
+    <Pattern>isolated found in</Pattern>
+    <Pattern>isolated found inward</Pattern>
+    <Pattern>isolated found inwards</Pattern>
+    <Pattern>isolated found on</Pattern>
     <Pattern>isolated from</Pattern>
     <Pattern>isolated in</Pattern>
     <Pattern>isolated inward</Pattern>
     <Pattern>isolated inwards</Pattern>
+    <Pattern>isolated on</Pattern>
+    <Pattern>isolated prestoblue along</Pattern>
+    <Pattern>isolated prestoblue as</Pattern>
+    <Pattern>isolated prestoblue at</Pattern>
+    <Pattern>isolated prestoblue equally</Pattern>
+    <Pattern>isolated prestoblue every bit</Pattern>
+    <Pattern>isolated prestoblue from</Pattern>
+    <Pattern>isolated prestoblue in</Pattern>
+    <Pattern>isolated prestoblue inward</Pattern>
+    <Pattern>isolated prestoblue inwards</Pattern>
+    <Pattern>isolated prestoblue on</Pattern>
     <Pattern>isolated squalene as</Pattern>
     <Pattern>isolated squalene equally</Pattern>
     <Pattern>isolated squalene every bit</Pattern>
@@ -4342,10 +5326,73 @@
     <Pattern>isolated squalene inwards</Pattern>
     <Pattern>isolated squalene that</Pattern>
     <Pattern>isolated squalene to</Pattern>
+    <Pattern>isolated tested along</Pattern>
+    <Pattern>isolated tested as</Pattern>
+    <Pattern>isolated tested at</Pattern>
+    <Pattern>isolated tested equally</Pattern>
+    <Pattern>isolated tested every bit</Pattern>
+    <Pattern>isolated tested from</Pattern>
+    <Pattern>isolated tested in</Pattern>
+    <Pattern>isolated tested inward</Pattern>
+    <Pattern>isolated tested inwards</Pattern>
+    <Pattern>isolated tested on</Pattern>
     <Pattern>isolated that</Pattern>
     <Pattern>isolated to</Pattern>
+    <Pattern>keep</Pattern>
+    <Pattern>keep along</Pattern>
+    <Pattern>keep as</Pattern>
+    <Pattern>keep at</Pattern>
+    <Pattern>keep determined along</Pattern>
+    <Pattern>keep determined as</Pattern>
+    <Pattern>keep determined at</Pattern>
+    <Pattern>keep determined equally</Pattern>
+    <Pattern>keep determined every bit</Pattern>
+    <Pattern>keep determined from</Pattern>
+    <Pattern>keep determined in</Pattern>
+    <Pattern>keep determined inward</Pattern>
+    <Pattern>keep determined inwards</Pattern>
+    <Pattern>keep determined on</Pattern>
+    <Pattern>keep equally</Pattern>
+    <Pattern>keep every bit</Pattern>
+    <Pattern>keep found along</Pattern>
+    <Pattern>keep found as</Pattern>
+    <Pattern>keep found at</Pattern>
+    <Pattern>keep found equally</Pattern>
+    <Pattern>keep found every bit</Pattern>
+    <Pattern>keep found from</Pattern>
+    <Pattern>keep found in</Pattern>
+    <Pattern>keep found inward</Pattern>
+    <Pattern>keep found inwards</Pattern>
+    <Pattern>keep found on</Pattern>
+    <Pattern>keep from</Pattern>
+    <Pattern>keep in</Pattern>
+    <Pattern>keep inward</Pattern>
+    <Pattern>keep inwards</Pattern>
+    <Pattern>keep on</Pattern>
+    <Pattern>keep prestoblue along</Pattern>
+    <Pattern>keep prestoblue as</Pattern>
+    <Pattern>keep prestoblue at</Pattern>
+    <Pattern>keep prestoblue equally</Pattern>
+    <Pattern>keep prestoblue every bit</Pattern>
+    <Pattern>keep prestoblue from</Pattern>
+    <Pattern>keep prestoblue in</Pattern>
+    <Pattern>keep prestoblue inward</Pattern>
+    <Pattern>keep prestoblue inwards</Pattern>
+    <Pattern>keep prestoblue on</Pattern>
+    <Pattern>keep tested along</Pattern>
+    <Pattern>keep tested as</Pattern>
+    <Pattern>keep tested at</Pattern>
+    <Pattern>keep tested equally</Pattern>
+    <Pattern>keep tested every bit</Pattern>
+    <Pattern>keep tested from</Pattern>
+    <Pattern>keep tested in</Pattern>
+    <Pattern>keep tested inward</Pattern>
+    <Pattern>keep tested inwards</Pattern>
+    <Pattern>keep tested on</Pattern>
     <Pattern>know</Pattern>
+    <Pattern>know along</Pattern>
     <Pattern>know as</Pattern>
+    <Pattern>know at</Pattern>
     <Pattern>know burn as</Pattern>
     <Pattern>know burn equally</Pattern>
     <Pattern>know burn every bit</Pattern>
@@ -4357,18 +5404,43 @@
     <Pattern>know collected every bit</Pattern>
     <Pattern>know collected from</Pattern>
     <Pattern>know collected through</Pattern>
+    <Pattern>know determined along</Pattern>
+    <Pattern>know determined as</Pattern>
+    <Pattern>know determined at</Pattern>
+    <Pattern>know determined equally</Pattern>
+    <Pattern>know determined every bit</Pattern>
+    <Pattern>know determined from</Pattern>
+    <Pattern>know determined in</Pattern>
+    <Pattern>know determined inward</Pattern>
+    <Pattern>know determined inwards</Pattern>
+    <Pattern>know determined on</Pattern>
     <Pattern>know equally</Pattern>
     <Pattern>know every bit</Pattern>
+    <Pattern>know found along</Pattern>
     <Pattern>know found as</Pattern>
+    <Pattern>know found at</Pattern>
     <Pattern>know found equally</Pattern>
     <Pattern>know found every bit</Pattern>
+    <Pattern>know found from</Pattern>
     <Pattern>know found in</Pattern>
     <Pattern>know found inward</Pattern>
     <Pattern>know found inwards</Pattern>
+    <Pattern>know found on</Pattern>
     <Pattern>know from</Pattern>
     <Pattern>know in</Pattern>
     <Pattern>know inward</Pattern>
     <Pattern>know inwards</Pattern>
+    <Pattern>know on</Pattern>
+    <Pattern>know prestoblue along</Pattern>
+    <Pattern>know prestoblue as</Pattern>
+    <Pattern>know prestoblue at</Pattern>
+    <Pattern>know prestoblue equally</Pattern>
+    <Pattern>know prestoblue every bit</Pattern>
+    <Pattern>know prestoblue from</Pattern>
+    <Pattern>know prestoblue in</Pattern>
+    <Pattern>know prestoblue inward</Pattern>
+    <Pattern>know prestoblue inwards</Pattern>
+    <Pattern>know prestoblue on</Pattern>
     <Pattern>know sunburn as</Pattern>
     <Pattern>know sunburn equally</Pattern>
     <Pattern>know sunburn every bit</Pattern>
@@ -4393,10 +5465,22 @@
     <Pattern>know tan1 in</Pattern>
     <Pattern>know tan1 inward</Pattern>
     <Pattern>know tan1 inwards</Pattern>
+    <Pattern>know tested along</Pattern>
+    <Pattern>know tested as</Pattern>
+    <Pattern>know tested at</Pattern>
+    <Pattern>know tested equally</Pattern>
+    <Pattern>know tested every bit</Pattern>
+    <Pattern>know tested from</Pattern>
+    <Pattern>know tested in</Pattern>
+    <Pattern>know tested inward</Pattern>
+    <Pattern>know tested inwards</Pattern>
+    <Pattern>know tested on</Pattern>
     <Pattern>know through</Pattern>
     <Pattern>know to</Pattern>
     <Pattern>known</Pattern>
+    <Pattern>known along</Pattern>
     <Pattern>known as</Pattern>
+    <Pattern>known at</Pattern>
     <Pattern>known burn as</Pattern>
     <Pattern>known burn equally</Pattern>
     <Pattern>known burn every bit</Pattern>
@@ -4408,18 +5492,43 @@
     <Pattern>known collected every bit</Pattern>
     <Pattern>known collected from</Pattern>
     <Pattern>known collected through</Pattern>
+    <Pattern>known determined along</Pattern>
+    <Pattern>known determined as</Pattern>
+    <Pattern>known determined at</Pattern>
+    <Pattern>known determined equally</Pattern>
+    <Pattern>known determined every bit</Pattern>
+    <Pattern>known determined from</Pattern>
+    <Pattern>known determined in</Pattern>
+    <Pattern>known determined inward</Pattern>
+    <Pattern>known determined inwards</Pattern>
+    <Pattern>known determined on</Pattern>
     <Pattern>known equally</Pattern>
     <Pattern>known every bit</Pattern>
+    <Pattern>known found along</Pattern>
     <Pattern>known found as</Pattern>
+    <Pattern>known found at</Pattern>
     <Pattern>known found equally</Pattern>
     <Pattern>known found every bit</Pattern>
+    <Pattern>known found from</Pattern>
     <Pattern>known found in</Pattern>
     <Pattern>known found inward</Pattern>
     <Pattern>known found inwards</Pattern>
+    <Pattern>known found on</Pattern>
     <Pattern>known from</Pattern>
     <Pattern>known in</Pattern>
     <Pattern>known inward</Pattern>
     <Pattern>known inwards</Pattern>
+    <Pattern>known on</Pattern>
+    <Pattern>known prestoblue along</Pattern>
+    <Pattern>known prestoblue as</Pattern>
+    <Pattern>known prestoblue at</Pattern>
+    <Pattern>known prestoblue equally</Pattern>
+    <Pattern>known prestoblue every bit</Pattern>
+    <Pattern>known prestoblue from</Pattern>
+    <Pattern>known prestoblue in</Pattern>
+    <Pattern>known prestoblue inward</Pattern>
+    <Pattern>known prestoblue inwards</Pattern>
+    <Pattern>known prestoblue on</Pattern>
     <Pattern>known sunburn as</Pattern>
     <Pattern>known sunburn equally</Pattern>
     <Pattern>known sunburn every bit</Pattern>
@@ -4444,8 +5553,75 @@
     <Pattern>known tan1 in</Pattern>
     <Pattern>known tan1 inward</Pattern>
     <Pattern>known tan1 inwards</Pattern>
+    <Pattern>known tested along</Pattern>
+    <Pattern>known tested as</Pattern>
+    <Pattern>known tested at</Pattern>
+    <Pattern>known tested equally</Pattern>
+    <Pattern>known tested every bit</Pattern>
+    <Pattern>known tested from</Pattern>
+    <Pattern>known tested in</Pattern>
+    <Pattern>known tested inward</Pattern>
+    <Pattern>known tested inwards</Pattern>
+    <Pattern>known tested on</Pattern>
     <Pattern>known through</Pattern>
     <Pattern>known to</Pattern>
+    <Pattern>leave</Pattern>
+    <Pattern>leave collected from</Pattern>
+    <Pattern>leave from</Pattern>
+    <Pattern>leave were from</Pattern>
+    <Pattern>leaves</Pattern>
+    <Pattern>leaves collected from</Pattern>
+    <Pattern>leaves from</Pattern>
+    <Pattern>leaves were from</Pattern>
+    <Pattern>linong</Pattern>
+    <Pattern>linong collected from</Pattern>
+    <Pattern>linong cubic decimeter from</Pattern>
+    <Pattern>linong cubic decimetre from</Pattern>
+    <Pattern>linong fom from</Pattern>
+    <Pattern>linong from</Pattern>
+    <Pattern>linong l from</Pattern>
+    <Pattern>linong l. from</Pattern>
+    <Pattern>linong liter from</Pattern>
+    <Pattern>linong litre from</Pattern>
+    <Pattern>linong ragasa from</Pattern>
+    <Pattern>linong st. from</Pattern>
+    <Pattern>lodge</Pattern>
+    <Pattern>lodge Filipino at</Pattern>
+    <Pattern>lodge Filipino end-to-end</Pattern>
+    <Pattern>lodge Filipino throughout</Pattern>
+    <Pattern>lodge Filipino to</Pattern>
+    <Pattern>lodge Philippine at</Pattern>
+    <Pattern>lodge Philippine end-to-end</Pattern>
+    <Pattern>lodge Philippine throughout</Pattern>
+    <Pattern>lodge Philippine to</Pattern>
+    <Pattern>lodge at</Pattern>
+    <Pattern>lodge author at</Pattern>
+    <Pattern>lodge author end-to-end</Pattern>
+    <Pattern>lodge author throughout</Pattern>
+    <Pattern>lodge author to</Pattern>
+    <Pattern>lodge been at</Pattern>
+    <Pattern>lodge been end-to-end</Pattern>
+    <Pattern>lodge been throughout</Pattern>
+    <Pattern>lodge been to</Pattern>
+    <Pattern>lodge deposited at</Pattern>
+    <Pattern>lodge deposited end-to-end</Pattern>
+    <Pattern>lodge deposited throughout</Pattern>
+    <Pattern>lodge deposited to</Pattern>
+    <Pattern>lodge end-to-end</Pattern>
+    <Pattern>lodge philippine at</Pattern>
+    <Pattern>lodge philippine end-to-end</Pattern>
+    <Pattern>lodge philippine throughout</Pattern>
+    <Pattern>lodge philippine to</Pattern>
+    <Pattern>lodge reported at</Pattern>
+    <Pattern>lodge reported end-to-end</Pattern>
+    <Pattern>lodge reported throughout</Pattern>
+    <Pattern>lodge reported to</Pattern>
+    <Pattern>lodge throughout</Pattern>
+    <Pattern>lodge to</Pattern>
+    <Pattern>lodge writer at</Pattern>
+    <Pattern>lodge writer end-to-end</Pattern>
+    <Pattern>lodge writer throughout</Pattern>
+    <Pattern>lodge writer to</Pattern>
     <Pattern>lyophilize</Pattern>
     <Pattern>lyophilize IRA from</Pattern>
     <Pattern>lyophilize IRA in</Pattern>
@@ -4560,6 +5736,57 @@
     <Pattern>lyophilized tan1 in</Pattern>
     <Pattern>lyophilized tan1 inward</Pattern>
     <Pattern>lyophilized tan1 inwards</Pattern>
+    <Pattern>maintained</Pattern>
+    <Pattern>maintained along</Pattern>
+    <Pattern>maintained as</Pattern>
+    <Pattern>maintained at</Pattern>
+    <Pattern>maintained determined along</Pattern>
+    <Pattern>maintained determined as</Pattern>
+    <Pattern>maintained determined at</Pattern>
+    <Pattern>maintained determined equally</Pattern>
+    <Pattern>maintained determined every bit</Pattern>
+    <Pattern>maintained determined from</Pattern>
+    <Pattern>maintained determined in</Pattern>
+    <Pattern>maintained determined inward</Pattern>
+    <Pattern>maintained determined inwards</Pattern>
+    <Pattern>maintained determined on</Pattern>
+    <Pattern>maintained equally</Pattern>
+    <Pattern>maintained every bit</Pattern>
+    <Pattern>maintained found along</Pattern>
+    <Pattern>maintained found as</Pattern>
+    <Pattern>maintained found at</Pattern>
+    <Pattern>maintained found equally</Pattern>
+    <Pattern>maintained found every bit</Pattern>
+    <Pattern>maintained found from</Pattern>
+    <Pattern>maintained found in</Pattern>
+    <Pattern>maintained found inward</Pattern>
+    <Pattern>maintained found inwards</Pattern>
+    <Pattern>maintained found on</Pattern>
+    <Pattern>maintained from</Pattern>
+    <Pattern>maintained in</Pattern>
+    <Pattern>maintained inward</Pattern>
+    <Pattern>maintained inwards</Pattern>
+    <Pattern>maintained on</Pattern>
+    <Pattern>maintained prestoblue along</Pattern>
+    <Pattern>maintained prestoblue as</Pattern>
+    <Pattern>maintained prestoblue at</Pattern>
+    <Pattern>maintained prestoblue equally</Pattern>
+    <Pattern>maintained prestoblue every bit</Pattern>
+    <Pattern>maintained prestoblue from</Pattern>
+    <Pattern>maintained prestoblue in</Pattern>
+    <Pattern>maintained prestoblue inward</Pattern>
+    <Pattern>maintained prestoblue inwards</Pattern>
+    <Pattern>maintained prestoblue on</Pattern>
+    <Pattern>maintained tested along</Pattern>
+    <Pattern>maintained tested as</Pattern>
+    <Pattern>maintained tested at</Pattern>
+    <Pattern>maintained tested equally</Pattern>
+    <Pattern>maintained tested every bit</Pattern>
+    <Pattern>maintained tested from</Pattern>
+    <Pattern>maintained tested in</Pattern>
+    <Pattern>maintained tested inward</Pattern>
+    <Pattern>maintained tested inwards</Pattern>
+    <Pattern>maintained tested on</Pattern>
     <Pattern>malabed</Pattern>
     <Pattern>malabed IC along</Pattern>
     <Pattern>malabed IC as</Pattern>
@@ -4857,6 +6084,43 @@
     <Pattern>malabed values to</Pattern>
     <Pattern>malabed values with</Pattern>
     <Pattern>malabed with</Pattern>
+    <Pattern>match</Pattern>
+    <Pattern>match Filipino at</Pattern>
+    <Pattern>match Filipino end-to-end</Pattern>
+    <Pattern>match Filipino throughout</Pattern>
+    <Pattern>match Filipino to</Pattern>
+    <Pattern>match Philippine at</Pattern>
+    <Pattern>match Philippine end-to-end</Pattern>
+    <Pattern>match Philippine throughout</Pattern>
+    <Pattern>match Philippine to</Pattern>
+    <Pattern>match at</Pattern>
+    <Pattern>match author at</Pattern>
+    <Pattern>match author end-to-end</Pattern>
+    <Pattern>match author throughout</Pattern>
+    <Pattern>match author to</Pattern>
+    <Pattern>match been at</Pattern>
+    <Pattern>match been end-to-end</Pattern>
+    <Pattern>match been throughout</Pattern>
+    <Pattern>match been to</Pattern>
+    <Pattern>match deposited at</Pattern>
+    <Pattern>match deposited end-to-end</Pattern>
+    <Pattern>match deposited throughout</Pattern>
+    <Pattern>match deposited to</Pattern>
+    <Pattern>match end-to-end</Pattern>
+    <Pattern>match philippine at</Pattern>
+    <Pattern>match philippine end-to-end</Pattern>
+    <Pattern>match philippine throughout</Pattern>
+    <Pattern>match philippine to</Pattern>
+    <Pattern>match reported at</Pattern>
+    <Pattern>match reported end-to-end</Pattern>
+    <Pattern>match reported throughout</Pattern>
+    <Pattern>match reported to</Pattern>
+    <Pattern>match throughout</Pattern>
+    <Pattern>match to</Pattern>
+    <Pattern>match writer at</Pattern>
+    <Pattern>match writer end-to-end</Pattern>
+    <Pattern>match writer throughout</Pattern>
+    <Pattern>match writer to</Pattern>
     <Pattern>mean</Pattern>
     <Pattern>mean IC along</Pattern>
     <Pattern>mean IC as</Pattern>
@@ -5155,6 +6419,74 @@
     <Pattern>occurs in</Pattern>
     <Pattern>occurs inward</Pattern>
     <Pattern>occurs inwards</Pattern>
+    <Pattern>originate</Pattern>
+    <Pattern>originate collected from</Pattern>
+    <Pattern>originate cubic decimeter from</Pattern>
+    <Pattern>originate cubic decimetre from</Pattern>
+    <Pattern>originate fom from</Pattern>
+    <Pattern>originate from</Pattern>
+    <Pattern>originate l from</Pattern>
+    <Pattern>originate l. from</Pattern>
+    <Pattern>originate liter from</Pattern>
+    <Pattern>originate litre from</Pattern>
+    <Pattern>originate ragasa from</Pattern>
+    <Pattern>originate st. from</Pattern>
+    <Pattern>originated</Pattern>
+    <Pattern>originated collected from</Pattern>
+    <Pattern>originated cubic decimeter from</Pattern>
+    <Pattern>originated cubic decimetre from</Pattern>
+    <Pattern>originated fom from</Pattern>
+    <Pattern>originated from</Pattern>
+    <Pattern>originated l from</Pattern>
+    <Pattern>originated l. from</Pattern>
+    <Pattern>originated liter from</Pattern>
+    <Pattern>originated litre from</Pattern>
+    <Pattern>originated ragasa from</Pattern>
+    <Pattern>originated st. from</Pattern>
+    <Pattern>papua</Pattern>
+    <Pattern>papua in</Pattern>
+    <Pattern>papua inward</Pattern>
+    <Pattern>papua inwards</Pattern>
+    <Pattern>papua recorded in</Pattern>
+    <Pattern>papua recorded inward</Pattern>
+    <Pattern>papua recorded inwards</Pattern>
+    <Pattern>possess</Pattern>
+    <Pattern>possess Filipino at</Pattern>
+    <Pattern>possess Filipino end-to-end</Pattern>
+    <Pattern>possess Filipino throughout</Pattern>
+    <Pattern>possess Filipino to</Pattern>
+    <Pattern>possess Philippine at</Pattern>
+    <Pattern>possess Philippine end-to-end</Pattern>
+    <Pattern>possess Philippine throughout</Pattern>
+    <Pattern>possess Philippine to</Pattern>
+    <Pattern>possess at</Pattern>
+    <Pattern>possess author at</Pattern>
+    <Pattern>possess author end-to-end</Pattern>
+    <Pattern>possess author throughout</Pattern>
+    <Pattern>possess author to</Pattern>
+    <Pattern>possess been at</Pattern>
+    <Pattern>possess been end-to-end</Pattern>
+    <Pattern>possess been throughout</Pattern>
+    <Pattern>possess been to</Pattern>
+    <Pattern>possess deposited at</Pattern>
+    <Pattern>possess deposited end-to-end</Pattern>
+    <Pattern>possess deposited throughout</Pattern>
+    <Pattern>possess deposited to</Pattern>
+    <Pattern>possess end-to-end</Pattern>
+    <Pattern>possess philippine at</Pattern>
+    <Pattern>possess philippine end-to-end</Pattern>
+    <Pattern>possess philippine throughout</Pattern>
+    <Pattern>possess philippine to</Pattern>
+    <Pattern>possess reported at</Pattern>
+    <Pattern>possess reported end-to-end</Pattern>
+    <Pattern>possess reported throughout</Pattern>
+    <Pattern>possess reported to</Pattern>
+    <Pattern>possess throughout</Pattern>
+    <Pattern>possess to</Pattern>
+    <Pattern>possess writer at</Pattern>
+    <Pattern>possess writer end-to-end</Pattern>
+    <Pattern>possess writer throughout</Pattern>
+    <Pattern>possess writer to</Pattern>
     <Pattern>procure</Pattern>
     <Pattern>procure IRA from</Pattern>
     <Pattern>procure IRA in</Pattern>
@@ -5613,6 +6945,106 @@
     <Pattern>reap tan1 in</Pattern>
     <Pattern>reap tan1 inward</Pattern>
     <Pattern>reap tan1 inwards</Pattern>
+    <Pattern>record</Pattern>
+    <Pattern>record in</Pattern>
+    <Pattern>record inward</Pattern>
+    <Pattern>record inwards</Pattern>
+    <Pattern>record recorded in</Pattern>
+    <Pattern>record recorded inward</Pattern>
+    <Pattern>record recorded inwards</Pattern>
+    <Pattern>recorded</Pattern>
+    <Pattern>recorded in</Pattern>
+    <Pattern>recorded inward</Pattern>
+    <Pattern>recorded inwards</Pattern>
+    <Pattern>recorded recorded in</Pattern>
+    <Pattern>recorded recorded inward</Pattern>
+    <Pattern>recorded recorded inwards</Pattern>
+    <Pattern>repens</Pattern>
+    <Pattern>repens collected from</Pattern>
+    <Pattern>repens cubic decimeter from</Pattern>
+    <Pattern>repens cubic decimetre from</Pattern>
+    <Pattern>repens fom from</Pattern>
+    <Pattern>repens from</Pattern>
+    <Pattern>repens l from</Pattern>
+    <Pattern>repens l. from</Pattern>
+    <Pattern>repens liter from</Pattern>
+    <Pattern>repens litre from</Pattern>
+    <Pattern>repens ragasa from</Pattern>
+    <Pattern>repens st. from</Pattern>
+    <Pattern>report</Pattern>
+    <Pattern>report Filipino at</Pattern>
+    <Pattern>report Filipino end-to-end</Pattern>
+    <Pattern>report Filipino throughout</Pattern>
+    <Pattern>report Filipino to</Pattern>
+    <Pattern>report Philippine at</Pattern>
+    <Pattern>report Philippine end-to-end</Pattern>
+    <Pattern>report Philippine throughout</Pattern>
+    <Pattern>report Philippine to</Pattern>
+    <Pattern>report at</Pattern>
+    <Pattern>report author at</Pattern>
+    <Pattern>report author end-to-end</Pattern>
+    <Pattern>report author throughout</Pattern>
+    <Pattern>report author to</Pattern>
+    <Pattern>report been at</Pattern>
+    <Pattern>report been end-to-end</Pattern>
+    <Pattern>report been throughout</Pattern>
+    <Pattern>report been to</Pattern>
+    <Pattern>report deposited at</Pattern>
+    <Pattern>report deposited end-to-end</Pattern>
+    <Pattern>report deposited throughout</Pattern>
+    <Pattern>report deposited to</Pattern>
+    <Pattern>report end-to-end</Pattern>
+    <Pattern>report philippine at</Pattern>
+    <Pattern>report philippine end-to-end</Pattern>
+    <Pattern>report philippine throughout</Pattern>
+    <Pattern>report philippine to</Pattern>
+    <Pattern>report reported at</Pattern>
+    <Pattern>report reported end-to-end</Pattern>
+    <Pattern>report reported throughout</Pattern>
+    <Pattern>report reported to</Pattern>
+    <Pattern>report throughout</Pattern>
+    <Pattern>report to</Pattern>
+    <Pattern>report writer at</Pattern>
+    <Pattern>report writer end-to-end</Pattern>
+    <Pattern>report writer throughout</Pattern>
+    <Pattern>report writer to</Pattern>
+    <Pattern>reported</Pattern>
+    <Pattern>reported Filipino at</Pattern>
+    <Pattern>reported Filipino end-to-end</Pattern>
+    <Pattern>reported Filipino throughout</Pattern>
+    <Pattern>reported Filipino to</Pattern>
+    <Pattern>reported Philippine at</Pattern>
+    <Pattern>reported Philippine end-to-end</Pattern>
+    <Pattern>reported Philippine throughout</Pattern>
+    <Pattern>reported Philippine to</Pattern>
+    <Pattern>reported at</Pattern>
+    <Pattern>reported author at</Pattern>
+    <Pattern>reported author end-to-end</Pattern>
+    <Pattern>reported author throughout</Pattern>
+    <Pattern>reported author to</Pattern>
+    <Pattern>reported been at</Pattern>
+    <Pattern>reported been end-to-end</Pattern>
+    <Pattern>reported been throughout</Pattern>
+    <Pattern>reported been to</Pattern>
+    <Pattern>reported deposited at</Pattern>
+    <Pattern>reported deposited end-to-end</Pattern>
+    <Pattern>reported deposited throughout</Pattern>
+    <Pattern>reported deposited to</Pattern>
+    <Pattern>reported end-to-end</Pattern>
+    <Pattern>reported philippine at</Pattern>
+    <Pattern>reported philippine end-to-end</Pattern>
+    <Pattern>reported philippine throughout</Pattern>
+    <Pattern>reported philippine to</Pattern>
+    <Pattern>reported reported at</Pattern>
+    <Pattern>reported reported end-to-end</Pattern>
+    <Pattern>reported reported throughout</Pattern>
+    <Pattern>reported reported to</Pattern>
+    <Pattern>reported throughout</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>reported writer at</Pattern>
+    <Pattern>reported writer end-to-end</Pattern>
+    <Pattern>reported writer throughout</Pattern>
+    <Pattern>reported writer to</Pattern>
     <Pattern>revealed</Pattern>
     <Pattern>revealed IC along</Pattern>
     <Pattern>revealed IC as</Pattern>
@@ -5937,7 +7369,11 @@
     <Pattern>roll up XI from</Pattern>
     <Pattern>roll up XI to</Pattern>
     <Pattern>roll up as</Pattern>
+    <Pattern>roll up at</Pattern>
+    <Pattern>roll up authenticated at</Pattern>
+    <Pattern>roll up authenticated from</Pattern>
     <Pattern>roll up collected as</Pattern>
+    <Pattern>roll up collected at</Pattern>
     <Pattern>roll up collected equally</Pattern>
     <Pattern>roll up collected every bit</Pattern>
     <Pattern>roll up collected from</Pattern>
@@ -5946,24 +7382,34 @@
     <Pattern>roll up collected inwards</Pattern>
     <Pattern>roll up collected through</Pattern>
     <Pattern>roll up collected to</Pattern>
+    <Pattern>roll up cubic decimeter from</Pattern>
+    <Pattern>roll up cubic decimetre from</Pattern>
     <Pattern>roll up eleven from</Pattern>
     <Pattern>roll up eleven to</Pattern>
     <Pattern>roll up equally</Pattern>
     <Pattern>roll up every bit</Pattern>
+    <Pattern>roll up fom from</Pattern>
     <Pattern>roll up from</Pattern>
     <Pattern>roll up in</Pattern>
     <Pattern>roll up inward</Pattern>
     <Pattern>roll up inwards</Pattern>
+    <Pattern>roll up l from</Pattern>
+    <Pattern>roll up l. from</Pattern>
+    <Pattern>roll up liter from</Pattern>
+    <Pattern>roll up litre from</Pattern>
     <Pattern>roll up nanogram from</Pattern>
     <Pattern>roll up nanogram to</Pattern>
     <Pattern>roll up ng from</Pattern>
     <Pattern>roll up ng to</Pattern>
     <Pattern>roll up ng1 from</Pattern>
     <Pattern>roll up ng1 to</Pattern>
+    <Pattern>roll up ragasa from</Pattern>
     <Pattern>roll up species from</Pattern>
     <Pattern>roll up species to</Pattern>
+    <Pattern>roll up st. from</Pattern>
     <Pattern>roll up through</Pattern>
     <Pattern>roll up to</Pattern>
+    <Pattern>roll up were from</Pattern>
     <Pattern>s</Pattern>
     <Pattern>s as</Pattern>
     <Pattern>s burn as</Pattern>
@@ -6849,6 +8295,16 @@
     <Pattern>served values to</Pattern>
     <Pattern>served values with</Pattern>
     <Pattern>served with</Pattern>
+    <Pattern>store</Pattern>
+    <Pattern>store as</Pattern>
+    <Pattern>store at</Pattern>
+    <Pattern>store equally</Pattern>
+    <Pattern>store every bit</Pattern>
+    <Pattern>stored</Pattern>
+    <Pattern>stored as</Pattern>
+    <Pattern>stored at</Pattern>
+    <Pattern>stored equally</Pattern>
+    <Pattern>stored every bit</Pattern>
     <Pattern>succeed</Pattern>
     <Pattern>succeed IC along</Pattern>
     <Pattern>succeed IC as</Pattern>
@@ -7435,6 +8891,7 @@
     <Pattern>test United States Intelligence Community with</Pattern>
     <Pattern>test along</Pattern>
     <Pattern>test as</Pattern>
+    <Pattern>test at</Pattern>
     <Pattern>test burn along</Pattern>
     <Pattern>test burn as</Pattern>
     <Pattern>test burn equally</Pattern>
@@ -7474,11 +8931,22 @@
     <Pattern>test cell that</Pattern>
     <Pattern>test cell to</Pattern>
     <Pattern>test cell with</Pattern>
+    <Pattern>test determined along</Pattern>
+    <Pattern>test determined as</Pattern>
+    <Pattern>test determined at</Pattern>
+    <Pattern>test determined equally</Pattern>
+    <Pattern>test determined every bit</Pattern>
+    <Pattern>test determined from</Pattern>
+    <Pattern>test determined in</Pattern>
+    <Pattern>test determined inward</Pattern>
+    <Pattern>test determined inwards</Pattern>
+    <Pattern>test determined on</Pattern>
     <Pattern>test equally</Pattern>
     <Pattern>test every bit</Pattern>
     <Pattern>test for</Pattern>
     <Pattern>test found along</Pattern>
     <Pattern>test found as</Pattern>
+    <Pattern>test found at</Pattern>
     <Pattern>test found equally</Pattern>
     <Pattern>test found every bit</Pattern>
     <Pattern>test found for</Pattern>
@@ -7547,6 +9015,16 @@
     <Pattern>test malignant neoplastic disease to</Pattern>
     <Pattern>test malignant neoplastic disease with</Pattern>
     <Pattern>test on</Pattern>
+    <Pattern>test prestoblue along</Pattern>
+    <Pattern>test prestoblue as</Pattern>
+    <Pattern>test prestoblue at</Pattern>
+    <Pattern>test prestoblue equally</Pattern>
+    <Pattern>test prestoblue every bit</Pattern>
+    <Pattern>test prestoblue from</Pattern>
+    <Pattern>test prestoblue in</Pattern>
+    <Pattern>test prestoblue inward</Pattern>
+    <Pattern>test prestoblue inwards</Pattern>
+    <Pattern>test prestoblue on</Pattern>
     <Pattern>test served along</Pattern>
     <Pattern>test served as</Pattern>
     <Pattern>test served equally</Pattern>
@@ -7601,6 +9079,7 @@
     <Pattern>test tan with</Pattern>
     <Pattern>test tested along</Pattern>
     <Pattern>test tested as</Pattern>
+    <Pattern>test tested at</Pattern>
     <Pattern>test tested equally</Pattern>
     <Pattern>test tested every bit</Pattern>
     <Pattern>test tested for</Pattern>
@@ -7696,6 +9175,7 @@
     <Pattern>tested United States Intelligence Community with</Pattern>
     <Pattern>tested along</Pattern>
     <Pattern>tested as</Pattern>
+    <Pattern>tested at</Pattern>
     <Pattern>tested burn along</Pattern>
     <Pattern>tested burn as</Pattern>
     <Pattern>tested burn equally</Pattern>
@@ -7735,11 +9215,22 @@
     <Pattern>tested cell that</Pattern>
     <Pattern>tested cell to</Pattern>
     <Pattern>tested cell with</Pattern>
+    <Pattern>tested determined along</Pattern>
+    <Pattern>tested determined as</Pattern>
+    <Pattern>tested determined at</Pattern>
+    <Pattern>tested determined equally</Pattern>
+    <Pattern>tested determined every bit</Pattern>
+    <Pattern>tested determined from</Pattern>
+    <Pattern>tested determined in</Pattern>
+    <Pattern>tested determined inward</Pattern>
+    <Pattern>tested determined inwards</Pattern>
+    <Pattern>tested determined on</Pattern>
     <Pattern>tested equally</Pattern>
     <Pattern>tested every bit</Pattern>
     <Pattern>tested for</Pattern>
     <Pattern>tested found along</Pattern>
     <Pattern>tested found as</Pattern>
+    <Pattern>tested found at</Pattern>
     <Pattern>tested found equally</Pattern>
     <Pattern>tested found every bit</Pattern>
     <Pattern>tested found for</Pattern>
@@ -7808,6 +9299,16 @@
     <Pattern>tested malignant neoplastic disease to</Pattern>
     <Pattern>tested malignant neoplastic disease with</Pattern>
     <Pattern>tested on</Pattern>
+    <Pattern>tested prestoblue along</Pattern>
+    <Pattern>tested prestoblue as</Pattern>
+    <Pattern>tested prestoblue at</Pattern>
+    <Pattern>tested prestoblue equally</Pattern>
+    <Pattern>tested prestoblue every bit</Pattern>
+    <Pattern>tested prestoblue from</Pattern>
+    <Pattern>tested prestoblue in</Pattern>
+    <Pattern>tested prestoblue inward</Pattern>
+    <Pattern>tested prestoblue inwards</Pattern>
+    <Pattern>tested prestoblue on</Pattern>
     <Pattern>tested served along</Pattern>
     <Pattern>tested served as</Pattern>
     <Pattern>tested served equally</Pattern>
@@ -7862,6 +9363,7 @@
     <Pattern>tested tan with</Pattern>
     <Pattern>tested tested along</Pattern>
     <Pattern>tested tested as</Pattern>
+    <Pattern>tested tested at</Pattern>
     <Pattern>tested tested equally</Pattern>
     <Pattern>tested tested every bit</Pattern>
     <Pattern>tested tested for</Pattern>
@@ -8841,6 +10343,7 @@
     <Pattern>use United States Intelligence Community with</Pattern>
     <Pattern>use along</Pattern>
     <Pattern>use as</Pattern>
+    <Pattern>use at</Pattern>
     <Pattern>use burn along</Pattern>
     <Pattern>use burn as</Pattern>
     <Pattern>use burn equally</Pattern>
@@ -8880,11 +10383,22 @@
     <Pattern>use cell that</Pattern>
     <Pattern>use cell to</Pattern>
     <Pattern>use cell with</Pattern>
+    <Pattern>use determined along</Pattern>
+    <Pattern>use determined as</Pattern>
+    <Pattern>use determined at</Pattern>
+    <Pattern>use determined equally</Pattern>
+    <Pattern>use determined every bit</Pattern>
+    <Pattern>use determined from</Pattern>
+    <Pattern>use determined in</Pattern>
+    <Pattern>use determined inward</Pattern>
+    <Pattern>use determined inwards</Pattern>
+    <Pattern>use determined on</Pattern>
     <Pattern>use equally</Pattern>
     <Pattern>use every bit</Pattern>
     <Pattern>use for</Pattern>
     <Pattern>use found along</Pattern>
     <Pattern>use found as</Pattern>
+    <Pattern>use found at</Pattern>
     <Pattern>use found equally</Pattern>
     <Pattern>use found every bit</Pattern>
     <Pattern>use found for</Pattern>
@@ -8961,6 +10475,16 @@
     <Pattern>use malignant neoplastic disease to</Pattern>
     <Pattern>use malignant neoplastic disease with</Pattern>
     <Pattern>use on</Pattern>
+    <Pattern>use prestoblue along</Pattern>
+    <Pattern>use prestoblue as</Pattern>
+    <Pattern>use prestoblue at</Pattern>
+    <Pattern>use prestoblue equally</Pattern>
+    <Pattern>use prestoblue every bit</Pattern>
+    <Pattern>use prestoblue from</Pattern>
+    <Pattern>use prestoblue in</Pattern>
+    <Pattern>use prestoblue inward</Pattern>
+    <Pattern>use prestoblue inwards</Pattern>
+    <Pattern>use prestoblue on</Pattern>
     <Pattern>use procured from</Pattern>
     <Pattern>use procured in</Pattern>
     <Pattern>use procured inward</Pattern>
@@ -9023,6 +10547,7 @@
     <Pattern>use tan1 inwards</Pattern>
     <Pattern>use tested along</Pattern>
     <Pattern>use tested as</Pattern>
+    <Pattern>use tested at</Pattern>
     <Pattern>use tested equally</Pattern>
     <Pattern>use tested every bit</Pattern>
     <Pattern>use tested for</Pattern>
@@ -9360,6 +10885,57 @@
     <Pattern>used values to</Pattern>
     <Pattern>used values with</Pattern>
     <Pattern>used with</Pattern>
+    <Pattern>using</Pattern>
+    <Pattern>using along</Pattern>
+    <Pattern>using as</Pattern>
+    <Pattern>using at</Pattern>
+    <Pattern>using determined along</Pattern>
+    <Pattern>using determined as</Pattern>
+    <Pattern>using determined at</Pattern>
+    <Pattern>using determined equally</Pattern>
+    <Pattern>using determined every bit</Pattern>
+    <Pattern>using determined from</Pattern>
+    <Pattern>using determined in</Pattern>
+    <Pattern>using determined inward</Pattern>
+    <Pattern>using determined inwards</Pattern>
+    <Pattern>using determined on</Pattern>
+    <Pattern>using equally</Pattern>
+    <Pattern>using every bit</Pattern>
+    <Pattern>using found along</Pattern>
+    <Pattern>using found as</Pattern>
+    <Pattern>using found at</Pattern>
+    <Pattern>using found equally</Pattern>
+    <Pattern>using found every bit</Pattern>
+    <Pattern>using found from</Pattern>
+    <Pattern>using found in</Pattern>
+    <Pattern>using found inward</Pattern>
+    <Pattern>using found inwards</Pattern>
+    <Pattern>using found on</Pattern>
+    <Pattern>using from</Pattern>
+    <Pattern>using in</Pattern>
+    <Pattern>using inward</Pattern>
+    <Pattern>using inwards</Pattern>
+    <Pattern>using on</Pattern>
+    <Pattern>using prestoblue along</Pattern>
+    <Pattern>using prestoblue as</Pattern>
+    <Pattern>using prestoblue at</Pattern>
+    <Pattern>using prestoblue equally</Pattern>
+    <Pattern>using prestoblue every bit</Pattern>
+    <Pattern>using prestoblue from</Pattern>
+    <Pattern>using prestoblue in</Pattern>
+    <Pattern>using prestoblue inward</Pattern>
+    <Pattern>using prestoblue inwards</Pattern>
+    <Pattern>using prestoblue on</Pattern>
+    <Pattern>using tested along</Pattern>
+    <Pattern>using tested as</Pattern>
+    <Pattern>using tested at</Pattern>
+    <Pattern>using tested equally</Pattern>
+    <Pattern>using tested every bit</Pattern>
+    <Pattern>using tested from</Pattern>
+    <Pattern>using tested in</Pattern>
+    <Pattern>using tested inward</Pattern>
+    <Pattern>using tested inwards</Pattern>
+    <Pattern>using tested on</Pattern>
     <Pattern>view</Pattern>
     <Pattern>view along</Pattern>
     <Pattern>view labor along</Pattern>
@@ -9448,6 +11024,9 @@
     <Pattern>was United States Intelligence Community with</Pattern>
     <Pattern>was along</Pattern>
     <Pattern>was as</Pattern>
+    <Pattern>was at</Pattern>
+    <Pattern>was authenticated at</Pattern>
+    <Pattern>was authenticated from</Pattern>
     <Pattern>was burn along</Pattern>
     <Pattern>was burn as</Pattern>
     <Pattern>was burn equally</Pattern>
@@ -9487,12 +11066,24 @@
     <Pattern>was cell that</Pattern>
     <Pattern>was cell to</Pattern>
     <Pattern>was cell with</Pattern>
+    <Pattern>was collected at</Pattern>
     <Pattern>was collected from</Pattern>
+    <Pattern>was determined along</Pattern>
+    <Pattern>was determined as</Pattern>
+    <Pattern>was determined at</Pattern>
+    <Pattern>was determined equally</Pattern>
+    <Pattern>was determined every bit</Pattern>
+    <Pattern>was determined from</Pattern>
+    <Pattern>was determined in</Pattern>
+    <Pattern>was determined inward</Pattern>
+    <Pattern>was determined inwards</Pattern>
+    <Pattern>was determined on</Pattern>
     <Pattern>was equally</Pattern>
     <Pattern>was every bit</Pattern>
     <Pattern>was for</Pattern>
     <Pattern>was found along</Pattern>
     <Pattern>was found as</Pattern>
+    <Pattern>was found at</Pattern>
     <Pattern>was found equally</Pattern>
     <Pattern>was found every bit</Pattern>
     <Pattern>was found for</Pattern>
@@ -9575,10 +11166,23 @@
     <Pattern>was malignant neoplastic disease to</Pattern>
     <Pattern>was malignant neoplastic disease with</Pattern>
     <Pattern>was on</Pattern>
+    <Pattern>was prestoblue along</Pattern>
+    <Pattern>was prestoblue as</Pattern>
+    <Pattern>was prestoblue at</Pattern>
+    <Pattern>was prestoblue equally</Pattern>
+    <Pattern>was prestoblue every bit</Pattern>
+    <Pattern>was prestoblue from</Pattern>
+    <Pattern>was prestoblue in</Pattern>
+    <Pattern>was prestoblue inward</Pattern>
+    <Pattern>was prestoblue inwards</Pattern>
+    <Pattern>was prestoblue on</Pattern>
     <Pattern>was procured from</Pattern>
     <Pattern>was procured in</Pattern>
     <Pattern>was procured inward</Pattern>
     <Pattern>was procured inwards</Pattern>
+    <Pattern>was recorded in</Pattern>
+    <Pattern>was recorded inward</Pattern>
+    <Pattern>was recorded inwards</Pattern>
     <Pattern>was served along</Pattern>
     <Pattern>was served as</Pattern>
     <Pattern>was served equally</Pattern>
@@ -9637,6 +11241,7 @@
     <Pattern>was tan1 inwards</Pattern>
     <Pattern>was tested along</Pattern>
     <Pattern>was tested as</Pattern>
+    <Pattern>was tested at</Pattern>
     <Pattern>was tested equally</Pattern>
     <Pattern>was tested every bit</Pattern>
     <Pattern>was tested for</Pattern>
@@ -9680,6 +11285,10 @@
     <Pattern>were</Pattern>
     <Pattern>were 11 from</Pattern>
     <Pattern>were 11 to</Pattern>
+    <Pattern>were Filipino at</Pattern>
+    <Pattern>were Filipino end-to-end</Pattern>
+    <Pattern>were Filipino throughout</Pattern>
+    <Pattern>were Filipino to</Pattern>
     <Pattern>were IC along</Pattern>
     <Pattern>were IC as</Pattern>
     <Pattern>were IC equally</Pattern>
@@ -9727,6 +11336,10 @@
     <Pattern>were National Intelligence Community that</Pattern>
     <Pattern>were National Intelligence Community to</Pattern>
     <Pattern>were National Intelligence Community with</Pattern>
+    <Pattern>were Philippine at</Pattern>
+    <Pattern>were Philippine end-to-end</Pattern>
+    <Pattern>were Philippine throughout</Pattern>
+    <Pattern>were Philippine to</Pattern>
     <Pattern>were Provisional IRA from</Pattern>
     <Pattern>were Provisional IRA in</Pattern>
     <Pattern>were Provisional IRA inward</Pattern>
@@ -9756,6 +11369,17 @@
     <Pattern>were XI to</Pattern>
     <Pattern>were along</Pattern>
     <Pattern>were as</Pattern>
+    <Pattern>were at</Pattern>
+    <Pattern>were authenticated at</Pattern>
+    <Pattern>were authenticated from</Pattern>
+    <Pattern>were author at</Pattern>
+    <Pattern>were author end-to-end</Pattern>
+    <Pattern>were author throughout</Pattern>
+    <Pattern>were author to</Pattern>
+    <Pattern>were been at</Pattern>
+    <Pattern>were been end-to-end</Pattern>
+    <Pattern>were been throughout</Pattern>
+    <Pattern>were been to</Pattern>
     <Pattern>were burn along</Pattern>
     <Pattern>were burn as</Pattern>
     <Pattern>were burn equally</Pattern>
@@ -9796,6 +11420,7 @@
     <Pattern>were cell to</Pattern>
     <Pattern>were cell with</Pattern>
     <Pattern>were collected as</Pattern>
+    <Pattern>were collected at</Pattern>
     <Pattern>were collected equally</Pattern>
     <Pattern>were collected every bit</Pattern>
     <Pattern>were collected from</Pattern>
@@ -9804,6 +11429,8 @@
     <Pattern>were collected inwards</Pattern>
     <Pattern>were collected through</Pattern>
     <Pattern>were collected to</Pattern>
+    <Pattern>were cubic decimeter from</Pattern>
+    <Pattern>were cubic decimetre from</Pattern>
     <Pattern>were cultivated as</Pattern>
     <Pattern>were cultivated equally</Pattern>
     <Pattern>were cultivated every bit</Pattern>
@@ -9813,10 +11440,16 @@
     <Pattern>were cultivated inwards</Pattern>
     <Pattern>were cultivated that</Pattern>
     <Pattern>were cultivated to</Pattern>
+    <Pattern>were deposited at</Pattern>
+    <Pattern>were deposited end-to-end</Pattern>
+    <Pattern>were deposited throughout</Pattern>
+    <Pattern>were deposited to</Pattern>
     <Pattern>were eleven from</Pattern>
     <Pattern>were eleven to</Pattern>
+    <Pattern>were end-to-end</Pattern>
     <Pattern>were equally</Pattern>
     <Pattern>were every bit</Pattern>
+    <Pattern>were fom from</Pattern>
     <Pattern>were for</Pattern>
     <Pattern>were found along</Pattern>
     <Pattern>were found as</Pattern>
@@ -9882,6 +11515,10 @@
     <Pattern>were ira in</Pattern>
     <Pattern>were ira inward</Pattern>
     <Pattern>were ira inwards</Pattern>
+    <Pattern>were l from</Pattern>
+    <Pattern>were l. from</Pattern>
+    <Pattern>were liter from</Pattern>
+    <Pattern>were litre from</Pattern>
     <Pattern>were malignant neoplastic disease along</Pattern>
     <Pattern>were malignant neoplastic disease as</Pattern>
     <Pattern>were malignant neoplastic disease equally</Pattern>
@@ -9902,10 +11539,19 @@
     <Pattern>were ng1 from</Pattern>
     <Pattern>were ng1 to</Pattern>
     <Pattern>were on</Pattern>
+    <Pattern>were philippine at</Pattern>
+    <Pattern>were philippine end-to-end</Pattern>
+    <Pattern>were philippine throughout</Pattern>
+    <Pattern>were philippine to</Pattern>
     <Pattern>were procured from</Pattern>
     <Pattern>were procured in</Pattern>
     <Pattern>were procured inward</Pattern>
     <Pattern>were procured inwards</Pattern>
+    <Pattern>were ragasa from</Pattern>
+    <Pattern>were reported at</Pattern>
+    <Pattern>were reported end-to-end</Pattern>
+    <Pattern>were reported throughout</Pattern>
+    <Pattern>were reported to</Pattern>
     <Pattern>were served along</Pattern>
     <Pattern>were served as</Pattern>
     <Pattern>were served equally</Pattern>
@@ -9930,6 +11576,7 @@
     <Pattern>were squalene inwards</Pattern>
     <Pattern>were squalene that</Pattern>
     <Pattern>were squalene to</Pattern>
+    <Pattern>were st. from</Pattern>
     <Pattern>were sunburn along</Pattern>
     <Pattern>were sunburn as</Pattern>
     <Pattern>were sunburn equally</Pattern>
@@ -9988,6 +11635,7 @@
     <Pattern>were tested with</Pattern>
     <Pattern>were that</Pattern>
     <Pattern>were through</Pattern>
+    <Pattern>were throughout</Pattern>
     <Pattern>were to</Pattern>
     <Pattern>were used along</Pattern>
     <Pattern>were used as</Pattern>
@@ -10015,7 +11663,12 @@
     <Pattern>were values that</Pattern>
     <Pattern>were values to</Pattern>
     <Pattern>were values with</Pattern>
+    <Pattern>were were from</Pattern>
     <Pattern>were with</Pattern>
+    <Pattern>were writer at</Pattern>
+    <Pattern>were writer end-to-end</Pattern>
+    <Pattern>were writer throughout</Pattern>
+    <Pattern>were writer to</Pattern>
     <Pattern>work</Pattern>
     <Pattern>work along</Pattern>
     <Pattern>work labor along</Pattern>
@@ -10042,6 +11695,18 @@
     <Pattern>working task on</Pattern>
     <Pattern>working undertaking along</Pattern>
     <Pattern>working undertaking on</Pattern>
+    <Pattern>y.</Pattern>
+    <Pattern>y. collected from</Pattern>
+    <Pattern>y. cubic decimeter from</Pattern>
+    <Pattern>y. cubic decimetre from</Pattern>
+    <Pattern>y. fom from</Pattern>
+    <Pattern>y. from</Pattern>
+    <Pattern>y. l from</Pattern>
+    <Pattern>y. l. from</Pattern>
+    <Pattern>y. liter from</Pattern>
+    <Pattern>y. litre from</Pattern>
+    <Pattern>y. ragasa from</Pattern>
+    <Pattern>y. st. from</Pattern>
     <Pattern>yves</Pattern>
     <Pattern>yves IRA from</Pattern>
     <Pattern>yves IRA in</Pattern>

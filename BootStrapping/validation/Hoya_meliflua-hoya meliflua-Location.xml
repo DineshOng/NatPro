@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>hoya meliflua</Name>
+  </Tag1>
+  <Tag2>Location<Name>palawan</Name>
+    <Name>laguna</Name>
+    <Name>luzon island</Name>
+    <Name>apayao</Name>
+    <Name>mindoro</Name>
+    <Name>panay</Name>
+    <Name>leyte</Name>
+    <Name>bataan</Name>
+    <Name>negros</Name>
+    <Name>rizal</Name>
+    <Name>philippines</Name>
+    <Name>la union</Name>
+    <Name>hoya</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>cultivated as</Pattern>
+    <Pattern>found in</Pattern>
+    <Pattern>identified from</Pattern>
+    <Pattern>indicate that</Pattern>
+    <Pattern>is cultivated as</Pattern>
+    <Pattern>is interesting to</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>note that</Pattern>
+  </Relation>
+</Seed>

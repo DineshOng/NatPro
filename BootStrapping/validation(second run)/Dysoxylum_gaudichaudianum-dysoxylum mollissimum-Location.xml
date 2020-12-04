@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>dysoxylum mollissimum</Name>
+  </Tag1>
+  <Tag2>Location<Name>ijppr</Name>
+    <Name>mariquit</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>be found in</Pattern>
+    <Pattern>determined in</Pattern>
+    <Pattern>found in</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>known as</Pattern>
+    <Pattern>maintained at</Pattern>
+    <Pattern>tested on</Pattern>
+    <Pattern>was determined in</Pattern>
+    <Pattern>was tested on</Pattern>
+  </Relation>
+</Seed>

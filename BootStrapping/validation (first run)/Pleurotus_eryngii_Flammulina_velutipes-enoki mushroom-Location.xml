@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>MedicinalPlant<Name>enoki mushroom</Name>
+  </Tag1>
+  <Tag2>Location<Name>flammulina</Name>
+    <Name>philippines</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>are sold in</Pattern>
+    <Pattern>is sold in</Pattern>
+    <Pattern>sold in</Pattern>
+    <Pattern>supermarkets throughout</Pattern>
+  </Relation>
+</Seed>
