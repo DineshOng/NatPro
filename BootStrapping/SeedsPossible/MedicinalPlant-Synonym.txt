@@ -1,67 +1,139 @@
 e1:MedicinalPlant
 e2:Synonym
 
+alas cuatro;mirabilis dichotoma
 alas cuatro;mirabilis jalapa
+alas cuatro;mirabilis lindheimeri
 alas cuatro;mirabilis longiflora
+alas cuatro;mirabilis odorata
+alpinia purpurata;alpinia jungle king 
 alpinia purpurata;ginger lily 
+alpinia purpurata;ostrich plume 
 alpinia purpurata;red ginger 
+amarillo;tagetes erecta
 amarillo;tagetes patula
+asoka;saraca asoca
 asoka;saraca indica
+balaniu;citronella grass
 balaniu;cymbopogon hamatulus
+balaniu;cymbopogon nardus
 balaniu;cymbopogon tortilis
 batino;Alstonia macrophylla
+betis;madhuca betis
 betis;payena betis
 brocolli;Brassica oleracea var. Italic
+buntot-pusa;acalypha hispida
+caimito;chrysophyllum cainito
+caryota mitis;Caryota sabolifera
+estrella;hippobroma longiflora
 estrella;isotoma longiflora
+galamai-amo;polyscias digitata
 galamai-amo;schefflera decidua
+galamai-amo;schefflera elliptifoliola
 galamai-amo;schefflera insularum
+galamai-amo;schefflera mindanaensis
 galamai-amo;schefflera odorata
+gisi ;pterospermum diversifolium
+golden shower;cassia carnaval
 golden shower;cassia fistula
+golden shower;cassia speciosa
 golden shower;cassia spectabilis
+golden shower;pyrostegia venusta
 golden shower;senna spectabilis
+hilagak;unona setigera
 hilagak;uvaria purpurea
+hilagak;uvaria ridleyi
 hilagak;uvaria rufa
 ivory mahogany;Dysoxylum gaudichaudianum
+kahoi-dalaga;mussaenda acutifolia
 kahoi-dalaga;mussaenda frondosa
+kahoi-dalaga;mussaenda glabra
 kahoi-dalaga;mussaenda grandiflora
+kahoi-dalaga;mussaenda philippica
+kalamitmit;convolvulus umbellatus
 kalamitmit;ipomoea cymosa
+kalamitmit;ipomoea polyanthes
 kalamitmit;merremia umbellata
+kasopangil;clerodendrum macrostegium
 kasopangil;volkameria grandiflora
+kauad-kawaran;cassytha americana
 kauad-kawaran;cassytha capillaris
+kauad-kawaran;cassytha filiformis
 kauad-kawaran;cuscuta reflexa
+kauad-kawaran;litsea sebifera
+kayumanis;clausena anisum-olenas
 kayumanis;clausena anisum-olens
+kayumanis;clausena excavata
 kayumanis;clausena indica
+kayumanis;clausena todayensis
 kayumanis;clausena warburgii
+kilob;dicranopteris linearis
 kilob;gleichenia dichotoma
+kilob;gleichenia hermanni
 kilob;gleichenia linearis
+kilob;polypodium lineare
+koron-koron;hernandia nymphaeifolia
 koron-koron;hernandia ovigera
+koron-koron;hernandia peltata
 koron-koron;hernandia sonora
+loktokong;ocimum polystachyon
 loktokong;ocimum tenuiflorum
+loktokong;plectranthus parviflorus
 loktokong;solanum xanthocarpum
+mana;jatropha curcas
 mana;jatropha janipha
+mana;jatropha multifida
 mana;jatropha species
+mana;manihot folio
+melon-melonan;trichosanthes amara
 melon-melonan;trichosanthes anguina
+melon-melonan;trichosanthes cucumerina
 melon-melonan;trichosanthes cucurmerina
+melon-melonan;trichosanthes locuniana
 mustard;Brassica juncea
+okra;abelmoschus esculentus 
 okra;hibiscus esculentis linn.
+pakopatoti-alog;grangea maderaspatana
 pakopatoti-alog;perdicium tomentosum
+palmera datilera ;phoenix canariensis
 palmera datilera ;phoenix cycadifolia
+palmera datilera ;phoenix dactylifera
 palmera datilera ;phoenix hanceana
+palmera datilera ;phoenix roebelenii
+prutas-baguio;passiflora foetida
 prutas-baguio;passiflora hibiscifolia
+prutas-baguio;passiflora hispida
+rabbit's foot fern;davallia mariesii
 rabbit's foot fern;davallia solida
+rabbit's foot fern;drynaria fortunei
 rabbit's foot fern;humata griffithiana
 radish;Raphanus sativus
 rainbow eucalyptus;Eucalyptus deglupta
 red cabbage;Brassica oleracea var capitata f. rubra
+ribbon fern;ophioglossum pendulum
+salimomo ;ehretia beurreria
 salimomo ;ehretia philippinensis
+sapinit;perilla ocimoides
 sapinit;psidium guajava
+sapinit;rubus apoensis
 sapinit;rubus comintanus
+sapinit;rubus commersonii
 sapinit;rubus hillii
+sapinit;rubus jamaicensis
 sapinit;rubus minusculus
+sapinit;rubus moluccanus
 sapinit;rubus rosaefolius
+sapinit;rubus rosifolium
 sapinit;urena lobota
+sapinit;vernonia volkameriaefolia
+sigarilyas;dolichos tetragonolobus
 sigarilyas;psophocarpus tetragonolobus
+sigarilyas;psophocarpus tetragonologus
+tsaang-gubat;ehretia microphylla lam.
+tsampakang-puti;michelia alba
 tsampakang-puti;michelia champaca
+tsampakang-puti;michelia longiflora
 tsampakang-puti;michelia longifolia
+tubang-dalag;abutilon indicum
 wax plant;Hoya meliflua
 green/white cabbage;Brassica oleracea

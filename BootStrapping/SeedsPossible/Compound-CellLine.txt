@@ -1,0 +1,47 @@
+e1:Compound
+e2:CellLine
+
+alpha-amyrin cinnamate;Epstein Barr virus early antigen
+beta-amyrin cinnamate;Epstein Barr virus early antigen
+beta-Sitosterol;DU-145
+beta-Sitosterol;HCT-116
+beta-Sitosterol;HDFn
+beta-Sitosterol;HT-29
+beta-Sitosterol;MCF-7
+beta-Sitosterol;HCT-116
+beta-Sitosterol;HT-29
+beta-Sitosterol;MCF-7
+beta-Sitosterol;COLO 320 DM
+Gaudichaudysolin a;HCT-116
+Gaudichaudysolin a;MCF-7
+Gaudichaudysolin a;NCI-H226
+Gaudichaudysolin a;RPMI8226
+Lupeol;SMMC7721
+Lupeol;MDA-MB-231
+Lupeol cinnamate;Epstein Barr virus early antigen
+Polyprenol;HCT-116
+Polyprenol;HDFn
+Polyprenol;HT-29
+Polyprenol;MCF-7
+Polyprenol;HCT-116
+Polyprenol;HT-29
+Polyprenol;MCF-7
+Squalene;HCT-116
+Squalene;HDFn
+Squalene;HT-29
+Squalene;MCF-7
+Squalene;HCT-116
+Squalene;HT-29
+Squalene;MCF-7
+Squalene;ACF
+Stigmasterol;DU-145
+Stigmasterol;Ehrlich
+Triacylglycerols;MCF-7
+Triacylglycerols;MDA-MB-231
+Triglycerides;HCT-116
+Triglycerides;HDFn
+Triglycerides;HT-29
+Triglycerides;MCF-7
+Triglycerides;HCT-116
+Triglycerides;HT-29
+Triglycerides;MCF-7

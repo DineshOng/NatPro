@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Compound<Name>acetone</Name>
+  </Tag1>
+  <Tag2>CellLine<Name>y-1</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>combined</Pattern>
+    <Pattern>elucidated by</Pattern>
+    <Pattern>rechromatographed</Pattern>
+    <Pattern>were elucidated by</Pattern>
+  </Relation>
+</Seed>

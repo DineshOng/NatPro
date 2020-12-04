@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>leaves</Name>
+  </Tag1>
+  <Tag2>Compound<Name>14-deoxyandrographolide</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>monogalactosyl diacylglycerols</Name>
+    <Name>5,2'-dihydroxy-7,8-dimethoxyflavone</Name>
+    <Name>triacylglycerols</Name>
+    <Name>lupeol</Name>
+    <Name>stigmasterol</Name>
+    <Name>chlorophyll a</Name>
+    <Name>trans-cinnamate esters</Name>
+    <Name>beta-sitosteryl fatty acid esters</Name>
+    <Name>andrographolide</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>administered orally as</Pattern>
+    <Pattern>found in</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>malabed</Pattern>
+    <Pattern>reyes</Pattern>
+  </Relation>
+</Seed>

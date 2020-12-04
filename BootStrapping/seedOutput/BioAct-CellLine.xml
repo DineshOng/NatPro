@@ -125,7 +125,6 @@
     <Pattern>be United States Intelligence Community inwards</Pattern>
     <Pattern>be United States Intelligence Community past</Pattern>
     <Pattern>be United States Intelligence Community that</Pattern>
-    <Pattern>be as</Pattern>
     <Pattern>be assay by</Pattern>
     <Pattern>be assay in</Pattern>
     <Pattern>be assay inward</Pattern>
@@ -151,23 +150,12 @@
     <Pattern>be check inwards</Pattern>
     <Pattern>be check past</Pattern>
     <Pattern>be check that</Pattern>
-    <Pattern>be cholesterin as</Pattern>
-    <Pattern>be cholesterin equally</Pattern>
-    <Pattern>be cholesterin every bit</Pattern>
-    <Pattern>be cholesterin for</Pattern>
-    <Pattern>be cholesterol as</Pattern>
-    <Pattern>be cholesterol equally</Pattern>
-    <Pattern>be cholesterol every bit</Pattern>
-    <Pattern>be cholesterol for</Pattern>
-    <Pattern>be equally</Pattern>
-    <Pattern>be every bit</Pattern>
     <Pattern>be followed by</Pattern>
     <Pattern>be followed in</Pattern>
     <Pattern>be followed inward</Pattern>
     <Pattern>be followed inwards</Pattern>
     <Pattern>be followed past</Pattern>
     <Pattern>be followed that</Pattern>
-    <Pattern>be for</Pattern>
     <Pattern>be found by</Pattern>
     <Pattern>be found in</Pattern>
     <Pattern>be found inward</Pattern>
@@ -190,10 +178,6 @@
     <Pattern>be malignant neoplastic disease inwards</Pattern>
     <Pattern>be malignant neoplastic disease past</Pattern>
     <Pattern>be malignant neoplastic disease that</Pattern>
-    <Pattern>be neoplasm as</Pattern>
-    <Pattern>be neoplasm equally</Pattern>
-    <Pattern>be neoplasm every bit</Pattern>
-    <Pattern>be neoplasm for</Pattern>
     <Pattern>be observed by</Pattern>
     <Pattern>be observed from</Pattern>
     <Pattern>be observed in</Pattern>
@@ -207,18 +191,6 @@
     <Pattern>be our inwards</Pattern>
     <Pattern>be our past</Pattern>
     <Pattern>be past</Pattern>
-    <Pattern>be potency as</Pattern>
-    <Pattern>be potency equally</Pattern>
-    <Pattern>be potency every bit</Pattern>
-    <Pattern>be potency for</Pattern>
-    <Pattern>be potential as</Pattern>
-    <Pattern>be potential equally</Pattern>
-    <Pattern>be potential every bit</Pattern>
-    <Pattern>be potential for</Pattern>
-    <Pattern>be potentiality as</Pattern>
-    <Pattern>be potentiality equally</Pattern>
-    <Pattern>be potentiality every bit</Pattern>
-    <Pattern>be potentiality for</Pattern>
     <Pattern>be seen by</Pattern>
     <Pattern>be seen from</Pattern>
     <Pattern>be seen in</Pattern>
@@ -238,14 +210,6 @@
     <Pattern>be synopsized past</Pattern>
     <Pattern>be synopsized that</Pattern>
     <Pattern>be that</Pattern>
-    <Pattern>be tumor as</Pattern>
-    <Pattern>be tumor equally</Pattern>
-    <Pattern>be tumor every bit</Pattern>
-    <Pattern>be tumor for</Pattern>
-    <Pattern>be tumour as</Pattern>
-    <Pattern>be tumour equally</Pattern>
-    <Pattern>be tumour every bit</Pattern>
-    <Pattern>be tumour for</Pattern>
     <Pattern>commemorate</Pattern>
     <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
     <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
@@ -522,27 +486,11 @@
     <Pattern>establish synopsized that</Pattern>
     <Pattern>establish that</Pattern>
     <Pattern>exhibit</Pattern>
-    <Pattern>exhibit as</Pattern>
     <Pattern>exhibit by</Pattern>
-    <Pattern>exhibit cholesterin as</Pattern>
-    <Pattern>exhibit cholesterin equally</Pattern>
-    <Pattern>exhibit cholesterin every bit</Pattern>
-    <Pattern>exhibit cholesterin for</Pattern>
-    <Pattern>exhibit cholesterol as</Pattern>
-    <Pattern>exhibit cholesterol equally</Pattern>
-    <Pattern>exhibit cholesterol every bit</Pattern>
-    <Pattern>exhibit cholesterol for</Pattern>
-    <Pattern>exhibit equally</Pattern>
-    <Pattern>exhibit every bit</Pattern>
-    <Pattern>exhibit for</Pattern>
     <Pattern>exhibit from</Pattern>
     <Pattern>exhibit in</Pattern>
     <Pattern>exhibit inward</Pattern>
     <Pattern>exhibit inwards</Pattern>
-    <Pattern>exhibit neoplasm as</Pattern>
-    <Pattern>exhibit neoplasm equally</Pattern>
-    <Pattern>exhibit neoplasm every bit</Pattern>
-    <Pattern>exhibit neoplasm for</Pattern>
     <Pattern>exhibit observed by</Pattern>
     <Pattern>exhibit observed from</Pattern>
     <Pattern>exhibit observed in</Pattern>
@@ -556,18 +504,6 @@
     <Pattern>exhibit our inwards</Pattern>
     <Pattern>exhibit our past</Pattern>
     <Pattern>exhibit past</Pattern>
-    <Pattern>exhibit potency as</Pattern>
-    <Pattern>exhibit potency equally</Pattern>
-    <Pattern>exhibit potency every bit</Pattern>
-    <Pattern>exhibit potency for</Pattern>
-    <Pattern>exhibit potential as</Pattern>
-    <Pattern>exhibit potential equally</Pattern>
-    <Pattern>exhibit potential every bit</Pattern>
-    <Pattern>exhibit potential for</Pattern>
-    <Pattern>exhibit potentiality as</Pattern>
-    <Pattern>exhibit potentiality equally</Pattern>
-    <Pattern>exhibit potentiality every bit</Pattern>
-    <Pattern>exhibit potentiality for</Pattern>
     <Pattern>exhibit seen by</Pattern>
     <Pattern>exhibit seen from</Pattern>
     <Pattern>exhibit seen in</Pattern>
@@ -580,36 +516,12 @@
     <Pattern>exhibit squalene inward</Pattern>
     <Pattern>exhibit squalene inwards</Pattern>
     <Pattern>exhibit squalene past</Pattern>
-    <Pattern>exhibit tumor as</Pattern>
-    <Pattern>exhibit tumor equally</Pattern>
-    <Pattern>exhibit tumor every bit</Pattern>
-    <Pattern>exhibit tumor for</Pattern>
-    <Pattern>exhibit tumour as</Pattern>
-    <Pattern>exhibit tumour equally</Pattern>
-    <Pattern>exhibit tumour every bit</Pattern>
-    <Pattern>exhibit tumour for</Pattern>
     <Pattern>exhibited</Pattern>
-    <Pattern>exhibited as</Pattern>
     <Pattern>exhibited by</Pattern>
-    <Pattern>exhibited cholesterin as</Pattern>
-    <Pattern>exhibited cholesterin equally</Pattern>
-    <Pattern>exhibited cholesterin every bit</Pattern>
-    <Pattern>exhibited cholesterin for</Pattern>
-    <Pattern>exhibited cholesterol as</Pattern>
-    <Pattern>exhibited cholesterol equally</Pattern>
-    <Pattern>exhibited cholesterol every bit</Pattern>
-    <Pattern>exhibited cholesterol for</Pattern>
-    <Pattern>exhibited equally</Pattern>
-    <Pattern>exhibited every bit</Pattern>
-    <Pattern>exhibited for</Pattern>
     <Pattern>exhibited from</Pattern>
     <Pattern>exhibited in</Pattern>
     <Pattern>exhibited inward</Pattern>
     <Pattern>exhibited inwards</Pattern>
-    <Pattern>exhibited neoplasm as</Pattern>
-    <Pattern>exhibited neoplasm equally</Pattern>
-    <Pattern>exhibited neoplasm every bit</Pattern>
-    <Pattern>exhibited neoplasm for</Pattern>
     <Pattern>exhibited observed by</Pattern>
     <Pattern>exhibited observed from</Pattern>
     <Pattern>exhibited observed in</Pattern>
@@ -623,18 +535,6 @@
     <Pattern>exhibited our inwards</Pattern>
     <Pattern>exhibited our past</Pattern>
     <Pattern>exhibited past</Pattern>
-    <Pattern>exhibited potency as</Pattern>
-    <Pattern>exhibited potency equally</Pattern>
-    <Pattern>exhibited potency every bit</Pattern>
-    <Pattern>exhibited potency for</Pattern>
-    <Pattern>exhibited potential as</Pattern>
-    <Pattern>exhibited potential equally</Pattern>
-    <Pattern>exhibited potential every bit</Pattern>
-    <Pattern>exhibited potential for</Pattern>
-    <Pattern>exhibited potentiality as</Pattern>
-    <Pattern>exhibited potentiality equally</Pattern>
-    <Pattern>exhibited potentiality every bit</Pattern>
-    <Pattern>exhibited potentiality for</Pattern>
     <Pattern>exhibited seen by</Pattern>
     <Pattern>exhibited seen from</Pattern>
     <Pattern>exhibited seen in</Pattern>
@@ -647,14 +547,6 @@
     <Pattern>exhibited squalene inward</Pattern>
     <Pattern>exhibited squalene inwards</Pattern>
     <Pattern>exhibited squalene past</Pattern>
-    <Pattern>exhibited tumor as</Pattern>
-    <Pattern>exhibited tumor equally</Pattern>
-    <Pattern>exhibited tumor every bit</Pattern>
-    <Pattern>exhibited tumor for</Pattern>
-    <Pattern>exhibited tumour as</Pattern>
-    <Pattern>exhibited tumour equally</Pattern>
-    <Pattern>exhibited tumour every bit</Pattern>
-    <Pattern>exhibited tumour for</Pattern>
     <Pattern>follow</Pattern>
     <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
     <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
@@ -1343,42 +1235,6 @@
     <Pattern>immortalized synopsized that</Pattern>
     <Pattern>immortalized that</Pattern>
     <Pattern>inhibited</Pattern>
-    <Pattern>inhibited as</Pattern>
-    <Pattern>inhibited cholesterin as</Pattern>
-    <Pattern>inhibited cholesterin equally</Pattern>
-    <Pattern>inhibited cholesterin every bit</Pattern>
-    <Pattern>inhibited cholesterin for</Pattern>
-    <Pattern>inhibited cholesterol as</Pattern>
-    <Pattern>inhibited cholesterol equally</Pattern>
-    <Pattern>inhibited cholesterol every bit</Pattern>
-    <Pattern>inhibited cholesterol for</Pattern>
-    <Pattern>inhibited equally</Pattern>
-    <Pattern>inhibited every bit</Pattern>
-    <Pattern>inhibited for</Pattern>
-    <Pattern>inhibited neoplasm as</Pattern>
-    <Pattern>inhibited neoplasm equally</Pattern>
-    <Pattern>inhibited neoplasm every bit</Pattern>
-    <Pattern>inhibited neoplasm for</Pattern>
-    <Pattern>inhibited potency as</Pattern>
-    <Pattern>inhibited potency equally</Pattern>
-    <Pattern>inhibited potency every bit</Pattern>
-    <Pattern>inhibited potency for</Pattern>
-    <Pattern>inhibited potential as</Pattern>
-    <Pattern>inhibited potential equally</Pattern>
-    <Pattern>inhibited potential every bit</Pattern>
-    <Pattern>inhibited potential for</Pattern>
-    <Pattern>inhibited potentiality as</Pattern>
-    <Pattern>inhibited potentiality equally</Pattern>
-    <Pattern>inhibited potentiality every bit</Pattern>
-    <Pattern>inhibited potentiality for</Pattern>
-    <Pattern>inhibited tumor as</Pattern>
-    <Pattern>inhibited tumor equally</Pattern>
-    <Pattern>inhibited tumor every bit</Pattern>
-    <Pattern>inhibited tumor for</Pattern>
-    <Pattern>inhibited tumour as</Pattern>
-    <Pattern>inhibited tumour equally</Pattern>
-    <Pattern>inhibited tumour every bit</Pattern>
-    <Pattern>inhibited tumour for</Pattern>
     <Pattern>isolate</Pattern>
     <Pattern>isolate by</Pattern>
     <Pattern>isolate from</Pattern>
@@ -1900,7 +1756,6 @@
     <Pattern>show United States Intelligence Community inwards</Pattern>
     <Pattern>show United States Intelligence Community past</Pattern>
     <Pattern>show United States Intelligence Community that</Pattern>
-    <Pattern>show as</Pattern>
     <Pattern>show assay by</Pattern>
     <Pattern>show assay in</Pattern>
     <Pattern>show assay inward</Pattern>
@@ -1926,23 +1781,12 @@
     <Pattern>show check inwards</Pattern>
     <Pattern>show check past</Pattern>
     <Pattern>show check that</Pattern>
-    <Pattern>show cholesterin as</Pattern>
-    <Pattern>show cholesterin equally</Pattern>
-    <Pattern>show cholesterin every bit</Pattern>
-    <Pattern>show cholesterin for</Pattern>
-    <Pattern>show cholesterol as</Pattern>
-    <Pattern>show cholesterol equally</Pattern>
-    <Pattern>show cholesterol every bit</Pattern>
-    <Pattern>show cholesterol for</Pattern>
-    <Pattern>show equally</Pattern>
-    <Pattern>show every bit</Pattern>
     <Pattern>show followed by</Pattern>
     <Pattern>show followed in</Pattern>
     <Pattern>show followed inward</Pattern>
     <Pattern>show followed inwards</Pattern>
     <Pattern>show followed past</Pattern>
     <Pattern>show followed that</Pattern>
-    <Pattern>show for</Pattern>
     <Pattern>show found by</Pattern>
     <Pattern>show found in</Pattern>
     <Pattern>show found inward</Pattern>
@@ -1965,10 +1809,6 @@
     <Pattern>show malignant neoplastic disease inwards</Pattern>
     <Pattern>show malignant neoplastic disease past</Pattern>
     <Pattern>show malignant neoplastic disease that</Pattern>
-    <Pattern>show neoplasm as</Pattern>
-    <Pattern>show neoplasm equally</Pattern>
-    <Pattern>show neoplasm every bit</Pattern>
-    <Pattern>show neoplasm for</Pattern>
     <Pattern>show observed by</Pattern>
     <Pattern>show observed from</Pattern>
     <Pattern>show observed in</Pattern>
@@ -1982,18 +1822,6 @@
     <Pattern>show our inwards</Pattern>
     <Pattern>show our past</Pattern>
     <Pattern>show past</Pattern>
-    <Pattern>show potency as</Pattern>
-    <Pattern>show potency equally</Pattern>
-    <Pattern>show potency every bit</Pattern>
-    <Pattern>show potency for</Pattern>
-    <Pattern>show potential as</Pattern>
-    <Pattern>show potential equally</Pattern>
-    <Pattern>show potential every bit</Pattern>
-    <Pattern>show potential for</Pattern>
-    <Pattern>show potentiality as</Pattern>
-    <Pattern>show potentiality equally</Pattern>
-    <Pattern>show potentiality every bit</Pattern>
-    <Pattern>show potentiality for</Pattern>
     <Pattern>show seen by</Pattern>
     <Pattern>show seen from</Pattern>
     <Pattern>show seen in</Pattern>
@@ -2013,14 +1841,6 @@
     <Pattern>show synopsized past</Pattern>
     <Pattern>show synopsized that</Pattern>
     <Pattern>show that</Pattern>
-    <Pattern>show tumor as</Pattern>
-    <Pattern>show tumor equally</Pattern>
-    <Pattern>show tumor every bit</Pattern>
-    <Pattern>show tumor for</Pattern>
-    <Pattern>show tumour as</Pattern>
-    <Pattern>show tumour equally</Pattern>
-    <Pattern>show tumour every bit</Pattern>
-    <Pattern>show tumour for</Pattern>
     <Pattern>showed</Pattern>
     <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
     <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
@@ -2052,7 +1872,6 @@
     <Pattern>showed United States Intelligence Community inwards</Pattern>
     <Pattern>showed United States Intelligence Community past</Pattern>
     <Pattern>showed United States Intelligence Community that</Pattern>
-    <Pattern>showed as</Pattern>
     <Pattern>showed assay by</Pattern>
     <Pattern>showed assay in</Pattern>
     <Pattern>showed assay inward</Pattern>
@@ -2078,23 +1897,12 @@
     <Pattern>showed check inwards</Pattern>
     <Pattern>showed check past</Pattern>
     <Pattern>showed check that</Pattern>
-    <Pattern>showed cholesterin as</Pattern>
-    <Pattern>showed cholesterin equally</Pattern>
-    <Pattern>showed cholesterin every bit</Pattern>
-    <Pattern>showed cholesterin for</Pattern>
-    <Pattern>showed cholesterol as</Pattern>
-    <Pattern>showed cholesterol equally</Pattern>
-    <Pattern>showed cholesterol every bit</Pattern>
-    <Pattern>showed cholesterol for</Pattern>
-    <Pattern>showed equally</Pattern>
-    <Pattern>showed every bit</Pattern>
     <Pattern>showed followed by</Pattern>
     <Pattern>showed followed in</Pattern>
     <Pattern>showed followed inward</Pattern>
     <Pattern>showed followed inwards</Pattern>
     <Pattern>showed followed past</Pattern>
     <Pattern>showed followed that</Pattern>
-    <Pattern>showed for</Pattern>
     <Pattern>showed found by</Pattern>
     <Pattern>showed found in</Pattern>
     <Pattern>showed found inward</Pattern>
@@ -2117,10 +1925,6 @@
     <Pattern>showed malignant neoplastic disease inwards</Pattern>
     <Pattern>showed malignant neoplastic disease past</Pattern>
     <Pattern>showed malignant neoplastic disease that</Pattern>
-    <Pattern>showed neoplasm as</Pattern>
-    <Pattern>showed neoplasm equally</Pattern>
-    <Pattern>showed neoplasm every bit</Pattern>
-    <Pattern>showed neoplasm for</Pattern>
     <Pattern>showed observed by</Pattern>
     <Pattern>showed observed from</Pattern>
     <Pattern>showed observed in</Pattern>
@@ -2134,18 +1938,6 @@
     <Pattern>showed our inwards</Pattern>
     <Pattern>showed our past</Pattern>
     <Pattern>showed past</Pattern>
-    <Pattern>showed potency as</Pattern>
-    <Pattern>showed potency equally</Pattern>
-    <Pattern>showed potency every bit</Pattern>
-    <Pattern>showed potency for</Pattern>
-    <Pattern>showed potential as</Pattern>
-    <Pattern>showed potential equally</Pattern>
-    <Pattern>showed potential every bit</Pattern>
-    <Pattern>showed potential for</Pattern>
-    <Pattern>showed potentiality as</Pattern>
-    <Pattern>showed potentiality equally</Pattern>
-    <Pattern>showed potentiality every bit</Pattern>
-    <Pattern>showed potentiality for</Pattern>
     <Pattern>showed seen by</Pattern>
     <Pattern>showed seen from</Pattern>
     <Pattern>showed seen in</Pattern>
@@ -2165,88 +1957,7 @@
     <Pattern>showed synopsized past</Pattern>
     <Pattern>showed synopsized that</Pattern>
     <Pattern>showed that</Pattern>
-    <Pattern>showed tumor as</Pattern>
-    <Pattern>showed tumor equally</Pattern>
-    <Pattern>showed tumor every bit</Pattern>
-    <Pattern>showed tumor for</Pattern>
-    <Pattern>showed tumour as</Pattern>
-    <Pattern>showed tumour equally</Pattern>
-    <Pattern>showed tumour every bit</Pattern>
-    <Pattern>showed tumour for</Pattern>
     <Pattern>suppress</Pattern>
-    <Pattern>suppress as</Pattern>
-    <Pattern>suppress cholesterin as</Pattern>
-    <Pattern>suppress cholesterin equally</Pattern>
-    <Pattern>suppress cholesterin every bit</Pattern>
-    <Pattern>suppress cholesterin for</Pattern>
-    <Pattern>suppress cholesterol as</Pattern>
-    <Pattern>suppress cholesterol equally</Pattern>
-    <Pattern>suppress cholesterol every bit</Pattern>
-    <Pattern>suppress cholesterol for</Pattern>
-    <Pattern>suppress equally</Pattern>
-    <Pattern>suppress every bit</Pattern>
-    <Pattern>suppress for</Pattern>
-    <Pattern>suppress neoplasm as</Pattern>
-    <Pattern>suppress neoplasm equally</Pattern>
-    <Pattern>suppress neoplasm every bit</Pattern>
-    <Pattern>suppress neoplasm for</Pattern>
-    <Pattern>suppress potency as</Pattern>
-    <Pattern>suppress potency equally</Pattern>
-    <Pattern>suppress potency every bit</Pattern>
-    <Pattern>suppress potency for</Pattern>
-    <Pattern>suppress potential as</Pattern>
-    <Pattern>suppress potential equally</Pattern>
-    <Pattern>suppress potential every bit</Pattern>
-    <Pattern>suppress potential for</Pattern>
-    <Pattern>suppress potentiality as</Pattern>
-    <Pattern>suppress potentiality equally</Pattern>
-    <Pattern>suppress potentiality every bit</Pattern>
-    <Pattern>suppress potentiality for</Pattern>
-    <Pattern>suppress tumor as</Pattern>
-    <Pattern>suppress tumor equally</Pattern>
-    <Pattern>suppress tumor every bit</Pattern>
-    <Pattern>suppress tumor for</Pattern>
-    <Pattern>suppress tumour as</Pattern>
-    <Pattern>suppress tumour equally</Pattern>
-    <Pattern>suppress tumour every bit</Pattern>
-    <Pattern>suppress tumour for</Pattern>
-    <Pattern>suppressed</Pattern>
-    <Pattern>suppressed as</Pattern>
-    <Pattern>suppressed cholesterin as</Pattern>
-    <Pattern>suppressed cholesterin equally</Pattern>
-    <Pattern>suppressed cholesterin every bit</Pattern>
-    <Pattern>suppressed cholesterin for</Pattern>
-    <Pattern>suppressed cholesterol as</Pattern>
-    <Pattern>suppressed cholesterol equally</Pattern>
-    <Pattern>suppressed cholesterol every bit</Pattern>
-    <Pattern>suppressed cholesterol for</Pattern>
-    <Pattern>suppressed equally</Pattern>
-    <Pattern>suppressed every bit</Pattern>
-    <Pattern>suppressed for</Pattern>
-    <Pattern>suppressed neoplasm as</Pattern>
-    <Pattern>suppressed neoplasm equally</Pattern>
-    <Pattern>suppressed neoplasm every bit</Pattern>
-    <Pattern>suppressed neoplasm for</Pattern>
-    <Pattern>suppressed potency as</Pattern>
-    <Pattern>suppressed potency equally</Pattern>
-    <Pattern>suppressed potency every bit</Pattern>
-    <Pattern>suppressed potency for</Pattern>
-    <Pattern>suppressed potential as</Pattern>
-    <Pattern>suppressed potential equally</Pattern>
-    <Pattern>suppressed potential every bit</Pattern>
-    <Pattern>suppressed potential for</Pattern>
-    <Pattern>suppressed potentiality as</Pattern>
-    <Pattern>suppressed potentiality equally</Pattern>
-    <Pattern>suppressed potentiality every bit</Pattern>
-    <Pattern>suppressed potentiality for</Pattern>
-    <Pattern>suppressed tumor as</Pattern>
-    <Pattern>suppressed tumor equally</Pattern>
-    <Pattern>suppressed tumor every bit</Pattern>
-    <Pattern>suppressed tumor for</Pattern>
-    <Pattern>suppressed tumour as</Pattern>
-    <Pattern>suppressed tumour equally</Pattern>
-    <Pattern>suppressed tumour every bit</Pattern>
-    <Pattern>suppressed tumour for</Pattern>
     <Pattern>synopsized</Pattern>
     <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
     <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
@@ -2692,7 +2403,6 @@
     <Pattern>was United States Intelligence Community inwards</Pattern>
     <Pattern>was United States Intelligence Community past</Pattern>
     <Pattern>was United States Intelligence Community that</Pattern>
-    <Pattern>was as</Pattern>
     <Pattern>was assay by</Pattern>
     <Pattern>was assay in</Pattern>
     <Pattern>was assay inward</Pattern>
@@ -2718,23 +2428,12 @@
     <Pattern>was check inwards</Pattern>
     <Pattern>was check past</Pattern>
     <Pattern>was check that</Pattern>
-    <Pattern>was cholesterin as</Pattern>
-    <Pattern>was cholesterin equally</Pattern>
-    <Pattern>was cholesterin every bit</Pattern>
-    <Pattern>was cholesterin for</Pattern>
-    <Pattern>was cholesterol as</Pattern>
-    <Pattern>was cholesterol equally</Pattern>
-    <Pattern>was cholesterol every bit</Pattern>
-    <Pattern>was cholesterol for</Pattern>
-    <Pattern>was equally</Pattern>
-    <Pattern>was every bit</Pattern>
     <Pattern>was followed by</Pattern>
     <Pattern>was followed in</Pattern>
     <Pattern>was followed inward</Pattern>
     <Pattern>was followed inwards</Pattern>
     <Pattern>was followed past</Pattern>
     <Pattern>was followed that</Pattern>
-    <Pattern>was for</Pattern>
     <Pattern>was found by</Pattern>
     <Pattern>was found in</Pattern>
     <Pattern>was found inward</Pattern>
@@ -2757,10 +2456,6 @@
     <Pattern>was malignant neoplastic disease inwards</Pattern>
     <Pattern>was malignant neoplastic disease past</Pattern>
     <Pattern>was malignant neoplastic disease that</Pattern>
-    <Pattern>was neoplasm as</Pattern>
-    <Pattern>was neoplasm equally</Pattern>
-    <Pattern>was neoplasm every bit</Pattern>
-    <Pattern>was neoplasm for</Pattern>
     <Pattern>was observed by</Pattern>
     <Pattern>was observed from</Pattern>
     <Pattern>was observed in</Pattern>
@@ -2774,18 +2469,6 @@
     <Pattern>was our inwards</Pattern>
     <Pattern>was our past</Pattern>
     <Pattern>was past</Pattern>
-    <Pattern>was potency as</Pattern>
-    <Pattern>was potency equally</Pattern>
-    <Pattern>was potency every bit</Pattern>
-    <Pattern>was potency for</Pattern>
-    <Pattern>was potential as</Pattern>
-    <Pattern>was potential equally</Pattern>
-    <Pattern>was potential every bit</Pattern>
-    <Pattern>was potential for</Pattern>
-    <Pattern>was potentiality as</Pattern>
-    <Pattern>was potentiality equally</Pattern>
-    <Pattern>was potentiality every bit</Pattern>
-    <Pattern>was potentiality for</Pattern>
     <Pattern>was seen by</Pattern>
     <Pattern>was seen from</Pattern>
     <Pattern>was seen in</Pattern>
@@ -2805,14 +2488,6 @@
     <Pattern>was synopsized past</Pattern>
     <Pattern>was synopsized that</Pattern>
     <Pattern>was that</Pattern>
-    <Pattern>was tumor as</Pattern>
-    <Pattern>was tumor equally</Pattern>
-    <Pattern>was tumor every bit</Pattern>
-    <Pattern>was tumor for</Pattern>
-    <Pattern>was tumour as</Pattern>
-    <Pattern>was tumour equally</Pattern>
-    <Pattern>was tumour every bit</Pattern>
-    <Pattern>was tumour for</Pattern>
     <Pattern>were</Pattern>
     <Pattern>were by</Pattern>
     <Pattern>were from</Pattern>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Compound<Name>triglycerides</Name>
+  </Tag1>
+  <Tag2>CellLine<Name>ht29</Name>
+    <Name>ht-29</Name>
+    <Name>nci-h226</Name>
+    <Name>hct-116</Name>
+    <Name>b-cell</Name>
+    <Name>hl60</Name>
+    <Name>rpmi</Name>
+    <Name>mcf-7</Name>
+    <Name>hdfn</Name>
+    <Name>mcf7</Name>
+    <Name>hct-15</Name>
+    <Name>du-145</Name>
+    <Name>hct116</Name>
+    <Name>colo 320</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>account for</Pattern>
+    <Pattern>activated</Pattern>
+    <Pattern>associated with</Pattern>
+    <Pattern>evaluated</Pattern>
+    <Pattern>evaluated for</Pattern>
+    <Pattern>followed by</Pattern>
+    <Pattern>found that</Pattern>
+    <Pattern>found to</Pattern>
+    <Pattern>induced apoptosis in</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>leaves</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>observed in</Pattern>
+    <Pattern>ranging from</Pattern>
+    <Pattern>reported that</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>responded moderately to</Pattern>
+    <Pattern>resulted in</Pattern>
+    <Pattern>revealed that</Pattern>
+    <Pattern>solated from</Pattern>
+    <Pattern>tested</Pattern>
+    <Pattern>tested on</Pattern>
+    <Pattern>treated with</Pattern>
+    <Pattern>trypsinized with</Pattern>
+    <Pattern>was found that</Pattern>
+    <Pattern>was found to</Pattern>
+    <Pattern>was observed in</Pattern>
+    <Pattern>was reported that</Pattern>
+    <Pattern>was reported to</Pattern>
+    <Pattern>was tested on</Pattern>
+    <Pattern>were evaluated for</Pattern>
+    <Pattern>were highest against</Pattern>
+    <Pattern>were lower than</Pattern>
+  </Relation>
+</Seed>

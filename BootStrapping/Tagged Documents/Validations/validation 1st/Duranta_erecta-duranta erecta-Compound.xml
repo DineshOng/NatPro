@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>duranta erecta</Name>
+  </Tag1>
+  <Tag2>Compound<Name>lamiide</Name>
+    <Name>dichloromethane</Name>
+    <Name>oleanolic acid</Name>
+    <Name>lamiidoside</Name>
+    <Name>glucosides</Name>
+    <Name>verbascoside</Name>
+    <Name>beta-amyrin</Name>
+    <Name>duranterectosides a</Name>
+    <Name>durantosides i</Name>
+    <Name>triacylglycerols</Name>
+    <Name>duranterectosides b</Name>
+    <Name>alpha-amyrin</Name>
+    <Name>duranterectosides c</Name>
+    <Name>duranterectosides d</Name>
+    <Name>durantosides ii</Name>
+    <Name>phytyl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>has led to</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>aleurites moluccana</Name>
+  </Tag1>
+  <Tag2>Location<Name>usa</Name>
+    <Name>southeast asia</Name>
+    <Name>coden</Name>
+    <Name>cavite</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>known as</Pattern>
+    <Pattern>stored at</Pattern>
+  </Relation>
+</Seed>

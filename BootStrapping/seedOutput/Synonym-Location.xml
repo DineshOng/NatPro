@@ -619,8 +619,6 @@
     <Pattern>are in</Pattern>
     <Pattern>are inward</Pattern>
     <Pattern>are inwards</Pattern>
-    <Pattern>are labor along</Pattern>
-    <Pattern>are labor on</Pattern>
     <Pattern>are nanogram from</Pattern>
     <Pattern>are nanogram to</Pattern>
     <Pattern>are ng from</Pattern>
@@ -638,14 +636,8 @@
     <Pattern>are prestoblue inward</Pattern>
     <Pattern>are prestoblue inwards</Pattern>
     <Pattern>are prestoblue on</Pattern>
-    <Pattern>are profile along</Pattern>
-    <Pattern>are profile on</Pattern>
-    <Pattern>are project along</Pattern>
-    <Pattern>are project on</Pattern>
     <Pattern>are species from</Pattern>
     <Pattern>are species to</Pattern>
-    <Pattern>are task along</Pattern>
-    <Pattern>are task on</Pattern>
     <Pattern>are tested along</Pattern>
     <Pattern>are tested as</Pattern>
     <Pattern>are tested at</Pattern>
@@ -657,8 +649,6 @@
     <Pattern>are tested inwards</Pattern>
     <Pattern>are tested on</Pattern>
     <Pattern>are to</Pattern>
-    <Pattern>are undertaking along</Pattern>
-    <Pattern>are undertaking on</Pattern>
     <Pattern>authenticate</Pattern>
     <Pattern>authenticate at</Pattern>
     <Pattern>authenticate authenticated at</Pattern>
@@ -815,9 +805,6 @@
     <Pattern>be collected equally</Pattern>
     <Pattern>be collected every bit</Pattern>
     <Pattern>be collected from</Pattern>
-    <Pattern>be collected in</Pattern>
-    <Pattern>be collected inward</Pattern>
-    <Pattern>be collected inwards</Pattern>
     <Pattern>be collected through</Pattern>
     <Pattern>be collected to</Pattern>
     <Pattern>be cubic decimeter from</Pattern>
@@ -925,8 +912,6 @@
     <Pattern>be ira inwards</Pattern>
     <Pattern>be l from</Pattern>
     <Pattern>be l. from</Pattern>
-    <Pattern>be labor along</Pattern>
-    <Pattern>be labor on</Pattern>
     <Pattern>be liter from</Pattern>
     <Pattern>be litre from</Pattern>
     <Pattern>be malignant neoplastic disease along</Pattern>
@@ -967,14 +952,7 @@
     <Pattern>be procured in</Pattern>
     <Pattern>be procured inward</Pattern>
     <Pattern>be procured inwards</Pattern>
-    <Pattern>be profile along</Pattern>
-    <Pattern>be profile on</Pattern>
-    <Pattern>be project along</Pattern>
-    <Pattern>be project on</Pattern>
     <Pattern>be ragasa from</Pattern>
-    <Pattern>be recorded in</Pattern>
-    <Pattern>be recorded inward</Pattern>
-    <Pattern>be recorded inwards</Pattern>
     <Pattern>be reported at</Pattern>
     <Pattern>be reported end-to-end</Pattern>
     <Pattern>be reported throughout</Pattern>
@@ -1043,15 +1021,10 @@
     <Pattern>be tan that</Pattern>
     <Pattern>be tan to</Pattern>
     <Pattern>be tan with</Pattern>
-    <Pattern>be tan1 as</Pattern>
-    <Pattern>be tan1 equally</Pattern>
-    <Pattern>be tan1 every bit</Pattern>
     <Pattern>be tan1 from</Pattern>
     <Pattern>be tan1 in</Pattern>
     <Pattern>be tan1 inward</Pattern>
     <Pattern>be tan1 inwards</Pattern>
-    <Pattern>be task along</Pattern>
-    <Pattern>be task on</Pattern>
     <Pattern>be tested along</Pattern>
     <Pattern>be tested as</Pattern>
     <Pattern>be tested at</Pattern>
@@ -1070,8 +1043,6 @@
     <Pattern>be through</Pattern>
     <Pattern>be throughout</Pattern>
     <Pattern>be to</Pattern>
-    <Pattern>be undertaking along</Pattern>
-    <Pattern>be undertaking on</Pattern>
     <Pattern>be used along</Pattern>
     <Pattern>be used as</Pattern>
     <Pattern>be used equally</Pattern>
@@ -1444,9 +1415,6 @@
     <Pattern>collected collected equally</Pattern>
     <Pattern>collected collected every bit</Pattern>
     <Pattern>collected collected from</Pattern>
-    <Pattern>collected collected in</Pattern>
-    <Pattern>collected collected inward</Pattern>
-    <Pattern>collected collected inwards</Pattern>
     <Pattern>collected collected through</Pattern>
     <Pattern>collected collected to</Pattern>
     <Pattern>collected cubic decimeter from</Pattern>
@@ -1457,9 +1425,6 @@
     <Pattern>collected every bit</Pattern>
     <Pattern>collected fom from</Pattern>
     <Pattern>collected from</Pattern>
-    <Pattern>collected in</Pattern>
-    <Pattern>collected inward</Pattern>
-    <Pattern>collected inwards</Pattern>
     <Pattern>collected l from</Pattern>
     <Pattern>collected l. from</Pattern>
     <Pattern>collected liter from</Pattern>
@@ -4102,50 +4067,11 @@
     <Pattern>grown tan1 inwards</Pattern>
     <Pattern>grows</Pattern>
     <Pattern>grows as</Pattern>
-    <Pattern>grows burn as</Pattern>
-    <Pattern>grows burn equally</Pattern>
-    <Pattern>grows burn every bit</Pattern>
-    <Pattern>grows burn in</Pattern>
-    <Pattern>grows burn inward</Pattern>
-    <Pattern>grows burn inwards</Pattern>
     <Pattern>grows equally</Pattern>
     <Pattern>grows every bit</Pattern>
     <Pattern>grows in</Pattern>
     <Pattern>grows inward</Pattern>
     <Pattern>grows inwards</Pattern>
-    <Pattern>grows sunburn as</Pattern>
-    <Pattern>grows sunburn equally</Pattern>
-    <Pattern>grows sunburn every bit</Pattern>
-    <Pattern>grows sunburn in</Pattern>
-    <Pattern>grows sunburn inward</Pattern>
-    <Pattern>grows sunburn inwards</Pattern>
-    <Pattern>grows suntan as</Pattern>
-    <Pattern>grows suntan equally</Pattern>
-    <Pattern>grows suntan every bit</Pattern>
-    <Pattern>grows suntan in</Pattern>
-    <Pattern>grows suntan inward</Pattern>
-    <Pattern>grows suntan inwards</Pattern>
-    <Pattern>grows tan as</Pattern>
-    <Pattern>grows tan equally</Pattern>
-    <Pattern>grows tan every bit</Pattern>
-    <Pattern>grows tan in</Pattern>
-    <Pattern>grows tan inward</Pattern>
-    <Pattern>grows tan inwards</Pattern>
-    <Pattern>grows tan1 as</Pattern>
-    <Pattern>grows tan1 equally</Pattern>
-    <Pattern>grows tan1 every bit</Pattern>
-    <Pattern>grows tan1 in</Pattern>
-    <Pattern>grows tan1 inward</Pattern>
-    <Pattern>grows tan1 inwards</Pattern>
-    <Pattern>happen</Pattern>
-    <Pattern>happen collected from</Pattern>
-    <Pattern>happen collected in</Pattern>
-    <Pattern>happen collected inward</Pattern>
-    <Pattern>happen collected inwards</Pattern>
-    <Pattern>happen from</Pattern>
-    <Pattern>happen in</Pattern>
-    <Pattern>happen inward</Pattern>
-    <Pattern>happen inwards</Pattern>
     <Pattern>harvested</Pattern>
     <Pattern>harvested IRA from</Pattern>
     <Pattern>harvested IRA in</Pattern>
@@ -4893,32 +4819,6 @@
     <Pattern>immortalized values to</Pattern>
     <Pattern>immortalized values with</Pattern>
     <Pattern>immortalized with</Pattern>
-    <Pattern>include</Pattern>
-    <Pattern>include along</Pattern>
-    <Pattern>include labor along</Pattern>
-    <Pattern>include labor on</Pattern>
-    <Pattern>include on</Pattern>
-    <Pattern>include profile along</Pattern>
-    <Pattern>include profile on</Pattern>
-    <Pattern>include project along</Pattern>
-    <Pattern>include project on</Pattern>
-    <Pattern>include task along</Pattern>
-    <Pattern>include task on</Pattern>
-    <Pattern>include undertaking along</Pattern>
-    <Pattern>include undertaking on</Pattern>
-    <Pattern>including</Pattern>
-    <Pattern>including along</Pattern>
-    <Pattern>including labor along</Pattern>
-    <Pattern>including labor on</Pattern>
-    <Pattern>including on</Pattern>
-    <Pattern>including profile along</Pattern>
-    <Pattern>including profile on</Pattern>
-    <Pattern>including project along</Pattern>
-    <Pattern>including project on</Pattern>
-    <Pattern>including task along</Pattern>
-    <Pattern>including task on</Pattern>
-    <Pattern>including undertaking along</Pattern>
-    <Pattern>including undertaking on</Pattern>
     <Pattern>indicate</Pattern>
     <Pattern>indicate as</Pattern>
     <Pattern>indicate cultivated as</Pattern>
@@ -5031,9 +4931,6 @@
     <Pattern>is been end-to-end</Pattern>
     <Pattern>is been throughout</Pattern>
     <Pattern>is been to</Pattern>
-    <Pattern>is burn as</Pattern>
-    <Pattern>is burn equally</Pattern>
-    <Pattern>is burn every bit</Pattern>
     <Pattern>is burn from</Pattern>
     <Pattern>is burn in</Pattern>
     <Pattern>is burn inward</Pattern>
@@ -5043,9 +4940,6 @@
     <Pattern>is collected equally</Pattern>
     <Pattern>is collected every bit</Pattern>
     <Pattern>is collected from</Pattern>
-    <Pattern>is collected in</Pattern>
-    <Pattern>is collected inward</Pattern>
-    <Pattern>is collected inwards</Pattern>
     <Pattern>is collected through</Pattern>
     <Pattern>is collected to</Pattern>
     <Pattern>is cubic decimeter from</Pattern>
@@ -5131,9 +5025,6 @@
     <Pattern>is procured inward</Pattern>
     <Pattern>is procured inwards</Pattern>
     <Pattern>is ragasa from</Pattern>
-    <Pattern>is recorded in</Pattern>
-    <Pattern>is recorded inward</Pattern>
-    <Pattern>is recorded inwards</Pattern>
     <Pattern>is reported at</Pattern>
     <Pattern>is reported end-to-end</Pattern>
     <Pattern>is reported throughout</Pattern>
@@ -5150,30 +5041,18 @@
     <Pattern>is squalene that</Pattern>
     <Pattern>is squalene to</Pattern>
     <Pattern>is st. from</Pattern>
-    <Pattern>is sunburn as</Pattern>
-    <Pattern>is sunburn equally</Pattern>
-    <Pattern>is sunburn every bit</Pattern>
     <Pattern>is sunburn from</Pattern>
     <Pattern>is sunburn in</Pattern>
     <Pattern>is sunburn inward</Pattern>
     <Pattern>is sunburn inwards</Pattern>
-    <Pattern>is suntan as</Pattern>
-    <Pattern>is suntan equally</Pattern>
-    <Pattern>is suntan every bit</Pattern>
     <Pattern>is suntan from</Pattern>
     <Pattern>is suntan in</Pattern>
     <Pattern>is suntan inward</Pattern>
     <Pattern>is suntan inwards</Pattern>
-    <Pattern>is tan as</Pattern>
-    <Pattern>is tan equally</Pattern>
-    <Pattern>is tan every bit</Pattern>
     <Pattern>is tan from</Pattern>
     <Pattern>is tan in</Pattern>
     <Pattern>is tan inward</Pattern>
     <Pattern>is tan inwards</Pattern>
-    <Pattern>is tan1 as</Pattern>
-    <Pattern>is tan1 equally</Pattern>
-    <Pattern>is tan1 every bit</Pattern>
     <Pattern>is tan1 from</Pattern>
     <Pattern>is tan1 in</Pattern>
     <Pattern>is tan1 inward</Pattern>
@@ -5393,12 +5272,6 @@
     <Pattern>know along</Pattern>
     <Pattern>know as</Pattern>
     <Pattern>know at</Pattern>
-    <Pattern>know burn as</Pattern>
-    <Pattern>know burn equally</Pattern>
-    <Pattern>know burn every bit</Pattern>
-    <Pattern>know burn in</Pattern>
-    <Pattern>know burn inward</Pattern>
-    <Pattern>know burn inwards</Pattern>
     <Pattern>know collected as</Pattern>
     <Pattern>know collected equally</Pattern>
     <Pattern>know collected every bit</Pattern>
@@ -5441,30 +5314,6 @@
     <Pattern>know prestoblue inward</Pattern>
     <Pattern>know prestoblue inwards</Pattern>
     <Pattern>know prestoblue on</Pattern>
-    <Pattern>know sunburn as</Pattern>
-    <Pattern>know sunburn equally</Pattern>
-    <Pattern>know sunburn every bit</Pattern>
-    <Pattern>know sunburn in</Pattern>
-    <Pattern>know sunburn inward</Pattern>
-    <Pattern>know sunburn inwards</Pattern>
-    <Pattern>know suntan as</Pattern>
-    <Pattern>know suntan equally</Pattern>
-    <Pattern>know suntan every bit</Pattern>
-    <Pattern>know suntan in</Pattern>
-    <Pattern>know suntan inward</Pattern>
-    <Pattern>know suntan inwards</Pattern>
-    <Pattern>know tan as</Pattern>
-    <Pattern>know tan equally</Pattern>
-    <Pattern>know tan every bit</Pattern>
-    <Pattern>know tan in</Pattern>
-    <Pattern>know tan inward</Pattern>
-    <Pattern>know tan inwards</Pattern>
-    <Pattern>know tan1 as</Pattern>
-    <Pattern>know tan1 equally</Pattern>
-    <Pattern>know tan1 every bit</Pattern>
-    <Pattern>know tan1 in</Pattern>
-    <Pattern>know tan1 inward</Pattern>
-    <Pattern>know tan1 inwards</Pattern>
     <Pattern>know tested along</Pattern>
     <Pattern>know tested as</Pattern>
     <Pattern>know tested at</Pattern>
@@ -5476,17 +5325,10 @@
     <Pattern>know tested inwards</Pattern>
     <Pattern>know tested on</Pattern>
     <Pattern>know through</Pattern>
-    <Pattern>know to</Pattern>
     <Pattern>known</Pattern>
     <Pattern>known along</Pattern>
     <Pattern>known as</Pattern>
     <Pattern>known at</Pattern>
-    <Pattern>known burn as</Pattern>
-    <Pattern>known burn equally</Pattern>
-    <Pattern>known burn every bit</Pattern>
-    <Pattern>known burn in</Pattern>
-    <Pattern>known burn inward</Pattern>
-    <Pattern>known burn inwards</Pattern>
     <Pattern>known collected as</Pattern>
     <Pattern>known collected equally</Pattern>
     <Pattern>known collected every bit</Pattern>
@@ -5529,30 +5371,6 @@
     <Pattern>known prestoblue inward</Pattern>
     <Pattern>known prestoblue inwards</Pattern>
     <Pattern>known prestoblue on</Pattern>
-    <Pattern>known sunburn as</Pattern>
-    <Pattern>known sunburn equally</Pattern>
-    <Pattern>known sunburn every bit</Pattern>
-    <Pattern>known sunburn in</Pattern>
-    <Pattern>known sunburn inward</Pattern>
-    <Pattern>known sunburn inwards</Pattern>
-    <Pattern>known suntan as</Pattern>
-    <Pattern>known suntan equally</Pattern>
-    <Pattern>known suntan every bit</Pattern>
-    <Pattern>known suntan in</Pattern>
-    <Pattern>known suntan inward</Pattern>
-    <Pattern>known suntan inwards</Pattern>
-    <Pattern>known tan as</Pattern>
-    <Pattern>known tan equally</Pattern>
-    <Pattern>known tan every bit</Pattern>
-    <Pattern>known tan in</Pattern>
-    <Pattern>known tan inward</Pattern>
-    <Pattern>known tan inwards</Pattern>
-    <Pattern>known tan1 as</Pattern>
-    <Pattern>known tan1 equally</Pattern>
-    <Pattern>known tan1 every bit</Pattern>
-    <Pattern>known tan1 in</Pattern>
-    <Pattern>known tan1 inward</Pattern>
-    <Pattern>known tan1 inwards</Pattern>
     <Pattern>known tested along</Pattern>
     <Pattern>known tested as</Pattern>
     <Pattern>known tested at</Pattern>
@@ -5564,7 +5382,6 @@
     <Pattern>known tested inwards</Pattern>
     <Pattern>known tested on</Pattern>
     <Pattern>known through</Pattern>
-    <Pattern>known to</Pattern>
     <Pattern>leave</Pattern>
     <Pattern>leave collected from</Pattern>
     <Pattern>leave from</Pattern>
@@ -6410,15 +6227,6 @@
     <Pattern>note squalene to</Pattern>
     <Pattern>note that</Pattern>
     <Pattern>note to</Pattern>
-    <Pattern>occurs</Pattern>
-    <Pattern>occurs collected from</Pattern>
-    <Pattern>occurs collected in</Pattern>
-    <Pattern>occurs collected inward</Pattern>
-    <Pattern>occurs collected inwards</Pattern>
-    <Pattern>occurs from</Pattern>
-    <Pattern>occurs in</Pattern>
-    <Pattern>occurs inward</Pattern>
-    <Pattern>occurs inwards</Pattern>
     <Pattern>originate</Pattern>
     <Pattern>originate collected from</Pattern>
     <Pattern>originate cubic decimeter from</Pattern>
@@ -6443,13 +6251,6 @@
     <Pattern>originated litre from</Pattern>
     <Pattern>originated ragasa from</Pattern>
     <Pattern>originated st. from</Pattern>
-    <Pattern>papua</Pattern>
-    <Pattern>papua in</Pattern>
-    <Pattern>papua inward</Pattern>
-    <Pattern>papua inwards</Pattern>
-    <Pattern>papua recorded in</Pattern>
-    <Pattern>papua recorded inward</Pattern>
-    <Pattern>papua recorded inwards</Pattern>
     <Pattern>possess</Pattern>
     <Pattern>possess Filipino at</Pattern>
     <Pattern>possess Filipino end-to-end</Pattern>
@@ -6862,32 +6663,6 @@
     <Pattern>purchased values to</Pattern>
     <Pattern>purchased values with</Pattern>
     <Pattern>purchased with</Pattern>
-    <Pattern>read</Pattern>
-    <Pattern>read along</Pattern>
-    <Pattern>read labor along</Pattern>
-    <Pattern>read labor on</Pattern>
-    <Pattern>read on</Pattern>
-    <Pattern>read profile along</Pattern>
-    <Pattern>read profile on</Pattern>
-    <Pattern>read project along</Pattern>
-    <Pattern>read project on</Pattern>
-    <Pattern>read task along</Pattern>
-    <Pattern>read task on</Pattern>
-    <Pattern>read undertaking along</Pattern>
-    <Pattern>read undertaking on</Pattern>
-    <Pattern>reads</Pattern>
-    <Pattern>reads along</Pattern>
-    <Pattern>reads labor along</Pattern>
-    <Pattern>reads labor on</Pattern>
-    <Pattern>reads on</Pattern>
-    <Pattern>reads profile along</Pattern>
-    <Pattern>reads profile on</Pattern>
-    <Pattern>reads project along</Pattern>
-    <Pattern>reads project on</Pattern>
-    <Pattern>reads task along</Pattern>
-    <Pattern>reads task on</Pattern>
-    <Pattern>reads undertaking along</Pattern>
-    <Pattern>reads undertaking on</Pattern>
     <Pattern>reap</Pattern>
     <Pattern>reap IRA from</Pattern>
     <Pattern>reap IRA in</Pattern>
@@ -6945,20 +6720,6 @@
     <Pattern>reap tan1 in</Pattern>
     <Pattern>reap tan1 inward</Pattern>
     <Pattern>reap tan1 inwards</Pattern>
-    <Pattern>record</Pattern>
-    <Pattern>record in</Pattern>
-    <Pattern>record inward</Pattern>
-    <Pattern>record inwards</Pattern>
-    <Pattern>record recorded in</Pattern>
-    <Pattern>record recorded inward</Pattern>
-    <Pattern>record recorded inwards</Pattern>
-    <Pattern>recorded</Pattern>
-    <Pattern>recorded in</Pattern>
-    <Pattern>recorded inward</Pattern>
-    <Pattern>recorded inwards</Pattern>
-    <Pattern>recorded recorded in</Pattern>
-    <Pattern>recorded recorded inward</Pattern>
-    <Pattern>recorded recorded inwards</Pattern>
     <Pattern>repens</Pattern>
     <Pattern>repens collected from</Pattern>
     <Pattern>repens cubic decimeter from</Pattern>
@@ -7377,9 +7138,6 @@
     <Pattern>roll up collected equally</Pattern>
     <Pattern>roll up collected every bit</Pattern>
     <Pattern>roll up collected from</Pattern>
-    <Pattern>roll up collected in</Pattern>
-    <Pattern>roll up collected inward</Pattern>
-    <Pattern>roll up collected inwards</Pattern>
     <Pattern>roll up collected through</Pattern>
     <Pattern>roll up collected to</Pattern>
     <Pattern>roll up cubic decimeter from</Pattern>
@@ -7390,9 +7148,6 @@
     <Pattern>roll up every bit</Pattern>
     <Pattern>roll up fom from</Pattern>
     <Pattern>roll up from</Pattern>
-    <Pattern>roll up in</Pattern>
-    <Pattern>roll up inward</Pattern>
-    <Pattern>roll up inwards</Pattern>
     <Pattern>roll up l from</Pattern>
     <Pattern>roll up l. from</Pattern>
     <Pattern>roll up liter from</Pattern>
@@ -7410,43 +7165,6 @@
     <Pattern>roll up through</Pattern>
     <Pattern>roll up to</Pattern>
     <Pattern>roll up were from</Pattern>
-    <Pattern>s</Pattern>
-    <Pattern>s as</Pattern>
-    <Pattern>s burn as</Pattern>
-    <Pattern>s burn equally</Pattern>
-    <Pattern>s burn every bit</Pattern>
-    <Pattern>s burn in</Pattern>
-    <Pattern>s burn inward</Pattern>
-    <Pattern>s burn inwards</Pattern>
-    <Pattern>s equally</Pattern>
-    <Pattern>s every bit</Pattern>
-    <Pattern>s in</Pattern>
-    <Pattern>s inward</Pattern>
-    <Pattern>s inwards</Pattern>
-    <Pattern>s sunburn as</Pattern>
-    <Pattern>s sunburn equally</Pattern>
-    <Pattern>s sunburn every bit</Pattern>
-    <Pattern>s sunburn in</Pattern>
-    <Pattern>s sunburn inward</Pattern>
-    <Pattern>s sunburn inwards</Pattern>
-    <Pattern>s suntan as</Pattern>
-    <Pattern>s suntan equally</Pattern>
-    <Pattern>s suntan every bit</Pattern>
-    <Pattern>s suntan in</Pattern>
-    <Pattern>s suntan inward</Pattern>
-    <Pattern>s suntan inwards</Pattern>
-    <Pattern>s tan as</Pattern>
-    <Pattern>s tan equally</Pattern>
-    <Pattern>s tan every bit</Pattern>
-    <Pattern>s tan in</Pattern>
-    <Pattern>s tan inward</Pattern>
-    <Pattern>s tan inwards</Pattern>
-    <Pattern>s tan1 as</Pattern>
-    <Pattern>s tan1 equally</Pattern>
-    <Pattern>s tan1 every bit</Pattern>
-    <Pattern>s tan1 in</Pattern>
-    <Pattern>s tan1 inward</Pattern>
-    <Pattern>s tan1 inwards</Pattern>
     <Pattern>s.</Pattern>
     <Pattern>s. 11 from</Pattern>
     <Pattern>s. 11 to</Pattern>
@@ -7760,19 +7478,6 @@
     <Pattern>s. values to</Pattern>
     <Pattern>s. values with</Pattern>
     <Pattern>s. with</Pattern>
-    <Pattern>see</Pattern>
-    <Pattern>see along</Pattern>
-    <Pattern>see labor along</Pattern>
-    <Pattern>see labor on</Pattern>
-    <Pattern>see on</Pattern>
-    <Pattern>see profile along</Pattern>
-    <Pattern>see profile on</Pattern>
-    <Pattern>see project along</Pattern>
-    <Pattern>see project on</Pattern>
-    <Pattern>see task along</Pattern>
-    <Pattern>see task on</Pattern>
-    <Pattern>see undertaking along</Pattern>
-    <Pattern>see undertaking on</Pattern>
     <Pattern>serve</Pattern>
     <Pattern>serve IC along</Pattern>
     <Pattern>serve IC as</Pattern>
@@ -8827,15 +8532,6 @@
     <Pattern>succeeding values to</Pattern>
     <Pattern>succeeding values with</Pattern>
     <Pattern>succeeding with</Pattern>
-    <Pattern>sur</Pattern>
-    <Pattern>sur collected from</Pattern>
-    <Pattern>sur collected in</Pattern>
-    <Pattern>sur collected inward</Pattern>
-    <Pattern>sur collected inwards</Pattern>
-    <Pattern>sur from</Pattern>
-    <Pattern>sur in</Pattern>
-    <Pattern>sur inward</Pattern>
-    <Pattern>sur inwards</Pattern>
     <Pattern>test</Pattern>
     <Pattern>test IC along</Pattern>
     <Pattern>test IC as</Pattern>
@@ -9948,9 +9644,6 @@
     <Pattern>turn Provos inward</Pattern>
     <Pattern>turn Provos inwards</Pattern>
     <Pattern>turn as</Pattern>
-    <Pattern>turn burn as</Pattern>
-    <Pattern>turn burn equally</Pattern>
-    <Pattern>turn burn every bit</Pattern>
     <Pattern>turn burn from</Pattern>
     <Pattern>turn burn in</Pattern>
     <Pattern>turn burn inward</Pattern>
@@ -9979,30 +9672,18 @@
     <Pattern>turn procured in</Pattern>
     <Pattern>turn procured inward</Pattern>
     <Pattern>turn procured inwards</Pattern>
-    <Pattern>turn sunburn as</Pattern>
-    <Pattern>turn sunburn equally</Pattern>
-    <Pattern>turn sunburn every bit</Pattern>
     <Pattern>turn sunburn from</Pattern>
     <Pattern>turn sunburn in</Pattern>
     <Pattern>turn sunburn inward</Pattern>
     <Pattern>turn sunburn inwards</Pattern>
-    <Pattern>turn suntan as</Pattern>
-    <Pattern>turn suntan equally</Pattern>
-    <Pattern>turn suntan every bit</Pattern>
     <Pattern>turn suntan from</Pattern>
     <Pattern>turn suntan in</Pattern>
     <Pattern>turn suntan inward</Pattern>
     <Pattern>turn suntan inwards</Pattern>
-    <Pattern>turn tan as</Pattern>
-    <Pattern>turn tan equally</Pattern>
-    <Pattern>turn tan every bit</Pattern>
     <Pattern>turn tan from</Pattern>
     <Pattern>turn tan in</Pattern>
     <Pattern>turn tan inward</Pattern>
     <Pattern>turn tan inwards</Pattern>
-    <Pattern>turn tan1 as</Pattern>
-    <Pattern>turn tan1 equally</Pattern>
-    <Pattern>turn tan1 every bit</Pattern>
     <Pattern>turn tan1 from</Pattern>
     <Pattern>turn tan1 in</Pattern>
     <Pattern>turn tan1 inward</Pattern>
@@ -10936,19 +10617,6 @@
     <Pattern>using tested inward</Pattern>
     <Pattern>using tested inwards</Pattern>
     <Pattern>using tested on</Pattern>
-    <Pattern>view</Pattern>
-    <Pattern>view along</Pattern>
-    <Pattern>view labor along</Pattern>
-    <Pattern>view labor on</Pattern>
-    <Pattern>view on</Pattern>
-    <Pattern>view profile along</Pattern>
-    <Pattern>view profile on</Pattern>
-    <Pattern>view project along</Pattern>
-    <Pattern>view project on</Pattern>
-    <Pattern>view task along</Pattern>
-    <Pattern>view task on</Pattern>
-    <Pattern>view undertaking along</Pattern>
-    <Pattern>view undertaking on</Pattern>
     <Pattern>was</Pattern>
     <Pattern>was IC along</Pattern>
     <Pattern>was IC as</Pattern>
@@ -11180,9 +10848,6 @@
     <Pattern>was procured in</Pattern>
     <Pattern>was procured inward</Pattern>
     <Pattern>was procured inwards</Pattern>
-    <Pattern>was recorded in</Pattern>
-    <Pattern>was recorded inward</Pattern>
-    <Pattern>was recorded inwards</Pattern>
     <Pattern>was served along</Pattern>
     <Pattern>was served as</Pattern>
     <Pattern>was served equally</Pattern>
@@ -11424,9 +11089,6 @@
     <Pattern>were collected equally</Pattern>
     <Pattern>were collected every bit</Pattern>
     <Pattern>were collected from</Pattern>
-    <Pattern>were collected in</Pattern>
-    <Pattern>were collected inward</Pattern>
-    <Pattern>were collected inwards</Pattern>
     <Pattern>were collected through</Pattern>
     <Pattern>were collected to</Pattern>
     <Pattern>were cubic decimeter from</Pattern>
@@ -11669,32 +11331,6 @@
     <Pattern>were writer end-to-end</Pattern>
     <Pattern>were writer throughout</Pattern>
     <Pattern>were writer to</Pattern>
-    <Pattern>work</Pattern>
-    <Pattern>work along</Pattern>
-    <Pattern>work labor along</Pattern>
-    <Pattern>work labor on</Pattern>
-    <Pattern>work on</Pattern>
-    <Pattern>work profile along</Pattern>
-    <Pattern>work profile on</Pattern>
-    <Pattern>work project along</Pattern>
-    <Pattern>work project on</Pattern>
-    <Pattern>work task along</Pattern>
-    <Pattern>work task on</Pattern>
-    <Pattern>work undertaking along</Pattern>
-    <Pattern>work undertaking on</Pattern>
-    <Pattern>working</Pattern>
-    <Pattern>working along</Pattern>
-    <Pattern>working labor along</Pattern>
-    <Pattern>working labor on</Pattern>
-    <Pattern>working on</Pattern>
-    <Pattern>working profile along</Pattern>
-    <Pattern>working profile on</Pattern>
-    <Pattern>working project along</Pattern>
-    <Pattern>working project on</Pattern>
-    <Pattern>working task along</Pattern>
-    <Pattern>working task on</Pattern>
-    <Pattern>working undertaking along</Pattern>
-    <Pattern>working undertaking on</Pattern>
     <Pattern>y.</Pattern>
     <Pattern>y. collected from</Pattern>
     <Pattern>y. cubic decimeter from</Pattern>

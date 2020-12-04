@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>aleurites moluccana</Name>
+  </Tag1>
+  <Tag2>Compound<Name>3-acetyl aleuritolic acid</Name>
+    <Name>vomifoliol-9-o-beta-apiofuranosyl-beta-glucopyranoside</Name>
+    <Name>moluccanin</Name>
+    <Name>dichloromethane</Name>
+    <Name>3-acetylaleuritolic acid</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>3-oxo-alpha-ionol-o-beta-apiofuranosyl-beta-glucopyranoside</Name>
+    <Name>methoxy-8,11,13-podocarpatrien-3-one</Name>
+    <Name>polyprenols</Name>
+    <Name>3-oxo-alpha-ionol-o-beta-glucopyranoside</Name>
+    <Name>triglycerides</Name>
+    <Name>debiloside</Name>
+    <Name>methoxy-8,11,13podocarpatrien-3-one</Name>
+    <Name>spruceanol</Name>
+    <Name>stigmasterol</Name>
+    <Name>6s,9r)roseoside</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>elucidated by</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>reported as</Pattern>
+    <Pattern>were elucidated by</Pattern>
+    <Pattern>were isolated from</Pattern>
+  </Relation>
+</Seed>

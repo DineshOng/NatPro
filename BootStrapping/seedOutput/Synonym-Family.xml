@@ -26,7 +26,6 @@
     <Pattern>belongs forst to</Pattern>
     <Pattern>belongs to</Pattern>
     <Pattern>blanco</Pattern>
-    <Pattern>blume</Pattern>
     <Pattern>brassica</Pattern>
     <Pattern>broccoli</Pattern>
     <Pattern>cabbage</Pattern>
@@ -48,7 +47,6 @@
     <Pattern>chemical feature with</Pattern>
     <Pattern>chemical of</Pattern>
     <Pattern>chemical with</Pattern>
-    <Pattern>cone</Pattern>
     <Pattern>detect</Pattern>
     <Pattern>detect discovered of</Pattern>
     <Pattern>detect discovered to</Pattern>

@@ -782,7 +782,7 @@ public class Main {
             linetemp = linetemp.replaceAll("<\\/?[a-z]+>","");
             if(e1.contains("preparation") ||  e2.contains("preparation") ){
                 if(e1.contains("preparation") && pLine.contains("<"+e2+">"+class2+"</"+e2+">")) {
-                    ValidationMap.put(class2, linetemp);
+                    ValidationMap.put(linetemp, class2 );
                     validation.add(linetemp);
                 }
                 else if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && e2.contains("preparation")){
@@ -953,48 +953,61 @@ public class Main {
         e2 = e2.toLowerCase();
         String entities = e1+"+"+e2;
         switch(entities){
-            case "Synonym+MedicinalPlant":
-                category.appendChild(document.createTextNode("Common Name"));
+            case "synonym+medicinalplant":
+                category.appendChild(document.createTextNode("hasCommonName"));
                 break;
-            case "MedicinalPlant+PlantPart":
-            case "Synonym+PlantPart":
-            case "Preparation+PlantPart":
-                category.appendChild(document.createTextNode("Plant Part"));
+            case "medicinalplant+plantpart":
+                category.appendChild(document.createTextNode("hasMedicinalPlantPart"));
                 break;
-            case "MedicinalPlant+Location":
-            case "Synonym+Location":
-                category.appendChild(document.createTextNode("Location"));
+            case "synonym+plantpart":
+                category.appendChild(document.createTextNode("hasSynonymPlantPart"));
+                break;
+            case "preparation+plantpart":
+                category.appendChild(document.createTextNode("utilizePart"));
+                break;
+            case "medicinalplant+location":
+            case "synonym+location":
+                category.appendChild(document.createTextNode("isLocatedIn"));
                 break;
 
-            case "MedicinalPlant+Compound":
-            case "Synonym+Compound":
-            case "PlantPart+Compound":
-                category.appendChild(document.createTextNode("Compound"));
+            case "medicinalplant+compound":
+            case "synonym+compound":
+            case "plantpart+compound":
+                category.appendChild(document.createTextNode("hasCompound"));
                 break;
-            case "MedicinalPlant+Family":
-            case "Genus+Family":
-            case "Synonym+Family":
-                category.appendChild(document.createTextNode("Family"));
+            case "medicinalplant+family":
+            case "genus+family":
+            case "synonym+family":
+                category.appendChild(document.createTextNode("belongsToFamily"));
                 break;
-            case "MedicinalPlant+Genus":
-            case "Synonym+Genus":
-                category.appendChild(document.createTextNode("Genus"));
+            case "medicinalplant+genus":
+            case "synonym+genus":
+                category.appendChild(document.createTextNode("belongsToGenus"));
                 break;
-            case "MedicinalPlant+Synonym":
-                category.appendChild(document.createTextNode("Plant"));
+            case "medicinalplant+synonym":
+                category.appendChild(document.createTextNode("hasSynonym"));
                 break;
-            case "MedicinalPlant+Preparation":
-                category.appendChild(document.createTextNode("Preparation"));
+            case "medicinalplant+preparation":
+                category.appendChild(document.createTextNode("hasPreparation"));
                 break;
-            case "BioAct+CellLine":
-                category.appendChild(document.createTextNode("Cell"));
+            case "bioact+cellline":
+                category.appendChild(document.createTextNode("affects"));
                 break;
-            case "Compound+BioAct":
-                category.appendChild(document.createTextNode("Bio-Activity"));
+            case "compound+bioact":
+                category.appendChild(document.createTextNode("hasBiologicalActivity"));
                 break;
-            case "PlantPart+Illness":
-            case "Preparation+Illness":
-                category.appendChild(document.createTextNode("Illness"));
+            case "plantpart+illness":
+            case "preparation+illness":
+                category.appendChild(document.createTextNode("treats"));
+                break;
+            case "preparation+bodypart":
+                category.appendChild(document.createTextNode("appliedTo"));
+                break;
+            case "plantpart+synonym":
+                category.appendChild(document.createTextNode("hasSynonymParent"));
+                break;
+            case "compound+chemicalclass":
+                category.appendChild(document.createTextNode("belongsToClass"));
                 break;
 
 

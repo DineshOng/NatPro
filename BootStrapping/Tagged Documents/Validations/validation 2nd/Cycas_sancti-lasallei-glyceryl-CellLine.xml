@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Compound<Name>glyceryl</Name>
+  </Tag1>
+  <Tag2>CellLine<Name>cho</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>led to</Pattern>
+    <Pattern>observed to</Pattern>
+    <Pattern>was observed to</Pattern>
+  </Relation>
+</Seed>

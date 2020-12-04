@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>flowers</Name>
+  </Tag1>
+  <Tag2>Compound<Name>triacylglycerols</Name>
+    <Name>alpha-amyrin</Name>
+    <Name>dichloromethane</Name>
+    <Name>oleanolic acid</Name>
+    <Name>beta-amyrin</Name>
+    <Name>phytyl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>has led to</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

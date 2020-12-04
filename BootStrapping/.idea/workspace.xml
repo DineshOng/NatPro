@@ -17,13 +17,37 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="614" column="104" selection-start-line="614" selection-start-column="104" selection-end-line="614" selection-end-column="104" />
+            <state relative-caret-position="282">
+              <caret line="982" column="34" selection-start-line="982" selection-start-column="34" selection-end-line="982" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-3-acetyl aleuritolic acid-CellLine.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-acetone-CellLine.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-aleurites moluccana-Family.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-3-acetyl aleuritolic acid-BioAct.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -57,7 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>POSTagger</find>
       <find>alph</find>
       <find>class1</find>
       <find>POSTAGGER</find>
@@ -87,6 +110,7 @@
       <find>validation</find>
       <find>relation</find>
       <find>transformer</find>
+      <find>addcategory</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -116,7 +140,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1377" />
     <option name="height" value="959" />
@@ -150,6 +174,11 @@
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
               <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BootStrapping" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BootStrapping" type="b2602c69:ProjectViewProjectNode" />
@@ -242,7 +271,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2761194" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -253,7 +282,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -261,7 +290,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Tool Output" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="ANTLR Preview" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -383,22 +412,6 @@
     <state x="34" y="23" key="new project wizard/0.23.1280.732@0.23.1280.732" timestamp="1582638934534" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/validation/1ed46617021edead6df621a7b72d2dcd-alpha-amyrin cinnamate-BioAct.xml" />
-    <entry file="file://$PROJECT_DIR$/validation/7b3956f364562b5ed9f239daa66426a1-alpha-amyrin cinnamate-BioAct.xml" />
-    <entry file="file://$PROJECT_DIR$/TaggedSample/702c7c4e97189ae5b79c9b4f2f2d8651.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="289" selection-start-line="4" selection-start-column="285" selection-end-line="4" selection-end-column="289" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Compound.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation/74bc8b5ded4b337f2f48505a03eac372-beta-sitosterol-BioAct.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -552,16 +565,6 @@
     <entry file="file://$PROJECT_DIR$/validation/935ef8690c1123ce7a9b13f82bc11f03-alstonia macrophylla-Location.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="614" column="104" selection-start-line="614" selection-start-column="104" selection-end-line="614" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-Preparation-Illness.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -594,6 +597,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SeedsPossible/MedicinalPlant-Synonym.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-3-acetyl aleuritolic acid-BioAct.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-acetone-CellLine.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-aleurites moluccana-Family.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-3-acetyl aleuritolic acid-CellLine.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="982" column="34" selection-start-line="982" selection-start-column="34" selection-end-line="982" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

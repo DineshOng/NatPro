@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>PlantPart<Name>leaves</Name>
+  </Tag1>
+  <Tag2>Compound<Name>methanol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>done on</Pattern>
+    <Pattern>extracted with</Pattern>
+    <Pattern>followed by</Pattern>
+    <Pattern>found to</Pattern>
+    <Pattern>is used in</Pattern>
+    <Pattern>known as</Pattern>
+    <Pattern>measured by</Pattern>
+    <Pattern>resulted in</Pattern>
+    <Pattern>soaking</Pattern>
+    <Pattern>used in</Pattern>
+    <Pattern>was measured by</Pattern>
+    <Pattern>were done on</Pattern>
+    <Pattern>yielded</Pattern>
+  </Relation>
+</Seed>

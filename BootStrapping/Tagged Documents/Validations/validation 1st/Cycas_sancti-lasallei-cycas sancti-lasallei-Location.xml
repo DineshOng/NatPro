@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Synonym<Name>cycas sancti-lasallei</Name>
+  </Tag1>
+  <Tag2>Location<Name>cagayan de oro</Name>
+    <Name>philippines</Name>
+    <Name>malasag</Name>
+    <Name>taft avenue</Name>
+    <Name>manila</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>are endemic to</Pattern>
+    <Pattern>collected from</Pattern>
+    <Pattern>were collected from</Pattern>
+  </Relation>
+</Seed>
