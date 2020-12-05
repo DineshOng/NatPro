@@ -22,10 +22,20 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.SetMultimap;
 
 public class ResultsEvaluation {
-	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\";
-	//String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
-	//private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\validation (first run)\\";
-	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\validation(second run)\\";
+	//private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\natpro-ann\\all\\";
+	
+	// 1st run
+	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 1st\\";
+	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 1st\\";
+	
+	// 2nd run
+	//private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 2nd\\";
+	//private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 2nd\\";
+	
+	// 3rd run
+	//private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 3rd\\";
+	//private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 3rd\\";
+	
 	private static SetMultimap<String, String> GoldRelationships;
 	private static HashMap<String, String> entityType;
 	private static HashMap<String, String> relationshipType;
@@ -49,35 +59,9 @@ public class ResultsEvaluation {
         relTP = new HashMap<String, Integer>();
         relFalseTP = new HashMap<String, Integer>();
         
-        goldRelTP.put("hasBiologicalActivity", 0);
-        goldRelTP.put("hasCompoundP", 0);
-        goldRelTP.put("hasCompoundS", 0);
-        goldRelTP.put("treats", 0);
-        goldRelTP.put("hasSynonymPlantPart", 0);
-        goldRelTP.put("affects", 0);
-        goldRelTP.put("belongsToFamily", 0);
-        goldRelTP.put("isLocatedIn", 0);
-        goldRelTP.put("belongsToGenus", 0);
-        
-        relTP.put("hasBiologicalActivity", 0);
-        relTP.put("hasCompoundP", 0);
-        relTP.put("hasCompoundS", 0);
-        relTP.put("treats", 0);
-        relTP.put("hasSynonymPlantPart", 0);
-        relTP.put("affects", 0);
-        relTP.put("belongsToFamily", 0);
-        relTP.put("isLocatedIn", 0);
-        relTP.put("belongsToGenus", 0);
-        
-        relFalseTP.put("hasBiologicalActivity", 0);
-        relFalseTP.put("hasCompoundP", 0);
-        relFalseTP.put("hasCompoundS", 0);
-        relFalseTP.put("treats", 0);
-        relFalseTP.put("hasSynonymPlantPart", 0);
-        relFalseTP.put("affects", 0);
-        relFalseTP.put("belongsToFamily", 0);
-        relFalseTP.put("isLocatedIn", 0);
-        relFalseTP.put("belongsToGenus", 0);
+        initMap0(goldRelTP);
+        initMap0(relTP);
+        initMap0(relFalseTP);
         
         count = 0;
         
@@ -85,11 +69,11 @@ public class ResultsEvaluation {
 		ReadXMLFiles();
 		
 		//System.out.println("True Positive: " + count);
-		System.out.println("" + pairTruePositive.size());
-		System.out.println("" + pairFalsePositive.size());
-		System.out.println("" + (pairTruePositive.size() + pairFalsePositive.size()));
+		System.out.println("TruePositive: " + pairTruePositive.size());
+		System.out.println("FalsePositive/FalseNegative: " + pairFalsePositive.size());
+		System.out.println("Sum of Results: " + (pairTruePositive.size() + pairFalsePositive.size()));
 		
-		System.out.println("" + relTP.get("hasBiologicalActivity") +"//" + goldRelTP.get("hasBiologicalActivity"));
+		System.out.println("\n\n" + relTP.get("hasBiologicalActivity") +"//" + goldRelTP.get("hasBiologicalActivity"));
 		System.out.println("" + relTP.get("hasCompoundP") +"//" + goldRelTP.get("hasCompoundP"));
 		System.out.println("" + relTP.get("hasCompoundS") +"//" + goldRelTP.get("hasCompoundS"));
 		System.out.println("" + relTP.get("treats") +"//" + goldRelTP.get("treats"));
@@ -98,6 +82,14 @@ public class ResultsEvaluation {
 		System.out.println("" + relTP.get("belongsToFamily") +"//" + goldRelTP.get("belongsToFamily"));
 		System.out.println("" + relTP.get("isLocatedIn") +"//" + goldRelTP.get("isLocatedIn"));
 		System.out.println("" + relTP.get("belongsToGenus") +"//" + goldRelTP.get("belongsToGenus"));
+		
+		System.out.println("" + relTP.get("hasPreparation") +"//" + goldRelTP.get("hasPreparation"));
+		System.out.println("" + relTP.get("hasSynonym") +"//" + goldRelTP.get("hasSynonym"));
+		System.out.println("" + relTP.get("hasMedicinalPlantPart") +"//" + goldRelTP.get("hasMedicinalPlantPart"));
+		System.out.println("" + relTP.get("appliedTo") +"//" + goldRelTP.get("appliedTo"));
+		System.out.println("" + relTP.get("utilizePart") +"//" + goldRelTP.get("utilizePart"));
+		System.out.println("" + relTP.get("hasSynonymParent") +"//" + goldRelTP.get("hasSynonymParent"));
+		System.out.println("" + relTP.get("belongsToClass") +"//" + goldRelTP.get("belongsToClass"));
 		
 		/*System.out.println("\nhasBiologicalActivity: " + String. format("%.2f", (double) relTP.get("hasBiologicalActivity")/goldRelTP.get("hasBiologicalActivity")));
 		System.out.println("hasCompound (PlantPart-Compound): " + String. format("%.2f", (double) relTP.get("hasCompoundP")/goldRelTP.get("hasCompoundP")));
@@ -176,58 +168,11 @@ public class ResultsEvaluation {
 		        	//GoldRelationships.put(Ts.get(matcher2.group(4)), Ts.get(matcher2.group(3)));
 		        	relationshipType.put(Ts.get(matcher2.group(3)) + " : " + Ts.get(matcher2.group(4)), matcher2.group(2));
 		        	
-		        	//System.out.println(Ts.get(matcher2.group(3)) + " : " + Ts.get(matcher2.group(4)));
-		        	
-		        	eval(goldRelTP, matcher2.group(2), entityType.get(Ts.get(matcher2.group(3))));
-		        	
-		        	/*if(matcher2.group(2).equals("hasBiologicalActivity")) {
-						int count = goldRelTP.get("hasBiologicalActivity");
-						goldRelTP.remove("hasBiologicalActivity");
-						count++;
-						goldRelTP.put("hasBiologicalActivity", count);
-					} else if(matcher2.group(2).equals("hasCompound")) {
-						if(entityType.get(Ts.get(matcher2.group(3))).equals("PlantPart")) {
-							int count = goldRelTP.get("hasCompoundP");
-							goldRelTP.remove("hasCompoundP");
-							count++;
-							goldRelTP.put("hasCompoundP", count);
-						} else if(entityType.get(Ts.get(matcher2.group(3))).equals("Synonym")) {
-							int count = goldRelTP.get("hasCompoundS");
-							goldRelTP.remove("hasCompoundS");
-							count++;
-							goldRelTP.put("hasCompoundS", count);
-						}
-					} else if(matcher2.group(2).equals("treats")) {
-						int count = goldRelTP.get("treats");
-						goldRelTP.remove("treats");
-						count++;
-						goldRelTP.put("treats", count);
-					} else if(matcher2.group(2).equals("hasSynonymPlantPart")) {
-						int count = goldRelTP.get("hasSynonymPlantPart");
-						goldRelTP.remove("hasSynonymPlantPart");
-						count++;
-						goldRelTP.put("hasSynonymPlantPart", count);
-					} else if(matcher2.group(2).equals("affects")) {
-						int count = goldRelTP.get("affects");
-						goldRelTP.remove("affects");
-						count++;
-						goldRelTP.put("affects", count);
-					} else if(matcher2.group(2).equals("belongsToFamily")) {
-						int count = goldRelTP.get("belongsToFamily");
-						goldRelTP.remove("belongsToFamily");
-						count++;
-						goldRelTP.put("belongsToFamily", count);
-					} else if(matcher2.group(2).equals("isLocatedIn")) {
-						int count = goldRelTP.get("isLocatedIn");
-						goldRelTP.remove("isLocatedIn");
-						count++;
-						goldRelTP.put("isLocatedIn", count);
-					} else if(matcher2.group(2).equals("belongsToGenus")) {
-						int count = goldRelTP.get("belongsToGenus");
-						goldRelTP.remove("belongsToGenus");
-						count++;
-						goldRelTP.put("belongsToGenus", count);
-					}*/
+		        	//System.out.println(Ts.get(matcher2.group(3)) + " : " + Ts.get(matcher2.group(4)) + " relation: " + matcher2.group(2));
+		        	//System.out.println(matcher2.group(2))
+		        	//if(GoldRelationships.containsEntry(Ts.get(matcher2.group(3)), Ts.get(matcher2.group(4))) == false) {
+		        		eval(goldRelTP, matcher2.group(2), entityType.get(Ts.get(matcher2.group(3))));
+		        	//}
 		        }
 		   
 		        reader.close();
@@ -237,12 +182,12 @@ public class ResultsEvaluation {
 //		for(String i : GoldRelationships.keySet()) {
 //			System.out.println("value: " + GoldRelationships.get(i) + "\tkey: " + i);
 //		}
+//		for(String i : relationshipType.keySet()) {
+//			System.out.println("value: " + relationshipType.get(i) + "\tkey: " + i);
+//		}
 		//System.out.println(GoldRelationships);
 		System.out.println("Gold Pair Size: " + GoldRelationships.size());
-		System.out.println("Gold Pair Size: " + relationshipType.size());
-		//System.out.println("Size: " + GoldRelationships.keySet().size());
-		//System.out.println("Actual Size: " + GoldRelationships.size()*GoldRelationships.keySet().size());
-		//System.out.println(GoldRelationships.containsEntry("alstonia macrophylla", "alstonerine"));
+		//System.out.println("Gold Pair Size: " + relationshipType.size());
 		
 		endTime = System.nanoTime();
         //System.err.println("ReadGoldAnn Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
@@ -265,7 +210,6 @@ public class ResultsEvaluation {
 	}
 	
 	public static void readXML(File xmlFile) {
-		// CHECKS IF THE GENERATED XML FILE EXISTS
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		try {
 			DocumentBuilder builder = factory.newDocumentBuilder();
@@ -291,15 +235,8 @@ public class ResultsEvaluation {
 						//System.out.println(nameElementTag2.item(j).getTextContent());
 						if(GoldRelationships.containsEntry(nameElementTag1.item(0).getTextContent().toLowerCase(), nameElementTag2.item(j).getTextContent().toLowerCase())) {
 						//if(GoldRelationships.containsEntry(nameElementTag2.item(j).getTextContent().toLowerCase(), nameElementTag1.item(0).getTextContent().toLowerCase())) {
-							//System.out.println(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent());
-							//if(pairTruePositive.contains(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent()))
-							//	count++;
-							//else {
 								pairTruePositive.add(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent());
-								//System.out.println("Type: " + relationshipType.get(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent()) + "\t\t\t" + nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent());
-								//System.out.format("Type: %21s Pair: %40s (%14s) %54s (%16s)\n", relationshipType.get(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent()), nameElementTag1.item(0).getTextContent(), entityType.get(nameElementTag1.item(0).getTextContent()), nameElementTag2.item(j).getTextContent(), entityType.get(nameElementTag2.item(j).getTextContent()));
-								//pairTruePositive.add(nameElementTag2.item(j).getTextContent()  + " : " + nameElementTag1.item(0).getTextContent() );
-								
+								//System.out.println(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent() + " :: " + relationshipType.get(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent()));
 								eval(relTP, relationshipType.get(nameElementTag1.item(0).getTextContent() + " : " + nameElementTag2.item(j).getTextContent()), entityType.get(nameElementTag1.item(0).getTextContent()));
 								
 						} else {
@@ -318,6 +255,25 @@ public class ResultsEvaluation {
 		}
 	}
 	
+	public static void initMap0(HashMap<String, Integer> hm) {
+		hm.put("hasBiologicalActivity", 0);
+		hm.put("hasCompoundP", 0);
+		hm.put("hasCompoundS", 0);
+		hm.put("treats", 0);
+		hm.put("hasSynonymPlantPart", 0);
+		hm.put("affects", 0);
+		hm.put("belongsToFamily", 0);
+		hm.put("isLocatedIn", 0);
+		hm.put("belongsToGenus", 0);
+		
+		hm.put("hasPreparation", 0);
+		hm.put("hasSynonym", 0);
+		hm.put("hasMedicinalPlantPart", 0);
+		hm.put("appliedTo", 0);
+		hm.put("utilizePart", 0);
+		hm.put("hasSynonymParent", 0);
+		hm.put("belongsToClass", 0);
+	}
 	
 	public static void eval(HashMap<String, Integer> hm, String relType, String entType) {
 		if(relType.equals("hasBiologicalActivity")) {
@@ -367,6 +323,43 @@ public class ResultsEvaluation {
 			hm.remove("belongsToGenus");
 			count++;
 			hm.put("belongsToGenus", count);
+		}
+		
+		else if(relType.equals("hasPreparation")) {
+			int count = hm.get("hasPreparation");
+			hm.remove("hasPreparation");
+			count++;
+			hm.put("hasPreparation", count);
+		} else if(relType.equals("hasSynonym")) {
+			int count = hm.get("hasSynonym");
+			hm.remove("hasSynonym");
+			count++;
+			hm.put("hasSynonym", count);
+		} else if(relType.equals("hasMedicinalPlantPart")) {
+			int count = hm.get("hasMedicinalPlantPart");
+			hm.remove("hasMedicinalPlantPart");
+			count++;
+			hm.put("hasMedicinalPlantPart", count);
+		} else if(relType.equals("appliedTo")) {
+			int count = hm.get("appliedTo");
+			hm.remove("appliedTo");
+			count++;
+			hm.put("appliedTo", count);
+		} else if(relType.equals("utilizePart")) {
+			int count = hm.get("utilizePart");
+			hm.remove("utilizePart");
+			count++;
+			hm.put("utilizePart", count);
+		} else if(relType.equals("hasSynonymParent")) {
+			int count = hm.get("hasSynonymParent");
+			hm.remove("hasSynonymParent");
+			count++;
+			hm.put("hasSynonymParent", count);
+		} else if(relType.equals("belongsToClass")) {
+			int count = hm.get("belongsToClass");
+			hm.remove("belongsToClass");
+			count++;
+			hm.put("belongsToClass", count);
 		}
 	}
 }
