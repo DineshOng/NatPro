@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
-  <Tag1>Compound<Name>beta-sitosteryl-beta-d-glucoside</Name>
+  <Category>hasBiologicalActivity</Category>
+  <Tag1>Compound<Name>1,1-diphenyl-2-picrylhydrazyl</Name>
   </Tag1>
   <Tag2>BioAct<Name>antioxidant</Name>
+    <Name>cytotoxic</Name>
+    <Name>antivenom</Name>
   </Tag2>
   <Relation>
+    <Pattern>exhibited</Pattern>
     <Pattern>found to</Pattern>
     <Pattern>induced</Pattern>
   </Relation>

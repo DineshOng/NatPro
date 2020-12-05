@@ -3,8 +3,14 @@
   <Category/>
   <Tag1>Compound<Name>2-ethenyl</Name>
   </Tag1>
-  <Tag2>CellLine<Name>mcf-7</Name>
+  <Tag2>CellLine<Name>ht29</Name>
+    <Name>thp-1</Name>
+    <Name>mcf-7</Name>
+    <Name>hdfn</Name>
     <Name>ht-29</Name>
+    <Name>caki-2</Name>
+    <Name>cor-l23</Name>
+    <Name>ls174t</Name>
     <Name>h69pr</Name>
   </Tag2>
   <Relation>

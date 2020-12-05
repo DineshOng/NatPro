@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>hasCompound</Category>
   <Tag1>PlantPart<Name>root</Name>
   </Tag1>
-  <Tag2>Compound<Name>macrocarpamine</Name>
-    <Name>macraistonine</Name>
-    <Name>omethylmacralstonine</Name>
-    <Name>villalstonine</Name>
-    <Name>talcarpine</Name>
-    <Name>pleiocarpamine</Name>
+  <Tag2>Compound<Name>omethylmacralstonine</Name>
+    <Name>dichloromethane</Name>
+    <Name>dimethylsulfoxide</Name>
+    <Name>16-hydroxy-n4-demethylalstophyllal</Name>
+    <Name>brucine</Name>
     <Name>o-acetylmacralstonine</Name>
+    <Name>24-methylenecycloartanol</Name>
+    <Name>alstophyllal</Name>
+    <Name>dimethyl sulfoxide</Name>
+    <Name>16-hydroxyalstonisine</Name>
+    <Name>villalstonine</Name>
+    <Name>betasitosterol</Name>
+    <Name>methanol</Name>
+    <Name>macrocarpamine</Name>
+    <Name>macraistonine</Name>
+    <Name>fatty acids</Name>
+    <Name>6-oxoalstophyllal</Name>
+    <Name>6-oxoalstophylline</Name>
+    <Name>gamma-sitosterol</Name>
+    <Name>alstohentine</Name>
+    <Name>10,11-dimethoxynareline</Name>
+    <Name>pleiocarpamine</Name>
+    <Name>lupeol</Name>
+    <Name>alstomaline</Name>
+    <Name>strictamin</Name>
+    <Name>alstomicine</Name>
+    <Name>ursolic acid</Name>
+    <Name>beta-amyrin</Name>
+    <Name>rauvomitin</Name>
+    <Name>sulforhodamine b</Name>
+    <Name>1,1-diphenyl-2-picrylhydrazyl</Name>
+    <Name>talcarpine</Name>
+    <Name>acetylcholine</Name>
+    <Name>beta-sitosteryl-beta-d-glucoside</Name>
+    <Name>stigmasterol</Name>
+    <Name>superoxide</Name>
+    <Name>alstonerine</Name>
+    <Name>campesterol</Name>
   </Tag2>
   <Relation>
     <Pattern>done on</Pattern>

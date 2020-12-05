@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>hasCompound</Category>
   <Tag1>Synonym<Name>brassica juncea</Name>
   </Tag1>
   <Tag2>Compound<Name>triglyceride</Name>
+    <Name>phenols</Name>
     <Name>isothiocyanate</Name>
     <Name>sulforaphane</Name>
     <Name>dichloromethane</Name>
     <Name>polyunsaturated fatty acids</Name>
+    <Name>glycosides</Name>
     <Name>linolenic acid</Name>
     <Name>docosahexaenoic acid</Name>
     <Name>betasitosterol</Name>

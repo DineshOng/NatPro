@@ -3,7 +3,8 @@
   <Category/>
   <Tag1>Compound<Name>3,5-dimethylphenyl isocyanate</Name>
   </Tag1>
-  <Tag2>CellLine<Name>st-4</Name>
+  <Tag2>CellLine<Name>y-1</Name>
+    <Name>st-4</Name>
   </Tag2>
   <Relation>
     <Pattern>according to</Pattern>

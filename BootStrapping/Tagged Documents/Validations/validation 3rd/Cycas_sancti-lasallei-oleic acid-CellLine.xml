@@ -3,7 +3,12 @@
   <Category/>
   <Tag1>Compound<Name>oleic acid</Name>
   </Tag1>
-  <Tag2>CellLine<Name>mcf-7</Name>
+  <Tag2>CellLine<Name>2008</Name>
+    <Name>hep-2</Name>
+    <Name>mcf-7</Name>
+    <Name>ehrlich</Name>
+    <Name>mccoy</Name>
+    <Name>cho</Name>
     <Name>sgc7901</Name>
   </Tag2>
   <Relation>

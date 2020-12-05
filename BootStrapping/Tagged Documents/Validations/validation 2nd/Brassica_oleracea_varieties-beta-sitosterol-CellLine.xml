@@ -7,6 +7,9 @@
   </Tag2>
   <Relation>
     <Pattern>observed to</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>treated with</Pattern>
     <Pattern>was observed to</Pattern>
+    <Pattern>were treated with</Pattern>
   </Relation>
 </Seed>

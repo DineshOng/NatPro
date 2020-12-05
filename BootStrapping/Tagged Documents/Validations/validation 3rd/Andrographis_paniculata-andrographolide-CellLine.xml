@@ -4,6 +4,7 @@
   <Tag1>Compound<Name>andrographolide</Name>
   </Tag1>
   <Tag2>CellLine<Name>y-1</Name>
+    <Name>st-4</Name>
   </Tag2>
   <Relation>
     <Pattern>according to</Pattern>

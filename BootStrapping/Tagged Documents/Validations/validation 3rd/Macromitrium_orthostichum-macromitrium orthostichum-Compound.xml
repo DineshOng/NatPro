@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>macromitrium orthostichum</Name>
+  </Tag1>
+  <Tag2>Compound<Name>zeorin</Name>
+    <Name>atranorin</Name>
+    <Name>stigmasterol</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>dichloromethane</Name>
+    <Name>leukotriene</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>has led to</Pattern>
+    <Pattern>inhibited</Pattern>
+    <Pattern>led to</Pattern>
+  </Relation>
+</Seed>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>isLocatedIn</Category>
   <Tag1>Synonym<Name>cycas lacrimans</Name>
   </Tag1>
   <Tag2>Location<Name>sec</Name>
@@ -8,6 +8,7 @@
     <Name>taiwan</Name>
     <Name>binan city</Name>
     <Name>laguna</Name>
+    <Name>japan</Name>
     <Name>ijpcr</Name>
     <Name>philippines</Name>
     <Name>taft avenue</Name>

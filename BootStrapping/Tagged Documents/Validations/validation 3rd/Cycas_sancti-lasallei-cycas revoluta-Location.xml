@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>isLocatedIn</Category>
   <Tag1>Synonym<Name>cycas revoluta</Name>
   </Tag1>
-  <Tag2>Location<Name>japan</Name>
-    <Name>taiwan</Name>
+  <Tag2>Location<Name>taiwan</Name>
+    <Name>cagayan de oro</Name>
+    <Name>japan</Name>
+    <Name>philippines</Name>
+    <Name>malasag</Name>
+    <Name>manila</Name>
+    <Name>taft avenue</Name>
+    <Name>mindanao</Name>
   </Tag2>
   <Relation>
     <Pattern>are endemic to</Pattern>

@@ -4,9 +4,12 @@
   <Tag1>Compound<Name>dichloromethane</Name>
   </Tag1>
   <Tag2>CellLine<Name>2008</Name>
-    <Name>cho</Name>
+    <Name>hep-2</Name>
     <Name>mcf-7</Name>
     <Name>ehrlich</Name>
+    <Name>mccoy</Name>
+    <Name>cho</Name>
+    <Name>sgc7901</Name>
   </Tag2>
   <Relation>
     <Pattern>led to</Pattern>

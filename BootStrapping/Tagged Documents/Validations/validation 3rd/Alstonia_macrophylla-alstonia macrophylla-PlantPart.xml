@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>hasSynonymPlantPart</Category>
   <Tag1>Synonym<Name>alstonia macrophylla</Name>
   </Tag1>
   <Tag2>PlantPart<Name>trunks</Name>
@@ -12,12 +12,9 @@
   </Tag2>
   <Relation>
     <Pattern>avenue</Pattern>
-    <Pattern>bark of</Pattern>
     <Pattern>carranza</Pattern>
     <Pattern>center for</Pattern>
     <Pattern>chemistry</Pattern>
-    <Pattern>covering of</Pattern>
-    <Pattern>culture of</Pattern>
     <Pattern>department</Pattern>
     <Pattern>department of</Pattern>
     <Pattern>extraction protocol of</Pattern>
@@ -29,7 +26,6 @@
     <Pattern>macrophylla</Pattern>
     <Pattern>majority of</Pattern>
     <Pattern>malabed</Pattern>
-    <Pattern>npv</Pattern>
     <Pattern>objective of</Pattern>
     <Pattern>osaka</Pattern>
     <Pattern>pharmacognosy of</Pattern>
@@ -37,7 +33,6 @@
     <Pattern>protocol of</Pattern>
     <Pattern>research</Pattern>
     <Pattern>research was to</Pattern>
-    <Pattern>roots</Pattern>
     <Pattern>school of</Pattern>
     <Pattern>science</Pattern>
     <Pattern>sciences</Pattern>
@@ -45,7 +40,6 @@
     <Pattern>toyonaka</Pattern>
     <Pattern>tree</Pattern>
     <Pattern>university</Pattern>
-    <Pattern>wall</Pattern>
     <Pattern>was to</Pattern>
     <Pattern>were isolated from</Pattern>
   </Relation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Compound<Name>trilinolein</Name>
+  </Tag1>
+  <Tag2>CellLine<Name>a549</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>exhibit cytotoxicity against</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>were reported to</Pattern>
+  </Relation>
+</Seed>

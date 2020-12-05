@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>isLocatedIn</Category>
   <Tag1>Synonym<Name>andrographis paniculata</Name>
   </Tag1>
   <Tag2>Location<Name>bataan</Name>
     <Name>khamti</Name>
+    <Name>tamil nadu</Name>
     <Name>arunachal pradesh</Name>
     <Name>philippines</Name>
     <Name>india</Name>
@@ -17,6 +18,7 @@
     <Pattern>malabed</Pattern>
     <Pattern>procured from</Pattern>
     <Pattern>reyes</Pattern>
+    <Pattern>used in</Pattern>
     <Pattern>was procured from</Pattern>
   </Relation>
 </Seed>

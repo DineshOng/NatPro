@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>hasCompound</Category>
   <Tag1>PlantPart<Name>seeds</Name>
   </Tag1>
   <Tag2>Compound<Name>taxifolin</Name>

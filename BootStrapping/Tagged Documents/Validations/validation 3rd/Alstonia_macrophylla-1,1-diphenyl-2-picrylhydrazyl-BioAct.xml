@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>hasBiologicalActivity</Category>
   <Tag1>Compound<Name>1,1-diphenyl-2-picrylhydrazyl</Name>
   </Tag1>
-  <Tag2>BioAct<Name>antioxidant</Name>
+  <Tag2>BioAct<Name>anti-inflammatory</Name>
+    <Name>antimicrobial</Name>
+    <Name>antioxidant</Name>
     <Name>cytotoxic</Name>
     <Name>antivenom</Name>
   </Tag2>

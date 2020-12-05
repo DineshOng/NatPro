@@ -4,6 +4,9 @@
   <Tag1>Compound<Name>sulforaphane</Name>
   </Tag1>
   <Tag2>CellLine<Name>mcf7</Name>
+    <Name>mcf-7</Name>
+    <Name>a549</Name>
+    <Name>ehrlich</Name>
   </Tag2>
   <Relation>
     <Pattern>observed to</Pattern>

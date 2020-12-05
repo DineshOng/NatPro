@@ -3,7 +3,9 @@
   <Category/>
   <Tag1>Compound<Name>stigmasterol</Name>
   </Tag1>
-  <Tag2>CellLine<Name>ehrlich</Name>
+  <Tag2>CellLine<Name>hep-2</Name>
+    <Name>mccoy</Name>
+    <Name>ehrlich</Name>
   </Tag2>
   <Relation>
     <Pattern>led to</Pattern>

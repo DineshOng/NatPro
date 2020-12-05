@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>p. eryngii</Name>
+  </Tag1>
+  <Tag2>Compound<Name>triacylglycerol</Name>
+    <Name>3beta,5alpha-dihydroxyergost-7-en-6-one</Name>
+    <Name>pleurone</Name>
+    <Name>24e)-3betahydroxycucurbita-5,24-diene-26-oic acid</Name>
+    <Name>ergosterol peroxide</Name>
+    <Name>2alpha,5alpha,9alpha-epidioxy-(22e)-ergosta-7,22-diene-3beta,6beta-diol</Name>
+    <Name>ergosterol</Name>
+    <Name>3beta,5alpha,9alpha-trihydroxy-(22e)-ergosta-7,22-dien-6one</Name>
+    <Name>6beta-acetoxy(22e)-ergosta-7,22-diene-3beta,5alpha-diol</Name>
+    <Name>3beta,5alpha-dihydroxy(22e)-ergosta-7,22-dien-6-one</Name>
+    <Name>5alpha,9alpha-epidioxy-3beta-hydroxy-(22e)-ergosta-7,22-dien-6one</Name>
+    <Name>triacylglycerols</Name>
+    <Name>5alpha,9alpha-epidioxy-8alpha,14alpha-epoxy-(22e)-ergosta-6,22-dienbeta-ol</Name>
+    <Name>nicotinic acid</Name>
+    <Name>trilinolein</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>afforded</Pattern>
+    <Pattern>based on</Pattern>
+    <Pattern>consisted of</Pattern>
+    <Pattern>identified as</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>reported from</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were ground in</Pattern>
+    <Pattern>were identified as</Pattern>
+    <Pattern>were isolated from</Pattern>
+    <Pattern>were reported from</Pattern>
+    <Pattern>yielded</Pattern>
+  </Relation>
+</Seed>

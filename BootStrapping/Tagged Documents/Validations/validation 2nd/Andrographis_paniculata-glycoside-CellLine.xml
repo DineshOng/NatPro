@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category/>
+  <Tag1>Compound<Name>glycoside</Name>
+  </Tag1>
+  <Tag2>CellLine<Name>st-4</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>according to</Pattern>
+    <Pattern>consisted primarily of</Pattern>
+    <Pattern>illustrated that</Pattern>
+    <Pattern>visualized on</Pattern>
+  </Relation>
+</Seed>
