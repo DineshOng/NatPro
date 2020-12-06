@@ -39,7 +39,12 @@ public class REV2 {
 	private static HashMap<String, String> gold_entityType_map;
 	private static HashMap<String, String> gol_relType_map;
 	
-	private static HashMap<String, Integer> gold_rel_tp_map;
+	private static HashMap<String, Integer> gold_rel_map;
+	
+	private static HashMap<String, Double> eval_acc_map;
+	private static HashMap<String, Double> eval_pre_map;
+	private static HashMap<String, Double> eval_rec_map;
+	private static HashMap<String, Double> eval_fme_map;
 	
 	public static HashSet<String> res_rel_tp_set;
 	public static HashSet<String> res_rel_set;
@@ -56,14 +61,19 @@ public class REV2 {
         long startTime, endTime;
         startTime = System.nanoTime();
         
-		gold_rel_tp_map = new HashMap<String, Integer>();
-		initMap0(gold_rel_tp_map);
+        gold_rel_map = new HashMap<String, Integer>();
+		initMap0(gold_rel_map);
 		
 		res_rel_tp_map = new HashMap<String, Integer>();
 		initMap0(res_rel_tp_map);
 		
 		res_rel_map = new HashMap<String, Integer>();
 		initMap0(res_rel_map);
+		
+		eval_acc_map = new HashMap<String, Double>();
+		eval_pre_map = new HashMap<String, Double>();
+		eval_rec_map = new HashMap<String, Double>();
+		eval_fme_map = new HashMap<String, Double>();
 		
 		ReadGoldAnn();
 		ReadXMLFiles();
@@ -142,7 +152,7 @@ public class REV2 {
 		        	if(!gold_rel_set.contains(ent1 + " : " + ent2)) {
 		        		gold_rel_set.add(ent1 + " : " + ent2);
 		        		gol_relType_map.put(ent1 + " : " + ent2, matcher2.group(2));
-		        		eval(gold_rel_tp_map, matcher2.group(2), gold_entityType_map.get(ent1));
+		        		eval(gold_rel_map, matcher2.group(2), gold_entityType_map.get(ent1));
 		        	} else {
 		        		//System.out.println(ent1 + " : " + ent2);
 		        	}
@@ -372,8 +382,26 @@ public class REV2 {
 			count++;
 			hm.put("belongsToClass", count);
 		} else {
-			System.out.println("entType: " + entType + "\trelType: " + relType);
+			//System.out.println("entType: " + entType + "\trelType: " + relType);
 		}
+	}
+	
+	public static double getScore_Accuracy(String relType) {
+		return (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(res_rel_map.get(relType)-res_rel_tp_map.get(relType))+(gold_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100;
+	}
+	
+	public static double getScore_Precision(String relType) {
+		return (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(res_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100;
+	}
+	
+	public static double getScore_Recall(String relType) {
+		return (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(gold_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100;
+	}
+	
+	public static double getScore_Fmeasure(String relType) {
+		Double prec = (double) getScore_Precision("hasBiologicalActivity");
+		Double rec = (double) getScore_Recall("hasBiologicalActivity");
+		return (double) (2*prec*rec)/(prec+rec);
 	}
 	
 	public static void printResult() {
@@ -391,26 +419,33 @@ public class REV2 {
 		double rec = (double) tp/(tp+fn)*100;
 		double fm = (double) (2*prec*rec)/(prec+rec);
 		
+		//double x = (double) res_rel_tp_map.get("hasBiologicalActivity")/(res_rel_tp_map.get("hasBiologicalActivity")+(res_rel_map.get("hasBiologicalActivity")-res_rel_tp_map.get("hasBiologicalActivity"))+(gold_rel_map.get("hasBiologicalActivity")-res_rel_tp_map.get("hasBiologicalActivity")))*100;
+		//eval_acc_map.put("hasBiologicalActivity", (double) x);
+		System.out.println("\n" + String.format("%.2f", getScore_Accuracy("hasBiologicalActivity")));
+		System.out.println(String.format("%.2f", getScore_Precision("hasBiologicalActivity")));
+		System.out.println(String.format("%.2f", getScore_Recall("hasBiologicalActivity")));
+		System.out.println(String.format("%.2f", getScore_Fmeasure("hasBiologicalActivity")));
+		
 		System.out.println("\nResults: " + "\nAccuracy: " + String.format("%.2f", acc) + "\nPrecision: " + String.format("%.2f", prec) + "\nRecall: " + String.format("%.2f", rec) + "\nf-measure: " + String.format("%.2f", fm));
 		
 		//HashMap<String, Integer> relTP = new HashMap<String, Integer>();
-		System.out.println("\n\n" + res_rel_tp_map.get("hasBiologicalActivity") +"//" + gold_rel_tp_map.get("hasBiologicalActivity"));
-		System.out.println("" + res_rel_tp_map.get("hasCompoundP") +"//" + gold_rel_tp_map.get("hasCompoundP"));
-		System.out.println("" + res_rel_tp_map.get("hasCompoundS") +"//" + gold_rel_tp_map.get("hasCompoundS"));
-		System.out.println("" + res_rel_tp_map.get("hasCompoundM") +"//" + gold_rel_tp_map.get("hasCompoundM"));
-		System.out.println("" + res_rel_tp_map.get("treats") +"//" + gold_rel_tp_map.get("treats"));
-		System.out.println("" + res_rel_tp_map.get("hasSynonymPlantPart") +"//" + gold_rel_tp_map.get("hasSynonymPlantPart"));
-		System.out.println("" + res_rel_tp_map.get("affects") +"//" + gold_rel_tp_map.get("affects"));
-		System.out.println("" + res_rel_tp_map.get("belongsToFamily") +"//" + gold_rel_tp_map.get("belongsToFamily"));
-		System.out.println("" + res_rel_tp_map.get("isLocatedIn") +"//" + gold_rel_tp_map.get("isLocatedIn"));
-		System.out.println("" + res_rel_tp_map.get("belongsToGenus") +"//" + gold_rel_tp_map.get("belongsToGenus"));
-		System.out.println("" + res_rel_tp_map.get("hasPreparation") +"//" + gold_rel_tp_map.get("hasPreparation"));
-		System.out.println("" + res_rel_tp_map.get("hasSynonym") +"//" + gold_rel_tp_map.get("hasSynonym"));
-		System.out.println("" + res_rel_tp_map.get("hasMedicinalPlantPart") +"//" + gold_rel_tp_map.get("hasMedicinalPlantPart"));
-		System.out.println("" + res_rel_tp_map.get("appliedTo") +"//" + gold_rel_tp_map.get("appliedTo"));
-		System.out.println("" + res_rel_tp_map.get("utilizePart") +"//" + gold_rel_tp_map.get("utilizePart"));
-		System.out.println("" + res_rel_tp_map.get("hasSynonymParent") +"//" + gold_rel_tp_map.get("hasSynonymParent"));
-		System.out.println("" + res_rel_tp_map.get("belongsToClass") +"//" + gold_rel_tp_map.get("belongsToClass"));
+		System.out.println("\n\n" + res_rel_tp_map.get("hasBiologicalActivity") +"//" + gold_rel_map.get("hasBiologicalActivity"));
+		System.out.println("" + res_rel_tp_map.get("hasCompoundP") +"//" + gold_rel_map.get("hasCompoundP"));
+		System.out.println("" + res_rel_tp_map.get("hasCompoundS") +"//" + gold_rel_map.get("hasCompoundS"));
+		System.out.println("" + res_rel_tp_map.get("hasCompoundM") +"//" + gold_rel_map.get("hasCompoundM"));
+		System.out.println("" + res_rel_tp_map.get("treats") +"//" + gold_rel_map.get("treats"));
+		System.out.println("" + res_rel_tp_map.get("hasSynonymPlantPart") +"//" + gold_rel_map.get("hasSynonymPlantPart"));
+		System.out.println("" + res_rel_tp_map.get("affects") +"//" + gold_rel_map.get("affects"));
+		System.out.println("" + res_rel_tp_map.get("belongsToFamily") +"//" + gold_rel_map.get("belongsToFamily"));
+		System.out.println("" + res_rel_tp_map.get("isLocatedIn") +"//" + gold_rel_map.get("isLocatedIn"));
+		System.out.println("" + res_rel_tp_map.get("belongsToGenus") +"//" + gold_rel_map.get("belongsToGenus"));
+		System.out.println("" + res_rel_tp_map.get("hasPreparation") +"//" + gold_rel_map.get("hasPreparation"));
+		System.out.println("" + res_rel_tp_map.get("hasSynonym") +"//" + gold_rel_map.get("hasSynonym"));
+		System.out.println("" + res_rel_tp_map.get("hasMedicinalPlantPart") +"//" + gold_rel_map.get("hasMedicinalPlantPart"));
+		System.out.println("" + res_rel_tp_map.get("appliedTo") +"//" + gold_rel_map.get("appliedTo"));
+		System.out.println("" + res_rel_tp_map.get("utilizePart") +"//" + gold_rel_map.get("utilizePart"));
+		System.out.println("" + res_rel_tp_map.get("hasSynonymParent") +"//" + gold_rel_map.get("hasSynonymParent"));
+		System.out.println("" + res_rel_tp_map.get("belongsToClass") +"//" + gold_rel_map.get("belongsToClass"));
 		
 		System.out.println("\n\n" + res_rel_map.get("hasBiologicalActivity"));
 		System.out.println("" + res_rel_map.get("hasCompoundP"));
