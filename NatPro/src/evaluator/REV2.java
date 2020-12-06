@@ -386,22 +386,42 @@ public class REV2 {
 		}
 	}
 	
-	public static double getScore_Accuracy(String relType) {
-		return (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(res_rel_map.get(relType)-res_rel_tp_map.get(relType))+(gold_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100;
+	public static String getScore_Accuracy(String relType) {
+		return String.format("%.2f", (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(res_rel_map.get(relType)-res_rel_tp_map.get(relType))+(gold_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100);
 	}
 	
-	public static double getScore_Precision(String relType) {
-		return (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(res_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100;
+	public static String getScore_Precision(String relType) {
+		return String.format("%.2f", (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(res_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100);
 	}
 	
-	public static double getScore_Recall(String relType) {
-		return (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(gold_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100;
+	public static String getScore_Recall(String relType) {
+		return String.format("%.2f", (double) res_rel_tp_map.get(relType)/(res_rel_tp_map.get(relType)+(gold_rel_map.get(relType)-res_rel_tp_map.get(relType)))*100);
 	}
 	
-	public static double getScore_Fmeasure(String relType) {
-		Double prec = (double) getScore_Precision("hasBiologicalActivity");
-		Double rec = (double) getScore_Recall("hasBiologicalActivity");
-		return (double) (2*prec*rec)/(prec+rec);
+	public static String getScore_Fmeasure(String relType) {
+		Double prec = Double.parseDouble(getScore_Precision(relType));
+		Double rec = Double.parseDouble(getScore_Recall(relType));
+		return String.format("%.2f", (double) (2*prec*rec)/(prec+rec));
+	}
+	
+	public static int getTP(String relType) {
+		return res_rel_tp_map.get(relType);
+	}
+	
+	public static int getFP(String relType) {
+		return res_rel_map.get(relType)-res_rel_tp_map.get(relType);
+	}
+	
+	public static int getFN(String relType) {
+		return gold_rel_map.get(relType)-res_rel_tp_map.get(relType);
+	}
+	
+	public static int getGold(String relType) {
+		return gold_rel_map.get(relType);
+	}
+	
+	public static int getRet(String relType) {
+		return res_rel_map.get(relType);
 	}
 	
 	public static void printResult() {
@@ -421,10 +441,11 @@ public class REV2 {
 		
 		//double x = (double) res_rel_tp_map.get("hasBiologicalActivity")/(res_rel_tp_map.get("hasBiologicalActivity")+(res_rel_map.get("hasBiologicalActivity")-res_rel_tp_map.get("hasBiologicalActivity"))+(gold_rel_map.get("hasBiologicalActivity")-res_rel_tp_map.get("hasBiologicalActivity")))*100;
 		//eval_acc_map.put("hasBiologicalActivity", (double) x);
-		System.out.println("\n" + String.format("%.2f", getScore_Accuracy("hasBiologicalActivity")));
-		System.out.println(String.format("%.2f", getScore_Precision("hasBiologicalActivity")));
-		System.out.println(String.format("%.2f", getScore_Recall("hasBiologicalActivity")));
-		System.out.println(String.format("%.2f", getScore_Fmeasure("hasBiologicalActivity")));
+		System.out.println("\n" + getScore_Accuracy("hasBiologicalActivity"));
+		System.out.println(getScore_Precision("hasBiologicalActivity"));
+		System.out.println(getScore_Recall("hasBiologicalActivity"));
+		System.out.println(getScore_Fmeasure("hasBiologicalActivity"));
+		System.out.println(getTP("hasBiologicalActivity") + " " + getFP("hasBiologicalActivity") + " " + getFN("hasBiologicalActivity") + " " + getGold("hasBiologicalActivity") + " " + getRet("hasBiologicalActivity"));
 		
 		System.out.println("\nResults: " + "\nAccuracy: " + String.format("%.2f", acc) + "\nPrecision: " + String.format("%.2f", prec) + "\nRecall: " + String.format("%.2f", rec) + "\nf-measure: " + String.format("%.2f", fm));
 		
