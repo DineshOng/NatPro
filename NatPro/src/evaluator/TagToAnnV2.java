@@ -1,4 +1,4 @@
-package bratAnn;
+package evaluator;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,18 +13,17 @@ import org.apache.commons.io.IOUtils;
 
 import preprocessing.Tagger;
 
-public class TagToAnn {
+public class TagToAnnV2 {
 	static Map<Integer, String> stars;
 	
 	public static void main(String[] args) throws IOException {
-		try {
-			new TagToAnn().etag();
-		} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			new TagToAnn().etag();
+//		} catch (NoSuchAlgorithmException | ClassCastException | ClassNotFoundException | IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
-		/*
 		long startTime, endTime;
         startTime = System.nanoTime ();
 		
@@ -49,7 +48,7 @@ public class TagToAnn {
 			run("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Preprocessed\\" + name + " tag.txt", name);
 		
 		endTime = System.nanoTime ();
-	    System.err.println("[PDF to TXT Converter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");*/
+	    System.err.println("[PDF to TXT Converter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
 	}
 	
 	public static void run(String filename, String name) throws IOException {

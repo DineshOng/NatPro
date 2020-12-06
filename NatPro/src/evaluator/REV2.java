@@ -1,4 +1,4 @@
-package bratAnn;
+package evaluator;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,9 +21,19 @@ import org.w3c.dom.NodeList;
 import com.google.common.collect.HashMultimap;
 
 public class REV2 {
-	// 1st run
-	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 1st\\";
-	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 1st\\";
+	//C:\Users\Unknown\Documents\GitHub\natpro-ann\all
+	
+//	//1st run
+//	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 1st\\";
+//	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 1st\\";
+	
+//	// 2nd run
+//	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 2nd\\";
+//	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 2nd\\";
+	
+	// 3rd run
+	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 3rd\\";
+	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 3rd\\";
 		
 	public static HashSet<String> gold_rel_set;
 	private static HashMap<String, String> gold_entityType_map;
@@ -58,10 +68,30 @@ public class REV2 {
 		ReadGoldAnn();
 		ReadXMLFiles();
 		
+		//Evaluate();
+		
 		printResult();
 		
 		endTime = System.nanoTime();
         System.err.println("Main Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
+	}
+	
+	public static void Evaluate() {
+//		if(gold_rel_set.contains(ent1 + " : " + ent2)) {
+//			res_rel_tp_set.add(ent1 + " : " + ent2);
+//			//System.out.println(ent1 + " : " + ent2 + " " + gol_relType_map.get(ent1 + " : " + ent2));
+//			eval(res_rel_tp_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
+//		}
+		int ctr = 0;
+		for(String goldPair : gold_rel_set) {
+			if(res_rel_set.contains(goldPair)) {
+				//System.out.println(goldPair);
+				ctr++;
+				res_rel_tp_set.add(goldPair);
+				//eval(res_rel_tp_map, gol_relType_map.get(goldPair), gold_entityType_map.get(ent1));
+			}
+		}
+		System.out.println(ctr);
 	}
 	
 	public static void ReadGoldAnn() throws IOException {
@@ -116,6 +146,7 @@ public class REV2 {
 		        	} else {
 		        		//System.out.println(ent1 + " : " + ent2);
 		        	}
+		        	//System.out.println(ent1 + " : " + ent2);
 		        }
 		   
 		        reader.close();
@@ -148,6 +179,8 @@ public class REV2 {
 					NodeList nameElementTag1 = elementTag1.getElementsByTagName("Name");
 					NodeList nameElementTag2 = elementTag2.getElementsByTagName("Name");
 					
+					String relType = eElement.getElementsByTagName("Category").item(0).getTextContent();
+					
 					String entType1 = tag1.replace(nameElementTag1.item(0).getTextContent(), "").trim();
 					String entType2 = tag2.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
 					entType2 = entType2.replaceAll("\\[", "\\\\[").replaceAll("\\]", "\\\\]");
@@ -173,14 +206,26 @@ public class REV2 {
 			        	String ent2 = nameElementTag2.item(j).getTextContent().toLowerCase();
 			        	
 						if(gold_rel_set.contains(ent1 + " : " + ent2)) {
-							res_rel_tp_set.add(ent1 + " : " + ent2);
-							//System.out.println(ent1 + " : " + ent2);
-							eval(res_rel_tp_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
+							if(!res_rel_tp_set.contains(ent1 + " : " + ent2)) {
+								res_rel_tp_set.add(ent1 + " : " + ent2);
+								//System.out.println(ent1 + " : " + ent2 + " " + gol_relType_map.get(ent1 + " : " + ent2));
+								if(res_rel_tp_set.contains(ent1 + " : " + ent2)) {
+									eval(res_rel_tp_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
+								}
+							}
 						}
 						if(!res_rel_set.contains(ent1 + " : " + ent2)) {
 							res_rel_set.add(ent1 + " : " + ent2);
-							ctr++;
+							res_relType_map.put(ent1 + " : " + ent2, relType);
+							
+							if(res_rel_set.contains(ent1 + " : " + ent2)) {
+								//System.out.println(ent1 + " : " + ent2);
+								eval(res_rel_map, relType, entType1);
+							}
+			        		
+							//ctr++;
 						}
+						//System.out.println(ent1 + " : " + ent2);
 						//eval(res_rel_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
 						
 					}
@@ -327,7 +372,7 @@ public class REV2 {
 			count++;
 			hm.put("belongsToClass", count);
 		} else {
-			//System.out.println(entType);
+			System.out.println("entType: " + entType + "\trelType: " + relType);
 		}
 	}
 	
@@ -359,7 +404,6 @@ public class REV2 {
 		System.out.println("" + res_rel_tp_map.get("belongsToFamily") +"//" + gold_rel_tp_map.get("belongsToFamily"));
 		System.out.println("" + res_rel_tp_map.get("isLocatedIn") +"//" + gold_rel_tp_map.get("isLocatedIn"));
 		System.out.println("" + res_rel_tp_map.get("belongsToGenus") +"//" + gold_rel_tp_map.get("belongsToGenus"));
-		
 		System.out.println("" + res_rel_tp_map.get("hasPreparation") +"//" + gold_rel_tp_map.get("hasPreparation"));
 		System.out.println("" + res_rel_tp_map.get("hasSynonym") +"//" + gold_rel_tp_map.get("hasSynonym"));
 		System.out.println("" + res_rel_tp_map.get("hasMedicinalPlantPart") +"//" + gold_rel_tp_map.get("hasMedicinalPlantPart"));
@@ -367,5 +411,23 @@ public class REV2 {
 		System.out.println("" + res_rel_tp_map.get("utilizePart") +"//" + gold_rel_tp_map.get("utilizePart"));
 		System.out.println("" + res_rel_tp_map.get("hasSynonymParent") +"//" + gold_rel_tp_map.get("hasSynonymParent"));
 		System.out.println("" + res_rel_tp_map.get("belongsToClass") +"//" + gold_rel_tp_map.get("belongsToClass"));
+		
+		System.out.println("\n\n" + res_rel_map.get("hasBiologicalActivity"));
+		System.out.println("" + res_rel_map.get("hasCompoundP"));
+		System.out.println("" + res_rel_map.get("hasCompoundS"));
+		System.out.println("" + res_rel_map.get("hasCompoundM"));
+		System.out.println("" + res_rel_map.get("treats"));
+		System.out.println("" + res_rel_map.get("hasSynonymPlantPart"));
+		System.out.println("" + res_rel_map.get("affects"));
+		System.out.println("" + res_rel_map.get("belongsToFamily"));
+		System.out.println("" + res_rel_map.get("isLocatedIn"));
+		System.out.println("" + res_rel_map.get("belongsToGenus"));
+		System.out.println("" + res_rel_map.get("hasPreparation"));
+		System.out.println("" + res_rel_map.get("hasSynonym"));
+		System.out.println("" + res_rel_map.get("hasMedicinalPlantPart"));
+		System.out.println("" + res_rel_map.get("appliedTo"));
+		System.out.println("" + res_rel_map.get("utilizePart"));
+		System.out.println("" + res_rel_map.get("hasSynonymParent"));
+		System.out.println("" + res_rel_map.get("belongsToClass"));
 	}
 }

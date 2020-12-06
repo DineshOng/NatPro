@@ -1,4 +1,4 @@
-package bratAnn;
+package evaluator;
 
 import java.util.Collection;
 
