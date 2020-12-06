@@ -1,0 +1,207 @@
+T1	Location 663 673	Binan City
+T2	Location 675 681	Laguna
+T3	Location 683 694	Philippines
+T4	Location 759 765	Manila
+T5	Location 767 778	Philippines
+T6	Location 841 847	Manila
+T7	Location 849 860	Philippines
+T10	Location 970 976	Taipei
+T11	Location 978 984	Taiwan
+T13	Synonym 1160 1174	Cycas edentata
+T14	Compound 1199 1227	9alphaH-isopimara-7,15-diene
+T15	Compound 1230 1261	betasitosteryl fatty acid ester
+T16	Compound 1281 1296	beta-sitosterol
+T17	Compound 1301 1313	stigmasterol
+T18	PlantPart 1323 1327	bark
+T19	Compound 1333 1364	betasitosteryl fatty acid ester
+T20	Compound 1383 1398	beta-sitosterol
+T21	Compound 1404 1416	stigmasterol
+T22	PlantPart 1427 1438	sclerotesta
+T23	Compound 1458 1485	alphaH-Isopimara-7,15-diene
+T24	Synonym 1661 1675	Cycas edentata
+T25	Family 1677 1687	Cycadaceae
+T26	Compound 1689 1717	9alphaH-isopimara-7,15-diene
+T27	Compound 1719 1751	beta-sitosteryl fatty acid ester
+T28	Compound 1753 1768	beta-sitosterol
+T29	Compound 1770 1782	stigmasterol
+T30	Family 1806 1816	Cycadaceae
+T31	Synonym 1960 1974	Cycas edentata
+T32	Location 1988 1997	Indonesia
+T33	Location 1999 2007	Malaysia
+T34	Location 2009 2016	Myanmar
+T35	Location 2018 2029	Philippines
+T36	Location 2031 2039	Thailand
+T37	Location 2044 2051	Vietnam
+T38	Synonym 2120 2134	Cycas edentata
+T39	Location 2267 2278	Philippines
+T40	Compound 2319 2327	squalene
+T41	Compound 2329 2343	betasitosterol
+T42	Compound 2345 2357	stigmasterol
+T43	Compound 2363 2376	triglycerides
+T44	PlantPart 2386 2396	sarcotesta
+T45	Compound 2398 2413	beta-sitosterol
+T46	Compound 2415 2427	stigmasterol
+T47	Compound 2429 2442	triglycerides
+T48	Compound 2447 2471	phytyl fatty acid esters
+T49	PlantPart 2481 2490	endotesta
+T50	Compound 2492 2507	beta-sitosterol
+T51	Compound 2509 2521	stigmasterol
+T52	Compound 2523 2536	triglycerides
+T53	Compound 2542 2575	beta-sitosteryl fatty acid esters
+T54	PlantPart 2585 2596	sclerotesta
+T55	Compound 2602 2635	beta-sitosteryl fatty acid esters
+T56	PlantPart 2645 2649	bark
+T57	Synonym 2653 2674	Cycas sancti-lasallei
+T58	Synonym 2700 2715	Cycas lacrimans
+T59	Compound 2724 2737	isopimaran-ol
+T61	Compound 2770 2796	9alphaH-isopimara,15-diene
+T62	Compound 2801 2817	triacylglycerols
+T63	PlantPart 2827 2831	bark
+T64	Compound 2833 2849	triacylglycerols
+T65	Compound 2851 2861	oleic acid
+T66	Compound 2867 2886	1,2-dioleylglycerol
+T67	Compound 2906 2922	triacylglycerols
+T68	Compound 2924 2939	beta-sitosterol
+T69	Compound 2945 2957	stigmasterol
+T71	Compound 2987 3002	beta-sitosterol
+T72	PlantPart 3012 3017	roots
+T73	Compound 3023 3039	triacylglycerols
+T74	Compound 3044 3059	beta-sitosterol
+T75	PlantPart 3069 3078	endotesta
+T76	PlantPart 3083 3094	sclerotesta
+T77	Compound 3131 3158	9alphaH-isopimara-7,15diene
+T78	Compound 3161 3193	beta-sitosteryl fatty acid ester
+T79	Compound 3213 3228	beta-sitosterol
+T80	Compound 3233 3245	stigmasterol
+T81	PlantPart 3276 3280	bark
+T82	Compound 3286 3317	betasitosteryl fatty acid ester
+T83	Compound 3336 3351	beta-sitosterol
+T84	Compound 3357 3369	stigmasterol
+T85	PlantPart 3401 3412	sclerotesta
+T86	Synonym 3416 3430	Cycas edentata
+T87	Compound 3917 3925	vanillin
+T88	Synonym 3978 3990	Cycas edenta
+T89	PlantPart 3991 3995	bark
+T90	PlantPart 4000 4011	sclerotesta
+T91	Compound 4255 4282	alphaH-Isopimara-7,15-diene
+T92	Synonym 4833 4847	Cycas edentata
+T93	PlantPart 5496 5500	Bark
+T94	PlantPart 5515 5519	bark
+T95	Synonym 5523 5537	Cycas edentata
+T99	Compound 5752 5759	acetone
+T100	Compound 5868 5895	alphaH-Isopimara-7,15-diene
+T101	Compound 5949 5956	acetone
+T102	Compound 5998 6029	betasitosteryl fatty acid ester
+T103	Compound 6073 6104	betasitosteryl fatty acid ester
+T104	Compound 6106 6137	betasitosteryl fatty acid ester
+T105	Compound 6188 6195	acetone
+T106	Compound 6307 6322	beta-sitosterol
+T107	Compound 6328 6340	stigmasterol
+T108	PlantPart 6432 6443	Sclerotesta
+T109	PlantPart 6458 6469	sclerotesta
+T110	Synonym 6473 6487	Cycas edentata
+T114	Compound 6638 6665	alphaH-Isopimara-7,15-diene
+T115	Compound 6728 6735	acetone
+T116	Compound 6852 6883	betasitosteryl fatty acid ester
+T117	Compound 6885 6916	betasitosteryl fatty acid ester
+T118	Compound 6967 6974	acetone
+T119	Compound 7016 7047	betasitosteryl fatty acid ester
+T120	Compound 7105 7120	beta-sitosterol
+T121	Compound 7126 7138	stigmasterol
+T122	Compound 7183 7210	alphaH-Isopimara-7,15-diene
+T123	Compound 7705 7738	Beta-Sitosteryl Fatty Acid Esters
+T124	Compound 8466 8481	Beta-Sitosterol
+T125	Compound 8906 8918	Stigmasterol
+T127	Synonym 9401 9415	Cycas edentata
+T128	PlantPart 9438 9442	bark
+T129	PlantPart 9461 9472	sclerotesta
+T130	Compound 9492 9519	alphaH-Isopimara-7,15-diene
+T131	Compound 9662 9689	9alphaHisopimara-7,15-diene
+T132	Compound 9797 9828	betasitosteryl fatty acid ester
+T133	Compound 9832 9847	beta-sitosterol
+T134	Compound 9855 9867	stigmasterol
+T135	Compound 9886 9901	beta-sitosterol
+T136	Compound 9907 9919	stigmasterol
+T137	Compound 10009 10024	beta-sitosterol
+T138	Compound 10041 10068	alphaH-Isopimara-7,15-diene
+T139	Compound 10089 10101	stigmasterol
+T140	Compound 10118 10145	alphaH-Isopimara-7,15-diene
+R1	hasSynonymPlantPart Arg1:T13 Arg2:T18	
+R2	hasSynonymPlantPart Arg1:T13 Arg2:T22	
+R3	hasCompound Arg1:T18 Arg2:T14	
+R4	hasCompound Arg1:T18 Arg2:T15	
+R5	hasCompound Arg1:T18 Arg2:T16	
+R6	hasCompound Arg1:T18 Arg2:T17	
+R7	hasCompound Arg1:T22 Arg2:T19	
+R8	hasCompound Arg1:T22 Arg2:T20	
+R9	hasCompound Arg1:T22 Arg2:T21	
+R10	belongsToFamily Arg1:T31 Arg2:T30	
+R11	isLocatedIn Arg1:T31 Arg2:T32	
+R12	isLocatedIn Arg1:T31 Arg2:T33	
+R13	isLocatedIn Arg1:T31 Arg2:T34	
+R14	isLocatedIn Arg1:T31 Arg2:T35	
+R15	isLocatedIn Arg1:T31 Arg2:T36	
+R16	isLocatedIn Arg1:T31 Arg2:T37	
+R17	hasSynonymPlantPart Arg1:T57 Arg2:T44	
+R18	hasSynonymPlantPart Arg1:T57 Arg2:T54	
+R19	hasSynonymPlantPart Arg1:T57 Arg2:T56	
+R20	hasCompound Arg1:T44 Arg2:T40	
+R21	hasCompound Arg1:T44 Arg2:T41	
+R22	hasCompound Arg1:T44 Arg2:T42	
+R23	hasCompound Arg1:T44 Arg2:T43	
+R24	hasSynonymPlantPart Arg1:T57 Arg2:T49	
+R25	hasCompound Arg1:T49 Arg2:T45	
+R26	hasCompound Arg1:T49 Arg2:T46	
+R27	hasCompound Arg1:T49 Arg2:T47	
+R28	hasCompound Arg1:T49 Arg2:T48	
+R29	hasCompound Arg1:T54 Arg2:T50	
+R30	hasCompound Arg1:T54 Arg2:T51	
+R31	hasCompound Arg1:T54 Arg2:T52	
+R32	hasCompound Arg1:T54 Arg2:T53	
+R33	hasCompound Arg1:T56 Arg2:T55	
+T8	PlantPart 2747 2761	megasporophyll
+R34	hasSynonymPlantPart Arg1:T58 Arg2:T8	
+R35	hasSynonymPlantPart Arg1:T58 Arg2:T63	
+T9	PlantPart 2967 2974	petiole
+T12	PlantPart 2979 2985	rachis
+R36	hasSynonymPlantPart Arg1:T58 Arg2:T9	
+R37	hasSynonymPlantPart Arg1:T58 Arg2:T12	
+R38	hasSynonymPlantPart Arg1:T58 Arg2:T72	
+R39	hasSynonymPlantPart Arg1:T58 Arg2:T75	
+R40	hasSynonymPlantPart Arg1:T58 Arg2:T76	
+R41	hasCompound Arg1:T8 Arg2:T59	
+R42	hasCompound Arg1:T63 Arg2:T61	
+R43	hasCompound Arg1:T63 Arg2:T62	
+T60	PlantPart 2896 2904	leaflets
+R45	hasSynonymPlantPart Arg1:T58 Arg2:T60	
+R44	hasCompound Arg1:T60 Arg2:T64	
+R46	hasCompound Arg1:T60 Arg2:T65	
+R47	hasCompound Arg1:T60 Arg2:T66	
+R48	hasCompound Arg1:T9 Arg2:T67	
+R49	hasCompound Arg1:T9 Arg2:T68	
+R50	hasCompound Arg1:T9 Arg2:T69	
+R51	hasCompound Arg1:T12 Arg2:T67	
+R52	hasCompound Arg1:T12 Arg2:T68	
+R53	hasCompound Arg1:T12 Arg2:T69	
+R54	hasCompound Arg1:T72 Arg2:T71	
+R55	hasCompound Arg1:T75 Arg2:T73	
+R56	hasCompound Arg1:T75 Arg2:T74	
+R57	hasCompound Arg1:T76 Arg2:T73	
+R58	hasCompound Arg1:T76 Arg2:T74	
+R59	hasSynonymPlantPart Arg1:T86 Arg2:T81	
+R60	hasSynonymPlantPart Arg1:T86 Arg2:T85	
+R61	hasCompound Arg1:T81 Arg2:T77	
+R62	hasCompound Arg1:T81 Arg2:T78	
+R63	hasCompound Arg1:T81 Arg2:T79	
+R64	hasCompound Arg1:T81 Arg2:T80	
+R65	hasCompound Arg1:T85 Arg2:T82	
+R66	hasCompound Arg1:T85 Arg2:T83	
+R67	hasCompound Arg1:T85 Arg2:T84	
+R68	hasSynonymPlantPart Arg1:T88 Arg2:T89	
+R69	hasSynonymPlantPart Arg1:T88 Arg2:T90	
+R70	hasSynonymPlantPart Arg1:T95 Arg2:T94	
+T70	Preparation 5551 5617	ground in a blender, soaked in CH2Cl2 for 3 days and then filtered
+R71	utilizePart Arg1:T70 Arg2:T94	
+R72	hasSynonymPlantPart Arg1:T110 Arg2:T109	
+R74	hasSynonymPlantPart Arg1:T127 Arg2:T128	
+R75	hasSynonymPlantPart Arg1:T127 Arg2:T129	

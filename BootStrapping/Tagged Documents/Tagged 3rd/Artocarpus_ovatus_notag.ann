@@ -1,0 +1,370 @@
+T1	Synonym 145 162	Artocarpus ovatus
+T2	Compound 231 242	Polyprenols
+T4	Location 538 545	Belgium
+T5	Location 894 899	CODEN
+T6	Location 901 904	USA
+T7	Synonym 975 992	Artocarpus ovatus
+T8	Location 1163 1173	Binan City
+T9	Location 1175 1181	Laguna
+T10	Location 1183 1194	Philippines
+T11	Location 1246 1257	Taft Avenue
+T12	Location 1259 1265	Manila
+T13	Location 1273 1284	Philippines
+T16	Location 1362 1368	Taipei
+T17	Location 1374 1380	Taiwan
+T20	PlantPart 1446 1452	leaves
+T21	Synonym 1456 1473	Artocarpus ovatus
+T22	Compound 1505 1522	3beta-friedelinol
+T23	Compound 1525 1533	squalene
+T24	Compound 1536 1546	polyprenol
+T25	Compound 1549 1565	triacylglycerols
+T26	Compound 1572 1585	chlorophyll a
+T27	Compound 1606 1622	beta-Friedelinol
+T28	Compound 1624 1632	Squalene
+T29	Compound 1634 1645	Polyprenols
+T30	Compound 1647 1663	Triacylglycerols
+T31	Compound 1665 1678	chlorophyll a
+T32	Synonym 1792 1809	Artocarpus ovatus
+T33	Compound 1822 1839	3beta-friedelinol
+T34	Compound 1841 1849	squalene
+T35	Compound 1851 1861	polyprenol
+T36	Compound 1863 1879	triacylglycerols
+T37	Compound 1881 1894	chlorophyll a
+T38	Synonym 1898 1915	Artocarpus ovatus
+T39	Compound 2019 2035	beta-Friedelinol
+T40	Compound 2037 2045	Squalene
+T41	PlantPart 2145 2150	seeds
+T42	Synonym 2222 2239	Artocarpus ovatus
+T44	Family 2403 2411	Moraceae
+T45	PlantPart 2441 2446	fruit
+T48	BioAct 2688 2701	antibacterial
+T49	BioAct 2719 2728	antiviral
+T50	BioAct 2730 2740	antifungal
+T53	Illness 2903 2911	diabetes
+T54	ChemicalClass 2981 2991	flavonoids
+T55	Compound 3026 3033	jacalin
+T57	Location 3137 3148	Philippines
+T58	Compound 3188 3199	friedelinol
+T59	Compound 3201 3209	squalene
+T60	Compound 3211 3226	beta-sitosterol
+T61	Compound 3228 3240	stigmasterol
+T62	Compound 3245 3251	phytol
+T63	PlantPart 3261 3267	leaves
+T64	Synonym 3271 3289	Artocarpus camansi
+T65	PlantPart 3301 3306	stems
+T66	Compound 3315 3325	polyprenol
+T67	Compound 3327 3339	cycloartenol
+T68	Compound 3344 3364	cycloartenol acetate
+T69	PlantPart 3389 3395	leaves
+T70	Synonym 3399 3417	Artocarpus altilis
+T71	Compound 3426 3441	beta-sitosterol
+T72	Compound 3443 3456	triglycerides
+T73	Compound 3458 3466	squalene
+T74	Compound 3468 3478	polyprenol
+T75	Compound 3480 3486	lutein
+T76	Compound 3491 3502	fatty acids
+T77	Synonym 3510 3534	Artocarpus odoratissimus
+T78	Compound 3544 3559	beta-sitosterol
+T79	Compound 3561 3574	triglycerides
+T80	Compound 3579 3590	fatty acids
+T81	PlantPart 3613 3618	fruit
+T82	PlantPart 3623 3628	seeds
+T83	Compound 3634 3662	beta-sitosterol, fatty acids
+T84	PlantPart 3689 3699	fruit rind
+T85	PlantPart 3726 3731	fruit
+T86	Synonym 3735 3759	Artocarpus heterophyllus
+T87	Compound 3769 3782	cycloartenone
+T88	Compound 3784 3796	cycloartenol
+T89	Compound 3830 3838	Squalene
+T90	Compound 3895 3901	lupeol
+T91	Compound 3903 3914	alphaamyrin
+T92	Compound 3916 3927	beta-amyrin
+T93	Compound 3929 3952	lupeol fatty acid ester
+T94	Compound 3954 3983	alpha-amyrin fatty acid ester
+T95	Compound 3985 4012	beta-myrin fatty acid ester
+T96	Compound 4014 4021	betulin
+T97	Compound 4023 4052	3beta,28dihydroxyolean-12-ene
+T98	Compound 4054 4068	oleanolic acid
+T99	Compound 4070 4085	beta-sitosterol
+T100	Compound 4091 4104	chlorophyll a
+T101	PlantPart 4113 4118	twigs
+T102	Synonym 4122 4139	Artocarpus ovatus
+T103	Compound 4298 4315	3beta-friedelinol
+T104	Compound 4318 4326	squalene
+T105	Compound 4329 4339	polyprenol
+T106	Compound 4342 4358	triacylglycerols
+T107	Compound 4365 4378	chlorophyll a
+T110	PlantPart 4427 4433	leaves
+T111	Synonym 4437 4454	Artocarpus ovatus
+T112	Compound 4535 4551	beta-Friedelinol
+T113	Compound 4553 4561	Squalene
+T114	Compound 4563 4574	Polyprenols
+T115	Compound 4576 4592	Triacylglycerols
+T116	Compound 4666 4674	Squalene
+T117	Compound 4682 4693	Polyprenols
+T118	Compound 4695 4711	Triacylglycerols
+T119	Compound 4745 4761	beta-Friedelinol
+T120	Compound 4776 4789	Chlorophyll a
+T121	Compound 4791 4804	chlorophyll a
+T122	Compound 4879 4895	beta-Friedelinol
+T123	Compound 4897 4908	Polyprenols
+T124	Compound 4915 4923	Squalene
+T125	Compound 4932 4943	Polyprenols
+T126	Compound 4976 4992	Triacylglycerols
+T127	Compound 5011 5028	chain fatty acids
+T128	Synonym 5061 5078	Artocarpus ovatus
+T129	PlantPart 5079 5085	leaves
+T130	Compound 5087 5104	3beta-friedelinol
+T131	Compound 5107 5115	squalene
+T132	Compound 5118 5128	polyprenol
+T133	Compound 5131 5147	triacylglycerols
+T134	Compound 5154 5167	chlorophyll a
+T135	Compound 5556 5564	vanillin
+T136	Location 5650 5656	Bataan
+T137	Location 5658 5669	Philippines
+T138	Compound 5688 5696	vanillin
+T139	Synonym 5715 5732	Artocarpus ovatus
+T140	Location 5815 5826	Philippines
+T141	Location 5837 5848	Quezon City
+T142	Compound 6021 6037	beta-Friedelinol
+T144	PlantPart 6121 6127	leaves
+T145	Compound 6207 6214	acetone
+T146	Compound 6218 6233	dichloromethane
+T147	Compound 6498 6511	chlorophyll a
+T148	PlantPart 6751 6757	leaves
+T149	Synonym 6761 6778	Artocarpus ovatus
+T154	Compound 6943 6956	Chlorophyll a
+T155	Compound 7019 7026	acetone
+T156	Compound 7064 7071	acetone
+T157	Compound 7113 7124	Polyprenols
+T158	Compound 7169 7177	Squalene
+T159	Compound 7232 7239	acetone
+T160	Compound 7281 7294	chlorophyll a
+T161	Compound 7340 7351	Polyprenols
+T162	Compound 7364 7380	Triacylglycerols
+T163	Compound 7382 7395	chlorophyll a
+T164	Compound 7411 7418	acetone
+T165	Compound 7460 7471	Polyprenols
+T166	Compound 7516 7532	beta-Friedelinol
+T167	Compound 7534 7547	Chlorophyll a
+T168	Compound 7598 7605	acetone
+T169	Compound 7647 7663	Triacylglycerols
+T170	Compound 7709 7722	chlorophyll a
+T171	Compound 7787 7804	3beta-Friedelinol
+T172	Compound 7990 8006	beta-Friedelinol
+T173	Compound 8026 8037	Polyprenols
+T174	Compound 8495 8503	Squalene
+T175	Compound 8530 8543	chlorophyll a
+T176	Compound 8564 8580	beta-Friedelinol
+T177	Compound 8610 8626	beta-Friedelinol
+T178	Compound 8657 8673	beta-Friedelinol
+T179	Compound 9027 9037	Polyprenol
+T180	Compound 9064 9080	Triacylglycerols
+T181	Compound 9112 9125	chlorophyll a
+T182	Compound 9141 9154	chlorophyll a
+T183	Compound 9176 9192	beta-Friedelinol
+T184	Compound 9222 9238	beta-Friedelinol
+T185	Compound 9265 9281	beta-Friedelinol
+T186	Compound 9306 9322	beta-Friedelinol
+T187	Compound 9689 9702	Chlorophyll a
+T188	Compound 9727 9738	Polyprenols
+T189	Compound 9794 9807	Chlorophyll a
+T190	Compound 9828 9844	Triacylglycerols
+T191	Compound 9846 9862	beta-Friedelinol
+T192	Compound 9875 9888	Chlorophyll a
+T193	Compound 9924 9935	Polyprenols
+T194	Compound 9955 9966	Polyprenols
+T195	Compound 9986 10002	beta-Friedelinol
+T196	Compound 10021 10029	Squalene
+T197	Compound 10037 10048	Polyprenols
+T198	Compound 10068 10084	Triacylglycerols
+T199	Compound 10103 10111	Squalene
+T200	Compound 10117 10125	Squalene
+T201	Compound 10145 10153	Squalene
+T202	Compound 10159 10167	Squalene
+T203	Compound 10188 10204	Triacylglycerols
+T204	Compound 10223 10239	beta-Friedelinol
+T205	Compound 10270 10283	Chlorophyll a
+T206	Compound 10303 10314	Polyprenols
+T207	Compound 10415 10431	Triacylglycerols
+T208	Compound 10449 10462	chlorophyll a
+T209	Compound 10491 10507	beta-Friedelinol
+T210	Compound 10546 10559	Chlorophyll a
+T211	Compound 10596 10609	Chlorophyll a
+T212	Compound 10638 10651	Chlorophyll a
+T213	Compound 10664 10680	Triacylglycerols
+T214	Compound 10707 10723	Triacylglycerols
+T215	Compound 10733 10749	Triacylglycerols
+T216	Compound 10751 10759	Squalene
+T217	Compound 10764 10780	Triacylglycerols
+T218	Compound 10782 10790	glyceryl
+T219	Compound 10798 10814	Triacylglycerols
+T220	Compound 10824 10837	Chlorophyll a
+T221	Compound 10845 10861	Triacylglycerols
+T222	Compound 10863 10871	glyceryl
+T223	Compound 10879 10892	chlorophyll a
+T224	Compound 10901 10909	glyceryl
+T225	Compound 10916 10924	Squalene
+T226	Compound 10956 10969	chlorophyll a
+T227	Compound 10991 10999	Squalene
+T228	Compound 11012 11025	Chlorophyll a
+T229	Compound 11052 11060	Squalene
+T230	Compound 11073 11086	Chlorophyll a
+T231	Compound 11113 11129	beta-Friedelinol
+T232	Compound 11155 11171	beta-Friedelinol
+T233	Compound 11193 11209	beta-Friedelinol
+T234	Compound 11237 11245	Squalene
+T235	Compound 11264 11272	Squalene
+T236	Compound 11291 11299	Squalene
+T237	Compound 11339 11347	glyceryl
+T238	Compound 11361 11369	glyceryl
+T241	PlantPart 11948 11954	leaves
+T242	Synonym 11958 11975	Artocarpus ovatus
+T243	Compound 12000 12017	3beta-friedelinol
+T244	Compound 12026 12034	squalene
+T245	Compound 12045 12055	polyprenol
+T246	Compound 12066 12079	triglycerides
+T247	Compound 12086 12099	chlorophyll a
+T248	Compound 12127 12143	beta-Friedelinol
+T249	Compound 12145 12153	Squalene
+T250	Compound 12155 12166	Polyprenols
+T251	Compound 12168 12184	Triacylglycerols
+T252	Compound 12186 12199	chlorophyll a
+T253	Compound 12431 12447	beta-Friedelinol
+T254	BioAct 12460 12473	antibacterial
+T255	BioAct 12513 12523	antifungal
+T256	Compound 12535 12543	Squalene
+T257	Compound 12736 12744	Squalene
+T258	BioAct 12872 12883	antioxidant
+T259	ChemicalClass 12926 12938	tocotrienols
+T260	ChemicalClass 12940 12951	carotenoids
+T261	Compound 12953 12961	squalene
+T262	BioAct 12984 13002	anti-proliferative
+T264	Compound 13080 13088	squalene
+T265	Compound 13205 13213	squalene
+T266	Compound 13234 13245	Polyprenols
+T267	Compound 13305 13320	polysaccharides
+T268	Compound 13379 13389	Polyprenol
+T269	Synonym 13395 13408	Ginkgo biloba
+T270	Compound 13492 13503	Polyprenols
+T271	Synonym 13509 13522	Ginkgo biloba
+T273	Compound 13590 13600	polyprenol
+T274	Synonym 13606 13622	Coccinia grandis
+T275	Compound 13678 13694	Triacylglycerols
+T276	BioAct 13705 13718	antimicrobial
+T282	Compound 13840 13853	triglycerides
+T283	Compound 14000 14013	Chlorophyll a
+T284	Compound 14114 14127	chlorophyll a
+T286	BioAct 14183 14200	anti-inflammatory
+T287	Compound 14233 14240	oxalate
+T289	Compound 14447 14458	chlorophyll
+R1	hasSynonymPlantPart Arg1:T21 Arg2:T20	
+R2	hasCompound Arg1:T20 Arg2:T22	
+R3	hasCompound Arg1:T20 Arg2:T23	
+R4	hasCompound Arg1:T20 Arg2:T24	
+R5	hasCompound Arg1:T20 Arg2:T25	
+R6	hasCompound Arg1:T20 Arg2:T26	
+R7	hasCompound Arg1:T38 Arg2:T39	
+R8	hasCompound Arg1:T38 Arg2:T40	
+T3	Genus 2391 2401	Artocarpus
+T14	Genus 2575 2585	Artocarpus
+R9	belongsToFamily Arg1:T3 Arg2:T44	
+T15	Genus 2621 2631	Artocarpus
+T18	BioAct 2742 2755	antiplatelet,
+T19	BioAct 2756 2769	antiarthritic
+T43	BioAct 2771 2792	tyrosinase inhibitory
+T46	BioAct 2797 2809	cytotoxicity
+T47	Genus 2812 2822	Artocarpus
+T51	Illness 2862 2874	inflammation
+T52	Illness 2876 2890	malarial fever
+T290	Illness 2892 2901	diarrhoea
+T291	Illness 2916 2934	tapeworm infection
+T292	ChemicalClass 2993 3004	stilbenoids
+T293	Compound 3006 3021	arylbenzofurons
+T56	Genus 3113 3123	Artocarpus
+R10	hasSynonymPlantPart Arg1:T64 Arg2:T63	
+R11	hasSynonymPlantPart Arg1:T64 Arg2:T65	
+R12	hasCompound Arg1:T63 Arg2:T58	
+R13	hasCompound Arg1:T63 Arg2:T59	
+R14	hasCompound Arg1:T63 Arg2:T60	
+R15	hasCompound Arg1:T63 Arg2:T61	
+R16	hasCompound Arg1:T63 Arg2:T62	
+R17	hasCompound Arg1:T65 Arg2:T66	
+R18	hasCompound Arg1:T65 Arg2:T67	
+R19	hasCompound Arg1:T65 Arg2:T68	
+R20	hasSynonymPlantPart Arg1:T70 Arg2:T69	
+R21	hasSynonymPlantPart Arg1:T77 Arg2:T81	
+R22	hasSynonymPlantPart Arg1:T77 Arg2:T82	
+R23	hasSynonymPlantPart Arg1:T77 Arg2:T84	
+T294	Compound 3667 3679	hydrocarbons
+R24	hasCompound Arg1:T81 Arg2:T78	
+R25	hasCompound Arg1:T81 Arg2:T79	
+R26	hasCompound Arg1:T81 Arg2:T80	
+R27	hasCompound Arg1:T82 Arg2:T78	
+R28	hasCompound Arg1:T82 Arg2:T79	
+R29	hasCompound Arg1:T82 Arg2:T80	
+R30	hasCompound Arg1:T84 Arg2:T83	
+R31	hasCompound Arg1:T84 Arg2:T294	
+R32	hasSynonymPlantPart Arg1:T86 Arg2:T85	
+T295	Compound 3840 3853	3-butanediols
+R33	hasCompound Arg1:T85 Arg2:T87	
+R34	hasCompound Arg1:T85 Arg2:T88	
+R35	hasCompound Arg1:T85 Arg2:T89	
+R36	hasCompound Arg1:T85 Arg2:T295	
+R37	hasSynonymPlantPart Arg1:T102 Arg2:T101	
+R38	hasCompound Arg1:T101 Arg2:T90	
+R39	hasCompound Arg1:T101 Arg2:T91	
+R40	hasCompound Arg1:T101 Arg2:T92	
+R41	hasCompound Arg1:T101 Arg2:T93	
+R42	hasCompound Arg1:T101 Arg2:T94	
+R43	hasCompound Arg1:T101 Arg2:T95	
+R44	hasCompound Arg1:T101 Arg2:T96	
+R45	hasCompound Arg1:T101 Arg2:T97	
+R46	hasCompound Arg1:T101 Arg2:T98	
+R47	hasCompound Arg1:T101 Arg2:T99	
+R48	hasCompound Arg1:T101 Arg2:T100	
+R49	hasSynonymPlantPart Arg1:T111 Arg2:T110	
+R50	hasCompound Arg1:T110 Arg2:T103	
+R51	hasCompound Arg1:T110 Arg2:T104	
+R52	hasCompound Arg1:T110 Arg2:T105	
+R53	hasCompound Arg1:T110 Arg2:T106	
+R54	hasCompound Arg1:T110 Arg2:T107	
+R55	hasSynonymPlantPart Arg1:T128 Arg2:T129	
+R56	hasCompound Arg1:T129 Arg2:T130	
+R57	hasCompound Arg1:T129 Arg2:T131	
+R58	hasCompound Arg1:T129 Arg2:T132	
+R59	hasCompound Arg1:T129 Arg2:T133	
+R60	hasCompound Arg1:T129 Arg2:T134	
+R61	hasCompound Arg1:T144 Arg2:T145	
+R62	hasCompound Arg1:T144 Arg2:T146	
+R63	hasSynonymPlantPart Arg1:T149 Arg2:T148	
+R65	hasSynonymPlantPart Arg1:T242 Arg2:T241	
+R66	hasCompound Arg1:T241 Arg2:T243	
+R67	hasCompound Arg1:T241 Arg2:T244	
+R68	hasCompound Arg1:T241 Arg2:T245	
+R69	hasCompound Arg1:T241 Arg2:T246	
+R70	hasCompound Arg1:T241 Arg2:T247	
+R71	hasBiologicalActivity Arg1:T253 Arg2:T254	
+T109	BioAct 12836 12849	hypolipidemic
+R72	hasBiologicalActivity Arg1:T257 Arg2:T109	
+R73	hasBiologicalActivity Arg1:T257 Arg2:T258	
+T143	Compound 12967 12974	oenzyme
+T150	Compound 13322 13336	peptidoglycans
+R74	hasCompound Arg1:T269 Arg2:T268	
+T151	BioAct 13421 13437	hepatoprotective
+R75	hasBiologicalActivity Arg1:T268 Arg2:T151	
+T152	BioAct 13536 13545	antitumor
+R76	hasCompound Arg1:T271 Arg2:T270	
+R77	hasBiologicalActivity Arg1:T270 Arg2:T152	
+R78	hasCompound Arg1:T274 Arg2:T273	
+T153	BioAct 13561 13577	antidyslipidemic
+R79	hasBiologicalActivity Arg1:T273 Arg2:T153	
+R80	hasBiologicalActivity Arg1:T275 Arg2:T276	
+T239	BioAct 14167 14180	wound healing
+R81	hasBiologicalActivity Arg1:T284 Arg2:T239	
+R82	hasBiologicalActivity Arg1:T284 Arg2:T286	
+T240	PlantPart 2451 2457	timber
+R64	hasBiologicalActivity Arg1:T261 Arg2:T262	
+T108	CellLine 13014 13033	breast cancer cells
+R83	affects Arg1:T262 Arg2:T108	
+R84	hasBiologicalActivity Arg1:T143 Arg2:T262	

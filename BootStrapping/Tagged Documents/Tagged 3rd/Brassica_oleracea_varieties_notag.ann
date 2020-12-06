@@ -1,0 +1,664 @@
+T1	Compound 86 98	trilinolenin
+T2	Location 148 153	CODEN
+T3	Location 154 157	USA
+T4	ChemicalClass 172 179	Sterols
+T5	Compound 181 194	triglycerides
+T6	Compound 199 219	essential fatty acid
+T7	Synonym 236 253	Brassica oleracea
+T8	Synonym 265 280	Brassica juncea
+T9	Synonym 285 301	Raphanus sativus
+T10	Location 574 584	Binan City
+T11	Location 586 592	Laguna
+T12	Location 594 605	Philippines
+T13	Location 657 668	Taft Avenue
+T14	Location 670 676	Manila
+T15	Location 678 689	Philippines
+T18	Location 767 773	Taipei
+T19	Location 779 785	Taiwan
+T21	PlantPart 826 832	leaves
+T22	Synonym 836 853	Brassica oleracea
+T23	Synonym 896 913	Brassica oleracea
+T24	PlantPart 946 950	stem
+T25	Synonym 954 971	Brassica oleracea
+T26	Compound 1005 1020	beta-sitosterol
+T27	Compound 1037 1050	triglycerides
+T28	Compound 1084 1096	stigmasterol
+T29	PlantPart 1142 1146	stem
+T30	Compound 1164 1184	essential fatty acid
+T31	Compound 1186 1199	linoleic acid
+T32	Synonym 1203 1218	Brassica juncea
+T33	PlantPart 1229 1235	leaves
+T34	Synonym 1240 1256	Raphanus sativus
+T35	PlantPart 1266 1271	roots
+T36	Compound 1281 1296	Beta-Sitosterol
+T37	Compound 1306 1327	essential fatty acids
+T38	Compound 1328 1341	Linoleic acid
+T39	Compound 1347 1367	alpha-linolenic acid
+T40	PlantPart 1379 1385	leaves
+T41	Compound 1399 1411	trilinolenin
+T42	Compound 1414 1420	lutein
+T43	Compound 1425 1438	beta-carotene
+T44	PlantPart 1454 1459	roots
+T45	Compound 1474 1487	triglycerides
+T46	BioAct 1530 1540	anticancer
+T47	Synonym 1564 1581	Brassica oleracea
+T48	Synonym 1620 1637	Brassica oleracea
+T49	Synonym 1663 1680	Brassica oleracea
+T50	Synonym 1705 1720	Brassica juncea
+T51	Synonym 1731 1747	Raphanus sativus
+T52	Compound 1757 1772	beta-sitosterol
+T53	Compound 1774 1787	triglycerides
+T54	Compound 1789 1802	linoleic acid
+T55	Compound 1804 1816	trilinolenin
+T56	Compound 1818 1832	linolenic acid
+T57	Compound 1834 1846	stigmasterol
+T58	Compound 1848 1854	lutein
+T59	Compound 1856 1869	beta-carotene
+T60	Family 1896 1908	Brassicaceae
+T61	Synonym 1924 1941	Brassica oleracea
+T62	Synonym 1981 1998	Brassica oleracea
+T63	Synonym 2025 2042	Brassica oleracea
+T64	Synonym 2068 2083	Brassica juncea
+T65	Synonym 2098 2114	Raphanus sativus
+T66	PlantPart 2327 2331	leaf
+T67	Synonym 2344 2361	Brassica oleracea
+T68	ChemicalClass 2403 2412	alkaloids
+T71	ChemicalClass 2479 2489	flavonoids
+T73	PlantPart 2601 2605	leaf
+T75	Synonym 2617 2634	Brassica oleracea
+T76	Synonym 2733 2750	Brassica oleracea
+T77	ChemicalClass 2817 2828	carotenoids
+T78	Synonym 2873 2890	Brassica oleracea
+T79	BioAct 2949 2959	anticancer
+T80	Compound 2212 2225	glucosinolate
+T81	Compound 3237 3249	trilinolenin
+T82	Compound 3296 3302	phenyl
+T83	ChemicalClass 3315 3324	flavonols
+T84	Compound 3387 3402	Beta-Sitosterol
+T85	Compound 3410 3422	stigmasterol
+T86	Compound 3540 3552	trilinolenin
+T87	Compound 3559 3572	Linoleic acid
+T88	Compound 3574 3594	alpha-linolenic acid
+T89	Compound 3601 3614	Beta-carotene
+T90	Compound 3622 3628	lutein
+T91	Compound 3661 3674	triglycerides
+T92	Compound 3688 3701	linoleic acid
+T93	Compound 3703 3717	linolenic acid
+T94	Synonym 3743 3760	Brassica oleracea
+T95	Synonym 3772 3787	Brassica juncea
+T96	Synonym 3792 3808	Raphanus sativus
+T97	Compound 3810 3825	beta-sitosterol
+T98	Compound 3828 3840	triglyceride
+T99	Compound 3843 3855	stigmasterol
+T100	Compound 3858 3871	linoleic acid
+T101	Compound 3874 3886	trilinolenin
+T102	Compound 3889 3909	alpha-linolenic acid
+T103	Compound 3912 3918	lutein
+T104	Compound 3923 3936	beta-carotene
+T105	Compound 3937 3952	beta-Sitosterol
+T106	ChemicalClass 3964 3970	sterol
+T107	Synonym 3974 3991	Brassica oleracea
+T108	ChemicalClass 4064 4074	flavonoids
+T109	Compound 4139 4152	beta-carotene
+T110	Compound 4154 4169	alphatocopherol
+T111	Compound 4201 4220	3,3'-Indolylmethane
+T112	Compound 4225 4242	indole-3-carbinol
+T113	Compound 4327 4339	trilinolenin
+T114	Compound 4584 4596	sulforaphane
+T118	BodyPart 4784 4790	breast
+T119	CellLine 4831 4835	MCF7
+T120	Compound 4866 4878	sulforaphane
+T121	Compound 4960 4968	aldehyde
+T122	PlantPart 5053 5058	seeds
+T123	Synonym 5062 5077	Brassica juncea
+T124	Location 5099 5104	Hebei
+T125	Location 5106 5113	Shaanxi
+T126	Location 5118 5135	Shandong Province
+T128	Compound 5171 5189	diallyl trisulfide
+T129	Compound 5201 5225	3-butenyl isothiocyanate
+T130	Compound 5226 5238	trilinolenin
+T131	Synonym 5274 5289	Brassica juncea
+T132	PlantPart 5290 5294	seed
+T133	Compound 5308 5323	beta-sitosterol
+T134	Compound 5325 5336	campesterol
+T135	Compound 5341 5355	brassicasterol
+T136	Synonym 5387 5402	Brassica juncea
+T138	ChemicalClass 5449 5456	sterols
+T139	Compound 5458 5472	brassicasterol
+T141	Synonym 5509 5525	Raphanus sativus
+T142	Compound 5645 5662	major fatty acids
+T143	PlantPart 5666 5670	seed
+T144	Compound 5708 5716	linoleic
+T145	Compound 5722 5737	linolenic acids
+T146	Compound 5749 5766	major fatty acids
+T147	Compound 5796 5810	linolenic acid
+T148	Compound 5821 5832	erucic acid
+T149	Compound 5847 5860	palmitic acid
+T151	Synonym 5969 5986	Brassica oleracea
+T152	Synonym 6034 6051	Brassica oleracea
+T153	Synonym 6067 6084	Brassica oleracea
+T154	Synonym 6109 6124	Brassica juncea
+T155	Synonym 6138 6154	Raphanus sativus
+T156	BioAct 6256 6266	anticancer
+T157	ChemicalClass 6321 6328	sterols
+T158	Compound 6330 6343	triglycerides
+T159	Compound 6348 6368	essential fatty acid
+T160	Synonym 6406 6423	Brassica oleracea
+T161	Synonym 6435 6450	Brassica juncea
+T162	Synonym 6455 6471	Raphanus sativus
+T163	ChemicalClass 6474 6485	Carotenoids
+T164	Synonym 6534 6549	Brassica juncea
+T165	BioAct 6598 6608	anticancer
+T166	Compound 7010 7018	vanillin
+T167	Synonym 7213 7230	Brassica oleracea
+T168	Synonym 7270 7287	Brassica oleracea
+T169	Synonym 7316 7333	Brassica oleracea
+T170	Location 7392 7406	Quirino Avenue
+T171	Location 7408 7414	Manila
+T172	Location 7416 7427	Philippines
+T173	Location 7499 7514	Barangay Palola
+T174	Location 7516 7522	Lucban
+T175	Location 7524 7530	Quezon
+T176	Synonym 7547 7564	Brassica oleracea
+T177	Synonym 7583 7598	Brassica juncea
+T178	Location 7632 7646	Quirino Avenue
+T179	Location 7648 7654	Manila
+T180	Location 7656 7667	Philippines
+T181	PlantPart 7687 7692	roots
+T182	Synonym 7741 7758	Brassica oleracea
+T183	Synonym 7777 7793	Raphanus sativus
+T184	PlantPart 7886 7892	leaves
+T185	Synonym 7896 7913	Brassica oleracea
+T186	Synonym 7961 7978	Brassica oleracea
+T187	Compound 8008 8020	trilinolenin
+T188	PlantPart 8046 8051	stems
+T189	Synonym 8055 8072	Brassica oleracea
+T190	Compound 8101 8113	trilinolenin
+T193	Compound 8295 8315	alpha-linolenic acid
+T194	Compound 8317 8330	triglycerides
+T195	Compound 8356 8368	stigmasterol
+T196	Compound 8370 8383	Linoleic acid
+T197	Compound 8404 8424	alpha-linolenic acid
+T198	PlantPart 8456 8462	leaves
+T199	Compound 8468 8481	Linoleic acid
+T200	PlantPart 8497 8502	roots
+T201	Compound 8507 8519	trilinolenin
+T204	PlantPart 8635 8641	leaves
+T205	Compound 8645 8658	Beta-carotene
+T206	PlantPart 8674 8679	roots
+T207	Compound 8685 8697	trilinolenin
+T208	Compound 8814 8821	acetone
+T209	Compound 8900 8915	Beta-Sitosterol
+T210	Compound 9231 9243	trilinolenin
+T211	Compound 9334 9346	trilinolenin
+T212	Compound 9566 9573	acetone
+T214	Compound 9769 9782	Linoleic acid
+T215	Compound 9840 9853	triglycerides
+T216	Compound 9913 9926	triglycerides
+T217	Compound 9985 10000	Beta-Sitosterol
+T218	Compound 10006 10018	stigmasterol
+T219	Compound 10102 10109	acetone
+T221	Compound 10313 10325	stigmasterol
+T222	Compound 10335 10348	ethyl acetate
+T223	Compound 10378 10391	triglycerides
+T224	Compound 10458 10471	ethyl acetate
+T225	Compound 10541 10554	triglycerides
+T226	Compound 10565 10578	ethyl acetate
+T227	Compound 10608 10623	Beta-Sitosterol
+T228	Compound 10725 10738	ethyl acetate
+T229	Compound 10768 10781	Linoleic acid
+T230	Compound 10801 10808	acetone
+T233	Compound 10910 10922	stigmasterol
+T234	Compound 10968 10981	Linoleic acid
+T235	Compound 11000 11007	acetone
+T237	Compound 11185 11197	stigmasterol
+T238	Compound 11242 11255	triglycerides
+T239	Compound 11315 11328	triglycerides
+T240	Compound 11374 11389	Beta-Sitosterol
+T241	Compound 11444 11451	acetone
+T242	PlantPart 11516 11522	leaves
+T244	Compound 11553 11565	stigmasterol
+T245	Compound 11572 11585	triglycerides
+T246	Compound 11625 11638	Beta-carotene
+T247	Compound 11693 11700	acetone
+T248	PlantPart 11765 11771	leaves
+T250	Compound 11802 11814	stigmasterol
+T251	Compound 11821 11827	lutein
+T252	Compound 11867 11879	trilinolenin
+T253	Compound 11906 11913	acetone
+T255	Compound 12105 12118	triglycerides
+T256	Compound 12164 12179	Beta-Sitosterol
+T257	Compound 12181 12194	Beta-carotene
+T258	Compound 12285 12297	stigmasterol
+T259	Compound 12374 12387	Linoleic acid
+T260	Compound 12393 12413	alpha-linolenic acid
+T261	Compound 12442 12448	lutein
+T262	Compound 12506 12513	diethyl
+T263	Compound 12530 12537	acetone
+T264	PlantPart 12601 12606	roots
+T266	Compound 12637 12649	stigmasterol
+T267	Compound 12694 12707	triglycerides
+T268	Compound 12709 12729	alpha-linolenic acid
+T269	Compound 12745 12752	acetone
+T270	PlantPart 12816 12821	roots
+T272	Compound 12852 12865	triglycerides
+T273	Compound 12911 12926	Beta-Sitosterol
+T274	Compound 12928 12943	Beta-Sitosterol
+T275	Compound 12994 13001	acetone
+T276	PlantPart 13065 13070	roots
+T278	Compound 13101 13114	Linoleic acid
+T279	Compound 13188 13201	Linoleic acid
+T280	Compound 13207 13227	alpha-linolenic acid
+T281	Compound 13229 13241	stigmasterol
+T283	PlantPart 13288 13294	leaves
+T284	Synonym 13298 13315	Brassica oleracea
+T285	Synonym 13358 13375	Brassica oleracea
+T286	PlantPart 10874 10878	stem
+T287	Synonym 13416 13433	Brassica oleracea
+T288	Compound 13466 13481	Beta-Sitosterol
+T289	Compound 13487 13500	triglycerides
+T290	Compound 13531 13543	stigmasterol
+T291	PlantPart 13408 13412	stem
+T292	Compound 13606 13619	Linoleic acid
+T293	Compound 13639 13654	Beta-Sitosterol
+T294	Compound 13656 13669	triglycerides
+T295	Compound 13671 13683	stigmasterol
+T296	Compound 13689 13702	Linoleic acid
+T297	Compound 13798 13812	betasitosterol
+T298	Compound 13827 13839	triglyceride
+T299	Compound 13842 13854	stigmasterol
+T300	Compound 13859 13872	linoleic acid
+T302	PlantPart 13926 13932	leaves
+T303	Synonym 13936 13951	Brassica juncea
+T304	PlantPart 13970 13975	roots
+T305	Synonym 13979 13995	Raphanus sativus
+T306	Compound 14013 14028	Beta-Sitosterol
+T307	Compound 14038 14059	essential fatty acids
+T308	Compound 14061 14074	Linoleic acid
+T309	Compound 14080 14100	alpha-linolenic acid
+T310	PlantPart 14112 14118	leaves
+T311	Compound 14133 14145	trilinolenin
+T312	Compound 14148 14154	lutein
+T313	Compound 14159 14172	beta-carotene
+T314	PlantPart 14188 14193	roots
+T315	Compound 14207 14220	triglycerides
+T316	Compound 14240 14252	trilinolenin
+T317	Compound 14254 14274	alpha-linolenic acid
+T318	Compound 14276 14282	lutein
+T319	Compound 14288 14301	Beta-carotene
+T320	Compound 14397 14409	trilinolenin
+T321	Compound 14412 14432	alpha-linolenic acid
+T322	Compound 14435 14441	lutein
+T323	Compound 14446 14459	beta-carotene
+T324	Compound 14493 14513	alpha-linolenic acid
+T325	Compound 14521 14533	triglyceride
+T326	Compound 14586 14592	lutein
+T327	Compound 14632 14645	triglycerides
+T328	Compound 14678 14690	trilinolenin
+T329	Compound 14714 14727	linoleic acid
+T330	Compound 14785 14797	trilinolenin
+T331	Compound 14872 14892	alpha-linolenic acid
+T332	Compound 14618 14627	methylene
+T333	Compound 14931 14944	triglycerides
+T334	Compound 14946 14959	Beta-carotene
+T335	Compound 14989 15001	trilinolenin
+T336	Compound 15041 15053	triglyceride
+T337	Compound 15078 15084	lutein
+T338	Compound 15107 15127	alpha-linolenic acid
+T339	Compound 15147 15161	linolenic acid
+T340	Compound 15166 15179	linoleic acid
+T341	Compound 15187 15200	triglycerides
+T343	Compound 15264 15276	triglyceride
+T344	Compound 15291 15303	trilinolenin
+T345	Compound 15350 15356	lutein
+T346	Compound 15450 15462	triglyceride
+T347	Compound 15489 15509	alpha-linolenic acid
+T348	Compound 15514 15527	linoleic acid
+T349	Compound 15613 15619	lutein
+T350	Compound 15642 15648	lutein
+T351	Compound 15662 15673	fatty acids
+T352	Compound 15727 15747	alpha-linolenic acid
+T353	Compound 15752 15765	linoleic acid
+T354	Compound 15851 15857	lutein
+T355	Compound 15880 15886	lutein
+T356	Compound 15900 15911	fatty acids
+T357	Compound 16067 16087	alpha-linolenic acid
+T358	Compound 16116 16131	Beta-Sitosterol
+T359	Compound 16133 16146	triglycerides
+T360	Compound 16148 16160	stigmasterol
+T361	Compound 16162 16175	Linoleic acid
+T362	Compound 16177 16189	trilinolenin
+T363	Compound 16191 16211	alpha-linolenic acid
+T364	Compound 16213 16219	lutein
+T365	Compound 16221 16234	Beta-carotene
+T366	BioAct 16257 16267	anticancer
+T367	Compound 16280 16295	Beta-Sitosterol
+T368	BodyPart 16352 16358	breast
+T369	CellLine 16359 16364	MCF-7
+T370	CellLine 16369 16379	MDA-MB-231
+T371	Compound 16403 16418	Beta-Sitosterol
+T372	Compound 16497 16512	Beta-Sitosterol
+T373	Compound 16544 16556	beta-catenin
+T374	Compound 16621 16636	Beta-Sitosterol
+T375	BioAct 16649 16659	anticancer
+T376	Compound 16692 16707	Beta-Sitosterol
+T377	CellLine 16738 16744	NPC1L1
+T378	Compound 16806 16821	Beta-Sitosterol
+T379	Compound 16930 16936	murine
+T381	Compound 16977 16989	stigmasterol
+T382	Compound 17152 17164	triglyceride
+T383	Compound 17166 17177	trilinolein
+T384	Compound 17242 17254	triglyceride
+T385	Compound 17313 17325	triglyceride
+T386	Compound 17357 17369	triglyceride
+T387	Compound 17539 17552	triglycerides
+T388	Compound 17699 17711	Trilinolenin
+T389	Compound 17767 17780	Linoleic acid
+T390	Compound 17796 17815	omega-6 fatty acids
+T391	Compound 17818 17831	Linoleic acid
+T392	Compound 17906 17919	Linoleic acid
+T394	Compound 18027 18054	polyunsaturated fatty acids
+T395	Compound 18067 18088	eicosapentaenoic acid
+T396	Compound 18096 18116	docosahexaenoic acid
+T397	Compound 18127 18147	alpha-linolenic acid
+T398	Compound 18160 18189	their fatty acid ethyl esters
+T399	BioAct 18208 18221	antibacterial
+T405	BioAct 18425 18442	anti-inflammatory
+T406	Compound 18617 18637	alpha-linolenic acid
+T407	Compound 18780 18800	alpha-linolenic acid
+T408	Compound 18850 18862	arachidonate
+T409	Compound 18933 18953	Gamma-Linolenic acid
+T410	Compound 18964 18984	alpha-linolenic acid
+T411	Compound 19049 19064	Beta-Sitosterol
+T412	Compound 19190 19203	triglycerides
+T413	Compound 19256 19262	lutein
+T414	Compound 19452 19465	retinoic acid
+T415	Compound 19477 19483	lutein
+T416	Compound 19658 19664	lutein
+T417	Compound 19746 19759	Beta-carotene
+T418	Compound 19902 19915	beta-carotene
+T419	Compound 20003 20016	beta-carotene
+T420	Compound 20061 20069	cytokine
+T421	Compound 20207 20219	trilinolenin
+T423	Compound 20395 20410	beta-sitosterol
+T424	Compound 20424 20437	triglycerides
+T425	Compound 20442 20463	essential fatty acids
+T426	Compound 20465 20473	linoleic
+T427	Compound 20478 20493	linolenic acids
+T428	BioAct 20526 20536	anticancer
+T429	BioAct 20560 20570	anticancer
+T430	ChemicalClass 20707 20714	sterols
+T431	Compound 20728 20741	triglycerides
+T432	Compound 20746 20767	essential fatty acids
+R1	hasSynonymPlantPart Arg1:T22 Arg2:T21	
+R2	hasSynonymPlantPart Arg1:T25 Arg2:T24	
+R3	hasCompound Arg1:T24 Arg2:T26	
+R4	hasCompound Arg1:T21 Arg2:T26	
+R5	hasCompound Arg1:T24 Arg2:T27	
+R6	hasCompound Arg1:T21 Arg2:T26	
+R7	hasCompound Arg1:T21 Arg2:T27	
+R8	hasCompound Arg1:T29 Arg2:T30	
+R9	hasCompound Arg1:T29 Arg2:T31	
+R10	hasSynonymPlantPart Arg1:T32 Arg2:T33	
+R11	hasSynonymPlantPart Arg1:T34 Arg2:T35	
+R12	hasCompound Arg1:T33 Arg2:T36	
+R13	hasCompound Arg1:T33 Arg2:T37	
+R14	hasCompound Arg1:T33 Arg2:T38	
+R15	hasCompound Arg1:T33 Arg2:T39	
+R16	hasCompound Arg1:T35 Arg2:T36	
+R17	hasCompound Arg1:T35 Arg2:T37	
+R18	hasCompound Arg1:T40 Arg2:T41	
+R19	hasCompound Arg1:T40 Arg2:T42	
+R20	hasCompound Arg1:T40 Arg2:T43	
+R21	hasCompound Arg1:T44 Arg2:T45	
+R22	hasBiologicalActivity Arg1:T41 Arg2:T46	
+R23	hasBiologicalActivity Arg1:T42 Arg2:T46	
+R24	hasBiologicalActivity Arg1:T43 Arg2:T46	
+R25	hasBiologicalActivity Arg1:T45 Arg2:T46	
+R26	belongsToFamily Arg1:T61 Arg2:T60	
+T16	BioAct 2157 2182	cancer preventing effects
+R27	hasBiologicalActivity Arg1:T80 Arg2:T16	
+R29	hasCompound Arg1:T63 Arg2:T80	
+R30	hasCompound Arg1:T64 Arg2:T80	
+R31	hasCompound Arg1:T65 Arg2:T80	
+R32	hasSynonymPlantPart Arg1:T67 Arg2:T66	
+T20	ChemicalClass 2414 2421	tannins
+T69	ChemicalClass 2423 2431	saponins
+T70	ChemicalClass 2433 2440	phenols
+T72	ChemicalClass 2442 2452	glycosides
+T74	ChemicalClass 2454 2462	steroids
+T127	ChemicalClass 2464 2474	terpenoids
+T213	BioAct 2573 2585	anti-oxidant
+R33	hasSynonymPlantPart Arg1:T75 Arg2:T73	
+T220	BioAct 2673 2689	hepatoprotective
+T433	ChemicalClass 2796 2804	phenolic
+T232	ChemicalClass 2833 2847	glucosinolates
+T434	ChemicalClass 4048 4062	glucosinolates
+T435	Compound 4601 4607	erucin
+R36	hasSynonymPlantPart Arg1:T123 Arg2:T122	
+R37	isLocatedIn Arg1:T123 Arg2:T124	
+R38	isLocatedIn Arg1:T123 Arg2:T125	
+R39	isLocatedIn Arg1:T123 Arg2:T126	
+R40	hasCompound Arg1:T122 Arg2:T128	
+R41	hasCompound Arg1:T122 Arg2:T129	
+R42	hasCompound Arg1:T122 Arg2:T130	
+T115	ChemicalClass 5411 5425	glucosinolates
+T436	ChemicalClass 5427 5436	ascorbate
+R43	belongsToClass Arg1:T139 Arg2:T138	
+T140	Compound 5474 5484	sitosterol
+T437	Compound 5489 5505	brassinosteroids
+R44	belongsToClass Arg1:T140 Arg2:T138	
+R45	belongsToClass Arg1:T437 Arg2:T138	
+T137	ChemicalClass 5438 5444	folate
+T438	ChemicalClass 5579 5594	glucosinolates,
+T439	ChemicalClass 5595 5610	isothiocyanates
+T440	ChemicalClass 5612 5621	phenolics
+T441	ChemicalClass 5626 5638	anthocyanins
+R46	hasCompound Arg1:T143 Arg2:T142	
+T442	Compound 5693 5699	erucic
+T443	Compound 5701 5706	oleic
+R47	hasCompound Arg1:T160 Arg2:T159	
+R48	hasCompound Arg1:T160 Arg2:T158	
+R49	hasCompound Arg1:T161 Arg2:T159	
+R50	hasCompound Arg1:T161 Arg2:T158	
+R51	hasCompound Arg1:T162 Arg2:T158	
+R52	hasCompound Arg1:T162 Arg2:T159	
+T150	Location 7485 7497	Sitio Usiwan
+R53	hasSynonymPlantPart Arg1:T185 Arg2:T184	
+R54	hasCompound Arg1:T186 Arg2:T187	
+R55	hasSynonymPlantPart Arg1:T189 Arg2:T188	
+R56	hasCompound Arg1:T189 Arg2:T190	
+R59	hasCompound Arg1:T198 Arg2:T199	
+R60	hasCompound Arg1:T200 Arg2:T201	
+R61	hasCompound Arg1:T204 Arg2:T205	
+R62	hasCompound Arg1:T206 Arg2:T207	
+R65	hasCompound Arg1:T286 Arg2:T233	
+R66	hasCompound Arg1:T286 Arg2:T234	
+R67	hasCompound Arg1:T242 Arg2:T244	
+R68	hasCompound Arg1:T242 Arg2:T245	
+R69	hasCompound Arg1:T242 Arg2:T246	
+R70	hasCompound Arg1:T248 Arg2:T250	
+R71	hasCompound Arg1:T248 Arg2:T251	
+R72	hasCompound Arg1:T248 Arg2:T252	
+R73	hasCompound Arg1:T264 Arg2:T266	
+R74	hasCompound Arg1:T264 Arg2:T267	
+R75	hasCompound Arg1:T264 Arg2:T268	
+R76	hasCompound Arg1:T270 Arg2:T272	
+R77	hasCompound Arg1:T270 Arg2:T273	
+R78	hasCompound Arg1:T270 Arg2:T274	
+R79	hasCompound Arg1:T276 Arg2:T278	
+R80	hasCompound Arg1:T276 Arg2:T279	
+R81	hasCompound Arg1:T276 Arg2:T280	
+R82	hasCompound Arg1:T276 Arg2:T281	
+R83	hasSynonymPlantPart Arg1:T284 Arg2:T283	
+R84	hasSynonymPlantPart Arg1:T287 Arg2:T291	
+R85	hasCompound Arg1:T283 Arg2:T288	
+R86	hasCompound Arg1:T283 Arg2:T289	
+R87	hasCompound Arg1:T283 Arg2:T290	
+R88	hasCompound Arg1:T283 Arg2:T292	
+R89	hasCompound Arg1:T283 Arg2:T293	
+R90	hasCompound Arg1:T283 Arg2:T294	
+R91	hasCompound Arg1:T283 Arg2:T295	
+R92	hasCompound Arg1:T283 Arg2:T296	
+R93	hasCompound Arg1:T283 Arg2:T297	
+R94	hasCompound Arg1:T283 Arg2:T298	
+R95	hasCompound Arg1:T283 Arg2:T299	
+R96	hasCompound Arg1:T283 Arg2:T300	
+R97	hasCompound Arg1:T291 Arg2:T300	
+R98	hasCompound Arg1:T291 Arg2:T299	
+R99	hasCompound Arg1:T291 Arg2:T298	
+R100	hasCompound Arg1:T291 Arg2:T297	
+R101	hasCompound Arg1:T291 Arg2:T296	
+R102	hasCompound Arg1:T291 Arg2:T295	
+R103	hasCompound Arg1:T291 Arg2:T294	
+R104	hasCompound Arg1:T291 Arg2:T293	
+R105	hasCompound Arg1:T291 Arg2:T292	
+R106	hasCompound Arg1:T291 Arg2:T290	
+R107	hasCompound Arg1:T291 Arg2:T289	
+R108	hasCompound Arg1:T291 Arg2:T288	
+R109	hasSynonymPlantPart Arg1:T303 Arg2:T302	
+R110	hasSynonymPlantPart Arg1:T305 Arg2:T304	
+R111	hasCompound Arg1:T302 Arg2:T306	
+R112	hasCompound Arg1:T302 Arg2:T307	
+R113	hasCompound Arg1:T302 Arg2:T308	
+R114	hasCompound Arg1:T302 Arg2:T309	
+R115	hasCompound Arg1:T304 Arg2:T306	
+R116	hasCompound Arg1:T304 Arg2:T307	
+R117	hasCompound Arg1:T304 Arg2:T308	
+R118	hasCompound Arg1:T304 Arg2:T309	
+R119	hasCompound Arg1:T310 Arg2:T311	
+R120	hasCompound Arg1:T310 Arg2:T312	
+R121	hasCompound Arg1:T310 Arg2:T313	
+R122	hasCompound Arg1:T314 Arg2:T315	
+R123	hasCompound Arg1:T314 Arg2:T316	
+R124	hasCompound Arg1:T314 Arg2:T317	
+R125	hasCompound Arg1:T314 Arg2:T318	
+R126	hasCompound Arg1:T314 Arg2:T319	
+R127	hasBiologicalActivity Arg1:T357 Arg2:T366	
+R128	hasBiologicalActivity Arg1:T358 Arg2:T366	
+R129	hasBiologicalActivity Arg1:T359 Arg2:T366	
+R130	hasBiologicalActivity Arg1:T360 Arg2:T366	
+R131	hasBiologicalActivity Arg1:T361 Arg2:T366	
+R132	hasBiologicalActivity Arg1:T362 Arg2:T366	
+R133	hasBiologicalActivity Arg1:T363 Arg2:T366	
+R134	hasBiologicalActivity Arg1:T364 Arg2:T366	
+R135	hasBiologicalActivity Arg1:T365 Arg2:T366	
+T202	BioAct 16317 16334	growth inhibitory
+R136	hasBiologicalActivity Arg1:T367 Arg2:T202	
+R137	affects Arg1:T202 Arg2:T369	
+R138	affects Arg1:T202 Arg2:T370	
+T203	Illness 16466 16494	benign prostatic hyperplasia
+T231	Illness 16669 16690	colon carcinogenesis.
+R139	hasBiologicalActivity Arg1:T373 Arg2:T375	
+R140	hasBiologicalActivity Arg1:T374 Arg2:T375	
+R141	hasBiologicalActivity Arg1:T372 Arg2:T375	
+T236	Compound 16937 16949	fibrosarcoma
+T249	BioAct 17335 17347	anti-oxidant
+R144	hasBiologicalActivity Arg1:T385 Arg2:T249	
+R145	hasBiologicalActivity Arg1:T398 Arg2:T399	
+R146	hasBiologicalActivity Arg1:T394 Arg2:T399	
+R147	hasBiologicalActivity Arg1:T395 Arg2:T399	
+R148	hasBiologicalActivity Arg1:T396 Arg2:T399	
+R149	hasBiologicalActivity Arg1:T397 Arg2:T399	
+R150	hasBiologicalActivity Arg1:T423 Arg2:T428	
+R151	hasBiologicalActivity Arg1:T424 Arg2:T428	
+R152	hasBiologicalActivity Arg1:T425 Arg2:T428	
+R153	hasBiologicalActivity Arg1:T426 Arg2:T428	
+R154	hasBiologicalActivity Arg1:T427 Arg2:T428	
+T277	MedicinalPlant 1058 1069	red cabbage
+T282	MedicinalPlant 1109 1128	green/white cabbage
+T301	MedicinalPlant 1133 1141	broccoli
+R158	hasMedicinalPlantPart Arg1:T301 Arg2:T29	
+R159	hasMedicinalPlantPart Arg1:T282 Arg2:T29	
+R160	hasCompound Arg1:T277 Arg2:T28	
+T342	MedicinalPlant 1220 1227	mustard
+R161	hasSynonym Arg1:T342 Arg2:T32	
+T380	MedicinalPlant 1258 1264	radish
+R162	hasSynonym Arg1:T380 Arg2:T34	
+R163	hasCompound Arg1:T35 Arg2:T38	
+R164	hasCompound Arg1:T35 Arg2:T39	
+T393	MedicinalPlant 1371 1378	Mustard
+R165	hasMedicinalPlantPart Arg1:T393 Arg2:T40	
+T422	MedicinalPlant 1447 1453	radish
+R166	hasMedicinalPlantPart Arg1:T422 Arg2:T44	
+T444	MedicinalPlant 2085 2092	mustard
+R167	hasSynonym Arg1:T444 Arg2:T64	
+T445	MedicinalPlant 2116 2122	radish
+R168	hasSynonym Arg1:T445 Arg2:T65	
+T17	Compound 2278 2293	isothiocyanates
+T254	CellLine 2976 2980	HeLa
+T265	CellLine 2985 2989	HepG
+R28	affects Arg1:T79 Arg2:T254	
+R155	affects Arg1:T79 Arg2:T265	
+T271	ChemicalClass 3329 3341	anthocyanins
+T446	BioAct 3357 3369	antioxidants
+R156	hasBiologicalActivity Arg1:T82 Arg2:T446	
+T447	MedicinalPlant 3373 3384	red cabbage
+R157	hasCompound Arg1:T447 Arg2:T82	
+T448	BioAct 4118 4130	antioxidants
+R169	hasBiologicalActivity Arg1:T109 Arg2:T448	
+R170	hasBiologicalActivity Arg1:T110 Arg2:T448	
+T449	Compound 4171 4178	indoles
+R171	hasBiologicalActivity Arg1:T449 Arg2:T448	
+T450	Compound 4183 4198	isothiocyanates
+T451	MedicinalPlant 4574 4582	broccoli
+R172	hasBiologicalActivity Arg1:T450 Arg2:T448	
+T452	Compound 4540 4555	isothiocyanates
+R173	hasCompound Arg1:T451 Arg2:T452	
+T116	CellLine 4840 4846	SUM159
+T117	MedicinalPlant 6100 6107	mustard
+R34	hasSynonym Arg1:T117 Arg2:T154	
+T453	MedicinalPlant 6130 6136	radish
+R35	hasSynonym Arg1:T453 Arg2:T155	
+R57	hasSynonymPlantPart Arg1:T186 Arg2:T184	
+T191	MedicinalPlant 8448 8455	mustard
+R58	hasMedicinalPlantPart Arg1:T191 Arg2:T198	
+T454	MedicinalPlant 8490 8496	radish
+R174	hasMedicinalPlantPart Arg1:T454 Arg2:T200	
+T192	MedicinalPlant 8627 8634	mustard
+R63	hasMedicinalPlantPart Arg1:T192 Arg2:T204	
+T455	MedicinalPlant 8667 8673	radish
+R64	hasMedicinalPlantPart Arg1:T455 Arg2:T206	
+T456	MedicinalPlant 11508 11515	mustard
+R175	hasMedicinalPlantPart Arg1:T456 Arg2:T242	
+T457	MedicinalPlant 11757 11764	mustard
+R176	hasMedicinalPlantPart Arg1:T457 Arg2:T248	
+T458	MedicinalPlant 12594 12600	radish
+T459	MedicinalPlant 12809 12815	radish
+R177	hasMedicinalPlantPart Arg1:T458 Arg2:T264	
+R178	hasMedicinalPlantPart Arg1:T459 Arg2:T270	
+T460	MedicinalPlant 13058 13064	radish
+R179	hasMedicinalPlantPart Arg1:T460 Arg2:T276	
+R180	hasSynonymPlantPart Arg1:T285 Arg2:T283	
+T461	MedicinalPlant 13953 13960	mustard
+R181	hasSynonym Arg1:T461 Arg2:T303	
+T462	MedicinalPlant 13997 14003	radish
+R182	hasSynonym Arg1:T462 Arg2:T305	
+T463	MedicinalPlant 14104 14111	Mustard
+R183	hasMedicinalPlantPart Arg1:T463 Arg2:T310	
+T464	MedicinalPlant 14181 14187	radish
+R184	hasMedicinalPlantPart Arg1:T464 Arg2:T314	
+T465	MedicinalPlant 15280 15287	mustard
+R185	hasCompound Arg1:T465 Arg2:T343	
+R186	hasCompound Arg1:T465 Arg2:T344	
+T466	MedicinalPlant 15220 15226	radish
+R187	hasCompound Arg1:T466 Arg2:T341	
+R188	hasCompound Arg1:T466 Arg2:T340	
+R189	hasCompound Arg1:T466 Arg2:T339	
+T467	MedicinalPlant 15466 15473	mustard
+R190	hasCompound Arg1:T467 Arg2:T346	
+T468	MedicinalPlant 15693 15699	radish
+R191	hasCompound Arg1:T468 Arg2:T347	
+R192	hasCompound Arg1:T468 Arg2:T348	
+T469	MedicinalPlant 15705 15712	mustard
+R193	hasCompound Arg1:T469 Arg2:T352	
+R194	hasCompound Arg1:T469 Arg2:T353	
+T243	BioAct 17188 17239	protective effects against cardiovascular disorders
+R142	hasBiologicalActivity Arg1:T383 Arg2:T243	
+R143	hasBiologicalActivity Arg1:T382 Arg2:T243	
+T470	BioAct 17391 17398	inhibit
+T471	CellLine 17413 17453	human non-small cell lung carcinoma A549
+R195	affects Arg1:T470 Arg2:T471	
+R196	hasBiologicalActivity Arg1:T386 Arg2:T470	
+T472	BioAct 17860 17874	anticarcinogen
+R197	hasBiologicalActivity Arg1:T391 Arg2:T472	
