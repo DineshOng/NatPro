@@ -1,0 +1,324 @@
+T1	Location 60 65	CODEN
+T2	Location 67 70	USA
+T3	Synonym 192 210	Alstonia scholaris
+T4	Location 364 375	Taft Avenue
+T5	Location 377 383	Manila
+T6	Location 390 401	Philippines
+T7	Location 503 513	Binan City
+T8	Location 515 521	Laguna
+T9	Location 528 539	Philippines
+T11	Location 670 679	Australia
+T14	PlantPart 778 784	leaves
+T15	Synonym 788 806	Alstonia scholaris
+T16	Compound 842 853	erythrodiol
+T17	Compound 856 861	uvaol
+T18	Compound 868 875	betulin
+T19	Compound 894 908	oleanolic acid
+T20	Compound 913 925	ursolic acid
+T21	Compound 942 961	beta-amyrin acetate
+T22	Compound 966 986	alpha-amyrin acetate
+T23	Compound 1007 1022	beta-sitosterol
+T24	Compound 1027 1039	stigmasterol
+T25	Compound 1056 1064	squalene
+T26	Compound 1067 1127	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T27	Compound 1134 1147	chlorophyll a
+T28	Compound 1168 1176	squalene
+T29	Compound 1178 1238	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T30	Compound 1240 1253	chlorophyll a
+T31	Synonym 1336 1354	Alstonia scholaris
+T32	Family 1356 1367	Apocynaceae
+T33	Compound 1369 1380	erythrodiol
+T34	Compound 1382 1387	uvaol
+T35	Compound 1389 1400	erythrodiol
+T36	Compound 1402 1409	betulin
+T37	Compound 1411 1425	oleanolic acid
+T38	Compound 1427 1439	ursolic acid
+T39	Compound 1441 1459	betaamyrin acetate
+T40	Compound 1461 1481	alpha-amyrin acetate
+T41	Compound 1483 1498	beta-sitosterol
+T42	Compound 1500 1512	stigmasterol
+T43	Compound 1514 1522	squalene
+T44	Compound 1524 1584	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T45	Compound 1586 1599	chlorophyll a
+T46	Synonym 1603 1621	Alstonia scholaris
+T47	MedicinalPlant 1652 1656	dita
+T48	Illness 1687 1692	fever
+T49	Illness 1702 1710	diarrhea
+T50	Illness 1712 1721	dysentery
+T51	Illness 1723 1732	beri-beri
+T53	Illness 1763 1769	ulcers
+T54	Compound 1815 1830	2,3-secofernane
+T55	ChemicalClass 1831 1844	triterpenoids
+T56	Compound 1846 1860	alstonic acids
+T57	Compound 1871 1912	3beta-acetate-24-nor-urs-4,12-diene ester
+T58	ChemicalClass 1913 1923	triterpene
+T59	Compound 1925 1963	3beta-hydroxy-24-nor-urs4,12,28-triene
+T60	ChemicalClass 1964 1974	triterpene
+T61	Compound 1976 2013	3,28-beta-diacetoxy-5-olea-triterpene
+T62	Compound 2015 2035	alpha-amyrin acetate
+T63	Compound 2041 2068	ursolic acid lupeol acetate
+T64	ChemicalClass 2071 2081	flavonoids
+T65	ChemicalClass 2084 2095	monoterpene
+T66	ChemicalClass 2098 2108	triterpene
+T67	Compound 2128 2161	megastigmane-3beta,4alpha,9-triol
+T68	Compound 2163 2187	7-megastigmene6, 9-triol
+T69	Compound 2192 2209	C13-norisoprenoid
+T70	Synonym 2215 2233	Alstonia scholaris
+T71	PlantPart 2261 2268	flowers
+T72	Synonym 2272 2290	Alstonia scholaris
+T73	Compound 2326 2361	1,2-dimethoxy-4-(2-propenyl)benzene
+T74	Compound 2371 2380	spinacene
+T75	Compound 2381 2441	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T76	Compound 2449 2477	1,54dibromotetrapentacontane
+T77	Compound 2478 2486	squalene
+T78	Compound 2496 2556	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T79	Compound 2596 2612	terpinyl acetate
+T80	Compound 2622 2630	linalool
+T81	Compound 2640 2655	tritetracontane
+T82	Compound 2665 2723	2-(3-methyl-1,3-butadienyl)-1,3,3-trimethyl-1-cyclohexanol
+T83	Compound 2733 2766	9-methyl-5methylene-8-decen-2-one
+T85	PlantPart 2831 2838	flowers
+T86	Synonym 2842 2860	Alstonia scholaris
+T87	Compound 2870 2882	alstoprenyol
+T88	Compound 2884 2921	3-beta-hydroxy-28-beta-acetoxy-5-olea
+T89	Compound 2923 2983	alstoprenylene 3beta-acetate-24-nor-urs-4,12,2'-triene ester
+T90	Compound 2985 3005	alpha-amyrin acetate
+T91	Compound 3007 3019	alpha-amyrin
+T92	Compound 3021 3035	lupeol acetate
+T93	Compound 3041 3080	3beta-hydroxy-24-nor-urs-4,12,28-triene
+T94	ChemicalClass 3122 3131	alkaloids
+T95	Synonym 3137 3155	Alstonia scholaris
+T96	Compound 3215 3229	cycloeucalenol
+T97	Compound 3231 3243	cycloartanol
+T98	Compound 3245 3251	lupeol
+T99	Compound 3253 3267	lupeol acetate
+T100	Compound 3273 3280	betulin
+T101	PlantPart 3290 3296	leaves
+T102	Synonym 3300 3318	Alstonia scholaris
+T103	Compound 3355 3375	alpha-amyrin acetate
+T104	Compound 3377 3396	beta-amyrin acetate
+T105	Compound 3401 3407	lupeol
+T106	Compound 3495 3525	alpha-amyrin fatty acid esters
+T107	Compound 3527 3556	beta-amyrin fatty acid esters
+T108	Compound 3558 3582	lupeol fatty acid esters
+T109	Compound 3587 3611	phytyl fatty acid esters
+T110	PlantPart 3621 3628	flowers
+T111	Synonym 3632 3650	Alstonia scholaris
+T112	PlantPart 3672 3678	leaves
+T113	Synonym 3682 3700	Alstonia scholaris
+T114	Compound 3722 3733	erythrodiol
+T115	Compound 3736 3741	uvaol
+T116	Compound 3748 3755	betulin
+T117	Compound 3758 3772	oleanolic acid
+T118	Compound 3777 3784	ursolic
+T119	Compound 3787 3806	beta-amyrin acetate
+T120	Compound 3811 3831	alpha-amyrin acetate
+T121	Compound 3834 3849	beta-sitosterol
+T122	Compound 3854 3866	stigmasterol
+T123	Compound 3869 3877	squalene
+T124	Compound 3880 3917	beta-sitosteryl-3beta-glucopyranoside
+T125	Compound 3922 3941	O-fatty acid esters
+T126	Compound 3948 3961	chlorophyll a
+T127	Compound 3982 3990	squalene
+T128	Compound 3992 4052	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T129	Compound 4054 4067	chlorophyll a
+T130	Compound 4107 4112	uvaol
+T131	Compound 4133 4149	2a):ursolic acid
+T132	Compound 4169 4193	3a):alpha-amyrin acetate
+T133	Compound 4219 4230	erythrodiol
+T134	Compound 4250 4264	oleanolic acid
+T135	Compound 4319 4326	betulin
+T136	Compound 4328 4336	squalene
+T137	Compound 4375 4388	chlorophyll a
+T138	Compound 4398 4413	beta-sitosterol
+T139	Compound 4418 4430	stigmasterol
+T140	Compound 4435 4495	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T141	Compound 4506 4522	chain fatty acid
+T142	Compound 4572 4583	erythrodiol
+T143	Compound 4586 4591	uvaol
+T144	Compound 4594 4601	betulin
+T145	Compound 4604 4618	oleanolic acid
+T146	Compound 4621 4628	ursolic
+T147	Compound 4631 4650	beta-amyrin acetate
+T148	Compound 4653 4673	alpha-amyrin acetate
+T149	Compound 4676 4691	beta-sitosterol
+T150	Compound 4694 4706	stigmasterol
+T151	Compound 4709 4717	squalene
+T152	Compound 4720 4780	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T153	Compound 4783 4796	chlorophyll a
+T154	PlantPart 4806 4812	leaves
+T155	Synonym 4816 4834	Alstonia scholaris
+T157	Synonym 5314 5332	Alstonia scholaris
+T158	PlantPart 5344 5350	leaves
+T159	Location 5400 5406	Manila
+T160	Compound 5659 5667	squalene
+T162	PlantPart 6296 6302	Leaves
+T163	Synonym 6306 6324	Alstonia scholaris
+T164	Synonym 6339 6357	Alstonia scholaris
+T165	PlantPart 6358 6364	leaves
+T171	Compound 6724 6732	squalene
+T173	Compound 6857 6881	3a):alpha-amyrin acetate
+T175	Compound 7033 7046	chlorophyll a
+T177	Compound 7383 7398	beta-sitosterol
+T178	Compound 7404 7416	stigmasterol
+T179	Compound 7598 7609	erythrodiol
+T180	Compound 7611 7616	uvaol
+T181	Compound 7622 7629	betulin
+T182	Compound 7631 7639	squalene
+T184	Compound 7801 7815	oleanolic acid
+T185	Compound 7821 7837	2a):ursolic acid
+T187	Compound 8093 8153	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T188	Compound 8237 8252	dichloromethane
+T190	PlantPart 8268 8274	leaves
+T191	Synonym 8278 8296	Alstonia scholaris
+T192	Compound 8305 8313	squalene
+T193	Compound 8315 8375	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T194	Compound 8377 8390	chlorophyll a
+T195	Compound 8413 8424	erythrodiol
+T196	Compound 8485 8496	erythrodiol
+T197	Compound 8499 8504	uvaol
+T198	Compound 8510 8515	uvaol
+T199	Compound 8518 8525	betulin
+T200	Compound 8531 8538	betulin
+T201	Compound 8541 8555	oleanolic acid
+T202	Compound 8561 8575	oleanolic acid
+T203	Compound 8578 8594	2a):ursolic acid
+T204	Compound 8600 8612	ursolic acid
+T205	Compound 8622 8641	beta-amyrin acetate
+T206	Compound 8644 8668	3a):alpha-amyrin acetate
+T207	Compound 8674 8694	alpha-amyrin acetate
+T208	Compound 8697 8712	beta-sitosterol
+T209	Compound 8718 8733	beta-sitosterol
+T210	Compound 8736 8748	stigmasterol
+T211	Compound 8754 8766	stigmasterol
+T212	Compound 8769 8777	squalene
+T213	Compound 8783 8791	squalene
+T214	Compound 8794 8854	beta-sitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T215	Compound 8860 8919	beta-sitosteryl-3betaglucopyranoside-6'-O-fatty acid esters
+T216	Compound 8926 8939	chlorophyll a
+T217	Compound 8945 8958	chlorophyll a
+T218	Compound 9100 9111	erythrodiol
+T219	Compound 9116 9124	squalene
+T220	Compound 9152 9157	uvaol
+T221	Compound 9162 9170	squalene
+T222	Compound 9202 9209	betulin
+T223	Compound 9300 9314	oleanolic acid
+T224	Compound 9316 9332	2a):ursolic acid
+T225	Compound 9436 9450	oleanolic acid
+T226	Compound 9455 9463	squalene
+T227	Compound 9492 9508	2a):ursolic acid
+T228	Compound 9513 9521	squalene
+T229	Compound 9580 9599	beta-amyrin acetate
+T230	Compound 9601 9625	3a):alpha-amyrin acetate
+T231	Compound 9735 9743	squalene
+T232	Compound 9772 9796	3a):alpha-amyrin acetate
+T233	Compound 9801 9809	squalene
+T234	Compound 10023 10038	beta-sitosterol
+T235	Compound 10043 10051	squalene
+T236	Compound 10066 10074	squalene
+T237	Compound 10089 10101	stigmasterol
+T238	Compound 10106 10114	squalene
+T239	Compound 10129 10137	squalene
+T240	Compound 10149 10157	squalene
+T241	Compound 10195 10203	squalene
+T242	Compound 10265 10280	beta-sitosterol
+T243	Compound 10286 10298	stigmasterol
+R1	hasSynonymPlantPart Arg1:T15 Arg2:T14	
+R2	hasSynonym Arg1:T47 Arg2:T46	
+T10	ChemicalClass 2117 2125	iridoids
+R3	hasCompound Arg1:T70 Arg2:T69	
+R4	hasCompound Arg1:T70 Arg2:T68	
+R5	hasCompound Arg1:T70 Arg2:T67	
+R6	hasCompound Arg1:T70 Arg2:T63	
+R7	hasCompound Arg1:T70 Arg2:T62	
+R8	hasCompound Arg1:T70 Arg2:T61	
+R9	hasCompound Arg1:T70 Arg2:T59	
+R10	hasCompound Arg1:T70 Arg2:T57	
+R11	hasCompound Arg1:T70 Arg2:T56	
+R12	hasCompound Arg1:T70 Arg2:T54	
+R13	hasSynonymPlantPart Arg1:T72 Arg2:T71	
+R14	hasCompound Arg1:T71 Arg2:T73	
+R15	hasCompound Arg1:T71 Arg2:T74	
+T12	Compound 2299 2315	2-dodecyloxirane
+R16	hasCompound Arg1:T71 Arg2:T12	
+R17	hasCompound Arg1:T71 Arg2:T75	
+R18	hasCompound Arg1:T71 Arg2:T76	
+R19	hasCompound Arg1:T71 Arg2:T77	
+R20	hasCompound Arg1:T71 Arg2:T78	
+T13	Compound 2558 2586	10,15-tetramethylheptadecane
+R21	hasCompound Arg1:T71 Arg2:T13	
+R22	hasCompound Arg1:T71 Arg2:T79	
+R23	hasCompound Arg1:T71 Arg2:T80	
+R24	hasCompound Arg1:T71 Arg2:T81	
+R25	hasCompound Arg1:T71 Arg2:T82	
+R26	hasCompound Arg1:T71 Arg2:T83	
+R27	hasSynonymPlantPart Arg1:T86 Arg2:T85	
+R28	hasCompound Arg1:T85 Arg2:T87	
+R29	hasCompound Arg1:T85 Arg2:T88	
+R30	hasCompound Arg1:T85 Arg2:T89	
+R31	hasCompound Arg1:T85 Arg2:T90	
+R32	hasCompound Arg1:T85 Arg2:T91	
+R33	hasCompound Arg1:T85 Arg2:T92	
+R34	hasCompound Arg1:T85 Arg2:T93	
+R35	hasSynonymPlantPart Arg1:T102 Arg2:T101	
+R36	hasCompound Arg1:T101 Arg2:T100	
+R37	hasCompound Arg1:T101 Arg2:T99	
+R38	hasCompound Arg1:T101 Arg2:T98	
+R39	hasCompound Arg1:T101 Arg2:T97	
+R40	hasCompound Arg1:T101 Arg2:T96	
+T84	Compound 3482 3489	acetate
+R41	hasSynonymPlantPart Arg1:T111 Arg2:T110	
+R42	hasCompound Arg1:T110 Arg2:T109	
+R43	hasCompound Arg1:T110 Arg2:T108	
+R44	hasCompound Arg1:T110 Arg2:T107	
+R45	hasCompound Arg1:T110 Arg2:T106	
+R46	hasCompound Arg1:T110 Arg2:T84	
+R47	hasSynonymPlantPart Arg1:T113 Arg2:T112	
+R48	hasCompound Arg1:T112 Arg2:T114	
+R49	hasCompound Arg1:T112 Arg2:T115	
+R50	hasCompound Arg1:T112 Arg2:T116	
+R51	hasCompound Arg1:T112 Arg2:T117	
+R52	hasCompound Arg1:T112 Arg2:T118	
+R53	hasCompound Arg1:T112 Arg2:T119	
+R54	hasCompound Arg1:T112 Arg2:T120	
+R55	hasCompound Arg1:T112 Arg2:T121	
+R56	hasCompound Arg1:T112 Arg2:T122	
+R57	hasCompound Arg1:T112 Arg2:T124	
+R58	hasCompound Arg1:T112 Arg2:T125	
+R59	hasCompound Arg1:T112 Arg2:T126	
+R60	hasSynonymPlantPart Arg1:T155 Arg2:T154	
+R61	hasCompound Arg1:T154 Arg2:T153	
+R62	hasCompound Arg1:T154 Arg2:T152	
+R63	hasCompound Arg1:T154 Arg2:T151	
+R64	hasCompound Arg1:T154 Arg2:T150	
+R65	hasCompound Arg1:T154 Arg2:T149	
+R66	hasCompound Arg1:T154 Arg2:T148	
+R67	hasCompound Arg1:T154 Arg2:T147	
+R68	hasCompound Arg1:T154 Arg2:T146	
+R69	hasCompound Arg1:T154 Arg2:T145	
+R70	hasCompound Arg1:T154 Arg2:T144	
+R71	hasCompound Arg1:T154 Arg2:T143	
+R72	hasCompound Arg1:T154 Arg2:T142	
+R73	isLocatedIn Arg1:T157 Arg2:T159	
+R74	hasSynonymPlantPart Arg1:T163 Arg2:T162	
+R75	hasSynonymPlantPart Arg1:T164 Arg2:T165	
+R77	hasSynonymPlantPart Arg1:T191 Arg2:T190	
+R78	hasCompound Arg1:T190 Arg2:T192	
+R79	hasCompound Arg1:T190 Arg2:T193	
+R80	hasCompound Arg1:T190 Arg2:T194	
+R81	hasCompound Arg1:T14 Arg2:T16	
+R82	hasCompound Arg1:T14 Arg2:T17	
+R83	hasCompound Arg1:T14 Arg2:T18	
+R84	hasCompound Arg1:T14 Arg2:T19	
+R85	hasCompound Arg1:T14 Arg2:T20	
+R86	hasCompound Arg1:T14 Arg2:T21	
+R87	hasCompound Arg1:T14 Arg2:T22	
+R88	hasCompound Arg1:T14 Arg2:T23	
+R89	hasCompound Arg1:T14 Arg2:T24	
+R90	hasCompound Arg1:T14 Arg2:T25	
+R91	hasCompound Arg1:T14 Arg2:T26	
+R92	hasCompound Arg1:T14 Arg2:T27	
+T52	Illness 1734 1757	congestion of the liver
+R93	hasCompound Arg1:T110 Arg2:T103	
+R94	hasCompound Arg1:T110 Arg2:T104	
+R95	hasCompound Arg1:T110 Arg2:T105	

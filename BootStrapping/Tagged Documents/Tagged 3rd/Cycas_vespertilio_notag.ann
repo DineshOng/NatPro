@@ -1,0 +1,329 @@
+T1	PlantPart 208 217	Male Cone
+T2	Synonym 221 238	Cycas vespertilio
+T3	Location 397 403	Manila
+T4	Location 410 421	Philippines
+T5	Location 484 490	Manila
+T6	Location 497 508	Philippines
+T8	Location 587 593	Taipei
+T9	Location 599 605	Taiwan
+T10	Location 707 717	Binan City
+T11	Location 719 725	Laguna
+T12	Location 732 743	Philippines
+T13	Synonym 808 825	Cycas vespertilio
+T14	PlantPart 826 835	male cone
+T15	Compound 860 871	pinoresinol
+T16	Compound 874 887	lariciresinol
+T17	Compound 902 922	alpha-amyrin acetate
+T18	Compound 927 941	lupeol acetate
+T19	Compound 947 960	lariciresinol
+T20	Compound 976 991	beta-sitosterol
+T21	Compound 996 1008	stigmasterol
+T22	Compound 1025 1038	triglycerides
+T23	Compound 1081 1100	affordedpinoresinol
+T24	Compound 1106 1119	lariciresinol
+T25	Synonym 1308 1325	Cycas vespertilio
+T26	PlantPart 1326 1335	male cone
+T27	Family 1337 1347	Cycadaceae
+T28	Compound 1349 1360	pinoresinol
+T29	Compound 1362 1375	lariciresinol
+T30	Compound 1377 1397	alpha-amyrin acetate
+T31	Compound 1399 1413	lupeol acetate
+T32	Compound 1415 1429	betasitosterol
+T33	Compound 1431 1443	stigmasterol
+T34	Compound 1445 1458	triglycerides
+T36	Family 1529 1539	Cycadaceae
+T37	MedicinalPlant 1754 1763	sago palm
+T39	Location 1833 1837	Asia
+T40	Location 1839 1845	Africa
+T41	Location 1857 1861	Asia
+T42	Location 1863 1870	Pacific
+T43	Location 1876 1885	Australia
+T44	Location 2043 2054	Philippines
+T45	Synonym 2149 2170	Cycas sancti-lasallei
+T46	Location 2360 2371	Philippines
+T47	Compound 2424 2432	squalene
+T48	Compound 2434 2449	beta-sitosterol
+T49	Compound 2451 2463	stigmasterol
+T50	Compound 2469 2482	triglycerides
+T51	PlantPart 2492 2502	sarcotesta
+T52	Compound 2504 2519	beta-sitosterol
+T53	Compound 2521 2533	stigmasterol
+T54	Compound 2535 2548	triglycerides
+T55	Compound 2553 2577	phytyl fatty acid esters
+T56	PlantPart 2587 2596	endotesta
+T57	Compound 2598 2613	beta-sitosterol
+T58	Compound 2615 2627	stigmasterol
+T59	Compound 2629 2642	triglycerides
+T60	Compound 2648 2681	beta-sitosteryl fatty acid esters
+T61	PlantPart 2691 2702	sclerotesta
+T62	Compound 2708 2721	triglycerides
+T63	Compound 2726 2759	beta-sitosteryl fatty acid esters
+T64	PlantPart 2769 2773	bark
+T65	Synonym 2777 2798	Cycas sancti-lasallei
+T66	Compound 2835 2846	pinoresinol
+T67	Compound 2849 2862	lariciresinol
+T68	Compound 2865 2878	triglycerides
+T71	Synonym 2936 2953	Cycas vespertilio
+T72	PlantPart 2954 2963	male cone
+T73	Compound 2978 2998	alpha-amyrin acetate
+T74	Compound 3003 3017	lupeol acetate
+T75	Compound 3024 3039	beta-sitosterol
+T76	Compound 3044 3056	stigmasterol
+T79	Compound 3499 3507	vanillin
+T80	Synonym 3560 3577	Cycas vespertilio
+T81	PlantPart 3603 3612	male cone
+T82	Location 3633 3639	Iloilo
+T83	Location 3641 3653	Panay Island
+T84	Location 3655 3666	Philippines
+T85	Compound 3906 3925	affordedpinoresinol
+T86	Compound 4304 4317	triglycerides
+T87	PlantPart 4623 4632	male cone
+T89	Synonym 4758 4775	Cycas vespertilio
+T90	PlantPart 4776 4785	male cone
+T94	Compound 5000 5007	acetone
+T95	Compound 5045 5052	acetone
+T96	Compound 5141 5154	triglycerides
+T97	Compound 5172 5179	acetone
+T98	Compound 5218 5237	affordedpinoresinol
+T99	Compound 5248 5267	affordedpinoresinol
+T100	Compound 5336 5349	triglycerides
+T101	Compound 5370 5387	chain fatty acids
+T102	Compound 5388 5407	affordedpinoresinol
+T103	Compound 5409 5422	lariciresinol
+T104	Compound 5466 5479	lariciresinol
+T105	Compound 5481 5500	affordedpinoresinol
+T106	Compound 5504 5517	triglycerides
+T107	Compound 5529 5548	affordedpinoresinol
+T108	Compound 5566 5586	alpha-amyrin acetate
+T109	Compound 5600 5614	lupeol acetate
+T110	Compound 5616 5635	affordedpinoresinol
+T112	Compound 5966 5980	lupeol acetate
+T113	Compound 6086 6099	lariciresinol
+T114	Compound 6198 6205	acetone
+T115	Compound 6301 6316	beta-sitosterol
+T116	Compound 6322 6334	stigmasterol
+T117	Compound 6336 6349	triglycerides
+T118	Compound 6400 6407	acetone
+T119	Compound 6501 6520	affordedpinoresinol
+T120	Compound 6573 6580	acetone
+T121	Compound 6655 6668	lariciresinol
+T122	Compound 6718 6729	Pinoresinol
+T123	Compound 6902 6915	Lariciresinol
+T124	Compound 7211 7224	lariciresinol
+T125	Compound 7234 7254	Alpha-Amyrin acetate
+T126	Compound 7358 7377	affordedpinoresinol
+T127	Compound 7391 7404	lariciresinol
+T128	Compound 7436 7449	triglycerides
+T129	Compound 7479 7493	Lupeol acetate
+T130	Compound 7580 7593	triglycerides
+T131	Compound 7608 7621	lariciresinol
+T132	Compound 7647 7666	affordedpinoresinol
+T133	Compound 7686 7705	affordedpinoresinol
+T134	Compound 7822 7837	Beta-Sitosterol
+T135	Compound 7883 7896	lariciresinol
+T136	Compound 7902 7915	lariciresinol
+T137	Compound 7931 7944	triglycerides
+T138	Compound 7960 7973	triglycerides
+T139	Compound 7978 7997	affordedpinoresinol
+T140	Compound 8166 8178	Stigmasterol
+T141	Compound 8235 8254	affordedpinoresinol
+T142	Compound 8294 8307	triglycerides
+T143	Compound 8321 8334	triglycerides
+T144	Compound 8339 8358	affordedpinoresinol
+T145	Compound 8370 8383	triglycerides
+T146	Compound 8416 8429	triglycerides
+T147	Compound 8465 8481	Triacylglycerols
+T148	Compound 8516 8524	glyceryl
+T149	Compound 8538 8546	glyceryl
+T150	Compound 9018 9031	triglycerides
+T151	Compound 9092 9105	lariciresinol
+T152	Compound 9125 9144	affordedpinoresinol
+T153	Compound 9165 9184	affordedpinoresinol
+T156	Synonym 9302 9319	Cycas vespertilio
+T157	PlantPart 9320 9329	male cone
+T158	Compound 9339 9358	affordedpinoresinol
+T159	Compound 9360 9373	lariciresinol
+T160	Compound 9375 9388	triglycerides
+T161	Compound 9410 9429	affordedpinoresinol
+T162	Compound 9435 9448	lariciresinol
+T163	Compound 9598 9609	pinoresinol
+T164	Compound 9616 9629	lariciresinol
+T165	Compound 9746 9766	alpha-amyrin acetate
+T166	Compound 9770 9784	lupeol acetate
+T167	Compound 9788 9803	beta-sitosterol
+T168	Compound 9805 9822	4a)9,stigmasterol
+T169	Compound 9826 9839	triglycerides
+T170	Compound 9872 9885	lariciresinol
+T171	Compound 9916 9936	alpha-amyrin acetate
+T172	Compound 9942 9956	lupeol acetate
+T173	Compound 10027 10040	triglycerides
+T174	Compound 10049 10069	alpha-amyrin acetate
+T175	Compound 10093 10107	lupeol acetate
+T176	Compound 10143 10158	beta-sitosterol
+T177	Compound 10164 10176	stigmasterol
+T178	Compound 10247 10260	triglycerides
+T179	Compound 10269 10284	beta-sitosterol
+T180	Compound 10290 10303	triglycerides
+T181	Compound 10309 10322	triglycerides
+T182	Compound 10331 10344	triglycerides
+T183	Compound 10353 10365	stigmasterol
+T184	Compound 10448 10467	affordedpinoresinol
+T185	Compound 10469 10482	lariciresinol
+T186	Compound 10484 10497	triglycerides
+T187	Compound 10589 10600	Pinoresinol
+T188	BioAct 10619 10630	antioxidant
+T189	Compound 10664 10675	Pinoresinol
+T190	CellLine 10752 10756	NF-B
+T191	Compound 10790 10809	affordedpinoresinol
+T193	BioAct 11017 11027	antifungal
+T194	Compound 11094 11113	affordedpinoresinol
+T195	Compound 11208 11221	Lariciresinol
+T196	CellLine 11277 11282	MCF-7
+T197	Compound 11295 11308	lariciresinol
+T198	Compound 11418 11431	lariciresinol
+T199	BodyPart 11453 11459	breast
+T200	Compound 11494 11507	lariciresinol
+T202	Compound 11594 11607	lariciresinol
+T204	Compound 11842 11862	alpha-amyrin acetate
+T205	Compound 11967 11980	lariciresinol
+T206	Compound 12051 12071	alpha-amyrin acetate
+T207	BioAct 12090 12100	anxiolytic
+T209	Compound 12151 12165	lupeol acetate
+T210	BioAct 12199 12212	antimicrobial
+T211	Compound 12315 12330	Beta-Sitosterol
+T213	CellLine 12394 12399	MCF-7
+T214	CellLine 12404 12414	MDA-MB-231
+T215	Compound 12438 12453	Beta-Sitosterol
+T216	Compound 12532 12547	Beta-Sitosterol
+T217	Compound 12579 12591	beta-catenin
+T218	Compound 12656 12671	Beta-Sitosterol
+T219	BioAct 12684 12694	anticancer
+T220	Compound 12727 12742	Beta-Sitosterol
+T221	CellLine 12773 12779	NPC1L1
+T222	Compound 12841 12856	Beta-Sitosterol
+T225	Compound 13104 13116	Stigmasterol
+T226	Compound 13277 13289	Stigmasterol
+T228	Compound 13432 13441	bile acid
+T229	Compound 13513 13525	stigmasterol
+T230	CellLine 13561 13566	Hep-2
+T231	CellLine 13571 13576	McCoy
+T232	BioAct 13671 13684	antimutagenic
+T233	BioAct 13735 13746	antioxidant
+T234	Compound 13760 13777	Triacylglycerides
+T235	BioAct 13788 13801	antimicrobial
+T241	Compound 13925 13938	triglycerides
+T244	Synonym 14272 14289	Cycas vespertilio
+T245	Location 14314 14325	Philippines
+T247	Compound 14349 14362	lariciresinol
+T248	Compound 14365 14385	alpha-amyrin acetate
+T249	Compound 14388 14402	lupeol acetate
+T250	Compound 14405 14420	beta-sitosterol
+T251	Compound 14423 14435	stigmasterol
+T252	Compound 14438 14451	triglycerides
+T254	Compound 14507 14520	lariciresinol
+T255	Compound 14522 14535	triglycerides
+T256	Location 14720 14731	Philippines
+R1	hasSynonymPlantPart Arg1:T2 Arg2:T1	
+R2	hasSynonymPlantPart Arg1:T13 Arg2:T14	
+T7	Compound 1045 1059	fatty alcohols
+R3	hasCompound Arg1:T14 Arg2:T15	
+R4	hasCompound Arg1:T14 Arg2:T16	
+R5	hasCompound Arg1:T14 Arg2:T17	
+R6	hasCompound Arg1:T14 Arg2:T18	
+R7	hasCompound Arg1:T14 Arg2:T19	
+R8	hasCompound Arg1:T14 Arg2:T20	
+R9	hasCompound Arg1:T14 Arg2:T21	
+R10	hasCompound Arg1:T14 Arg2:T22	
+R11	hasCompound Arg1:T14 Arg2:T7	
+T35	Genus 1477 1482	Cycas
+R12	belongsToFamily Arg1:T35 Arg2:T36	
+T38	Genus 2331 2336	Cycas
+R13	hasSynonymPlantPart Arg1:T65 Arg2:T64	
+R14	hasSynonymPlantPart Arg1:T65 Arg2:T61	
+R15	hasSynonymPlantPart Arg1:T65 Arg2:T56	
+R16	hasSynonymPlantPart Arg1:T65 Arg2:T51	
+R17	hasCompound Arg1:T51 Arg2:T47	
+R18	hasCompound Arg1:T51 Arg2:T48	
+R19	hasCompound Arg1:T51 Arg2:T50	
+R20	hasCompound Arg1:T56 Arg2:T52	
+R21	hasCompound Arg1:T56 Arg2:T53	
+R22	hasCompound Arg1:T56 Arg2:T54	
+R23	hasCompound Arg1:T56 Arg2:T55	
+R24	hasCompound Arg1:T61 Arg2:T57	
+R25	hasCompound Arg1:T61 Arg2:T58	
+R26	hasCompound Arg1:T61 Arg2:T59	
+R27	hasCompound Arg1:T61 Arg2:T60	
+R28	hasCompound Arg1:T64 Arg2:T62	
+R29	hasCompound Arg1:T64 Arg2:T63	
+R30	hasSynonymPlantPart Arg1:T71 Arg2:T72	
+T69	Compound 2885 2899	fatty alcohols
+R31	hasCompound Arg1:T72 Arg2:T66	
+R32	hasCompound Arg1:T72 Arg2:T67	
+R33	hasCompound Arg1:T72 Arg2:T68	
+R34	hasCompound Arg1:T72 Arg2:T69	
+R35	hasSynonymPlantPart Arg1:T80 Arg2:T81	
+R36	isLocatedIn Arg1:T80 Arg2:T82	
+R37	isLocatedIn Arg1:T80 Arg2:T83	
+R38	isLocatedIn Arg1:T80 Arg2:T84	
+R39	hasSynonymPlantPart Arg1:T89 Arg2:T90	
+T77	Compound 8977 8991	Fatty alcohols
+R41	hasSynonymPlantPart Arg1:T156 Arg2:T157	
+R42	hasCompound Arg1:T157 Arg2:T158	
+R43	hasCompound Arg1:T157 Arg2:T159	
+R44	hasCompound Arg1:T157 Arg2:T160	
+R45	hasBiologicalActivity Arg1:T187 Arg2:T188	
+T78	BioAct 10635 10650	Ca2+ antagonist
+R46	hasBiologicalActivity Arg1:T187 Arg2:T78	
+T88	BioAct 10707 10734	antiinflammatory properties
+R47	hasBiologicalActivity Arg1:T189 Arg2:T88	
+R48	affects Arg1:T88 Arg2:T190	
+T91	BioAct 11236 11248	tumor growth
+T92	BioAct 11253 11271	tumor angiogenesis
+R49	hasBiologicalActivity Arg1:T195 Arg2:T91	
+R50	hasBiologicalActivity Arg1:T195 Arg2:T92	
+T93	BioAct 11124 11134	inhibitory
+R51	hasBiologicalActivity Arg1:T194 Arg2:T93	
+T111	Illness 11055 11081	fungal infectious diseases
+T154	BioAct 11519 11537	lipid peroxidation
+T155	BioAct 11547 11584	good scavenger of superoxide radicals
+R52	hasBiologicalActivity Arg1:T200 Arg2:T154	
+R53	hasBiologicalActivity Arg1:T200 Arg2:T155	
+T201	BioAct 11638 11648	fungicidal
+R54	hasBiologicalActivity Arg1:T202 Arg2:T201	
+T203	BioAct 12080 12088	sedative
+T257	BioAct 12105 12119	anticonvulsant
+R55	hasBiologicalActivity Arg1:T206 Arg2:T203	
+R56	hasBiologicalActivity Arg1:T206 Arg2:T207	
+R57	hasBiologicalActivity Arg1:T206 Arg2:T257	
+R58	hasBiologicalActivity Arg1:T209 Arg2:T210	
+T208	BioAct 12352 12369	growth inhibitory
+R59	hasBiologicalActivity Arg1:T211 Arg2:T208	
+R60	affects Arg1:T208 Arg2:T213	
+R61	affects Arg1:T208 Arg2:T214	
+R62	hasBiologicalActivity Arg1:T218 Arg2:T219	
+T223	BioAct 13533 13543	cytostatic
+R63	hasBiologicalActivity Arg1:T229 Arg2:T223	
+R64	affects Arg1:T223 Arg2:T230	
+R65	affects Arg1:T223 Arg2:T231	
+R66	hasBiologicalActivity Arg1:T229 Arg2:T232	
+T224	BioAct 13686 13710	topical antiinflammatory
+T227	BioAct 13712 13730	antiosteoarthritic
+R67	hasBiologicalActivity Arg1:T229 Arg2:T224	
+R68	hasBiologicalActivity Arg1:T229 Arg2:T227	
+R69	hasBiologicalActivity Arg1:T229 Arg2:T233	
+R70	hasBiologicalActivity Arg1:T234 Arg2:T235	
+R71	isLocatedIn Arg1:T244 Arg2:T245	
+T242	Compound 14335 14346	pinoresinol
+R72	hasCompound Arg1:T244 Arg2:T242	
+R73	hasCompound Arg1:T244 Arg2:T247	
+R74	hasCompound Arg1:T244 Arg2:T248	
+R75	hasCompound Arg1:T244 Arg2:T249	
+R76	hasCompound Arg1:T244 Arg2:T250	
+R77	hasCompound Arg1:T244 Arg2:T251	
+R78	hasCompound Arg1:T244 Arg2:T252	
+T243	Compound 14458 14472	fatty alcohols
+R79	hasCompound Arg1:T244 Arg2:T243	
+T246	Compound 14494 14505	pinoresinol
+T70	BioAct 12747 12754	inhibit
+R40	affects Arg1:T70 Arg2:T221	
+R80	hasBiologicalActivity Arg1:T220 Arg2:T70	

@@ -1,0 +1,646 @@
+T1	BioAct 0 11	Antioxidant
+T2	BioAct 31 43	Antiophidian
+T3	Synonym 57 77	Alstonia macrophylla
+T4	PlantPart 78 82	Bark
+T5	Location 358 369	Taft Avenue
+T6	Location 371 377	Manila
+T7	Location 384 395	Philippines
+T8	Location 449 454	Osaka
+T9	Location 482 490	Toyonaka
+T10	Location 492 497	Osaka
+T11	Location 508 513	Japan
+T12	PlantPart 595 599	bark
+T13	Synonym 618 638	Alstonia macrophylla
+T14	Synonym 654 674	Alstonia macrophylla
+T15	Synonym 857 877	Alstonia macrophylla
+T16	PlantPart 878 882	bark
+T17	Synonym 989 1009	Alstonia macrophylla
+T19	Compound 1080 1102	unsaturated fatty acid
+T20	Compound 1114 1131	fatty acid esters
+T23	Synonym 1201 1221	Alstonia macrophylla
+T24	PlantPart 1222 1226	bark
+T25	Compound 1233 1241	methanol
+T26	Compound 1246 1264	dimethyl sulfoxide
+T27	ChemicalClass 1349 1358	alkaloids
+T28	Compound 1360 1371	alstonerine
+T29	Compound 1381 1391	strictamin
+T30	Compound 1400 1410	rauvomitin
+T31	Compound 1423 1430	brucine
+T32	ChemicalClass 1443 1456	triterpenoids
+T33	Compound 1458 1474	gamma-sitosterol
+T34	Compound 1483 1489	lupeol
+T35	Compound 1498 1522	24-methylenecycloartanol
+T36	Compound 1531 1542	campesterol
+T37	Compound 1551 1562	beta-amyrin
+T38	Compound 1575 1587	stigmasterol
+T39	Synonym 1621 1641	Alstonia macrophylla
+T40	CellLine 1797 1801	HDFn
+T41	CellLine 1835 1840	THP-1
+T42	CellLine 1901 1906	MCF-7
+T43	CellLine 1927 1932	H69PR
+T44	CellLine 1957 1962	HT-29
+T45	Synonym 2008 2028	Alstonia macrophylla
+T46	Synonym 2080 2099	Naja philippinensis
+T47	Location 2283 2297	Southeast Asia
+T48	Location 2376 2387	Philippines
+T49	Family 2494 2505	Apocynaceae
+T50	Synonym 2551 2571	Alstonia macrophylla
+T51	Synonym 2590 2608	Alstonia scholaris
+T52	Synonym 2740 2760	Alstonia macrophylla
+T53	Synonym 2765 2783	Alstonia scholaris
+T54	Compound 2809 2823	echitovenidine
+T55	Compound 2825 2835	echitamine
+T56	Compound 2837 2847	venenatine
+T57	ChemicalClass 2852 2867	indole alkaloid
+T58	BioAct 2874 2891	anti-inflammatory
+T59	ChemicalClass 2892 2905	triterpenoids
+T60	PlantPart 2912 2916	bark
+T61	Synonym 2924 2942	Alstonia scholaris
+T62	BioAct 3027 3037	antifungal
+T63	Synonym 3049 3067	Alstonia scholaris
+T64	Preparation 3227 3235	powdered
+T65	PlantPart 3246 3250	bark
+T66	Synonym 3254 3274	Alstonia macrophylla
+T67	Synonym 3276 3296	Alstonia macrophylla
+T68	MedicinalPlant 3313 3326	hard milkwood
+T69	MedicinalPlant 3330 3336	batino
+T70	Illness 3448 3457	dysentery
+T71	Compound 3550 3563	acetylcholine
+T74	Preparation 3615 3623	powdered
+T75	PlantPart 3624 3628	bark
+T76	PlantPart 3706 3710	bark
+T77	Preparation 3712 3719	crushed
+T78	PlantPart 3720 3726	leaves
+T79	Synonym 3730 3750	Alstonia macrophylla
+T81	PlantPart 3894 3912	aerial plant parts
+T82	Preparation 3985 3990	Mixed
+T83	PlantPart 4007 4013	leaves
+T84	PlantPart 4018 4027	stem bark
+T85	Synonym 4031 4051	Alstonia macrophylla
+T86	Location 4069 4086	Republic of India
+T87	Synonym 4766 4784	Alstonia scholaris
+T88	Synonym 4786 4806	Alstonia macrophylla
+T89	PlantPart 4807 4813	leaves
+T92	BioAct 4858 4871	antimicrobial
+T93	Synonym 4964 4984	Alstonia macrophylla
+T94	Synonym 5019 5039	Alstonia macrophylla
+T95	ChemicalClass 5049 5065	steroid alcohols
+T96	ChemicalClass 5067 5078	isoprenoids
+T97	ChemicalClass 5117 5126	alkaloids
+T98	Compound 5128 5140	tannic acids
+T100	Synonym 5164 5184	Alstonia macrophylla
+T101	Compound 5209 5224	beta-sitosterol
+T102	ChemicalClass 5228 5239	phytosterol
+T103	PlantPart 5370 5382	aerial parts
+T104	PlantPart 5476 5480	leaf
+T105	ChemicalClass 5514 5530	indole alkaloids
+T106	Compound 5532 5543	alstomaline
+T107	Compound 5545 5568	10,11-dimethoxynareline
+T108	Compound 5570 5582	alstohentine
+T109	Compound 5584 5595	alstomicine
+T110	Compound 5597 5618	16-hydroxyalstonisine
+T111	Compound 5620 5637	16hydroxyalstonal
+T112	Compound 5639 5682	16-hydroxy-N4-demethylalstophyllal oxindole
+T113	Compound 5684 5696	alstophyllal
+T114	Compound 5698 5716	6-oxoalstophylline
+T115	Compound 5722 5739	6-oxoalstophyllal
+T116	Synonym 5813 5831	Alstonia scholaris
+T117	Synonym 5833 5853	Alstonia macrophylla
+T118	ChemicalClass 5872 5881	alkaloids
+T119	ChemicalClass 5395 5403	alkaloid
+T120	Synonym 5990 6010	Alstonia macrophylla
+T121	PlantPart 6058 6067	stem bark
+T122	BioAct 6103 6114	antioxidant
+T123	Compound 6142 6171	1,1-diphenyl-2-picrylhydrazyl
+T125	CellLine 6192 6197	HT-29
+T126	CellLine 6199 6204	H69PR
+T127	CellLine 6206 6211	MCF-7
+T128	CellLine 6213 6218	THP-1
+T129	CellLine 6255 6259	HDFn
+T130	BioAct 6288 6297	antivenom
+T131	Synonym 6318 6338	Alstonia macrophylla
+T132	Synonym 6649 6669	Alstonia macrophylla
+T133	Synonym 6728 6748	Alstonia macrophylla
+T134	PlantPart 6749 6753	bark
+T135	Synonym 6791 6811	Alstonia macrophylla
+T136	Synonym 6888 6908	Alstonia macrophylla
+T137	Compound 7276 7286	fatty acid
+T138	Compound 7291 7308	fatty acid esters
+T139	Compound 7310 7328	heptadecanoic acid
+T140	Compound 7339 7368	hexadecanoic acid ethyl ester
+T141	Compound 7383 7414	hexadecanonic acid methyl ester
+T142	Synonym 7448 7468	Alstonia macrophylla
+T143	ChemicalClass 7505 7514	alkaloids
+T144	Compound 7539 7550	alstonerine
+T145	Compound 7561 7571	strictamin
+T146	Compound 7581 7591	rauvomitin
+T147	Compound 7605 7612	brucine
+T149	ChemicalClass 7681 7694	triterpenoids
+T150	Compound 7696 7712	gamma-sitosterol
+T151	Compound 7722 7728	lupeol
+T152	Compound 7738 7762	24-methylenecycloartanol
+T153	Compound 7772 7783	campesterol
+T154	Compound 7793 7804	beta-amyrin
+T155	Compound 7818 7830	stigmasterol
+T156	Synonym 7914 7934	Alstonia macrophylla
+T157	Synonym 8060 8080	Alstonia macrophylla
+T158	Illness 8676 8688	hypertension
+T159	Family 8896 8907	Apocynaceae
+T160	PlantPart 9004 9008	bark
+T161	Preparation 9009 9015	powder
+T162	Synonym 9027 9044	Grewia lasiocarpa
+T164	Preparation 9753 9761	powdered
+T165	PlantPart 9762 9768	leaves
+T166	PlantPart 9770 9775	stems
+T167	PlantPart 9781 9786	roots
+T168	PlantPart 10038 10043	roots
+T169	PlantPart 10111 10117	leaves
+T171	BioAct 10205 10216	Antioxidant
+T172	Synonym 10229 10249	Alstonia macrophylla
+T173	Synonym 10252 10272	Alstonia macrophylla
+T174	Synonym 10496 10516	Alstonia macrophylla
+T175	PlantPart 10517 10521	leaf
+T176	Compound 10536 10550	betasitosterol
+T177	Compound 10552 10564	ursolic acid
+T178	Compound 10570 10602	beta-sitosteryl-beta-D-glucoside
+T179	ChemicalClass 5928 5936	alkaloid
+T180	Compound 10659 10670	fatty acids
+T181	BioAct 10702 10713	antioxidant
+T184	Synonym 10931 10951	Alstonia macrophylla
+T185	CellLine 10972 10977	MCF-7
+T186	CellLine 10979 10984	H69PR
+T187	CellLine 10986 10991	HT-29
+T188	Synonym 11043 11063	Alstonia macrophylla
+T189	Compound 11112 11121	2-ethenyl
+T190	Compound 11146 11170	aldehyde 3-ethylpyridine
+T191	Compound 11211 11224	nonanoic acid
+T192	Compound 11241 11274	carboxylic acid cyclohexylbenzene
+T193	Compound 11303 11327	3-hydroxy-4methoxybenzyl
+T194	Compound 11360 11391	hexadecanonic acid methyl ester
+T195	Compound 11409 11444	ester hexadecanoic acid ethyl ester
+T196	Compound 11462 11486	ester heptadecanoic acid
+T197	Compound 11504 11519	carboxylic acid
+T198	CellLine 11657 11662	THP-1
+T199	CellLine 11699 11703	HDFn
+T200	Synonym 11760 11780	Alstonia macrophylla
+T201	CellLine 11796 11800	HDFn
+T202	Compound 11846 11852	Zeocin
+T203	BioAct 6181 6190	cytotoxic
+T204	Synonym 12278 12298	Alstonia macrophylla
+T205	Compound 12303 12309	Zeocin
+T206	Synonym 12475 12495	Alstonia macrophylla
+T207	BioAct 10894 10903	cytotoxic
+T208	CellLine 12539 12544	MCF-7
+T209	CellLine 12626 12631	H69PR
+T210	CellLine 12633 12638	HT-29
+T211	CellLine 12644 12649	THP-1
+T212	CellLine 12901 12906	MCF-7
+T213	CellLine 12914 12919	H69PR
+T214	Compound 13037 13043	Zeocin
+T215	Synonym 13209 13229	Alstonia macrophylla
+T216	Compound 13237 13243	Zeocin
+T217	CellLine 13258 13263	MCF-7
+T218	Synonym 13351 13371	Alstonia macrophylla
+T219	Compound 13415 13421	Zeocin
+T220	Synonym 13556 13576	Alstonia macrophylla
+T221	Compound 13581 13587	Zeocin
+T222	CellLine 13619 13624	H69PR
+T223	Synonym 13641 13661	Alstonia macrophylla
+T225	Compound 13699 13705	Zeocin
+T226	Synonym 13902 13922	Alstonia macrophylla
+T227	Compound 13966 13972	Zeocin
+T228	CellLine 14155 14160	HT-29
+T229	Synonym 14164 14184	Alstonia macrophylla
+T230	Compound 14189 14195	Zeocin
+T231	CellLine 14222 14227	HT-29
+T233	Synonym 14313 14333	Alstonia macrophylla
+T234	Synonym 14407 14427	Alstonia macrophylla
+T235	Compound 14476 14513	2,5-dimethyl-4-hydroxy-3(2H)-furanone
+T236	Compound 14529 14570	trihydroxybenzene 2-methoxy-4-vinylphenol
+T237	ChemicalClass 14587 14598	diterpenoid
+T238	Compound 14599 14618	2,6-dimethoxyphenol
+T239	Compound 14660 14695	2,6-dimethoxy-4-(2-propenyl)-phenol
+T240	Compound 14737 14777	3,5-dimethoxy-4-hydroxyphenylacetic acid
+T241	Compound 14794 14818	phenolic acid strictamin
+T242	ChemicalClass 10646 10654	alkaloid
+T243	Compound 14844 14854	rauvomitin
+T244	ChemicalClass 14835 14843	alkaloid
+T245	Compound 14880 14891	alstonerine
+T246	ChemicalClass 14871 14879	alkaloid
+T247	Compound 14918 14925	brucine
+T248	ChemicalClass 14909 14917	alkaloid
+T249	Compound 14951 14962	burnamicine
+T250	ChemicalClass 14942 14950	alkaloid
+T251	Compound 14988 14999	campesterol
+T252	ChemicalClass 15016 15028	triterpenoid
+T253	Compound 15029 15041	stigmasterol
+T254	ChemicalClass 15058 15070	triterpenoid
+T255	Compound 15071 15087	gamma-sitosterol
+T256	ChemicalClass 15104 15116	triterpenoid
+T257	Compound 15117 15128	beta-amyrin
+T258	ChemicalClass 15145 15157	triterpenoid
+T259	Compound 15158 15164	lupeol
+T260	ChemicalClass 15181 15193	triterpenoid
+T261	Compound 15194 15218	24-methylenecycloartanol
+T262	ChemicalClass 15236 15248	triterpenoid
+T263	Synonym 15399 15419	Alstonia macrophylla
+T264	CellLine 15467 15472	HT-29
+T265	Compound 15492 15498	Zeocin
+T266	CellLine 15630 15635	THP-1
+T267	Synonym 15887 15907	Alstonia macrophylla
+T268	Compound 15939 15945	Zeocin
+T269	Synonym 16013 16033	Alstonia macrophylla
+T270	CellLine 16079 16083	HDFn
+T271	Synonym 16182 16202	Alstonia macrophylla
+T272	Compound 16729 16735	Zeocin
+T273	Compound 16796 16802	Zeocin
+T274	BioAct 12254 12263	cytotoxic
+T275	CellLine 16889 16894	MCF-7
+T276	CellLine 16896 16901	H69PR
+T277	CellLine 16903 16907	HT29
+T278	CellLine 16909 16914	THP-1
+T279	CellLine 16920 16924	HDFn
+T280	Compound 17196 17212	sulforhodamine B
+T281	PlantPart 17282 17286	bark
+T282	PlantPart 17308 17313	roots
+T283	Synonym 17325 17345	Alstonia macrophylla
+T284	PlantPart 17351 17355	bark
+T285	Synonym 17456 17476	Alstonia macrophylla
+T286	Compound 17597 17618	O-Acetylmacralstonine
+T287	Compound 17620 17633	villalstonine
+T288	Compound 17639 17653	macrocarpamine
+T290	CellLine 17835 17840	MCF-7
+T292	PlantPart 17965 17969	root
+T293	Compound 17987 18007	Omethylmacralstonine
+T294	Compound 18009 18019	talcarpine
+T295	Compound 18021 18034	villalstonine
+T296	Compound 18036 18050	pleiocarpamine
+T297	Compound 18056 18069	macraistonine
+T298	Synonym 18158 18178	Alstonia macrophylla
+T299	Synonym 18208 18227	Naja philippinensis
+T300	Synonym 18276 18296	Alstonia macrophylla
+T301	Synonym 18550 18570	Alstonia macrophylla
+T302	PlantPart 17970 17974	bark
+T303	Synonym 18739 18759	Alstonia macrophylla
+T304	PlantPart 18571 18575	bark
+T305	Synonym 18813 18833	Alstonia macrophylla
+T306	ChemicalClass 14979 14987	alkaloid
+T308	Compound 18976 18984	atropine
+T310	Compound 19091 19106	beta-sitosterol
+T311	Compound 19111 19123	stigmasterol
+T313	Synonym 19178 19192	Pluchea indica
+T315	Compound 19298 19304	Lupeol
+T316	Illness 19330 19340	hemorrhage
+T319	BioAct 19500 19509	antivenom
+T320	Synonym 19582 19600	Alstonia scholaris
+T322	Compound 19723 19730	alanine
+T323	Compound 19745 19754	aspartate
+T324	Compound 19773 19783	creatinine
+T325	Preparation 3864 3873	decoction
+T326	Synonym 20089 20109	Alstonia macrophylla
+T327	PlantPart 18760 18764	bark
+T328	BioAct 20144 20155	antioxidant
+T329	Synonym 20196 20216	Alstonia macrophylla
+T330	CellLine 20291 20296	MCF-7
+T331	CellLine 20298 20303	H69PR
+T332	CellLine 20309 20314	HT-29
+T333	Compound 20426 20432	Zeocin
+T334	BioAct 13 22	Cytotoxic
+T335	Synonym 20628 20648	Alstonia macrophylla
+T336	Compound 20650 20656	Zeocin
+T337	Location 20826 20829	USA
+T338	CellLine 21079 21084	MCF-7
+T339	CellLine 21172 21177	H69PR
+T340	CellLine 21249 21254	HT-29
+T341	CellLine 21327 21332	THP-1
+T342	CellLine 21405 21409	HDFn
+T343	CellLine 21577 21582	MCF-7
+T344	Synonym 21608 21628	Alstonia macrophylla
+T345	Synonym 21660 21680	Alstonia macrophylla
+T346	CellLine 21685 21690	THP-1
+T347	CellLine 21702 21706	HDFn
+T348	Synonym 21729 21749	Alstonia macrophylla
+T349	Synonym 22039 22059	Alstonia macrophylla
+T350	ChemicalClass 22090 22099	alkaloids
+T351	ChemicalClass 22104 22117	triterpenoids
+T353	Synonym 22396 22416	Alstonia macrophylla
+T354	PlantPart 20110 20114	bark
+T355	Synonym 22586 22606	Alstonia macrophylla
+T356	PlantPart 22417 22421	bark
+T357	BioAct 22643 22652	antivenom
+T358	Synonym 22820 22840	Alstonia macrophylla
+T359	PlantPart 22841 22847	trunks
+T360	Location 22865 22874	Mariveles
+T361	Location 22876 22882	Bataan
+T362	Location 22884 22895	Philippines
+T363	PlantPart 22607 22611	bark
+T370	Compound 23322 23336	phenolic acids
+T371	Compound 23588 23594	phenyl
+T373	Synonym 24817 24837	Alstonia macrophylla
+T374	Synonym 24914 24934	Alstonia macrophylla
+T375	Synonym 25289 25309	Alstonia macrophylla
+T376	BioAct 20604 20613	Cytotoxic
+T377	Synonym 25427 25447	Alstonia macrophylla
+T379	Compound 21870 21876	Zeocin
+T380	CellLine 25513 25518	MCF-7
+T381	CellLine 25519 25524	H69PR
+T382	CellLine 25525 25530	HT-29
+T383	CellLine 25531 25536	THP-1
+T384	CellLine 25537 25541	HDFn
+T385	Synonym 25542 25562	Alstonia macrophylla
+T386	Compound 25466 25472	Zeocin
+T387	CellLine 25926 25931	MCF-7
+T388	CellLine 25962 25967	H69PR
+T389	CellLine 25998 26003	HT-29
+T390	CellLine 26033 26038	THP-1
+T391	CellLine 26068 26072	HDFn
+T392	Synonym 26225 26245	Alstonia macrophylla
+T393	Synonym 26554 26574	Alstonia macrophylla
+T394	PlantPart 23003 23007	bark
+T395	BioAct 26708 26719	Antioxidant
+T396	BioAct 26732 26743	antioxidant
+T397	Synonym 26768 26788	Alstonia macrophylla
+T398	PlantPart 26789 26793	leaf
+T399	Compound 26851 26880	1,1-diphenyl-2-picrylhydrazyl
+T404	Synonym 27336 27356	Alstonia macrophylla
+T409	Synonym 28184 28204	Alstonia macrophylla
+T410	Location 28279 28287	Manassas
+T411	Location 28289 28297	Virginia
+T412	Location 28299 28302	USA
+T414	CellLine 28319 28324	MCF-7
+T415	CellLine 28341 28345	HT29
+T416	CellLine 28375 28380	H69PR
+T417	CellLine 28415 28420	THP-1
+T418	CellLine 28489 28493	HDFn
+T419	Location 28529 28532	USA
+T420	Location 28699 28702	USA
+T421	BioAct 12513 12522	cytotoxic
+T422	Synonym 28794 28814	Alstonia macrophylla
+T423	Compound 28998 29007	resazurin
+T424	CellLine 29344 29349	THP-1
+T425	Synonym 29470 29490	Alstonia macrophylla
+T426	Synonym 29684 29704	Alstonia macrophylla
+T427	Compound 25589 25595	Zeocin
+T428	Location 29806 29809	USA
+T429	Compound 29765 29771	Zeocin
+T430	BioAct 13662 13671	cytotoxic
+T431	Synonym 30930 30950	Alstonia macrophylla
+T433	Compound 31251 31287	5,5'-dithio-bis-(2-nitrobenzoic acid
+T434	Compound 31363 31374	polystyrene
+T435	Compound 31390 31400	microplate
+T436	Synonym 31418 31438	Alstonia macrophylla
+T437	Compound 27302 27310	methanol
+T438	Synonym 31761 31781	Alstonia macrophylla
+T439	Compound 31970 31980	Microplate
+T440	Synonym 32108 32128	Alstonia macrophylla
+T443	Synonym 32356 32376	Alstonia macrophylla
+T444	Location 33103 33108	Osaka
+T445	Synonym 33155 33175	Alstonia macrophylla
+T446	Synonym 33176 33196	Alstonia macrophylla
+T447	PlantPart 26575 26579	bark
+T448	Compound 33206 33221	dichloromethane
+T449	Compound 33227 33244	dimethylsulfoxide
+T450	CellLine 33419 33424	MCF-7
+T451	BodyPart 33431 33437	breast
+T452	CellLine 33463 33468	HT-29
+T453	CellLine 33511 33516	H69PR
+T454	Synonym 33517 33529	Homo sapiens
+T455	CellLine 33556 33561	THP-1
+T456	CellLine 33603 33607	HDFn
+T457	Compound 27406 27414	methanol
+T458	Synonym 33685 33704	Naja philippinensis
+R1	hasSynonymPlantPart Arg1:T13 Arg2:T12	
+R2	hasSynonymPlantPart Arg1:T15 Arg2:T16	
+R3	hasCompound Arg1:T17 Arg2:T19	
+T18	Compound 1140 1159	ethyl hexadecanoate
+T21	Compound 1164 1184	methyl hexadecanoate
+R4	hasCompound Arg1:T17 Arg2:T20	
+R5	hasCompound Arg1:T17 Arg2:T18	
+R6	hasCompound Arg1:T17 Arg2:T21	
+R7	hasSynonymPlantPart Arg1:T23 Arg2:T24	
+R8	belongsToClass Arg1:T28 Arg2:T27	
+R9	belongsToClass Arg1:T29 Arg2:T27	
+R10	belongsToClass Arg1:T30 Arg2:T27	
+R11	belongsToClass Arg1:T31 Arg2:T27	
+R12	hasCompound Arg1:T24 Arg2:T28	
+R13	hasCompound Arg1:T24 Arg2:T29	
+R14	hasCompound Arg1:T24 Arg2:T30	
+R15	hasCompound Arg1:T24 Arg2:T31	
+R16	belongsToClass Arg1:T33 Arg2:T32	
+R17	belongsToClass Arg1:T34 Arg2:T32	
+R18	belongsToClass Arg1:T35 Arg2:T32	
+R19	belongsToClass Arg1:T36 Arg2:T32	
+R20	belongsToClass Arg1:T37 Arg2:T32	
+R21	belongsToClass Arg1:T38 Arg2:T32	
+R22	hasCompound Arg1:T24 Arg2:T33	
+R23	hasCompound Arg1:T24 Arg2:T34	
+R24	hasCompound Arg1:T24 Arg2:T35	
+R25	hasCompound Arg1:T24 Arg2:T36	
+R26	hasCompound Arg1:T24 Arg2:T37	
+R27	hasCompound Arg1:T24 Arg2:T38	
+T22	BioAct 1725 1735	scavenging
+T124	Genus 2471 2479	Alstonia
+R28	belongsToFamily Arg1:T124 Arg2:T49	
+R29	hasCompound Arg1:T53 Arg2:T54	
+R30	hasCompound Arg1:T53 Arg2:T55	
+R31	hasCompound Arg1:T53 Arg2:T56	
+R32	belongsToClass Arg1:T56 Arg2:T57	
+R33	hasCompound Arg1:T52 Arg2:T54	
+R34	hasCompound Arg1:T52 Arg2:T55	
+R35	hasCompound Arg1:T52 Arg2:T56	
+R36	hasSynonymPlantPart Arg1:T61 Arg2:T60	
+R37	hasSynonymPlantPart Arg1:T66 Arg2:T65	
+R38	utilizePart Arg1:T64 Arg2:T65	
+R39	hasSynonym Arg1:T68 Arg2:T66	
+R40	hasSynonym Arg1:T69 Arg2:T66	
+T72	BioAct 3572 3585	wound healing
+R41	utilizePart Arg1:T74 Arg2:T75	
+T73	Preparation 3593 3609	mixed with water
+R42	utilizePart Arg1:T73 Arg2:T75	
+R43	utilizePart Arg1:T77 Arg2:T78	
+T80	Preparation 3757 3822	mixed with copra oil and warmed, were applied as heated dressings
+R44	hasSynonymPlantPart Arg1:T79 Arg2:T78	
+R45	hasSynonymPlantPart Arg1:T79 Arg2:T76	
+T148	Illness 3826 3851	joint and muscle injuries
+R46	utilizePart Arg1:T80 Arg2:T78	
+R48	hasSynonymPlantPart Arg1:T85 Arg2:T84	
+R49	hasSynonymPlantPart Arg1:T85 Arg2:T83	
+R50	isLocatedIn Arg1:T85 Arg2:T86	
+R51	hasSynonymPlantPart Arg1:T88 Arg2:T89	
+R52	hasSynonymPlantPart Arg1:T87 Arg2:T89	
+T90	ChemicalClass 5146 5161	monosaccharides
+R53	hasCompound Arg1:T100 Arg2:T101	
+R54	hasCompound Arg1:T104 Arg2:T106	
+R55	hasCompound Arg1:T104 Arg2:T107	
+R56	hasCompound Arg1:T104 Arg2:T108	
+R57	hasCompound Arg1:T104 Arg2:T109	
+R58	hasCompound Arg1:T104 Arg2:T110	
+R59	hasCompound Arg1:T104 Arg2:T111	
+R60	hasCompound Arg1:T104 Arg2:T112	
+R61	hasCompound Arg1:T104 Arg2:T113	
+R62	hasCompound Arg1:T104 Arg2:T114	
+R63	hasCompound Arg1:T104 Arg2:T115	
+R64	hasSynonymPlantPart Arg1:T120 Arg2:T121	
+R65	hasBiologicalActivity Arg1:T123 Arg2:T122	
+R66	affects Arg1:T203 Arg2:T125	
+R67	affects Arg1:T203 Arg2:T126	
+R68	affects Arg1:T203 Arg2:T127	
+R69	affects Arg1:T203 Arg2:T128	
+R70	affects Arg1:T203 Arg2:T129	
+R71	hasSynonymPlantPart Arg1:T133 Arg2:T134	
+R72	belongsToClass Arg1:T144 Arg2:T143	
+R73	belongsToClass Arg1:T145 Arg2:T143	
+R74	belongsToClass Arg1:T146 Arg2:T143	
+R75	belongsToClass Arg1:T147 Arg2:T143	
+R76	hasCompound Arg1:T142 Arg2:T144	
+R77	hasCompound Arg1:T142 Arg2:T145	
+R78	hasCompound Arg1:T142 Arg2:T146	
+R79	hasCompound Arg1:T142 Arg2:T147	
+R80	belongsToClass Arg1:T150 Arg2:T149	
+R81	belongsToClass Arg1:T151 Arg2:T149	
+R82	belongsToClass Arg1:T152 Arg2:T149	
+R83	belongsToClass Arg1:T153 Arg2:T149	
+R84	belongsToClass Arg1:T154 Arg2:T149	
+R85	belongsToClass Arg1:T155 Arg2:T149	
+R86	hasSynonymPlantPart Arg1:T162 Arg2:T160	
+R87	utilizePart Arg1:T161 Arg2:T160	
+R88	utilizePart Arg1:T164 Arg2:T165	
+R89	utilizePart Arg1:T164 Arg2:T166	
+R90	utilizePart Arg1:T164 Arg2:T167	
+T91	Synonym 9790 9813	Ichnocarpus f rutescens
+R91	hasSynonymPlantPart Arg1:T91 Arg2:T165	
+R92	hasSynonymPlantPart Arg1:T91 Arg2:T166	
+R93	hasSynonymPlantPart Arg1:T91 Arg2:T167	
+R94	hasSynonymPlantPart Arg1:T174 Arg2:T175	
+R95	hasCompound Arg1:T175 Arg2:T176	
+R96	hasCompound Arg1:T175 Arg2:T177	
+R97	hasCompound Arg1:T175 Arg2:T178	
+R98	hasCompound Arg1:T175 Arg2:T180	
+R99	hasBiologicalActivity Arg1:T176 Arg2:T181	
+R100	hasBiologicalActivity Arg1:T177 Arg2:T181	
+R101	hasBiologicalActivity Arg1:T178 Arg2:T181	
+R102	hasBiologicalActivity Arg1:T180 Arg2:T181	
+T99	BioAct 10868 10880	Cytotoxicity
+R103	affects Arg1:T207 Arg2:T185	
+R104	affects Arg1:T207 Arg2:T186	
+R105	affects Arg1:T207 Arg2:T187	
+T163	Compound 11122 11131	2-butenal
+R106	hasCompound Arg1:T188 Arg2:T189	
+R107	hasCompound Arg1:T188 Arg2:T163	
+R108	hasCompound Arg1:T188 Arg2:T190	
+R109	hasCompound Arg1:T188 Arg2:T191	
+R110	hasCompound Arg1:T188 Arg2:T192	
+R111	hasCompound Arg1:T188 Arg2:T193	
+R112	hasCompound Arg1:T188 Arg2:T194	
+R113	hasCompound Arg1:T188 Arg2:T195	
+R114	hasCompound Arg1:T188 Arg2:T196	
+R115	hasCompound Arg1:T188 Arg2:T197	
+T170	BioAct 11744 11756	cytotoxicity
+R116	affects Arg1:T421 Arg2:T208	
+R117	affects Arg1:T421 Arg2:T209	
+R118	affects Arg1:T421 Arg2:T210	
+R119	affects Arg1:T421 Arg2:T211	
+T182	BioAct 16056 16068	noncytotoxic
+R120	affects Arg1:T182 Arg2:T270	
+R121	hasSynonymPlantPart Arg1:T283 Arg2:T284	
+R122	hasSynonymPlantPart Arg1:T283 Arg2:T281	
+R123	hasSynonymPlantPart Arg1:T283 Arg2:T282	
+T183	BioAct 17242 17254	cytotoxicity
+R124	hasBiologicalActivity Arg1:T280 Arg2:T183	
+T224	Illness 17797 17808	skin cancer
+T232	Illness 17819 17832	kidney cancer
+T289	Illness 17842 17855	breast cancer
+T291	Illness 17870 17882	colon cancer
+R125	hasSynonymPlantPart Arg1:T301 Arg2:T304	
+R126	hasSynonymParent Arg1:T327 Arg2:T303	
+T372	ChemicalClass 19081 19089	steroids
+T378	Compound 19067 19076	coumestan
+R129	belongsToClass Arg1:T310 Arg2:T372	
+R130	belongsToClass Arg1:T311 Arg2:T372	
+R131	hasCompound Arg1:T313 Arg2:T310	
+R132	hasCompound Arg1:T313 Arg2:T311	
+T312	Illness 19342 19347	edema
+T402	Illness 19349 19361	procoagulant
+T403	Illness 19367 19375	myotoxic
+T405	Compound 19731 19743	transaminase
+T406	Compound 19755 19767	transaminase
+R133	hasSynonymPlantPart Arg1:T326 Arg2:T354	
+R134	hasSynonymPlantPart Arg1:T353 Arg2:T356	
+T459	BioAct 22432 22452	in vitro prohibitory
+R135	hasSynonymPlantPart Arg1:T355 Arg2:T363	
+R136	hasSynonymPlantPart Arg1:T358 Arg2:T359	
+R137	isLocatedIn Arg1:T358 Arg2:T360	
+R138	isLocatedIn Arg1:T358 Arg2:T361	
+R139	isLocatedIn Arg1:T358 Arg2:T362	
+T366	BioAct 24793 24802	Cytotoxic
+R141	hasSynonymPlantPart Arg1:T393 Arg2:T447	
+R143	hasSynonymPlantPart Arg1:T397 Arg2:T398	
+R144	isLocatedIn Arg1:T409 Arg2:T410	
+R145	isLocatedIn Arg1:T409 Arg2:T411	
+R146	isLocatedIn Arg1:T409 Arg2:T412	
+T369	Illness 28304 28317	breast cancer
+T400	Illness 28327 28339	colon cancer
+T401	Illness 28348 28373	small cell lung carcinoma
+T407	Illness 28383 28413	human acute monocytic leukemia
+R147	hasSynonymPlantPart Arg1:T3 Arg2:T4	
+T408	Illness 3675 3688	skin diseases
+R148	treats Arg1:T73 Arg2:T408	
+R149	treats Arg1:T64 Arg2:T70	
+R150	hasPreparation Arg1:T68 Arg2:T64	
+R151	hasPreparation Arg1:T69 Arg2:T64	
+R47	treats Arg1:T80 Arg2:T148	
+R152	utilizePart Arg1:T325 Arg2:T81	
+T413	BodyPart 3918 3926	ingested
+R153	appliedTo Arg1:T325 Arg2:T413	
+T441	Illness 3945 3982	respiratory and auditory obstructions
+R154	treats Arg1:T325 Arg2:T441	
+T442	Compound 5080 5115	hydroxylated polyphenolic compounds
+R155	belongsToClass Arg1:T101 Arg2:T102	
+R156	affects Arg1:T430 Arg2:T222	
+T460	BioAct 16812 16821	cytotoxic
+R157	hasBiologicalActivity Arg1:T273 Arg2:T460	
+R158	affects Arg1:T460 Arg2:T275	
+R159	affects Arg1:T460 Arg2:T276	
+R160	affects Arg1:T460 Arg2:T277	
+R161	affects Arg1:T460 Arg2:T278	
+R162	affects Arg1:T460 Arg2:T279	
+T461	BioAct 17481 17498	antiproliferative
+T462	CellLine 17531 17536	MOR-P
+T463	CellLine 17541 17548	COR-L23
+R163	affects Arg1:T461 Arg2:T462	
+R164	affects Arg1:T461 Arg2:T463	
+T464	BioAct 18085 18097	cytotoxicity
+T465	CellLine 18101 18106	MOR-P
+T466	CellLine 18111 18118	COR-L23
+R165	affects Arg1:T464 Arg2:T465	
+R166	affects Arg1:T464 Arg2:T466	
+R167	hasCompound Arg1:T302 Arg2:T293	
+R168	hasCompound Arg1:T302 Arg2:T294	
+R169	hasCompound Arg1:T302 Arg2:T295	
+R170	hasCompound Arg1:T302 Arg2:T296	
+R171	hasCompound Arg1:T302 Arg2:T297	
+R172	hasCompound Arg1:T292 Arg2:T293	
+R173	hasCompound Arg1:T292 Arg2:T294	
+R174	hasCompound Arg1:T292 Arg2:T295	
+R175	hasCompound Arg1:T292 Arg2:T296	
+R176	hasCompound Arg1:T292 Arg2:T297	
+R177	hasBiologicalActivity Arg1:T293 Arg2:T464	
+R178	hasBiologicalActivity Arg1:T294 Arg2:T464	
+R179	hasBiologicalActivity Arg1:T295 Arg2:T464	
+R180	hasBiologicalActivity Arg1:T296 Arg2:T464	
+R181	hasBiologicalActivity Arg1:T297 Arg2:T464	
+R127	hasCompound Arg1:T313 Arg2:T378	
+T307	BioAct 20375 20387	cytotoxicity
+R128	hasBiologicalActivity Arg1:T333 Arg2:T307	
+R182	affects Arg1:T328 Arg2:T330	
+R183	affects Arg1:T328 Arg2:T331	
+R184	affects Arg1:T328 Arg2:T332	
+T309	CellLine 22304 22327	human colorectal cancer
+T314	CellLine 22329 22356	human breast adenocarcinoma
+T317	CellLine 22362 22393	human small cell lung carcinoma
+T318	BioAct 25392 25401	Cytotoxic
+R140	affects Arg1:T318 Arg2:T380	
+R185	affects Arg1:T318 Arg2:T381	
+R186	affects Arg1:T318 Arg2:T382	
+R187	affects Arg1:T318 Arg2:T383	
+R188	affects Arg1:T318 Arg2:T384	

@@ -1,0 +1,199 @@
+T1	Synonym 150 175	Macromitrium orthostichum
+T2	Compound 272 278	zeorin
+T3	Compound 289 301	stigmasterol
+T6	Location 694 701	Belgium
+T7	Synonym 1073 1098	Macromitrium orthostichum
+T8	Location 1131 1145	Southeast Asia
+T9	Location 1152 1168	Papua New Guinea
+T10	Location 1185 1190	Luzon
+T11	Location 1192 1199	Mindoro
+T12	Location 1204 1212	Mindanao
+T13	Location 1228 1239	Philippines
+T14	PlantPart 1355 1360	stems
+T15	Synonym 1441 1466	Macromitrium orthostichum
+T16	PlantPart 1543 1549	leaves
+T17	Synonym 1604 1629	Macromitrium orthostichum
+T18	PlantPart 1723 1727	leaf
+T19	Synonym 1815 1840	Macromitrium orthostichum
+T20	Compound 1868 1874	zeorin
+T21	Compound 1877 1886	atranorin
+T22	Compound 1904 1919	beta-sitosterol
+T23	Compound 1924 1936	stigmasterol
+T26	Synonym 1981 2006	Macromitrium orthostichum
+T27	Compound 2106 2112	zeorin
+T28	Compound 2114 2123	atranorin
+T29	Compound 2125 2140	Beta-Sitosterol
+T30	Compound 2142 2154	stigmasterol
+T31	Synonym 2161 2186	Macromitrium orthostichum
+T32	Synonym 2219 2244	Macromitrium orthostichum
+T34	Location 2414 2425	Taft Avenue
+T35	Location 2427 2433	Manila
+T36	Location 2440 2451	Philippines
+T37	Location 2557 2567	Binan City
+T38	Location 2569 2575	Laguna
+T39	Location 2582 2593	Philippines
+T40	Location 2647 2658	Taft Avenue
+T41	Location 2660 2666	Manila
+T42	Location 2673 2684	Philippines
+T44	Location 2787 2790	Sec
+T45	Location 2794 2800	Taipei
+T46	Location 2802 2808	Taiwan
+T50	Synonym 3057 3082	Macromitrium orthostichum
+T51	Compound 3126 3132	zeorin
+T52	Compound 3135 3144	atranorin
+T53	Compound 3162 3177	beta-sitosterol
+T54	Compound 3182 3194	stigmasterol
+T55	Compound 3242 3248	zeorin
+T56	Compound 3322 3331	atranorin
+T57	Compound 3333 3348	Beta-Sitosterol
+T58	Compound 3350 3362	stigmasterol
+T59	Synonym 3445 3470	Macromitrium orthostichum
+T60	Family 3472 3487	Orthotrichaceae
+T61	Compound 3489 3495	Zeorin
+T62	Compound 3497 3506	Atranorin
+T63	Compound 3508 3523	beta-Sitosterol
+T64	Compound 3525 3537	Stigmasterol
+T65	Compound 3735 3747	stigmasterol
+T66	Compound 3764 3776	stigmasterol
+T67	Compound 4387 4395	vanillin
+T69	Location 4582 4588	Morong
+T70	Location 4590 4596	Bataan
+T71	Location 4598 4609	Philippines
+T72	Synonym 4682 4707	Macromitrium orthostichum
+T74	Compound 5196 5202	zeorin
+T75	Synonym 5360 5385	Macromitrium orthostichum
+T76	Synonym 5404 5429	Macromitrium orthostichum
+T80	Compound 5675 5682	acetone
+T81	Compound 5743 5750	acetone
+T82	Compound 5852 5867	Beta-Sitosterol
+T83	Compound 5873 5885	stigmasterol
+T84	Compound 5887 5896	atranorin
+T85	Compound 5948 5955	acetone
+T86	Compound 6114 6127	ethyl acetate
+T87	Compound 6225 6231	zeorin
+T88	Compound 6404 6413	atranorin
+T89	Compound 6418 6433	Beta-Sitosterol
+T90	Compound 6476 6482	Zeorin
+T91	Compound 6569 6575	zeorin
+T92	Compound 6595 6601	zeorin
+T93	Compound 6621 6627	zeorin
+T94	Compound 6647 6653	zeorin
+T95	Compound 6673 6679	zeorin
+T96	Compound 6699 6714	Beta-Sitosterol
+T97	Compound 6732 6744	stigmasterol
+T98	Compound 6746 6755	atranorin
+T99	Compound 7207 7216	Atranorin
+T100	Compound 7282 7291	atranorin
+T101	Compound 7330 7339	atranorin
+T102	Compound 7359 7368	atranorin
+T103	Compound 7388 7403	Beta-Sitosterol
+T104	Compound 7487 7502	Beta-Sitosterol
+T105	Compound 7529 7544	Beta-Sitosterol
+T106	Compound 7580 7592	stigmasterol
+T107	Compound 7769 7781	Stigmasterol
+T108	Compound 7808 7823	Beta-Sitosterol
+T109	Compound 7859 7871	stigmasterol
+T110	Compound 7923 7929	zeorin
+T111	Compound 7980 7992	stigmasterol
+T112	Compound 8030 8042	stigmasterol
+T115	Synonym 8212 8237	Macromitrium orthostichum
+T116	Compound 8247 8253	zeorin
+T117	Compound 8256 8265	atranorin
+T118	Compound 8283 8298	beta-sitosterol
+T119	Compound 8303 8315	stigmasterol
+T120	Compound 8363 8369	zeorin
+T121	Compound 8535 8544	atranorin
+T122	Compound 8607 8616	atranorin
+T123	Compound 8628 8643	Beta-Sitosterol
+T124	Compound 8649 8664	beta-sitosterol
+T125	Compound 8678 8690	stigmasterol
+T126	Compound 8696 8709	strigmasterol
+T127	Compound 8739 8754	Beta-Sitosterol
+T128	Compound 8760 8772	stigmasterol
+T129	Compound 8886 8898	stigmasterol
+T130	Compound 8953 8968	Beta-Sitosterol
+T131	Compound 9007 9019	stigmasterol
+T132	Compound 9047 9059	stigmasterol
+T133	Compound 9090 9102	stigmasterol
+T134	Compound 9161 9173	stigmasterol
+T135	Synonym 9230 9255	Macromitrium orthostichum
+T136	Compound 9341 9347	Zeorin
+T137	Compound 9352 9361	atranorin
+T138	BioAct 9389 9400	antioxidant
+T139	Compound 9423 9429	zeorin
+T140	BioAct 9448 9461	antibacterial
+T141	BioAct 9466 9476	antifungal
+T143	Compound 9518 9527	atranorin
+T144	BioAct 9602 9617	antinociceptive
+T145	Compound 9668 9677	atranorin
+T146	Compound 9679 9685	zeorin
+T147	Compound 9689 9701	stigmasterol
+T148	Compound 9750 9765	Beta-Sitosterol
+T149	Compound 9770 9782	stigmasterol
+T150	Compound 9814 9820	zeorin
+T151	Compound 9823 9832	atranorin
+T152	Compound 9835 9850	beta-sitosterol
+T153	Compound 9855 9867	stigmasterol
+T156	Synonym 9904 9929	Macromitrium orthostichum
+T157	Synonym 9978 10003	Macromitrium orthostichum
+T158	Synonym 10066 10084	Macromitrium aurum
+T159	Compound 10097 10108	leukotriene
+T161	Compound 10180 10195	Beta-Sitosterol
+T162	BodyPart 10226 10232	breast
+T163	CellLine 10233 10238	MCF-7
+T164	BioAct 10361 10371	anticancer
+T165	Compound 10541 10547	murine
+T167	Compound 10588 10600	stigmasterol
+T170	BioAct 10925 10938	antimutagenic
+T171	BioAct 10949 10966	anti-inflammatory
+T172	BioAct 10992 11003	antioxidant
+R1	isLocatedIn Arg1:T7 Arg2:T8	
+R2	isLocatedIn Arg1:T7 Arg2:T9	
+R3	isLocatedIn Arg1:T7 Arg2:T10	
+R4	isLocatedIn Arg1:T7 Arg2:T11	
+R5	isLocatedIn Arg1:T7 Arg2:T12	
+R6	isLocatedIn Arg1:T7 Arg2:T13	
+T4	Genus 1264 1276	Macromitrium
+T5	Genus 1490 1502	Macromitrium
+R7	belongsToGenus Arg1:T15 Arg2:T5	
+R8	hasSynonymPlantPart Arg1:T15 Arg2:T16	
+T173	PlantPart 1593 1601	branches
+R9	hasSynonymPlantPart Arg1:T15 Arg2:T173	
+T174	Genus 1649 1661	Macromitrium
+R10	belongsToGenus Arg1:T17 Arg2:T174	
+R11	hasSynonymPlantPart Arg1:T17 Arg2:T18	
+R12	hasCompound Arg1:T26 Arg2:T20	
+R13	hasCompound Arg1:T26 Arg2:T21	
+R14	hasCompound Arg1:T26 Arg2:T22	
+R15	hasCompound Arg1:T26 Arg2:T23	
+R16	hasCompound Arg1:T31 Arg2:T27	
+R17	hasCompound Arg1:T31 Arg2:T28	
+R18	hasCompound Arg1:T31 Arg2:T29	
+R19	hasCompound Arg1:T31 Arg2:T30	
+R20	hasCompound Arg1:T50 Arg2:T51	
+R21	hasCompound Arg1:T50 Arg2:T52	
+R22	hasCompound Arg1:T50 Arg2:T53	
+R23	hasCompound Arg1:T50 Arg2:T54	
+T24	Location 4562 4580	Mount Natib's Peak
+T25	Preparation 5444 5514	ground in a blender, soaked in CH2Cl2 for three days and then filtered
+R24	hasCompound Arg1:T115 Arg2:T116	
+R25	hasCompound Arg1:T115 Arg2:T117	
+R26	hasCompound Arg1:T115 Arg2:T118	
+R27	hasCompound Arg1:T115 Arg2:T119	
+T33	BioAct 9372 9384	antidiabetic
+R28	hasBiologicalActivity Arg1:T136 Arg2:T33	
+R29	hasBiologicalActivity Arg1:T136 Arg2:T138	
+R30	hasBiologicalActivity Arg1:T137 Arg2:T33	
+R31	hasBiologicalActivity Arg1:T137 Arg2:T138	
+R32	hasBiologicalActivity Arg1:T139 Arg2:T140	
+R33	hasBiologicalActivity Arg1:T139 Arg2:T141	
+T43	BioAct 9536 9553	antiproliferative
+R34	hasBiologicalActivity Arg1:T143 Arg2:T43	
+R35	hasBiologicalActivity Arg1:T143 Arg2:T144	
+R36	hasCompound Arg1:T156 Arg2:T153	
+R37	hasCompound Arg1:T156 Arg2:T152	
+R38	hasCompound Arg1:T156 Arg2:T151	
+R39	hasCompound Arg1:T156 Arg2:T150	
+T47	BioAct 10040 10050	antibiotic
+T48	BioAct 10156 10169	wound healing
+T49	BioAct 10969 10987	antiosteoarthritic

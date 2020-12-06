@@ -1,0 +1,185 @@
+T1	Location 128 133	CODEN
+T2	Location 134 137	USA
+T6	Location 470 480	Binan City
+T7	Location 482 488	Laguna
+T8	Location 490 501	Philippines
+T9	Location 554 565	Taft Avenue
+T10	Location 567 573	Manila
+T11	Location 575 586	Philippines
+T12	Location 628 639	Philippines
+T13	Location 650 661	Quezon City
+T14	Location 663 674	Philippines
+T17	Location 752 758	Taipei
+T18	Location 760 766	Taiwan
+T21	PlantPart 816 822	leaves
+T22	Synonym 826 849	Aphanamixis polystachya
+T23	Compound 871 884	alpha-copaene
+T24	Compound 887 895	squalene
+T25	Compound 898 908	polyprenol
+T26	Compound 911 926	beta-sitosterol
+T27	Compound 929 935	lutein
+T28	Compound 942 955	beta-carotene
+T29	Compound 976 988	alphacopaene
+T30	Synonym 1093 1116	Aphanamixis polystachya
+T31	Family 1118 1127	Meliaceae
+T32	Compound 1129 1142	alpha-copaene
+T33	Compound 1144 1152	squalene
+T34	Compound 1154 1164	polyprenol
+T35	Compound 1166 1181	beta-sitosterol
+T36	Compound 1183 1189	lutein
+T37	Compound 1191 1204	beta-carotene
+T38	Synonym 1209 1232	Aphanamixis polystachya
+T39	Family 1259 1268	Meliaceae
+T40	Location 1284 1293	Indonesia
+T41	Location 1295 1303	Malaysia
+T42	Location 1305 1314	Singapore
+T43	Location 1316 1322	Taiwan
+T44	Location 1344 1349	China
+T45	PlantPart 1356 1360	bark
+T46	Synonym 1364 1387	Aphanamixis polystachya
+T47	BioAct 1412 1423	antioxidant
+T48	PlantPart 1488 1492	bark
+T49	Synonym 1588 1611	Aphanamixis polystachya
+T50	PlantPart 1612 1616	leaf
+T51	BioAct 1636 1649	antimicrobial
+T52	BioAct 1651 1660	cytotoxic
+T53	BioAct 1665 1676	antioxidant
+T54	Synonym 1785 1808	Aphanamixis polystachya
+T55	ChemicalClass 1841 1851	diterpenes
+T56	ChemicalClass 1882 1891	flavonoid
+T59	ChemicalClass 1920 1931	triterpenes
+T60	ChemicalClass 1942 1956	sesquiterpenes
+T61	ChemicalClass 1963 1972	alkaloids
+T62	Compound 2035 2048	alpha-copaene
+T63	Compound 2091 2099	squalene
+T64	Compound 2102 2112	polyprenol
+T65	Compound 2115 2130	beta-sitosterol
+T66	Compound 2133 2139	lutein
+T67	Compound 2146 2159	beta-carotene
+T70	PlantPart 2208 2214	leaves
+T71	Synonym 2218 2241	Aphanamixis polystachya
+T72	Compound 2289 2301	alphacopaene
+T73	Synonym 2308 2331	Aphanamixis polystachya
+T74	Compound 2410 2416	lutein
+T75	Compound 2418 2433	beta-sitosterol
+T76	Compound 2438 2451	beta-carotene
+T77	Compound 2457 2467	polyprenol
+T78	Compound 2472 2478	lutein
+T79	Compound 2484 2496	alphacopaene
+T80	Compound 2498 2506	squalene
+T81	Synonym 2540 2563	Aphanamixis polystachya
+T82	Compound 2565 2578	alpha-copaene
+T83	Compound 2581 2589	squalene
+T84	Compound 2592 2602	polyprenol
+T85	Compound 2605 2620	beta-sitosterol
+T86	Compound 2623 2629	lutein
+T87	Compound 2636 2648	betacarotene
+T88	Compound 3217 3229	alphacopaene
+T90	Compound 3382 3389	acetone
+T91	Compound 3393 3408	dichloromethane
+T92	Compound 3652 3658	lutein
+T93	PlantPart 3867 3871	Leaf
+T94	Synonym 3883 3906	Aphanamixis polystachya
+T95	Location 3927 3935	Bacnotan
+T96	Location 3937 3945	La Union
+T97	Location 3947 3958	Philippines
+T98	Synonym 3975 3998	Aphanamixis polystachya
+T100	Location 4114 4125	Quezon City
+T101	Location 4127 4138	Philippines
+T102	PlantPart 4243 4249	Leaves
+T103	Synonym 4253 4276	Aphanamixis polystachya
+T104	PlantPart 4291 4297	leaves
+T105	Compound 4298 4310	alphacopaene
+T106	Synonym 4319 4342	Aphanamixis polystachya
+T109	Compound 4537 4544	acetone
+T110	Compound 4681 4693	alphacopaene
+T111	Compound 4714 4721	acetone
+T113	Compound 4837 4845	squalene
+T114	Compound 4859 4872	beta-carotene
+T115	Compound 4928 4935	acetone
+T116	Compound 5020 5030	polyprenol
+T117	Compound 5051 5058	acetone
+T118	Compound 5062 5077	dichloromethane
+T119	Compound 5152 5167	beta-sitosterol
+T120	Compound 5169 5175	lutein
+T121	Compound 5235 5242	acetone
+T122	Compound 5352 5358	lutein
+T123	Compound 5416 5423	diethyl
+T124	Compound 5432 5445	Alpha-Copaene
+T125	Compound 5472 5480	squalene
+T126	Compound 5492 5498	lutein
+T127	Compound 5518 5530	alphacopaene
+T128	Compound 5537 5545	squalene
+T129	Compound 5558 5570	alphacopaene
+T130	Compound 5582 5594	alphacopaene
+T131	Compound 5606 5618	alphacopaene
+T132	Compound 5630 5642	alphacopaene
+T133	Compound 5648 5660	alphacopaene
+T134	Compound 5673 5685	alphacopaene
+T135	Compound 5691 5703	alphacopaene
+T136	Compound 5717 5729	alphacopaene
+T137	Compound 5762 5775	beta-carotene
+T138	Compound 5802 5815	beta-carotene
+T139	Compound 5839 5851	alphacopaene
+T142	Synonym 6214 6237	Aphanamixis polystachya
+T143	Compound 6259 6271	alphacopaene
+T144	Compound 6274 6282	squalene
+T145	Compound 6285 6295	polyprenol
+T146	Compound 6298 6313	beta-sitosterol
+T147	Compound 6316 6322	lutein
+T148	Compound 6329 6342	beta-carotene
+T149	Compound 6363 6375	alphacopaene
+T150	Compound 6482 6494	alphacopaene
+T151	Compound 6570 6583	alpha-copaene
+T152	Compound 6604 6612	squalene
+T153	Compound 6615 6625	polyprenol
+T154	Compound 6628 6643	beta-sitosterol
+T155	Compound 6646 6652	lutein
+T156	Compound 6659 6672	beta-carotene
+R1	hasSynonymPlantPart Arg1:T22 Arg2:T21	
+R2	hasCompound Arg1:T21 Arg2:T23	
+R3	hasCompound Arg1:T21 Arg2:T24	
+R4	hasCompound Arg1:T21 Arg2:T25	
+R5	hasCompound Arg1:T21 Arg2:T26	
+R6	hasCompound Arg1:T21 Arg2:T27	
+R7	hasCompound Arg1:T21 Arg2:T28	
+R8	belongsToFamily Arg1:T38 Arg2:T39	
+R9	isLocatedIn Arg1:T38 Arg2:T40	
+R10	isLocatedIn Arg1:T38 Arg2:T41	
+R11	isLocatedIn Arg1:T38 Arg2:T42	
+R12	isLocatedIn Arg1:T38 Arg2:T43	
+R13	isLocatedIn Arg1:T38 Arg2:T44	
+R14	hasSynonymPlantPart Arg1:T46 Arg2:T45	
+T3	BioAct 1426 1435	antitumor
+T4	BioAct 1442 1457	radioprotective
+T5	BioAct 1500 1511	antifeedant
+T15	BioAct 1516 1525	repellant
+R15	hasSynonymPlantPart Arg1:T49 Arg2:T50	
+T16	ChemicalClass 1892 1902	glycosides
+T19	ChemicalClass 1909 1917	chromone
+T20	ChemicalClass 1872 1879	lignans
+T57	ChemicalClass 1854 1863	limonoids
+R16	hasSynonymPlantPart Arg1:T71 Arg2:T70	
+R17	hasCompound Arg1:T70 Arg2:T62	
+R18	hasCompound Arg1:T70 Arg2:T63	
+R19	hasCompound Arg1:T70 Arg2:T65	
+R20	hasCompound Arg1:T70 Arg2:T66	
+R21	hasCompound Arg1:T70 Arg2:T67	
+R22	hasSynonymPlantPart Arg1:T94 Arg2:T93	
+R23	isLocatedIn Arg1:T94 Arg2:T95	
+R24	isLocatedIn Arg1:T94 Arg2:T96	
+R25	isLocatedIn Arg1:T94 Arg2:T97	
+T58	Location 4105 4112	Diliman
+R26	isLocatedIn Arg1:T98 Arg2:T58	
+R27	isLocatedIn Arg1:T98 Arg2:T100	
+R28	isLocatedIn Arg1:T98 Arg2:T101	
+R29	hasSynonymPlantPart Arg1:T103 Arg2:T102	
+R30	hasSynonymPlantPart Arg1:T106 Arg2:T104	
+R31	hasCompound Arg1:T104 Arg2:T105	
+R33	hasCompound Arg1:T142 Arg2:T143	
+R34	hasCompound Arg1:T142 Arg2:T144	
+R35	hasCompound Arg1:T142 Arg2:T145	
+R36	hasCompound Arg1:T142 Arg2:T146	
+R37	hasCompound Arg1:T142 Arg2:T147	
+R38	hasCompound Arg1:T142 Arg2:T148	
+R39	hasCompound Arg1:T73 Arg2:T72	
