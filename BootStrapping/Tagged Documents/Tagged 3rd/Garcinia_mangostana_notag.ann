@@ -1,0 +1,177 @@
+T1	Location 186 195	USA CODEN
+T2	Synonym 247 266	Garcinia mangostana
+T3	Compound 319 324	Tabin
+T5	Location 444 455	Taft Avenue
+T6	Location 457 463	Manila
+T7	Location 470 481	Philippines
+T8	Location 584 594	Binan City
+T9	Location 596 602	Laguna
+T10	Location 609 620	Philippines
+T11	Location 711 721	LiNong St.
+T13	Location 730 736	Taipei
+T14	Location 738 744	Taiwan
+T15	Compound 783 798	alpha-mangostin
+T16	Compound 812 820	xanthone
+T17	Compound 825 839	3-isomangostin
+T18	PlantPart 887 892	fruit
+T19	Synonym 896 915	Garcinia mangostana
+T23	BioAct 1112 1122	anticancer
+T24	Synonym 1144 1163	Garcinia mangostana
+T26	Synonym 1192 1211	Garcinia mangostana
+T27	PlantPart 1232 1238	fruits
+T28	MedicinalPlant 1261 1271	mangosteen
+T29	BioAct 1330 1347	anti-inflammatory
+T31	BioAct 1365 1375	antifungal
+T32	Synonym 1455 1474	Garcinia mangostana
+T33	BioAct 1316 1327	antioxidant
+T34	BioAct 1537 1550	antibacterial
+T35	BioAct 1552 1562	antifungal
+T36	BioAct 1568 1577	antiviral
+T37	Compound 1729 1744	alpha-mangostin
+T38	Compound 1746 1754	gartanin
+T39	Compound 1759 1773	3-isomangostin
+T40	Synonym 1795 1813	Garcinia mangostin
+T41	Compound 1869 1884	alpha-mangostin
+T42	Compound 1886 1900	3-isomangostin
+T43	Compound 1902 1914	stigmasterol
+T44	Compound 1916 1932	triacylglycerols
+T45	Compound 1934 1993	betasitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T46	Compound 1999 2056	stigmasteryl-3beta-glucopyranoside-6'-O-fatty acid esters
+T47	Compound 2076 2088	stigmasterol
+T48	Compound 2090 2106	triacylglycerols
+T49	Compound 2112 2125	linoleic acid
+T50	PlantPart 2135 2140	seeds
+T51	Synonym 2144 2163	Garcinia mangostana
+T55	PlantPart 2287 2292	fruit
+T56	Synonym 2296 2315	Garcinia mangostana
+T57	Compound 2708 2716	vanillin
+T58	Synonym 2772 2791	Garcinia mangostana
+T59	PlantPart 2797 2802	fruit
+T60	Location 2822 2827	Davao
+T61	Location 2829 2840	Philippines
+T62	PlantPart 2863 2868	fruit
+T63	Compound 3007 3018	Garcinone D
+T64	Compound 3590 3601	Garcinone D
+T65	Synonym 3635 3654	Garcinia mangostana
+T69	Compound 3801 3812	Garcinone D
+T70	Compound 3913 3920	acetone
+T71	Compound 3969 3976	acetone
+T72	Compound 4070 4081	Garcinone D
+T73	Compound 4131 4142	Garcinone D
+T74	Compound 4231 4242	Garcinone D
+T75	Compound 4259 4270	Garcinone D
+T76	Compound 4305 4316	Garcinone D
+T77	Compound 4334 4345	Garcinone D
+T78	Compound 4363 4374	Garcinone D
+T81	PlantPart 4859 4864	fruit
+T82	Synonym 4868 4887	Garcinia mangostana
+T83	Compound 4916 4927	garcinone D
+T84	Compound 4947 4958	Garcinone D
+T85	Compound 5026 5037	Garcinone D
+T86	Compound 5078 5093	alpha-mangostin
+T87	Compound 5152 5161	methylene
+T88	Compound 5177 5183	prenyl
+T89	Compound 5229 5243	alphamangostin
+T90	Compound 5292 5301	methylene
+T91	Compound 5321 5332	Garcinone D
+T92	Compound 5385 5400	alpha-mangostin
+T93	Compound 5417 5426	methylene
+T94	Compound 5438 5449	Garcinone D
+T95	Compound 5457 5468	Garcinone D
+T96	Compound 5499 5510	Garcinone D
+T97	Compound 5528 5539	Garcinone D
+T98	Compound 5556 5571	alpha-mangostin
+T99	Compound 5624 5635	Garcinone D
+T100	Compound 5643 5654	Garcinone D
+T101	Compound 5788 5794	prenyl
+T102	Compound 5842 5857	alpha-mangostin
+T103	Compound 5876 5882	prenyl
+T104	Compound 5892 5903	Garcinone D
+T105	Compound 5946 5957	Garcinone D
+T106	Compound 5972 5981	methylene
+T107	Compound 5996 6002	prenyl
+T108	Compound 6031 6046	alpha-mangostin
+T109	Compound 6087 6098	Garcinone D
+T110	Compound 6168 6183	alpha-mangostin
+T111	Compound 6232 6243	Garcinone D
+T112	Compound 6279 6290	Garcinone D
+T113	Compound 6403 6414	Garcinone D
+T114	Compound 6678 6689	Garcinone D
+T115	Compound 6822 6833	Garcinone D
+T116	Compound 6845 6856	Garcinone D
+T117	CellLine 6892 6897	HT-29
+T118	CellLine 6951 6955	NF-B
+T119	Compound 6963 6974	Garcinone D
+T120	Compound 7030 7041	Garcinone D
+T121	Compound 7128 7139	Garcinone D
+T124	Compound 7373 7384	Garcinone D
+T125	Compound 7387 7398	Garcinone D
+T126	PlantPart 7422 7427	fruit
+T127	Synonym 7450 7469	Garcinia mangostana
+T128	BodyPart 7544 7549	mouth
+T130	Compound 7706 7717	Garcinone D
+T131	CellLine 7788 7792	CNE1
+T133	CellLine 7986 7991	MCF-7
+T134	Compound 8085 8096	Garcinone D
+R1	hasSynonymPlantPart Arg1:T19 Arg2:T18	
+R2	hasCompound Arg1:T18 Arg2:T17	
+R3	hasCompound Arg1:T18 Arg2:T16	
+R4	hasCompound Arg1:T18 Arg2:T15	
+T4	Compound 1078 1091	Garcinone Das
+T12	Compound 1008 1019	Garcinone D
+T20	Compound 977 988	garcinone D
+T21	Synonym 1177 1188	garcinone D
+R5	hasSynonymPlantPart Arg1:T26 Arg2:T27	
+R6	hasSynonym Arg1:T28 Arg2:T26	
+T22	Compound 1349 1360	Garcinone D
+T25	BioAct 1480 1491	antioxidant
+T30	BioAct 1493 1502	antitumor
+T135	BioAct 1504 1517	anti-allergic
+T136	BioAct 1519 1535	antiinflammatory
+R10	hasSynonymPlantPart Arg1:T51 Arg2:T50	
+T137	Compound 1856 1867	tocotrienol
+T138	PlantPart 2066 2070	pulp
+R11	hasSynonymPlantPart Arg1:T51 Arg2:T138	
+T139	PlantPart 1783 1791	pericarp
+R7	hasSynonymPlantPart Arg1:T40 Arg2:T139	
+R8	hasCompound Arg1:T139 Arg2:T37	
+R9	hasCompound Arg1:T139 Arg2:T38	
+R12	hasCompound Arg1:T139 Arg2:T39	
+R13	hasCompound Arg1:T138 Arg2:T137	
+R14	hasCompound Arg1:T138 Arg2:T41	
+R15	hasCompound Arg1:T138 Arg2:T42	
+R16	hasCompound Arg1:T138 Arg2:T43	
+R17	hasCompound Arg1:T138 Arg2:T44	
+R18	hasCompound Arg1:T138 Arg2:T45	
+R19	hasCompound Arg1:T138 Arg2:T46	
+R20	hasCompound Arg1:T50 Arg2:T47	
+R21	hasCompound Arg1:T50 Arg2:T48	
+R22	hasCompound Arg1:T50 Arg2:T49	
+R23	hasSynonymPlantPart Arg1:T56 Arg2:T55	
+T52	Compound 2205 2216	garcinone D
+R24	hasBiologicalActivity Arg1:T4 Arg2:T23	
+R25	hasCompound Arg1:T55 Arg2:T52	
+R26	hasSynonymPlantPart Arg1:T58 Arg2:T59	
+R27	hasBiologicalActivity Arg1:T22 Arg2:T29	
+R28	isLocatedIn Arg1:T58 Arg2:T60	
+R29	isLocatedIn Arg1:T58 Arg2:T61	
+T53	Preparation 3659 3729	ground in a blender, soaked in CH2Cl2 for three days and then filtered
+T54	PlantPart 3617 3621	pulp
+R30	hasSynonymPlantPart Arg1:T65 Arg2:T54	
+R31	hasCompound Arg1:T54 Arg2:T64	
+R32	utilizePart Arg1:T53 Arg2:T54	
+R33	hasSynonymPlantPart Arg1:T82 Arg2:T81	
+R34	hasCompound Arg1:T81 Arg2:T83	
+T66	BioAct 6867 6879	cytotoxicity
+R35	hasBiologicalActivity Arg1:T116 Arg2:T66	
+R36	affects Arg1:T66 Arg2:T117	
+T67	BioAct 7161 7171	inhibitory
+R37	hasBiologicalActivity Arg1:T121 Arg2:T67	
+R38	hasCompound Arg1:T126 Arg2:T125	
+R39	hasSynonymPlantPart Arg1:T127 Arg2:T126	
+T68	Illness 7556 7569	breast cancer
+T79	Illness 7593 7604	lung cancer
+T80	BioAct 7496 7508	cytotoxicity
+R40	hasBiologicalActivity Arg1:T125 Arg2:T80	
+R41	treats Arg1:T126 Arg2:T68	
+R42	treats Arg1:T126 Arg2:T79	
