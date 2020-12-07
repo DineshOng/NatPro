@@ -3,7 +3,10 @@
   <Category>hasBiologicalActivity</Category>
   <Tag1>Compound<Name>beta-sitosterol</Name>
   </Tag1>
-  <Tag2>BioAct<Name>anticancer</Name>
+  <Tag2>BioAct<Name>anti-inflammatory</Name>
+    <Name>antimicrobial</Name>
+    <Name>antioxidant</Name>
+    <Name>anticancer</Name>
   </Tag2>
   <Relation>
     <Pattern>exhibited</Pattern>

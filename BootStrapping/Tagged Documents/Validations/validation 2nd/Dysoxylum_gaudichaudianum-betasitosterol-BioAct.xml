@@ -4,6 +4,7 @@
   <Tag1>Compound<Name>betasitosterol</Name>
   </Tag1>
   <Tag2>BioAct<Name>cytotoxic</Name>
+    <Name>anticancer</Name>
   </Tag2>
   <Relation>
     <Pattern>accompanied by</Pattern>

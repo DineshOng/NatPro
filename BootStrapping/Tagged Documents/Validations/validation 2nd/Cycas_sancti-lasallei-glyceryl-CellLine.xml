@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>hasCellLine</Category>
   <Tag1>Compound<Name>glyceryl</Name>
   </Tag1>
-  <Tag2>CellLine<Name>cho</Name>
+  <Tag2>CellLine<Name>2008</Name>
+    <Name>cho</Name>
+    <Name>mcf-7</Name>
+    <Name>ehrlich</Name>
   </Tag2>
   <Relation>
     <Pattern>led to</Pattern>

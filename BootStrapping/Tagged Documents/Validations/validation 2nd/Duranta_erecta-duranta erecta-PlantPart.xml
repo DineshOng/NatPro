@@ -4,6 +4,7 @@
   <Tag1>Synonym<Name>duranta erecta</Name>
   </Tag1>
   <Tag2>PlantPart<Name>leaves</Name>
+    <Name>fruits</Name>
     <Name>flowers</Name>
   </Tag2>
   <Relation>

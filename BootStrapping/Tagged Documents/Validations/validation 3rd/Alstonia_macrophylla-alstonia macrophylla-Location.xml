@@ -34,6 +34,7 @@
     <Pattern>was comparable to</Pattern>
     <Pattern>was found to</Pattern>
     <Pattern>was tested on</Pattern>
+    <Pattern>was to</Pattern>
     <Pattern>were gathered in</Pattern>
     <Pattern>were used in</Pattern>
   </Relation>

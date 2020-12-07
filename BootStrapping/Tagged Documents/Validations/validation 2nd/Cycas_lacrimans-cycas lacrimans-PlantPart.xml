@@ -3,12 +3,16 @@
   <Category>hasSynonymPlantPart</Category>
   <Tag1>Synonym<Name>cycas lacrimans</Name>
   </Tag1>
-  <Tag2>PlantPart<Name>sarcotesta</Name>
+  <Tag2>PlantPart<Name>ripe sarcotesta</Name>
     <Name>sclerotesta</Name>
-    <Name>petiole and rachis</Name>
-    <Name>roots</Name>
     <Name>bark</Name>
     <Name>endotesta</Name>
+    <Name>male cone</Name>
+    <Name>sarcotesta</Name>
+    <Name>unripe sarcotesta</Name>
+    <Name>petiole and rachis</Name>
+    <Name>roots</Name>
+    <Name>cone base</Name>
   </Tag2>
   <Relation>
     <Pattern>1,2-dioleylglycerol from</Pattern>

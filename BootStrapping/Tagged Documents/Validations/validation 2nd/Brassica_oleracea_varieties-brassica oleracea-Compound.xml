@@ -5,19 +5,30 @@
   </Tag1>
   <Tag2>Compound<Name>triglyceride</Name>
     <Name>phenols</Name>
-    <Name>alpha-linolenic acid</Name>
+    <Name>isothiocyanate</Name>
+    <Name>sulforaphane</Name>
     <Name>dichloromethane</Name>
+    <Name>polyunsaturated fatty acids</Name>
+    <Name>glycosides</Name>
+    <Name>linolenic acid</Name>
+    <Name>betasitosterol</Name>
+    <Name>docosahexaenoic acid</Name>
+    <Name>trilinolenin</Name>
+    <Name>brassicasterol</Name>
+    <Name>3-butenyl isothiocyanate</Name>
+    <Name>alpha-linolenic acid</Name>
+    <Name>diallyl trisulfide</Name>
     <Name>beta-sitosterol</Name>
     <Name>beta-carotene</Name>
     <Name>linoleic acid</Name>
     <Name>triglycerides</Name>
     <Name>lutein</Name>
-    <Name>glycosides</Name>
-    <Name>linolenic acid</Name>
-    <Name>betasitosterol</Name>
+    <Name>their fatty acid ethyl esters</Name>
+    <Name>essential fatty acids</Name>
+    <Name>eicosapentaenoic acid</Name>
     <Name>essential fatty acid</Name>
-    <Name>trilinolenin</Name>
     <Name>stigmasterol</Name>
+    <Name>campesterol</Name>
   </Tag2>
   <Relation>
     <Pattern>grown in</Pattern>

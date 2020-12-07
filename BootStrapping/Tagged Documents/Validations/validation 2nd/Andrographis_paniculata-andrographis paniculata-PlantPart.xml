@@ -4,11 +4,13 @@
   <Tag1>Synonym<Name>andrographis paniculata</Name>
   </Tag1>
   <Tag2>PlantPart<Name>stems</Name>
+    <Name>leaves</Name>
+    <Name>seed</Name>
+    <Name>bark</Name>
+    <Name>root</Name>
     <Name>pods</Name>
     <Name>roots</Name>
-    <Name>leaves</Name>
     <Name>leaf</Name>
-    <Name>seed</Name>
   </Tag2>
   <Relation>
     <Pattern>acid esters from</Pattern>

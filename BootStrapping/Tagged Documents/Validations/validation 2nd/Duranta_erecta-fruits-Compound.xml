@@ -3,8 +3,38 @@
   <Category>hasCompound</Category>
   <Tag1>PlantPart<Name>fruits</Name>
   </Tag1>
-  <Tag2>Compound<Name>methanol</Name>
+  <Tag2>Compound<Name>durantoside ii</Name>
+    <Name>dichloromethane</Name>
+    <Name>durantanin v</Name>
+    <Name>durantoside iv</Name>
+    <Name>durantoside i</Name>
+    <Name>verbascoside</Name>
+    <Name>durantanin iv</Name>
+    <Name>durantoside v</Name>
+    <Name>methanol</Name>
+    <Name>durantosides ii</Name>
+    <Name>durantosides iii</Name>
+    <Name>e)-p-methoxycinnamic acid</Name>
+    <Name>phytyl fatty acid esters</Name>
+    <Name>lamiide</Name>
+    <Name>oleanolic acid</Name>
+    <Name>lamiidoside</Name>
+    <Name>kusaginin</Name>
+    <Name>e)-cinnamic acid</Name>
+    <Name>glucosides</Name>
+    <Name>ursolic acid</Name>
+    <Name>duranterectoside a</Name>
+    <Name>beta-amyrin</Name>
     <Name>trans-cinnamic acid</Name>
+    <Name>saponin</Name>
+    <Name>duranterectosides a</Name>
+    <Name>durantosides i</Name>
+    <Name>duranterectosides b</Name>
+    <Name>triacylglycerols</Name>
+    <Name>alpha-amyrin</Name>
+    <Name>duranterectosides c</Name>
+    <Name>duranterectosides d</Name>
+    <Name>beta-sitosteryl-3-o-beta-d-glucopyranoside</Name>
   </Tag2>
   <Relation>
     <Pattern>has led to</Pattern>

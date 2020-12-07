@@ -3,10 +3,30 @@
   <Category>hasCompound</Category>
   <Tag1>PlantPart<Name>stem</Name>
   </Tag1>
-  <Tag2>Compound<Name>linoleic acid</Name>
+  <Tag2>Compound<Name>triglyceride</Name>
     <Name>sulforaphane</Name>
-    <Name>stigmasterol</Name>
+    <Name>isothiocyanate</Name>
+    <Name>alpha-linolenic acid</Name>
+    <Name>diallyl trisulfide</Name>
+    <Name>acetone</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>dichloromethane</Name>
+    <Name>beta-carotene</Name>
+    <Name>linoleic acid</Name>
+    <Name>triglycerides</Name>
+    <Name>lutein</Name>
+    <Name>palmitic acid</Name>
+    <Name>essential fatty acids</Name>
+    <Name>erucic acid</Name>
+    <Name>linolenic acid</Name>
+    <Name>betasitosterol</Name>
     <Name>essential fatty acid</Name>
+    <Name>major fatty acids</Name>
+    <Name>trilinolenin</Name>
+    <Name>brassicasterol</Name>
+    <Name>stigmasterol</Name>
+    <Name>3-butenyl isothiocyanate</Name>
+    <Name>campesterol</Name>
   </Tag2>
   <Relation>
     <Pattern>afford</Pattern>

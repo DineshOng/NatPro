@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>hasCellLine</Category>
   <Tag1>Compound<Name>alpha-spinasterol</Name>
   </Tag1>
   <Tag2>CellLine<Name>caco-2</Name>

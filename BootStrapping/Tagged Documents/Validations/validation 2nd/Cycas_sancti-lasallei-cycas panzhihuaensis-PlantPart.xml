@@ -5,8 +5,12 @@
   </Tag1>
   <Tag2>PlantPart<Name>stems</Name>
     <Name>flowers</Name>
+    <Name>sclerotesta</Name>
     <Name>leaves</Name>
     <Name>seeds</Name>
+    <Name>bark</Name>
+    <Name>endotesta</Name>
+    <Name>sarcotesta</Name>
   </Tag2>
   <Relation>
     <Pattern>2014a</Pattern>

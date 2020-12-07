@@ -3,8 +3,15 @@
   <Category>isLocatedIn</Category>
   <Tag1>Synonym<Name>dysoxylum mollissimum</Name>
   </Tag1>
-  <Tag2>Location<Name>ijppr</Name>
+  <Tag2>Location<Name>usa</Name>
+    <Name>samoa</Name>
+    <Name>u.s.a.</Name>
+    <Name>manassas</Name>
+    <Name>ijppr</Name>
     <Name>mariquit</Name>
+    <Name>virginia</Name>
+    <Name>philippines</Name>
+    <Name>manila</Name>
   </Tag2>
   <Relation>
     <Pattern>be found in</Pattern>

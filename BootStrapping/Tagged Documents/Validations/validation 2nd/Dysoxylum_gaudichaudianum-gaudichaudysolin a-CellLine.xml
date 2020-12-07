@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
-  <Category/>
+  <Category>hasCellLine</Category>
   <Tag1>Compound<Name>gaudichaudysolin a</Name>
   </Tag1>
-  <Tag2>CellLine<Name>mcf7</Name>
-    <Name>hct116</Name>
-    <Name>hl60</Name>
+  <Tag2>CellLine<Name>ht29</Name>
     <Name>nci-h226</Name>
+    <Name>ht-29</Name>
+    <Name>hct-116</Name>
+    <Name>hl60</Name>
+    <Name>b-cell</Name>
     <Name>rpmi</Name>
+    <Name>mcf7</Name>
+    <Name>hdfn</Name>
+    <Name>mcf-7</Name>
+    <Name>hct-15</Name>
+    <Name>du-145</Name>
+    <Name>hct116</Name>
+    <Name>colo 320</Name>
   </Tag2>
   <Relation>
     <Pattern>account for</Pattern>

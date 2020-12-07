@@ -3,7 +3,30 @@
   <Category>hasCompound</Category>
   <Tag1>Synonym<Name>raphanus sativus</Name>
   </Tag1>
-  <Tag2>Compound<Name>triglycerides</Name>
+  <Tag2>Compound<Name>triglyceride</Name>
+    <Name>isothiocyanate</Name>
+    <Name>sulforaphane</Name>
+    <Name>alpha-linolenic acid</Name>
+    <Name>diallyl trisulfide</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>dichloromethane</Name>
+    <Name>beta-carotene</Name>
+    <Name>polyunsaturated fatty acids</Name>
+    <Name>linoleic acid</Name>
+    <Name>triglycerides</Name>
+    <Name>lutein</Name>
+    <Name>their fatty acid ethyl esters</Name>
+    <Name>essential fatty acids</Name>
+    <Name>eicosapentaenoic acid</Name>
+    <Name>linolenic acid</Name>
+    <Name>docosahexaenoic acid</Name>
+    <Name>betasitosterol</Name>
+    <Name>essential fatty acid</Name>
+    <Name>trilinolenin</Name>
+    <Name>brassicasterol</Name>
+    <Name>3-butenyl isothiocyanate</Name>
+    <Name>stigmasterol</Name>
+    <Name>campesterol</Name>
   </Tag2>
   <Relation>
     <Pattern>grown in</Pattern>

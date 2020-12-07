@@ -3,11 +3,20 @@
   <Category>hasCompound</Category>
   <Tag1>Synonym<Name>dysoxylum mollissimum</Name>
   </Tag1>
-  <Tag2>Compound<Name>linoleic acid</Name>
-    <Name>24,25-epoxy-3beta,23-dihydroxy-7-tirucallene</Name>
+  <Tag2>Compound<Name>24,25-epoxy-3beta,23-dihydroxy-7-tirucallene</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>dichloromethane</Name>
+    <Name>polyprenol</Name>
+    <Name>polyprenols</Name>
+    <Name>linoleic acid</Name>
+    <Name>triglycerides</Name>
     <Name>squalene</Name>
     <Name>lutein</Name>
-    <Name>polyprenol</Name>
+    <Name>dimethyl sulfoxide</Name>
+    <Name>betasitosterol</Name>
+    <Name>pomegranate</Name>
+    <Name>dicloromethane</Name>
+    <Name>triacylglycerols</Name>
   </Tag2>
   <Relation>
     <Pattern>be found in</Pattern>

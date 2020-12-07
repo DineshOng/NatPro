@@ -5,6 +5,9 @@
   </Tag1>
   <Tag2>PlantPart<Name>stems</Name>
     <Name>leaves</Name>
+    <Name>seed</Name>
+    <Name>seeds</Name>
+    <Name>roots</Name>
     <Name>leaf</Name>
     <Name>stem</Name>
   </Tag2>

@@ -4,6 +4,7 @@
   <Tag1>Compound<Name>24,25-epoxy-3beta,23-dihydroxy-7-tirucallene</Name>
   </Tag1>
   <Tag2>BioAct<Name>cytotoxic</Name>
+    <Name>anticancer</Name>
   </Tag2>
   <Relation>
     <Pattern>accompanied by</Pattern>

@@ -3,14 +3,9 @@
   <Category>hasCompound</Category>
   <Tag1>PlantPart<Name>fruit</Name>
   </Tag1>
-  <Tag2>Compound<Name>garcinone d</Name>
-    <Name>dichloromethane</Name>
-    <Name>linoleic acid</Name>
-    <Name>betasitosteryl-3beta-glucopyranoside-6'-o-fatty acid</Name>
-    <Name>triacylglycerols</Name>
-    <Name>stigmasterol</Name>
+  <Tag2>Compound<Name>dichloromethane</Name>
+    <Name>garcinone d</Name>
     <Name>xanthone</Name>
-    <Name>stigmasteryl-3beta-glucopyranoside-6'-o-fatty acid</Name>
   </Tag2>
   <Relation>
     <Pattern>has led to</Pattern>

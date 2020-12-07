@@ -3,7 +3,11 @@
   <Category>isLocatedIn</Category>
   <Tag1>Synonym<Name>cycas edentata</Name>
   </Tag1>
-  <Tag2>Location<Name>philippines</Name>
+  <Tag2>Location<Name>cagayan de oro</Name>
+    <Name>philippines</Name>
+    <Name>malasag</Name>
+    <Name>manila</Name>
+    <Name>taft avenue</Name>
   </Tag2>
   <Relation>
     <Pattern>are endemic to</Pattern>

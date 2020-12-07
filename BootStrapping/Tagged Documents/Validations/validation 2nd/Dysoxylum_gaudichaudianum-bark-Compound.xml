@@ -3,14 +3,26 @@
   <Category>hasCompound</Category>
   <Tag1>PlantPart<Name>bark</Name>
   </Tag1>
-  <Tag2>Compound<Name>gaudichaudysolin a</Name>
+  <Tag2>Compound<Name>beta-sitosterol</Name>
+    <Name>24,25-epoxy-3beta,23-dihydroxy-7-tirucallene</Name>
+    <Name>dichloromethane</Name>
+    <Name>polyprenol</Name>
+    <Name>polyprenols</Name>
+    <Name>linoleic acid</Name>
+    <Name>triglycerides</Name>
+    <Name>lutein</Name>
+    <Name>squalene</Name>
+    <Name>p-hydroxyacetophenone</Name>
+    <Name>gaudichaudysolin a</Name>
     <Name>dysoxylins d</Name>
-    <Name>beta-sitosterol</Name>
+    <Name>betasitosterol</Name>
+    <Name>pomegranate</Name>
+    <Name>dicloromethane</Name>
     <Name>dysoxylins a</Name>
     <Name>dysoxylins b</Name>
+    <Name>triacylglycerols</Name>
     <Name>dysoxylins c</Name>
     <Name>stigmasterol</Name>
-    <Name>p-hydroxyacetophenone</Name>
   </Tag2>
   <Relation>
     <Pattern>are used to</Pattern>

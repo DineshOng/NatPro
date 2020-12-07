@@ -3,30 +3,38 @@
   <Category>hasCompound</Category>
   <Tag1>PlantPart<Name>leaves</Name>
   </Tag1>
-  <Tag2>Compound<Name>lamiide</Name>
-    <Name>durantoside ii</Name>
+  <Tag2>Compound<Name>durantoside ii</Name>
     <Name>dichloromethane</Name>
-    <Name>oleanolic acid</Name>
-    <Name>lamiidoside</Name>
     <Name>durantanin v</Name>
     <Name>durantoside iv</Name>
-    <Name>kusaginin</Name>
     <Name>durantoside i</Name>
-    <Name>glucosides</Name>
-    <Name>e)-cinnamic acid</Name>
-    <Name>ursolic acid</Name>
     <Name>verbascoside</Name>
     <Name>durantanin iv</Name>
     <Name>durantoside v</Name>
+    <Name>methanol</Name>
+    <Name>durantosides ii</Name>
+    <Name>durantosides iii</Name>
+    <Name>e)-p-methoxycinnamic acid</Name>
+    <Name>phytyl fatty acid esters</Name>
+    <Name>lamiide</Name>
+    <Name>oleanolic acid</Name>
+    <Name>lamiidoside</Name>
+    <Name>kusaginin</Name>
+    <Name>glucosides</Name>
+    <Name>e)-cinnamic acid</Name>
+    <Name>ursolic acid</Name>
+    <Name>duranterectoside a</Name>
+    <Name>beta-amyrin</Name>
     <Name>saponin</Name>
+    <Name>trans-cinnamic acid</Name>
     <Name>duranterectosides a</Name>
     <Name>durantosides i</Name>
     <Name>duranterectosides b</Name>
+    <Name>triacylglycerols</Name>
     <Name>duranterectosides c</Name>
+    <Name>alpha-amyrin</Name>
     <Name>duranterectosides d</Name>
-    <Name>durantosides ii</Name>
     <Name>beta-sitosteryl-3-o-beta-d-glucopyranoside</Name>
-    <Name>e)-p-methoxycinnamic acid</Name>
   </Tag2>
   <Relation>
     <Pattern>has led to</Pattern>

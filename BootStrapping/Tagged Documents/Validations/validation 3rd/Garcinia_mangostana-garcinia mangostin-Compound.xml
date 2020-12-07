@@ -4,14 +4,6 @@
   <Tag1>Synonym<Name>garcinia mangostin</Name>
   </Tag1>
   <Tag2>Compound<Name>gartanin</Name>
-    <Name>garcinone d</Name>
-    <Name>dichloromethane</Name>
-    <Name>linoleic acid</Name>
-    <Name>betasitosteryl-3beta-glucopyranoside-6'-o-fatty acid</Name>
-    <Name>triacylglycerols</Name>
-    <Name>stigmasterol</Name>
-    <Name>stigmasteryl-3beta-glucopyranoside-6'-o-fatty acid</Name>
-    <Name>xanthone</Name>
   </Tag2>
   <Relation>
     <Pattern>has led to</Pattern>

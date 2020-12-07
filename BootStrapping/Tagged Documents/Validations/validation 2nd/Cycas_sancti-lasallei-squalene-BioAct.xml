@@ -3,7 +3,9 @@
   <Category>hasBiologicalActivity</Category>
   <Tag1>Compound<Name>squalene</Name>
   </Tag1>
-  <Tag2>BioAct<Name>antioxidant</Name>
+  <Tag2>BioAct<Name>anti-inflammatory</Name>
+    <Name>antimicrobial</Name>
+    <Name>antioxidant</Name>
     <Name>anticancer</Name>
   </Tag2>
   <Relation>

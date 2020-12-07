@@ -5,8 +5,8 @@
   </Tag1>
   <Tag2>PlantPart<Name>twigs</Name>
     <Name>seed</Name>
-    <Name>leaves</Name>
     <Name>leaf</Name>
+    <Name>leaves</Name>
   </Tag2>
   <Relation>
     <Pattern>twigs of</Pattern>
