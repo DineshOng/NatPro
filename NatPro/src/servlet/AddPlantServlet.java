@@ -223,32 +223,38 @@ public class AddPlantServlet extends HttpServlet {
 									// add object property SpeciesPart -> Compound
 									m.addObjectHasCompound(speciesPartIndiv, compoundIndiv);
 
-									String[] bioCellCtr = request.getParameterValues("lengthBC[" + i + "][" + j + "]");
-									int bioCellMax = Integer.parseInt(bioCellCtr[bioCellCtr.length - 1]);
-									bioCellMax++;
-									for (int k = 0; k < bioCellMax; k++) {
-										String bioAct = request.getParameter("bioAct[" + i + "][" + j + "][" + k + "]");
-										if (!bioAct.equals("")) {
-											String bioActIndiv = bioAct.trim().toLowerCase().replaceAll(" ", "_");
-											// create individual for BiologicalActivity
-											m.addIndiv_BiologicalActivity(bioActIndiv);
-											// add data property for BiologicalActivity individual
-											m.addDataPropBiologicalActivity(bioAct);
-											// add object property Compound -> BiologicalActivity
-											m.addObjectHasBiologicalActivity(compoundIndiv, bioActIndiv);
-											String cellLine = request
-													.getParameter("cellLine[" + i + "][" + j + "][" + k + "]");
-											if (!cellLine.equals("")) {
-												String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ",
-														"_");
-												// create individual for CellLine
-												m.addIndiv_CellLine(cellLineIndiv);
-												// add data property for CellLine individual
-												m.addDataPropCellLine(cellLine);
-												// add object property BiologicalActivity -> CellLine
-												m.addObjectAffects(bioActIndiv, cellLineIndiv);
+									try {
+										String[] bioCellCtr = request
+												.getParameterValues("lengthBC[" + i + "][" + j + "]");
+										int bioCellMax = Integer.parseInt(bioCellCtr[bioCellCtr.length - 1]);
+										bioCellMax++;
+										for (int k = 0; k < bioCellMax; k++) {
+											String bioAct = request
+													.getParameter("bioAct[" + i + "][" + j + "][" + k + "]");
+											if (!bioAct.equals("")) {
+												String bioActIndiv = bioAct.trim().toLowerCase().replaceAll(" ", "_");
+												// create individual for BiologicalActivity
+												m.addIndiv_BiologicalActivity(bioActIndiv);
+												// add data property for BiologicalActivity individual
+												m.addDataPropBiologicalActivity(bioAct);
+												// add object property Compound -> BiologicalActivity
+												m.addObjectHasBiologicalActivity(compoundIndiv, bioActIndiv);
+												String cellLine = request
+														.getParameter("cellLine[" + i + "][" + j + "][" + k + "]");
+												if (!cellLine.equals("")) {
+													String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ",
+															"_");
+													// create individual for CellLine
+													m.addIndiv_CellLine(cellLineIndiv);
+													// add data property for CellLine individual
+													m.addDataPropCellLine(cellLine);
+													// add object property BiologicalActivity -> CellLine
+													m.addObjectAffects(bioActIndiv, cellLineIndiv);
+												}
 											}
 										}
+									} catch (Exception e) {
+										System.out.println("No Bio Act");
 									}
 
 								}
@@ -450,14 +456,13 @@ public class AddPlantServlet extends HttpServlet {
 		}
 		System.out.println(deleteFiles);
 		System.gc();
-		for(File deleteXml : deleteFiles) {			
+		for (File deleteXml : deleteFiles) {
 			if (deleteXml.delete()) {
 				System.out.println("Deleted the file");
 			} else {
 				System.err.println("Failed to delete the file.");
 			}
 		}
-		
 
 	}
 
