@@ -70,17 +70,12 @@ public class REV2 {
 		res_rel_map = new HashMap<String, Integer>();
 		initMap0(res_rel_map);
 		
-		eval_acc_map = new HashMap<String, Double>();
-		eval_pre_map = new HashMap<String, Double>();
-		eval_rec_map = new HashMap<String, Double>();
-		eval_fme_map = new HashMap<String, Double>();
-		
 		ReadGoldAnn();
 		ReadXMLFiles();
 		
 		//Evaluate();
 		
-		printResult();
+		printResult2();
 		
 		endTime = System.nanoTime();
         System.err.println("Main Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
@@ -158,6 +153,10 @@ public class REV2 {
 		        	}
 		        	//System.out.println(ent1 + " : " + ent2);
 		        }
+		        
+		        //runConnector(Ts, text);
+		        runConnector2(Ts, text, "hasSynonymPlantPart", "hasCompound");
+		        runConnector2(Ts, text, "hasBiologicalActivity", "hasCellLine");
 		   
 		        reader.close();
 			}
@@ -165,6 +164,68 @@ public class REV2 {
 		
 		endTime = System.nanoTime();
         System.err.println("ReadGoldAnn Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
+	}
+	
+	public static void runConnector(HashMap<String, String> map, String txt, String relType, String entType) {
+		Pattern pattern2 = Pattern.compile("(R\\d+)\\t(hasSynonymPlantPart)\\sArg1:(T\\d+)\\sArg2:(T\\d+)");
+        Matcher matcher2 = pattern2.matcher(txt);
+        
+        while(matcher2.find()) {
+        	String synonym = map.get(matcher2.group(3));
+        	String partT = matcher2.group(4);
+        	
+        	//System.out.println("m2 " + matcher2.group());
+        	
+        	Pattern pattern3 = Pattern.compile("(R\\d+)\\t(hasCompound)\\sArg1:("+partT+")\\sArg2:(T\\d+)");
+            Matcher matcher3 = pattern3.matcher(txt);
+            
+            while(matcher3.find()) {
+            	//String compound = matcher2.group(3);
+            	String compound = map.get(matcher3.group(4));
+            	
+            	//System.out.println("m3 " + matcher3.group());
+            	
+            	if(!gold_rel_set.contains(synonym + " : " + compound)) {
+	        		gold_rel_set.add(synonym + " : " + compound);
+	        		gol_relType_map.put(synonym + " : " + compound, matcher2.group(2));
+	        		eval(gold_rel_map, "hasCompound", gold_entityType_map.get(synonym));
+	        	}
+            	//System.out.println(compound);
+            	//System.out.println(synonym + " : " + compound);
+            }
+            
+        }
+	}
+	
+	public static void runConnector2(HashMap<String, String> map, String txt, String relType, String entType) {
+		Pattern pattern2 = Pattern.compile("(R\\d+)\\t("+relType+")\\sArg1:(T\\d+)\\sArg2:(T\\d+)");
+        Matcher matcher2 = pattern2.matcher(txt);
+        
+        while(matcher2.find()) {
+        	String synonym = map.get(matcher2.group(3));
+        	String partT = matcher2.group(4);
+        	
+        	//System.out.println("m2 " + matcher2.group());
+        	
+        	Pattern pattern3 = Pattern.compile("(R\\d+)\\t("+entType+")\\sArg1:("+partT+")\\sArg2:(T\\d+)");
+            Matcher matcher3 = pattern3.matcher(txt);
+            
+            while(matcher3.find()) {
+            	//String compound = matcher2.group(3);
+            	String compound = map.get(matcher3.group(4));
+            	
+            	//System.out.println("m3 " + matcher3.group());
+            	
+            	if(!gold_rel_set.contains(synonym + " : " + compound)) {
+	        		gold_rel_set.add(synonym + " : " + compound);
+	        		gol_relType_map.put(synonym + " : " + compound, matcher2.group(2));
+	        		eval(gold_rel_map, relType, gold_entityType_map.get(synonym));
+	        	}
+            	//System.out.println(compound);
+            	//System.out.println(synonym + " : " + compound);
+            }
+            
+        }
 	}
 	
 	public static void readXML(File xmlFile) {
@@ -223,14 +284,20 @@ public class REV2 {
 									eval(res_rel_tp_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
 								}
 							}
+						} else if(!res_rel_tp_set.contains(ent1 + " : " + ent2)){
+							//System.out.println(ent1 + " : " + ent2 + " " + relType);
 						}
 						if(!res_rel_set.contains(ent1 + " : " + ent2)) {
 							res_rel_set.add(ent1 + " : " + ent2);
 							res_relType_map.put(ent1 + " : " + ent2, relType);
 							
-							if(res_rel_set.contains(ent1 + " : " + ent2)) {
+							if(res_rel_set.contains(ent1 + " : " + ent2) || res_rel_tp_set.contains(ent1 + " : " + ent2)) {
 								//System.out.println(ent1 + " : " + ent2);
-								eval(res_rel_map, relType, entType1);
+								if(res_rel_tp_set.contains(ent1 + " : " + ent2)) {
+									eval(res_rel_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
+								} else {
+									eval(res_rel_map, relType, entType1);
+								}
 							}
 			        		
 							//ctr++;
@@ -276,6 +343,7 @@ public class REV2 {
 		hm.put("hasCompoundS", 0);
 		hm.put("hasCompoundM", 0);
 		hm.put("treats", 0);
+		
 		hm.put("hasSynonymPlantPart", 0);
 		hm.put("affects", 0);
 		hm.put("belongsToFamily", 0);
@@ -287,8 +355,10 @@ public class REV2 {
 		hm.put("hasMedicinalPlantPart", 0);
 		hm.put("appliedTo", 0);
 		hm.put("utilizePart", 0);
+		
 		hm.put("hasSynonymParent", 0);
 		hm.put("belongsToClass", 0);
+		hm.put("hasCellLine", 0);
 	}
 	
 	public static void eval(HashMap<String, Integer> hm, String relType, String entType) {
@@ -381,8 +451,13 @@ public class REV2 {
 			hm.remove("belongsToClass");
 			count++;
 			hm.put("belongsToClass", count);
+		} else if(relType.equals("hasCellLine")) {
+			int count = hm.get("hasCellLine");
+			hm.remove("hasCellLine");
+			count++;
+			hm.put("hasCellLine", count);
 		} else {
-			//System.out.println("entType: " + entType + "\trelType: " + relType);
+			System.out.println("entType: " + entType + "\trelType: " + relType);
 		}
 	}
 	
@@ -422,6 +497,50 @@ public class REV2 {
 	
 	public static int getRet(String relType) {
 		return res_rel_map.get(relType);
+	}
+	
+	public static void printResult2() {
+		System.out.println(",Gold,Retrieved,TP,FP,FN,Accuracy,Precision,Recall,F-measure");
+		
+		System.out.println("hasBiologicalActivity" + "," + getGold("hasBiologicalActivity") + "," + getRet("hasBiologicalActivity") + "," + getTP("hasBiologicalActivity") + "," + getFP("hasBiologicalActivity") + "," + getFN("hasBiologicalActivity") + "," + getScore_Accuracy("hasBiologicalActivity") + "," + getScore_Precision("hasBiologicalActivity") + "," + getScore_Recall("hasBiologicalActivity") + "," + getScore_Fmeasure("hasBiologicalActivity"));
+		
+		System.out.println("hasCompoundP" + "," + getGold("hasCompoundP") + "," + getRet("hasCompoundP") + "," + getTP("hasCompoundP") + "," + getFP("hasCompoundP") + "," + getFN("hasCompoundP") + "," + getScore_Accuracy("hasCompoundP") + "," + getScore_Precision("hasCompoundP") + "," + getScore_Recall("hasCompoundP") + "," + getScore_Fmeasure("hasCompoundP"));
+		
+		System.out.println("hasCompoundS" + "," + getGold("hasCompoundS") + "," + getRet("hasCompoundS") + "," + getTP("hasCompoundS") + "," + getFP("hasCompoundS") + "," + getFN("hasCompoundS") + "," + getScore_Accuracy("hasCompoundS") + "," + getScore_Precision("hasCompoundS") + "," + getScore_Recall("hasCompoundS") + "," + getScore_Fmeasure("hasCompoundS"));
+		
+		System.out.println("hasCompoundM" + "," + getGold("hasCompoundM") + "," + getRet("hasCompoundM") + "," + getTP("hasCompoundM") + "," + getFP("hasCompoundM") + "," + getFN("hasCompoundM") + "," + getScore_Accuracy("hasCompoundM") + "," + getScore_Precision("hasCompoundM") + "," + getScore_Recall("hasCompoundM") + "," + getScore_Fmeasure("hasCompoundM"));
+		
+		System.out.println("treats" + "," + getGold("treats") + "," + getRet("treats") + "," + getTP("treats") + "," + getFP("treats") + "," + getFN("treats") + "," + getScore_Accuracy("treats") + "," + getScore_Precision("treats") + "," + getScore_Recall("treats") + "," + getScore_Fmeasure("treats"));
+		
+		
+		System.out.println("hasSynonymPlantPart" + "," + getGold("hasSynonymPlantPart") + "," + getRet("hasSynonymPlantPart") + "," + getTP("hasSynonymPlantPart") + "," + getFP("hasSynonymPlantPart") + "," + getFN("hasSynonymPlantPart") + "," + getScore_Accuracy("hasSynonymPlantPart") + "," + getScore_Precision("hasSynonymPlantPart") + "," + getScore_Recall("hasSynonymPlantPart") + "," + getScore_Fmeasure("hasSynonymPlantPart"));
+		
+		System.out.println("affects" + "," + getGold("affects") + "," + getRet("affects") + "," + getTP("affects") + "," + getFP("affects") + "," + getFN("affects") + "," + getScore_Accuracy("affects") + "," + getScore_Precision("affects") + "," + getScore_Recall("affects") + "," + getScore_Fmeasure("affects"));
+		
+		System.out.println("belongsToFamily" + "," + getGold("belongsToFamily") + "," + getRet("belongsToFamily") + "," + getTP("belongsToFamily") + "," + getFP("belongsToFamily") + "," + getFN("belongsToFamily") + "," + getScore_Accuracy("belongsToFamily") + "," + getScore_Precision("belongsToFamily") + "," + getScore_Recall("belongsToFamily") + "," + getScore_Fmeasure("belongsToFamily"));
+		
+		System.out.println("isLocatedIn" + "," + getGold("isLocatedIn") + "," + getRet("isLocatedIn") + "," + getTP("isLocatedIn") + "," + getFP("isLocatedIn") + "," + getFN("isLocatedIn") + "," + getScore_Accuracy("isLocatedIn") + "," + getScore_Precision("isLocatedIn") + "," + getScore_Recall("isLocatedIn") + "," + getScore_Fmeasure("isLocatedIn"));
+		
+		System.out.println("belongsToGenus" + "," + getGold("belongsToGenus") + "," + getRet("belongsToGenus") + "," + getTP("belongsToGenus") + "," + getFP("belongsToGenus") + "," + getFN("belongsToGenus") + "," + getScore_Accuracy("belongsToGenus") + "," + getScore_Precision("belongsToGenus") + "," + getScore_Recall("belongsToGenus") + "," + getScore_Fmeasure("belongsToGenus"));
+		
+		
+		System.out.println("hasPreparation" + "," + getGold("hasPreparation") + "," + getRet("hasPreparation") + "," + getTP("hasPreparation") + "," + getFP("hasPreparation") + "," + getFN("hasPreparation") + "," + getScore_Accuracy("hasPreparation") + "," + getScore_Precision("hasPreparation") + "," + getScore_Recall("hasPreparation") + "," + getScore_Fmeasure("hasPreparation"));
+		
+		System.out.println("hasSynonym" + "," + getGold("hasSynonym") + "," + getRet("hasSynonym") + "," + getTP("hasSynonym") + "," + getFP("hasSynonym") + "," + getFN("hasSynonym") + "," + getScore_Accuracy("hasSynonym") + "," + getScore_Precision("hasSynonym") + "," + getScore_Recall("hasSynonym") + "," + getScore_Fmeasure("hasSynonym"));
+		
+		System.out.println("hasMedicinalPlantPart" + "," + getGold("hasMedicinalPlantPart") + "," + getRet("hasMedicinalPlantPart") + "," + getTP("hasMedicinalPlantPart") + "," + getFP("hasMedicinalPlantPart") + "," + getFN("hasMedicinalPlantPart") + "," + getScore_Accuracy("hasMedicinalPlantPart") + "," + getScore_Precision("hasMedicinalPlantPart") + "," + getScore_Recall("hasMedicinalPlantPart") + "," + getScore_Fmeasure("hasMedicinalPlantPart"));
+		
+		System.out.println("appliedTo" + "," + getGold("appliedTo") + "," + getRet("appliedTo") + "," + getTP("appliedTo") + "," + getFP("appliedTo") + "," + getFN("appliedTo") + "," + getScore_Accuracy("appliedTo") + "," + getScore_Precision("appliedTo") + "," + getScore_Recall("appliedTo") + "," + getScore_Fmeasure("appliedTo"));
+		
+		System.out.println("utilizePart" + "," + getGold("utilizePart") + "," + getRet("utilizePart") + "," + getTP("utilizePart") + "," + getFP("utilizePart") + "," + getFN("utilizePart") + "," + getScore_Accuracy("utilizePart") + "," + getScore_Precision("utilizePart") + "," + getScore_Recall("utilizePart") + "," + getScore_Fmeasure("utilizePart"));
+		
+		
+		System.out.println("hasSynonymParent" + "," + getGold("hasSynonymParent") + "," + getRet("hasSynonymParent") + "," + getTP("hasSynonymParent") + "," + getFP("hasSynonymParent") + "," + getFN("hasSynonymParent") + "," + getScore_Accuracy("hasSynonymParent") + "," + getScore_Precision("hasSynonymParent") + "," + getScore_Recall("hasSynonymParent") + "," + getScore_Fmeasure("hasSynonymParent"));
+		
+		System.out.println("belongsToClass" + "," + getGold("belongsToClass") + "," + getRet("belongsToClass") + "," + getTP("belongsToClass") + "," + getFP("belongsToClass") + "," + getFN("belongsToClass") + "," + getScore_Accuracy("belongsToClass") + "," + getScore_Precision("belongsToClass") + "," + getScore_Recall("belongsToClass") + "," + getScore_Fmeasure("belongsToClass"));
+		
+		System.out.println("hasCellLine" + "," + getGold("hasCellLine") + "," + getRet("hasCellLine") + "," + getTP("hasCellLine") + "," + getFP("hasCellLine") + "," + getFN("hasCellLine") + "," + getScore_Accuracy("hasCellLine") + "," + getScore_Precision("hasCellLine") + "," + getScore_Recall("hasCellLine") + "," + getScore_Fmeasure("hasCellLine"));
+		
 	}
 	
 	public static void printResult() {
