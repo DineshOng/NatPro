@@ -156,7 +156,7 @@ public class REV2 {
 		        
 		        //runConnector(Ts, text);
 		        runConnector2(Ts, text, "hasSynonymPlantPart", "hasCompound");
-		        runConnector2(Ts, text, "hasBiologicalActivity", "hasCellLine");
+		        //runConnector2(Ts, text, "hasBiologicalActivity", "hasCellLine");
 		   
 		        reader.close();
 			}
@@ -504,11 +504,11 @@ public class REV2 {
 		
 		System.out.println("hasBiologicalActivity" + "," + getGold("hasBiologicalActivity") + "," + getRet("hasBiologicalActivity") + "," + getTP("hasBiologicalActivity") + "," + getFP("hasBiologicalActivity") + "," + getFN("hasBiologicalActivity") + "," + getScore_Accuracy("hasBiologicalActivity") + "," + getScore_Precision("hasBiologicalActivity") + "," + getScore_Recall("hasBiologicalActivity") + "," + getScore_Fmeasure("hasBiologicalActivity"));
 		
-		System.out.println("hasCompoundP" + "," + getGold("hasCompoundP") + "," + getRet("hasCompoundP") + "," + getTP("hasCompoundP") + "," + getFP("hasCompoundP") + "," + getFN("hasCompoundP") + "," + getScore_Accuracy("hasCompoundP") + "," + getScore_Precision("hasCompoundP") + "," + getScore_Recall("hasCompoundP") + "," + getScore_Fmeasure("hasCompoundP"));
+		System.out.println("hasCompound (PlantPart)" + "," + getGold("hasCompoundP") + "," + getRet("hasCompoundP") + "," + getTP("hasCompoundP") + "," + getFP("hasCompoundP") + "," + getFN("hasCompoundP") + "," + getScore_Accuracy("hasCompoundP") + "," + getScore_Precision("hasCompoundP") + "," + getScore_Recall("hasCompoundP") + "," + getScore_Fmeasure("hasCompoundP"));
 		
-		System.out.println("hasCompoundS" + "," + getGold("hasCompoundS") + "," + getRet("hasCompoundS") + "," + getTP("hasCompoundS") + "," + getFP("hasCompoundS") + "," + getFN("hasCompoundS") + "," + getScore_Accuracy("hasCompoundS") + "," + getScore_Precision("hasCompoundS") + "," + getScore_Recall("hasCompoundS") + "," + getScore_Fmeasure("hasCompoundS"));
+		System.out.println("hasCompound (Synonym)" + "," + getGold("hasCompoundS") + "," + getRet("hasCompoundS") + "," + getTP("hasCompoundS") + "," + getFP("hasCompoundS") + "," + getFN("hasCompoundS") + "," + getScore_Accuracy("hasCompoundS") + "," + getScore_Precision("hasCompoundS") + "," + getScore_Recall("hasCompoundS") + "," + getScore_Fmeasure("hasCompoundS"));
 		
-		System.out.println("hasCompoundM" + "," + getGold("hasCompoundM") + "," + getRet("hasCompoundM") + "," + getTP("hasCompoundM") + "," + getFP("hasCompoundM") + "," + getFN("hasCompoundM") + "," + getScore_Accuracy("hasCompoundM") + "," + getScore_Precision("hasCompoundM") + "," + getScore_Recall("hasCompoundM") + "," + getScore_Fmeasure("hasCompoundM"));
+		System.out.println("hasCompound (MedPlant)" + "," + getGold("hasCompoundM") + "," + getRet("hasCompoundM") + "," + getTP("hasCompoundM") + "," + getFP("hasCompoundM") + "," + getFN("hasCompoundM") + "," + getScore_Accuracy("hasCompoundM") + "," + getScore_Precision("hasCompoundM") + "," + getScore_Recall("hasCompoundM") + "," + getScore_Fmeasure("hasCompoundM"));
 		
 		System.out.println("treats" + "," + getGold("treats") + "," + getRet("treats") + "," + getTP("treats") + "," + getFP("treats") + "," + getFN("treats") + "," + getScore_Accuracy("treats") + "," + getScore_Precision("treats") + "," + getScore_Recall("treats") + "," + getScore_Fmeasure("treats"));
 		
@@ -540,7 +540,6 @@ public class REV2 {
 		System.out.println("belongsToClass" + "," + getGold("belongsToClass") + "," + getRet("belongsToClass") + "," + getTP("belongsToClass") + "," + getFP("belongsToClass") + "," + getFN("belongsToClass") + "," + getScore_Accuracy("belongsToClass") + "," + getScore_Precision("belongsToClass") + "," + getScore_Recall("belongsToClass") + "," + getScore_Fmeasure("belongsToClass"));
 		
 		System.out.println("hasCellLine" + "," + getGold("hasCellLine") + "," + getRet("hasCellLine") + "," + getTP("hasCellLine") + "," + getFP("hasCellLine") + "," + getFN("hasCellLine") + "," + getScore_Accuracy("hasCellLine") + "," + getScore_Precision("hasCellLine") + "," + getScore_Recall("hasCellLine") + "," + getScore_Fmeasure("hasCellLine"));
-		
 	}
 	
 	public static void printResult() {
