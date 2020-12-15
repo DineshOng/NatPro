@@ -25,26 +25,21 @@ public class REV2 {
 	
 //	//1st run
 //	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 1st\\";
-//	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 1st\\";
+//	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations NEW\\validation 1st\\";
 	
 //	// 2nd run
 //	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 2nd\\";
-//	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 2nd\\";
+//	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations NEW\\validation 2nd\\";
 	
 	// 3rd run
 	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 3rd\\";
-	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations\\validation 3rd\\";
+	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations NEW\\validation 3rd\\";
 		
 	public static HashSet<String> gold_rel_set;
 	private static HashMap<String, String> gold_entityType_map;
 	private static HashMap<String, String> gol_relType_map;
 	
 	private static HashMap<String, Integer> gold_rel_map;
-	
-	private static HashMap<String, Double> eval_acc_map;
-	private static HashMap<String, Double> eval_pre_map;
-	private static HashMap<String, Double> eval_rec_map;
-	private static HashMap<String, Double> eval_fme_map;
 	
 	public static HashSet<String> res_rel_tp_set;
 	public static HashSet<String> res_rel_set;
@@ -74,6 +69,12 @@ public class REV2 {
 		ReadXMLFiles();
 		
 		//Evaluate();
+		
+//		for(String e : res_rel_set) {
+//			if(!res_rel_tp_set.contains(e)) {
+//				System.out.println(e);
+//			}
+//		}
 		
 		printResult2();
 		
@@ -284,9 +285,10 @@ public class REV2 {
 									eval(res_rel_tp_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
 								}
 							}
-						} else if(!res_rel_tp_set.contains(ent1 + " : " + ent2)){
+						} //else if(!res_rel_tp_set.contains(ent1 + " : " + ent2) || !gold_rel_set.contains(ent1 + " : " + ent2)){
 							//System.out.println(ent1 + " : " + ent2 + " " + relType);
-						}
+						//}
+						
 						if(!res_rel_set.contains(ent1 + " : " + ent2)) {
 							res_rel_set.add(ent1 + " : " + ent2);
 							res_relType_map.put(ent1 + " : " + ent2, relType);
@@ -297,6 +299,7 @@ public class REV2 {
 									eval(res_rel_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
 								} else {
 									eval(res_rel_map, relType, entType1);
+									System.out.println(ent1 + " : " + ent2 + " " + relType);
 								}
 							}
 			        		
@@ -540,6 +543,24 @@ public class REV2 {
 		System.out.println("belongsToClass" + "," + getGold("belongsToClass") + "," + getRet("belongsToClass") + "," + getTP("belongsToClass") + "," + getFP("belongsToClass") + "," + getFN("belongsToClass") + "," + getScore_Accuracy("belongsToClass") + "," + getScore_Precision("belongsToClass") + "," + getScore_Recall("belongsToClass") + "," + getScore_Fmeasure("belongsToClass"));
 		
 		System.out.println("hasCellLine" + "," + getGold("hasCellLine") + "," + getRet("hasCellLine") + "," + getTP("hasCellLine") + "," + getFP("hasCellLine") + "," + getFN("hasCellLine") + "," + getScore_Accuracy("hasCellLine") + "," + getScore_Precision("hasCellLine") + "," + getScore_Recall("hasCellLine") + "," + getScore_Fmeasure("hasCellLine"));
+	
+		int tp = res_rel_tp_set.size();
+		int fp = res_rel_set.size()-res_rel_tp_set.size();
+		int fn = gold_rel_set.size()-res_rel_tp_set.size();
+		
+		double acc = (double) tp/(tp+fp+fn)*100;
+		double prec = (double) tp/(tp+fp)*100;
+		double rec = (double) tp/(tp+fn)*100;
+		double fm = (double) (2*prec*rec)/(prec+rec);
+		
+		//System.out.println("\nResults: " + "\nAccuracy: " + String.format("%.2f", acc) + "\nPrecision: " + String.format("%.2f", prec) + "\nRecall: " + String.format("%.2f", rec) + "\nf-measure: " + String.format("%.2f", fm));
+		System.out.println("\nResults: " + "\n" + String.format("%.2f", acc) + "\n" + String.format("%.2f", prec) + "\n" + String.format("%.2f", rec) + "\n" + String.format("%.2f", fm));
+		
+		System.out.println("\nGold Pair Size: " + gold_rel_set.size());
+		System.out.println("Result Pair Size: " + res_rel_set.size());
+		System.out.println("True Positive: " + res_rel_tp_set.size());
+		System.out.println("False Positive: " + (res_rel_set.size()-res_rel_tp_set.size()));
+		System.out.println("False Negative: " + (gold_rel_set.size()-res_rel_tp_set.size()));
 	}
 	
 	public static void printResult() {
