@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>hoya meliflua</Name>
+  </Tag1>
+  <Tag2>Compound<Name>alpha-amyrin acetate</Name>
+    <Name>dichloromethane</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>lupeol acetate</Name>
+    <Name>lupeol</Name>
+    <Name>beta-amyrin cinnamate</Name>
+    <Name>squalene</Name>
+    <Name>lupenone</Name>
+    <Name>alpha-amyrin cinnamate</Name>
+    <Name>beta-amyrin</Name>
+    <Name>oleanone</Name>
+    <Name>ursenone</Name>
+    <Name>alpha-amyrin</Name>
+    <Name>lupenyl cinnamate</Name>
+    <Name>stigmasterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>contained</Pattern>
+    <Pattern>is interesting to</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>note that</Pattern>
+    <Pattern>proposed as</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>stems</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>was proposed as</Pattern>
+    <Pattern>were reported to</Pattern>
+  </Relation>
+</Seed>

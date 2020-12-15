@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>affects</Category>
+  <Tag1>BioAct<Name>anticancer</Name>
+  </Tag1>
+  <Tag2>CellLine<Name>mcf-7</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>showed potential as</Pattern>
+    <Pattern>was effective for</Pattern>
+  </Relation>
+</Seed>

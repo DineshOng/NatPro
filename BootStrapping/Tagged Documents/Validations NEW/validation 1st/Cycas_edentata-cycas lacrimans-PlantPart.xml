@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasSynonymPlantPart</Category>
+  <Tag1>Synonym<Name>cycas lacrimans</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>sclerotesta</Name>
+    <Name>petiole and rachis</Name>
+    <Name>roots</Name>
+    <Name>bark</Name>
+    <Name>endotesta</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>,15-diene</Pattern>
+    <Pattern>9alphah-isopimara-7,15-diene</Pattern>
+    <Pattern>acid esters from</Pattern>
+    <Pattern>bark</Pattern>
+    <Pattern>bark of</Pattern>
+    <Pattern>beta-sitosterol</Pattern>
+    <Pattern>endotesta</Pattern>
+    <Pattern>ester</Pattern>
+    <Pattern>esters from</Pattern>
+    <Pattern>isolation of</Pattern>
+    <Pattern>isopimaran-ol from</Pattern>
+    <Pattern>lamina</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>mixture of</Pattern>
+    <Pattern>ratio from</Pattern>
+    <Pattern>sclerotesta</Pattern>
+    <Pattern>sclerotesta of</Pattern>
+    <Pattern>stigmasterol</Pattern>
+    <Pattern>stigmasterol from</Pattern>
+    <Pattern>triacylglycerols from</Pattern>
+    <Pattern>triglycerides</Pattern>
+    <Pattern>yielded 1-3b from</Pattern>
+    <Pattern>yielded isopimaran-ol from</Pattern>
+  </Relation>
+</Seed>

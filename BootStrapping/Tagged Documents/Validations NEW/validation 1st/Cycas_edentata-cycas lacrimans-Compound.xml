@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>cycas lacrimans</Name>
+  </Tag1>
+  <Tag2>Compound<Name>beta-sitosterol</Name>
+    <Name>oleic acid</Name>
+    <Name>megasporophyll</Name>
+    <Name>9alphah-isopimara,15-diene</Name>
+    <Name>triacylglycerols</Name>
+    <Name>isopimaran-ol</Name>
+    <Name>stigmasterol</Name>
+    <Name>1,2-dioleylglycerol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>led to</Pattern>
+  </Relation>
+</Seed>

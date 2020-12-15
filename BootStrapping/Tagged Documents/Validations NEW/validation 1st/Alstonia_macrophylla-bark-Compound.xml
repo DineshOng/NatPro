@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>bark</Name>
+  </Tag1>
+  <Tag2>Compound<Name>beta-amyrin</Name>
+    <Name>brucine</Name>
+    <Name>rauvomitin</Name>
+    <Name>gamma-sitosterol</Name>
+    <Name>lupeol</Name>
+    <Name>stigmasterol</Name>
+    <Name>strictamin</Name>
+    <Name>alstonerine</Name>
+    <Name>24-methylenecycloartanol</Name>
+    <Name>campesterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>yielded</Pattern>
+  </Relation>
+</Seed>

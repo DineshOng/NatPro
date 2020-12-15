@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>raphanus sativus</Name>
+  </Tag1>
+  <Tag2>Compound<Name>triglycerides</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>folate</Pattern>
+    <Pattern>grown in</Pattern>
+    <Pattern>sensing in</Pattern>
+  </Relation>
+</Seed>

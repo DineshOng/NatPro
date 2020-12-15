@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasBiologicalActivity</Category>
+  <Tag1>Compound<Name>dichloromethane</Name>
+  </Tag1>
+  <Tag2>BioAct<Name>anticancer</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>exhibit</Pattern>
+    <Pattern>reported as</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>were reported to</Pattern>
+  </Relation>
+</Seed>

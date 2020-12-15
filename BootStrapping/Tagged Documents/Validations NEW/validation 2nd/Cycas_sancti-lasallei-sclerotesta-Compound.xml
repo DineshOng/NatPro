@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>sclerotesta</Name>
+  </Tag1>
+  <Tag2>Compound<Name>podocarpusflavone a</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>dichloromethane</Name>
+    <Name>biflavone</Name>
+    <Name>daucosterol</Name>
+    <Name>triglycerides</Name>
+    <Name>chavicol beta-rutinoside</Name>
+    <Name>palmitic acid</Name>
+    <Name>squalene</Name>
+    <Name>glycerol</Name>
+    <Name>amentoflavone</Name>
+    <Name>naringenin</Name>
+    <Name>stigmasterol beta-dglucoside</Name>
+    <Name>hinokiflavone</Name>
+    <Name>same fatty acids</Name>
+    <Name>lariciresinol</Name>
+    <Name>betasitosterol</Name>
+    <Name>stigmasterol</Name>
+    <Name>beta-sitosterol beta-d-glucoside</Name>
+    <Name>beta-sitosteryl fatty acid esters</Name>
+    <Name>phytyl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>esterified to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>was ground in</Pattern>
+  </Relation>
+</Seed>

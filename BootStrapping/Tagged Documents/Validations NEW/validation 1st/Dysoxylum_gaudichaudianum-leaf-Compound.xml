@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>leaf</Name>
+  </Tag1>
+  <Tag2>Compound<Name>dicloromethane</Name>
+    <Name>triglycerides</Name>
+    <Name>dichloromethane</Name>
+    <Name>squalene</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>polyprenols</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>are used to</Pattern>
+    <Pattern>induce vomiting after</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>solated from</Pattern>
+    <Pattern>used to</Pattern>
+    <Pattern>vomiting after</Pattern>
+  </Relation>
+</Seed>

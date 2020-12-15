@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>dracontomelon dao</Name>
+  </Tag1>
+  <Tag2>Compound<Name>linoleic acid</Name>
+    <Name>anacardic acid</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>were collected from</Pattern>
+  </Relation>
+</Seed>

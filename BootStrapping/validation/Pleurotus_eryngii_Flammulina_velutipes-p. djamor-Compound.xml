@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>p. djamor</Name>
+  </Tag1>
+  <Tag2>Compound<Name>fatty acid methyl esters</Name>
+    <Name>stearic acid</Name>
+    <Name>oleic acid</Name>
+    <Name>ergosterol peroxide</Name>
+    <Name>linoleic acid</Name>
+    <Name>cerevisterol</Name>
+    <Name>triacylglycerols</Name>
+    <Name>palmitic acid</Name>
+    <Name>dilinoleoyloleoylglycerol</Name>
+    <Name>ergosterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>afforded</Pattern>
+    <Pattern>consisted of</Pattern>
+    <Pattern>identified as</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>reported from</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were ground in</Pattern>
+    <Pattern>were identified as</Pattern>
+    <Pattern>were isolated from</Pattern>
+    <Pattern>were reported from</Pattern>
+    <Pattern>yielded</Pattern>
+  </Relation>
+</Seed>

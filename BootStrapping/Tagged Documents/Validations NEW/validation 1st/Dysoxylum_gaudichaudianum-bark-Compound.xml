@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>bark</Name>
+  </Tag1>
+  <Tag2>Compound<Name>gaudichaudysolin a</Name>
+    <Name>dysoxylins d</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>dysoxylins a</Name>
+    <Name>dysoxylins b</Name>
+    <Name>dysoxylins c</Name>
+    <Name>stigmasterol</Name>
+    <Name>p-hydroxyacetophenone</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>are used to</Pattern>
+    <Pattern>induce vomiting after</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>solated from</Pattern>
+    <Pattern>used to</Pattern>
+    <Pattern>vomiting after</Pattern>
+  </Relation>
+</Seed>

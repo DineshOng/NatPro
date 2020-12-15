@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>seeds</Name>
+  </Tag1>
+  <Tag2>Compound<Name>trilinolenin</Name>
+    <Name>isothiocyanate</Name>
+    <Name>diallyl trisulfide</Name>
+    <Name>3-butenyl isothiocyanate</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>afforded</Pattern>
+    <Pattern>grown in</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>treated with</Pattern>
+    <Pattern>were treated with</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>flowers</Name>
+  </Tag1>
+  <Tag2>Compound<Name>spinacene</Name>
+    <Name>terpinyl acetate</Name>
+    <Name>9-methyl-5methylene-8-decen-2-one</Name>
+    <Name>linalool</Name>
+    <Name>squalene</Name>
+    <Name>1,2-dimethoxy-4-(2-propenyl)benzene</Name>
+    <Name>2-(3-methyl-1,3-butadienyl)-1,3,3-trimethyl-1-cyclohexanol</Name>
+    <Name>phytyl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>afforded mixtures of</Pattern>
+    <Pattern>yielded mixtures of</Pattern>
+  </Relation>
+</Seed>

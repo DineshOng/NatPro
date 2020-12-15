@@ -3,2521 +3,582 @@
   <Tag1>BioAct</Tag1>
   <Tag2>CellLine</Tag2>
   <Relation>
-    <Pattern>are</Pattern>
-    <Pattern>are 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>are 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>are 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>are 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>are 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>are 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>are IC by</Pattern>
-    <Pattern>are IC in</Pattern>
-    <Pattern>are IC inward</Pattern>
-    <Pattern>are IC inwards</Pattern>
-    <Pattern>are IC past</Pattern>
-    <Pattern>are IC that</Pattern>
-    <Pattern>are Intelligence Community by</Pattern>
-    <Pattern>are Intelligence Community in</Pattern>
-    <Pattern>are Intelligence Community inward</Pattern>
-    <Pattern>are Intelligence Community inwards</Pattern>
-    <Pattern>are Intelligence Community past</Pattern>
-    <Pattern>are Intelligence Community that</Pattern>
-    <Pattern>are National Intelligence Community by</Pattern>
-    <Pattern>are National Intelligence Community in</Pattern>
-    <Pattern>are National Intelligence Community inward</Pattern>
-    <Pattern>are National Intelligence Community inwards</Pattern>
-    <Pattern>are National Intelligence Community past</Pattern>
-    <Pattern>are National Intelligence Community that</Pattern>
-    <Pattern>are United States Intelligence Community by</Pattern>
-    <Pattern>are United States Intelligence Community in</Pattern>
-    <Pattern>are United States Intelligence Community inward</Pattern>
-    <Pattern>are United States Intelligence Community inwards</Pattern>
-    <Pattern>are United States Intelligence Community past</Pattern>
-    <Pattern>are United States Intelligence Community that</Pattern>
-    <Pattern>are assay by</Pattern>
-    <Pattern>are assay in</Pattern>
-    <Pattern>are assay inward</Pattern>
-    <Pattern>are assay inwards</Pattern>
-    <Pattern>are assay past</Pattern>
-    <Pattern>are assay that</Pattern>
-    <Pattern>are by</Pattern>
-    <Pattern>are cancer by</Pattern>
-    <Pattern>are cancer in</Pattern>
-    <Pattern>are cancer inward</Pattern>
-    <Pattern>are cancer inwards</Pattern>
-    <Pattern>are cancer past</Pattern>
-    <Pattern>are cancer that</Pattern>
-    <Pattern>are cell by</Pattern>
-    <Pattern>are cell in</Pattern>
-    <Pattern>are cell inward</Pattern>
-    <Pattern>are cell inwards</Pattern>
-    <Pattern>are cell past</Pattern>
-    <Pattern>are cell that</Pattern>
-    <Pattern>are check by</Pattern>
-    <Pattern>are check in</Pattern>
-    <Pattern>are check inward</Pattern>
-    <Pattern>are check inwards</Pattern>
-    <Pattern>are check past</Pattern>
-    <Pattern>are check that</Pattern>
-    <Pattern>are followed by</Pattern>
-    <Pattern>are followed in</Pattern>
-    <Pattern>are followed inward</Pattern>
-    <Pattern>are followed inwards</Pattern>
-    <Pattern>are followed past</Pattern>
-    <Pattern>are followed that</Pattern>
-    <Pattern>are found by</Pattern>
-    <Pattern>are found in</Pattern>
-    <Pattern>are found inward</Pattern>
-    <Pattern>are found inwards</Pattern>
-    <Pattern>are found past</Pattern>
-    <Pattern>are found that</Pattern>
-    <Pattern>are ic50 by</Pattern>
-    <Pattern>are ic50 in</Pattern>
-    <Pattern>are ic50 inward</Pattern>
-    <Pattern>are ic50 inwards</Pattern>
-    <Pattern>are ic50 past</Pattern>
-    <Pattern>are ic50 that</Pattern>
-    <Pattern>are in</Pattern>
-    <Pattern>are inward</Pattern>
-    <Pattern>are inwards</Pattern>
-    <Pattern>are malignant neoplastic disease by</Pattern>
-    <Pattern>are malignant neoplastic disease in</Pattern>
-    <Pattern>are malignant neoplastic disease inward</Pattern>
-    <Pattern>are malignant neoplastic disease inwards</Pattern>
-    <Pattern>are malignant neoplastic disease past</Pattern>
-    <Pattern>are malignant neoplastic disease that</Pattern>
-    <Pattern>are past</Pattern>
-    <Pattern>are synopsized by</Pattern>
-    <Pattern>are synopsized in</Pattern>
-    <Pattern>are synopsized inward</Pattern>
-    <Pattern>are synopsized inwards</Pattern>
-    <Pattern>are synopsized past</Pattern>
-    <Pattern>are synopsized that</Pattern>
-    <Pattern>are that</Pattern>
     <Pattern>be</Pattern>
-    <Pattern>be 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>be 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>be 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>be 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>be 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>be 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>be IC by</Pattern>
-    <Pattern>be IC in</Pattern>
-    <Pattern>be IC inward</Pattern>
-    <Pattern>be IC inwards</Pattern>
-    <Pattern>be IC past</Pattern>
-    <Pattern>be IC that</Pattern>
-    <Pattern>be Intelligence Community by</Pattern>
-    <Pattern>be Intelligence Community in</Pattern>
-    <Pattern>be Intelligence Community inward</Pattern>
-    <Pattern>be Intelligence Community inwards</Pattern>
-    <Pattern>be Intelligence Community past</Pattern>
-    <Pattern>be Intelligence Community that</Pattern>
-    <Pattern>be National Intelligence Community by</Pattern>
-    <Pattern>be National Intelligence Community in</Pattern>
-    <Pattern>be National Intelligence Community inward</Pattern>
-    <Pattern>be National Intelligence Community inwards</Pattern>
-    <Pattern>be National Intelligence Community past</Pattern>
-    <Pattern>be National Intelligence Community that</Pattern>
-    <Pattern>be United States Intelligence Community by</Pattern>
-    <Pattern>be United States Intelligence Community in</Pattern>
-    <Pattern>be United States Intelligence Community inward</Pattern>
-    <Pattern>be United States Intelligence Community inwards</Pattern>
-    <Pattern>be United States Intelligence Community past</Pattern>
-    <Pattern>be United States Intelligence Community that</Pattern>
-    <Pattern>be assay by</Pattern>
-    <Pattern>be assay in</Pattern>
-    <Pattern>be assay inward</Pattern>
-    <Pattern>be assay inwards</Pattern>
-    <Pattern>be assay past</Pattern>
-    <Pattern>be assay that</Pattern>
-    <Pattern>be by</Pattern>
-    <Pattern>be cancer by</Pattern>
-    <Pattern>be cancer in</Pattern>
-    <Pattern>be cancer inward</Pattern>
-    <Pattern>be cancer inwards</Pattern>
-    <Pattern>be cancer past</Pattern>
-    <Pattern>be cancer that</Pattern>
-    <Pattern>be cell by</Pattern>
-    <Pattern>be cell in</Pattern>
-    <Pattern>be cell inward</Pattern>
-    <Pattern>be cell inwards</Pattern>
-    <Pattern>be cell past</Pattern>
-    <Pattern>be cell that</Pattern>
-    <Pattern>be check by</Pattern>
-    <Pattern>be check in</Pattern>
-    <Pattern>be check inward</Pattern>
-    <Pattern>be check inwards</Pattern>
-    <Pattern>be check past</Pattern>
-    <Pattern>be check that</Pattern>
-    <Pattern>be followed by</Pattern>
-    <Pattern>be followed in</Pattern>
-    <Pattern>be followed inward</Pattern>
-    <Pattern>be followed inwards</Pattern>
-    <Pattern>be followed past</Pattern>
-    <Pattern>be followed that</Pattern>
-    <Pattern>be found by</Pattern>
-    <Pattern>be found in</Pattern>
-    <Pattern>be found inward</Pattern>
-    <Pattern>be found inwards</Pattern>
-    <Pattern>be found past</Pattern>
-    <Pattern>be found that</Pattern>
+    <Pattern>be as</Pattern>
+    <Pattern>be cholesterin as</Pattern>
+    <Pattern>be cholesterin equally</Pattern>
+    <Pattern>be cholesterin every bit</Pattern>
+    <Pattern>be cholesterin for</Pattern>
+    <Pattern>be cholesterol as</Pattern>
+    <Pattern>be cholesterol equally</Pattern>
+    <Pattern>be cholesterol every bit</Pattern>
+    <Pattern>be cholesterol for</Pattern>
+    <Pattern>be equally</Pattern>
+    <Pattern>be every bit</Pattern>
+    <Pattern>be for</Pattern>
     <Pattern>be from</Pattern>
-    <Pattern>be ic50 by</Pattern>
-    <Pattern>be ic50 in</Pattern>
-    <Pattern>be ic50 inward</Pattern>
-    <Pattern>be ic50 inwards</Pattern>
-    <Pattern>be ic50 past</Pattern>
-    <Pattern>be ic50 that</Pattern>
     <Pattern>be in</Pattern>
     <Pattern>be inward</Pattern>
     <Pattern>be inwards</Pattern>
-    <Pattern>be malignant neoplastic disease by</Pattern>
-    <Pattern>be malignant neoplastic disease in</Pattern>
-    <Pattern>be malignant neoplastic disease inward</Pattern>
-    <Pattern>be malignant neoplastic disease inwards</Pattern>
-    <Pattern>be malignant neoplastic disease past</Pattern>
-    <Pattern>be malignant neoplastic disease that</Pattern>
-    <Pattern>be observed by</Pattern>
-    <Pattern>be observed from</Pattern>
-    <Pattern>be observed in</Pattern>
-    <Pattern>be observed inward</Pattern>
-    <Pattern>be observed inwards</Pattern>
-    <Pattern>be observed past</Pattern>
-    <Pattern>be our by</Pattern>
+    <Pattern>be neoplasm as</Pattern>
+    <Pattern>be neoplasm equally</Pattern>
+    <Pattern>be neoplasm every bit</Pattern>
+    <Pattern>be neoplasm for</Pattern>
     <Pattern>be our from</Pattern>
     <Pattern>be our in</Pattern>
     <Pattern>be our inward</Pattern>
     <Pattern>be our inwards</Pattern>
-    <Pattern>be our past</Pattern>
-    <Pattern>be past</Pattern>
-    <Pattern>be seen by</Pattern>
+    <Pattern>be potency as</Pattern>
+    <Pattern>be potency equally</Pattern>
+    <Pattern>be potency every bit</Pattern>
+    <Pattern>be potency for</Pattern>
+    <Pattern>be potential as</Pattern>
+    <Pattern>be potential equally</Pattern>
+    <Pattern>be potential every bit</Pattern>
+    <Pattern>be potential for</Pattern>
+    <Pattern>be potentiality as</Pattern>
+    <Pattern>be potentiality equally</Pattern>
+    <Pattern>be potentiality every bit</Pattern>
+    <Pattern>be potentiality for</Pattern>
     <Pattern>be seen from</Pattern>
     <Pattern>be seen in</Pattern>
     <Pattern>be seen inward</Pattern>
     <Pattern>be seen inwards</Pattern>
-    <Pattern>be seen past</Pattern>
-    <Pattern>be squalene by</Pattern>
-    <Pattern>be squalene from</Pattern>
-    <Pattern>be squalene in</Pattern>
-    <Pattern>be squalene inward</Pattern>
-    <Pattern>be squalene inwards</Pattern>
-    <Pattern>be squalene past</Pattern>
-    <Pattern>be synopsized by</Pattern>
-    <Pattern>be synopsized in</Pattern>
-    <Pattern>be synopsized inward</Pattern>
-    <Pattern>be synopsized inwards</Pattern>
-    <Pattern>be synopsized past</Pattern>
-    <Pattern>be synopsized that</Pattern>
-    <Pattern>be that</Pattern>
+    <Pattern>be tumor as</Pattern>
+    <Pattern>be tumor equally</Pattern>
+    <Pattern>be tumor every bit</Pattern>
+    <Pattern>be tumor for</Pattern>
+    <Pattern>be tumour as</Pattern>
+    <Pattern>be tumour equally</Pattern>
+    <Pattern>be tumour every bit</Pattern>
+    <Pattern>be tumour for</Pattern>
     <Pattern>commemorate</Pattern>
-    <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>commemorate 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>commemorate IC by</Pattern>
-    <Pattern>commemorate IC in</Pattern>
-    <Pattern>commemorate IC inward</Pattern>
-    <Pattern>commemorate IC inwards</Pattern>
-    <Pattern>commemorate IC past</Pattern>
     <Pattern>commemorate IC that</Pattern>
-    <Pattern>commemorate Intelligence Community by</Pattern>
-    <Pattern>commemorate Intelligence Community in</Pattern>
-    <Pattern>commemorate Intelligence Community inward</Pattern>
-    <Pattern>commemorate Intelligence Community inwards</Pattern>
-    <Pattern>commemorate Intelligence Community past</Pattern>
     <Pattern>commemorate Intelligence Community that</Pattern>
-    <Pattern>commemorate National Intelligence Community by</Pattern>
-    <Pattern>commemorate National Intelligence Community in</Pattern>
-    <Pattern>commemorate National Intelligence Community inward</Pattern>
-    <Pattern>commemorate National Intelligence Community inwards</Pattern>
-    <Pattern>commemorate National Intelligence Community past</Pattern>
     <Pattern>commemorate National Intelligence Community that</Pattern>
-    <Pattern>commemorate United States Intelligence Community by</Pattern>
-    <Pattern>commemorate United States Intelligence Community in</Pattern>
-    <Pattern>commemorate United States Intelligence Community inward</Pattern>
-    <Pattern>commemorate United States Intelligence Community inwards</Pattern>
-    <Pattern>commemorate United States Intelligence Community past</Pattern>
     <Pattern>commemorate United States Intelligence Community that</Pattern>
-    <Pattern>commemorate assay by</Pattern>
-    <Pattern>commemorate assay in</Pattern>
-    <Pattern>commemorate assay inward</Pattern>
-    <Pattern>commemorate assay inwards</Pattern>
-    <Pattern>commemorate assay past</Pattern>
-    <Pattern>commemorate assay that</Pattern>
-    <Pattern>commemorate by</Pattern>
-    <Pattern>commemorate cancer by</Pattern>
-    <Pattern>commemorate cancer in</Pattern>
-    <Pattern>commemorate cancer inward</Pattern>
-    <Pattern>commemorate cancer inwards</Pattern>
-    <Pattern>commemorate cancer past</Pattern>
     <Pattern>commemorate cancer that</Pattern>
-    <Pattern>commemorate cell by</Pattern>
-    <Pattern>commemorate cell in</Pattern>
-    <Pattern>commemorate cell inward</Pattern>
-    <Pattern>commemorate cell inwards</Pattern>
-    <Pattern>commemorate cell past</Pattern>
-    <Pattern>commemorate cell that</Pattern>
-    <Pattern>commemorate check by</Pattern>
-    <Pattern>commemorate check in</Pattern>
-    <Pattern>commemorate check inward</Pattern>
-    <Pattern>commemorate check inwards</Pattern>
-    <Pattern>commemorate check past</Pattern>
-    <Pattern>commemorate check that</Pattern>
-    <Pattern>commemorate followed by</Pattern>
-    <Pattern>commemorate followed in</Pattern>
-    <Pattern>commemorate followed inward</Pattern>
-    <Pattern>commemorate followed inwards</Pattern>
-    <Pattern>commemorate followed past</Pattern>
-    <Pattern>commemorate followed that</Pattern>
-    <Pattern>commemorate found by</Pattern>
-    <Pattern>commemorate found in</Pattern>
-    <Pattern>commemorate found inward</Pattern>
-    <Pattern>commemorate found inwards</Pattern>
-    <Pattern>commemorate found past</Pattern>
-    <Pattern>commemorate found that</Pattern>
-    <Pattern>commemorate ic50 by</Pattern>
-    <Pattern>commemorate ic50 in</Pattern>
-    <Pattern>commemorate ic50 inward</Pattern>
-    <Pattern>commemorate ic50 inwards</Pattern>
-    <Pattern>commemorate ic50 past</Pattern>
     <Pattern>commemorate ic50 that</Pattern>
-    <Pattern>commemorate in</Pattern>
-    <Pattern>commemorate inward</Pattern>
-    <Pattern>commemorate inwards</Pattern>
-    <Pattern>commemorate malignant neoplastic disease by</Pattern>
-    <Pattern>commemorate malignant neoplastic disease in</Pattern>
-    <Pattern>commemorate malignant neoplastic disease inward</Pattern>
-    <Pattern>commemorate malignant neoplastic disease inwards</Pattern>
-    <Pattern>commemorate malignant neoplastic disease past</Pattern>
     <Pattern>commemorate malignant neoplastic disease that</Pattern>
-    <Pattern>commemorate past</Pattern>
-    <Pattern>commemorate synopsized by</Pattern>
-    <Pattern>commemorate synopsized in</Pattern>
-    <Pattern>commemorate synopsized inward</Pattern>
-    <Pattern>commemorate synopsized inwards</Pattern>
-    <Pattern>commemorate synopsized past</Pattern>
-    <Pattern>commemorate synopsized that</Pattern>
     <Pattern>commemorate that</Pattern>
     <Pattern>confirm</Pattern>
-    <Pattern>confirm by</Pattern>
     <Pattern>confirm from</Pattern>
     <Pattern>confirm in</Pattern>
     <Pattern>confirm inward</Pattern>
     <Pattern>confirm inwards</Pattern>
-    <Pattern>confirm observed by</Pattern>
-    <Pattern>confirm observed from</Pattern>
-    <Pattern>confirm observed in</Pattern>
-    <Pattern>confirm observed inward</Pattern>
-    <Pattern>confirm observed inwards</Pattern>
-    <Pattern>confirm observed past</Pattern>
-    <Pattern>confirm our by</Pattern>
     <Pattern>confirm our from</Pattern>
     <Pattern>confirm our in</Pattern>
     <Pattern>confirm our inward</Pattern>
     <Pattern>confirm our inwards</Pattern>
-    <Pattern>confirm our past</Pattern>
-    <Pattern>confirm past</Pattern>
-    <Pattern>confirm seen by</Pattern>
     <Pattern>confirm seen from</Pattern>
     <Pattern>confirm seen in</Pattern>
     <Pattern>confirm seen inward</Pattern>
     <Pattern>confirm seen inwards</Pattern>
-    <Pattern>confirm seen past</Pattern>
-    <Pattern>confirm squalene by</Pattern>
-    <Pattern>confirm squalene from</Pattern>
-    <Pattern>confirm squalene in</Pattern>
-    <Pattern>confirm squalene inward</Pattern>
-    <Pattern>confirm squalene inwards</Pattern>
-    <Pattern>confirm squalene past</Pattern>
     <Pattern>corroborate</Pattern>
-    <Pattern>corroborate by</Pattern>
     <Pattern>corroborate from</Pattern>
     <Pattern>corroborate in</Pattern>
     <Pattern>corroborate inward</Pattern>
     <Pattern>corroborate inwards</Pattern>
-    <Pattern>corroborate observed by</Pattern>
-    <Pattern>corroborate observed from</Pattern>
-    <Pattern>corroborate observed in</Pattern>
-    <Pattern>corroborate observed inward</Pattern>
-    <Pattern>corroborate observed inwards</Pattern>
-    <Pattern>corroborate observed past</Pattern>
-    <Pattern>corroborate our by</Pattern>
     <Pattern>corroborate our from</Pattern>
     <Pattern>corroborate our in</Pattern>
     <Pattern>corroborate our inward</Pattern>
     <Pattern>corroborate our inwards</Pattern>
-    <Pattern>corroborate our past</Pattern>
-    <Pattern>corroborate past</Pattern>
-    <Pattern>corroborate seen by</Pattern>
     <Pattern>corroborate seen from</Pattern>
     <Pattern>corroborate seen in</Pattern>
     <Pattern>corroborate seen inward</Pattern>
     <Pattern>corroborate seen inwards</Pattern>
-    <Pattern>corroborate seen past</Pattern>
-    <Pattern>corroborate squalene by</Pattern>
-    <Pattern>corroborate squalene from</Pattern>
-    <Pattern>corroborate squalene in</Pattern>
-    <Pattern>corroborate squalene inward</Pattern>
-    <Pattern>corroborate squalene inwards</Pattern>
-    <Pattern>corroborate squalene past</Pattern>
-    <Pattern>detect</Pattern>
-    <Pattern>detect by</Pattern>
-    <Pattern>detect from</Pattern>
-    <Pattern>detect in</Pattern>
-    <Pattern>detect inward</Pattern>
-    <Pattern>detect inwards</Pattern>
-    <Pattern>detect observed by</Pattern>
-    <Pattern>detect observed from</Pattern>
-    <Pattern>detect observed in</Pattern>
-    <Pattern>detect observed inward</Pattern>
-    <Pattern>detect observed inwards</Pattern>
-    <Pattern>detect observed past</Pattern>
-    <Pattern>detect our by</Pattern>
-    <Pattern>detect our from</Pattern>
-    <Pattern>detect our in</Pattern>
-    <Pattern>detect our inward</Pattern>
-    <Pattern>detect our inwards</Pattern>
-    <Pattern>detect our past</Pattern>
-    <Pattern>detect past</Pattern>
-    <Pattern>detect seen by</Pattern>
-    <Pattern>detect seen from</Pattern>
-    <Pattern>detect seen in</Pattern>
-    <Pattern>detect seen inward</Pattern>
-    <Pattern>detect seen inwards</Pattern>
-    <Pattern>detect seen past</Pattern>
-    <Pattern>detect squalene by</Pattern>
-    <Pattern>detect squalene from</Pattern>
-    <Pattern>detect squalene in</Pattern>
-    <Pattern>detect squalene inward</Pattern>
-    <Pattern>detect squalene inwards</Pattern>
-    <Pattern>detect squalene past</Pattern>
-    <Pattern>establish</Pattern>
-    <Pattern>establish 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>establish 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>establish 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>establish 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>establish 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>establish 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>establish IC by</Pattern>
-    <Pattern>establish IC in</Pattern>
-    <Pattern>establish IC inward</Pattern>
-    <Pattern>establish IC inwards</Pattern>
-    <Pattern>establish IC past</Pattern>
-    <Pattern>establish IC that</Pattern>
-    <Pattern>establish Intelligence Community by</Pattern>
-    <Pattern>establish Intelligence Community in</Pattern>
-    <Pattern>establish Intelligence Community inward</Pattern>
-    <Pattern>establish Intelligence Community inwards</Pattern>
-    <Pattern>establish Intelligence Community past</Pattern>
-    <Pattern>establish Intelligence Community that</Pattern>
-    <Pattern>establish National Intelligence Community by</Pattern>
-    <Pattern>establish National Intelligence Community in</Pattern>
-    <Pattern>establish National Intelligence Community inward</Pattern>
-    <Pattern>establish National Intelligence Community inwards</Pattern>
-    <Pattern>establish National Intelligence Community past</Pattern>
-    <Pattern>establish National Intelligence Community that</Pattern>
-    <Pattern>establish United States Intelligence Community by</Pattern>
-    <Pattern>establish United States Intelligence Community in</Pattern>
-    <Pattern>establish United States Intelligence Community inward</Pattern>
-    <Pattern>establish United States Intelligence Community inwards</Pattern>
-    <Pattern>establish United States Intelligence Community past</Pattern>
-    <Pattern>establish United States Intelligence Community that</Pattern>
-    <Pattern>establish assay by</Pattern>
-    <Pattern>establish assay in</Pattern>
-    <Pattern>establish assay inward</Pattern>
-    <Pattern>establish assay inwards</Pattern>
-    <Pattern>establish assay past</Pattern>
-    <Pattern>establish assay that</Pattern>
-    <Pattern>establish by</Pattern>
-    <Pattern>establish cancer by</Pattern>
-    <Pattern>establish cancer in</Pattern>
-    <Pattern>establish cancer inward</Pattern>
-    <Pattern>establish cancer inwards</Pattern>
-    <Pattern>establish cancer past</Pattern>
-    <Pattern>establish cancer that</Pattern>
-    <Pattern>establish cell by</Pattern>
-    <Pattern>establish cell in</Pattern>
-    <Pattern>establish cell inward</Pattern>
-    <Pattern>establish cell inwards</Pattern>
-    <Pattern>establish cell past</Pattern>
-    <Pattern>establish cell that</Pattern>
-    <Pattern>establish check by</Pattern>
-    <Pattern>establish check in</Pattern>
-    <Pattern>establish check inward</Pattern>
-    <Pattern>establish check inwards</Pattern>
-    <Pattern>establish check past</Pattern>
-    <Pattern>establish check that</Pattern>
-    <Pattern>establish followed by</Pattern>
-    <Pattern>establish followed in</Pattern>
-    <Pattern>establish followed inward</Pattern>
-    <Pattern>establish followed inwards</Pattern>
-    <Pattern>establish followed past</Pattern>
-    <Pattern>establish followed that</Pattern>
-    <Pattern>establish found by</Pattern>
-    <Pattern>establish found in</Pattern>
-    <Pattern>establish found inward</Pattern>
-    <Pattern>establish found inwards</Pattern>
-    <Pattern>establish found past</Pattern>
-    <Pattern>establish found that</Pattern>
-    <Pattern>establish ic50 by</Pattern>
-    <Pattern>establish ic50 in</Pattern>
-    <Pattern>establish ic50 inward</Pattern>
-    <Pattern>establish ic50 inwards</Pattern>
-    <Pattern>establish ic50 past</Pattern>
-    <Pattern>establish ic50 that</Pattern>
-    <Pattern>establish in</Pattern>
-    <Pattern>establish inward</Pattern>
-    <Pattern>establish inwards</Pattern>
-    <Pattern>establish malignant neoplastic disease by</Pattern>
-    <Pattern>establish malignant neoplastic disease in</Pattern>
-    <Pattern>establish malignant neoplastic disease inward</Pattern>
-    <Pattern>establish malignant neoplastic disease inwards</Pattern>
-    <Pattern>establish malignant neoplastic disease past</Pattern>
-    <Pattern>establish malignant neoplastic disease that</Pattern>
-    <Pattern>establish past</Pattern>
-    <Pattern>establish synopsized by</Pattern>
-    <Pattern>establish synopsized in</Pattern>
-    <Pattern>establish synopsized inward</Pattern>
-    <Pattern>establish synopsized inwards</Pattern>
-    <Pattern>establish synopsized past</Pattern>
-    <Pattern>establish synopsized that</Pattern>
-    <Pattern>establish that</Pattern>
     <Pattern>exhibit</Pattern>
-    <Pattern>exhibit by</Pattern>
-    <Pattern>exhibit from</Pattern>
-    <Pattern>exhibit in</Pattern>
-    <Pattern>exhibit inward</Pattern>
-    <Pattern>exhibit inwards</Pattern>
-    <Pattern>exhibit observed by</Pattern>
-    <Pattern>exhibit observed from</Pattern>
-    <Pattern>exhibit observed in</Pattern>
-    <Pattern>exhibit observed inward</Pattern>
-    <Pattern>exhibit observed inwards</Pattern>
-    <Pattern>exhibit observed past</Pattern>
-    <Pattern>exhibit our by</Pattern>
-    <Pattern>exhibit our from</Pattern>
-    <Pattern>exhibit our in</Pattern>
-    <Pattern>exhibit our inward</Pattern>
-    <Pattern>exhibit our inwards</Pattern>
-    <Pattern>exhibit our past</Pattern>
-    <Pattern>exhibit past</Pattern>
-    <Pattern>exhibit seen by</Pattern>
-    <Pattern>exhibit seen from</Pattern>
-    <Pattern>exhibit seen in</Pattern>
-    <Pattern>exhibit seen inward</Pattern>
-    <Pattern>exhibit seen inwards</Pattern>
-    <Pattern>exhibit seen past</Pattern>
-    <Pattern>exhibit squalene by</Pattern>
-    <Pattern>exhibit squalene from</Pattern>
-    <Pattern>exhibit squalene in</Pattern>
-    <Pattern>exhibit squalene inward</Pattern>
-    <Pattern>exhibit squalene inwards</Pattern>
-    <Pattern>exhibit squalene past</Pattern>
+    <Pattern>exhibit as</Pattern>
+    <Pattern>exhibit cholesterin as</Pattern>
+    <Pattern>exhibit cholesterin equally</Pattern>
+    <Pattern>exhibit cholesterin every bit</Pattern>
+    <Pattern>exhibit cholesterin for</Pattern>
+    <Pattern>exhibit cholesterol as</Pattern>
+    <Pattern>exhibit cholesterol equally</Pattern>
+    <Pattern>exhibit cholesterol every bit</Pattern>
+    <Pattern>exhibit cholesterol for</Pattern>
+    <Pattern>exhibit equally</Pattern>
+    <Pattern>exhibit every bit</Pattern>
+    <Pattern>exhibit for</Pattern>
+    <Pattern>exhibit neoplasm as</Pattern>
+    <Pattern>exhibit neoplasm equally</Pattern>
+    <Pattern>exhibit neoplasm every bit</Pattern>
+    <Pattern>exhibit neoplasm for</Pattern>
+    <Pattern>exhibit potency as</Pattern>
+    <Pattern>exhibit potency equally</Pattern>
+    <Pattern>exhibit potency every bit</Pattern>
+    <Pattern>exhibit potency for</Pattern>
+    <Pattern>exhibit potential as</Pattern>
+    <Pattern>exhibit potential equally</Pattern>
+    <Pattern>exhibit potential every bit</Pattern>
+    <Pattern>exhibit potential for</Pattern>
+    <Pattern>exhibit potentiality as</Pattern>
+    <Pattern>exhibit potentiality equally</Pattern>
+    <Pattern>exhibit potentiality every bit</Pattern>
+    <Pattern>exhibit potentiality for</Pattern>
+    <Pattern>exhibit tumor as</Pattern>
+    <Pattern>exhibit tumor equally</Pattern>
+    <Pattern>exhibit tumor every bit</Pattern>
+    <Pattern>exhibit tumor for</Pattern>
+    <Pattern>exhibit tumour as</Pattern>
+    <Pattern>exhibit tumour equally</Pattern>
+    <Pattern>exhibit tumour every bit</Pattern>
+    <Pattern>exhibit tumour for</Pattern>
     <Pattern>exhibited</Pattern>
-    <Pattern>exhibited by</Pattern>
-    <Pattern>exhibited from</Pattern>
-    <Pattern>exhibited in</Pattern>
-    <Pattern>exhibited inward</Pattern>
-    <Pattern>exhibited inwards</Pattern>
-    <Pattern>exhibited observed by</Pattern>
-    <Pattern>exhibited observed from</Pattern>
-    <Pattern>exhibited observed in</Pattern>
-    <Pattern>exhibited observed inward</Pattern>
-    <Pattern>exhibited observed inwards</Pattern>
-    <Pattern>exhibited observed past</Pattern>
-    <Pattern>exhibited our by</Pattern>
-    <Pattern>exhibited our from</Pattern>
-    <Pattern>exhibited our in</Pattern>
-    <Pattern>exhibited our inward</Pattern>
-    <Pattern>exhibited our inwards</Pattern>
-    <Pattern>exhibited our past</Pattern>
-    <Pattern>exhibited past</Pattern>
-    <Pattern>exhibited seen by</Pattern>
-    <Pattern>exhibited seen from</Pattern>
-    <Pattern>exhibited seen in</Pattern>
-    <Pattern>exhibited seen inward</Pattern>
-    <Pattern>exhibited seen inwards</Pattern>
-    <Pattern>exhibited seen past</Pattern>
-    <Pattern>exhibited squalene by</Pattern>
-    <Pattern>exhibited squalene from</Pattern>
-    <Pattern>exhibited squalene in</Pattern>
-    <Pattern>exhibited squalene inward</Pattern>
-    <Pattern>exhibited squalene inwards</Pattern>
-    <Pattern>exhibited squalene past</Pattern>
-    <Pattern>follow</Pattern>
-    <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>follow 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>follow IC by</Pattern>
-    <Pattern>follow IC in</Pattern>
-    <Pattern>follow IC inward</Pattern>
-    <Pattern>follow IC inwards</Pattern>
-    <Pattern>follow IC past</Pattern>
-    <Pattern>follow IC that</Pattern>
-    <Pattern>follow Intelligence Community by</Pattern>
-    <Pattern>follow Intelligence Community in</Pattern>
-    <Pattern>follow Intelligence Community inward</Pattern>
-    <Pattern>follow Intelligence Community inwards</Pattern>
-    <Pattern>follow Intelligence Community past</Pattern>
-    <Pattern>follow Intelligence Community that</Pattern>
-    <Pattern>follow National Intelligence Community by</Pattern>
-    <Pattern>follow National Intelligence Community in</Pattern>
-    <Pattern>follow National Intelligence Community inward</Pattern>
-    <Pattern>follow National Intelligence Community inwards</Pattern>
-    <Pattern>follow National Intelligence Community past</Pattern>
-    <Pattern>follow National Intelligence Community that</Pattern>
-    <Pattern>follow United States Intelligence Community by</Pattern>
-    <Pattern>follow United States Intelligence Community in</Pattern>
-    <Pattern>follow United States Intelligence Community inward</Pattern>
-    <Pattern>follow United States Intelligence Community inwards</Pattern>
-    <Pattern>follow United States Intelligence Community past</Pattern>
-    <Pattern>follow United States Intelligence Community that</Pattern>
-    <Pattern>follow assay by</Pattern>
-    <Pattern>follow assay in</Pattern>
-    <Pattern>follow assay inward</Pattern>
-    <Pattern>follow assay inwards</Pattern>
-    <Pattern>follow assay past</Pattern>
-    <Pattern>follow assay that</Pattern>
-    <Pattern>follow by</Pattern>
-    <Pattern>follow cancer by</Pattern>
-    <Pattern>follow cancer in</Pattern>
-    <Pattern>follow cancer inward</Pattern>
-    <Pattern>follow cancer inwards</Pattern>
-    <Pattern>follow cancer past</Pattern>
-    <Pattern>follow cancer that</Pattern>
-    <Pattern>follow cell by</Pattern>
-    <Pattern>follow cell in</Pattern>
-    <Pattern>follow cell inward</Pattern>
-    <Pattern>follow cell inwards</Pattern>
-    <Pattern>follow cell past</Pattern>
-    <Pattern>follow cell that</Pattern>
-    <Pattern>follow check by</Pattern>
-    <Pattern>follow check in</Pattern>
-    <Pattern>follow check inward</Pattern>
-    <Pattern>follow check inwards</Pattern>
-    <Pattern>follow check past</Pattern>
-    <Pattern>follow check that</Pattern>
-    <Pattern>follow followed by</Pattern>
-    <Pattern>follow followed in</Pattern>
-    <Pattern>follow followed inward</Pattern>
-    <Pattern>follow followed inwards</Pattern>
-    <Pattern>follow followed past</Pattern>
-    <Pattern>follow followed that</Pattern>
-    <Pattern>follow found by</Pattern>
-    <Pattern>follow found in</Pattern>
-    <Pattern>follow found inward</Pattern>
-    <Pattern>follow found inwards</Pattern>
-    <Pattern>follow found past</Pattern>
-    <Pattern>follow found that</Pattern>
-    <Pattern>follow from</Pattern>
-    <Pattern>follow ic50 by</Pattern>
-    <Pattern>follow ic50 in</Pattern>
-    <Pattern>follow ic50 inward</Pattern>
-    <Pattern>follow ic50 inwards</Pattern>
-    <Pattern>follow ic50 past</Pattern>
-    <Pattern>follow ic50 that</Pattern>
-    <Pattern>follow in</Pattern>
-    <Pattern>follow inward</Pattern>
-    <Pattern>follow inwards</Pattern>
-    <Pattern>follow malignant neoplastic disease by</Pattern>
-    <Pattern>follow malignant neoplastic disease in</Pattern>
-    <Pattern>follow malignant neoplastic disease inward</Pattern>
-    <Pattern>follow malignant neoplastic disease inwards</Pattern>
-    <Pattern>follow malignant neoplastic disease past</Pattern>
-    <Pattern>follow malignant neoplastic disease that</Pattern>
-    <Pattern>follow observed by</Pattern>
-    <Pattern>follow observed from</Pattern>
-    <Pattern>follow observed in</Pattern>
-    <Pattern>follow observed inward</Pattern>
-    <Pattern>follow observed inwards</Pattern>
-    <Pattern>follow observed past</Pattern>
-    <Pattern>follow our by</Pattern>
-    <Pattern>follow our from</Pattern>
-    <Pattern>follow our in</Pattern>
-    <Pattern>follow our inward</Pattern>
-    <Pattern>follow our inwards</Pattern>
-    <Pattern>follow our past</Pattern>
-    <Pattern>follow past</Pattern>
-    <Pattern>follow seen by</Pattern>
-    <Pattern>follow seen from</Pattern>
-    <Pattern>follow seen in</Pattern>
-    <Pattern>follow seen inward</Pattern>
-    <Pattern>follow seen inwards</Pattern>
-    <Pattern>follow seen past</Pattern>
-    <Pattern>follow squalene by</Pattern>
-    <Pattern>follow squalene from</Pattern>
-    <Pattern>follow squalene in</Pattern>
-    <Pattern>follow squalene inward</Pattern>
-    <Pattern>follow squalene inwards</Pattern>
-    <Pattern>follow squalene past</Pattern>
-    <Pattern>follow synopsized by</Pattern>
-    <Pattern>follow synopsized in</Pattern>
-    <Pattern>follow synopsized inward</Pattern>
-    <Pattern>follow synopsized inwards</Pattern>
-    <Pattern>follow synopsized past</Pattern>
-    <Pattern>follow synopsized that</Pattern>
-    <Pattern>follow that</Pattern>
-    <Pattern>followed</Pattern>
-    <Pattern>followed 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>followed 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>followed 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>followed 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>followed 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>followed 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>followed IC by</Pattern>
-    <Pattern>followed IC in</Pattern>
-    <Pattern>followed IC inward</Pattern>
-    <Pattern>followed IC inwards</Pattern>
-    <Pattern>followed IC past</Pattern>
-    <Pattern>followed IC that</Pattern>
-    <Pattern>followed Intelligence Community by</Pattern>
-    <Pattern>followed Intelligence Community in</Pattern>
-    <Pattern>followed Intelligence Community inward</Pattern>
-    <Pattern>followed Intelligence Community inwards</Pattern>
-    <Pattern>followed Intelligence Community past</Pattern>
-    <Pattern>followed Intelligence Community that</Pattern>
-    <Pattern>followed National Intelligence Community by</Pattern>
-    <Pattern>followed National Intelligence Community in</Pattern>
-    <Pattern>followed National Intelligence Community inward</Pattern>
-    <Pattern>followed National Intelligence Community inwards</Pattern>
-    <Pattern>followed National Intelligence Community past</Pattern>
-    <Pattern>followed National Intelligence Community that</Pattern>
-    <Pattern>followed United States Intelligence Community by</Pattern>
-    <Pattern>followed United States Intelligence Community in</Pattern>
-    <Pattern>followed United States Intelligence Community inward</Pattern>
-    <Pattern>followed United States Intelligence Community inwards</Pattern>
-    <Pattern>followed United States Intelligence Community past</Pattern>
-    <Pattern>followed United States Intelligence Community that</Pattern>
-    <Pattern>followed assay by</Pattern>
-    <Pattern>followed assay in</Pattern>
-    <Pattern>followed assay inward</Pattern>
-    <Pattern>followed assay inwards</Pattern>
-    <Pattern>followed assay past</Pattern>
-    <Pattern>followed assay that</Pattern>
-    <Pattern>followed by</Pattern>
-    <Pattern>followed cancer by</Pattern>
-    <Pattern>followed cancer in</Pattern>
-    <Pattern>followed cancer inward</Pattern>
-    <Pattern>followed cancer inwards</Pattern>
-    <Pattern>followed cancer past</Pattern>
-    <Pattern>followed cancer that</Pattern>
-    <Pattern>followed cell by</Pattern>
-    <Pattern>followed cell in</Pattern>
-    <Pattern>followed cell inward</Pattern>
-    <Pattern>followed cell inwards</Pattern>
-    <Pattern>followed cell past</Pattern>
-    <Pattern>followed cell that</Pattern>
-    <Pattern>followed check by</Pattern>
-    <Pattern>followed check in</Pattern>
-    <Pattern>followed check inward</Pattern>
-    <Pattern>followed check inwards</Pattern>
-    <Pattern>followed check past</Pattern>
-    <Pattern>followed check that</Pattern>
-    <Pattern>followed followed by</Pattern>
-    <Pattern>followed followed in</Pattern>
-    <Pattern>followed followed inward</Pattern>
-    <Pattern>followed followed inwards</Pattern>
-    <Pattern>followed followed past</Pattern>
-    <Pattern>followed followed that</Pattern>
-    <Pattern>followed found by</Pattern>
-    <Pattern>followed found in</Pattern>
-    <Pattern>followed found inward</Pattern>
-    <Pattern>followed found inwards</Pattern>
-    <Pattern>followed found past</Pattern>
-    <Pattern>followed found that</Pattern>
-    <Pattern>followed from</Pattern>
-    <Pattern>followed ic50 by</Pattern>
-    <Pattern>followed ic50 in</Pattern>
-    <Pattern>followed ic50 inward</Pattern>
-    <Pattern>followed ic50 inwards</Pattern>
-    <Pattern>followed ic50 past</Pattern>
-    <Pattern>followed ic50 that</Pattern>
-    <Pattern>followed in</Pattern>
-    <Pattern>followed inward</Pattern>
-    <Pattern>followed inwards</Pattern>
-    <Pattern>followed malignant neoplastic disease by</Pattern>
-    <Pattern>followed malignant neoplastic disease in</Pattern>
-    <Pattern>followed malignant neoplastic disease inward</Pattern>
-    <Pattern>followed malignant neoplastic disease inwards</Pattern>
-    <Pattern>followed malignant neoplastic disease past</Pattern>
-    <Pattern>followed malignant neoplastic disease that</Pattern>
-    <Pattern>followed observed by</Pattern>
-    <Pattern>followed observed from</Pattern>
-    <Pattern>followed observed in</Pattern>
-    <Pattern>followed observed inward</Pattern>
-    <Pattern>followed observed inwards</Pattern>
-    <Pattern>followed observed past</Pattern>
-    <Pattern>followed our by</Pattern>
-    <Pattern>followed our from</Pattern>
-    <Pattern>followed our in</Pattern>
-    <Pattern>followed our inward</Pattern>
-    <Pattern>followed our inwards</Pattern>
-    <Pattern>followed our past</Pattern>
-    <Pattern>followed past</Pattern>
-    <Pattern>followed seen by</Pattern>
-    <Pattern>followed seen from</Pattern>
-    <Pattern>followed seen in</Pattern>
-    <Pattern>followed seen inward</Pattern>
-    <Pattern>followed seen inwards</Pattern>
-    <Pattern>followed seen past</Pattern>
-    <Pattern>followed squalene by</Pattern>
-    <Pattern>followed squalene from</Pattern>
-    <Pattern>followed squalene in</Pattern>
-    <Pattern>followed squalene inward</Pattern>
-    <Pattern>followed squalene inwards</Pattern>
-    <Pattern>followed squalene past</Pattern>
-    <Pattern>followed synopsized by</Pattern>
-    <Pattern>followed synopsized in</Pattern>
-    <Pattern>followed synopsized inward</Pattern>
-    <Pattern>followed synopsized inwards</Pattern>
-    <Pattern>followed synopsized past</Pattern>
-    <Pattern>followed synopsized that</Pattern>
-    <Pattern>followed that</Pattern>
-    <Pattern>found</Pattern>
-    <Pattern>found 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>found 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>found 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>found 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>found 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>found 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>found IC by</Pattern>
-    <Pattern>found IC in</Pattern>
-    <Pattern>found IC inward</Pattern>
-    <Pattern>found IC inwards</Pattern>
-    <Pattern>found IC past</Pattern>
-    <Pattern>found IC that</Pattern>
-    <Pattern>found Intelligence Community by</Pattern>
-    <Pattern>found Intelligence Community in</Pattern>
-    <Pattern>found Intelligence Community inward</Pattern>
-    <Pattern>found Intelligence Community inwards</Pattern>
-    <Pattern>found Intelligence Community past</Pattern>
-    <Pattern>found Intelligence Community that</Pattern>
-    <Pattern>found National Intelligence Community by</Pattern>
-    <Pattern>found National Intelligence Community in</Pattern>
-    <Pattern>found National Intelligence Community inward</Pattern>
-    <Pattern>found National Intelligence Community inwards</Pattern>
-    <Pattern>found National Intelligence Community past</Pattern>
-    <Pattern>found National Intelligence Community that</Pattern>
-    <Pattern>found United States Intelligence Community by</Pattern>
-    <Pattern>found United States Intelligence Community in</Pattern>
-    <Pattern>found United States Intelligence Community inward</Pattern>
-    <Pattern>found United States Intelligence Community inwards</Pattern>
-    <Pattern>found United States Intelligence Community past</Pattern>
-    <Pattern>found United States Intelligence Community that</Pattern>
-    <Pattern>found assay by</Pattern>
-    <Pattern>found assay in</Pattern>
-    <Pattern>found assay inward</Pattern>
-    <Pattern>found assay inwards</Pattern>
-    <Pattern>found assay past</Pattern>
-    <Pattern>found assay that</Pattern>
-    <Pattern>found by</Pattern>
-    <Pattern>found cancer by</Pattern>
-    <Pattern>found cancer in</Pattern>
-    <Pattern>found cancer inward</Pattern>
-    <Pattern>found cancer inwards</Pattern>
-    <Pattern>found cancer past</Pattern>
-    <Pattern>found cancer that</Pattern>
-    <Pattern>found cell by</Pattern>
-    <Pattern>found cell in</Pattern>
-    <Pattern>found cell inward</Pattern>
-    <Pattern>found cell inwards</Pattern>
-    <Pattern>found cell past</Pattern>
-    <Pattern>found cell that</Pattern>
-    <Pattern>found check by</Pattern>
-    <Pattern>found check in</Pattern>
-    <Pattern>found check inward</Pattern>
-    <Pattern>found check inwards</Pattern>
-    <Pattern>found check past</Pattern>
-    <Pattern>found check that</Pattern>
-    <Pattern>found followed by</Pattern>
-    <Pattern>found followed in</Pattern>
-    <Pattern>found followed inward</Pattern>
-    <Pattern>found followed inwards</Pattern>
-    <Pattern>found followed past</Pattern>
-    <Pattern>found followed that</Pattern>
-    <Pattern>found found by</Pattern>
-    <Pattern>found found in</Pattern>
-    <Pattern>found found inward</Pattern>
-    <Pattern>found found inwards</Pattern>
-    <Pattern>found found past</Pattern>
-    <Pattern>found found that</Pattern>
-    <Pattern>found ic50 by</Pattern>
-    <Pattern>found ic50 in</Pattern>
-    <Pattern>found ic50 inward</Pattern>
-    <Pattern>found ic50 inwards</Pattern>
-    <Pattern>found ic50 past</Pattern>
-    <Pattern>found ic50 that</Pattern>
-    <Pattern>found in</Pattern>
-    <Pattern>found inward</Pattern>
-    <Pattern>found inwards</Pattern>
-    <Pattern>found malignant neoplastic disease by</Pattern>
-    <Pattern>found malignant neoplastic disease in</Pattern>
-    <Pattern>found malignant neoplastic disease inward</Pattern>
-    <Pattern>found malignant neoplastic disease inwards</Pattern>
-    <Pattern>found malignant neoplastic disease past</Pattern>
-    <Pattern>found malignant neoplastic disease that</Pattern>
-    <Pattern>found past</Pattern>
-    <Pattern>found synopsized by</Pattern>
-    <Pattern>found synopsized in</Pattern>
-    <Pattern>found synopsized inward</Pattern>
-    <Pattern>found synopsized inwards</Pattern>
-    <Pattern>found synopsized past</Pattern>
-    <Pattern>found synopsized that</Pattern>
-    <Pattern>found that</Pattern>
+    <Pattern>exhibited as</Pattern>
+    <Pattern>exhibited cholesterin as</Pattern>
+    <Pattern>exhibited cholesterin equally</Pattern>
+    <Pattern>exhibited cholesterin every bit</Pattern>
+    <Pattern>exhibited cholesterin for</Pattern>
+    <Pattern>exhibited cholesterol as</Pattern>
+    <Pattern>exhibited cholesterol equally</Pattern>
+    <Pattern>exhibited cholesterol every bit</Pattern>
+    <Pattern>exhibited cholesterol for</Pattern>
+    <Pattern>exhibited equally</Pattern>
+    <Pattern>exhibited every bit</Pattern>
+    <Pattern>exhibited for</Pattern>
+    <Pattern>exhibited neoplasm as</Pattern>
+    <Pattern>exhibited neoplasm equally</Pattern>
+    <Pattern>exhibited neoplasm every bit</Pattern>
+    <Pattern>exhibited neoplasm for</Pattern>
+    <Pattern>exhibited potency as</Pattern>
+    <Pattern>exhibited potency equally</Pattern>
+    <Pattern>exhibited potency every bit</Pattern>
+    <Pattern>exhibited potency for</Pattern>
+    <Pattern>exhibited potential as</Pattern>
+    <Pattern>exhibited potential equally</Pattern>
+    <Pattern>exhibited potential every bit</Pattern>
+    <Pattern>exhibited potential for</Pattern>
+    <Pattern>exhibited potentiality as</Pattern>
+    <Pattern>exhibited potentiality equally</Pattern>
+    <Pattern>exhibited potentiality every bit</Pattern>
+    <Pattern>exhibited potentiality for</Pattern>
+    <Pattern>exhibited tumor as</Pattern>
+    <Pattern>exhibited tumor equally</Pattern>
+    <Pattern>exhibited tumor every bit</Pattern>
+    <Pattern>exhibited tumor for</Pattern>
+    <Pattern>exhibited tumour as</Pattern>
+    <Pattern>exhibited tumour equally</Pattern>
+    <Pattern>exhibited tumour every bit</Pattern>
+    <Pattern>exhibited tumour for</Pattern>
     <Pattern>gave</Pattern>
-    <Pattern>gave 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>gave 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>gave 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>gave 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>gave 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>gave 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>gave IC by</Pattern>
-    <Pattern>gave IC in</Pattern>
-    <Pattern>gave IC inward</Pattern>
-    <Pattern>gave IC inwards</Pattern>
-    <Pattern>gave IC past</Pattern>
     <Pattern>gave IC that</Pattern>
-    <Pattern>gave Intelligence Community by</Pattern>
-    <Pattern>gave Intelligence Community in</Pattern>
-    <Pattern>gave Intelligence Community inward</Pattern>
-    <Pattern>gave Intelligence Community inwards</Pattern>
-    <Pattern>gave Intelligence Community past</Pattern>
     <Pattern>gave Intelligence Community that</Pattern>
-    <Pattern>gave National Intelligence Community by</Pattern>
-    <Pattern>gave National Intelligence Community in</Pattern>
-    <Pattern>gave National Intelligence Community inward</Pattern>
-    <Pattern>gave National Intelligence Community inwards</Pattern>
-    <Pattern>gave National Intelligence Community past</Pattern>
     <Pattern>gave National Intelligence Community that</Pattern>
-    <Pattern>gave United States Intelligence Community by</Pattern>
-    <Pattern>gave United States Intelligence Community in</Pattern>
-    <Pattern>gave United States Intelligence Community inward</Pattern>
-    <Pattern>gave United States Intelligence Community inwards</Pattern>
-    <Pattern>gave United States Intelligence Community past</Pattern>
     <Pattern>gave United States Intelligence Community that</Pattern>
-    <Pattern>gave assay by</Pattern>
-    <Pattern>gave assay in</Pattern>
-    <Pattern>gave assay inward</Pattern>
-    <Pattern>gave assay inwards</Pattern>
-    <Pattern>gave assay past</Pattern>
-    <Pattern>gave assay that</Pattern>
-    <Pattern>gave by</Pattern>
-    <Pattern>gave cancer by</Pattern>
-    <Pattern>gave cancer in</Pattern>
-    <Pattern>gave cancer inward</Pattern>
-    <Pattern>gave cancer inwards</Pattern>
-    <Pattern>gave cancer past</Pattern>
     <Pattern>gave cancer that</Pattern>
-    <Pattern>gave cell by</Pattern>
-    <Pattern>gave cell in</Pattern>
-    <Pattern>gave cell inward</Pattern>
-    <Pattern>gave cell inwards</Pattern>
-    <Pattern>gave cell past</Pattern>
-    <Pattern>gave cell that</Pattern>
-    <Pattern>gave check by</Pattern>
-    <Pattern>gave check in</Pattern>
-    <Pattern>gave check inward</Pattern>
-    <Pattern>gave check inwards</Pattern>
-    <Pattern>gave check past</Pattern>
-    <Pattern>gave check that</Pattern>
-    <Pattern>gave followed by</Pattern>
-    <Pattern>gave followed in</Pattern>
-    <Pattern>gave followed inward</Pattern>
-    <Pattern>gave followed inwards</Pattern>
-    <Pattern>gave followed past</Pattern>
-    <Pattern>gave followed that</Pattern>
-    <Pattern>gave found by</Pattern>
-    <Pattern>gave found in</Pattern>
-    <Pattern>gave found inward</Pattern>
-    <Pattern>gave found inwards</Pattern>
-    <Pattern>gave found past</Pattern>
-    <Pattern>gave found that</Pattern>
-    <Pattern>gave ic50 by</Pattern>
-    <Pattern>gave ic50 in</Pattern>
-    <Pattern>gave ic50 inward</Pattern>
-    <Pattern>gave ic50 inwards</Pattern>
-    <Pattern>gave ic50 past</Pattern>
     <Pattern>gave ic50 that</Pattern>
-    <Pattern>gave in</Pattern>
-    <Pattern>gave inward</Pattern>
-    <Pattern>gave inwards</Pattern>
-    <Pattern>gave malignant neoplastic disease by</Pattern>
-    <Pattern>gave malignant neoplastic disease in</Pattern>
-    <Pattern>gave malignant neoplastic disease inward</Pattern>
-    <Pattern>gave malignant neoplastic disease inwards</Pattern>
-    <Pattern>gave malignant neoplastic disease past</Pattern>
     <Pattern>gave malignant neoplastic disease that</Pattern>
-    <Pattern>gave past</Pattern>
-    <Pattern>gave synopsized by</Pattern>
-    <Pattern>gave synopsized in</Pattern>
-    <Pattern>gave synopsized inward</Pattern>
-    <Pattern>gave synopsized inwards</Pattern>
-    <Pattern>gave synopsized past</Pattern>
-    <Pattern>gave synopsized that</Pattern>
     <Pattern>gave that</Pattern>
     <Pattern>give</Pattern>
-    <Pattern>give 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>give 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>give 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>give 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>give 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>give 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>give IC by</Pattern>
-    <Pattern>give IC in</Pattern>
-    <Pattern>give IC inward</Pattern>
-    <Pattern>give IC inwards</Pattern>
-    <Pattern>give IC past</Pattern>
     <Pattern>give IC that</Pattern>
-    <Pattern>give Intelligence Community by</Pattern>
-    <Pattern>give Intelligence Community in</Pattern>
-    <Pattern>give Intelligence Community inward</Pattern>
-    <Pattern>give Intelligence Community inwards</Pattern>
-    <Pattern>give Intelligence Community past</Pattern>
     <Pattern>give Intelligence Community that</Pattern>
-    <Pattern>give National Intelligence Community by</Pattern>
-    <Pattern>give National Intelligence Community in</Pattern>
-    <Pattern>give National Intelligence Community inward</Pattern>
-    <Pattern>give National Intelligence Community inwards</Pattern>
-    <Pattern>give National Intelligence Community past</Pattern>
     <Pattern>give National Intelligence Community that</Pattern>
-    <Pattern>give United States Intelligence Community by</Pattern>
-    <Pattern>give United States Intelligence Community in</Pattern>
-    <Pattern>give United States Intelligence Community inward</Pattern>
-    <Pattern>give United States Intelligence Community inwards</Pattern>
-    <Pattern>give United States Intelligence Community past</Pattern>
     <Pattern>give United States Intelligence Community that</Pattern>
-    <Pattern>give assay by</Pattern>
-    <Pattern>give assay in</Pattern>
-    <Pattern>give assay inward</Pattern>
-    <Pattern>give assay inwards</Pattern>
-    <Pattern>give assay past</Pattern>
-    <Pattern>give assay that</Pattern>
-    <Pattern>give by</Pattern>
-    <Pattern>give cancer by</Pattern>
-    <Pattern>give cancer in</Pattern>
-    <Pattern>give cancer inward</Pattern>
-    <Pattern>give cancer inwards</Pattern>
-    <Pattern>give cancer past</Pattern>
     <Pattern>give cancer that</Pattern>
-    <Pattern>give cell by</Pattern>
-    <Pattern>give cell in</Pattern>
-    <Pattern>give cell inward</Pattern>
-    <Pattern>give cell inwards</Pattern>
-    <Pattern>give cell past</Pattern>
-    <Pattern>give cell that</Pattern>
-    <Pattern>give check by</Pattern>
-    <Pattern>give check in</Pattern>
-    <Pattern>give check inward</Pattern>
-    <Pattern>give check inwards</Pattern>
-    <Pattern>give check past</Pattern>
-    <Pattern>give check that</Pattern>
-    <Pattern>give followed by</Pattern>
-    <Pattern>give followed in</Pattern>
-    <Pattern>give followed inward</Pattern>
-    <Pattern>give followed inwards</Pattern>
-    <Pattern>give followed past</Pattern>
-    <Pattern>give followed that</Pattern>
-    <Pattern>give found by</Pattern>
-    <Pattern>give found in</Pattern>
-    <Pattern>give found inward</Pattern>
-    <Pattern>give found inwards</Pattern>
-    <Pattern>give found past</Pattern>
-    <Pattern>give found that</Pattern>
-    <Pattern>give ic50 by</Pattern>
-    <Pattern>give ic50 in</Pattern>
-    <Pattern>give ic50 inward</Pattern>
-    <Pattern>give ic50 inwards</Pattern>
-    <Pattern>give ic50 past</Pattern>
     <Pattern>give ic50 that</Pattern>
-    <Pattern>give in</Pattern>
-    <Pattern>give inward</Pattern>
-    <Pattern>give inwards</Pattern>
-    <Pattern>give malignant neoplastic disease by</Pattern>
-    <Pattern>give malignant neoplastic disease in</Pattern>
-    <Pattern>give malignant neoplastic disease inward</Pattern>
-    <Pattern>give malignant neoplastic disease inwards</Pattern>
-    <Pattern>give malignant neoplastic disease past</Pattern>
     <Pattern>give malignant neoplastic disease that</Pattern>
-    <Pattern>give past</Pattern>
-    <Pattern>give synopsized by</Pattern>
-    <Pattern>give synopsized in</Pattern>
-    <Pattern>give synopsized inward</Pattern>
-    <Pattern>give synopsized inwards</Pattern>
-    <Pattern>give synopsized past</Pattern>
-    <Pattern>give synopsized that</Pattern>
     <Pattern>give that</Pattern>
     <Pattern>ic50</Pattern>
-    <Pattern>ic50 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>ic50 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>ic50 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>ic50 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>ic50 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>ic50 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>ic50 IC by</Pattern>
-    <Pattern>ic50 IC in</Pattern>
-    <Pattern>ic50 IC inward</Pattern>
-    <Pattern>ic50 IC inwards</Pattern>
-    <Pattern>ic50 IC past</Pattern>
     <Pattern>ic50 IC that</Pattern>
-    <Pattern>ic50 Intelligence Community by</Pattern>
-    <Pattern>ic50 Intelligence Community in</Pattern>
-    <Pattern>ic50 Intelligence Community inward</Pattern>
-    <Pattern>ic50 Intelligence Community inwards</Pattern>
-    <Pattern>ic50 Intelligence Community past</Pattern>
     <Pattern>ic50 Intelligence Community that</Pattern>
-    <Pattern>ic50 National Intelligence Community by</Pattern>
-    <Pattern>ic50 National Intelligence Community in</Pattern>
-    <Pattern>ic50 National Intelligence Community inward</Pattern>
-    <Pattern>ic50 National Intelligence Community inwards</Pattern>
-    <Pattern>ic50 National Intelligence Community past</Pattern>
     <Pattern>ic50 National Intelligence Community that</Pattern>
-    <Pattern>ic50 United States Intelligence Community by</Pattern>
-    <Pattern>ic50 United States Intelligence Community in</Pattern>
-    <Pattern>ic50 United States Intelligence Community inward</Pattern>
-    <Pattern>ic50 United States Intelligence Community inwards</Pattern>
-    <Pattern>ic50 United States Intelligence Community past</Pattern>
     <Pattern>ic50 United States Intelligence Community that</Pattern>
-    <Pattern>ic50 assay by</Pattern>
-    <Pattern>ic50 assay in</Pattern>
-    <Pattern>ic50 assay inward</Pattern>
-    <Pattern>ic50 assay inwards</Pattern>
-    <Pattern>ic50 assay past</Pattern>
-    <Pattern>ic50 assay that</Pattern>
-    <Pattern>ic50 by</Pattern>
-    <Pattern>ic50 cancer by</Pattern>
-    <Pattern>ic50 cancer in</Pattern>
-    <Pattern>ic50 cancer inward</Pattern>
-    <Pattern>ic50 cancer inwards</Pattern>
-    <Pattern>ic50 cancer past</Pattern>
     <Pattern>ic50 cancer that</Pattern>
-    <Pattern>ic50 cell by</Pattern>
-    <Pattern>ic50 cell in</Pattern>
-    <Pattern>ic50 cell inward</Pattern>
-    <Pattern>ic50 cell inwards</Pattern>
-    <Pattern>ic50 cell past</Pattern>
-    <Pattern>ic50 cell that</Pattern>
-    <Pattern>ic50 check by</Pattern>
-    <Pattern>ic50 check in</Pattern>
-    <Pattern>ic50 check inward</Pattern>
-    <Pattern>ic50 check inwards</Pattern>
-    <Pattern>ic50 check past</Pattern>
-    <Pattern>ic50 check that</Pattern>
-    <Pattern>ic50 followed by</Pattern>
-    <Pattern>ic50 followed in</Pattern>
-    <Pattern>ic50 followed inward</Pattern>
-    <Pattern>ic50 followed inwards</Pattern>
-    <Pattern>ic50 followed past</Pattern>
-    <Pattern>ic50 followed that</Pattern>
-    <Pattern>ic50 found by</Pattern>
-    <Pattern>ic50 found in</Pattern>
-    <Pattern>ic50 found inward</Pattern>
-    <Pattern>ic50 found inwards</Pattern>
-    <Pattern>ic50 found past</Pattern>
-    <Pattern>ic50 found that</Pattern>
-    <Pattern>ic50 ic50 by</Pattern>
-    <Pattern>ic50 ic50 in</Pattern>
-    <Pattern>ic50 ic50 inward</Pattern>
-    <Pattern>ic50 ic50 inwards</Pattern>
-    <Pattern>ic50 ic50 past</Pattern>
     <Pattern>ic50 ic50 that</Pattern>
-    <Pattern>ic50 in</Pattern>
-    <Pattern>ic50 inward</Pattern>
-    <Pattern>ic50 inwards</Pattern>
-    <Pattern>ic50 malignant neoplastic disease by</Pattern>
-    <Pattern>ic50 malignant neoplastic disease in</Pattern>
-    <Pattern>ic50 malignant neoplastic disease inward</Pattern>
-    <Pattern>ic50 malignant neoplastic disease inwards</Pattern>
-    <Pattern>ic50 malignant neoplastic disease past</Pattern>
     <Pattern>ic50 malignant neoplastic disease that</Pattern>
-    <Pattern>ic50 past</Pattern>
-    <Pattern>ic50 synopsized by</Pattern>
-    <Pattern>ic50 synopsized in</Pattern>
-    <Pattern>ic50 synopsized inward</Pattern>
-    <Pattern>ic50 synopsized inwards</Pattern>
-    <Pattern>ic50 synopsized past</Pattern>
-    <Pattern>ic50 synopsized that</Pattern>
     <Pattern>ic50 that</Pattern>
     <Pattern>immortalized</Pattern>
-    <Pattern>immortalized 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>immortalized 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>immortalized 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>immortalized 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>immortalized 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>immortalized 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>immortalized IC by</Pattern>
-    <Pattern>immortalized IC in</Pattern>
-    <Pattern>immortalized IC inward</Pattern>
-    <Pattern>immortalized IC inwards</Pattern>
-    <Pattern>immortalized IC past</Pattern>
     <Pattern>immortalized IC that</Pattern>
-    <Pattern>immortalized Intelligence Community by</Pattern>
-    <Pattern>immortalized Intelligence Community in</Pattern>
-    <Pattern>immortalized Intelligence Community inward</Pattern>
-    <Pattern>immortalized Intelligence Community inwards</Pattern>
-    <Pattern>immortalized Intelligence Community past</Pattern>
     <Pattern>immortalized Intelligence Community that</Pattern>
-    <Pattern>immortalized National Intelligence Community by</Pattern>
-    <Pattern>immortalized National Intelligence Community in</Pattern>
-    <Pattern>immortalized National Intelligence Community inward</Pattern>
-    <Pattern>immortalized National Intelligence Community inwards</Pattern>
-    <Pattern>immortalized National Intelligence Community past</Pattern>
     <Pattern>immortalized National Intelligence Community that</Pattern>
-    <Pattern>immortalized United States Intelligence Community by</Pattern>
-    <Pattern>immortalized United States Intelligence Community in</Pattern>
-    <Pattern>immortalized United States Intelligence Community inward</Pattern>
-    <Pattern>immortalized United States Intelligence Community inwards</Pattern>
-    <Pattern>immortalized United States Intelligence Community past</Pattern>
     <Pattern>immortalized United States Intelligence Community that</Pattern>
-    <Pattern>immortalized assay by</Pattern>
-    <Pattern>immortalized assay in</Pattern>
-    <Pattern>immortalized assay inward</Pattern>
-    <Pattern>immortalized assay inwards</Pattern>
-    <Pattern>immortalized assay past</Pattern>
-    <Pattern>immortalized assay that</Pattern>
-    <Pattern>immortalized by</Pattern>
-    <Pattern>immortalized cancer by</Pattern>
-    <Pattern>immortalized cancer in</Pattern>
-    <Pattern>immortalized cancer inward</Pattern>
-    <Pattern>immortalized cancer inwards</Pattern>
-    <Pattern>immortalized cancer past</Pattern>
     <Pattern>immortalized cancer that</Pattern>
-    <Pattern>immortalized cell by</Pattern>
-    <Pattern>immortalized cell in</Pattern>
-    <Pattern>immortalized cell inward</Pattern>
-    <Pattern>immortalized cell inwards</Pattern>
-    <Pattern>immortalized cell past</Pattern>
-    <Pattern>immortalized cell that</Pattern>
-    <Pattern>immortalized check by</Pattern>
-    <Pattern>immortalized check in</Pattern>
-    <Pattern>immortalized check inward</Pattern>
-    <Pattern>immortalized check inwards</Pattern>
-    <Pattern>immortalized check past</Pattern>
-    <Pattern>immortalized check that</Pattern>
-    <Pattern>immortalized followed by</Pattern>
-    <Pattern>immortalized followed in</Pattern>
-    <Pattern>immortalized followed inward</Pattern>
-    <Pattern>immortalized followed inwards</Pattern>
-    <Pattern>immortalized followed past</Pattern>
-    <Pattern>immortalized followed that</Pattern>
-    <Pattern>immortalized found by</Pattern>
-    <Pattern>immortalized found in</Pattern>
-    <Pattern>immortalized found inward</Pattern>
-    <Pattern>immortalized found inwards</Pattern>
-    <Pattern>immortalized found past</Pattern>
-    <Pattern>immortalized found that</Pattern>
-    <Pattern>immortalized ic50 by</Pattern>
-    <Pattern>immortalized ic50 in</Pattern>
-    <Pattern>immortalized ic50 inward</Pattern>
-    <Pattern>immortalized ic50 inwards</Pattern>
-    <Pattern>immortalized ic50 past</Pattern>
     <Pattern>immortalized ic50 that</Pattern>
-    <Pattern>immortalized in</Pattern>
-    <Pattern>immortalized inward</Pattern>
-    <Pattern>immortalized inwards</Pattern>
-    <Pattern>immortalized malignant neoplastic disease by</Pattern>
-    <Pattern>immortalized malignant neoplastic disease in</Pattern>
-    <Pattern>immortalized malignant neoplastic disease inward</Pattern>
-    <Pattern>immortalized malignant neoplastic disease inwards</Pattern>
-    <Pattern>immortalized malignant neoplastic disease past</Pattern>
     <Pattern>immortalized malignant neoplastic disease that</Pattern>
-    <Pattern>immortalized past</Pattern>
-    <Pattern>immortalized synopsized by</Pattern>
-    <Pattern>immortalized synopsized in</Pattern>
-    <Pattern>immortalized synopsized inward</Pattern>
-    <Pattern>immortalized synopsized inwards</Pattern>
-    <Pattern>immortalized synopsized past</Pattern>
-    <Pattern>immortalized synopsized that</Pattern>
     <Pattern>immortalized that</Pattern>
     <Pattern>inhibited</Pattern>
+    <Pattern>inhibited as</Pattern>
+    <Pattern>inhibited cholesterin as</Pattern>
+    <Pattern>inhibited cholesterin equally</Pattern>
+    <Pattern>inhibited cholesterin every bit</Pattern>
+    <Pattern>inhibited cholesterin for</Pattern>
+    <Pattern>inhibited cholesterol as</Pattern>
+    <Pattern>inhibited cholesterol equally</Pattern>
+    <Pattern>inhibited cholesterol every bit</Pattern>
+    <Pattern>inhibited cholesterol for</Pattern>
+    <Pattern>inhibited equally</Pattern>
+    <Pattern>inhibited every bit</Pattern>
+    <Pattern>inhibited for</Pattern>
+    <Pattern>inhibited neoplasm as</Pattern>
+    <Pattern>inhibited neoplasm equally</Pattern>
+    <Pattern>inhibited neoplasm every bit</Pattern>
+    <Pattern>inhibited neoplasm for</Pattern>
+    <Pattern>inhibited potency as</Pattern>
+    <Pattern>inhibited potency equally</Pattern>
+    <Pattern>inhibited potency every bit</Pattern>
+    <Pattern>inhibited potency for</Pattern>
+    <Pattern>inhibited potential as</Pattern>
+    <Pattern>inhibited potential equally</Pattern>
+    <Pattern>inhibited potential every bit</Pattern>
+    <Pattern>inhibited potential for</Pattern>
+    <Pattern>inhibited potentiality as</Pattern>
+    <Pattern>inhibited potentiality equally</Pattern>
+    <Pattern>inhibited potentiality every bit</Pattern>
+    <Pattern>inhibited potentiality for</Pattern>
+    <Pattern>inhibited tumor as</Pattern>
+    <Pattern>inhibited tumor equally</Pattern>
+    <Pattern>inhibited tumor every bit</Pattern>
+    <Pattern>inhibited tumor for</Pattern>
+    <Pattern>inhibited tumour as</Pattern>
+    <Pattern>inhibited tumour equally</Pattern>
+    <Pattern>inhibited tumour every bit</Pattern>
+    <Pattern>inhibited tumour for</Pattern>
     <Pattern>isolate</Pattern>
-    <Pattern>isolate by</Pattern>
     <Pattern>isolate from</Pattern>
     <Pattern>isolate in</Pattern>
     <Pattern>isolate inward</Pattern>
     <Pattern>isolate inwards</Pattern>
-    <Pattern>isolate observed by</Pattern>
-    <Pattern>isolate observed from</Pattern>
-    <Pattern>isolate observed in</Pattern>
-    <Pattern>isolate observed inward</Pattern>
-    <Pattern>isolate observed inwards</Pattern>
-    <Pattern>isolate observed past</Pattern>
-    <Pattern>isolate our by</Pattern>
     <Pattern>isolate our from</Pattern>
     <Pattern>isolate our in</Pattern>
     <Pattern>isolate our inward</Pattern>
     <Pattern>isolate our inwards</Pattern>
-    <Pattern>isolate our past</Pattern>
-    <Pattern>isolate past</Pattern>
-    <Pattern>isolate seen by</Pattern>
     <Pattern>isolate seen from</Pattern>
     <Pattern>isolate seen in</Pattern>
     <Pattern>isolate seen inward</Pattern>
     <Pattern>isolate seen inwards</Pattern>
-    <Pattern>isolate seen past</Pattern>
-    <Pattern>isolate squalene by</Pattern>
-    <Pattern>isolate squalene from</Pattern>
-    <Pattern>isolate squalene in</Pattern>
-    <Pattern>isolate squalene inward</Pattern>
-    <Pattern>isolate squalene inwards</Pattern>
-    <Pattern>isolate squalene past</Pattern>
     <Pattern>isolated</Pattern>
-    <Pattern>isolated by</Pattern>
     <Pattern>isolated from</Pattern>
     <Pattern>isolated in</Pattern>
     <Pattern>isolated inward</Pattern>
     <Pattern>isolated inwards</Pattern>
-    <Pattern>isolated observed by</Pattern>
-    <Pattern>isolated observed from</Pattern>
-    <Pattern>isolated observed in</Pattern>
-    <Pattern>isolated observed inward</Pattern>
-    <Pattern>isolated observed inwards</Pattern>
-    <Pattern>isolated observed past</Pattern>
-    <Pattern>isolated our by</Pattern>
     <Pattern>isolated our from</Pattern>
     <Pattern>isolated our in</Pattern>
     <Pattern>isolated our inward</Pattern>
     <Pattern>isolated our inwards</Pattern>
-    <Pattern>isolated our past</Pattern>
-    <Pattern>isolated past</Pattern>
-    <Pattern>isolated seen by</Pattern>
     <Pattern>isolated seen from</Pattern>
     <Pattern>isolated seen in</Pattern>
     <Pattern>isolated seen inward</Pattern>
     <Pattern>isolated seen inwards</Pattern>
-    <Pattern>isolated seen past</Pattern>
-    <Pattern>isolated squalene by</Pattern>
-    <Pattern>isolated squalene from</Pattern>
-    <Pattern>isolated squalene in</Pattern>
-    <Pattern>isolated squalene inward</Pattern>
-    <Pattern>isolated squalene inwards</Pattern>
-    <Pattern>isolated squalene past</Pattern>
     <Pattern>leave</Pattern>
-    <Pattern>leave by</Pattern>
     <Pattern>leave from</Pattern>
     <Pattern>leave in</Pattern>
     <Pattern>leave inward</Pattern>
     <Pattern>leave inwards</Pattern>
-    <Pattern>leave observed by</Pattern>
-    <Pattern>leave observed from</Pattern>
-    <Pattern>leave observed in</Pattern>
-    <Pattern>leave observed inward</Pattern>
-    <Pattern>leave observed inwards</Pattern>
-    <Pattern>leave observed past</Pattern>
-    <Pattern>leave our by</Pattern>
     <Pattern>leave our from</Pattern>
     <Pattern>leave our in</Pattern>
     <Pattern>leave our inward</Pattern>
     <Pattern>leave our inwards</Pattern>
-    <Pattern>leave our past</Pattern>
-    <Pattern>leave past</Pattern>
-    <Pattern>leave seen by</Pattern>
     <Pattern>leave seen from</Pattern>
     <Pattern>leave seen in</Pattern>
     <Pattern>leave seen inward</Pattern>
     <Pattern>leave seen inwards</Pattern>
-    <Pattern>leave seen past</Pattern>
-    <Pattern>leave squalene by</Pattern>
-    <Pattern>leave squalene from</Pattern>
-    <Pattern>leave squalene in</Pattern>
-    <Pattern>leave squalene inward</Pattern>
-    <Pattern>leave squalene inwards</Pattern>
-    <Pattern>leave squalene past</Pattern>
     <Pattern>leaves</Pattern>
-    <Pattern>leaves by</Pattern>
     <Pattern>leaves from</Pattern>
     <Pattern>leaves in</Pattern>
     <Pattern>leaves inward</Pattern>
     <Pattern>leaves inwards</Pattern>
-    <Pattern>leaves observed by</Pattern>
-    <Pattern>leaves observed from</Pattern>
-    <Pattern>leaves observed in</Pattern>
-    <Pattern>leaves observed inward</Pattern>
-    <Pattern>leaves observed inwards</Pattern>
-    <Pattern>leaves observed past</Pattern>
-    <Pattern>leaves our by</Pattern>
     <Pattern>leaves our from</Pattern>
     <Pattern>leaves our in</Pattern>
     <Pattern>leaves our inward</Pattern>
     <Pattern>leaves our inwards</Pattern>
-    <Pattern>leaves our past</Pattern>
-    <Pattern>leaves past</Pattern>
-    <Pattern>leaves seen by</Pattern>
     <Pattern>leaves seen from</Pattern>
     <Pattern>leaves seen in</Pattern>
     <Pattern>leaves seen inward</Pattern>
     <Pattern>leaves seen inwards</Pattern>
-    <Pattern>leaves seen past</Pattern>
-    <Pattern>leaves squalene by</Pattern>
-    <Pattern>leaves squalene from</Pattern>
-    <Pattern>leaves squalene in</Pattern>
-    <Pattern>leaves squalene inward</Pattern>
-    <Pattern>leaves squalene inwards</Pattern>
-    <Pattern>leaves squalene past</Pattern>
-    <Pattern>modified</Pattern>
-    <Pattern>modified 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>modified 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>modified 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>modified 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>modified 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>modified 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>modified IC by</Pattern>
-    <Pattern>modified IC in</Pattern>
-    <Pattern>modified IC inward</Pattern>
-    <Pattern>modified IC inwards</Pattern>
-    <Pattern>modified IC past</Pattern>
-    <Pattern>modified IC that</Pattern>
-    <Pattern>modified Intelligence Community by</Pattern>
-    <Pattern>modified Intelligence Community in</Pattern>
-    <Pattern>modified Intelligence Community inward</Pattern>
-    <Pattern>modified Intelligence Community inwards</Pattern>
-    <Pattern>modified Intelligence Community past</Pattern>
-    <Pattern>modified Intelligence Community that</Pattern>
-    <Pattern>modified National Intelligence Community by</Pattern>
-    <Pattern>modified National Intelligence Community in</Pattern>
-    <Pattern>modified National Intelligence Community inward</Pattern>
-    <Pattern>modified National Intelligence Community inwards</Pattern>
-    <Pattern>modified National Intelligence Community past</Pattern>
-    <Pattern>modified National Intelligence Community that</Pattern>
-    <Pattern>modified United States Intelligence Community by</Pattern>
-    <Pattern>modified United States Intelligence Community in</Pattern>
-    <Pattern>modified United States Intelligence Community inward</Pattern>
-    <Pattern>modified United States Intelligence Community inwards</Pattern>
-    <Pattern>modified United States Intelligence Community past</Pattern>
-    <Pattern>modified United States Intelligence Community that</Pattern>
-    <Pattern>modified assay by</Pattern>
-    <Pattern>modified assay in</Pattern>
-    <Pattern>modified assay inward</Pattern>
-    <Pattern>modified assay inwards</Pattern>
-    <Pattern>modified assay past</Pattern>
-    <Pattern>modified assay that</Pattern>
-    <Pattern>modified by</Pattern>
-    <Pattern>modified cancer by</Pattern>
-    <Pattern>modified cancer in</Pattern>
-    <Pattern>modified cancer inward</Pattern>
-    <Pattern>modified cancer inwards</Pattern>
-    <Pattern>modified cancer past</Pattern>
-    <Pattern>modified cancer that</Pattern>
-    <Pattern>modified cell by</Pattern>
-    <Pattern>modified cell in</Pattern>
-    <Pattern>modified cell inward</Pattern>
-    <Pattern>modified cell inwards</Pattern>
-    <Pattern>modified cell past</Pattern>
-    <Pattern>modified cell that</Pattern>
-    <Pattern>modified check by</Pattern>
-    <Pattern>modified check in</Pattern>
-    <Pattern>modified check inward</Pattern>
-    <Pattern>modified check inwards</Pattern>
-    <Pattern>modified check past</Pattern>
-    <Pattern>modified check that</Pattern>
-    <Pattern>modified followed by</Pattern>
-    <Pattern>modified followed in</Pattern>
-    <Pattern>modified followed inward</Pattern>
-    <Pattern>modified followed inwards</Pattern>
-    <Pattern>modified followed past</Pattern>
-    <Pattern>modified followed that</Pattern>
-    <Pattern>modified found by</Pattern>
-    <Pattern>modified found in</Pattern>
-    <Pattern>modified found inward</Pattern>
-    <Pattern>modified found inwards</Pattern>
-    <Pattern>modified found past</Pattern>
-    <Pattern>modified found that</Pattern>
-    <Pattern>modified ic50 by</Pattern>
-    <Pattern>modified ic50 in</Pattern>
-    <Pattern>modified ic50 inward</Pattern>
-    <Pattern>modified ic50 inwards</Pattern>
-    <Pattern>modified ic50 past</Pattern>
-    <Pattern>modified ic50 that</Pattern>
-    <Pattern>modified in</Pattern>
-    <Pattern>modified inward</Pattern>
-    <Pattern>modified inwards</Pattern>
-    <Pattern>modified malignant neoplastic disease by</Pattern>
-    <Pattern>modified malignant neoplastic disease in</Pattern>
-    <Pattern>modified malignant neoplastic disease inward</Pattern>
-    <Pattern>modified malignant neoplastic disease inwards</Pattern>
-    <Pattern>modified malignant neoplastic disease past</Pattern>
-    <Pattern>modified malignant neoplastic disease that</Pattern>
-    <Pattern>modified past</Pattern>
-    <Pattern>modified synopsized by</Pattern>
-    <Pattern>modified synopsized in</Pattern>
-    <Pattern>modified synopsized inward</Pattern>
-    <Pattern>modified synopsized inwards</Pattern>
-    <Pattern>modified synopsized past</Pattern>
-    <Pattern>modified synopsized that</Pattern>
-    <Pattern>modified that</Pattern>
-    <Pattern>modify</Pattern>
-    <Pattern>modify 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>modify 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>modify 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>modify 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>modify 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>modify 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>modify IC by</Pattern>
-    <Pattern>modify IC in</Pattern>
-    <Pattern>modify IC inward</Pattern>
-    <Pattern>modify IC inwards</Pattern>
-    <Pattern>modify IC past</Pattern>
-    <Pattern>modify IC that</Pattern>
-    <Pattern>modify Intelligence Community by</Pattern>
-    <Pattern>modify Intelligence Community in</Pattern>
-    <Pattern>modify Intelligence Community inward</Pattern>
-    <Pattern>modify Intelligence Community inwards</Pattern>
-    <Pattern>modify Intelligence Community past</Pattern>
-    <Pattern>modify Intelligence Community that</Pattern>
-    <Pattern>modify National Intelligence Community by</Pattern>
-    <Pattern>modify National Intelligence Community in</Pattern>
-    <Pattern>modify National Intelligence Community inward</Pattern>
-    <Pattern>modify National Intelligence Community inwards</Pattern>
-    <Pattern>modify National Intelligence Community past</Pattern>
-    <Pattern>modify National Intelligence Community that</Pattern>
-    <Pattern>modify United States Intelligence Community by</Pattern>
-    <Pattern>modify United States Intelligence Community in</Pattern>
-    <Pattern>modify United States Intelligence Community inward</Pattern>
-    <Pattern>modify United States Intelligence Community inwards</Pattern>
-    <Pattern>modify United States Intelligence Community past</Pattern>
-    <Pattern>modify United States Intelligence Community that</Pattern>
-    <Pattern>modify assay by</Pattern>
-    <Pattern>modify assay in</Pattern>
-    <Pattern>modify assay inward</Pattern>
-    <Pattern>modify assay inwards</Pattern>
-    <Pattern>modify assay past</Pattern>
-    <Pattern>modify assay that</Pattern>
-    <Pattern>modify by</Pattern>
-    <Pattern>modify cancer by</Pattern>
-    <Pattern>modify cancer in</Pattern>
-    <Pattern>modify cancer inward</Pattern>
-    <Pattern>modify cancer inwards</Pattern>
-    <Pattern>modify cancer past</Pattern>
-    <Pattern>modify cancer that</Pattern>
-    <Pattern>modify cell by</Pattern>
-    <Pattern>modify cell in</Pattern>
-    <Pattern>modify cell inward</Pattern>
-    <Pattern>modify cell inwards</Pattern>
-    <Pattern>modify cell past</Pattern>
-    <Pattern>modify cell that</Pattern>
-    <Pattern>modify check by</Pattern>
-    <Pattern>modify check in</Pattern>
-    <Pattern>modify check inward</Pattern>
-    <Pattern>modify check inwards</Pattern>
-    <Pattern>modify check past</Pattern>
-    <Pattern>modify check that</Pattern>
-    <Pattern>modify followed by</Pattern>
-    <Pattern>modify followed in</Pattern>
-    <Pattern>modify followed inward</Pattern>
-    <Pattern>modify followed inwards</Pattern>
-    <Pattern>modify followed past</Pattern>
-    <Pattern>modify followed that</Pattern>
-    <Pattern>modify found by</Pattern>
-    <Pattern>modify found in</Pattern>
-    <Pattern>modify found inward</Pattern>
-    <Pattern>modify found inwards</Pattern>
-    <Pattern>modify found past</Pattern>
-    <Pattern>modify found that</Pattern>
-    <Pattern>modify ic50 by</Pattern>
-    <Pattern>modify ic50 in</Pattern>
-    <Pattern>modify ic50 inward</Pattern>
-    <Pattern>modify ic50 inwards</Pattern>
-    <Pattern>modify ic50 past</Pattern>
-    <Pattern>modify ic50 that</Pattern>
-    <Pattern>modify in</Pattern>
-    <Pattern>modify inward</Pattern>
-    <Pattern>modify inwards</Pattern>
-    <Pattern>modify malignant neoplastic disease by</Pattern>
-    <Pattern>modify malignant neoplastic disease in</Pattern>
-    <Pattern>modify malignant neoplastic disease inward</Pattern>
-    <Pattern>modify malignant neoplastic disease inwards</Pattern>
-    <Pattern>modify malignant neoplastic disease past</Pattern>
-    <Pattern>modify malignant neoplastic disease that</Pattern>
-    <Pattern>modify past</Pattern>
-    <Pattern>modify synopsized by</Pattern>
-    <Pattern>modify synopsized in</Pattern>
-    <Pattern>modify synopsized inward</Pattern>
-    <Pattern>modify synopsized inwards</Pattern>
-    <Pattern>modify synopsized past</Pattern>
-    <Pattern>modify synopsized that</Pattern>
-    <Pattern>modify that</Pattern>
-    <Pattern>observed</Pattern>
-    <Pattern>observed by</Pattern>
-    <Pattern>observed from</Pattern>
-    <Pattern>observed in</Pattern>
-    <Pattern>observed inward</Pattern>
-    <Pattern>observed inwards</Pattern>
-    <Pattern>observed observed by</Pattern>
-    <Pattern>observed observed from</Pattern>
-    <Pattern>observed observed in</Pattern>
-    <Pattern>observed observed inward</Pattern>
-    <Pattern>observed observed inwards</Pattern>
-    <Pattern>observed observed past</Pattern>
-    <Pattern>observed our by</Pattern>
-    <Pattern>observed our from</Pattern>
-    <Pattern>observed our in</Pattern>
-    <Pattern>observed our inward</Pattern>
-    <Pattern>observed our inwards</Pattern>
-    <Pattern>observed our past</Pattern>
-    <Pattern>observed past</Pattern>
-    <Pattern>observed seen by</Pattern>
-    <Pattern>observed seen from</Pattern>
-    <Pattern>observed seen in</Pattern>
-    <Pattern>observed seen inward</Pattern>
-    <Pattern>observed seen inwards</Pattern>
-    <Pattern>observed seen past</Pattern>
-    <Pattern>observed squalene by</Pattern>
-    <Pattern>observed squalene from</Pattern>
-    <Pattern>observed squalene in</Pattern>
-    <Pattern>observed squalene inward</Pattern>
-    <Pattern>observed squalene inwards</Pattern>
-    <Pattern>observed squalene past</Pattern>
     <Pattern>revealed</Pattern>
-    <Pattern>revealed 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>revealed 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>revealed 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>revealed 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>revealed 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>revealed 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>revealed IC by</Pattern>
-    <Pattern>revealed IC in</Pattern>
-    <Pattern>revealed IC inward</Pattern>
-    <Pattern>revealed IC inwards</Pattern>
-    <Pattern>revealed IC past</Pattern>
     <Pattern>revealed IC that</Pattern>
-    <Pattern>revealed Intelligence Community by</Pattern>
-    <Pattern>revealed Intelligence Community in</Pattern>
-    <Pattern>revealed Intelligence Community inward</Pattern>
-    <Pattern>revealed Intelligence Community inwards</Pattern>
-    <Pattern>revealed Intelligence Community past</Pattern>
     <Pattern>revealed Intelligence Community that</Pattern>
-    <Pattern>revealed National Intelligence Community by</Pattern>
-    <Pattern>revealed National Intelligence Community in</Pattern>
-    <Pattern>revealed National Intelligence Community inward</Pattern>
-    <Pattern>revealed National Intelligence Community inwards</Pattern>
-    <Pattern>revealed National Intelligence Community past</Pattern>
     <Pattern>revealed National Intelligence Community that</Pattern>
-    <Pattern>revealed United States Intelligence Community by</Pattern>
-    <Pattern>revealed United States Intelligence Community in</Pattern>
-    <Pattern>revealed United States Intelligence Community inward</Pattern>
-    <Pattern>revealed United States Intelligence Community inwards</Pattern>
-    <Pattern>revealed United States Intelligence Community past</Pattern>
     <Pattern>revealed United States Intelligence Community that</Pattern>
-    <Pattern>revealed assay by</Pattern>
-    <Pattern>revealed assay in</Pattern>
-    <Pattern>revealed assay inward</Pattern>
-    <Pattern>revealed assay inwards</Pattern>
-    <Pattern>revealed assay past</Pattern>
-    <Pattern>revealed assay that</Pattern>
-    <Pattern>revealed by</Pattern>
-    <Pattern>revealed cancer by</Pattern>
-    <Pattern>revealed cancer in</Pattern>
-    <Pattern>revealed cancer inward</Pattern>
-    <Pattern>revealed cancer inwards</Pattern>
-    <Pattern>revealed cancer past</Pattern>
     <Pattern>revealed cancer that</Pattern>
-    <Pattern>revealed cell by</Pattern>
-    <Pattern>revealed cell in</Pattern>
-    <Pattern>revealed cell inward</Pattern>
-    <Pattern>revealed cell inwards</Pattern>
-    <Pattern>revealed cell past</Pattern>
-    <Pattern>revealed cell that</Pattern>
-    <Pattern>revealed check by</Pattern>
-    <Pattern>revealed check in</Pattern>
-    <Pattern>revealed check inward</Pattern>
-    <Pattern>revealed check inwards</Pattern>
-    <Pattern>revealed check past</Pattern>
-    <Pattern>revealed check that</Pattern>
-    <Pattern>revealed followed by</Pattern>
-    <Pattern>revealed followed in</Pattern>
-    <Pattern>revealed followed inward</Pattern>
-    <Pattern>revealed followed inwards</Pattern>
-    <Pattern>revealed followed past</Pattern>
-    <Pattern>revealed followed that</Pattern>
-    <Pattern>revealed found by</Pattern>
-    <Pattern>revealed found in</Pattern>
-    <Pattern>revealed found inward</Pattern>
-    <Pattern>revealed found inwards</Pattern>
-    <Pattern>revealed found past</Pattern>
-    <Pattern>revealed found that</Pattern>
-    <Pattern>revealed ic50 by</Pattern>
-    <Pattern>revealed ic50 in</Pattern>
-    <Pattern>revealed ic50 inward</Pattern>
-    <Pattern>revealed ic50 inwards</Pattern>
-    <Pattern>revealed ic50 past</Pattern>
     <Pattern>revealed ic50 that</Pattern>
-    <Pattern>revealed in</Pattern>
-    <Pattern>revealed inward</Pattern>
-    <Pattern>revealed inwards</Pattern>
-    <Pattern>revealed malignant neoplastic disease by</Pattern>
-    <Pattern>revealed malignant neoplastic disease in</Pattern>
-    <Pattern>revealed malignant neoplastic disease inward</Pattern>
-    <Pattern>revealed malignant neoplastic disease inwards</Pattern>
-    <Pattern>revealed malignant neoplastic disease past</Pattern>
     <Pattern>revealed malignant neoplastic disease that</Pattern>
-    <Pattern>revealed past</Pattern>
-    <Pattern>revealed synopsized by</Pattern>
-    <Pattern>revealed synopsized in</Pattern>
-    <Pattern>revealed synopsized inward</Pattern>
-    <Pattern>revealed synopsized inwards</Pattern>
-    <Pattern>revealed synopsized past</Pattern>
-    <Pattern>revealed synopsized that</Pattern>
     <Pattern>revealed that</Pattern>
     <Pattern>see</Pattern>
-    <Pattern>see by</Pattern>
     <Pattern>see from</Pattern>
     <Pattern>see in</Pattern>
     <Pattern>see inward</Pattern>
     <Pattern>see inwards</Pattern>
-    <Pattern>see observed by</Pattern>
-    <Pattern>see observed from</Pattern>
-    <Pattern>see observed in</Pattern>
-    <Pattern>see observed inward</Pattern>
-    <Pattern>see observed inwards</Pattern>
-    <Pattern>see observed past</Pattern>
-    <Pattern>see our by</Pattern>
     <Pattern>see our from</Pattern>
     <Pattern>see our in</Pattern>
     <Pattern>see our inward</Pattern>
     <Pattern>see our inwards</Pattern>
-    <Pattern>see our past</Pattern>
-    <Pattern>see past</Pattern>
-    <Pattern>see seen by</Pattern>
     <Pattern>see seen from</Pattern>
     <Pattern>see seen in</Pattern>
     <Pattern>see seen inward</Pattern>
     <Pattern>see seen inwards</Pattern>
-    <Pattern>see seen past</Pattern>
-    <Pattern>see squalene by</Pattern>
-    <Pattern>see squalene from</Pattern>
-    <Pattern>see squalene in</Pattern>
-    <Pattern>see squalene inward</Pattern>
-    <Pattern>see squalene inwards</Pattern>
-    <Pattern>see squalene past</Pattern>
     <Pattern>seen</Pattern>
-    <Pattern>seen by</Pattern>
     <Pattern>seen from</Pattern>
     <Pattern>seen in</Pattern>
     <Pattern>seen inward</Pattern>
     <Pattern>seen inwards</Pattern>
-    <Pattern>seen observed by</Pattern>
-    <Pattern>seen observed from</Pattern>
-    <Pattern>seen observed in</Pattern>
-    <Pattern>seen observed inward</Pattern>
-    <Pattern>seen observed inwards</Pattern>
-    <Pattern>seen observed past</Pattern>
-    <Pattern>seen our by</Pattern>
     <Pattern>seen our from</Pattern>
     <Pattern>seen our in</Pattern>
     <Pattern>seen our inward</Pattern>
     <Pattern>seen our inwards</Pattern>
-    <Pattern>seen our past</Pattern>
-    <Pattern>seen past</Pattern>
-    <Pattern>seen seen by</Pattern>
     <Pattern>seen seen from</Pattern>
     <Pattern>seen seen in</Pattern>
     <Pattern>seen seen inward</Pattern>
     <Pattern>seen seen inwards</Pattern>
-    <Pattern>seen seen past</Pattern>
-    <Pattern>seen squalene by</Pattern>
-    <Pattern>seen squalene from</Pattern>
-    <Pattern>seen squalene in</Pattern>
-    <Pattern>seen squalene inward</Pattern>
-    <Pattern>seen squalene inwards</Pattern>
-    <Pattern>seen squalene past</Pattern>
     <Pattern>show</Pattern>
-    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>show 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>show IC by</Pattern>
-    <Pattern>show IC in</Pattern>
-    <Pattern>show IC inward</Pattern>
-    <Pattern>show IC inwards</Pattern>
-    <Pattern>show IC past</Pattern>
     <Pattern>show IC that</Pattern>
-    <Pattern>show Intelligence Community by</Pattern>
-    <Pattern>show Intelligence Community in</Pattern>
-    <Pattern>show Intelligence Community inward</Pattern>
-    <Pattern>show Intelligence Community inwards</Pattern>
-    <Pattern>show Intelligence Community past</Pattern>
     <Pattern>show Intelligence Community that</Pattern>
-    <Pattern>show National Intelligence Community by</Pattern>
-    <Pattern>show National Intelligence Community in</Pattern>
-    <Pattern>show National Intelligence Community inward</Pattern>
-    <Pattern>show National Intelligence Community inwards</Pattern>
-    <Pattern>show National Intelligence Community past</Pattern>
     <Pattern>show National Intelligence Community that</Pattern>
-    <Pattern>show United States Intelligence Community by</Pattern>
-    <Pattern>show United States Intelligence Community in</Pattern>
-    <Pattern>show United States Intelligence Community inward</Pattern>
-    <Pattern>show United States Intelligence Community inwards</Pattern>
-    <Pattern>show United States Intelligence Community past</Pattern>
     <Pattern>show United States Intelligence Community that</Pattern>
-    <Pattern>show assay by</Pattern>
-    <Pattern>show assay in</Pattern>
-    <Pattern>show assay inward</Pattern>
-    <Pattern>show assay inwards</Pattern>
-    <Pattern>show assay past</Pattern>
-    <Pattern>show assay that</Pattern>
-    <Pattern>show by</Pattern>
-    <Pattern>show cancer by</Pattern>
-    <Pattern>show cancer in</Pattern>
-    <Pattern>show cancer inward</Pattern>
-    <Pattern>show cancer inwards</Pattern>
-    <Pattern>show cancer past</Pattern>
+    <Pattern>show as</Pattern>
     <Pattern>show cancer that</Pattern>
-    <Pattern>show cell by</Pattern>
-    <Pattern>show cell in</Pattern>
-    <Pattern>show cell inward</Pattern>
-    <Pattern>show cell inwards</Pattern>
-    <Pattern>show cell past</Pattern>
-    <Pattern>show cell that</Pattern>
-    <Pattern>show check by</Pattern>
-    <Pattern>show check in</Pattern>
-    <Pattern>show check inward</Pattern>
-    <Pattern>show check inwards</Pattern>
-    <Pattern>show check past</Pattern>
-    <Pattern>show check that</Pattern>
-    <Pattern>show followed by</Pattern>
-    <Pattern>show followed in</Pattern>
-    <Pattern>show followed inward</Pattern>
-    <Pattern>show followed inwards</Pattern>
-    <Pattern>show followed past</Pattern>
-    <Pattern>show followed that</Pattern>
-    <Pattern>show found by</Pattern>
-    <Pattern>show found in</Pattern>
-    <Pattern>show found inward</Pattern>
-    <Pattern>show found inwards</Pattern>
-    <Pattern>show found past</Pattern>
-    <Pattern>show found that</Pattern>
+    <Pattern>show cholesterin as</Pattern>
+    <Pattern>show cholesterin equally</Pattern>
+    <Pattern>show cholesterin every bit</Pattern>
+    <Pattern>show cholesterin for</Pattern>
+    <Pattern>show cholesterol as</Pattern>
+    <Pattern>show cholesterol equally</Pattern>
+    <Pattern>show cholesterol every bit</Pattern>
+    <Pattern>show cholesterol for</Pattern>
+    <Pattern>show equally</Pattern>
+    <Pattern>show every bit</Pattern>
+    <Pattern>show for</Pattern>
     <Pattern>show from</Pattern>
-    <Pattern>show ic50 by</Pattern>
-    <Pattern>show ic50 in</Pattern>
-    <Pattern>show ic50 inward</Pattern>
-    <Pattern>show ic50 inwards</Pattern>
-    <Pattern>show ic50 past</Pattern>
     <Pattern>show ic50 that</Pattern>
     <Pattern>show in</Pattern>
     <Pattern>show inward</Pattern>
     <Pattern>show inwards</Pattern>
-    <Pattern>show malignant neoplastic disease by</Pattern>
-    <Pattern>show malignant neoplastic disease in</Pattern>
-    <Pattern>show malignant neoplastic disease inward</Pattern>
-    <Pattern>show malignant neoplastic disease inwards</Pattern>
-    <Pattern>show malignant neoplastic disease past</Pattern>
     <Pattern>show malignant neoplastic disease that</Pattern>
-    <Pattern>show observed by</Pattern>
-    <Pattern>show observed from</Pattern>
-    <Pattern>show observed in</Pattern>
-    <Pattern>show observed inward</Pattern>
-    <Pattern>show observed inwards</Pattern>
-    <Pattern>show observed past</Pattern>
-    <Pattern>show our by</Pattern>
+    <Pattern>show neoplasm as</Pattern>
+    <Pattern>show neoplasm equally</Pattern>
+    <Pattern>show neoplasm every bit</Pattern>
+    <Pattern>show neoplasm for</Pattern>
     <Pattern>show our from</Pattern>
     <Pattern>show our in</Pattern>
     <Pattern>show our inward</Pattern>
     <Pattern>show our inwards</Pattern>
-    <Pattern>show our past</Pattern>
-    <Pattern>show past</Pattern>
-    <Pattern>show seen by</Pattern>
+    <Pattern>show potency as</Pattern>
+    <Pattern>show potency equally</Pattern>
+    <Pattern>show potency every bit</Pattern>
+    <Pattern>show potency for</Pattern>
+    <Pattern>show potential as</Pattern>
+    <Pattern>show potential equally</Pattern>
+    <Pattern>show potential every bit</Pattern>
+    <Pattern>show potential for</Pattern>
+    <Pattern>show potentiality as</Pattern>
+    <Pattern>show potentiality equally</Pattern>
+    <Pattern>show potentiality every bit</Pattern>
+    <Pattern>show potentiality for</Pattern>
     <Pattern>show seen from</Pattern>
     <Pattern>show seen in</Pattern>
     <Pattern>show seen inward</Pattern>
     <Pattern>show seen inwards</Pattern>
-    <Pattern>show seen past</Pattern>
-    <Pattern>show squalene by</Pattern>
-    <Pattern>show squalene from</Pattern>
-    <Pattern>show squalene in</Pattern>
-    <Pattern>show squalene inward</Pattern>
-    <Pattern>show squalene inwards</Pattern>
-    <Pattern>show squalene past</Pattern>
-    <Pattern>show synopsized by</Pattern>
-    <Pattern>show synopsized in</Pattern>
-    <Pattern>show synopsized inward</Pattern>
-    <Pattern>show synopsized inwards</Pattern>
-    <Pattern>show synopsized past</Pattern>
-    <Pattern>show synopsized that</Pattern>
     <Pattern>show that</Pattern>
+    <Pattern>show tumor as</Pattern>
+    <Pattern>show tumor equally</Pattern>
+    <Pattern>show tumor every bit</Pattern>
+    <Pattern>show tumor for</Pattern>
+    <Pattern>show tumour as</Pattern>
+    <Pattern>show tumour equally</Pattern>
+    <Pattern>show tumour every bit</Pattern>
+    <Pattern>show tumour for</Pattern>
     <Pattern>showed</Pattern>
-    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>showed 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>showed IC by</Pattern>
-    <Pattern>showed IC in</Pattern>
-    <Pattern>showed IC inward</Pattern>
-    <Pattern>showed IC inwards</Pattern>
-    <Pattern>showed IC past</Pattern>
     <Pattern>showed IC that</Pattern>
-    <Pattern>showed Intelligence Community by</Pattern>
-    <Pattern>showed Intelligence Community in</Pattern>
-    <Pattern>showed Intelligence Community inward</Pattern>
-    <Pattern>showed Intelligence Community inwards</Pattern>
-    <Pattern>showed Intelligence Community past</Pattern>
     <Pattern>showed Intelligence Community that</Pattern>
-    <Pattern>showed National Intelligence Community by</Pattern>
-    <Pattern>showed National Intelligence Community in</Pattern>
-    <Pattern>showed National Intelligence Community inward</Pattern>
-    <Pattern>showed National Intelligence Community inwards</Pattern>
-    <Pattern>showed National Intelligence Community past</Pattern>
     <Pattern>showed National Intelligence Community that</Pattern>
-    <Pattern>showed United States Intelligence Community by</Pattern>
-    <Pattern>showed United States Intelligence Community in</Pattern>
-    <Pattern>showed United States Intelligence Community inward</Pattern>
-    <Pattern>showed United States Intelligence Community inwards</Pattern>
-    <Pattern>showed United States Intelligence Community past</Pattern>
     <Pattern>showed United States Intelligence Community that</Pattern>
-    <Pattern>showed assay by</Pattern>
-    <Pattern>showed assay in</Pattern>
-    <Pattern>showed assay inward</Pattern>
-    <Pattern>showed assay inwards</Pattern>
-    <Pattern>showed assay past</Pattern>
-    <Pattern>showed assay that</Pattern>
-    <Pattern>showed by</Pattern>
-    <Pattern>showed cancer by</Pattern>
-    <Pattern>showed cancer in</Pattern>
-    <Pattern>showed cancer inward</Pattern>
-    <Pattern>showed cancer inwards</Pattern>
-    <Pattern>showed cancer past</Pattern>
+    <Pattern>showed as</Pattern>
     <Pattern>showed cancer that</Pattern>
-    <Pattern>showed cell by</Pattern>
-    <Pattern>showed cell in</Pattern>
-    <Pattern>showed cell inward</Pattern>
-    <Pattern>showed cell inwards</Pattern>
-    <Pattern>showed cell past</Pattern>
-    <Pattern>showed cell that</Pattern>
-    <Pattern>showed check by</Pattern>
-    <Pattern>showed check in</Pattern>
-    <Pattern>showed check inward</Pattern>
-    <Pattern>showed check inwards</Pattern>
-    <Pattern>showed check past</Pattern>
-    <Pattern>showed check that</Pattern>
-    <Pattern>showed followed by</Pattern>
-    <Pattern>showed followed in</Pattern>
-    <Pattern>showed followed inward</Pattern>
-    <Pattern>showed followed inwards</Pattern>
-    <Pattern>showed followed past</Pattern>
-    <Pattern>showed followed that</Pattern>
-    <Pattern>showed found by</Pattern>
-    <Pattern>showed found in</Pattern>
-    <Pattern>showed found inward</Pattern>
-    <Pattern>showed found inwards</Pattern>
-    <Pattern>showed found past</Pattern>
-    <Pattern>showed found that</Pattern>
+    <Pattern>showed cholesterin as</Pattern>
+    <Pattern>showed cholesterin equally</Pattern>
+    <Pattern>showed cholesterin every bit</Pattern>
+    <Pattern>showed cholesterin for</Pattern>
+    <Pattern>showed cholesterol as</Pattern>
+    <Pattern>showed cholesterol equally</Pattern>
+    <Pattern>showed cholesterol every bit</Pattern>
+    <Pattern>showed cholesterol for</Pattern>
+    <Pattern>showed equally</Pattern>
+    <Pattern>showed every bit</Pattern>
+    <Pattern>showed for</Pattern>
     <Pattern>showed from</Pattern>
-    <Pattern>showed ic50 by</Pattern>
-    <Pattern>showed ic50 in</Pattern>
-    <Pattern>showed ic50 inward</Pattern>
-    <Pattern>showed ic50 inwards</Pattern>
-    <Pattern>showed ic50 past</Pattern>
     <Pattern>showed ic50 that</Pattern>
     <Pattern>showed in</Pattern>
     <Pattern>showed inward</Pattern>
     <Pattern>showed inwards</Pattern>
-    <Pattern>showed malignant neoplastic disease by</Pattern>
-    <Pattern>showed malignant neoplastic disease in</Pattern>
-    <Pattern>showed malignant neoplastic disease inward</Pattern>
-    <Pattern>showed malignant neoplastic disease inwards</Pattern>
-    <Pattern>showed malignant neoplastic disease past</Pattern>
     <Pattern>showed malignant neoplastic disease that</Pattern>
-    <Pattern>showed observed by</Pattern>
-    <Pattern>showed observed from</Pattern>
-    <Pattern>showed observed in</Pattern>
-    <Pattern>showed observed inward</Pattern>
-    <Pattern>showed observed inwards</Pattern>
-    <Pattern>showed observed past</Pattern>
-    <Pattern>showed our by</Pattern>
+    <Pattern>showed neoplasm as</Pattern>
+    <Pattern>showed neoplasm equally</Pattern>
+    <Pattern>showed neoplasm every bit</Pattern>
+    <Pattern>showed neoplasm for</Pattern>
     <Pattern>showed our from</Pattern>
     <Pattern>showed our in</Pattern>
     <Pattern>showed our inward</Pattern>
     <Pattern>showed our inwards</Pattern>
-    <Pattern>showed our past</Pattern>
-    <Pattern>showed past</Pattern>
-    <Pattern>showed seen by</Pattern>
+    <Pattern>showed potency as</Pattern>
+    <Pattern>showed potency equally</Pattern>
+    <Pattern>showed potency every bit</Pattern>
+    <Pattern>showed potency for</Pattern>
+    <Pattern>showed potential as</Pattern>
+    <Pattern>showed potential equally</Pattern>
+    <Pattern>showed potential every bit</Pattern>
+    <Pattern>showed potential for</Pattern>
+    <Pattern>showed potentiality as</Pattern>
+    <Pattern>showed potentiality equally</Pattern>
+    <Pattern>showed potentiality every bit</Pattern>
+    <Pattern>showed potentiality for</Pattern>
     <Pattern>showed seen from</Pattern>
     <Pattern>showed seen in</Pattern>
     <Pattern>showed seen inward</Pattern>
     <Pattern>showed seen inwards</Pattern>
-    <Pattern>showed seen past</Pattern>
-    <Pattern>showed squalene by</Pattern>
-    <Pattern>showed squalene from</Pattern>
-    <Pattern>showed squalene in</Pattern>
-    <Pattern>showed squalene inward</Pattern>
-    <Pattern>showed squalene inwards</Pattern>
-    <Pattern>showed squalene past</Pattern>
-    <Pattern>showed synopsized by</Pattern>
-    <Pattern>showed synopsized in</Pattern>
-    <Pattern>showed synopsized inward</Pattern>
-    <Pattern>showed synopsized inwards</Pattern>
-    <Pattern>showed synopsized past</Pattern>
-    <Pattern>showed synopsized that</Pattern>
     <Pattern>showed that</Pattern>
+    <Pattern>showed tumor as</Pattern>
+    <Pattern>showed tumor equally</Pattern>
+    <Pattern>showed tumor every bit</Pattern>
+    <Pattern>showed tumor for</Pattern>
+    <Pattern>showed tumour as</Pattern>
+    <Pattern>showed tumour equally</Pattern>
+    <Pattern>showed tumour every bit</Pattern>
+    <Pattern>showed tumour for</Pattern>
     <Pattern>suppress</Pattern>
-    <Pattern>synopsized</Pattern>
-    <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>synopsized 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>synopsized IC by</Pattern>
-    <Pattern>synopsized IC in</Pattern>
-    <Pattern>synopsized IC inward</Pattern>
-    <Pattern>synopsized IC inwards</Pattern>
-    <Pattern>synopsized IC past</Pattern>
-    <Pattern>synopsized IC that</Pattern>
-    <Pattern>synopsized Intelligence Community by</Pattern>
-    <Pattern>synopsized Intelligence Community in</Pattern>
-    <Pattern>synopsized Intelligence Community inward</Pattern>
-    <Pattern>synopsized Intelligence Community inwards</Pattern>
-    <Pattern>synopsized Intelligence Community past</Pattern>
-    <Pattern>synopsized Intelligence Community that</Pattern>
-    <Pattern>synopsized National Intelligence Community by</Pattern>
-    <Pattern>synopsized National Intelligence Community in</Pattern>
-    <Pattern>synopsized National Intelligence Community inward</Pattern>
-    <Pattern>synopsized National Intelligence Community inwards</Pattern>
-    <Pattern>synopsized National Intelligence Community past</Pattern>
-    <Pattern>synopsized National Intelligence Community that</Pattern>
-    <Pattern>synopsized United States Intelligence Community by</Pattern>
-    <Pattern>synopsized United States Intelligence Community in</Pattern>
-    <Pattern>synopsized United States Intelligence Community inward</Pattern>
-    <Pattern>synopsized United States Intelligence Community inwards</Pattern>
-    <Pattern>synopsized United States Intelligence Community past</Pattern>
-    <Pattern>synopsized United States Intelligence Community that</Pattern>
-    <Pattern>synopsized assay by</Pattern>
-    <Pattern>synopsized assay in</Pattern>
-    <Pattern>synopsized assay inward</Pattern>
-    <Pattern>synopsized assay inwards</Pattern>
-    <Pattern>synopsized assay past</Pattern>
-    <Pattern>synopsized assay that</Pattern>
-    <Pattern>synopsized by</Pattern>
-    <Pattern>synopsized cancer by</Pattern>
-    <Pattern>synopsized cancer in</Pattern>
-    <Pattern>synopsized cancer inward</Pattern>
-    <Pattern>synopsized cancer inwards</Pattern>
-    <Pattern>synopsized cancer past</Pattern>
-    <Pattern>synopsized cancer that</Pattern>
-    <Pattern>synopsized cell by</Pattern>
-    <Pattern>synopsized cell in</Pattern>
-    <Pattern>synopsized cell inward</Pattern>
-    <Pattern>synopsized cell inwards</Pattern>
-    <Pattern>synopsized cell past</Pattern>
-    <Pattern>synopsized cell that</Pattern>
-    <Pattern>synopsized check by</Pattern>
-    <Pattern>synopsized check in</Pattern>
-    <Pattern>synopsized check inward</Pattern>
-    <Pattern>synopsized check inwards</Pattern>
-    <Pattern>synopsized check past</Pattern>
-    <Pattern>synopsized check that</Pattern>
-    <Pattern>synopsized followed by</Pattern>
-    <Pattern>synopsized followed in</Pattern>
-    <Pattern>synopsized followed inward</Pattern>
-    <Pattern>synopsized followed inwards</Pattern>
-    <Pattern>synopsized followed past</Pattern>
-    <Pattern>synopsized followed that</Pattern>
-    <Pattern>synopsized found by</Pattern>
-    <Pattern>synopsized found in</Pattern>
-    <Pattern>synopsized found inward</Pattern>
-    <Pattern>synopsized found inwards</Pattern>
-    <Pattern>synopsized found past</Pattern>
-    <Pattern>synopsized found that</Pattern>
-    <Pattern>synopsized ic50 by</Pattern>
-    <Pattern>synopsized ic50 in</Pattern>
-    <Pattern>synopsized ic50 inward</Pattern>
-    <Pattern>synopsized ic50 inwards</Pattern>
-    <Pattern>synopsized ic50 past</Pattern>
-    <Pattern>synopsized ic50 that</Pattern>
-    <Pattern>synopsized in</Pattern>
-    <Pattern>synopsized inward</Pattern>
-    <Pattern>synopsized inwards</Pattern>
-    <Pattern>synopsized malignant neoplastic disease by</Pattern>
-    <Pattern>synopsized malignant neoplastic disease in</Pattern>
-    <Pattern>synopsized malignant neoplastic disease inward</Pattern>
-    <Pattern>synopsized malignant neoplastic disease inwards</Pattern>
-    <Pattern>synopsized malignant neoplastic disease past</Pattern>
-    <Pattern>synopsized malignant neoplastic disease that</Pattern>
-    <Pattern>synopsized past</Pattern>
-    <Pattern>synopsized synopsized by</Pattern>
-    <Pattern>synopsized synopsized in</Pattern>
-    <Pattern>synopsized synopsized inward</Pattern>
-    <Pattern>synopsized synopsized inwards</Pattern>
-    <Pattern>synopsized synopsized past</Pattern>
-    <Pattern>synopsized synopsized that</Pattern>
-    <Pattern>synopsized that</Pattern>
+    <Pattern>suppress as</Pattern>
+    <Pattern>suppress cholesterin as</Pattern>
+    <Pattern>suppress cholesterin equally</Pattern>
+    <Pattern>suppress cholesterin every bit</Pattern>
+    <Pattern>suppress cholesterin for</Pattern>
+    <Pattern>suppress cholesterol as</Pattern>
+    <Pattern>suppress cholesterol equally</Pattern>
+    <Pattern>suppress cholesterol every bit</Pattern>
+    <Pattern>suppress cholesterol for</Pattern>
+    <Pattern>suppress equally</Pattern>
+    <Pattern>suppress every bit</Pattern>
+    <Pattern>suppress for</Pattern>
+    <Pattern>suppress neoplasm as</Pattern>
+    <Pattern>suppress neoplasm equally</Pattern>
+    <Pattern>suppress neoplasm every bit</Pattern>
+    <Pattern>suppress neoplasm for</Pattern>
+    <Pattern>suppress potency as</Pattern>
+    <Pattern>suppress potency equally</Pattern>
+    <Pattern>suppress potency every bit</Pattern>
+    <Pattern>suppress potency for</Pattern>
+    <Pattern>suppress potential as</Pattern>
+    <Pattern>suppress potential equally</Pattern>
+    <Pattern>suppress potential every bit</Pattern>
+    <Pattern>suppress potential for</Pattern>
+    <Pattern>suppress potentiality as</Pattern>
+    <Pattern>suppress potentiality equally</Pattern>
+    <Pattern>suppress potentiality every bit</Pattern>
+    <Pattern>suppress potentiality for</Pattern>
+    <Pattern>suppress tumor as</Pattern>
+    <Pattern>suppress tumor equally</Pattern>
+    <Pattern>suppress tumor every bit</Pattern>
+    <Pattern>suppress tumor for</Pattern>
+    <Pattern>suppress tumour as</Pattern>
+    <Pattern>suppress tumour equally</Pattern>
+    <Pattern>suppress tumour every bit</Pattern>
+    <Pattern>suppress tumour for</Pattern>
+    <Pattern>suppressed</Pattern>
+    <Pattern>suppressed as</Pattern>
+    <Pattern>suppressed cholesterin as</Pattern>
+    <Pattern>suppressed cholesterin equally</Pattern>
+    <Pattern>suppressed cholesterin every bit</Pattern>
+    <Pattern>suppressed cholesterin for</Pattern>
+    <Pattern>suppressed cholesterol as</Pattern>
+    <Pattern>suppressed cholesterol equally</Pattern>
+    <Pattern>suppressed cholesterol every bit</Pattern>
+    <Pattern>suppressed cholesterol for</Pattern>
+    <Pattern>suppressed equally</Pattern>
+    <Pattern>suppressed every bit</Pattern>
+    <Pattern>suppressed for</Pattern>
+    <Pattern>suppressed neoplasm as</Pattern>
+    <Pattern>suppressed neoplasm equally</Pattern>
+    <Pattern>suppressed neoplasm every bit</Pattern>
+    <Pattern>suppressed neoplasm for</Pattern>
+    <Pattern>suppressed potency as</Pattern>
+    <Pattern>suppressed potency equally</Pattern>
+    <Pattern>suppressed potency every bit</Pattern>
+    <Pattern>suppressed potency for</Pattern>
+    <Pattern>suppressed potential as</Pattern>
+    <Pattern>suppressed potential equally</Pattern>
+    <Pattern>suppressed potential every bit</Pattern>
+    <Pattern>suppressed potential for</Pattern>
+    <Pattern>suppressed potentiality as</Pattern>
+    <Pattern>suppressed potentiality equally</Pattern>
+    <Pattern>suppressed potentiality every bit</Pattern>
+    <Pattern>suppressed potentiality for</Pattern>
+    <Pattern>suppressed tumor as</Pattern>
+    <Pattern>suppressed tumor equally</Pattern>
+    <Pattern>suppressed tumor every bit</Pattern>
+    <Pattern>suppressed tumor for</Pattern>
+    <Pattern>suppressed tumour as</Pattern>
+    <Pattern>suppressed tumour equally</Pattern>
+    <Pattern>suppressed tumour every bit</Pattern>
+    <Pattern>suppressed tumour for</Pattern>
     <Pattern>uncover</Pattern>
-    <Pattern>uncover 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>uncover 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>uncover 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>uncover 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>uncover 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>uncover 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>uncover IC by</Pattern>
-    <Pattern>uncover IC in</Pattern>
-    <Pattern>uncover IC inward</Pattern>
-    <Pattern>uncover IC inwards</Pattern>
-    <Pattern>uncover IC past</Pattern>
     <Pattern>uncover IC that</Pattern>
-    <Pattern>uncover Intelligence Community by</Pattern>
-    <Pattern>uncover Intelligence Community in</Pattern>
-    <Pattern>uncover Intelligence Community inward</Pattern>
-    <Pattern>uncover Intelligence Community inwards</Pattern>
-    <Pattern>uncover Intelligence Community past</Pattern>
     <Pattern>uncover Intelligence Community that</Pattern>
-    <Pattern>uncover National Intelligence Community by</Pattern>
-    <Pattern>uncover National Intelligence Community in</Pattern>
-    <Pattern>uncover National Intelligence Community inward</Pattern>
-    <Pattern>uncover National Intelligence Community inwards</Pattern>
-    <Pattern>uncover National Intelligence Community past</Pattern>
     <Pattern>uncover National Intelligence Community that</Pattern>
-    <Pattern>uncover United States Intelligence Community by</Pattern>
-    <Pattern>uncover United States Intelligence Community in</Pattern>
-    <Pattern>uncover United States Intelligence Community inward</Pattern>
-    <Pattern>uncover United States Intelligence Community inwards</Pattern>
-    <Pattern>uncover United States Intelligence Community past</Pattern>
     <Pattern>uncover United States Intelligence Community that</Pattern>
-    <Pattern>uncover assay by</Pattern>
-    <Pattern>uncover assay in</Pattern>
-    <Pattern>uncover assay inward</Pattern>
-    <Pattern>uncover assay inwards</Pattern>
-    <Pattern>uncover assay past</Pattern>
-    <Pattern>uncover assay that</Pattern>
-    <Pattern>uncover by</Pattern>
-    <Pattern>uncover cancer by</Pattern>
-    <Pattern>uncover cancer in</Pattern>
-    <Pattern>uncover cancer inward</Pattern>
-    <Pattern>uncover cancer inwards</Pattern>
-    <Pattern>uncover cancer past</Pattern>
     <Pattern>uncover cancer that</Pattern>
-    <Pattern>uncover cell by</Pattern>
-    <Pattern>uncover cell in</Pattern>
-    <Pattern>uncover cell inward</Pattern>
-    <Pattern>uncover cell inwards</Pattern>
-    <Pattern>uncover cell past</Pattern>
-    <Pattern>uncover cell that</Pattern>
-    <Pattern>uncover check by</Pattern>
-    <Pattern>uncover check in</Pattern>
-    <Pattern>uncover check inward</Pattern>
-    <Pattern>uncover check inwards</Pattern>
-    <Pattern>uncover check past</Pattern>
-    <Pattern>uncover check that</Pattern>
-    <Pattern>uncover followed by</Pattern>
-    <Pattern>uncover followed in</Pattern>
-    <Pattern>uncover followed inward</Pattern>
-    <Pattern>uncover followed inwards</Pattern>
-    <Pattern>uncover followed past</Pattern>
-    <Pattern>uncover followed that</Pattern>
-    <Pattern>uncover found by</Pattern>
-    <Pattern>uncover found in</Pattern>
-    <Pattern>uncover found inward</Pattern>
-    <Pattern>uncover found inwards</Pattern>
-    <Pattern>uncover found past</Pattern>
-    <Pattern>uncover found that</Pattern>
-    <Pattern>uncover ic50 by</Pattern>
-    <Pattern>uncover ic50 in</Pattern>
-    <Pattern>uncover ic50 inward</Pattern>
-    <Pattern>uncover ic50 inwards</Pattern>
-    <Pattern>uncover ic50 past</Pattern>
     <Pattern>uncover ic50 that</Pattern>
-    <Pattern>uncover in</Pattern>
-    <Pattern>uncover inward</Pattern>
-    <Pattern>uncover inwards</Pattern>
-    <Pattern>uncover malignant neoplastic disease by</Pattern>
-    <Pattern>uncover malignant neoplastic disease in</Pattern>
-    <Pattern>uncover malignant neoplastic disease inward</Pattern>
-    <Pattern>uncover malignant neoplastic disease inwards</Pattern>
-    <Pattern>uncover malignant neoplastic disease past</Pattern>
     <Pattern>uncover malignant neoplastic disease that</Pattern>
-    <Pattern>uncover past</Pattern>
-    <Pattern>uncover synopsized by</Pattern>
-    <Pattern>uncover synopsized in</Pattern>
-    <Pattern>uncover synopsized inward</Pattern>
-    <Pattern>uncover synopsized inwards</Pattern>
-    <Pattern>uncover synopsized past</Pattern>
-    <Pattern>uncover synopsized that</Pattern>
     <Pattern>uncover that</Pattern>
-    <Pattern>use</Pattern>
-    <Pattern>use 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>use 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>use 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>use 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>use 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>use 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>use IC by</Pattern>
-    <Pattern>use IC in</Pattern>
-    <Pattern>use IC inward</Pattern>
-    <Pattern>use IC inwards</Pattern>
-    <Pattern>use IC past</Pattern>
-    <Pattern>use IC that</Pattern>
-    <Pattern>use Intelligence Community by</Pattern>
-    <Pattern>use Intelligence Community in</Pattern>
-    <Pattern>use Intelligence Community inward</Pattern>
-    <Pattern>use Intelligence Community inwards</Pattern>
-    <Pattern>use Intelligence Community past</Pattern>
-    <Pattern>use Intelligence Community that</Pattern>
-    <Pattern>use National Intelligence Community by</Pattern>
-    <Pattern>use National Intelligence Community in</Pattern>
-    <Pattern>use National Intelligence Community inward</Pattern>
-    <Pattern>use National Intelligence Community inwards</Pattern>
-    <Pattern>use National Intelligence Community past</Pattern>
-    <Pattern>use National Intelligence Community that</Pattern>
-    <Pattern>use United States Intelligence Community by</Pattern>
-    <Pattern>use United States Intelligence Community in</Pattern>
-    <Pattern>use United States Intelligence Community inward</Pattern>
-    <Pattern>use United States Intelligence Community inwards</Pattern>
-    <Pattern>use United States Intelligence Community past</Pattern>
-    <Pattern>use United States Intelligence Community that</Pattern>
-    <Pattern>use assay by</Pattern>
-    <Pattern>use assay in</Pattern>
-    <Pattern>use assay inward</Pattern>
-    <Pattern>use assay inwards</Pattern>
-    <Pattern>use assay past</Pattern>
-    <Pattern>use assay that</Pattern>
-    <Pattern>use by</Pattern>
-    <Pattern>use cancer by</Pattern>
-    <Pattern>use cancer in</Pattern>
-    <Pattern>use cancer inward</Pattern>
-    <Pattern>use cancer inwards</Pattern>
-    <Pattern>use cancer past</Pattern>
-    <Pattern>use cancer that</Pattern>
-    <Pattern>use cell by</Pattern>
-    <Pattern>use cell in</Pattern>
-    <Pattern>use cell inward</Pattern>
-    <Pattern>use cell inwards</Pattern>
-    <Pattern>use cell past</Pattern>
-    <Pattern>use cell that</Pattern>
-    <Pattern>use check by</Pattern>
-    <Pattern>use check in</Pattern>
-    <Pattern>use check inward</Pattern>
-    <Pattern>use check inwards</Pattern>
-    <Pattern>use check past</Pattern>
-    <Pattern>use check that</Pattern>
-    <Pattern>use followed by</Pattern>
-    <Pattern>use followed in</Pattern>
-    <Pattern>use followed inward</Pattern>
-    <Pattern>use followed inwards</Pattern>
-    <Pattern>use followed past</Pattern>
-    <Pattern>use followed that</Pattern>
-    <Pattern>use found by</Pattern>
-    <Pattern>use found in</Pattern>
-    <Pattern>use found inward</Pattern>
-    <Pattern>use found inwards</Pattern>
-    <Pattern>use found past</Pattern>
-    <Pattern>use found that</Pattern>
-    <Pattern>use from</Pattern>
-    <Pattern>use ic50 by</Pattern>
-    <Pattern>use ic50 in</Pattern>
-    <Pattern>use ic50 inward</Pattern>
-    <Pattern>use ic50 inwards</Pattern>
-    <Pattern>use ic50 past</Pattern>
-    <Pattern>use ic50 that</Pattern>
-    <Pattern>use in</Pattern>
-    <Pattern>use inward</Pattern>
-    <Pattern>use inwards</Pattern>
-    <Pattern>use malignant neoplastic disease by</Pattern>
-    <Pattern>use malignant neoplastic disease in</Pattern>
-    <Pattern>use malignant neoplastic disease inward</Pattern>
-    <Pattern>use malignant neoplastic disease inwards</Pattern>
-    <Pattern>use malignant neoplastic disease past</Pattern>
-    <Pattern>use malignant neoplastic disease that</Pattern>
-    <Pattern>use observed by</Pattern>
-    <Pattern>use observed from</Pattern>
-    <Pattern>use observed in</Pattern>
-    <Pattern>use observed inward</Pattern>
-    <Pattern>use observed inwards</Pattern>
-    <Pattern>use observed past</Pattern>
-    <Pattern>use our by</Pattern>
-    <Pattern>use our from</Pattern>
-    <Pattern>use our in</Pattern>
-    <Pattern>use our inward</Pattern>
-    <Pattern>use our inwards</Pattern>
-    <Pattern>use our past</Pattern>
-    <Pattern>use past</Pattern>
-    <Pattern>use seen by</Pattern>
-    <Pattern>use seen from</Pattern>
-    <Pattern>use seen in</Pattern>
-    <Pattern>use seen inward</Pattern>
-    <Pattern>use seen inwards</Pattern>
-    <Pattern>use seen past</Pattern>
-    <Pattern>use squalene by</Pattern>
-    <Pattern>use squalene from</Pattern>
-    <Pattern>use squalene in</Pattern>
-    <Pattern>use squalene inward</Pattern>
-    <Pattern>use squalene inwards</Pattern>
-    <Pattern>use squalene past</Pattern>
-    <Pattern>use synopsized by</Pattern>
-    <Pattern>use synopsized in</Pattern>
-    <Pattern>use synopsized inward</Pattern>
-    <Pattern>use synopsized inwards</Pattern>
-    <Pattern>use synopsized past</Pattern>
-    <Pattern>use synopsized that</Pattern>
-    <Pattern>use that</Pattern>
-    <Pattern>using</Pattern>
-    <Pattern>using 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>using 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>using 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>using 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>using 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>using 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>using IC by</Pattern>
-    <Pattern>using IC in</Pattern>
-    <Pattern>using IC inward</Pattern>
-    <Pattern>using IC inwards</Pattern>
-    <Pattern>using IC past</Pattern>
-    <Pattern>using IC that</Pattern>
-    <Pattern>using Intelligence Community by</Pattern>
-    <Pattern>using Intelligence Community in</Pattern>
-    <Pattern>using Intelligence Community inward</Pattern>
-    <Pattern>using Intelligence Community inwards</Pattern>
-    <Pattern>using Intelligence Community past</Pattern>
-    <Pattern>using Intelligence Community that</Pattern>
-    <Pattern>using National Intelligence Community by</Pattern>
-    <Pattern>using National Intelligence Community in</Pattern>
-    <Pattern>using National Intelligence Community inward</Pattern>
-    <Pattern>using National Intelligence Community inwards</Pattern>
-    <Pattern>using National Intelligence Community past</Pattern>
-    <Pattern>using National Intelligence Community that</Pattern>
-    <Pattern>using United States Intelligence Community by</Pattern>
-    <Pattern>using United States Intelligence Community in</Pattern>
-    <Pattern>using United States Intelligence Community inward</Pattern>
-    <Pattern>using United States Intelligence Community inwards</Pattern>
-    <Pattern>using United States Intelligence Community past</Pattern>
-    <Pattern>using United States Intelligence Community that</Pattern>
-    <Pattern>using assay by</Pattern>
-    <Pattern>using assay in</Pattern>
-    <Pattern>using assay inward</Pattern>
-    <Pattern>using assay inwards</Pattern>
-    <Pattern>using assay past</Pattern>
-    <Pattern>using assay that</Pattern>
-    <Pattern>using by</Pattern>
-    <Pattern>using cancer by</Pattern>
-    <Pattern>using cancer in</Pattern>
-    <Pattern>using cancer inward</Pattern>
-    <Pattern>using cancer inwards</Pattern>
-    <Pattern>using cancer past</Pattern>
-    <Pattern>using cancer that</Pattern>
-    <Pattern>using cell by</Pattern>
-    <Pattern>using cell in</Pattern>
-    <Pattern>using cell inward</Pattern>
-    <Pattern>using cell inwards</Pattern>
-    <Pattern>using cell past</Pattern>
-    <Pattern>using cell that</Pattern>
-    <Pattern>using check by</Pattern>
-    <Pattern>using check in</Pattern>
-    <Pattern>using check inward</Pattern>
-    <Pattern>using check inwards</Pattern>
-    <Pattern>using check past</Pattern>
-    <Pattern>using check that</Pattern>
-    <Pattern>using followed by</Pattern>
-    <Pattern>using followed in</Pattern>
-    <Pattern>using followed inward</Pattern>
-    <Pattern>using followed inwards</Pattern>
-    <Pattern>using followed past</Pattern>
-    <Pattern>using followed that</Pattern>
-    <Pattern>using found by</Pattern>
-    <Pattern>using found in</Pattern>
-    <Pattern>using found inward</Pattern>
-    <Pattern>using found inwards</Pattern>
-    <Pattern>using found past</Pattern>
-    <Pattern>using found that</Pattern>
-    <Pattern>using from</Pattern>
-    <Pattern>using ic50 by</Pattern>
-    <Pattern>using ic50 in</Pattern>
-    <Pattern>using ic50 inward</Pattern>
-    <Pattern>using ic50 inwards</Pattern>
-    <Pattern>using ic50 past</Pattern>
-    <Pattern>using ic50 that</Pattern>
-    <Pattern>using in</Pattern>
-    <Pattern>using inward</Pattern>
-    <Pattern>using inwards</Pattern>
-    <Pattern>using malignant neoplastic disease by</Pattern>
-    <Pattern>using malignant neoplastic disease in</Pattern>
-    <Pattern>using malignant neoplastic disease inward</Pattern>
-    <Pattern>using malignant neoplastic disease inwards</Pattern>
-    <Pattern>using malignant neoplastic disease past</Pattern>
-    <Pattern>using malignant neoplastic disease that</Pattern>
-    <Pattern>using observed by</Pattern>
-    <Pattern>using observed from</Pattern>
-    <Pattern>using observed in</Pattern>
-    <Pattern>using observed inward</Pattern>
-    <Pattern>using observed inwards</Pattern>
-    <Pattern>using observed past</Pattern>
-    <Pattern>using our by</Pattern>
-    <Pattern>using our from</Pattern>
-    <Pattern>using our in</Pattern>
-    <Pattern>using our inward</Pattern>
-    <Pattern>using our inwards</Pattern>
-    <Pattern>using our past</Pattern>
-    <Pattern>using past</Pattern>
-    <Pattern>using seen by</Pattern>
-    <Pattern>using seen from</Pattern>
-    <Pattern>using seen in</Pattern>
-    <Pattern>using seen inward</Pattern>
-    <Pattern>using seen inwards</Pattern>
-    <Pattern>using seen past</Pattern>
-    <Pattern>using squalene by</Pattern>
-    <Pattern>using squalene from</Pattern>
-    <Pattern>using squalene in</Pattern>
-    <Pattern>using squalene inward</Pattern>
-    <Pattern>using squalene inwards</Pattern>
-    <Pattern>using squalene past</Pattern>
-    <Pattern>using synopsized by</Pattern>
-    <Pattern>using synopsized in</Pattern>
-    <Pattern>using synopsized inward</Pattern>
-    <Pattern>using synopsized inwards</Pattern>
-    <Pattern>using synopsized past</Pattern>
-    <Pattern>using synopsized that</Pattern>
-    <Pattern>using that</Pattern>
     <Pattern>was</Pattern>
-    <Pattern>was 1,1-diphenyl-2-picrylhydrazyl by</Pattern>
-    <Pattern>was 1,1-diphenyl-2-picrylhydrazyl in</Pattern>
-    <Pattern>was 1,1-diphenyl-2-picrylhydrazyl inward</Pattern>
-    <Pattern>was 1,1-diphenyl-2-picrylhydrazyl inwards</Pattern>
-    <Pattern>was 1,1-diphenyl-2-picrylhydrazyl past</Pattern>
-    <Pattern>was 1,1-diphenyl-2-picrylhydrazyl that</Pattern>
-    <Pattern>was IC by</Pattern>
-    <Pattern>was IC in</Pattern>
-    <Pattern>was IC inward</Pattern>
-    <Pattern>was IC inwards</Pattern>
-    <Pattern>was IC past</Pattern>
-    <Pattern>was IC that</Pattern>
-    <Pattern>was Intelligence Community by</Pattern>
-    <Pattern>was Intelligence Community in</Pattern>
-    <Pattern>was Intelligence Community inward</Pattern>
-    <Pattern>was Intelligence Community inwards</Pattern>
-    <Pattern>was Intelligence Community past</Pattern>
-    <Pattern>was Intelligence Community that</Pattern>
-    <Pattern>was National Intelligence Community by</Pattern>
-    <Pattern>was National Intelligence Community in</Pattern>
-    <Pattern>was National Intelligence Community inward</Pattern>
-    <Pattern>was National Intelligence Community inwards</Pattern>
-    <Pattern>was National Intelligence Community past</Pattern>
-    <Pattern>was National Intelligence Community that</Pattern>
-    <Pattern>was United States Intelligence Community by</Pattern>
-    <Pattern>was United States Intelligence Community in</Pattern>
-    <Pattern>was United States Intelligence Community inward</Pattern>
-    <Pattern>was United States Intelligence Community inwards</Pattern>
-    <Pattern>was United States Intelligence Community past</Pattern>
-    <Pattern>was United States Intelligence Community that</Pattern>
-    <Pattern>was assay by</Pattern>
-    <Pattern>was assay in</Pattern>
-    <Pattern>was assay inward</Pattern>
-    <Pattern>was assay inwards</Pattern>
-    <Pattern>was assay past</Pattern>
-    <Pattern>was assay that</Pattern>
-    <Pattern>was by</Pattern>
-    <Pattern>was cancer by</Pattern>
-    <Pattern>was cancer in</Pattern>
-    <Pattern>was cancer inward</Pattern>
-    <Pattern>was cancer inwards</Pattern>
-    <Pattern>was cancer past</Pattern>
-    <Pattern>was cancer that</Pattern>
-    <Pattern>was cell by</Pattern>
-    <Pattern>was cell in</Pattern>
-    <Pattern>was cell inward</Pattern>
-    <Pattern>was cell inwards</Pattern>
-    <Pattern>was cell past</Pattern>
-    <Pattern>was cell that</Pattern>
-    <Pattern>was check by</Pattern>
-    <Pattern>was check in</Pattern>
-    <Pattern>was check inward</Pattern>
-    <Pattern>was check inwards</Pattern>
-    <Pattern>was check past</Pattern>
-    <Pattern>was check that</Pattern>
-    <Pattern>was followed by</Pattern>
-    <Pattern>was followed in</Pattern>
-    <Pattern>was followed inward</Pattern>
-    <Pattern>was followed inwards</Pattern>
-    <Pattern>was followed past</Pattern>
-    <Pattern>was followed that</Pattern>
-    <Pattern>was found by</Pattern>
-    <Pattern>was found in</Pattern>
-    <Pattern>was found inward</Pattern>
-    <Pattern>was found inwards</Pattern>
-    <Pattern>was found past</Pattern>
-    <Pattern>was found that</Pattern>
+    <Pattern>was as</Pattern>
+    <Pattern>was cholesterin as</Pattern>
+    <Pattern>was cholesterin equally</Pattern>
+    <Pattern>was cholesterin every bit</Pattern>
+    <Pattern>was cholesterin for</Pattern>
+    <Pattern>was cholesterol as</Pattern>
+    <Pattern>was cholesterol equally</Pattern>
+    <Pattern>was cholesterol every bit</Pattern>
+    <Pattern>was cholesterol for</Pattern>
+    <Pattern>was equally</Pattern>
+    <Pattern>was every bit</Pattern>
+    <Pattern>was for</Pattern>
     <Pattern>was from</Pattern>
-    <Pattern>was ic50 by</Pattern>
-    <Pattern>was ic50 in</Pattern>
-    <Pattern>was ic50 inward</Pattern>
-    <Pattern>was ic50 inwards</Pattern>
-    <Pattern>was ic50 past</Pattern>
-    <Pattern>was ic50 that</Pattern>
     <Pattern>was in</Pattern>
     <Pattern>was inward</Pattern>
     <Pattern>was inwards</Pattern>
-    <Pattern>was malignant neoplastic disease by</Pattern>
-    <Pattern>was malignant neoplastic disease in</Pattern>
-    <Pattern>was malignant neoplastic disease inward</Pattern>
-    <Pattern>was malignant neoplastic disease inwards</Pattern>
-    <Pattern>was malignant neoplastic disease past</Pattern>
-    <Pattern>was malignant neoplastic disease that</Pattern>
-    <Pattern>was observed by</Pattern>
-    <Pattern>was observed from</Pattern>
-    <Pattern>was observed in</Pattern>
-    <Pattern>was observed inward</Pattern>
-    <Pattern>was observed inwards</Pattern>
-    <Pattern>was observed past</Pattern>
-    <Pattern>was our by</Pattern>
+    <Pattern>was neoplasm as</Pattern>
+    <Pattern>was neoplasm equally</Pattern>
+    <Pattern>was neoplasm every bit</Pattern>
+    <Pattern>was neoplasm for</Pattern>
     <Pattern>was our from</Pattern>
     <Pattern>was our in</Pattern>
     <Pattern>was our inward</Pattern>
     <Pattern>was our inwards</Pattern>
-    <Pattern>was our past</Pattern>
-    <Pattern>was past</Pattern>
-    <Pattern>was seen by</Pattern>
+    <Pattern>was potency as</Pattern>
+    <Pattern>was potency equally</Pattern>
+    <Pattern>was potency every bit</Pattern>
+    <Pattern>was potency for</Pattern>
+    <Pattern>was potential as</Pattern>
+    <Pattern>was potential equally</Pattern>
+    <Pattern>was potential every bit</Pattern>
+    <Pattern>was potential for</Pattern>
+    <Pattern>was potentiality as</Pattern>
+    <Pattern>was potentiality equally</Pattern>
+    <Pattern>was potentiality every bit</Pattern>
+    <Pattern>was potentiality for</Pattern>
     <Pattern>was seen from</Pattern>
     <Pattern>was seen in</Pattern>
     <Pattern>was seen inward</Pattern>
     <Pattern>was seen inwards</Pattern>
-    <Pattern>was seen past</Pattern>
-    <Pattern>was squalene by</Pattern>
-    <Pattern>was squalene from</Pattern>
-    <Pattern>was squalene in</Pattern>
-    <Pattern>was squalene inward</Pattern>
-    <Pattern>was squalene inwards</Pattern>
-    <Pattern>was squalene past</Pattern>
-    <Pattern>was synopsized by</Pattern>
-    <Pattern>was synopsized in</Pattern>
-    <Pattern>was synopsized inward</Pattern>
-    <Pattern>was synopsized inwards</Pattern>
-    <Pattern>was synopsized past</Pattern>
-    <Pattern>was synopsized that</Pattern>
-    <Pattern>was that</Pattern>
+    <Pattern>was tumor as</Pattern>
+    <Pattern>was tumor equally</Pattern>
+    <Pattern>was tumor every bit</Pattern>
+    <Pattern>was tumor for</Pattern>
+    <Pattern>was tumour as</Pattern>
+    <Pattern>was tumour equally</Pattern>
+    <Pattern>was tumour every bit</Pattern>
+    <Pattern>was tumour for</Pattern>
     <Pattern>were</Pattern>
-    <Pattern>were by</Pattern>
     <Pattern>were from</Pattern>
     <Pattern>were in</Pattern>
     <Pattern>were inward</Pattern>
     <Pattern>were inwards</Pattern>
-    <Pattern>were observed by</Pattern>
-    <Pattern>were observed from</Pattern>
-    <Pattern>were observed in</Pattern>
-    <Pattern>were observed inward</Pattern>
-    <Pattern>were observed inwards</Pattern>
-    <Pattern>were observed past</Pattern>
-    <Pattern>were our by</Pattern>
     <Pattern>were our from</Pattern>
     <Pattern>were our in</Pattern>
     <Pattern>were our inward</Pattern>
     <Pattern>were our inwards</Pattern>
-    <Pattern>were our past</Pattern>
-    <Pattern>were past</Pattern>
-    <Pattern>were seen by</Pattern>
     <Pattern>were seen from</Pattern>
     <Pattern>were seen in</Pattern>
     <Pattern>were seen inward</Pattern>
     <Pattern>were seen inwards</Pattern>
-    <Pattern>were seen past</Pattern>
-    <Pattern>were squalene by</Pattern>
-    <Pattern>were squalene from</Pattern>
-    <Pattern>were squalene in</Pattern>
-    <Pattern>were squalene inward</Pattern>
-    <Pattern>were squalene inwards</Pattern>
-    <Pattern>were squalene past</Pattern>
   </Relation>
 </Seed>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>eucalyptus deglupta</Name>
+  </Tag1>
+  <Tag2>Compound<Name>8-methoxyellagic acid</Name>
+    <Name>nerolidol</Name>
+    <Name>dichloromethane</Name>
+    <Name>oleanolic acid</Name>
+    <Name>alpha-pinene</Name>
+    <Name>p-cymene</Name>
+    <Name>squalene</Name>
+    <Name>ursolic acid</Name>
+    <Name>xanthine</Name>
+    <Name>alpha-phellandrene</Name>
+    <Name>5-hydroxy-7,4'-dimethoxy-6,8-dimethylflavone</Name>
+    <Name>ocimene</Name>
+    <Name>ecozoic</Name>
+    <Name>ellagic acid</Name>
+    <Name>5-hydroxy-7,4'-dimethoxy-6,8dimethylflavone</Name>
+    <Name>e-nerolidol</Name>
+    <Name>tritriacontane-16,18-dione</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>composed of</Pattern>
+    <Pattern>contain as</Pattern>
+    <Pattern>contained</Pattern>
+    <Pattern>cultivated throughout</Pattern>
+    <Pattern>developed by</Pattern>
+    <Pattern>found to</Pattern>
+    <Pattern>is cultivated throughout</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>noted for</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>revealed that</Pattern>
+    <Pattern>was reported to</Pattern>
+    <Pattern>were found to</Pattern>
+    <Pattern>yielded</Pattern>
+  </Relation>
+</Seed>

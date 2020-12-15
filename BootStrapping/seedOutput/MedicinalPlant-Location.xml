@@ -22,11 +22,8 @@
     <Pattern>are sold throughout</Pattern>
     <Pattern>are throughout</Pattern>
     <Pattern>be</Pattern>
-    <Pattern>be as</Pattern>
     <Pattern>be end-to-end</Pattern>
-    <Pattern>be equally</Pattern>
     <Pattern>be eucalyptus to</Pattern>
-    <Pattern>be every bit</Pattern>
     <Pattern>be in</Pattern>
     <Pattern>be inward</Pattern>
     <Pattern>be inwards</Pattern>
@@ -35,21 +32,9 @@
     <Pattern>be sold inward</Pattern>
     <Pattern>be sold inwards</Pattern>
     <Pattern>be sold throughout</Pattern>
-    <Pattern>be through</Pattern>
     <Pattern>be throughout</Pattern>
     <Pattern>be to</Pattern>
     <Pattern>called</Pattern>
-    <Pattern>camangeg</Pattern>
-    <Pattern>camangeg to</Pattern>
-    <Pattern>corner</Pattern>
-    <Pattern>corner in</Pattern>
-    <Pattern>corner inward</Pattern>
-    <Pattern>corner inwards</Pattern>
-    <Pattern>corner through</Pattern>
-    <Pattern>distribute</Pattern>
-    <Pattern>distribute through</Pattern>
-    <Pattern>distributed</Pattern>
-    <Pattern>distributed through</Pattern>
     <Pattern>eucalyptus</Pattern>
     <Pattern>eucalyptus eucalyptus to</Pattern>
     <Pattern>eucalyptus to</Pattern>
@@ -68,11 +53,8 @@
     <Pattern>grows inwards</Pattern>
     <Pattern>grows throughout</Pattern>
     <Pattern>is</Pattern>
-    <Pattern>is as</Pattern>
     <Pattern>is end-to-end</Pattern>
-    <Pattern>is equally</Pattern>
     <Pattern>is eucalyptus to</Pattern>
-    <Pattern>is every bit</Pattern>
     <Pattern>is in</Pattern>
     <Pattern>is inward</Pattern>
     <Pattern>is inwards</Pattern>
@@ -81,32 +63,17 @@
     <Pattern>is sold inward</Pattern>
     <Pattern>is sold inwards</Pattern>
     <Pattern>is sold throughout</Pattern>
-    <Pattern>is through</Pattern>
     <Pattern>is throughout</Pattern>
     <Pattern>is to</Pattern>
-    <Pattern>know</Pattern>
-    <Pattern>know as</Pattern>
-    <Pattern>know equally</Pattern>
-    <Pattern>know every bit</Pattern>
-    <Pattern>known</Pattern>
-    <Pattern>known as</Pattern>
-    <Pattern>known equally</Pattern>
-    <Pattern>known every bit</Pattern>
     <Pattern>name</Pattern>
     <Pattern>philippines</Pattern>
     <Pattern>philippines eucalyptus to</Pattern>
     <Pattern>philippines to</Pattern>
     <Pattern>plant</Pattern>
-    <Pattern>plant to</Pattern>
     <Pattern>plants</Pattern>
     <Pattern>rainbow</Pattern>
     <Pattern>rainbow eucalyptus to</Pattern>
     <Pattern>rainbow to</Pattern>
-    <Pattern>regions</Pattern>
-    <Pattern>regions down</Pattern>
-    <Pattern>regions downward</Pattern>
-    <Pattern>regions downwardly</Pattern>
-    <Pattern>regions downwards</Pattern>
     <Pattern>sell</Pattern>
     <Pattern>sell end-to-end</Pattern>
     <Pattern>sell in</Pattern>
@@ -148,17 +115,8 @@
     <Pattern>thickets inwards</Pattern>
     <Pattern>thickets throughout</Pattern>
     <Pattern>to</Pattern>
-    <Pattern>to down</Pattern>
-    <Pattern>to downward</Pattern>
-    <Pattern>to downwardly</Pattern>
-    <Pattern>to downwards</Pattern>
     <Pattern>to eucalyptus to</Pattern>
     <Pattern>to to</Pattern>
-    <Pattern>tree</Pattern>
-    <Pattern>tree in</Pattern>
-    <Pattern>tree inward</Pattern>
-    <Pattern>tree inwards</Pattern>
-    <Pattern>tree through</Pattern>
     <Pattern>turn</Pattern>
     <Pattern>turn at</Pattern>
     <Pattern>turn end-to-end</Pattern>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>isLocatedIn</Category>
+  <Tag1>MedicinalPlant<Name>king oyster mushroom</Name>
+  </Tag1>
+  <Tag2>Location<Name>philippines</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>are sold in</Pattern>
+    <Pattern>is sold in</Pattern>
+    <Pattern>sold in</Pattern>
+    <Pattern>supermarkets throughout</Pattern>
+  </Relation>
+</Seed>

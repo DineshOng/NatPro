@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>seeds</Name>
+  </Tag1>
+  <Tag2>Compound<Name>squalene</Name>
+    <Name>beta-friedelinol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>fractionated by</Pattern>
+    <Pattern>has potential for</Pattern>
+    <Pattern>increasing proportions of</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>obtained from</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were fractionated by</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>vitis vinifera</Name>
+  </Tag1>
+  <Tag2>Compound<Name>grape-vine</Name>
+    <Name>beta-amyrin</Name>
+    <Name>alpha-amyrin</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>contained</Pattern>
+    <Pattern>is interesting to</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>note that</Pattern>
+    <Pattern>proposed as</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>stems</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>was proposed as</Pattern>
+    <Pattern>were reported to</Pattern>
+  </Relation>
+</Seed>

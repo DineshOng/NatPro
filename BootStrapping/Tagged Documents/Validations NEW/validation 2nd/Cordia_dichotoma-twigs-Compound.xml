@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>twigs</Name>
+  </Tag1>
+  <Tag2>Compound<Name>acetone</Name>
+    <Name>nervonyl 4-hydroxy-trans-cinnamate ester</Name>
+    <Name>triacylglycerol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>isolated from</Pattern>
+    <Pattern>stems</Pattern>
+    <Pattern>were isolated from</Pattern>
+  </Relation>
+</Seed>

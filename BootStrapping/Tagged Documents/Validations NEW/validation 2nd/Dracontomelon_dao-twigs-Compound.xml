@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>twigs</Name>
+  </Tag1>
+  <Tag2>Compound<Name>acid esters</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>long-chain fatty acid esters</Name>
+    <Name>linoleic acid</Name>
+    <Name>beta-sitosteryl-3beta-glucopyranoside</Name>
+    <Name>o-fatty acid</Name>
+    <Name>betasitosteryl fatty acid esters</Name>
+    <Name>chain fatty acid esters</Name>
+    <Name>1,anacardic acid</Name>
+    <Name>cardol</Name>
+    <Name>cylglycerols</Name>
+    <Name>betasitosterol</Name>
+    <Name>anacardic acid</Name>
+    <Name>monoacylglycerol</Name>
+    <Name>triacylglycerols</Name>
+    <Name>longchain fatty acid esters</Name>
+    <Name>stigmasterol</Name>
+    <Name>beta-sitosteryl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>observed to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>was observed to</Pattern>
+    <Pattern>were collected from</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

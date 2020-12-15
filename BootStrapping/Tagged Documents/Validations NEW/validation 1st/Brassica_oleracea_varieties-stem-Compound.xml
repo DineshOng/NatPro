@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>stem</Name>
+  </Tag1>
+  <Tag2>Compound<Name>stigmasterol</Name>
+    <Name>linoleic acid</Name>
+    <Name>essential fatty acid</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>afforded</Pattern>
+  </Relation>
+</Seed>

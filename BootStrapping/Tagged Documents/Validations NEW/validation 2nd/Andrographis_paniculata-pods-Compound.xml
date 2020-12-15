@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>pods</Name>
+  </Tag1>
+  <Tag2>Compound<Name>triacylglycerols</Name>
+    <Name>lupeol</Name>
+    <Name>monogalactosyl diacylglycerols</Name>
+    <Name>beta-sitosterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>isolated from</Pattern>
+  </Relation>
+</Seed>

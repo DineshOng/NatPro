@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasSynonymPlantPart</Category>
+  <Tag1>Synonym<Name>ficus ulmifolia</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>leaves</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>avenue</Pattern>
+    <Pattern>center for</Pattern>
+    <Pattern>constituents of</Pattern>
+    <Pattern>department</Pattern>
+    <Pattern>dichloromethane extract of</Pattern>
+    <Pattern>extract of</Pattern>
+    <Pattern>flavor</Pattern>
+    <Pattern>identification of</Pattern>
+    <Pattern>institute of</Pattern>
+    <Pattern>isolation</Pattern>
+    <Pattern>jansen</Pattern>
+    <Pattern>medicine</Pattern>
+    <Pattern>philippines</Pattern>
+    <Pattern>pseudopalma</Pattern>
+    <Pattern>ragasa</Pattern>
+    <Pattern>research</Pattern>
+    <Pattern>research institute of</Pattern>
+    <Pattern>sciences</Pattern>
+    <Pattern>sec</Pattern>
+    <Pattern>st.</Pattern>
+    <Pattern>taipei</Pattern>
+    <Pattern>university</Pattern>
+  </Relation>
+</Seed>

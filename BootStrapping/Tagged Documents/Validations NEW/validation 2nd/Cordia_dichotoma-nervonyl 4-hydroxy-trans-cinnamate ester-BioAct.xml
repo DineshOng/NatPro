@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasBiologicalActivity</Category>
+  <Tag1>Compound<Name>nervonyl 4-hydroxy-trans-cinnamate ester</Name>
+  </Tag1>
+  <Tag2>BioAct<Name>antioxidant</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>been studied for</Pattern>
+    <Pattern>studied for</Pattern>
+  </Relation>
+</Seed>

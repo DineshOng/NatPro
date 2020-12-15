@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>coccinia ethyl</Name>
+  </Tag1>
+  <Tag2>Compound<Name>stigmasterol</Name>
+    <Name>squalene</Name>
+    <Name>lutein</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>bile acid</Name>
+    <Name>polyprenol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>be</Pattern>
+    <Pattern>chromatographed on</Pattern>
+    <Pattern>increasing proportions of</Pattern>
+    <Pattern>indicates that</Pattern>
+    <Pattern>was chromatographed on</Pattern>
+  </Relation>
+</Seed>

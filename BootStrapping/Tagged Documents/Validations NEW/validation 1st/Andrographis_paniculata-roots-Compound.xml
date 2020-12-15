@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>roots</Name>
+  </Tag1>
+  <Tag2>Compound<Name>dichloromethane</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>5,2'-dihydroxy-7,8-dimethoxyflavone</Name>
+    <Name>5,2'-dihydroxy,8-dimethoxyflavone</Name>
+    <Name>lupeol</Name>
+    <Name>stigmasterol</Name>
+    <Name>trans-cinnamate esters</Name>
+    <Name>beta-sitosteryl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>isolated from</Pattern>
+  </Relation>
+</Seed>

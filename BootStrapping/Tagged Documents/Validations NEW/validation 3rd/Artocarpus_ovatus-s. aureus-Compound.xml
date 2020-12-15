@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>s. aureus</Name>
+  </Tag1>
+  <Tag2>Compound<Name>triacylglycerols</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>identified as</Pattern>
+    <Pattern>is used for</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>reads</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>used for</Pattern>
+    <Pattern>was identified as</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

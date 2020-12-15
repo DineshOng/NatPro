@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>flowers</Name>
+  </Tag1>
+  <Tag2>Compound<Name>betasitosteryl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>observed to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>was observed to</Pattern>
+    <Pattern>were collected from</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>brassica oleracea</Name>
+  </Tag1>
+  <Tag2>Compound<Name>triglyceride</Name>
+    <Name>alpha-linolenic acid</Name>
+    <Name>dichloromethane</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>beta-carotene</Name>
+    <Name>linoleic acid</Name>
+    <Name>triglycerides</Name>
+    <Name>lutein</Name>
+    <Name>linolenic acid</Name>
+    <Name>betasitosterol</Name>
+    <Name>essential fatty acid</Name>
+    <Name>trilinolenin</Name>
+    <Name>stigmasterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>folate</Pattern>
+    <Pattern>grown in</Pattern>
+    <Pattern>sensing in</Pattern>
+  </Relation>
+</Seed>

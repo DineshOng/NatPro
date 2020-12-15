@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>bark</Name>
+  </Tag1>
+  <Tag2>Compound<Name>dichloromethane</Name>
+    <Name>3-acetylaleuritolic acid</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>spruceanol</Name>
+    <Name>methoxy-8,11,13-podocarpatrien-3-one</Name>
+    <Name>polyprenols</Name>
+    <Name>triglycerides</Name>
+    <Name>stigmasterol</Name>
+    <Name>methoxy-8,11,13podocarpatrien-3-one</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>isolated from</Pattern>
+    <Pattern>reported as</Pattern>
+    <Pattern>were isolated from</Pattern>
+  </Relation>
+</Seed>

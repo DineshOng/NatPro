@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>duranta repens</Name>
+  </Tag1>
+  <Tag2>Compound<Name>durantoside ii</Name>
+    <Name>rhamnopyranosyl-4-o-caffeoyl-alpha-d-glucopyranosid</Name>
+    <Name>durantanin v</Name>
+    <Name>durantoside iv</Name>
+    <Name>durantoside i</Name>
+    <Name>durantanin iv</Name>
+    <Name>durantoside v</Name>
+    <Name>methanol</Name>
+    <Name>e)-p-methoxycinnamic acid</Name>
+    <Name>lamiide</Name>
+    <Name>epoxy-5beta,8beta,9beta,10alphacleroda-3,13(16),14-trien-18-oic acid</Name>
+    <Name>oleanolic acid</Name>
+    <Name>alpha-glucopyranosyl</Name>
+    <Name>kusaginin</Name>
+    <Name>3,7,4'-trihydroxy-3'-(4-hydroxy-3-methylbutyl)-5,6-dimethoxyflavone</Name>
+    <Name>e)-cinnamic acid</Name>
+    <Name>ursolic acid</Name>
+    <Name>epoxy-5beta,8beta,9beta,10alpha-cleroda-3,13,14-trien-18-oic acid</Name>
+    <Name>glycoside acteoside</Name>
+    <Name>saponin pseudo-ginsenoside</Name>
+    <Name>saponin</Name>
+    <Name>trans-cinnamic acid</Name>
+    <Name>beta-sitosteryl-3-o-beta-d-glucopyranoside</Name>
+    <Name>xyflavone</Name>
+    <Name>alphagalactopyranosyl-alpha-glucopyranosyl-fructopyranoside</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>has led to</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

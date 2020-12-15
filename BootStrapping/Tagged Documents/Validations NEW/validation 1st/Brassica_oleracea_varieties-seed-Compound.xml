@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>seed</Name>
+  </Tag1>
+  <Tag2>Compound<Name>beta-sitosterol</Name>
+    <Name>brassicasterol</Name>
+    <Name>campesterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>afforded</Pattern>
+  </Relation>
+</Seed>

@@ -427,7 +427,12 @@ public class Main {
 
                 for(String key : ValidationMap.keySet()) {
                     String class1 = key;
-                    File validationOutput = new File("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
+                    File validationOutput;
+                    if(e1.contains("Preparation")){
+                        validationOutput = new File("validation/"+hashxml+"-"+"Preparation"+"-"+e2+".xml");
+                    }else{
+                        validationOutput = new File("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
+                    }
                     if(validationOutput.exists()){
                     //====================================================================================================================
                     //For validation XML
@@ -435,7 +440,12 @@ public class Main {
                         DocumentBuilderFactory Vfactory=  DocumentBuilderFactory.newInstance();
                         try {
                             DocumentBuilder builder =  Vfactory.newDocumentBuilder();
-                            Document doc = builder.parse("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
+                            Document doc;
+                            if(e1.contains("Preparation")){
+                                doc = builder.parse("validation/"+hashxml+"-"+"Preparation"+"-"+e2+".xml");
+                            }else{
+                                doc = builder.parse("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
+                            }
                             doc.getDocumentElement().normalize();
                             //System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
                             NodeList nodeList = doc.getElementsByTagName("Seed");
@@ -700,6 +710,14 @@ public class Main {
                 }
                 seedMap.clear();
                 ValidationMap.clear();
+                validation.clear();
+                relation.clear();
+                e1Name.clear();
+                e2Name.clear();
+                list.clear();
+                seedLines = null;
+                seedEntity.clear();
+                lines.clear();
 
 
 
@@ -810,6 +828,8 @@ public class Main {
             while(m.find()) {
                 String temp = m.group();
                 //System.out.println("I went here");
+                temp = temp.replaceAll("<\\/["+e1+"]+>.+<["+e1+"]+>","");
+                temp = temp.replaceAll("<\\/["+e2+"]+>.+<["+e2+"]+>","");
                 temp = temp.replaceAll("<\\/?[a-z]+>", "");
                 relation.add(temp);
 
@@ -866,8 +886,10 @@ public class Main {
                             class2 = mc2.group();
                             class1 = class1.replaceAll("<\\/?[a-z]+>", "");
                             class2 = class2.replaceAll("<\\/?[a-z]+>", "");
-                            seedMap.put(class1, class2);
-                            ValidationMap.put(class1, class2);
+                            if(!class1.contains(".") || !class2.contains(".")){
+                                seedMap.put(class1, class2);
+                                ValidationMap.put(class1, class2);
+                            }
                         }
                     }
                     Pattern p = Pattern.compile("<\\/[" + e1 + "]+>.+<[" + e2 + "]+>");
@@ -875,6 +897,8 @@ public class Main {
                     //System.out.println(e1+": "+class1+";"+e2+": "+class2);
                     while (m.find()) {
                         String temp = m.group();
+                        temp = temp.replaceAll("<\\/["+e1+"]+>.+<["+e1+"]+>","");
+                        temp = temp.replaceAll("<\\/["+e2+"]+>.+<["+e2+"]+>","");
                         temp = temp.replaceAll("<\\/?[a-z]+>", "");
                         relation.add(temp);
                         for (String delete : lines) {
@@ -952,6 +976,7 @@ public class Main {
         e1 = e1.toLowerCase();
         e2 = e2.toLowerCase();
         String entities = e1+"+"+e2;
+        //System.out.println(entities);
         switch(entities){
             case "synonym+medicinalplant":
                 category.appendChild(document.createTextNode("hasCommonName"));
@@ -995,6 +1020,9 @@ public class Main {
                 break;
             case "compound+bioact":
                 category.appendChild(document.createTextNode("hasBiologicalActivity"));
+                break;
+            case "compound+cellline":
+                category.appendChild(document.createTextNode("hasCellLine"));
                 break;
             case "plantpart+illness":
             case "preparation+illness":

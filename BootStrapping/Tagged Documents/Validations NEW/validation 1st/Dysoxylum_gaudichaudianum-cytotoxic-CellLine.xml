@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>affects</Category>
+  <Tag1>BioAct<Name>cytotoxic</Name>
+  </Tag1>
+  <Tag2>CellLine<Name>mcf-7</Name>
+    <Name>hct-116</Name>
+    <Name>ht-29</Name>
+    <Name>nci-h226</Name>
+    <Name>hl60</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>isolated from</Pattern>
+    <Pattern>leaves</Pattern>
+    <Pattern>seen in</Pattern>
+    <Pattern>was seen in</Pattern>
+  </Relation>
+</Seed>
