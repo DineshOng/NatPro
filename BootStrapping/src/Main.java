@@ -640,75 +640,72 @@ public class Main {
                     //System.out.println("validationmap is "+ValidationMap.isEmpty());
                     for(String key : ValidationMap.keySet()) {
                         String class1 = key;
-                        if(!class1.contains(".")){ //FOR TESTING PURPOSES
-                            /*if(class1.contains("Ehrlich")){
+                        /*if(class1.contains("Ehrlich")){
                             System.out.println(validation);
                         }*/
 
-                            DocumentBuilderFactory docBuildFactory = DocumentBuilderFactory.newInstance();
-                            try {
-                                DocumentBuilder documentBuilder = docBuildFactory.newDocumentBuilder();
-                                Document document = documentBuilder.newDocument();
+                        DocumentBuilderFactory docBuildFactory = DocumentBuilderFactory.newInstance();
+                        try {
+                            DocumentBuilder documentBuilder = docBuildFactory.newDocumentBuilder();
+                            Document document = documentBuilder.newDocument();
 
 
-                                Element element = document.createElement("Seed");
-                                document.appendChild(element);
+                            Element element = document.createElement("Seed");
+                            document.appendChild(element);
 
-                                Element category = document.createElement("Category");
-                                addCategory(e1,e2,category,document);
-                                element.appendChild(category);
+                            Element category = document.createElement("Category");
+                            addCategory(e1,e2,category,document);
+                            element.appendChild(category);
 
-                                Element A = document.createElement("Tag1");
-                                A.appendChild(document.createTextNode(e1));
-                                element.appendChild(A);
+                            Element A = document.createElement("Tag1");
+                            A.appendChild(document.createTextNode(e1));
+                            element.appendChild(A);
 
-                                //Element AValues = document.createElement("Name");
-                                Element AValues = document.createElement("Name");
-                                AValues.appendChild(document.createTextNode(class1));
-                                A.appendChild(AValues);
+                            //Element AValues = document.createElement("Name");
+                            Element AValues = document.createElement("Name");
+                            AValues.appendChild(document.createTextNode(class1));
+                            A.appendChild(AValues);
 
-                                Element B = document.createElement("Tag2");
-                                B.appendChild(document.createTextNode(e2));
-                                element.appendChild(B);
-
-
-                                for(String class2 : ValidationMap.get(key)) {
-                                    Element BValues = document.createElement("Name");
-                                    BValues.appendChild(document.createTextNode(class2));
-                                    B.appendChild(BValues);
-                                }
-
-                                Element C = document.createElement("Relation");
-                                //C.appendChild(document.createTextNode(ms));
-                                element.appendChild(C);
-                                for(String ms: validation) {
-                                    Element D = document.createElement("Pattern");
-                                    D.appendChild(document.createTextNode(ms));
-                                    C.appendChild(D);
-                                }
+                            Element B = document.createElement("Tag2");
+                            B.appendChild(document.createTextNode(e2));
+                            element.appendChild(B);
 
 
-                                TransformerFactory transformerFactory = TransformerFactory.newInstance();
-                                Transformer transformer = transformerFactory.newTransformer();
-                                transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-                                transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-                                DOMSource source = new DOMSource(document);
-                                class1 = class1.replaceAll("<\\/?[a-z]+>", "");
-                                if(e1.contains("Preparation")){
-                                    StreamResult streamResult = new StreamResult("validation/"+hashxml+"-"+"Preparation"+"-"+e2+".xml");
-                                    transformer.transform(source,streamResult);
-                                }
-                                else{
-                                    StreamResult streamResult = new StreamResult("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
-                                    transformer.transform(source,streamResult);
-                                }
-
-
-                            } catch (ParserConfigurationException | TransformerException e) {
-                                e.printStackTrace();
+                            for(String class2 : ValidationMap.get(key)) {
+                                Element BValues = document.createElement("Name");
+                                BValues.appendChild(document.createTextNode(class2));
+                                B.appendChild(BValues);
                             }
-                        }
 
+                            Element C = document.createElement("Relation");
+                            //C.appendChild(document.createTextNode(ms));
+                            element.appendChild(C);
+                            for(String ms: validation) {
+                                Element D = document.createElement("Pattern");
+                                D.appendChild(document.createTextNode(ms));
+                                C.appendChild(D);
+                            }
+
+
+                            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                            Transformer transformer = transformerFactory.newTransformer();
+                            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+                            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+                            DOMSource source = new DOMSource(document);
+                            class1 = class1.replaceAll("<\\/?[a-z]+>", "");
+                            if(e1.contains("Preparation")){
+                                StreamResult streamResult = new StreamResult("validation/"+hashxml+"-"+"Preparation"+"-"+e2+".xml");
+                                transformer.transform(source,streamResult);
+                            }
+                            else{
+                                StreamResult streamResult = new StreamResult("validation/"+hashxml+"-"+class1+"-"+e2+".xml");
+                                transformer.transform(source,streamResult);
+                            }
+
+
+                        } catch (ParserConfigurationException | TransformerException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 seedMap.clear();
