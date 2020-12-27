@@ -299,7 +299,7 @@ public class REV2 {
 									eval(res_rel_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
 								} else {
 									eval(res_rel_map, relType, entType1);
-									System.out.println(ent1 + " : " + ent2 + " " + relType);
+									System.out.println(ent1 + " : " + ent2 + " (" + relType + ") == (" + xmlFile.getName().replaceAll("-\\w+\\.xml", "").replaceAll("-[^-]+", "") + ")");
 								}
 							}
 			        		
