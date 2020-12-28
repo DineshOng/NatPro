@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>flowers</Name>
+  </Tag1>
+  <Tag2>Compound<Name>betasitosterylbetaglucopyranoside'ofatty acid</Name>
+    <Name>phytol</Name>
+    <Name>acid esters</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>linoleic acid</Name>
+    <Name>long-chain fatty acid esters</Name>
+    <Name>beta-sitosteryl-3beta-glucopyranoside</Name>
+    <Name>betasitosteryl fatty acid esters</Name>
+    <Name>o-fatty acid</Name>
+    <Name>squalene</Name>
+    <Name>chlorophyll a</Name>
+    <Name>chain fatty acid esters</Name>
+    <Name>1,anacardic acid</Name>
+    <Name>cardol</Name>
+    <Name>cylglycerols</Name>
+    <Name>betasitosterol</Name>
+    <Name>anacardic acid</Name>
+    <Name>monoacylglycerol</Name>
+    <Name>glucopyranoside'ofatty acid</Name>
+    <Name>longchain fatty acid esters</Name>
+    <Name>triacylglycerols</Name>
+    <Name>stigmasterol</Name>
+    <Name>beta-sitosteryl fatty acid esters</Name>
+    <Name>phytyl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>collected from</Pattern>
+    <Pattern>observed to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>was observed to</Pattern>
+    <Pattern>were collected from</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

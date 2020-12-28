@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasSynonymPlantPart</Category>
+  <Tag1>Synonym<Name>cycas micronesica</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>stems</Name>
+    <Name>flowers</Name>
+    <Name>sclerotesta</Name>
+    <Name>leaves</Name>
+    <Name>seeds</Name>
+    <Name>bark</Name>
+    <Name>endotesta</Name>
+    <Name>sarcotesta</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>2014a</Pattern>
+    <Pattern>2014b</Pattern>
+    <Pattern>2014c</Pattern>
+    <Pattern>beta-sitosterol</Pattern>
+    <Pattern>endotesta</Pattern>
+    <Pattern>flowers</Pattern>
+    <Pattern>isolation of</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>philippines</Pattern>
+    <Pattern>plant endemic to</Pattern>
+    <Pattern>ragasa</Pattern>
+    <Pattern>sarcotesta</Pattern>
+    <Pattern>seeds of</Pattern>
+    <Pattern>squalene</Pattern>
+    <Pattern>stigmasterol</Pattern>
+    <Pattern>triglycerides</Pattern>
+    <Pattern>triglycerides from</Pattern>
+  </Relation>
+</Seed>

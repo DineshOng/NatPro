@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>leaves</Name>
+  </Tag1>
+  <Tag2>Compound<Name>beta-sitosterol</Name>
+    <Name>dichloromethane</Name>
+    <Name>24,25-epoxy-3beta,23-dihydroxy-7-tirucallene</Name>
+    <Name>polyprenol</Name>
+    <Name>polyprenols</Name>
+    <Name>linoleic acid</Name>
+    <Name>triglycerides</Name>
+    <Name>squalene</Name>
+    <Name>lutein</Name>
+    <Name>p-hydroxyacetophenone</Name>
+    <Name>gaudichaudysolin a</Name>
+    <Name>dysoxylins d</Name>
+    <Name>betasitosterol</Name>
+    <Name>pomegranate</Name>
+    <Name>dicloromethane</Name>
+    <Name>dysoxylins a</Name>
+    <Name>dysoxylins b</Name>
+    <Name>triacylglycerols</Name>
+    <Name>dysoxylins c</Name>
+    <Name>stigmasterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>are used to</Pattern>
+    <Pattern>induce vomiting after</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>solated from</Pattern>
+    <Pattern>used to</Pattern>
+    <Pattern>vomiting after</Pattern>
+  </Relation>
+</Seed>

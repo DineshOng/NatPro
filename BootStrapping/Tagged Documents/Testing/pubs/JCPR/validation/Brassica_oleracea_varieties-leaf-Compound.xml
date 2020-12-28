@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>leaf</Name>
+  </Tag1>
+  <Tag2>Compound<Name>triglyceride</Name>
+    <Name>phenols</Name>
+    <Name>isothiocyanate</Name>
+    <Name>sulforaphane</Name>
+    <Name>acetone</Name>
+    <Name>dichloromethane</Name>
+    <Name>palmitic acid</Name>
+    <Name>glycosides</Name>
+    <Name>linolenic acid</Name>
+    <Name>betasitosterol</Name>
+    <Name>trilinolenin</Name>
+    <Name>brassicasterol</Name>
+    <Name>3-butenyl isothiocyanate</Name>
+    <Name>alpha-linolenic acid</Name>
+    <Name>diallyl trisulfide</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>beta-carotene</Name>
+    <Name>linoleic acid</Name>
+    <Name>triglycerides</Name>
+    <Name>lutein</Name>
+    <Name>essential fatty acids</Name>
+    <Name>erucic acid</Name>
+    <Name>essential fatty acid</Name>
+    <Name>major fatty acids</Name>
+    <Name>stigmasterol</Name>
+    <Name>campesterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>afforded</Pattern>
+    <Pattern>grown in</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>treated with</Pattern>
+    <Pattern>were treated with</Pattern>
+  </Relation>
+</Seed>

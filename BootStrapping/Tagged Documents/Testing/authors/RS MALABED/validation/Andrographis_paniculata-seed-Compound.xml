@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>seed</Name>
+  </Tag1>
+  <Tag2>Compound<Name>dichloromethane</Name>
+    <Name>14-deoxyandrographolide</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>gamma-sitosterol</Name>
+    <Name>5,2'-dihydroxy,8-dimethoxyflavone</Name>
+    <Name>lupeol</Name>
+    <Name>chlorophyll a</Name>
+    <Name>trans-cinnamate esters</Name>
+    <Name>andrographolide</Name>
+    <Name>skullcapflavone i</Name>
+    <Name>1-(1,1-dimethylethyl)-2-methyl-1,3-propanediyl ester</Name>
+    <Name>monogalactosyl diacylglycerols</Name>
+    <Name>5,2'-dihydroxy-7,8-dimethoxyflavone</Name>
+    <Name>triacylglycerols</Name>
+    <Name>stigmasterol</Name>
+    <Name>superoxide</Name>
+    <Name>beta-sitosteryl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>administered orally as</Pattern>
+    <Pattern>isolated from</Pattern>
+  </Relation>
+</Seed>

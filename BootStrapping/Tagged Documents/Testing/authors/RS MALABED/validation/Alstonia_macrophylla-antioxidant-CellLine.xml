@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>affects</Category>
+  <Tag1>BioAct<Name>antioxidant</Name>
+  </Tag1>
+  <Tag2>CellLine<Name>ht29</Name>
+    <Name>thp-1</Name>
+    <Name>mcf-7</Name>
+    <Name>hdfn</Name>
+    <Name>ht-29</Name>
+    <Name>h69pr</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>revealed that</Pattern>
+    <Pattern>showed that</Pattern>
+  </Relation>
+</Seed>

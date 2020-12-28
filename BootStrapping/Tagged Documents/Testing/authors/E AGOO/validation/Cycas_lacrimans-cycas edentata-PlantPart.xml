@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasSynonymPlantPart</Category>
+  <Tag1>Synonym<Name>cycas edentata</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>ripe sarcotesta</Name>
+    <Name>sclerotesta</Name>
+    <Name>bark</Name>
+    <Name>endotesta</Name>
+    <Name>male cone</Name>
+    <Name>sarcotesta</Name>
+    <Name>unripe sarcotesta</Name>
+    <Name>petiole and rachis</Name>
+    <Name>roots</Name>
+    <Name>cone base</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>1,2-dioleylglycerol from</Pattern>
+    <Pattern>acid</Pattern>
+    <Pattern>base</Pattern>
+    <Pattern>beta-sitosterol</Pattern>
+    <Pattern>chlorophyll a from</Pattern>
+    <Pattern>cone of</Pattern>
+    <Pattern>endotesta</Pattern>
+    <Pattern>esters</Pattern>
+    <Pattern>leaflets</Pattern>
+    <Pattern>mixture of</Pattern>
+    <Pattern>obtained from</Pattern>
+    <Pattern>paulownin from</Pattern>
+    <Pattern>petiole</Pattern>
+    <Pattern>pinoresinol</Pattern>
+    <Pattern>rachis</Pattern>
+    <Pattern>roots</Pattern>
+    <Pattern>sarcotesta</Pattern>
+    <Pattern>sclerotesta of</Pattern>
+    <Pattern>sesamin</Pattern>
+    <Pattern>stigmasterol</Pattern>
+    <Pattern>stigmasterol from</Pattern>
+    <Pattern>triacylglycerols</Pattern>
+    <Pattern>triacylglycerols from</Pattern>
+    <Pattern>triacylglycerols obtained from</Pattern>
+  </Relation>
+</Seed>

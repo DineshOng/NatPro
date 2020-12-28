@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>isLocatedIn</Category>
+  <Tag1>Synonym<Name>macaranga tanarius</Name>
+  </Tag1>
+  <Tag2>Location<Name>philippines</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>grows in</Pattern>
+    <Pattern>known as</Pattern>
+  </Relation>
+</Seed>

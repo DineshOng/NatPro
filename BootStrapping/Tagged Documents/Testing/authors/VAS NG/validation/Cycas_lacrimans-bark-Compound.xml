@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>bark</Name>
+  </Tag1>
+  <Tag2>Compound<Name>cis-4-hydroxycinnamate fatty acid esters</Name>
+    <Name>dichloromethane</Name>
+    <Name>oleic acid</Name>
+    <Name>hydroxy-trans-cinnamate esters</Name>
+    <Name>4-hydroxycis-cinnamate esters</Name>
+    <Name>trans-4-hydroxycinnamate fatty acid esters</Name>
+    <Name>lariciresinol</Name>
+    <Name>4hydroxy-cis-cinnamate ester</Name>
+    <Name>9alphah-isopimara-7,15-diene</Name>
+    <Name>phytyl fatty acid esters</Name>
+    <Name>isopimaran-19-ol</Name>
+    <Name>unsaturated fatty acid methyl esters</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>beta-sitosteryl-3betaglucopyranoside-6'-o-palmitate</Name>
+    <Name>4-hydroxy-ciscinnamate esters</Name>
+    <Name>4-hydroxy-trans-cinnamate ester</Name>
+    <Name>beta-sitosteryl-3beta-glucopyranoside-6'-opalmitate</Name>
+    <Name>betasitosteryl fatty acid esters</Name>
+    <Name>squalene</Name>
+    <Name>chlorophyll a</Name>
+    <Name>1,2-dioleylglycerol</Name>
+    <Name>pinoresinol</Name>
+    <Name>methyl fatty acid esters</Name>
+    <Name>paulownin</Name>
+    <Name>megasporophyll</Name>
+    <Name>triacylglycerols</Name>
+    <Name>4-hydroxy-trans-cinnamate esters</Name>
+    <Name>sesamin</Name>
+    <Name>stigmasterol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>soaked in</Pattern>
+    <Pattern>were ground in</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>ginkgo biloba</Name>
+  </Tag1>
+  <Tag2>Compound<Name>fiedelan-3beta-ol</Name>
+    <Name>1,4-digalloylglucoside</Name>
+    <Name>ascorbic acid</Name>
+    <Name>carboxylic acid</Name>
+    <Name>acetone</Name>
+    <Name>dichloromethane</Name>
+    <Name>beta-amyrenone</Name>
+    <Name>crystalline</Name>
+    <Name>friedelin</Name>
+    <Name>hyperin</Name>
+    <Name>nymphaeol c</Name>
+    <Name>nymphaeol b</Name>
+    <Name>nymphaeol a</Name>
+    <Name>3,4-digalloylglucoside</Name>
+    <Name>tanariflavanone b</Name>
+    <Name>tanariflavanone a</Name>
+    <Name>tanariflavanone d</Name>
+    <Name>tanariflavanone c</Name>
+    <Name>macaranganin</Name>
+    <Name>friedel-3-ene</Name>
+    <Name>blumenol a</Name>
+    <Name>macarangonol</Name>
+    <Name>blumenol b</Name>
+    <Name>roseoside</Name>
+    <Name>tanarinin</Name>
+    <Name>macarangioside</Name>
+    <Name>mallotinic acid</Name>
+    <Name>polyprenol</Name>
+    <Name>brevifolin carboxylate</Name>
+    <Name>chlorophyll a</Name>
+    <Name>isoquercitrin</Name>
+    <Name>tanarifuranonol</Name>
+    <Name>chloramphenicol a</Name>
+    <Name>beta-amyrin</Name>
+    <Name>chloramphenicol</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>found to</Pattern>
+    <Pattern>identified as</Pattern>
+    <Pattern>indicated that</Pattern>
+    <Pattern>was found to</Pattern>
+    <Pattern>was identified as</Pattern>
+    <Pattern>was inactive against</Pattern>
+  </Relation>
+</Seed>

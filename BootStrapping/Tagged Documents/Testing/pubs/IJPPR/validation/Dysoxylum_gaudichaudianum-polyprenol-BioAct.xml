@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasBiologicalActivity</Category>
+  <Tag1>Compound<Name>polyprenol</Name>
+  </Tag1>
+  <Tag2>BioAct<Name>cytotoxic</Name>
+    <Name>anticancer</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>accompanied by</Pattern>
+    <Pattern>evaluated</Pattern>
+    <Pattern>exhibit</Pattern>
+    <Pattern>exhibited</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>leaves</Pattern>
+    <Pattern>observed in</Pattern>
+    <Pattern>promising</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>seen in</Pattern>
+    <Pattern>solated from</Pattern>
+    <Pattern>tested</Pattern>
+    <Pattern>treated with</Pattern>
+    <Pattern>trypsinized with</Pattern>
+    <Pattern>varying</Pattern>
+    <Pattern>was observed in</Pattern>
+    <Pattern>was reported to</Pattern>
+    <Pattern>was seen in</Pattern>
+  </Relation>
+</Seed>

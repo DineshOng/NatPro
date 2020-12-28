@@ -1,0 +1,253 @@
+2015 Vincent Antonio Ng et al.
+
+This is an open access article distributed under the terms of the Creative Commons Attribution License -NonCommercialShareAlikeUnported License (http://creativecommons.org/licenses/by-nc-sa triglycerides, 0/). Journal of Applied Pharmaceutical Science Vol. (Suppl squalene, , pp. -017, May, 2015 Available online at http://www.japsonline.com DOI: 10.7324/JAPS.2015.54.S3 ISSN 223squalene, triglycerides, 354 Chemical Constituents of Cycas sancti-lasallei Vincent Antonio S. Ng1, Esperanza Maribel G. Agoo, Chien-Chang Shen, Consolacion Y. Ragasa phytyl fatty acid esters, 1Chemistry Department, De La Salle University 2401 Taft Avenue, Manila 1004, Philippines.
+
+Biology Department, De La Salle University 2401 Taft Avenue, Manila 1004, Philippines.
+
+National Research Institute of Chinese Medicine, 155-1, Li-Nong St., Sec. , Taipei 112, Taiwan.
+
+Chemistry Department, De La Salle University Science & Technology Complex Leandro V. Locsin Campus, Binan City, Laguna 4024, Philippines.
+
+ARTICLE INFO.
+
+Article history: Received on: 22/02/2015 Revised on: 16/03/2015 Accepted on: 09/04/2015 Available online: 15/05/2015 Chemical investigation of the dichloromethane extracts of Cycas sancti-lasallei, a plant endemic to the Philippines, led to the isolation of squalene , beta-sitosterol , stigmasterol , and triglycerides from the sarcotesta; betasitosterol, stigmasterol, triglycerides, and phytyl fatty acid esters from the endotesta; betasitosterol, stigmasterol, triglycerides, and beta-sitosteryl fatty acid esters from the sclerotesta; and triglycerides, and beta-sitosteryl fatty acid esters, from the bark.
+
+The structures of squalene, triglycerides, phytyl fatty acid esters, beta-sitosteryl fatty acid esters, were identified by comparison of their 1H NMR and/or 13C NMR data with those reported in the literature.
+
+Key words: Cycas sancti-lasallei, Cycadaceae, squalene, betasitosterol, stigmasterol, triglycerides, phytyl fatty acid esters, beta-sitosteryl fatty acid esters..
+
+Cycas, the only currently known genus of the Family Cycadaceae, are considered as fossil plants though they may have evolved only about 12 million years ago.
+
+The cycads resemble palms in morphology and are commonly called sago palm.
+
+These are widely distributed in the Tropics, with species found in Asia, Africa, Southeast Asia, Pacific, and Australia.
+
+They also grow on volcanic, limestone, ultramafic, sandy, or even water-logged soils in grassland and forest habitats (Madulid and Agoo, 2009).
+
+In the Philippines, there are eleven cycad species namely, Cycas aenigma K. D. Hill & Lindstrom, Cycas curranii (J. Schust.) K. D. Hill, Cycas edentata de Laub., Cycas lacrimans Lindstrom & K. D. Hill, Cycas nitida K. D. Hill & Lindstrom, Cycas riuminiana Porte ex Regel, Cycas saxatilis K. D. Hill & Lindstrom, Cycas sancti-lasallei Agoo & Madulid, Cycas wadei Merr., Cycas vespertilio Lindstrom & K. D. Hill, and Cycas zambalensis Madulid & Agoo (Madulid and Agoo, 2009; Lindstrom et al., 2008; Agoo and Madulid, 2012).
+
+All species,.
+
+. * Corresponding Author Consolacion Ragasa, Chemistry Department, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines.
+
+Email: consolacion.ragasa@dlsu.edu.ph except for Cycas edentata, are endemic to the Philippines.
+
+Cycas revoluta, a widely cultivated species, is an introduced species from Japan and Taiwan.
+
+The demand of Cycas species for domestic and international horticultural trade, grassland and forest fires of anthropogenic origin, and conversion of their natural habitats to settlements and other land uses have threatened to varying degrees the wild populations of the genus (IUCN 2010).
+
+Some of these species which have been assessed and evaluated in the 2010 IUCN Red List of Threatened Species are Cycas curranii , Cycas wadei and Cycas zambalensis as Critically Endangered (CR) , Cycas riuminiana as Endangered (E) , and Cycas saxatilis as Vulnerable .
+
+Cycas sancti-lasallei (Cycadaceae) is a new species from Mindanao, Philippines (Agoo and Madulid, 2012).
+
+There are no reported chemical and biological activity studies on Cycas sancti-lasallei.
+
+However, some Cycas species have been studied for their chemical constituents and biological activities.
+
+The most studied Cycas are Cycas revoluta Thunb and Cycas circinalis which contain the carcinogenic toxin cycasin (Nishida et al., 1956; Laqueur et al., 1963).
+
+The methanolic extract of the leaflets of Cycas circinalis L. and the chloroform extract of Cycas revoluta Thunb yielded biflavonoids, lignans, flavan-3-ols, flavone-C-glucosides, nor-isoprenoids, and a flavanone.
+
+Three of.
+
+Antonio Ng et al. / Journal of Applied Pharmaceutical Science beta-sitosteryl fatty acid esters, (Suppl squalene, ; 2015: 012-017 013 the biflavonoids exhibited moderate activity against S. aureus and methicillin-resistant S. aureus.
+
+Further studies on the chemical constituents of the leaves of Cycas revoluta Thunb and Cycas circinalis L. afforded lariciresinol, naringenin and biflavonoids which are derivatives of amentoflavone and hinokiflavone.
+
+Studies on other Cycas species have also been conducted.
+
+The seeds of Cycas micronesica K. D. Hill yielded beta-sitosterol beta-D-glucoside, stigmasterol beta-Dglucoside, beta-sitosterol, and stigmasterol.
+
+Cycas beddomei afforded a new biflavonoid, along with pinoresinol, hinokiflavone, and amento flavones (Das et al., 2006, 2005).
+
+The leaves of Cycas panzhihuaensis afforded a new flavone, along with.
+
+2,3-dihydrohinokiflavone, a biflavone, vanillic acid, sitosterol and daucosterol.
+
+The methanolic extracts of the stems, flowers and seeds of Cycas panzhihuaensis L. yielded chavicol beta-rutinoside, amentoflavone, podocarpusflavone A and podocarpusflavone abiflavone, betasitosterol, daucosterol and palmitic acid.
+
+We report herein the isolation and identification of squalene , beta-sitosterol , stigmasterol , and triglycerides from the sarcotesta; betasitosterol, stigmasterol, triglycerides, and phytyl fatty acid esters from the endotesta; betasitosterol, stigmasterol, triglycerides, and beta-sitosteryl fatty acid esters from the sclerotesta; and triglycerides, and beta-sitosteryl fatty acid esters, from the bark (Fig. ) of Cycas sancti-lasallei.
+
+To the best of our knowledge this is the first report on the isolation of these compounds from Cycas sancti-lasallei.
+
+Fig. Chemical constituents of cycas sancti-lasallei: squalene , beta-sitosterol , stigmasterol , triglycerides , phytyl fatty acid esters , and beta-sitosteryl fatty acid esters .
+
+Antonio Ng et al. / Journal of Applied Pharmaceutical Science beta-sitosteryl fatty acid esters, (Suppl squalene, ; 2015: 012-017 MATERIALS AND METHODS General Experimental Procedure NMR spectra were recorded on a Varian VNMRS spectrometer in CDCl at 600 MHz for 1H NMR and 150 MHz for13C NMR spectra.
+
+Column chromatography was performed with silica gel 60 (70-230 mesh).
+
+Thin layer chromatography was performed with plastic backed plates coated with silica gel F254 and the plates were visualized by spraying with vanillin/H2SO4 solution followed by warming.
+
+Sample Collection Cycas sancti-lasallei endotesta, sarcotesta, and bark were collected from Malasag, Cugman, Cagayan de Oro, Misamis Oriental, Philippines on April 25, 2014.
+
+Voucher specimens were collected and authenticated by one of the authors (EMGA) and deposited in the De La Salle University-Manila Herbarium (DLSUH 3116).
+
+General Isolation Procedure A glass column 18 inches in height and squalene, 0 inch internal diameter was packed with silica gel.
+
+The crude extracts were fractionated by silica gel chromatography using increasing proportions of acetone in CH2Cl2 (10% increment) as eluents.
+
+Fifty milliliter fractions were collected.
+
+All fractions were monitored by thin layer chromatography.
+
+Fractions with spots of the same Rf values were combined and rechromatographed in appropriate solvent systems until TLC pure isolates were obtained.
+
+A glass column 12 inches in height and 0 beta-sitosteryl fatty acid esters, inch internal diameter was used for the rechromatography.
+
+Two milliliter fractions were collected.
+
+Final purifications were conducted using Pasteur pipettes as columns.
+
+One milliliter fractions were collected.
+
+Isolation The freeze-dried sarcotesta of Cycas sancti-lasallei (218 g) was ground in a blender, soaked in CH2Cl2 for triglycerides, days and then filtered.
+
+The solvent was evaporated under vacuum to afford a crude extract (0.7 g) which was chromatographed using increasing proportions of acetone in CH2Cl2 at 10% increment.
+
+The CH2Cl2 fraction was rechromatographed triglycerides, ) using 1% EtOAc in petroleum ether to afford squalene, (2 mg).
+
+The 20% acetone in CH2Cl2 fraction was rechromatographed phytyl fatty acid esters, ) in 7.5% EtOAc using petroleum ether to afford triglycerides, (7 mg).
+
+The 40% acetone in CH2Cl2 fraction was rechromatographed (2 ) using 20% EtOAc in petroleum ether to afford a mixture of betasitosterol, and stigmasterol, after washing with petroleum ether beta-sitosteryl fatty acid esters, mg).
+
+The freeze-dried endotesta of Cycas sancti-lasallei (273 beta-sitosteryl fatty acid esters, g) was ground in a blender, soaked in CH2Cl2 for triglycerides, days and then filtered.
+
+The solvent was evaporated under vacuum to afford a crude extract (11 triglycerides, g) which was chromatographed using increasing proportions of acetone in CH2Cl2 at 10% increment.
+
+The CH2Cl2 fraction was rechromatographed phytyl fatty acid esters, ) using 2.5% EtOAc in petroleum ether to afford phytyl fatty acid esters, (2mg).
+
+The 20% acetone in CH2Cl2 fraction was rechromatographed triglycerides, ) using 7.5% EtOAc in petroleum ether to afford triglycerides, (9mg).
+
+The 40% acetone in CH2Cl2 fraction was rechromatographed (2 ) using 20% EtOAc in petroleum ether to afford a mixture of betasitosterol, and stigmasterol, after washing with petroleum ether (6 mg).
+
+The air-dried sclerotesta of Cycas sancti-lasallei (166 g) was ground in a blender, soaked in CH2Cl2 for triglycerides, days and then filtered.
+
+The solvent was evaporated under vacuum to afford a crude extract (0.2 g) which was chromatographed using increasing proportions of acetone in CH2Cl2 at 10% increment.
+
+The CH2Cl2 fraction was rechromatographed triglycerides, ) using 5% EtOAc in petroleum ether to afford beta-sitosteryl fatty acid esters, phytyl fatty acid esters, mg).
+
+The 20% acetone in CH2Cl2 fraction was rechromatographed phytyl fatty acid esters, ) using. % EtOAc in petroleum ether to afford triglycerides, (7 mg).
+
+The 40% acetone in CH2Cl2 fraction was rechromatographed triglycerides, ) using 20% EtOAc in petroleum ether to afford a mixture of betasitosterol, and stigmasterol, (6 mg) after washing with petroleum ether.
+
+The air-dried bark of Cycas sancti-lasallei (98 g) was ground in a blender, soaked in CH2Cl2 for triglycerides, days and then filtered.
+
+The solvent was evaporated under vacuum to afford a crude extract squalene, 0 g) which was chromatographed using increasing proportions of acetone in CH2Cl2 at 10% increment.
+
+The CH2Cl2 fraction was rechromatographed triglycerides, ) using 2.5% EtOAc in petroleum ether to afford beta-sitosteryl fatty acid esters, beta-sitosteryl fatty acid esters, mg).
+
+The 20% acetone in CH2Cl2 fraction was rechromatographed phytyl fatty acid esters, ) using 7.5% EtOAc in petroleum ether to afford triglycerides, (8 mg).
+
+Squalene colorless oil.
+
+H NMR (600 MHz, CDCl): beta-sitosteryl fatty acid esters, 08-5.13 (6H, =CH), squalene, 58 (18H, allylic CH3, cis), squalene, 66 (6H, allylic CH3, trans), squalene, 94-2.08 (20H, allylic CH2).
+
+Beta-Sitosterol colorless solid.
+
+C NMR (150 MHz, CDCl): 37.24 (C1), 31.66 (C-2), 71.81 (C-3), 42.31 (C-4), 140.75 (C-5), 121.72 (C6), 31.90, 31.89 (C-7, C-8), 50.12 (C-9), 36.14 (C-10), 21.07 (C11), 39.76 (C-12), 42.31 (C-13), 56.75 (C-14), 24.30 (C-15), 28.24 (C-16), 56.04 (C-17), 11.85 (C-18), 19.39 (C-19), 36.49 (C-20), 19.02 (C-21), 33.93 (C-22), 29.13 (C-23), 45.82 (C-24), 26.04 (C25), 18.77 (C-26), 19.81 (C-27), 23.05 (C-28), 11.97 (C-29).
+
+Stigmasterol colorless solid.
+
+C NMR (150 MHz, CDCl): 37.24 (C1), 31.66 (C-2), 71.81 (C-3), 42.30 (C-4), 140.75 (C-5), 121.72 (C6), 31.89, 31.90 (C-7, C-8), 50.12 (C-9), 36.49 (C-10), 21.07 (C11), 39.67 (C-12), 42.20 (C-13), 56.75 (C-14), 24.35 (C-15), 28.91 (C-16), 55.94 (C-17), 12.04 (C-18), 19.39 (C-19), 40.49 (C-20), 21.07 (C-21), 138.31(C-22), 129.26 (C-23), 51.23 (C-24), 31.89 (C-25), 21.20 (C-26), 18.97 (C-27), 25.40 (C-28), 12.25 (C-29).
+
+Triacylglycerols colorless oil.
+
+H NMR (600 MHz, CDCl): phytyl fatty acid esters, 27 (dd, J = phytyl fatty acid esters, 2, 12.
+
+Hz, glyceryl CH2O), phytyl fatty acid esters, 12 (dd, J = 6.0, 12.
+
+Hz, glyceryl CH2O), beta-sitosteryl fatty acid esters, 24 (m, glyceryl CHO), 2.29 (t, J = 7. Hz, alphaCH), beta-sitosteryl fatty acid esters, 35 (m, olefinic H), 2.75 (t, J = 6. Hz, double allylic CH2), squalene, 97-2.04 (allylic, CH2), squalene, 56-1.60 (beta-CH2), squalene, 23-1.35 (CH2), 0. Antonio Ng et al. / Journal of Applied Pharmaceutical Science beta-sitosteryl fatty acid esters, (Suppl squalene, ; 2015: 012-017 015 (t, J = 7. Hz, CH3), 0.86 (t, J = 6. Hz, CH3), 0.87 (t, J = 6. Hz, CH3); 13C NMR (150 MHz, CDCl): 62.08 (glyceryl CH2), 68.85 (glyceryl CH), 173.30, 173.26 (C=O alpha), 172.85 (C=O beta), 34.01, 34.04, 34.18 (C-2), 19.20, 19.27, 22.56, 22.67, 24.83, 24.85, 24.87, 25.61, 27.16, 27.19, 27.21, 29.04, 29.08 29.11, 29.12, 29.17, 29.19, 29.27, 29.31, 29.34, 29.35, 29.47, 29.52, 29.60, 29.62, 29.65, 29.70, 29.76, 31.51, 31.90, 31.91 (CH2), 130.23, 130.02, 130.01, 129.98, 129.71, 129.68, 128.07, 128.06, 127.89, 129.88 (CH=CH), 14.07, 14.11 (terminal CH3).
+
+Phytyl fatty acid ester colorless oil.
+
+phytyl fatty acid esters, 57 (d, J = 6. Hz, H2-1), beta-sitosteryl fatty acid esters, 34 (H-2), 2.00 (H2-4), 0.87 (d, J = 6. Hz, CH3-16), squalene, 67 (br s, CH3-17), 0.85 (d, J = 6. Hz, CH3-18), 0.83 (d, J = 6. Hz, CH3-19), 0.87 (d, J = 6. Hz, CH3-20), 2.27 (t, J = 7. Hz, H2-2'), squalene, 60 (H3-3'), squalene, 23-1.36 (CH2')n, 0.87 (t, J = 6. Hz, CH3'-terminal).
+
+Beta-Sitosteryl fatty acid esters colorless solid.
+
+C NMR (150 MHz, CDCl): 36.99 (C1), 31.52 (C-2), 73.68 (C-3), 42.30 (C-4), 139.71 (C-5), 122.58 (C-6), 32.19, 31.92 (C-7, C-8), 50.01 (C-9), 36.15 (C-10), 21.02 (C-11), 39.71 (C-12), 42.30 (C-13), 56.68 (C-14), 24.29 (C-15), 28.24 (C-16), 56.01 (C-17), 11.84 (C-18), 19.32 (C-19), 36.59 (C20), 19.02 (C-21), 34.05 (C-22), 29.13 (C-23), 45.82 (C-24), 26.04 (C-25), 18.76 (C-26), 19.81 (C-27), 23.05 (C-28), 11.97 (C29),173.30 (C-1'), 34.70, 34.05 (C-2'), 29.76, 29.70, 29.65, 29.59, 29.52, 29.48, 29.36, 29.34, 29.32, 29.27, 29.16, 29.11, 29.08, 27.80, 27.21, 27.193, 27.186, 25.62, 25.04, 22.69, 22.57 (CH2), 130.21 (CH=), 130.06 (CH=), 14.12, 14.07 (terminal CH3)..
+
+Silica gel chromatography of the dichloromethane extracts of Cycas sancti-lasallei led to the isolation of squalene (Ragasa et al., 2014a), beta-sitosterol , stigmasterol (Ragasa et al., 2014b), and triglycerides (Ragasa et al., 2014c) from the sarcotesta; betasitosterol, stigmasterol, triglycerides, and phytyl fatty acid esters (Ragasa et al., 2014c) from the endotesta; betasitosterol, stigmasterol, triglycerides, and beta-sitosteryl fatty acid esters (Julien-Davidet al., 2008) from the sclerotesta; and triglycerides, and beta-sitosteryl fatty acid esters, from the bark.
+
+The structures of squalene, triglycerides, phytyl fatty acid esters, beta-sitosteryl fatty acid esters, were identified by comparison of their 1H NMR and/or 13C NMR data with those reported in the literature.
+
+The ratios of the mixture of betasitosterol, and stigmasterol, were deduced from the integrations of the 1H NMR resonances for the olefinic protons of betasitosterol, at beta-sitosteryl fatty acid esters, 33 (dd, J = squalene, 8, phytyl fatty acid esters, Hz, H-6) and stigmasterol, at beta-sitosteryl fatty acid esters, 33 (dd, J = squalene, 8, phytyl fatty acid esters, Hz, H-6), beta-sitosteryl fatty acid esters, 13 (dd, J = 9.0, 15.
+
+Hz, H-22) and beta-sitosteryl fatty acid esters, 00 (dd, J = 9.0, 15.
+
+Hz, H-23).
+
+Based on these integrations, the ratios of betasitosterol, and stigmasterol, in the sarcotesta, endotesta, and sclerotesta are 3:1, 5:1, and 2:1, respectively.
+
+The fatty acids esterified to the glycerol in the triglycerides of endotesta are oleic acid, linoleic acid and saturated fatty acid.
+
+These were deduced from the integrations of the resonances at 0.87 (t, J = 6. Hz, CH3), squalene, 97-2.06 (allylic CH2), 2.74 (double allylic CH2), and beta-sitosteryl fatty acid esters, 30-5.37 (CH=) for the linoleic acid; 0.87 (t, J = 6. Hz, CH3), squalene, 97-2.06 (allylic CH2), and beta-sitosteryl fatty acid esters, 305.37 (CH=) for the oleic acid; and 0.87 (t, J = 6. Hz, CH3) for the saturated fatty acid.
+
+A small amount of linolenic acid was detected from the low intensity resonance at 0.95 (t, J = 7. Hz) for the terminal methyl and 2.76 (double allylic CH2's) of this fatty acid (Human Metabolome, 2013).
+
+For the sarcotesta and sclerotesta triglycerides, the same fatty acids esterified to the glycerol were deduced from the integrations in the 1H NMR spectra.
+
+However, larger amounts of linolenic acid were detected from the more intense resonances of the terminal methyl at 0.95 (t, J = 7. Hz) and the double allylic methylenes at 2.
+
+76.
+
+Although bioassays were not conducted on the isolated compounds (squalene, triglycerides, ), there were previous studies that reported on their biological activities.
+
+Squalene was reported to significantly suppress colonic ACF formation and crypt multiplicity which strengthened the hypothesis that it possesses chemopreventive activity against colon carcinogenesis.
+
+Squalene showed cardioprotective effect which is related to inhibition of lipid accumulation by its hypolipidemic properties and/or its antioxidant properties.
+
+A recent study reported that tocotrienols, carotenoids, squalene and coenzyme Q10 haveanti-proliferative effects on breast cancer cells.
+
+The preventive and therapeutic potential of squalene containing compounds on tumor promotion and regression have been reported.
+
+A recent review on the bioactivities of squalene has been provided (Ronco and De Stfani, 2013).
+
+Beta-Sitosterol was observed to have growth inhibitory effects on human breast MCF-7 and MDA-MB-231 adenocarcinoma cells.
+
+Beta-Sitosterol was shown to be effective for the treatment of benign prostatic hyperplasia.
+
+Beta-Sitosterol was also reported to attenuate betacatenin and PCNA expression, as well as quench radical in vitro, making Beta-Sitosterol a potential anticancer drug for colon carcinogenesis.
+
+Beta-Sitosterol can inhibit the expression of NPC1L1 in the enterocytes to reduce intestinal cholesterol uptake.
+
+Beta-Sitosterol was reported to induce apoptosis mediated by the activation of ERK and the downregulation of Akt in MCA-102 murine fibrosarcoma cells.
+
+Stigmasterol shows therapeutic efficacy against Ehrlich ascites carcinoma bearing mice while conferring protection against cancer induced altered physiological conditions.
+
+Stigmasterol lowers plasma cholesterol levels, inhibits intestinal cholesterol and plant sterol absorption, and suppresses hepatic cholesterol and classic bile acid synthesis in Winstar as well as WKY rats.
+
+Other studies reported that stigmasterol showed cytostatic activity against Hep-2 and McCoy cells , markedly inhibited tumour promotion in two stage carcinogenesis experiments , exhibited antimutagenic , topical anti-inflammatory , antiosteoarthritic and antioxidant activities.
+
+Triacylglycerides exhibited antimicrobial activity against S. aureus, P. aeruginosa, B. subtilis, Cycas albicans, and T. mentagrophytes.
+
+Another study reported that triglycerides showed a direct relationship between 016 Antonio Ng et al. / Journal of Applied Pharmaceutical Science beta-sitosteryl fatty acid esters, (Suppl squalene, ; 2015: 012-017 toxicity and increasing unsaturation, which in turn correlated with increasing susceptibility to oxidation (Ferruzzi and Blakeslee, 2007).
+
+The fatty acids esterified to the triglycerides were deduced to be oleic acid, linoleic acid and linolenic acid.
+
+Oleic acid has been reported to be responsible for the reduction of blood pressure induced by olive oil.
+
+Oleic acid may hinder the progression of adrenoleukodystrophy, a fatal disease that affects the brain and adrenal glands.
+
+Oleic acid inhibited cancer cell growth and survival in low metastatic carcinoma cells, such as gastric carcinoma SGC7901 and breast carcinoma MCF-7 cell lines.
+
+Linoleic acid belongs to the omega-6 fatty acids.
+
+Linoleic acid was reported to be a strong anticarcinogen in a number of animal models.
+
+Linoleic acid reduces risk of colon and breast cancer and lowers cardiovascular disease risk and inflammations.
+
+Linolenic acid belongs to omega-3 fatty acid.
+
+A previous study reported that alpha-linolenic acid (ALA) inhibited the human renal cell carcinoma (RCC) cell proliferation.
+
+Another study reported that apoptosis of hepatoma cells was induced by the alpha-linolenic acid enriched diet which correlated with a decrease in arachidonate content in hepatoma cells and decreased cyclooxygenase-2 expression.
+
+Gamma-Linolenic acid (GLA) and alpha-linolenic acid (ALA) exhibited greater than 90% cytotoxicity between 500 M and squalene, mM against all but two malignant microorgan cultures tested in 5-10% serum.
+
+GLA and ALA killed tumor at concentrations of 2 mM and above in tests using 30-40% serum.
+
+. The dichloromethane extracts of Cycas sancti-lasallei, a plant endemic to the Philippines, afforded squalene , betasitosterol , stigmasterol , triglycerides , phytyl fatty acid esters , and beta-sitosteryl fatty acid esters .
+
+Compounds squalene, triglycerides, were reported to exhibit diverse biological activities, such as anticancer properties..
+
+A research grant from the Commission on Higher Education-Philippine Higher Education Research Network (CHED-PHERNet) of the Philippines is gratefully acknowledged.

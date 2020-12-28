@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>isLocatedIn</Category>
+  <Tag1>Synonym<Name>brassica oleracea</Name>
+  </Tag1>
+  <Tag2>Location<Name>quirino avenue</Name>
+    <Name>hebei</Name>
+    <Name>usa</Name>
+    <Name>shaanxi</Name>
+    <Name>shandong province</Name>
+    <Name>coden</Name>
+    <Name>philippines</Name>
+    <Name>manila</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>grown in</Pattern>
+  </Relation>
+</Seed>

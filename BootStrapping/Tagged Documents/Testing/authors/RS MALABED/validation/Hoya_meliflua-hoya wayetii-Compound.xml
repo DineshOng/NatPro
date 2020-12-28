@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>hoya wayetii</Name>
+  </Tag1>
+  <Tag2>Compound<Name>lupeol cinnamate</Name>
+    <Name>bauerenol</Name>
+    <Name>dichloromethane</Name>
+    <Name>2-hydroxyethylbenzoate</Name>
+    <Name>taraxerol</Name>
+    <Name>alpha-amyrin fatty acid esters</Name>
+    <Name>fatty acid methyl esters</Name>
+    <Name>alpha-amyrin cinnamate</Name>
+    <Name>beta-amyrin fatty acid esters</Name>
+    <Name>oleanone</Name>
+    <Name>ursenone</Name>
+    <Name>betulin</Name>
+    <Name>lupenyl cinnamate</Name>
+    <Name>taraxeryl acetate</Name>
+    <Name>dihydrocanaric acid</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>alpha-amyrin acetate</Name>
+    <Name>lupeol fatty acid esters</Name>
+    <Name>lupeol acetate</Name>
+    <Name>triglycerides</Name>
+    <Name>lupeol</Name>
+    <Name>beta-amyrin cinnamate</Name>
+    <Name>lutein</Name>
+    <Name>squalene</Name>
+    <Name>chlorophyll a</Name>
+    <Name>lupenone</Name>
+    <Name>grape-vine</Name>
+    <Name>beta-amyrin</Name>
+    <Name>2-hydroxyethyl benzoate</Name>
+    <Name>alpha-amyrin</Name>
+    <Name>stigmasterol</Name>
+    <Name>beta-amyrin acetate</Name>
+    <Name>taraxerone</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>contained</Pattern>
+    <Pattern>is interesting to</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>note that</Pattern>
+    <Pattern>proposed as</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>stems</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>was proposed as</Pattern>
+    <Pattern>were reported to</Pattern>
+  </Relation>
+</Seed>

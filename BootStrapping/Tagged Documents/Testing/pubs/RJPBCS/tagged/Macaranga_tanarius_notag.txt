@@ -1,0 +1,161 @@
+ISSN: 0975-8585 May-June 2014 RJPBCS 5 Page No.
+
+Research Journal of Pharmaceutical, Biological and Chemical Sciences Porphyrins and Polyprenol from Macaranga tanarius.
+
+Consolacion Y. Ragasa, chlorophyll a, and Jenny de Jesus 1 Chemistry Department, De La Salle University Science and Technology Complex, Leandro V. Locsin Campus, Binan, Laguna, Philippines chlorophyll a, Chemistry Department, De La Salle University 2401 Taft Avenue, 1004 Manila, Philippines.
+
+The dichloromethane extract of the air-dried leaves of Macaranga tanarius afforded chlorophyllide a , chlorophyll a, and polyprenol .
+
+The structures of 1 and chlorophyll a, were elucidated by extensive 1D and 2D NMR spectroscopy, while the structure of polyprenol, was deduced by comparison of its 1 H NMR data with those reported in the literature.
+
+Antimicrobial tests on 1 indicated that it has low antimicrobial activities against the bacteria: Escherichia coli, Staphylococcus aureus, and Pseudomonas aeruginosa and fungi: Candida albicans and T. mentagrophytes.
+
+Escherichia coli was inactive against Bacillus subtilis and A. niger.
+
+Compound chlorophyll a, was found to exhibit low antimicrobial activities against Pseudomonas aeruginosa and Candida albicans and inactive against Escherichia coli, Staphylococcus aureus, Bacillus subtilis, A. niger, and T. mentagrophytes.
+
+Keywords: Macaranga tanarius, Euphorbiaceae, chlorophyll a, chlorophyllide a, polyprenol *Corresponding author ISSN: 0975-8585 May-June 2014 RJPBCS 5 Page No..
+
+Macaranga tanarius, commonly known as binunga grows in thickets and groves at low and medium altitudes throughout the Philippines.
+
+The leaves of the tree are used as an antiinflammatory.
+
+The 70% acetone extract of the leaves of Macaranga tanarius was reported to have in vivo hepatoprotective activity in mice and in vitro antihepatotoxic activity.
+
+A recent study reported that Macaranga tanarius methanolic leaf extract exhibited antimicrobial property against gram-positive bacteria, but was inactive against gram-negative bacteria.
+
+Among four Macaranga species tested, Macaranga tanarius exhibited the best ferrous-ion chelating (FIC) activity, but showed the lowest total phenolic content (TPC), ascorbic acid equivalent antioxidant activity (AEAC), ferric-ion reducing power (FRAP) and lipid peroxidation inhibition (LPI) activities.
+
+Another study reported that the methanolic extract of Macaranga tanarius exhibited DPPH radical-scavenging activity.
+
+Previous studies on Macaranga tanarius reported the isolation of euphorbiasteroid, macarangonol, friedelin, fiedelan-3Beta-ol, friedel-3-ene, Beta-amyrenone, and Beta-amyrin , tanarifuranonol, blumenol A and blumenol B, and nymphaeol A, nymphaeol B, and nymphaeol C, roseoside , 2003), flavone and tanariflavanone A, tanariflavanone B, tanariflavanone C, and tanariflavanone D, hyperin, isoquercitrin, macarangioside, and methyl brevifolin carboxylate , mallotinic acid, geraniin, tanarinin, corilagin, macaranganin, repanducinic acidphylanthusiin C, 1,4-digalloylglucoside, and 3,4-digalloylglucoside [9, 10]. We report herein the isolation, structure elucidation, and antimicrobial assay of chlorophyll aand chlorophyllide a from the leaves of Macaranga tanarius.
+
+Polyprenol was also isolated from the leaves of the plant.
+
+R = H O O CH3 N N N N H3C H3C COOR CH3 C HH H O H3C 1 chlorophyll a, Mg R = phyltyl 2a 2b chlorophyll a, 1 18 11 18 alpha delta beta gamma 12 13 4 4a 4b 3a polyprenol, 14 15 5 5a 88a 7a 7b 7c 6 16 17 7 10 9 10a 10b Figure 1: Structures of chlorophyllide a and chlorophyll a ISSN: 0975-8585 May-June 2014 RJPBCS 5 Page No.
+
+MATERIALS AND METHODS General Experimental Procedure NMR spectra were recorded on a Bruker Avance 400 in CDCl at 400 MHz for 1H and 100 MHz for 13C.
+
+Column chromatography was performed with silica gel 60 (70-230 mesh), while the TLC was performed with plastic backed plates coated with silica gel F254.
+
+The plates were visualized by spraying with vanillin-H2SO4, followed by warming.
+
+Sample Collection The plant sample was collected from Anao, Tarlac in June 2006.
+
+chlorophyll a was identified as Macaranga tanarius Linn Muell.-Arg at the Botany Department of the National Museum.
+
+A voucher specimen # 122 is deposited at the Chemistry Department, De La Salle UniversityManila.
+
+Isolation of Secondary Metabolites The air-dried aerial leaves of Macaranga tanarius (377 g) were cut and homogenized, soaked in CH2Cl2 for three days, then filtered.
+
+The filtrate was concentrated under vacuum to afford the crude extract (88.5 g) which was subjected to silica gel chromatography and eluted with increasing proportions of acetone in CH2Cl2 at 10% increment.
+
+The pure acetone fraction afforded 1 (429.7 mg, 211-2140C) after washing with petroleum ether, followed by diethyl ether.
+
+The 20% acetone in CH2Cl2 fraction was rechromatographed in 15% EtOAc in petroleum ether, followed by rechromatography in 10% EtOAc in petroleum ether to afford chlorophyll a, (565.8 mg, mp. -1580C) after washing with petroleum ether.
+
+The 10% acetone in CH2Cl2 fraction was rechromatographed in 7.5% EtOAc in petroleum ether to afford polyprenol, (25 mg).
+
+Antimicrobial Tests The microorganisms used in these tests were obtained from the University of the Philippines Culture Collection (UPCC).
+
+These are Aspergillus niger UPCC 4219, Candida albicans UPCC 2168, Bacillus subtilis UPCC 1295, Pseudomonas aeruginosa UPCC 1244, Escherichia coli UPCC 1195, Staphylococcus aureus UPCC 1143, and Trichophyton mentagrophyte UPCC 4193.
+
+The test compound was dissolved in 95% ethanol.
+
+The antimicrobial assay procedure reported in the literature was employed.
+
+The activity index was computed by subtracting the diameter of the well from the diameter of the clearing zone divided by the diameter of the well..
+
+The dichloromethane extract of the air-dried leaves of Macaranga tanarius afforded chlorophyllide a , chlorophyll a, and polyprenol by silica gel chromatography.
+
+ISSN: 0975-8585 May-June 2014 RJPBCS 5 Page No.
+
+Compound 1 was a dark violet crystalline substance isolated from the dichloromethane extract of the air-dried leaves of Macaranga tanarius.
+
+crystalline gave a dark green spot on TLC when sprayed with vanillin:H2SO4 solution.
+
+These properties are characteristics of chlorophylls.
+
+These green photosynthetic pigments were known to exist in four types, all with the same basic structure, but show variations in the nature of aliphatic side chains attached to the core macrocycle.
+
+However, only chlorophylls a and b occur in higher plants, while chlorophylls c and d are found in algae.
+
+Literature search revealed that chlorophyll ahas a derivative called chlorophyllide a which has a carboxylic acid, instead of phytyl esterified to the carboxylic acid in chlorophyll a Chlorophyll bn the other hand, has an aldehyde replacing one of the methyl groups in chlorophyll a The structures of 1 and chlorophyll a, were elucidated by extensive 1D and 2D NMR spectroscopy as follows.
+
+The 1H NMR spectrum of 1 (Table 1) indicated allylic methyls at polyprenol, 19, polyprenol, 36 and polyprenol, 37, a methyl doublet at 1.82, and a methyl triplet at 1.68; a methoxy group at polyprenol, 86; olefinic protons at 6.15, 6.26 and 7.41; methylene protons at chlorophyll a, 31 and chlorophyll a, 56, chlorophyll a, 28 and chlorophyll a, 61, and polyprenol, 62 (2H); aromatic protons at 8.55, 9.33 and 9.48; and methine protons at 4.19, 4.46 and 6.
+
+24.
+
+The 13C NMR spectrum of 1 (Table 1) gave resonances for conjugated olefinic carbons, most of which were deshielded due to the electron withdrawing effect of nitrogen in the macrocycle; a carboxylic acid at 177.03; an ester at 169.6; and a conjugated carbonyl carbon at 189.
+
+6.
+
+The remaining resonances were attributed to methyl, methylene, methine and quaternary carbons in 1. Many of the proton resonances were singlets, hence they did not show cross peaks in the COSY spectrum.
+
+Thus, the COSY spectrum indicated only three isolated spin systems as follows: H-2a/H2-2b; H2-4a/H3-4b; and H-8/H-7/H2-7a/H2-7b.
+
+The 1H and 13C assignments for 1 (Table 1) were verified by HSQC and connectivities were verified by HMBC.
+
+Thus, the methoxyl was attached to C-10a on the basis of long-range correlation between the methoxy protons at polyprenol, 86 and the ester carbonyl at 169.
+
+62.
+
+The conjugated ketone was assigned to C-9 since long-range correlation was observed between H10 and this carbon.
+
+The carboxylic acid was attributed to 177.03 (C-7c) due to long-range correlation between the methylene protons at chlorophyll a, 28, chlorophyll a, 31, chlorophyll a, 56, and chlorophyll a, 61 and this carbon.
+
+The methyl doublet was assigned to C-8a since long-range correlations were observed between H-7, H-8 and this carbon.
+
+The methyl singlets were attributed to C-1a, C-3a and C-5a on the basis of long-range correlations between the methyl protons ( polyprenol, 19, polyprenol, 37 and polyprenol, 66) and the C-1, C-3 and C-5 carbons, respectively.
+
+The olefinic protons (H-2a and H2-2b) were attached to C-2 since long-range correlations were observed between these protons and C-2. The ethyl group was attached to C-4 due to correlations between H3-4b and H2-4a and this carbon.
+
+All long-range correlations observed were consistent with the structure of 1. To confirm the structure of 1, its ISSN: 0975-8585 May-June 2014 RJPBCS 5 Page No.
+
+1H and 13C NMR spectral data were compared with those found in the literature for chlorophyllide a. The spectra matched in all essential respects.
+
+Table 1: 400 MHz 1 H NMR and 100 MHz 13 C NMR Spectral Data of 1 and chlorophyll a, in CDCl.
+
+Position C, 1 H, 1 C, chlorophyll a, H, chlorophyll a, 1 131.89 polyprenol, 37 131.78 polyprenol, 38 1 or 5 12.06 12.08 chlorophyll a, 136.54 136.45 2a 129.04 7.94 129.03 7.95 2b 122.78 6.15, 6.26 122.68 6.15, 6.26 polyprenol, 136.20 136.09 3a 11.19 polyprenol, 19 11.12 polyprenol, 14 4 145.22 145.11 4a 19.41 polyprenol, 63 19.35 polyprenol, 57 4b 17.37 1.68 17.36 1.65 5 128.89 128.97 5a or 1a 12.06 polyprenol, 66 12.08 polyprenol, 68 6 or 17 161.15 161.25 7 51.02 4.19 51.17 4.23 7a 30.73 chlorophyll a, 31, chlorophyll a, 56 31.24 chlorophyll a, 24, chlorophyll a, 52 7b 29.65 chlorophyll a, 28, chlorophyll a, 61 29.70 chlorophyll a, 38, chlorophyll a, 67 7c 177.03 172.97 8 50.10 4.46 50.14 4.49 8a 23.08 1.82 23.08 1.85 9 189.59 189.66 10 63.67 6.24 64.74 6.29 10a 169.62 169.64 10b 52.86 polyprenol, 86 52.84 polyprenol, 92 11 142.09 142.83 12 136.26 136.16 13 155.67 155.56 14 150.96 150.92 15 137.93 137.91 16 149.67 149.67 17 or 6 161.15 161.25 18 172.11 172.21 97.54 9.33 97.44 9. Beta 104.42 9.48 104.32 9.43 105.15 105.24 93.14 8.55 93.09 8. Phytyl P1 61.49 4. P2 117.76 5. P3 142.
+
+P3a 16.29 1. P4 39.80 1. P5 24.99 1. P6 36.64 1.02, 1. P7 32.62 1. P7a 19.66 or 19.72 0.79, 0. P8 37.33 1.02, 1. P9 24.42 1. P10 37.39 1.02, 1. P11 32.76 1. ISSN: 0975-8585 May-June 2014 RJPBCS 5 Page No.
+
+P11a 19.66 or 19.72 0.79, 0. P12 37.26 1.02, 1. P13 24.77 1. P14 39.36 1. P15 27.96 1. P15a 22.62 0. P16 22.71 0. To determine its relative configuration, the NOESY spectrum of 1 was obtained.
+
+There were three asymmetric centers located at C-7 ( 51.02), C-8 (50.10) and C-10 (64.67) with assigned proton resonances at 4.19, 4.46 and 6.24, respectively.
+
+A cis relationship existed between the protons at 4.19 and 4.46 since both of them showed correlation in NOESY.
+
+This relation in effect implied that the methyl group anchored at C-8 was in a cis orientation relative to the propionic acid side chain attached to C-7. On the other hand, the proton resonating at 6.24 bonded to the third stereocenter at C-10 showed NOESY correlation with H-7. Consequently, the methyl ester group bound to this stereo carbon was oriented in the manner analogous to the bulky substituent of C-7 and C-8. Thus, the relative stereochemistry of 1 is as shown in Fig..
+
+Comparison of the 1H NMR spectral data of 1 and chlorophyll a, (Table 1) gave similar resonances.
+
+The difference was additional resonances were found in the shielded region of chlorophyll a, which are characteristic resonances for phytol.
+
+This was confirmed by the 13C NMR spectrum of chlorophyll a, which gave twenty additional carbon atoms and the shielding of the carboxylic acid carbonyl in 1 ( 177.0) to the ester carbonyl ( 173.0) in chlorophyll a, Comparison of the 1H and 13C NMR spectral data of chlorophyll a, with chlorophyll aindicated that they match in all essential respects.
+
+Chlorophyll and its various derivatives are used in traditional medicine and for therapeutic purposes.
+
+Natural chlorophyll ad its derivatives have been studied for wound healing , anti-inflammatory properties , control of calcium oxalate crystals , utilization as effective agents in photodynamic cancer therapy [19-21], and chemopreventive effects in humans [22-23]. A review on digestion, absorption and cancer preventive activity of dietary chlorophyll has been provided.
+
+The structure of polyprenol, was deduced by comparison of its 1H NMR data with those reported in the literature for polyprenol.
+
+Polyprenols act as co-enzymes of membrane active transport systems for polysaccharides, peptidoglycans and carbohydrate containing biopolymers.
+
+Polyprenol from Ginkgo biloba L exhibited antitumor activity in vivo and in vitro.
+
+The antidyslipidemic activity of polyprenol from Coccinia grandis in high-fat diet-fed hamster model was also reported.
+
+As part of our continuing search for antimicrobial compounds from Philippine medicinal plants, 1 and chlorophyll a, were tested for antimicrobial activity against seven microorganisms.
+
+Results of the study (Table chlorophyll a, indicated that 1 has low activity against the bacteria: Escherichia coli, Staphylococcus aureus, and Pseudomonas aeruginosa and fungi: Candida albicans and T. mentagrophytes.
+
+chlorophyll a was inactive against Bacillus subtilis and A. niger.
+
+Compound chlorophyll a, was found to exhibit low antimicrobial activity against Pseudomonas aeruginosa and ISSN: 0975-8585 May-June 2014 RJPBCS 5 Page No.
+
+Candida albicans and inactive against Escherichia coli, Staphylococcus aureus, Bacillus subtilis, A. niger, and T. mentagrophytes.
+
+The slightly higher antimicrobial activity of 1 as compared to chlorophyll a, may be due to the presence of the carboxylic acid in 1. Table 2: Antimicrobial Test Results on 1 and chlorophyll a, Organism Sample (30 g) Clearing Zone (mm) a Antimicrobial Index (AI) Escherichia coli 1 11 0.1 chlorophyll a, 0 Chloramphenicol a3 chlorophyll a, P. Aeruginosa 1 12 0 chlorophyll a, 2 11 0. Chloramphenicol a3 0. Staphylococcus aureus 1 11 0.1 chlorophyll a, 0 Chloramphenicol a0 polyprenol, Bacillus subtilis 1 0 chlorophyll a, 0 Chloramphenicol a0 chlorophyll a, Candida albicans 1 12 0 chlorophyll a, 2 12 0. Chlotrimazole b 17 0. T. mentagrophytes 1 11 0.1 chlorophyll a, 0 Chlotrimazole b 50 7. A. niger 1 0 chlorophyll a, 0 Chlotrimazole b 17 0.7 a Average of three trials a chloramphenicol disc 6 mm diameter, b chlotrimazole conc. g, disc 6 mm diameter ACKNOWLEDGMENTS The antimicrobial tests were conducted at the University of the Philippines-Natural Sciences Research Institute (UP-NSRI).
+
+A research grant from the Science Foundation and the University Research Coordination Office of De La Salle University is gratefully acknowledged.

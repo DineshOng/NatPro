@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasSynonymPlantPart</Category>
+  <Tag1>Synonym<Name>hoya diversifolia</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>stems</Name>
+    <Name>flowers</Name>
+    <Name>roots</Name>
+    <Name>leaves</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>2-hydroxyethylbenzoate</Pattern>
+    <Pattern>acetate</Pattern>
+    <Pattern>acetate from</Pattern>
+    <Pattern>acid</Pattern>
+    <Pattern>alpha-amyrin</Pattern>
+    <Pattern>bauerenol</Pattern>
+    <Pattern>bauerenol from</Pattern>
+    <Pattern>beta-amyrin</Pattern>
+    <Pattern>beta-sitosterol</Pattern>
+    <Pattern>beta-sitosterol from</Pattern>
+    <Pattern>betulin from</Pattern>
+    <Pattern>chlorophyll a from</Pattern>
+    <Pattern>cinnamate</Pattern>
+    <Pattern>cinnamate from</Pattern>
+    <Pattern>esters from</Pattern>
+    <Pattern>flowers</Pattern>
+    <Pattern>hydrocarbons from</Pattern>
+    <Pattern>leaves</Pattern>
+    <Pattern>leaves of</Pattern>
+    <Pattern>lupenone</Pattern>
+    <Pattern>lupeol</Pattern>
+    <Pattern>lupeol cinnamate from</Pattern>
+    <Pattern>lutein</Pattern>
+    <Pattern>methyl esters from</Pattern>
+    <Pattern>roots</Pattern>
+    <Pattern>squalene</Pattern>
+    <Pattern>stems</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>stigmasterol</Pattern>
+    <Pattern>stigmasterol from</Pattern>
+    <Pattern>taraxerol</Pattern>
+    <Pattern>taraxerone</Pattern>
+    <Pattern>taraxeryl acetate from</Pattern>
+    <Pattern>triglycerides</Pattern>
+    <Pattern>xx</Pattern>
+  </Relation>
+</Seed>

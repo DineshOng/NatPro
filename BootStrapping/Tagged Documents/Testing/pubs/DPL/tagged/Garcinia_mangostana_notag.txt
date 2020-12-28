@@ -1,0 +1,105 @@
+www.scholarsresearchlibrary.comt Available online a Scholars Research Library Der Pharmacia Lettre, 2016, 8 (20):188-190 (http://scholarsresearchlibrary.com/archive.html) ISSN 0975-5071 USA CODEN: DPLEB 188 Scholar Research Library Xanthones from Garcinia mangostana Linn.
+
+Pulp Consolacion Y Ragasa,2,*, Theresa Joyce Tabin, Jo Madeleine Ann Reyes, Maria Carmen S. Tan1 and Chien-Chang Shen 1Chemistry Department, De La Salle University, 2401 Taft Avenue, Manila 1004, Philippines.
+
+Chemistry Department, De La Salle University Science & Technology Complex Leandro V. Locsin Campus, Binan City, Laguna 4024, Philippines.
+
+National Research Institute of Chinese Medicine, Ministry of Health and Welfare, 155-1, LiNong St., Sec. , Taipei, Taiwan..
+
+. In an earlier study, we isolated alpha-mangostin as the major xanthone and 3-isomangostin as a minor constituent of the pulp of the ripe fruit of Garcinia mangostana Linn.
+
+Further study on the pulp has led to the isolation of garcinone D.
+
+The structure of Garcinone D, was elucidated by extensive 1D and 2D NMR spectroscopy.
+
+Garcinone Das reported to exhibit anticancer property.
+
+Keywords: Garcinia mangostana, Guttiferae, garcinone D
+
+. Garcinia mangostana Linn., the queen of fruits and commonly known as mangosteen, is a natural source of xanthones which are antioxidants, anti-inflammatory [Garcinone D, ], antifungal , and are also used for chemoprevention.
+
+Extracts and xanthones isolated from Garcinia mangostana have antioxidant, antitumor, anti-allergic, antiinflammatory, antibacterial, antifungal, and antiviral properties.
+
+Consolacion Y Ragasa et al Der Pharmacia Lettre, 2016, 8 (20):188-190.
+
+189 Scholar Research Library We earlier reported the isolation of alpha-mangostin, gartanin and 3-isomangostin from the pericarp of Garcinia mangostin.
+
+Recently, we reported the isolation of -tocotrienol, alpha-mangostin, 3-isomangostin, stigmasterol, triacylglycerols, betasitosteryl-3beta-glucopyranoside-6'-O-fatty acid esters, and stigmasteryl-3beta-glucopyranoside-6'-O-fatty acid esters from the pulp; and stigmasterol, triacylglycerols, and linoleic acid from the seeds of Garcinia mangostana.
+
+This study reports on the isolation of garcinone D from the dichloromethane extract of the pulp of the freeze-dried ripe fruit of Garcinia mangostana.
+
+MATERIALS AND METHODS General Experimental Procedure NMR spectra were recorded on a Varian VNMRS spectrometer in CDCl at 600 MHz for 1H NMR and 150 MHz for 13C NMR spectra.
+
+Column chromatography was performed, with silica gel 60 (70-230 mesh).
+
+Thin layer chromatography, was performed with plastic backed plates coated with silica gel F254 and the plates were visualized by spraying with vanillin/H2SO4 solution followed by warming.
+
+Sample Collection Garcinia mangostana Linn fruit was collected from Davao, Philippines in October 2015.
+
+The fruit was authenticated at the Botany Division, Philippine National Museum.
+
+General Isolation Procedure A glass column 18 inches in height and Garcinone D, inch internal diameter was used for the fractionation of the crude extracts.
+
+Eleven 20 mL fractions were collected.
+
+A glass column 12 inches in height and 0.5 inch internal diameter was used for the rechromatography of fractions from the crude extracts. mL fractions were collected.
+
+Fractions with spots of the same Rf values were combined and rechromatographed in appropriate solvent systems until TLC pure isolates were obtained.
+
+Rechromatography and final purifications were conducted using Pasteur pipettes as columns. mL fractions were collected.
+
+Isolation of Garcinone Dhe freeze-dried pulp (143.3 g) of Garcinia mangostana was ground in a blender, soaked in CH2Cl2 for three days and then filtered.
+
+The filtrate was concentrated under vacuum to afford a crude extract Garcinone D, 96 g) which was chromatographed by gradient elution with CH2Cl2, followed by increasing amounts of acetone at 10% increment by volume as eluents.
+
+The 60% acetone in CH2Cl2 fraction was rechromatographed (4 ) using CH3CN:Et2O:CH2Cl2 (2:2:6, v/v) to afford Garcinone D, (3 mg) after trituration with petroleum ether.
+
+Garcinone D: 1H NMR (600 MHz, CDCl): 6.27 (s, H-4), 6.81 (s, H-5), 3.41 (m, H2-1'), 5.26 (m, H-2'), Garcinone D, 82 (s, H3-4'), Garcinone D, 75 (s, H3-5'), 3.41 (m, H2-1''), Garcinone D, 78 (m, H2-2''), Garcinone D, 31 (s, H3-4''), Garcinone D, 31 (s, H3-5''), 13.62 (1-OH); 13C NMR (150 MHz, CDCl): 160.55 (C-1), 108.69 (C-2), 161.82 (C-3), 93.33 (C-4), 155.06 (C-4a), 156.00 (C-4b), 101.64 (C-5), 154.69 (C-6), 142.54 (C-7), 138.48 (C-8), 112.00 (C-8a), 182.01 (C-9), 103.57 (C-9a), 21.17 (C-1'), 121.44 (C-2'), 135.66 (C-3'), 17.92 (C-4'), 25.84 (C-5'), 22.17 (C-1''), 44.40 (C-2''), 70.79 (C-3''), 29.25 (C-4''), 29.25 (C-5'')..
+
+Silica gel chromatography of the dichloromethane extract of the freeze-dried pulp of the ripe fruit of Garcinia mangostana has led to the isolation of garcinone D.
+
+The structure of Garcinone D, was elucidated by extensive 1D and 2D NMR spectroscopy.
+
+Compound Garcinone D, indicated similar 1H NMR resonances to alpha-mangostin.
+
+The differences were the non-appearance of the benzylic methylene protons of the prenyl group attached to ring B at 4.07 (H2-1'') in alphamangostin and the appearance of more overlapping benzylic methylene protons at 3.41 in Garcinone D, Furthermore, the vinylic proton at 5.26 (H-2'') in alpha-mangostin was replaced by methylene protons at Garcinone D, 78 in Garcinone D, The allylic methyl groups at Garcinone D, 67 (H3-4'') and Garcinone D, 82 (H3-5'') in alpha-mangostin were replaced by two overlapping methyl singlets at Garcinone D, 31 in Garcinone D, These relatively deshielded methyl singlets suggested that they were bonded to a hydroxylated quaternary carbon.
+
+The change from a prenyl group with a double bond attached to ring B of alpha-mangostin to a hydroxylated prenyl group in Garcinone D, was supported by the 13C NMR spectrum of Garcinone D, The benzylic methylene carbon of the prenyl group attached to ring B of alpha-mangostin at 26.6 (C-1'') was shielded to 21.4 in Garcinone D, Moreover, the vinylic carbons at 123.5 (C-2'') and 132.2 (C-3'') in alpha-mangostin were shielded to 44.4 and 70.8, respectively in Garcinone D, The 1H and 13C NMR assignments of Garcinone D, in CDCl are given (see experimental).
+
+The protons bonded to carbons were deduced from HSQC.
+
+The structure of Garcinone D, was further supported by isolated spin systems from COSY and long-range correlations Consolacion Y Ragasa et al Der Pharmacia Lettre, 2016, 8 (20):188-190.
+
+190 Scholar Research Library deduced from HMBC.
+
+Previous literature reported the 1H and 13C NMR data of Garcinone D, in acetone-d6 , DMSO-d6 , and CD3OD.
+
+However, to the best of our knowledge this is the first report on the 1H and 13C NMR data of Garcinone D, in CDCl.
+
+Garcinone D exhibited cytotoxicity against the HT-29 cell line with an ED50 value of 2. M and in an ELISA NF-B assay, Garcinone D, inhibited p65 activation with an IC50 value of 3. M.
+
+Garcinone D showed significant activity against CEM-SS cell line with an IC50 value of 3.2 g/mL.
+
+Garcinone D was found to possess inhibitory activity using a cell free, enzyme-based microsomal aromatase inhibition assay.
+
+Furthermore, SKBR breast cancer cells which are known to express high levels of aromatase were found to be inhibited by Garcinone D,
+
+Garcinone Disolated from the young fruit (7 weeks maturity) of Garcinia mangostana was also shown to exhibit cytotoxicity against epidermal carcinoma of the mouth (KB), breast cancer (BC-1), and small cell lung cancer (NCI-H187) with IC50 values of 3.56, 2.81 and 11.04 g/mL, respectively.
+
+Another study reported that Garcinone D, exhibited cytotoxicity to human nasopharyngeal carcinoma cell lines: CNE1 (IC50 = 16.
+
+M), CNE2 (IC50 = 9. M), SUNE (IC50 = 24.
+
+M) and HONE (IC50 = 16.
+
+M); human lung cancer cell lines: A549 (IC50 = 20.
+
+M) and GLC82 (IC50 = 16.
+
+M); human breast cancer cell line: MCF-7 (IC50 = 19.
+
+M); and human hepatic cancer cell line: Bel 7402 (IC50 = 16.
+
+M) , Furthermore, Garcinone D, showed bacteria neuraminidase inhibitory activity with an IC50 value of 2. M.
+
+. A research grant from the De La Salle University Science Foundation through the University Research Coordination Office is gratefully acknowledged.

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasSynonymPlantPart</Category>
+  <Tag1>Synonym<Name>dracontomelon dao</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>leaves</Name>
+    <Name>twigs</Name>
+    <Name>flowers</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>flowers of</Pattern>
+    <Pattern>twigs</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>alstonia scholaris</Name>
+  </Tag1>
+  <Tag2>Compound<Name>betaamyrin acetate</Name>
+    <Name>dichloromethane</Name>
+    <Name>beta-sitosteryl-3beta-glucopyranoside-6'-o-fatty acid</Name>
+    <Name>alpha-amyrin fatty acid esters</Name>
+    <Name>7-megastigmene,6,9-triol</Name>
+    <Name>spinacene</Name>
+    <Name>erythrodiol</Name>
+    <Name>3,28-beta-diacetoxy-5-olea-triterpene</Name>
+    <Name>beta-amyrin fatty acid esters</Name>
+    <Name>betulin</Name>
+    <Name>uvaol</Name>
+    <Name>1,2-dimethoxy-4-(2-propenyl)benzene</Name>
+    <Name>phytyl fatty acid esters</Name>
+    <Name>alpha-amyrin acetate</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>2a):ursolic acid</Name>
+    <Name>oleanolic acid</Name>
+    <Name>terpinyl acetate</Name>
+    <Name>lupeol fatty acid esters</Name>
+    <Name>megastigmane-3beta,4alpha,9-triol</Name>
+    <Name>3beta-hydroxy-24-nor-urs-4,12,28-triene</Name>
+    <Name>cycloeucalenol</Name>
+    <Name>ursolic</Name>
+    <Name>alstoprenylene</Name>
+    <Name>lupeol acetate</Name>
+    <Name>nor-urs-4,12-diene ester</Name>
+    <Name>9-methyl-5methylene-8-decen-2-one</Name>
+    <Name>beta-sitosteryl-3beta-glucopyranoside</Name>
+    <Name>lupeol</Name>
+    <Name>o-fatty acid</Name>
+    <Name>beta-sitosteryl-3betaglucopyranoside-6'-o-fatty acid</Name>
+    <Name>squalene</Name>
+    <Name>chlorophyll a</Name>
+    <Name>ursolic acid</Name>
+    <Name>2-(3-methyl-1,3-butadienyl)-1,3,3-trimethyl-1-cyclohexanol</Name>
+    <Name>ursolic acid lupeol acetate</Name>
+    <Name>nor-urs-4,12,2'-triene ester</Name>
+    <Name>cycloartanol</Name>
+    <Name>3a):alpha-amyrin acetate</Name>
+    <Name>linalool</Name>
+    <Name>alstoprenyol</Name>
+    <Name>alpha-amyrin</Name>
+    <Name>stigmasterol</Name>
+    <Name>3beta-hydroxy-24-nor-urs4,12,28-triene</Name>
+    <Name>beta-amyrin acetate</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>afforded mixtures of</Pattern>
+    <Pattern>yielded mixtures of</Pattern>
+  </Relation>
+</Seed>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasSynonymPlantPart</Category>
+  <Tag1>Synonym<Name>andrographis paniculata</Name>
+  </Tag1>
+  <Tag2>PlantPart<Name>stems</Name>
+    <Name>leaves</Name>
+    <Name>seed</Name>
+    <Name>bark</Name>
+    <Name>root</Name>
+    <Name>pods</Name>
+    <Name>roots</Name>
+    <Name>leaf</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>acid esters from</Pattern>
+    <Pattern>beta-sitosterol</Pattern>
+    <Pattern>diacylglycerols</Pattern>
+    <Pattern>dihydroxy-7,8-dimethoxyflavone</Pattern>
+    <Pattern>esters</Pattern>
+    <Pattern>esters from</Pattern>
+    <Pattern>lupeol</Pattern>
+    <Pattern>nees</Pattern>
+    <Pattern>paniculata</Pattern>
+    <Pattern>pods</Pattern>
+    <Pattern>roots</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>stigmasterol</Pattern>
+    <Pattern>triacylglycerols from</Pattern>
+  </Relation>
+</Seed>

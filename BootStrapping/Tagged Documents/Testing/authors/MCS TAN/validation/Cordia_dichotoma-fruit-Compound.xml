@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>fruit</Name>
+  </Tag1>
+  <Tag2>Compound<Name>pyrrolizidine</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>contain</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>stems</Pattern>
+    <Pattern>were isolated from</Pattern>
+  </Relation>
+</Seed>

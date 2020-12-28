@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>isLocatedIn</Category>
+  <Tag1>MedicinalPlant<Name>wax plants</Name>
+  </Tag1>
+  <Tag2>Location<Name>hoya</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>called</Pattern>
+  </Relation>
+</Seed>

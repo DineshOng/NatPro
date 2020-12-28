@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>Synonym<Name>cordia dichotoma</Name>
+  </Tag1>
+  <Tag2>Compound<Name>nervonyl 4hydroxy-trans-cinnamate ester</Name>
+    <Name>triacylglycerol</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>dichloromethane</Name>
+    <Name>beta-sitosteryl-3betaglucopyranoside-6'-o-palmitate</Name>
+    <Name>chlorophyll</Name>
+    <Name>apigenin</Name>
+    <Name>1,2-dilinoleoyl-3-linolenoylglycerol</Name>
+    <Name>betasitosteryl-3beta-glucopyranoside'-o-palmitate</Name>
+    <Name>rosmarinic acid</Name>
+    <Name>brine</Name>
+    <Name>chlorophyll a</Name>
+    <Name>glycosides</Name>
+    <Name>beta-sitosteryl-3beta-glucopyranoside-6'-o-palmitate</Name>
+    <Name>butanol</Name>
+    <Name>nervonyl 4-hydroxy-transcinnamate ester</Name>
+    <Name>nervonyl 4-hydroxy-trans-cinnamate ester</Name>
+    <Name>taxifolin</Name>
+    <Name>kaempferol</Name>
+    <Name>1,2dilinoleoyl-3linolenoylglycerol</Name>
+    <Name>alpha-sitosteryl-3alpha-glucopyranoside-6'-o-palmitate</Name>
+    <Name>betasitosteryl-3beta-glucopyranoside-6'-o-palmitate</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>attributed to</Pattern>
+    <Pattern>isolated from</Pattern>
+    <Pattern>led to</Pattern>
+    <Pattern>stems of</Pattern>
+    <Pattern>were isolated from</Pattern>
+  </Relation>
+</Seed>

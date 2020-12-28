@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>roots</Name>
+  </Tag1>
+  <Tag2>Compound<Name>lupeol cinnamate</Name>
+    <Name>bauerenol</Name>
+    <Name>dichloromethane</Name>
+    <Name>2-hydroxyethylbenzoate</Name>
+    <Name>alpha-amyrin fatty acid esters</Name>
+    <Name>taraxerol</Name>
+    <Name>fatty acid methyl esters</Name>
+    <Name>alpha-amyrin cinnamate</Name>
+    <Name>beta-amyrin fatty acid esters</Name>
+    <Name>oleanone</Name>
+    <Name>ursenone</Name>
+    <Name>betulin</Name>
+    <Name>taraxeryl acetate</Name>
+    <Name>lupenyl cinnamate</Name>
+    <Name>dihydrocanaric acid</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>alpha-amyrin acetate</Name>
+    <Name>lupeol fatty acid esters</Name>
+    <Name>lupeol acetate</Name>
+    <Name>lupeol</Name>
+    <Name>triglycerides</Name>
+    <Name>beta-amyrin cinnamate</Name>
+    <Name>squalene</Name>
+    <Name>lutein</Name>
+    <Name>chlorophyll a</Name>
+    <Name>lupenone</Name>
+    <Name>grape-vine</Name>
+    <Name>2-hydroxyethyl benzoate</Name>
+    <Name>beta-amyrin</Name>
+    <Name>alpha-amyrin</Name>
+    <Name>stigmasterol</Name>
+    <Name>beta-amyrin acetate</Name>
+    <Name>taraxerone</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>proposed as</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>was proposed as</Pattern>
+    <Pattern>were reported to</Pattern>
+  </Relation>
+</Seed>

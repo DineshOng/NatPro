@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasCompound</Category>
+  <Tag1>PlantPart<Name>seeds</Name>
+  </Tag1>
+  <Tag2>Compound<Name>podocarpusflavone a</Name>
+    <Name>dichloromethane</Name>
+    <Name>biflavone</Name>
+    <Name>daucosterol</Name>
+    <Name>oleic acid</Name>
+    <Name>chavicol beta-rutinoside</Name>
+    <Name>palmitic acid</Name>
+    <Name>saturated fatty acid</Name>
+    <Name>stigmasterol beta-dglucoside</Name>
+    <Name>hinokiflavone</Name>
+    <Name>lariciresinol</Name>
+    <Name>betasitosterol</Name>
+    <Name>beta-sitosterol beta-d-glucoside</Name>
+    <Name>phytyl fatty acid esters</Name>
+    <Name>beta-sitosterol</Name>
+    <Name>linoleic acid</Name>
+    <Name>triglycerides</Name>
+    <Name>squalene</Name>
+    <Name>glycerol</Name>
+    <Name>amentoflavone</Name>
+    <Name>naringenin</Name>
+    <Name>same fatty acids</Name>
+    <Name>the fatty acids</Name>
+    <Name>stigmasterol</Name>
+    <Name>beta-sitosteryl fatty acid esters</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>esterified to</Pattern>
+    <Pattern>soaked in</Pattern>
+    <Pattern>was ground in</Pattern>
+  </Relation>
+</Seed>

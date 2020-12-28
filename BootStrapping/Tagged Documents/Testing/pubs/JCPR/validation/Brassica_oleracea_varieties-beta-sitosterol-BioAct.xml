@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>hasBiologicalActivity</Category>
+  <Tag1>Compound<Name>beta-sitosterol</Name>
+  </Tag1>
+  <Tag2>BioAct<Name>anticancer</Name>
+    <Name>antibacterial</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>attributed to</Pattern>
+    <Pattern>exhibit</Pattern>
+    <Pattern>reported as</Pattern>
+    <Pattern>reported to</Pattern>
+    <Pattern>were reported to</Pattern>
+  </Relation>
+</Seed>

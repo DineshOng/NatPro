@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Category>belongsToFamily</Category>
+  <Tag1>Synonym<Name>cordia dichotoma</Name>
+  </Tag1>
+  <Tag2>Family<Name>boraginaceae</Name>
+  </Tag2>
+  <Relation>
+    <Pattern>belongs to</Pattern>
+    <Pattern>family</Pattern>
+    <Pattern>forst</Pattern>
+    <Pattern>forst belongs to</Pattern>
+  </Relation>
+</Seed>
