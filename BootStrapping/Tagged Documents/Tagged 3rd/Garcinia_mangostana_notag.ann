@@ -117,7 +117,6 @@ R1	hasSynonymPlantPart Arg1:T19 Arg2:T18
 R2	hasCompound Arg1:T18 Arg2:T17	
 R3	hasCompound Arg1:T18 Arg2:T16	
 R4	hasCompound Arg1:T18 Arg2:T15	
-T4	Compound 1078 1091	Garcinone Das
 T12	Compound 1008 1019	Garcinone D
 T20	Compound 977 988	garcinone D
 T21	Synonym 1177 1188	garcinone D
@@ -149,7 +148,6 @@ R21	hasCompound Arg1:T50 Arg2:T48
 R22	hasCompound Arg1:T50 Arg2:T49	
 R23	hasSynonymPlantPart Arg1:T56 Arg2:T55	
 T52	Compound 2205 2216	garcinone D
-R24	hasBiologicalActivity Arg1:T4 Arg2:T23	
 R25	hasCompound Arg1:T55 Arg2:T52	
 R26	hasSynonymPlantPart Arg1:T58 Arg2:T59	
 R27	hasBiologicalActivity Arg1:T22 Arg2:T29	
@@ -175,3 +173,5 @@ T80	BioAct 7496 7508	cytotoxicity
 R40	hasBiologicalActivity Arg1:T125 Arg2:T80	
 R41	treats Arg1:T126 Arg2:T68	
 R42	treats Arg1:T126 Arg2:T79	
+T4	Compound 1078 1089	Garcinone D
+R24	hasBiologicalActivity Arg1:T4 Arg2:T23	

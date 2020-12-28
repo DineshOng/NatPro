@@ -148,8 +148,6 @@ T163	Compound 8507 8531	3-acetylaleuritolic acid
 T164	ChemicalClass 8534 8544	Triterpene
 T165	Compound 8545 8570	3-acetyl aleuritolic acid
 T166	BioAct 8582 8595	antimicrobial
-T167	CellLine 8613 8622	S. aureus
-T168	CellLine 8627 8641	S. typhimurium
 T169	CellLine 8711 8723	O. gutturosa
 T170	Compound 8850 8861	polyprenols
 T171	Compound 8864 8877	triglycerides
@@ -200,7 +198,6 @@ R24	hasBiologicalActivity Arg1:T8 Arg2:T62
 R25	hasBiologicalActivity Arg1:T60 Arg2:T62	
 T9	BioAct 2253 2267	anti-bacterial
 R26	hasCompound Arg1:T65 Arg2:T63	
-R27	belongsToClass Arg1:T63 Arg2:T64	
 R28	hasBiologicalActivity Arg1:T63 Arg2:T9	
 R29	hasBiologicalActivity Arg1:T63 Arg2:T66	
 T95	Compound 2374 2397	4-seco-podocarpane-type
@@ -274,12 +271,10 @@ R94	hasCompound Arg1:T20 Arg2:T27
 R95	hasCompound Arg1:T20 Arg2:T28	
 T134	ChemicalClass 2398 2416	trinorditerpenoids
 R96	belongsToClass Arg1:T95 Arg2:T134	
-R67	affects Arg1:T166 Arg2:T167	
-R69	affects Arg1:T166 Arg2:T168	
-R86	affects Arg1:T133 Arg2:T169	
 T92	BioAct 8733 8743	inhibition
-T118	CellLine 8747 8767	DNA topoisomerase II
-R87	affects Arg1:T92 Arg2:T118	
 T143	BioAct 8777 8789	cytotoxicity
 T144	CellLine 8819 8823	A549
 R97	affects Arg1:T143 Arg2:T144	
+R27	belongsToClass Arg1:T63 Arg2:T64	
+R98	hasBiologicalActivity Arg1:T95 Arg2:T142	
+R99	hasBiologicalActivity Arg1:T67 Arg2:T142	

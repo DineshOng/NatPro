@@ -61,7 +61,6 @@ T65	Synonym 3308 3325	Cycas zambalensis
 T66	Synonym 3358 3374	Cycas riuminiana
 T67	Location 3537 3548	Philippines
 T68	Compound 3588 3604	isopimaran-19-ol
-T69	Compound 3614 3628	megasporophyll
 T70	Compound 3637 3665	9alphaH-isopimara-7,15-diene
 T71	Compound 3670 3686	triacylglycerols
 T72	PlantPart 3696 3700	bark
@@ -316,7 +315,6 @@ R22	hasSynonymPlantPart Arg1:T86 Arg2:T62
 R23	hasSynonymPlantPart Arg1:T86 Arg2:T309	
 R24	hasSynonymPlantPart Arg1:T86 Arg2:T72	
 R25	hasCompound Arg1:T72 Arg2:T68	
-R26	hasCompound Arg1:T72 Arg2:T69	
 R27	hasCompound Arg1:T72 Arg2:T70	
 R28	hasCompound Arg1:T72 Arg2:T71	
 R29	hasCompound Arg1:T309 Arg2:T73	
@@ -448,3 +446,6 @@ R146	isLocatedIn Arg1:T38 Arg2:T48
 R147	isLocatedIn Arg1:T55 Arg2:T48	
 R148	isLocatedIn Arg1:T56 Arg2:T48	
 R149	isLocatedIn Arg1:T57 Arg2:T48	
+T69	PlantPart 3614 3635	megasporophyll lamina
+R26	hasCompound Arg1:T69 Arg2:T68	
+R101	hasSynonymPlantPart Arg1:T86 Arg2:T69	

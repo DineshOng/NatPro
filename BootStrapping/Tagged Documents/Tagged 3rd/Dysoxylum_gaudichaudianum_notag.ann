@@ -691,3 +691,95 @@ T136	Illness 8066 8079	breast cancer
 T144	Illness 8089 8101	colon cancer
 T146	BioAct 10449 10461	cytotoxicity
 T148	BioAct 10516 10528	cytotoxicity
+R122	hasSynonymPlantPart Arg1:T143 Arg2:T142	
+R123	hasCompound Arg1:T142 Arg2:T137	
+R124	hasCompound Arg1:T142 Arg2:T138	
+R125	hasCompound Arg1:T142 Arg2:T139	
+R126	hasCompound Arg1:T142 Arg2:T140	
+R127	hasCompound Arg1:T142 Arg2:T141	
+R128	hasBiologicalActivity Arg1:T290 Arg2:T442	
+R129	hasBiologicalActivity Arg1:T291 Arg2:T442	
+R130	hasBiologicalActivity Arg1:T292 Arg2:T442	
+R131	hasBiologicalActivity Arg1:T293 Arg2:T442	
+R132	hasSynonymPlantPart Arg1:T295 Arg2:T296	
+R133	hasCompound Arg1:T295 Arg2:T290	
+R134	hasCompound Arg1:T295 Arg2:T291	
+R135	hasCompound Arg1:T295 Arg2:T292	
+R136	hasCompound Arg1:T295 Arg2:T293	
+R137	affects Arg1:T462 Arg2:T398	
+R138	hasBiologicalActivity Arg1:T430 Arg2:T590	
+R139	hasBiologicalActivity Arg1:T429 Arg2:T590	
+R140	hasBiologicalActivity Arg1:T428 Arg2:T590	
+R141	hasBiologicalActivity Arg1:T427 Arg2:T590	
+R142	hasSynonymPlantPart Arg1:T439 Arg2:T440	
+R143	hasCompound Arg1:T439 Arg2:T434	
+R144	hasCompound Arg1:T439 Arg2:T435	
+R145	hasCompound Arg1:T439 Arg2:T436	
+R146	hasCompound Arg1:T439 Arg2:T437	
+R147	hasBiologicalActivity Arg1:T458 Arg2:T463	
+T151	BioAct 20039 20048	cytotoxic
+R148	hasBiologicalActivity Arg1:T458 Arg2:T151	
+R149	hasBiologicalActivity Arg1:T459 Arg2:T151	
+R150	hasBiologicalActivity Arg1:T460 Arg2:T151	
+R151	hasBiologicalActivity Arg1:T461 Arg2:T151	
+R152	hasBiologicalActivity Arg1:T459 Arg2:T463	
+R153	hasBiologicalActivity Arg1:T460 Arg2:T463	
+R154	hasBiologicalActivity Arg1:T461 Arg2:T463	
+T153	BioAct 20110 20119	antitumor
+R155	hasBiologicalActivity Arg1:T464 Arg2:T153	
+R156	hasBiologicalActivity Arg1:T470 Arg2:T467	
+R157	affects Arg1:T467 Arg2:T472	
+R158	affects Arg1:T467 Arg2:T473	
+R159	affects Arg1:T467 Arg2:T474	
+T169	BioAct 21175 21187	cytotoxicity
+R160	hasBiologicalActivity Arg1:T481 Arg2:T169	
+R161	affects Arg1:T169 Arg2:T482	
+R162	affects Arg1:T169 Arg2:T483	
+R163	affects Arg1:T169 Arg2:T485	
+R164	hasCompound Arg1:T488 Arg2:T487	
+T178	BioAct 21470 21479	antitumor
+R165	hasBiologicalActivity Arg1:T487 Arg2:T178	
+T186	BioAct 22064 22076	cytotoxicity
+R166	hasBiologicalActivity Arg1:T498 Arg2:T186	
+R167	affects Arg1:T186 Arg2:T499	
+R168	affects Arg1:T186 Arg2:T500	
+R169	affects Arg1:T186 Arg2:T502	
+T196	BioAct 22706 22718	cytotoxicity
+R170	hasBiologicalActivity Arg1:T516 Arg2:T196	
+R171	affects Arg1:T196 Arg2:T517	
+R172	affects Arg1:T196 Arg2:T518	
+R173	affects Arg1:T196 Arg2:T520	
+R174	hasBiologicalActivity Arg1:T544 Arg2:T545	
+R175	hasBiologicalActivity Arg1:T543 Arg2:T545	
+R176	hasBiologicalActivity Arg1:T542 Arg2:T545	
+T217	BioAct 24890 24902	cytotoxicity
+T219	BioAct 24728 24737	cytotoxic
+R177	hasBiologicalActivity Arg1:T547 Arg2:T219	
+R178	hasBiologicalActivity Arg1:T550 Arg2:T217	
+R179	affects Arg1:T217 Arg2:T551	
+R180	affects Arg1:T217 Arg2:T553	
+R181	hasSynonymPlantPart Arg1:T562 Arg2:T563	
+R182	hasCompound Arg1:T562 Arg2:T556	
+R183	hasCompound Arg1:T562 Arg2:T557	
+R184	hasCompound Arg1:T562 Arg2:T558	
+R185	hasCompound Arg1:T562 Arg2:T559	
+T259	BioAct 25205 25214	cytotoxic
+R186	hasBiologicalActivity Arg1:T559 Arg2:T259	
+R187	hasBiologicalActivity Arg1:T558 Arg2:T259	
+R188	hasBiologicalActivity Arg1:T557 Arg2:T259	
+R189	hasBiologicalActivity Arg1:T556 Arg2:T259	
+R190	affects Arg1:T259 Arg2:T566	
+R191	affects Arg1:T259 Arg2:T567	
+R192	affects Arg1:T259 Arg2:T568	
+R193	affects Arg1:T259 Arg2:T569	
+R194	hasBiologicalActivity Arg1:T571 Arg2:T570	
+R195	hasBiologicalActivity Arg1:T572 Arg2:T570	
+R196	hasBiologicalActivity Arg1:T573 Arg2:T570	
+R197	hasBiologicalActivity Arg1:T574 Arg2:T570	
+R198	affects Arg1:T570 Arg2:T575	
+T260	BioAct 25791 25800	cytotoxic
+R199	hasBiologicalActivity Arg1:T580 Arg2:T260	
+R200	hasBiologicalActivity Arg1:T581 Arg2:T260	
+R201	hasBiologicalActivity Arg1:T582 Arg2:T260	
+R202	hasBiologicalActivity Arg1:T583 Arg2:T260	
+R203	affects Arg1:T260 Arg2:T585	
