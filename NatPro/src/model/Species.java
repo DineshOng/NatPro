@@ -11,6 +11,7 @@ public class Species {
 	ArrayList<SpeciesPart> speciesParts;
 	String genus;
 	String family;
+	String document;
 	Genus genusObj;
 
 	public Species(String specie) {
@@ -48,6 +49,14 @@ public class Species {
 
 	public void setFamily(String family) {
 		this.family = family;
+	}
+	
+	public String getDocument() {
+		return document;
+	}
+
+	public void setDocument(String document) {
+		this.document = document;
 	}
 	
 	public Genus getGenusObj() {

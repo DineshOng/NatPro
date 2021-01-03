@@ -162,6 +162,17 @@ public class AddPlantServlet extends HttpServlet {
 				// add object property MedicinalPlant -> Species
 				m.addObjectHasScientificName(commonPlantNameIndiv, speciesNameIndiv);
 
+				try {
+					// create individual for Document
+					String documentNameIndiv = request.getParameter("fileNameApprove").trim().toLowerCase()
+							.replaceAll(" ", "_");
+					m.addIndiv_Document(documentNameIndiv);
+					// add data property for Document individual
+					m.addDataPropDocument(request.getParameter("fileNameApprove").trim());
+					// add object property Species -> Document
+					m.addObjectFoundFromDocument(speciesNameIndiv, documentNameIndiv);
+				} catch (Exception e) {
+				}
 				if (!request.getParameter("genus").equals("")) { // check if genus is filled
 					String genusNameIndiv = request.getParameter("genus").trim().toLowerCase().replaceAll(" ", "_");
 					// create individual for Genus
@@ -178,7 +189,7 @@ public class AddPlantServlet extends HttpServlet {
 						m.addIndiv_Family(familyNameIndiv);
 						// add data property for Family individual
 						m.addDataPropFamily(request.getParameter("family").trim());
-
+						// add object property Genus -> Family
 						m.addObjectBelongsToFamily(genusNameIndiv, familyNameIndiv);
 					}
 				}
@@ -463,6 +474,7 @@ public class AddPlantServlet extends HttpServlet {
 				System.err.println("Failed to delete the file.");
 			}
 		}
+		System.gc();
 
 	}
 

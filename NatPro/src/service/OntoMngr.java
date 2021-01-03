@@ -25,18 +25,18 @@ public class OntoMngr {
 	public static String CLASS_Genus = "Genus";
 	public static String CLASS_Species = "Species";
 	public static String CLASS_SpeciesPart = "SpeciesPart";
-	
+
 	/* Compound Data properties */
 	public static String DP_Compound = "datatypeProperty_Compound";
 	public static String DP_Synonym = "datatypeProperty_CompoundSynonym";
-	
+
 	public static String DP_PubCID = "datatypeProperty_PubCID";
 	public static String DP_MolForm = "datatypeProperty_MolForm";
 	public static String DP_CanSMILES = "datatypeProperty_CanSMILES";
 	public static String DP_InChI = "datatypeProperty_InChI";
 	public static String DP_InChIkey = "datatypeProperty_InChIkey";
 	public static String DP_IUPACName = "datatypeProperty_IUPACName";
-	
+
 	public static String DP_MolWeight = "datatypeProperty_MolWeight";
 	public static String DP_XLogP = "datatypeProperty_XLogP";
 	public static String DP_Mass = "datatypeProperty_Mass";
@@ -47,7 +47,7 @@ public class OntoMngr {
 	public static String DP_HBondDonor = "datatypeProperty_HBondDonorCount";
 	public static String DP_HBondAcceptor = "datatypeProperty_HBondAcceptorCount";
 	public static String DP_RotatableBond = "datatypeProperty_RotatableBondCount";
-	
+
 	/* Object Properties */
 	public static String OP_hasBiologicalActivity = "hasBiologicalActivity";
 	public static String OP_affects = "affects";
@@ -74,25 +74,25 @@ public class OntoMngr {
 
 	// OWL Classes
 	private OWLClass medPlantClass, locationClass, speciesClass, genusClass, familyClass, speciesPartClass,
-	plantPartClass, compoundClass, biologicalActivityClass, cellLineClass, preparationClass, illnessClass;
+			plantPartClass, compoundClass, biologicalActivityClass, cellLineClass, preparationClass, illnessClass, documentClass;
 
 	// OWL Individual
 	private OWLNamedIndividual medPlantIndiv, locationIndiv, speciesIndiv, genusIndiv, familyIndiv, speciesPartIndiv,
-	plantPartIndiv, compoundIndiv, biologicalActivityIndiv, cellLineIndiv, preparationIndiv, illnessIndiv;
+			plantPartIndiv, compoundIndiv, biologicalActivityIndiv, cellLineIndiv, preparationIndiv, illnessIndiv, documentIndiv;
 
 	// OWLObjectProperty
 	OWLObjectProperty isLocatedIn, hasScientificName, belongsToGenus, belongsToFamily, hasChildPlantPart, hasPlantPart,
-	hasCompound, hasBiologicalActivity, affects, hasPreparation, treats, utilizedPart;
+			hasCompound, hasBiologicalActivity, affects, hasPreparation, treats, utilizedPart, foundFromDocument;
 
 	private String owlPath;
 
 	public OntoMngr() throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// loadOntology();
 		owlManager = OWLManager.createOWLOntologyManager();
-		
+
 //		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
 //		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl"); // user defined
-		
+
 		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro.owl"); // user defined
 
@@ -109,18 +109,16 @@ public class OntoMngr {
 
 		initializeClasses();
 
+		// addIndiv_Compound("nixon");
+		// addDataPropCompound("nixon");
 
-		//addIndiv_Compound("nixon");
-		//addDataPropCompound("nixon");
-
-		//changeDataProperty(Compound.DP_Compound, "hi", "nic");
-		//removeDataPropertyValue(Compound.DP_Compound, "nixon");
-
+		// changeDataProperty(Compound.DP_Compound, "hi", "nic");
+		// removeDataPropertyValue(Compound.DP_Compound, "nixon");
 
 	}
-	
+
 	public static String cleanString(String str) {
-		
+
 		str = str.toLowerCase();
 		str = str.replaceAll("\\s+", "_");
 		str = str.replaceAll(",+", ".");
@@ -128,7 +126,7 @@ public class OntoMngr {
 		str = str.replaceAll("&#946;", "beta");
 		str = str.replaceAll("&#947;", "gamma");
 		str = str.trim();
-		
+
 		return str;
 	}
 
@@ -154,73 +152,86 @@ public class OntoMngr {
 		String content = new String(Files.readAllBytes(path), charset);
 
 		/*
-		str1 = "<datatypeProperty_Compound rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">"+oldVal+"</datatypeProperty_Compound>";	
-		str2 = "<datatypeProperty_Compound rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">"+newVal+"</datatypeProperty_Compound>";
+		 * str1 =
+		 * "<datatypeProperty_Compound rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">"
+		 * +oldVal+"</datatypeProperty_Compound>"; str2 =
+		 * "<datatypeProperty_Compound rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">"
+		 * +newVal+"</datatypeProperty_Compound>"; content = content.replaceAll(str1,
+		 * str2);
+		 * 
+		 * str1 = "<datatypeProperty_Compound>"+oldVal+"</datatypeProperty_Compound>";
+		 * str2 = "<datatypeProperty_Compound>"+newVal+"</datatypeProperty_Compound>";
+		 * content = content.replaceAll(str1, str2);
+		 */
+
+		// Compound
+		String str1 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(oldVal)
+				+ "\"/>";
+		String str2 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(newVal)
+				+ "\"/>";
 		content = content.replaceAll(str1, str2);
 
-		str1 = "<datatypeProperty_Compound>"+oldVal+"</datatypeProperty_Compound>";
-		str2 = "<datatypeProperty_Compound>"+newVal+"</datatypeProperty_Compound>";
+		// Genus
+		str1 = "<belongsToGenus rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(oldVal)
+				+ "\"/>";
+		str2 = "<belongsToGenus rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(newVal)
+				+ "\"/>";
 		content = content.replaceAll(str1, str2);
-		 */
-		
-		//Compound
-		String str1 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
-		String str2 = "<hasCompound rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
+
+		// Family
+		str1 = "<belongsToFamily rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(oldVal)
+				+ "\"/>";
+		str2 = "<belongsToFamily rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(newVal)
+				+ "\"/>";
 		content = content.replaceAll(str1, str2);
-		
-		//Genus
-		str1 = "<belongsToGenus rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
-		str2 = "<belongsToGenus rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
+
+		// Scientific Name
+		str1 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(oldVal)
+				+ "\"/>";
+		str2 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(newVal)
+				+ "\"/>";
 		content = content.replaceAll(str1, str2);
-		
-		//Family
-		str1 = "<belongsToFamily rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
-		str2 = "<belongsToFamily rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
+
+		str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(oldVal)
+				+ "\">";
+		str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(newVal)
+				+ "\">";
 		content = content.replaceAll(str1, str2);
-		
-		//Scientific Name
-		str1 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\"/>";
-		str2 = "<hasScientificName rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\"/>";
-		content = content.replaceAll(str1, str2);
-		
-		
-		
-		str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"\">";
-		str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"\">";
-		content = content.replaceAll(str1, str2);
-		
 
 		Files.write(path, content.getBytes(charset));
 	}
-	
+
 	public void changeSpeciePartNameIndividual(String oldVal, String newVal) throws IOException {
 		Path path = Paths.get(owlPath);
 		Charset charset = StandardCharsets.UTF_8;
 
 		String content = new String(Files.readAllBytes(path), charset);
 
-		//Specie Part Indiv Name
-		String str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal)+"_";
-		String str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal)+"_";
+		// Specie Part Indiv Name
+		String str1 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"
+				+ cleanString(oldVal) + "_";
+		String str2 = "<owl:NamedIndividual rdf:about=\"http://www.owl-ontologies.com/PMPlants.owl#"
+				+ cleanString(newVal) + "_";
 		content = content.replaceAll(str1, str2);
-		
-		//Specie Part
-		str1 = "<hasChildPlantPart rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(oldVal);
-		str2 = "<hasChildPlantPart rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#"+cleanString(newVal);
+
+		// Specie Part
+		str1 = "<hasChildPlantPart rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(oldVal);
+		str2 = "<hasChildPlantPart rdf:resource=\"http://www.owl-ontologies.com/PMPlants.owl#" + cleanString(newVal);
 		content = content.replaceAll(str1, str2);
-		
 
 		Files.write(path, content.getBytes(charset));
 	}
-	
-	public void removeObjectPropertyValue(String indivName, String objPropName, String oldVal) throws OWLOntologyStorageException {
-		if(oldVal != null) {
+
+	public void removeObjectPropertyValue(String indivName, String objPropName, String oldVal)
+			throws OWLOntologyStorageException {
+		if (oldVal != null) {
 			OWLIndividual indiv = owlFact.getOWLNamedIndividual("#" + indivName.trim(), pm);
 			OWLIndividual oldIndiv = owlFact.getOWLNamedIndividual("#" + oldVal.trim(), pm);
-			//OWLObjectProperty objProp = owlFact.getOWLObjectProperty("#" + objPropName, pm);
-						
+			// OWLObjectProperty objProp = owlFact.getOWLObjectProperty("#" + objPropName,
+			// pm);
+
 			OWLObjectPropertyExpression objProp = owlFact.getOWLObjectProperty("#" + objPropName, pm);
-			
+
 			OWLObjectPropertyAssertionAxiom opa = owlFact.getOWLObjectPropertyAssertionAxiom(objProp, indiv, oldIndiv);
 			RemoveAxiom r = new RemoveAxiom(owlOntology, opa);
 			owlManager.applyChange(r);
@@ -228,54 +239,58 @@ public class OntoMngr {
 		}
 	}
 
-	public void removeDataPropertyValue(String indivName, String datapropName, String oldVal) throws OWLOntologyStorageException {
-		if(oldVal != null) {
+	public void removeDataPropertyValue(String indivName, String datapropName, String oldVal)
+			throws OWLOntologyStorageException {
+		if (oldVal != null) {
 			OWLIndividual indiv = owlFact.getOWLNamedIndividual("#" + indivName.trim(), pm);
 			OWLDataProperty dataprop = owlFact.getOWLDataProperty("#" + datapropName, pm);
-	
-			OWLDataPropertyAssertionAxiom dpa = owlFact.getOWLDataPropertyAssertionAxiom(dataprop, indiv, oldVal.trim());
+
+			OWLDataPropertyAssertionAxiom dpa = owlFact.getOWLDataPropertyAssertionAxiom(dataprop, indiv,
+					oldVal.trim());
 			RemoveAxiom r = new RemoveAxiom(owlOntology, dpa);
 			owlManager.applyChange(r);
 			owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 		}
 	}
 
-	public void changeDataProperty(OWLClass owlClass, String indivName, String datapropName, String oldVal, String newVal) throws OWLOntologyStorageException {
-		if(oldVal != null) {
+	public void changeDataProperty(OWLClass owlClass, String indivName, String datapropName, String oldVal,
+			String newVal) throws OWLOntologyStorageException {
+		if (oldVal != null) {
 			OWLIndividual indiv = owlFact.getOWLNamedIndividual("#" + indivName.trim(), pm);
 			OWLDataProperty dataprop = owlFact.getOWLDataProperty("#" + datapropName, pm);
-	
-			if(newVal.equals("") || newVal == null) {
+
+			if (newVal.equals("") || newVal == null) {
 				removeDataPropertyValue(indivName, datapropName, oldVal);
 			} else {
-				OWLDataPropertyAssertionAxiom dpa = owlFact.getOWLDataPropertyAssertionAxiom(dataprop, indiv, oldVal.trim());
+				OWLDataPropertyAssertionAxiom dpa = owlFact.getOWLDataPropertyAssertionAxiom(dataprop, indiv,
+						oldVal.trim());
 				RemoveAxiom r = new RemoveAxiom(owlOntology, dpa);
 				owlManager.applyChange(r);
-	
+
 				OWLDataPropertyRangeAxiom rangeAx = owlFact.getOWLDataPropertyRangeAxiom(dataprop, datatypeString);
 				owlManager.addAxiom(owlOntology, rangeAx);
-	
+
 				dpa = owlFact.getOWLDataPropertyAssertionAxiom(dataprop, indiv, newVal.trim());
 				OWLAxiom aDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataprop, owlClass);
 				owlManager.addAxiom(owlOntology, aDataProp);
-	
+
 				owlManager.addAxiom(owlOntology, dpa);
 				owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 			}
 		}
 	}
-	
-    public void deleteMedicinalPlant(String oldMedPlant) throws OWLOntologyStorageException {
-        //Remove old plant
-        medPlantClass = owlFact.getOWLClass("#MedicinalPlant", pm);
-        medPlantIndiv = owlFact.getOWLNamedIndividual("#" + oldMedPlant, pm);
-        classAssertion = owlFact.getOWLClassAssertionAxiom(medPlantClass, medPlantIndiv);
-            
-        OWLEntityRemover remove = new OWLEntityRemover(owlManager, Collections.singleton(owlOntology));
-        medPlantIndiv.accept(remove);
-        owlManager.applyChanges(remove.getChanges());
-        owlManager.saveOntology(owlOntology);
-    }
+
+	public void deleteMedicinalPlant(String oldMedPlant) throws OWLOntologyStorageException {
+		// Remove old plant
+		medPlantClass = owlFact.getOWLClass("#MedicinalPlant", pm);
+		medPlantIndiv = owlFact.getOWLNamedIndividual("#" + oldMedPlant, pm);
+		classAssertion = owlFact.getOWLClassAssertionAxiom(medPlantClass, medPlantIndiv);
+
+		OWLEntityRemover remove = new OWLEntityRemover(owlManager, Collections.singleton(owlOntology));
+		medPlantIndiv.accept(remove);
+		owlManager.applyChanges(remove.getChanges());
+		owlManager.saveOntology(owlOntology);
+	}
 
 	public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
 		OntoMngr m = new OntoMngr();
@@ -393,9 +408,18 @@ public class OntoMngr {
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
 
+	public void addIndiv_Document(String document) throws OWLOntologyCreationException, OWLOntologyStorageException {
+		// Creating Individual
+		documentClass = owlFact.getOWLClass("#Document", pm);
+		documentIndiv = owlFact.getOWLNamedIndividual("#" + document, pm);
+		classAssertion = owlFact.getOWLClassAssertionAxiom(documentClass, documentIndiv);
+		owlManager.addAxiom(owlOntology, classAssertion);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+
 	// ADD DATATYPE PROPERTY
 	public void addDataPropMedPlant(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_MedicinalPlant", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -410,7 +434,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropLocation(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Location", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -425,7 +449,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropSpecies(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Synonym", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -440,7 +464,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropGenus(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Genus", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -455,7 +479,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropFamily(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Family", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -470,7 +494,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropPlantPart(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_PlantPart", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -485,7 +509,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_Compound, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -500,7 +524,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_Synonym(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_Synonym, pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
 			owlManager.addAxiom(owlOntology, rangeAxiom);
@@ -514,7 +538,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_PubCID(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_PubCID, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -529,7 +553,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_MolForm(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_MolForm, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -544,7 +568,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_MolWeight(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_MolWeight, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -559,7 +583,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_CanSMILES(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_CanSMILES, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -574,7 +598,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_InChI(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_InChI, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -589,7 +613,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_InChIkey(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_InChIkey, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -604,7 +628,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_IUPACName(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_IUPACName, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -619,7 +643,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_XLogP(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_XLogP, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -634,7 +658,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_Mass(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_Mass, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -649,7 +673,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_TPSA(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_TPSA, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -664,7 +688,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_Complexity(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_Complexity, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -679,7 +703,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_Charge(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_Charge, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -694,7 +718,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_HBondDonorCount(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_HBondDonor, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -709,7 +733,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_HBondAcceptorCount(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_HBondAcceptor, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -724,7 +748,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCompound_RotatableBondCount(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			dataProp = owlFact.getOWLDataProperty("#" + DP_RotatableBond, pm);
 
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -739,12 +763,13 @@ public class OntoMngr {
 	}
 
 	public void addDataPropBiologicalActivity(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_BiologicalActivity", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
 			owlManager.addAxiom(owlOntology, rangeAxiom);
-			dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, biologicalActivityIndiv, Value.trim());
+			dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, biologicalActivityIndiv,
+					Value.trim());
 			axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, biologicalActivityClass);
 			owlManager.addAxiom(owlOntology, axiomDataProp);
 
@@ -754,7 +779,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropCellLine(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_CellLine", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -769,7 +794,7 @@ public class OntoMngr {
 	}
 
 	public void addDataPropPreparation(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Preparation", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
@@ -784,13 +809,28 @@ public class OntoMngr {
 	}
 
 	public void addDataPropIllness(String Value) throws OWLOntologyStorageException {
-		if(!Value.equals("")) {
+		if (!Value.equals("")) {
 			// Creating Data Property, Range, and Value
 			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Illness", pm);
 			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
 			owlManager.addAxiom(owlOntology, rangeAxiom);
 			dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, illnessIndiv, Value.trim());
 			axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, illnessClass);
+			owlManager.addAxiom(owlOntology, axiomDataProp);
+
+			owlManager.addAxiom(owlOntology, dataPropAssertion);
+			owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+		}
+	}
+
+	public void addDataPropDocument(String Value) throws OWLOntologyStorageException {
+		if (!Value.equals("")) {
+			// Creating Data Property, Range, and Value
+			dataProp = owlFact.getOWLDataProperty("#datatypeProperty_Document", pm);
+			rangeAxiom = owlFact.getOWLDataPropertyRangeAxiom(dataProp, datatypeString);
+			owlManager.addAxiom(owlOntology, rangeAxiom);
+			dataPropAssertion = owlFact.getOWLDataPropertyAssertionAxiom(dataProp, documentIndiv, Value.trim());
+			axiomDataProp = owlFact.getOWLDataPropertyDomainAxiom(dataProp, documentClass);
 			owlManager.addAxiom(owlOntology, axiomDataProp);
 
 			owlManager.addAxiom(owlOntology, dataPropAssertion);
@@ -920,7 +960,16 @@ public class OntoMngr {
 		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
 	}
 	
-	
+	public void addObjectFoundFromDocument(String species, String document) throws OWLOntologyStorageException {
+		speciesIndiv = owlFact.getOWLNamedIndividual("#" + species, pm);
+		documentIndiv = owlFact.getOWLNamedIndividual("#" + document, pm);
+		foundFromDocument = owlFact.getOWLObjectProperty("#foundFromDocument", pm);
+		objectAssertion = owlFact.getOWLObjectPropertyAssertionAxiom(foundFromDocument, speciesIndiv, documentIndiv);
+		axiomObjectProp = new AddAxiom(owlOntology, objectAssertion);
+		owlManager.applyChange(axiomObjectProp);
+		owlManager.saveOntology(owlOntology, IRI.create(owlFile));
+	}
+
 	public OWLClass getMedPlantClass() {
 		return medPlantClass;
 	}
@@ -1016,6 +1065,5 @@ public class OntoMngr {
 	public void setIllnessIndiv(String illnessIndiv) {
 		this.illnessIndiv = owlFact.getOWLNamedIndividual("#" + illnessIndiv, pm);
 	}
-
 
 }

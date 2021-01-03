@@ -83,15 +83,6 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#foundFromDocument -->
-
-    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#foundFromDocument">
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Species"/>
-        <rdfs:range rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Document"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.owl-ontologies.com/PMPlants.owl#hasBiologicalActivity -->
 
     <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#hasBiologicalActivity">
@@ -285,15 +276,6 @@
 
     <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Contraindication">
         <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#MedicinalPlant"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Document -->
-
-    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/PMPlants.owl#datatypeProperty_Document">
-        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/PMPlants.owl#Document"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -544,12 +526,6 @@
     <!-- http://www.owl-ontologies.com/PMPlants.owl#CompoundClass -->
 
     <owl:Class rdf:about="http://www.owl-ontologies.com/PMPlants.owl#CompoundClass"/>
-    
-
-
-    <!-- http://www.owl-ontologies.com/PMPlants.owl#Document -->
-
-    <owl:Class rdf:about="http://www.owl-ontologies.com/PMPlants.owl#Document"/>
     
 
 

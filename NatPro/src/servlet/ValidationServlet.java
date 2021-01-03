@@ -556,8 +556,7 @@ public class ValidationServlet extends HttpServlet {
 		} catch (org.xml.sax.SAXException e) {
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 }

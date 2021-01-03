@@ -11,10 +11,6 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Varela+Round"
 	rel="stylesheet">
 <link rel="stylesheet"
@@ -24,7 +20,10 @@
 <link rel="stylesheet" type="text/css"
 	href="DataTables/datatables.min.css" />
 <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
 <link href="css/autocomplete.css" type="text/css" rel="stylesheet"
 	media="screen,projection" />
 <title>NatPro : ${searchKey}</title>
@@ -122,8 +121,8 @@
 			id="chemCompTab" data-toggle="list" href="#chemComp" role="tab"
 			aria-controls="ChemicalCompounds">Chemical Compound(s)</a> <a
 			class="list-group-item list-group-item-action list-group-item-success"
-			id="photoTab" data-toggle="list" href="#photos" role="tab"
-			aria-controls="Photos">Photos</a>
+			id="refTab" data-toggle="list" href="#ref" role="tab"
+			aria-controls="Reference">Reference</a>
 	</div>
 	<div class="tab-content" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="taxInfo" role="tabpanel"
@@ -574,9 +573,45 @@
 				</table>
 			</div>
 		</div>
-		<div class="tab-pane fade" id="photos" role="tabpanel"
-			aria-labelledby="list-settings-list">...</div>
+
+		<div class="tab-pane fade" id="ref" role="tabpanel"
+			aria-labelledby="list-settings-list">
+			<div class="d-flex justify-content-center mt-5 pb-5">
+				<c:if
+					test="${not empty medPlantsList.get(0).getSpecies().get(0).getDocument()}">
+					<button type="button" class="btn btn-primary btn-sm"
+						data-toggle="modal" data-target="#docuModal"
+						onclick="viewDocument('${medPlantsList.get(0).getSpecies().get(0).getDocument()}')">View
+						Document</button>
+				</c:if>
+			</div>
+		</div>
+		<!-- Document Modal -->
+		<div class="modal fade" id="docuModal" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="docuModalLabel">Document</h5>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe id="documentIframe" class="embed-responsive-item" src=""></iframe>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<!-- INCLUDE FOOTER HTML -->
 	<%@include file="_includeFooter.html"%>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -591,9 +626,23 @@
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 		crossorigin="anonymous"></script>
 	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 		crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+	    function viewDocument(docu) {
+	    	var entryDocument = "\\NatPro\\Documents\\UploadedDocuments\\"+docu;
+	    	var modalIframe = document.getElementById('documentIframe');
+	    	
+	    	if (entryDocument != null) {
+	    		console.log(entryDocument);
+	    		modalIframe.src = entryDocument;
+	    	} else {
+	    		modalIframe.src = '';
+	    	}
+	    }
+	</script>
 
 	<script>
 	$(function () {
