@@ -1534,11 +1534,14 @@ public class OntoQuery {
 		Species searchSpecie = new Species(specie);
 
 		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
-		RDFProperty belongsToGenus = owlModel.getRDFProperty("belongsToGenus");
-		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
 		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
 		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
-
+		RDFProperty datatypeProperty_Document = owlModel.getRDFProperty("datatypeProperty_Document");
+		
+		RDFProperty belongsToGenus = owlModel.getRDFProperty("belongsToGenus");
+		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
+		RDFProperty foundFromDocument = owlModel.getRDFProperty("foundFromDocument");
+	
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
 		for (Iterator it = classes.iterator(); it.hasNext();) {
 			OWLNamedClass cls = (OWLNamedClass) it.next();
@@ -1559,6 +1562,11 @@ public class OntoQuery {
 
 							}
 						} catch (Exception e) { // if no genus, disregard then proceed
+						}
+						try {
+							OWLIndividual docuIndiv = (OWLIndividual) specieIndiv.getPropertyValue(foundFromDocument);
+							searchSpecie.setDocument(docuIndiv.getPropertyValue(datatypeProperty_Document).toString());
+						}catch (Exception e) {
 						}
 
 						searchSpecie.setSpeciesParts(getSpeciesPartList(specieIndiv));
