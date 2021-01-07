@@ -384,7 +384,7 @@
 											<td><a
 												href="ViewCompoundServlet?compound=${compoundsList.getCompoundName()}">${compoundsList.getCompoundNameHTML()}</a></td>
 											<td>${bioActsList.getBiologicalActivity()}</td>
-											<td>${bioActsList.getCellLine().getCellLine()}</td>
+											<td><a href="https://www.google.com/search?q=${bioActsList.getCellLine().getCellLine()}" target="_blank">${bioActsList.getCellLine().getCellLine()}</a></td>
 										</tr>
 									</c:forEach>
 								</c:forEach>
