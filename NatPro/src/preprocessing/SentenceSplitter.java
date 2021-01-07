@@ -65,6 +65,7 @@ public class SentenceSplitter {
         
         sstext = sstext.replaceAll(" \\. ", ".\n\n");
         
+        sstext = sstext.replaceFirst("^.*?[\\.!\\?](?:\\s|$)\\n", "");
 
         endTime = System.nanoTime ();
         System.err.println("[Sentence Splitter] Duration: "+ ((double)(endTime - startTime)) / 1000000 + " ms");
