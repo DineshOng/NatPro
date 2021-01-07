@@ -84,7 +84,13 @@ public class ViewPlantServlet extends HttpServlet {
 		OntoQuery q = new OntoQuery();
 		try {
 			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
-			request.setAttribute("medPlantsList", medPlants);
+			List<MedicinalPlant> medPlants2 = new ArrayList<>();
+			for (MedicinalPlant m : medPlants) {
+				if (m.getMedicinalPlant().equalsIgnoreCase(searchKey))
+					medPlants2.add(m);
+			}
+
+			request.setAttribute("medPlantsList", medPlants2);
 		} catch (Exception e) {
 		}
 //		List<String> photos = new FlickrService(searchKey).getPhotoURL();
