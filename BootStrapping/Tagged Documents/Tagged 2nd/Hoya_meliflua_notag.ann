@@ -154,6 +154,11 @@ T158	Compound 6568 6577	taraxerol
 T159	Compound 6583 6599	lupeol cinnamate
 T160	PlantPart 6609 6614	stems
 T161	Synonym 6618 6635	Hoya diversifolia
+R82	hasCompound Arg1:T143 Arg2:T142	
+R83	hasCompound Arg1:T146 Arg2:T144	
+R84	hasCompound Arg1:T146 Arg2:T145	
+R85	hasSynonymPlantPart Arg1:T161 Arg2:T160	
+R86	hasSynonymPlantPart Arg1:T161 Arg2:T154	
 T163	Synonym 6702 6717	Hoya cumingiana
 T164	Compound 6732 6738	lupeol
 T165	Compound 6740 6755	beta-sitosterol

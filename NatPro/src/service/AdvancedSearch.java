@@ -141,15 +141,16 @@ public class AdvancedSearch {
 			
 			List<Preparation> preps = mp.getPreparations();
 			
-			if((preps.size() == 0 || preps == null) && illness != null) {
+
+			if(illness != null && (preps == null)) {
 				continue;
 			} 
 			
-			if((preps.size() != 0 || preps != null) && illness != null) {
+			if(illness != null && (preps.size() != 0 || preps != null)) {
 				for(Preparation prep : preps) {
 					List<String> ills = prep.getIllness();
 					//System.err.println("and this is crazy");
-					
+				
 					if((ills.size() != 0 || ills != null) && illness != null) {
 						for(String ill : ills) {
 							if(ill.toLowerCase().contains(illness.toLowerCase())) {
