@@ -44,7 +44,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 		case "/ViewGenusServlet":
 			try {
 				viewGenus(request, response);
-			} catch (OntologyLoadException | ServletException | IOException | FlickrException | SQWRLException e1) {
+			} catch (OntologyLoadException | ServletException | IOException | SQWRLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
@@ -53,7 +53,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 		case "/ViewFamilyServlet":
 			try {
 				viewFamily(request, response);
-			} catch (SQWRLException | OntologyLoadException | ServletException | IOException | FlickrException e) {
+			} catch (SQWRLException | OntologyLoadException | ServletException | IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -75,7 +75,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 	}
 
 	private void viewGenus(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException, FlickrException, SQWRLException {
+			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		String genus = request.getParameter("genus");
 		// TODO Auto-generated method stub
 		OntoQuery q = new OntoQuery();
@@ -107,7 +107,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 	}
 
 	private void viewFamily(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException, FlickrException, SQWRLException {
+			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		String family = request.getParameter("family");
 		// TODO Auto-generated method stub
 		OntoQuery q = new OntoQuery();

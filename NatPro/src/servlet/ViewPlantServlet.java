@@ -48,7 +48,7 @@ public class ViewPlantServlet extends HttpServlet {
 		case "/ViewPlantServlet":
 			try {
 				viewPlant(request, response);
-			} catch (SQWRLException | OntologyLoadException | ServletException | IOException | FlickrException e1) {
+			} catch (SQWRLException | OntologyLoadException | ServletException | IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
@@ -56,7 +56,7 @@ public class ViewPlantServlet extends HttpServlet {
 		case "/ViewSciPlantServlet":
 			try {
 				viewSciPlant(request, response);
-			} catch (OntologyLoadException | ServletException | IOException | FlickrException | SQWRLException e) {
+			} catch (OntologyLoadException | ServletException | IOException | SQWRLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -78,7 +78,7 @@ public class ViewPlantServlet extends HttpServlet {
 	}
 
 	private void viewPlant(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException, FlickrException, SQWRLException {
+			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("medPlant");
 		OntoQuery q = new OntoQuery();
@@ -137,7 +137,7 @@ public class ViewPlantServlet extends HttpServlet {
 	}
 
 	private void viewSciPlant(HttpServletRequest request, HttpServletResponse response)
-			throws OntologyLoadException, ServletException, IOException, FlickrException, SQWRLException {
+			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		// TODO Auto-generated method stub
 
 		String specieKey = request.getParameter("specie");
