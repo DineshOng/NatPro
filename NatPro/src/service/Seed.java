@@ -14,32 +14,32 @@ public class Seed {
 
 	public void generateSeed(OntoQuery q) throws OntologyLoadException, SQWRLException {
 
-//		genMPWithSyn(q);
-//		
-//		genMPWithLoc(q);
-//		genMPWithGenus(q);
-//		genMPWithFamily(q);
-//		genMPWithPart(q);
-//		genMPWithComp(q);
-//		genMPWithPrep(q);
-//		
-//		genSynWithLoc(q);
-//		genSynWithGenus(q);
-//		genSynWithFamily(q);
-//		genSynWithPart(q);
-//		genSynWithComp(q);
-//
-//		genGenusWithFamily(q);	
-//		
-//		genPrepWithIllness(q);
-//		genPrepWithPlantPart(q);
-//
-//		genPartWithIllness(q);
-//		genPartWithCompound(q);
-//
-//		genCompWithBioAct(q);
-//		genBioActWithCell(q);
-//		genCompWithCellLine(q);
+		genMPWithSyn(q);
+		
+		genMPWithLoc(q);
+		genMPWithGenus(q);
+		genMPWithFamily(q);
+		genMPWithPart(q);
+		genMPWithComp(q);
+		genMPWithPrep(q);
+		
+		genSynWithLoc(q);
+		genSynWithGenus(q);
+		genSynWithFamily(q);
+		genSynWithPart(q);
+		genSynWithComp(q);
+
+		genGenusWithFamily(q);	
+		
+		genPrepWithIllness(q);
+		genPrepWithPlantPart(q);
+
+		genPartWithIllness(q);
+		genPartWithCompound(q);
+
+		genCompWithBioAct(q);
+		genBioActWithCell(q);
+		genCompWithCellLine(q);
 
 	}
 

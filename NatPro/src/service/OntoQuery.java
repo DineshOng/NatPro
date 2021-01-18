@@ -43,7 +43,7 @@ public class OntoQuery {
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
 
-	public List<String> getAllMedPlantNames() throws SQWRLException {
+	public List<String> getAllMedPlantNames(){
 		List<String> values = new ArrayList<String>();
 
 		RDFProperty datatypeProperty_MedicinalPlant = owlModel.getRDFProperty("datatypeProperty_MedicinalPlant");
@@ -69,7 +69,7 @@ public class OntoQuery {
 		return values;
 	}
 
-	public List<String> getAllSynonyms() throws SQWRLException {
+	public List<String> getAllSynonyms() {
 		List<String> values = new ArrayList<String>();
 
 		RDFProperty datatypeProperty_Synonym = owlModel.getRDFProperty("datatypeProperty_Synonym");
@@ -92,7 +92,7 @@ public class OntoQuery {
 		return values;
 	}
 
-	public List<String> getAllGenus() throws SQWRLException {
+	public List<String> getAllGenus() {
 		List<String> values = new ArrayList<String>();
 
 		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
@@ -115,7 +115,7 @@ public class OntoQuery {
 		return values;
 	}
 
-	public List<String> getAllLocations() throws SQWRLException {
+	public List<String> getAllLocations() {
 		List<String> values = new ArrayList<String>();
 
 		RDFProperty datatypeProperty_Location = owlModel.getRDFProperty("datatypeProperty_Location");
@@ -140,7 +140,7 @@ public class OntoQuery {
 		return values;
 	}
 
-	public List<String> getAllFamily() throws SQWRLException {
+	public List<String> getAllFamily() {
 		List<String> values = new ArrayList<String>();
 
 		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
@@ -884,37 +884,6 @@ public class OntoQuery {
 								values.add(plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString());
 							}
 
-						}
-					} catch (Exception e) {
-					}
-				}
-			}
-
-		}
-
-		return values;
-	}
-
-	public List<String> getPreparationPlantPartIllness(String preparation) throws SQWRLException {
-		List<String> values = new ArrayList<String>();
-		RDFProperty datatypeProperty_Preparation = owlModel.getRDFProperty("datatypeProperty_Preparation");
-		RDFProperty datatypeProperty_PlantPart = owlModel.getRDFProperty("datatypeProperty_PlantPart");
-
-		RDFProperty utilizedPart = owlModel.getRDFProperty("utilizedPart");
-
-		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
-		for (Iterator it = classes.iterator(); it.hasNext();) {
-			OWLNamedClass cls = (OWLNamedClass) it.next();
-			Collection instances = cls.getInstances(false);
-			if (cls.getBrowserText().contentEquals("Preparation")) {
-				for (Iterator jt = instances.iterator(); jt.hasNext();) {
-					try {
-						OWLIndividual individual = (OWLIndividual) jt.next();
-						// find the genus
-						if (preparation.equalsIgnoreCase(
-								individual.getPropertyValue(datatypeProperty_Preparation).toString())) {
-							OWLIndividual plantPartIndiv = (OWLIndividual) individual.getPropertyValue(utilizedPart);
-							values.add(plantPartIndiv.getPropertyValue(datatypeProperty_PlantPart).toString());
 						}
 					} catch (Exception e) {
 					}

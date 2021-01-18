@@ -44,7 +44,7 @@ public class SearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
 //		try {
 //			browse(request, response);
 //		} catch (OntologyLoadException | SQWRLException e) {
@@ -132,12 +132,13 @@ public class SearchServlet extends HttpServlet {
 		request.setAttribute("searchCategory", request.getParameter("searchCategory"));
 
 		request.setAttribute("searchKey", searchKey);
-		
+
 		request.getRequestDispatcher("searchresults.jsp").forward(request, response);
 //		System.out.println(medPlants.get(0));
 	}
-	
-	private void browse(HttpServletRequest request, HttpServletResponse response) throws OntologyLoadException, ServletException, IOException, SQWRLException {
+
+	private void browse(HttpServletRequest request, HttpServletResponse response)
+			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		String searchKey = "";
 		System.out.println("hehe" + request.getParameter("searchCategory"));
 		OntoQuery q = new OntoQuery();
@@ -149,9 +150,8 @@ public class SearchServlet extends HttpServlet {
 			List<String> species = new ArrayList<String>();
 			try {
 				species = q.getAllSynonyms();
-			} catch (SQWRLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (Exception e) {
+
 			}
 			request.setAttribute("speciesList", species);
 		} else if (request.getParameter("searchCategory").equals("3")) {
@@ -168,16 +168,10 @@ public class SearchServlet extends HttpServlet {
 			request.setAttribute("locList", locList);
 		}
 
-//		for(MedicinalPlant m: medPlants) {
-//			System.out.println(m.getMedicinalPlant().toString());
-//		}
-
 		request.setAttribute("searchCategory", request.getParameter("searchCategory"));
 
-		//request.setAttribute("searchKey", searchKey);
-		
 		request.getRequestDispatcher("searchresults.jsp").forward(request, response);
-//		System.out.println(medPlants.get(0));
+
 	}
 
 }
