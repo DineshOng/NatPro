@@ -247,15 +247,22 @@ public class AddPlantServlet extends HttpServlet {
 											String bioAct = request
 													.getParameter("bioAct[" + i + "][" + j + "][" + k + "]");
 											if (!bioAct.equals("")) {
+												String cellLine = request
+														.getParameter("cellLine[" + i + "][" + j + "][" + k + "]");
 												String bioActIndiv = bioAct.trim().toLowerCase().replaceAll(" ", "_");
+												if (!cellLine.equals("")) {
+													String cellLineIndiv1 = cellLine.trim().toLowerCase().replaceAll(" ",
+															"_");
+													bioActIndiv = bioActIndiv + "_on_"+cellLineIndiv1;
+												}
+												
 												// create individual for BiologicalActivity
 												m.addIndiv_BiologicalActivity(bioActIndiv);
 												// add data property for BiologicalActivity individual
 												m.addDataPropBiologicalActivity(bioAct);
 												// add object property Compound -> BiologicalActivity
 												m.addObjectHasBiologicalActivity(compoundIndiv, bioActIndiv);
-												String cellLine = request
-														.getParameter("cellLine[" + i + "][" + j + "][" + k + "]");
+												
 												if (!cellLine.equals("")) {
 													String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ",
 															"_");

@@ -16,6 +16,7 @@ import com.flickr4java.flickr.FlickrException;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
+import model.BiologicalActivity;
 import model.Compound;
 import model.Family;
 import model.Genus;
@@ -123,6 +124,9 @@ public class SearchServlet extends HttpServlet {
 		} else if (request.getParameter("searchCategory").equals("6")) {
 			List<String> locList = q.searchLocations(searchKey);
 			request.setAttribute("locList", locList);
+		} else if (request.getParameter("searchCategory").equals("7")) {
+			List<BiologicalActivity> bioActList = q.searchBiologicalActivity(searchKey);
+			request.setAttribute("bioActList", bioActList);
 		}
 
 //		for(MedicinalPlant m: medPlants) {
@@ -166,6 +170,9 @@ public class SearchServlet extends HttpServlet {
 		} else if (request.getParameter("searchCategory").equals("6")) {
 			List<String> locList = q.getAllLocations();
 			request.setAttribute("locList", locList);
+		} else if (request.getParameter("searchCategory").equals("7")) {
+			List<BiologicalActivity> bioActList = q.searchBiologicalActivity(searchKey);
+			request.setAttribute("bioActList", bioActList);
 		}
 
 		request.setAttribute("searchCategory", request.getParameter("searchCategory"));

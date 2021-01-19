@@ -146,9 +146,28 @@ td {
 						<c:forEach items="${locList}" var="locs">
 							<tr>
 								<td class="hid"><a></a></td>
-								<td><a
-									href="ViewLocationServlet?location=${locs}">${locs}</a></td>
+								<td><a href="ViewLocationServlet?location=${locs}">${locs}</a></td>
 
+							</tr>
+						</c:forEach>
+					</tbody>
+				</c:when>
+
+				<c:when test="${searchCategory =='7'}">
+					<thead>
+						<tr>
+							<th class="hid"></th>
+							<th>Biological Activity</th>
+							<th>Cell Line</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${bioActList}" var="bioActs">
+							<tr>
+								<td class="hid"><a></a></td>
+								<td><a
+									href="ViewBiologicalActivityServlet?bioact=${bioActs.getBiologicalActivity()}&cellline=${bioActs.getCellLine().getCellLine()}">${bioActs.getBiologicalActivity()}</a></td>
+								<td><a href="https://www.google.com/search?q=${bioActs.getCellLine().getCellLine()}" target="_blank">${bioActs.getCellLine().getCellLine()}</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

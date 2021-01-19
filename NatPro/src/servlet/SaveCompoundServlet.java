@@ -176,7 +176,14 @@ public class SaveCompoundServlet extends HttpServlet {
 						String bioAct = (String)obj.get("bioAct");
 						System.out.println(bioAct);
 						
+						String cellLine = (String)obj.get("cellLine");
+						System.out.println(cellLine);
+						
 						String bioActIndiv = bioAct.trim().toLowerCase().replaceAll(" ", "_");
+						if (!cellLine.equals("")) {
+							String cellLineIndiv1 = cellLine.trim().toLowerCase().replaceAll(" ", "_");
+							bioActIndiv = bioActIndiv + "_on_"+cellLineIndiv1;
+						}
 						// create individual for BiologicalActivity
 						ontoMngr.addIndiv_BiologicalActivity(bioActIndiv);
 						// add data property for BiologicalActivity individual
@@ -184,8 +191,7 @@ public class SaveCompoundServlet extends HttpServlet {
 						// add object property Compound -> BiologicalActivity
 						ontoMngr.addObjectHasBiologicalActivity(compound.getCompoundOWL(), bioActIndiv);
 						
-						String cellLine = (String)obj.get("cellLine");
-						System.out.println(cellLine);
+						
 						
 						if (!cellLine.equals("")) {
 							String cellLineIndiv = cellLine.trim().toLowerCase().replaceAll(" ", "_");

@@ -43,7 +43,7 @@ public class OntoQuery {
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
 
-	public List<String> getAllMedPlantNames(){
+	public List<String> getAllMedPlantNames() {
 		List<String> values = new ArrayList<String>();
 
 		RDFProperty datatypeProperty_MedicinalPlant = owlModel.getRDFProperty("datatypeProperty_MedicinalPlant");
@@ -1055,6 +1055,67 @@ public class OntoQuery {
 
 	}
 
+	public List<String> getBioActCompound(String BioAct, String CellLine) throws SQWRLException {
+		List<String> values = new ArrayList<String>();
+		RDFProperty datatypeProperty_BiologicalActivity = owlModel
+				.getRDFProperty("datatypeProperty_BiologicalActivity");
+		RDFProperty datatypeProperty_Compound = owlModel.getRDFProperty("datatypeProperty_Compound");
+		RDFProperty datatypeProperty_CellLine = owlModel.getRDFProperty("datatypeProperty_CellLine");
+
+		RDFProperty hasBiologicalActivity = owlModel.getRDFProperty("hasBiologicalActivity");
+		RDFProperty affects = owlModel.getRDFProperty("affects");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("Compound")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual individual = (OWLIndividual) jt.next();
+						Collection bioActs = individual.getPropertyValues(hasBiologicalActivity);
+
+						for (Iterator kt = bioActs.iterator(); kt.hasNext();) {
+							OWLIndividual bioActIndiv = (OWLIndividual) kt.next();
+							try {
+								if (BioAct.equalsIgnoreCase(
+										bioActIndiv.getPropertyValue(datatypeProperty_BiologicalActivity).toString())) {
+
+									if (!CellLine.isEmpty()) {
+										try {
+											OWLIndividual cellLineIndiv = (OWLIndividual) bioActIndiv
+													.getPropertyValue(affects);
+											if (CellLine.equalsIgnoreCase(cellLineIndiv
+													.getPropertyValue(datatypeProperty_CellLine).toString())) {
+
+												values.add(individual.getPropertyValue(datatypeProperty_Compound)
+														.toString());
+//											System.out.println(individual.getPropertyValue(datatypeProperty_Compound).toString());
+											}
+										} catch (Exception e) {
+										}
+
+									} else {
+										values.add(individual.getPropertyValue(datatypeProperty_Compound).toString());
+//									System.out.println(individual.getPropertyValue(datatypeProperty_Compound).toString());
+									}
+								}
+							} catch (Exception e) {
+
+							}
+
+						}
+					} catch (Exception e) {
+					}
+				}
+			}
+
+		}
+
+		return values;
+
+	}
+
 	public List<String> getCompoundCell(String compound) throws SQWRLException {
 
 		List<String> values = new ArrayList<String>();
@@ -1081,7 +1142,8 @@ public class OntoQuery {
 								OWLIndividual bioActIndiv = (OWLIndividual) kt.next();
 								try {
 									OWLIndividual cellIndiv = (OWLIndividual) bioActIndiv.getPropertyValue(affects);
-									System.out.println(cellIndiv.getPropertyValue(datatypeProperty_CellLine).toString());
+									System.out
+											.println(cellIndiv.getPropertyValue(datatypeProperty_CellLine).toString());
 									values.add(cellIndiv.getPropertyValue(datatypeProperty_CellLine).toString());
 								} catch (Exception e) {
 //									values.add(bioActIndiv.getBrowserText().replaceAll("_", " "));
@@ -1506,11 +1568,11 @@ public class OntoQuery {
 		RDFProperty datatypeProperty_Genus = owlModel.getRDFProperty("datatypeProperty_Genus");
 		RDFProperty datatypeProperty_Family = owlModel.getRDFProperty("datatypeProperty_Family");
 		RDFProperty datatypeProperty_Document = owlModel.getRDFProperty("datatypeProperty_Document");
-		
+
 		RDFProperty belongsToGenus = owlModel.getRDFProperty("belongsToGenus");
 		RDFProperty belongsToFamily = owlModel.getRDFProperty("belongsToFamily");
 		RDFProperty foundFromDocument = owlModel.getRDFProperty("foundFromDocument");
-	
+
 		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
 		for (Iterator it = classes.iterator(); it.hasNext();) {
 			OWLNamedClass cls = (OWLNamedClass) it.next();
@@ -1535,7 +1597,7 @@ public class OntoQuery {
 						try {
 							OWLIndividual docuIndiv = (OWLIndividual) specieIndiv.getPropertyValue(foundFromDocument);
 							searchSpecie.setDocument(docuIndiv.getPropertyValue(datatypeProperty_Document).toString());
-						}catch (Exception e) {
+						} catch (Exception e) {
 						}
 
 						searchSpecie.setSpeciesParts(getSpeciesPartList(specieIndiv));
@@ -1591,11 +1653,11 @@ public class OntoQuery {
 				} catch (Exception e) {
 					System.err.println("No Genus");
 				}
-				
+
 				try {
 					OWLIndividual doc = (OWLIndividual) sciNameIndiv.getPropertyValue(foundFromDocument);
 					sp.setDocument(doc.getPropertyValue(datatypeProperty_Document).toString());
-				}catch(Exception e) {
+				} catch (Exception e) {
 					System.err.println("No Document");
 				}
 //				System.out.println(sp.getSpecie());
@@ -1788,6 +1850,46 @@ public class OntoQuery {
 							} catch (Exception e) {
 							}
 							values.add(genusClass);
+						}
+					} catch (Exception e) {
+//						System.out.println("Exception here");
+					}
+				}
+			}
+
+		}
+		return values;
+	}
+
+	public List<BiologicalActivity> searchBiologicalActivity(String bioAct) {
+		List<BiologicalActivity> values = new ArrayList<BiologicalActivity>();
+
+		RDFProperty datatypeProperty_BiologicalActivity = owlModel
+				.getRDFProperty("datatypeProperty_BiologicalActivity");
+		RDFProperty datatypeProperty_CellLine = owlModel.getRDFProperty("datatypeProperty_CellLine");
+		RDFProperty affects = owlModel.getRDFProperty("affects");
+
+		Collection classes = owlModel.getUserDefinedOWLNamedClasses();
+		for (Iterator it = classes.iterator(); it.hasNext();) {
+			OWLNamedClass cls = (OWLNamedClass) it.next();
+			Collection instances = cls.getInstances(false);
+			if (cls.getBrowserText().contentEquals("BiologicalActivity")) {
+				for (Iterator jt = instances.iterator(); jt.hasNext();) {
+					try {
+						OWLIndividual bioActIndiv = (OWLIndividual) jt.next();
+						String bioActValue = bioActIndiv.getPropertyValue(datatypeProperty_BiologicalActivity)
+								.toString();
+						if (bioActValue.toLowerCase().contains(bioAct.toLowerCase())) {
+							BiologicalActivity bioActClass = new BiologicalActivity(bioActValue);
+							try {
+								OWLIndividual cellLineIndiv = (OWLIndividual) bioActIndiv.getPropertyValue(affects);
+								String cellLineValue = cellLineIndiv.getPropertyValue(datatypeProperty_CellLine)
+										.toString();
+								CellLine cellLineClass = new CellLine(cellLineValue);
+								bioActClass.setCellLine(cellLineClass);
+							} catch (Exception e) {
+							}
+							values.add(bioActClass);
 						}
 					} catch (Exception e) {
 //						System.out.println("Exception here");
