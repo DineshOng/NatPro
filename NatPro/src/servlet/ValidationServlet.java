@@ -138,9 +138,14 @@ public class ValidationServlet extends HttpServlet {
 				while (mIt.hasNext()) {
 					MedicinalPlant m = mIt.next();
 					try {
-						if (m.getSpecies().get(0).getSpecie().equalsIgnoreCase(sciName)) {
+						if (m.getSpecies().get(0).getSpecie().equalsIgnoreCase(sciName) ) {
 							jsonEntry = new Gson().toJson(m);
 						}
+						if ((!m.getMedicinalPlant().equalsIgnoreCase(sciName)) && m.getSpecies().get(0).getSpecie().equalsIgnoreCase(sciName)) {
+							jsonEntry = new Gson().toJson(m);
+							break;
+						}
+						System.out.println(jsonEntry);
 					} catch (Exception e) {
 
 					}
