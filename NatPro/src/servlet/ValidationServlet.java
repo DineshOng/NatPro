@@ -33,7 +33,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.flickr4java.flickr.FlickrException;
 import com.google.gson.Gson;
 
 import edu.stanford.smi.protege.exception.OntologyLoadException;
