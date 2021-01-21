@@ -1,4 +1,5 @@
 import com.google.common.collect.ArrayListMultimap;
+
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
@@ -73,6 +74,7 @@ public class Main {
 
 
 
+        long BStart = System.nanoTime();
 
 
         for(File xmlFile : listFiles) {
@@ -731,8 +733,11 @@ public class Main {
 
             }//end of seeds loop
 
-
+            System.out.println("Finish Reading document :"+ xmlFile.getName());
         }//End of file[] Loop
+        long BEnd = System.nanoTime();
+        long BTime = BEnd-BStart;
+        System.out.println("Bootstrapping Finished Elapsed Time: " + BTime);
     }
 
     /*=============================

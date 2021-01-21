@@ -3,57 +3,7 @@
   <Category>hasCompound</Category>
   <Tag1>Synonym<Name>bothrops venom</Name>
   </Tag1>
-  <Tag2>Compound<Name>2,6-dimethoxy-4-(2-propenyl)-phenol</Name>
-    <Name>carboxylic acid</Name>
-    <Name>dichloromethane</Name>
-    <Name>dimethylsulfoxide</Name>
-    <Name>2,6-dimethoxyphenol</Name>
-    <Name>2,5-dimethyl-4-hydroxy-3(2h)-furanone</Name>
-    <Name>brucine</Name>
-    <Name>3,5-dimethoxy-4-hydroxyphenylacetic acid</Name>
-    <Name>24-methylenecycloartanol</Name>
-    <Name>trihydroxybenzene 2-methoxy-4-vinylphenol</Name>
-    <Name>ester heptadecanoic acid</Name>
-    <Name>aspartate</Name>
-    <Name>100control</Name>
-    <Name>burnamicine</Name>
-    <Name>xcontrol</Name>
-    <Name>beta-sitosterol</Name>
-    <Name>nonanoic acid</Name>
-    <Name>strictamin</Name>
-    <Name>ursolic acid</Name>
-    <Name>beta-amyrin</Name>
-    <Name>hexadecanoate</Name>
-    <Name>rauvomitin</Name>
-    <Name>sulforhodamine b</Name>
-    <Name>1,1-diphenyl-2-picrylhydrazyl</Name>
-    <Name>ester hexadecanoic acid ethyl ester</Name>
-    <Name>campesterol</Name>
-    <Name>echitamine</Name>
-    <Name>unsaturated fatty acid</Name>
-    <Name>creatinine</Name>
-    <Name>dimethyl sulfoxide</Name>
-    <Name>betasitosterol</Name>
-    <Name>methanol</Name>
-    <Name>2-ethenyl</Name>
-    <Name>alanine</Name>
-    <Name>atropine</Name>
-    <Name>phenolic acid strictamin</Name>
-    <Name>fatty acid esters</Name>
-    <Name>hexadecanonic acid methyl ester</Name>
-    <Name>echitovenidine</Name>
-    <Name>fatty acids</Name>
-    <Name>gamma-sitosterol</Name>
-    <Name>lupeol</Name>
-    <Name>carboxylic acid cyclohexylbenzene</Name>
-    <Name>venenatine</Name>
-    <Name>monosaccharides</Name>
-    <Name>3-ethylpyridine</Name>
-    <Name>acetylcholine</Name>
-    <Name>beta-sitosteryl-beta-d-glucoside</Name>
-    <Name>stigmasterol</Name>
-    <Name>superoxide</Name>
-    <Name>alstonerine</Name>
+  <Tag2>Compound<Name>lupeol</Name>
   </Tag2>
   <Relation>
     <Pattern>be rich in</Pattern>
@@ -61,11 +11,9 @@
     <Pattern>composed primarily of</Pattern>
     <Pattern>discovered to</Pattern>
     <Pattern>done on</Pattern>
-    <Pattern>extracted with</Pattern>
     <Pattern>found to</Pattern>
     <Pattern>is used in</Pattern>
     <Pattern>known as</Pattern>
-    <Pattern>leaves extracted with</Pattern>
     <Pattern>measured by</Pattern>
     <Pattern>prepared at</Pattern>
     <Pattern>reconstituted in</Pattern>

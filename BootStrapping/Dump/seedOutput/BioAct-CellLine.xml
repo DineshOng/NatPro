@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Tag1>BioAct</Tag1>
+  <Tag2>CellLine</Tag2>
+  <Relation>
+    <Pattern>commemorate</Pattern>
+    <Pattern>gave</Pattern>
+    <Pattern>give</Pattern>
+    <Pattern>immortalized</Pattern>
+  </Relation>
+</Seed>

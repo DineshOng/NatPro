@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Seed>
   <Category>hasSynonymPlantPart</Category>
-  <Tag1>Synonym<Name>grewia lasiocarpa</Name>
+  <Tag1>Synonym<Name>alstonia macrophylla</Name>
   </Tag1>
-  <Tag2>PlantPart<Name>bark</Name>
+  <Tag2>PlantPart<Name>leaf</Name>
+    <Name>bark</Name>
   </Tag2>
   <Relation>
     <Pattern>avenue</Pattern>
@@ -16,13 +17,11 @@
     <Pattern>culture of</Pattern>
     <Pattern>department</Pattern>
     <Pattern>department of</Pattern>
-    <Pattern>isolated from</Pattern>
     <Pattern>japan</Pattern>
     <Pattern>laboratory center for</Pattern>
     <Pattern>linis</Pattern>
     <Pattern>machikaneyama</Pattern>
     <Pattern>macrophylla</Pattern>
-    <Pattern>majority of</Pattern>
     <Pattern>malabed</Pattern>
     <Pattern>npv</Pattern>
     <Pattern>objective of</Pattern>
@@ -41,6 +40,5 @@
     <Pattern>university</Pattern>
     <Pattern>wall</Pattern>
     <Pattern>was to</Pattern>
-    <Pattern>were isolated from</Pattern>
   </Relation>
 </Seed>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Seed>
+  <Tag1>PlantPart</Tag1>
+  <Tag2>Compound</Tag2>
+  <Relation>
+    <Pattern>use</Pattern>
+    <Pattern>using</Pattern>
+    <Pattern>yield</Pattern>
+    <Pattern>yielded</Pattern>
+  </Relation>
+</Seed>

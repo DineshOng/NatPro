@@ -4,55 +4,35 @@
   <Tag1>PlantPart<Name>bark</Name>
   </Tag1>
   <Tag2>Compound<Name>dichloromethane</Name>
-    <Name>dimethylsulfoxide</Name>
-    <Name>omethylmacralstonine</Name>
-    <Name>16-hydroxy-n4-demethylalstophyllal</Name>
-    <Name>brucine</Name>
-    <Name>o-acetylmacralstonine</Name>
-    <Name>24-methylenecycloartanol</Name>
-    <Name>alstophyllal</Name>
-    <Name>dimethyl sulfoxide</Name>
-    <Name>16-hydroxyalstonisine</Name>
-    <Name>betasitosterol</Name>
-    <Name>villalstonine</Name>
-    <Name>methanol</Name>
-    <Name>macraistonine</Name>
-    <Name>macrocarpamine</Name>
-    <Name>fatty acids</Name>
     <Name>6-oxoalstophyllal</Name>
     <Name>6-oxoalstophylline</Name>
+    <Name>brucine</Name>
     <Name>gamma-sitosterol</Name>
     <Name>alstohentine</Name>
     <Name>10,11-dimethoxynareline</Name>
     <Name>lupeol</Name>
-    <Name>pleiocarpamine</Name>
     <Name>alstomaline</Name>
     <Name>strictamin</Name>
+    <Name>24-methylenecycloartanol</Name>
     <Name>alstomicine</Name>
-    <Name>ursolic acid</Name>
+    <Name>alstophyllal</Name>
+    <Name>dimethyl sulfoxide</Name>
+    <Name>16-hydroxyalstonisine</Name>
     <Name>beta-amyrin</Name>
+    <Name>methanol</Name>
     <Name>rauvomitin</Name>
-    <Name>sulforhodamine b</Name>
-    <Name>1,1-diphenyl-2-picrylhydrazyl</Name>
     <Name>acetylcholine</Name>
     <Name>beta-sitosteryl-beta-d-glucoside</Name>
-    <Name>talcarpine</Name>
     <Name>stigmasterol</Name>
-    <Name>superoxide</Name>
     <Name>alstonerine</Name>
     <Name>campesterol</Name>
   </Tag2>
   <Relation>
-    <Pattern>done on</Pattern>
-    <Pattern>extracted with</Pattern>
     <Pattern>followed by</Pattern>
     <Pattern>is used in</Pattern>
     <Pattern>known as</Pattern>
-    <Pattern>measured by</Pattern>
     <Pattern>soaking</Pattern>
     <Pattern>used in</Pattern>
-    <Pattern>was measured by</Pattern>
-    <Pattern>were done on</Pattern>
     <Pattern>yielded</Pattern>
   </Relation>
 </Seed>

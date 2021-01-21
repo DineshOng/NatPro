@@ -438,7 +438,6 @@
     <Pattern>alstonia find of</Pattern>
     <Pattern>alstonia find to</Pattern>
     <Pattern>alstonia for</Pattern>
-    <Pattern>alstonia from</Pattern>
     <Pattern>alstonia g for</Pattern>
     <Pattern>alstonia g of</Pattern>
     <Pattern>alstonia g to</Pattern>
@@ -523,8 +522,6 @@
     <Pattern>alstonia ionization-mass for</Pattern>
     <Pattern>alstonia ionization-mass of</Pattern>
     <Pattern>alstonia ionization-mass to</Pattern>
-    <Pattern>alstonia isolated from</Pattern>
-    <Pattern>alstonia isolated of</Pattern>
     <Pattern>alstonia lab for</Pattern>
     <Pattern>alstonia lab of</Pattern>
     <Pattern>alstonia lab to</Pattern>
@@ -544,7 +541,6 @@
     <Pattern>alstonia lung of</Pattern>
     <Pattern>alstonia lung to</Pattern>
     <Pattern>alstonia macrophylla for</Pattern>
-    <Pattern>alstonia macrophylla from</Pattern>
     <Pattern>alstonia macrophylla of</Pattern>
     <Pattern>alstonia macrophylla to</Pattern>
     <Pattern>alstonia malabed for</Pattern>
@@ -1074,7 +1070,6 @@
     <Pattern>bark find of</Pattern>
     <Pattern>bark find to</Pattern>
     <Pattern>bark for</Pattern>
-    <Pattern>bark from</Pattern>
     <Pattern>bark g for</Pattern>
     <Pattern>bark g of</Pattern>
     <Pattern>bark g to</Pattern>
@@ -1159,8 +1154,6 @@
     <Pattern>bark ionization-mass for</Pattern>
     <Pattern>bark ionization-mass of</Pattern>
     <Pattern>bark ionization-mass to</Pattern>
-    <Pattern>bark isolated from</Pattern>
-    <Pattern>bark isolated of</Pattern>
     <Pattern>bark lab for</Pattern>
     <Pattern>bark lab of</Pattern>
     <Pattern>bark lab to</Pattern>
@@ -1180,7 +1173,6 @@
     <Pattern>bark lung of</Pattern>
     <Pattern>bark lung to</Pattern>
     <Pattern>bark macrophylla for</Pattern>
-    <Pattern>bark macrophylla from</Pattern>
     <Pattern>bark macrophylla of</Pattern>
     <Pattern>bark macrophylla to</Pattern>
     <Pattern>bark malabed for</Pattern>
@@ -1394,7 +1386,6 @@
     <Pattern>be find of</Pattern>
     <Pattern>be find to</Pattern>
     <Pattern>be for</Pattern>
-    <Pattern>be from</Pattern>
     <Pattern>be g for</Pattern>
     <Pattern>be g of</Pattern>
     <Pattern>be g to</Pattern>
@@ -1479,8 +1470,6 @@
     <Pattern>be ionization-mass for</Pattern>
     <Pattern>be ionization-mass of</Pattern>
     <Pattern>be ionization-mass to</Pattern>
-    <Pattern>be isolated from</Pattern>
-    <Pattern>be isolated of</Pattern>
     <Pattern>be lab for</Pattern>
     <Pattern>be lab of</Pattern>
     <Pattern>be lab to</Pattern>
@@ -1500,7 +1489,6 @@
     <Pattern>be lung of</Pattern>
     <Pattern>be lung to</Pattern>
     <Pattern>be macrophylla for</Pattern>
-    <Pattern>be macrophylla from</Pattern>
     <Pattern>be macrophylla of</Pattern>
     <Pattern>be macrophylla to</Pattern>
     <Pattern>be malabed for</Pattern>
@@ -5506,7 +5494,6 @@
     <Pattern>corner find of</Pattern>
     <Pattern>corner find to</Pattern>
     <Pattern>corner for</Pattern>
-    <Pattern>corner from</Pattern>
     <Pattern>corner g for</Pattern>
     <Pattern>corner g of</Pattern>
     <Pattern>corner g to</Pattern>
@@ -5591,8 +5578,6 @@
     <Pattern>corner ionization-mass for</Pattern>
     <Pattern>corner ionization-mass of</Pattern>
     <Pattern>corner ionization-mass to</Pattern>
-    <Pattern>corner isolated from</Pattern>
-    <Pattern>corner isolated of</Pattern>
     <Pattern>corner lab for</Pattern>
     <Pattern>corner lab of</Pattern>
     <Pattern>corner lab to</Pattern>
@@ -5612,7 +5597,6 @@
     <Pattern>corner lung of</Pattern>
     <Pattern>corner lung to</Pattern>
     <Pattern>corner macrophylla for</Pattern>
-    <Pattern>corner macrophylla from</Pattern>
     <Pattern>corner macrophylla of</Pattern>
     <Pattern>corner macrophylla to</Pattern>
     <Pattern>corner malabed for</Pattern>
@@ -13607,20 +13591,6 @@
     <Pattern>ionization-mass was for</Pattern>
     <Pattern>ionization-mass was of</Pattern>
     <Pattern>ionization-mass was to</Pattern>
-    <Pattern>isolate</Pattern>
-    <Pattern>isolate from</Pattern>
-    <Pattern>isolate isolated from</Pattern>
-    <Pattern>isolate isolated of</Pattern>
-    <Pattern>isolate macrophylla from</Pattern>
-    <Pattern>isolate macrophylla of</Pattern>
-    <Pattern>isolate of</Pattern>
-    <Pattern>isolated</Pattern>
-    <Pattern>isolated from</Pattern>
-    <Pattern>isolated isolated from</Pattern>
-    <Pattern>isolated isolated of</Pattern>
-    <Pattern>isolated macrophylla from</Pattern>
-    <Pattern>isolated macrophylla of</Pattern>
-    <Pattern>isolated of</Pattern>
     <Pattern>japan</Pattern>
     <Pattern>japan C for</Pattern>
     <Pattern>japan C of</Pattern>
@@ -16268,7 +16238,6 @@
     <Pattern>macrophylla find of</Pattern>
     <Pattern>macrophylla find to</Pattern>
     <Pattern>macrophylla for</Pattern>
-    <Pattern>macrophylla from</Pattern>
     <Pattern>macrophylla g for</Pattern>
     <Pattern>macrophylla g of</Pattern>
     <Pattern>macrophylla g to</Pattern>
@@ -16353,8 +16322,6 @@
     <Pattern>macrophylla ionization-mass for</Pattern>
     <Pattern>macrophylla ionization-mass of</Pattern>
     <Pattern>macrophylla ionization-mass to</Pattern>
-    <Pattern>macrophylla isolated from</Pattern>
-    <Pattern>macrophylla isolated of</Pattern>
     <Pattern>macrophylla lab for</Pattern>
     <Pattern>macrophylla lab of</Pattern>
     <Pattern>macrophylla lab to</Pattern>
@@ -16374,7 +16341,6 @@
     <Pattern>macrophylla lung of</Pattern>
     <Pattern>macrophylla lung to</Pattern>
     <Pattern>macrophylla macrophylla for</Pattern>
-    <Pattern>macrophylla macrophylla from</Pattern>
     <Pattern>macrophylla macrophylla of</Pattern>
     <Pattern>macrophylla macrophylla to</Pattern>
     <Pattern>macrophylla malabed for</Pattern>
@@ -16469,13 +16435,6 @@
     <Pattern>macrophylla was for</Pattern>
     <Pattern>macrophylla was of</Pattern>
     <Pattern>macrophylla was to</Pattern>
-    <Pattern>majority</Pattern>
-    <Pattern>majority from</Pattern>
-    <Pattern>majority isolated from</Pattern>
-    <Pattern>majority isolated of</Pattern>
-    <Pattern>majority macrophylla from</Pattern>
-    <Pattern>majority macrophylla of</Pattern>
-    <Pattern>majority of</Pattern>
     <Pattern>malabed</Pattern>
     <Pattern>malabed C for</Pattern>
     <Pattern>malabed C of</Pattern>
@@ -24811,7 +24770,6 @@
     <Pattern>tree find of</Pattern>
     <Pattern>tree find to</Pattern>
     <Pattern>tree for</Pattern>
-    <Pattern>tree from</Pattern>
     <Pattern>tree g for</Pattern>
     <Pattern>tree g of</Pattern>
     <Pattern>tree g to</Pattern>
@@ -24896,8 +24854,6 @@
     <Pattern>tree ionization-mass for</Pattern>
     <Pattern>tree ionization-mass of</Pattern>
     <Pattern>tree ionization-mass to</Pattern>
-    <Pattern>tree isolated from</Pattern>
-    <Pattern>tree isolated of</Pattern>
     <Pattern>tree lab for</Pattern>
     <Pattern>tree lab of</Pattern>
     <Pattern>tree lab to</Pattern>
@@ -24917,7 +24873,6 @@
     <Pattern>tree lung of</Pattern>
     <Pattern>tree lung to</Pattern>
     <Pattern>tree macrophylla for</Pattern>
-    <Pattern>tree macrophylla from</Pattern>
     <Pattern>tree macrophylla of</Pattern>
     <Pattern>tree macrophylla to</Pattern>
     <Pattern>tree malabed for</Pattern>
@@ -26592,13 +26547,6 @@
     <Pattern>was was for</Pattern>
     <Pattern>was was of</Pattern>
     <Pattern>was was to</Pattern>
-    <Pattern>were</Pattern>
-    <Pattern>were from</Pattern>
-    <Pattern>were isolated from</Pattern>
-    <Pattern>were isolated of</Pattern>
-    <Pattern>were macrophylla from</Pattern>
-    <Pattern>were macrophylla of</Pattern>
-    <Pattern>were of</Pattern>
     <Pattern>x-ray</Pattern>
     <Pattern>x-ray C for</Pattern>
     <Pattern>x-ray C of</Pattern>

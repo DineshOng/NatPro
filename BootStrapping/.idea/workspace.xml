@@ -17,11 +17,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="642" column="73" selection-start-line="642" selection-start-column="73" selection-end-line="642" selection-end-column="73" />
+            <state relative-caret-position="3304">
+              <caret line="739" column="50" selection-start-line="739" selection-start-column="50" selection-end-line="739" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44455">
+              <caret line="2700" selection-start-line="2700" selection-end-line="2700" />
             </state>
           </provider>
         </entry>
@@ -71,9 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>class1</find>
-      <find>POSTAGGER</find>
-      <find>seedMap.put</find>
       <find>addMap</find>
       <find>addRelation</find>
       <find>seedMap</find>
@@ -101,6 +107,9 @@
       <find>transformer</find>
       <find>addcategory</find>
       <find>list</find>
+      <find>preprocessing</find>
+      <find>treeset</find>
+      <find>time</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -131,7 +140,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="593" />
+    <option name="y" value="-11" />
     <option name="width" value="1377" />
     <option name="height" value="959" />
   </component>
@@ -257,9 +267,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30170575" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32462686" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -268,7 +277,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -398,7 +407,6 @@
     <state x="34" y="23" key="new project wizard/0.23.1280.732@0.23.1280.732" timestamp="1582638934534" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/validation/6931da59fd9c497e637927048ea454df-leaves-Compound.xml" />
     <entry file="file://$PROJECT_DIR$/validation/5ad2f694f6bd8ca27d7092adf86c3ba0-flowers-Compound.xml" />
     <entry file="file://$PROJECT_DIR$/validation/6931da59fd9c497e637927048ea454df-duranta erecta-PlantPart.xml" />
     <entry file="file://$PROJECT_DIR$/SeedsPossible/Synonym-Family.txt">
@@ -442,12 +450,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-balaniu-Preparation.xml" />
     <entry file="file://$PROJECT_DIR$/validation/8e357cc515603c147bd71bd6dfad1cca-yerba buena-Preparation.xml" />
-    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-PlantPart.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Location.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-PlantPart.xml" />
+    <entry file="file://$PROJECT_DIR$/seedOutput/Synonym-Location.xml" />
     <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-kayumanis-Preparation.xml" />
     <entry file="file://$PROJECT_DIR$/validation/1aafb6cfc01a874531a6cfaee2c35c0d-aequous extract of acalypha hispida leaves suggest trypanocidal effect-Preparation.xml" />
     <entry file="file://$PROJECT_DIR$/validation/5ad2f694f6bd8ca27d7092adf86c3ba0-gargle for stronger teeth and prevent cavities-Preparation.xml" />
@@ -460,22 +464,23 @@
     <entry file="file://$PROJECT_DIR$/TaggedSample/935ef8690c1123ce7a9b13f82bc11f03.xml" />
     <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-3-acetyl aleuritolic acid-CellLine.xml" />
     <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-acetone-CellLine.xml" />
-    <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-aleurites moluccana-Family.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-3-acetyl aleuritolic acid-BioAct.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seedOutput/BioAct-CellLine.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-aleurites moluccana-Family.xml" />
+    <entry file="file://$PROJECT_DIR$/validation/Aleurites_moluccana-3-acetyl aleuritolic acid-BioAct.xml" />
+    <entry file="file://$PROJECT_DIR$/seedOutput/BioAct-CellLine.xml" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="642" column="73" selection-start-line="642" selection-start-column="73" selection-end-line="642" selection-end-column="73" />
+        <state relative-caret-position="3304">
+          <caret line="739" column="50" selection-start-line="739" selection-start-column="50" selection-end-line="739" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44455">
+          <caret line="2700" selection-start-line="2700" selection-end-line="2700" />
         </state>
       </provider>
     </entry>
