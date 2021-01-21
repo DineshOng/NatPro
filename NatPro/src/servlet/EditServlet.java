@@ -16,8 +16,6 @@ import org.apache.commons.lang.WordUtils;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
-import com.flickr4java.flickr.FlickrException;
-
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import edu.stanford.smi.protegex.owl.model.OWLIndividual;
 import edu.stanford.smi.protegex.owl.model.OWLNamedClass;

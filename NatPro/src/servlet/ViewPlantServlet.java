@@ -11,14 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.flickr4java.flickr.FlickrException;
-
 import edu.stanford.nlp.util.StringUtils;
 import edu.stanford.smi.protege.exception.OntologyLoadException;
 import edu.stanford.smi.protegex.owl.swrl.sqwrl.exceptions.SQWRLException;
 import model.MedicinalPlant;
 import model.Species;
-import service.FlickrService;
 import service.OntoQuery;
 
 /**
