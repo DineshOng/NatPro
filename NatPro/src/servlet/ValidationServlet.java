@@ -54,6 +54,7 @@ public class ValidationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
 	private static final String validationFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -188,7 +189,7 @@ public class ValidationServlet extends HttpServlet {
 		request.setAttribute("Validations", validations);
 		String jsonValidations = new Gson().toJson(validations);
 		request.setAttribute("JsonValidations", jsonValidations);
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		List<String> plantParts = q.getAllPlantParts();
 		request.setAttribute("plantPartsList", plantParts);
 		List<String> sciNames = q.getAllSynonyms();

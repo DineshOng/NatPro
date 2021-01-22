@@ -13,7 +13,7 @@ import model.Species;
 import model.SpeciesPart;
 
 public class AdvancedSearch {
-	
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 	protected HashMap<String, String> properties;
 	protected HashSet<String> resultPlant;
 	protected HashSet<String> resultCompound;
@@ -65,7 +65,7 @@ public class AdvancedSearch {
 		resultCompound = new HashSet<String>();
 		compounds = null;
 		
-		q = new OntoQuery();
+		q = new OntoQuery(owlPath);
 		
 		location = properties.get("location");
 		medPlantName = properties.get("medPlantName");

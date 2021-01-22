@@ -55,7 +55,7 @@ public class AddPlantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
 	private static final String validationFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
-
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -132,7 +132,7 @@ public class AddPlantServlet extends HttpServlet {
 
 	private void getOptions(HttpServletRequest request, HttpServletResponse response)
 			throws OntologyLoadException, ServletException, IOException {
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		List<String> plantParts = q.getAllPlantParts();
 		request.setAttribute("plantPartsList", plantParts);
 		request.getRequestDispatcher("3add.jsp").forward(request, response);
@@ -141,7 +141,7 @@ public class AddPlantServlet extends HttpServlet {
 
 	private void addPlant(HttpServletRequest request, HttpServletResponse response) throws OntologyLoadException,
 			ServletException, IOException, OWLOntologyCreationException, OWLOntologyStorageException {
-		OntoMngr m = new OntoMngr();
+		OntoMngr m = new OntoMngr(owlPath);
 
 		if (!request.getParameter("commonPlantName").equals("")) { // check if common plant name is filled
 			String commonPlantNameIndiv = request.getParameter("commonPlantName").trim().toLowerCase().replaceAll(" ",

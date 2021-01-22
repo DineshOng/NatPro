@@ -30,7 +30,8 @@ import service.OntoQuery;
 @WebServlet("/AdvancedSearchServlet")
 public class AdvancedSearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
+	
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -154,7 +155,7 @@ public class AdvancedSearchServlet extends HttpServlet {
 		String category = request.getParameter("category").trim();
 		
 		try {
-			q = new OntoQuery();
+			q = new OntoQuery(owlPath);
 			
 			if(category.equals("compound")) {
 				acs = new AdvancedCompoundSearch(props).search();

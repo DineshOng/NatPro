@@ -24,7 +24,7 @@ import service.OntoQuery;
 @WebServlet("/ViewBiologicalActivityServlet")
 public class ViewBiologicalActivityServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -69,7 +69,7 @@ public class ViewBiologicalActivityServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String bioAct = request.getParameter("bioact");
 		String cellLine = request.getParameter("cellline");
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		List<String> compounds = q.getBioActCompound(bioAct, cellLine);
 		
 		request.setAttribute("compounds", compounds);

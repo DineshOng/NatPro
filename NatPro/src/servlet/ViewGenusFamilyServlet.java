@@ -21,7 +21,7 @@ import service.OntoQuery;
 @WebServlet({ "/ViewGenusServlet", "/ViewFamilyServlet" })
 public class ViewGenusFamilyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -76,7 +76,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		String genus = request.getParameter("genus");
 		// TODO Auto-generated method stub
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(""); // get all plants
 		List<MedicinalPlant> genusMedPlants = new ArrayList<MedicinalPlant>(); // get plants with the same genus
 		for (int i = 0; i < medPlants.size(); i++) {
@@ -108,7 +108,7 @@ public class ViewGenusFamilyServlet extends HttpServlet {
 			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		String family = request.getParameter("family");
 		// TODO Auto-generated method stub
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		List<MedicinalPlant> medPlants = q.searchMedicinalPlant(""); // get all plants
 		List<MedicinalPlant> familyMedPlants = new ArrayList<MedicinalPlant>(); // get plants with the same family
 		for (int i = 0; i < medPlants.size(); i++) {

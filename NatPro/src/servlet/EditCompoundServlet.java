@@ -17,7 +17,7 @@ import service.OntoQuery;
 @WebServlet("/EditCompoundServlet")
 public class EditCompoundServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -36,7 +36,7 @@ public class EditCompoundServlet extends HttpServlet {
 		String cc = request.getParameter("compound").trim();
 		OntoQuery oq;
 		try {
-			oq = new OntoQuery();
+			oq = new OntoQuery(owlPath);
 			
 			Compound compound = oq.getCompound(cc);
 			

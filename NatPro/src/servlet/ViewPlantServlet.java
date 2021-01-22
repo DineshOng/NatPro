@@ -24,7 +24,7 @@ import service.OntoQuery;
 @WebServlet({ "/ViewPlantServlet", "/ViewSciPlantServlet" })
 public class ViewPlantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -78,7 +78,7 @@ public class ViewPlantServlet extends HttpServlet {
 			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("medPlant");
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		try {
 			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
 			List<MedicinalPlant> medPlants2 = new ArrayList<>();
@@ -138,7 +138,7 @@ public class ViewPlantServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		String specieKey = request.getParameter("specie");
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		Species specie = q.searchSpecie(specieKey);
 		String medPlantName = q.getSynonymMP(specieKey);
 		request.setAttribute("medPlantName", medPlantName);

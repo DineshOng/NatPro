@@ -30,6 +30,7 @@ import service.OntoQuery;
 @WebServlet("/SaveCompoundServlet")
 public class SaveCompoundServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -49,7 +50,7 @@ public class SaveCompoundServlet extends HttpServlet {
 		// response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		try {
-			OntoQuery ontoQry = new OntoQuery();
+			OntoQuery ontoQry = new OntoQuery(owlPath);
 			String oldCompoundName = request.getParameter("oldCompound");
 			String newCompoundName = request.getParameter("compound");
 
@@ -57,7 +58,7 @@ public class SaveCompoundServlet extends HttpServlet {
 
 			if (compound != null) {
 				
-				OntoMngr ontoMngr = new OntoMngr();
+				OntoMngr ontoMngr = new OntoMngr(owlPath);
 				
 				
 				ontoMngr.setCompoundIndiv(OntoMngr.cleanString(oldCompoundName));

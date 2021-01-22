@@ -20,6 +20,8 @@ import service.OntoQuery;
 @WebServlet("/ViewCompoundServlet")
 public class ViewCompoundServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
+	
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -38,7 +40,7 @@ public class ViewCompoundServlet extends HttpServlet {
 		System.out.println(searchKey);
 		OntoQuery q;
 		try {
-			q = new OntoQuery();
+			q = new OntoQuery(owlPath);
 			Compound compound = q.getCompound(searchKey);
 			System.out.println(">>>>"+compound.getCompoundName());
 			request.setAttribute("compound", compound);

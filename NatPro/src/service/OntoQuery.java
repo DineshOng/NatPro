@@ -34,11 +34,11 @@ public class OntoQuery {
 	String uri;
 	OWLModel owlModel;
 
-	public OntoQuery() throws OntologyLoadException {
+	public OntoQuery(String owlPath) throws OntologyLoadException {
 		/* Change local path */
 //		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 //		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
-		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
+//		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 		owlPath = owlPath.replace("\\", "/");
 		this.owlModel = ProtegeOWL.createJenaOWLModelFromURI("file:///" + owlPath);
 	}
@@ -1055,7 +1055,7 @@ public class OntoQuery {
 
 	}
 
-	public List<String> getBioActCompound(String BioAct, String CellLine) throws SQWRLException {
+	public List<String> getBioActCompound(String bioact, String cellline) throws SQWRLException {
 		List<String> values = new ArrayList<String>();
 		RDFProperty datatypeProperty_BiologicalActivity = owlModel
 				.getRDFProperty("datatypeProperty_BiologicalActivity");
@@ -1078,14 +1078,14 @@ public class OntoQuery {
 						for (Iterator kt = bioActs.iterator(); kt.hasNext();) {
 							OWLIndividual bioActIndiv = (OWLIndividual) kt.next();
 							try {
-								if (BioAct.equalsIgnoreCase(
+								if (bioact.equalsIgnoreCase(
 										bioActIndiv.getPropertyValue(datatypeProperty_BiologicalActivity).toString())) {
 
-									if (!CellLine.isEmpty()) {
+									if (!cellline.isEmpty()) {
 										try {
 											OWLIndividual cellLineIndiv = (OWLIndividual) bioActIndiv
 													.getPropertyValue(affects);
-											if (CellLine.equalsIgnoreCase(cellLineIndiv
+											if (cellline.equalsIgnoreCase(cellLineIndiv
 													.getPropertyValue(datatypeProperty_CellLine).toString())) {
 
 												values.add(individual.getPropertyValue(datatypeProperty_Compound)
@@ -1312,7 +1312,7 @@ public class OntoQuery {
 	}
 
 	public static void main(String[] args) throws OntologyLoadException {
-		OntoQuery q = new OntoQuery();
+//		OntoQuery q = new OntoQuery();
 		// List<Compound> compounds = q.searchCompound("pr");
 //		Compound c = q.getCompound("alstoNerine");
 	}

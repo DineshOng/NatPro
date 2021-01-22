@@ -31,6 +31,7 @@ import service.OntoQuery;
 		"/AddPrep", "/EditComp" })
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -206,13 +207,13 @@ public class EditServlet extends HttpServlet {
 		String newMedPlantName = request.getParameter("newMedPlantName");
 
 		// Get the individual name of the MedicinalPlant
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String oldMedPlantNameIndiv = q.getMedPlantIndivName(oldMedPlantName);
 
 		String checkIfIndivNameExists = q.getMedPlantIndivName(newMedPlantName);
 		if (checkIfIndivNameExists == null) {
 			// Change the individual name
-			OntoMngr m = new OntoMngr();
+			OntoMngr m = new OntoMngr(owlPath);
 			m.setMedPlantIndiv(oldMedPlantNameIndiv);
 			m.addDataPropMedPlant(newMedPlantName);
 			m.removeDataPropertyValue(oldMedPlantNameIndiv, "datatypeProperty_MedicinalPlant", oldMedPlantName);
@@ -234,11 +235,11 @@ public class EditServlet extends HttpServlet {
 		String medPlantName = request.getParameter("plantVal");
 
 		// Get the individual name of the MedicinalPlant
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String MedPlantNameIndiv = q.getMedPlantIndivName(medPlantName);
 
 		try {
-			OntoMngr m = new OntoMngr();
+			OntoMngr m = new OntoMngr(owlPath);
 			m.deleteMedicinalPlant(MedPlantNameIndiv);
 			PrintWriter out = response.getWriter();
 			String message = "Plant Successfully Removed";
@@ -258,7 +259,7 @@ public class EditServlet extends HttpServlet {
 		String oldFamily = request.getParameter("oldFamilyVal");
 		String newFamily = request.getParameter("newFamilyVal");
 
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String oldFamilyIndiv = q.getFamilyIndivName(oldFamily);
 		List<String> genus = q.getAllGenus();
 		List<String> families = q.getAllFamily();
@@ -266,7 +267,7 @@ public class EditServlet extends HttpServlet {
 		// returns null if indiv not yet exists
 		String checkIfFamilyIndivExists = q.getFamilyIndivName(newFamily);
 
-		OntoMngr m = new OntoMngr();
+		OntoMngr m = new OntoMngr(owlPath);
 		if (checkIfFamilyIndivExists == null) {
 			m.addIndiv_Family(m.cleanString(newFamily));
 			m.addDataPropFamily(newFamily);
@@ -304,13 +305,13 @@ public class EditServlet extends HttpServlet {
 		String newFamilyName = request.getParameter("newFamilyName");
 
 		// Get the individual name of the Family
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String oldFamilyNameIndiv = q.getFamilyIndivName(oldFamilyName);
 
 		String checkIfIndivNameExists = q.getFamilyIndivName(newFamilyName);
 		if (checkIfIndivNameExists == null) {
 			// Change the individual name
-			OntoMngr m = new OntoMngr();
+			OntoMngr m = new OntoMngr(owlPath);
 			m.setFamilyIndiv(oldFamilyNameIndiv);
 			m.addDataPropFamily(newFamilyName);
 			m.removeDataPropertyValue(oldFamilyNameIndiv, "datatypeProperty_Family", oldFamilyName);
@@ -333,7 +334,7 @@ public class EditServlet extends HttpServlet {
 		String newGenus = request.getParameter("newGenusVal");
 		String sciName = request.getParameter("sciNameVal");
 
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String oldGenusIndiv = q.getGenusIndivName(oldGenus);
 		List<String> species = q.getAllSynonyms();
 		List<String> genusList = q.getAllGenus();
@@ -341,7 +342,7 @@ public class EditServlet extends HttpServlet {
 		// returns null if indiv not yet exists
 		String checkIfGenusIndivExists = q.getGenusIndivName(newGenus);
 
-		OntoMngr m = new OntoMngr();
+		OntoMngr m = new OntoMngr(owlPath);
 		if (checkIfGenusIndivExists == null) {
 			m.addIndiv_Genus(m.cleanString(newGenus));
 			m.addDataPropGenus(newGenus);
@@ -388,13 +389,13 @@ public class EditServlet extends HttpServlet {
 		String newGenusName = request.getParameter("newGenusName");
 
 		// Get the individual name of the Genus
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String oldGenusNameIndiv = q.getGenusIndivName(oldGenusName);
 
 		String checkIfIndivNameExists = q.getGenusIndivName(newGenusName);
 		if (checkIfIndivNameExists == null) {
 			// Change the individual name
-			OntoMngr m = new OntoMngr();
+			OntoMngr m = new OntoMngr(owlPath);
 			m.setGenusIndiv(oldGenusNameIndiv);
 			m.addDataPropGenus(newGenusName);
 			m.removeDataPropertyValue(oldGenusNameIndiv, "datatypeProperty_Genus", oldGenusName);
@@ -417,11 +418,11 @@ public class EditServlet extends HttpServlet {
 		String familyName = request.getParameter("familyName");
 
 		try {
-			OntoQuery q = new OntoQuery();
+			OntoQuery q = new OntoQuery(owlPath);
 			String familyIndiv = q.getFamilyIndivName(familyName);
 
 			String checkIfGenusIndivExists = q.getGenusIndivName(genus);
-			OntoMngr m = new OntoMngr();
+			OntoMngr m = new OntoMngr(owlPath);
 			if (checkIfGenusIndivExists == null) {
 				m.addIndiv_Genus(m.cleanString(genus));
 				m.addDataPropGenus(genus);
@@ -464,11 +465,11 @@ public class EditServlet extends HttpServlet {
 		String familyName = request.getParameter("familyName");
 
 		try {
-			OntoQuery q = new OntoQuery();
+			OntoQuery q = new OntoQuery(owlPath);
 			String checkIfGenusIndivExists = q.getGenusIndivName(genus);
 			String familyIndiv = q.getFamilyIndivName(familyName);
 
-			OntoMngr m = new OntoMngr();
+			OntoMngr m = new OntoMngr(owlPath);
 			m.removeObjectPropertyValue(checkIfGenusIndivExists, "belongsToFamily", familyIndiv);
 
 			PrintWriter out = response.getWriter();
@@ -489,13 +490,13 @@ public class EditServlet extends HttpServlet {
 		String newSciName = request.getParameter("newSpecieName");
 
 		// Get the individual name of the Specie
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String oldSciNameIndiv = q.getSpeciesIndivName(oldSciName);
 
 		String checkIfIndivNameExists = q.getSpeciesIndivName(newSciName);
 		if (checkIfIndivNameExists == null) {
 			// Change the individual name
-			OntoMngr m = new OntoMngr();
+			OntoMngr m = new OntoMngr(owlPath);
 			m.setSpeciesIndiv(oldSciNameIndiv);
 			m.addDataPropSpecies(newSciName);
 			m.removeDataPropertyValue(oldSciNameIndiv, "datatypeProperty_Synonym", oldSciName);
@@ -519,7 +520,7 @@ public class EditServlet extends HttpServlet {
 		String newSci = request.getParameter("newSpecieVal");
 		String medPlantName = request.getParameter("medPlantName");
 
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String oldSciIndiv = q.getSpeciesIndivName(oldSci);
 		List<String> medplants = q.getAllMedPlantNames();
 		List<String> synList = q.getAllSynonyms();
@@ -527,7 +528,7 @@ public class EditServlet extends HttpServlet {
 		// returns null if indiv not yet exists
 		String checkIfSpecieIndivExists = q.getSpeciesIndivName(newSci);
 
-		OntoMngr m = new OntoMngr();
+		OntoMngr m = new OntoMngr(owlPath);
 		if (checkIfSpecieIndivExists == null) {
 			m.addIndiv_Species(m.cleanString(newSci));
 			m.addDataPropSpecies(newSci);
@@ -569,12 +570,12 @@ public class EditServlet extends HttpServlet {
 		String medPlantName = request.getParameter("medPlantName");
 
 		// Get the individual name of the MedicinalPlant
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
 
 		// returns null if indiv not yet exists
 		String checkIfLocIndivExists = q.getLocIndivName(location);
-		OntoMngr m = new OntoMngr();
+		OntoMngr m = new OntoMngr(owlPath);
 		if (checkIfLocIndivExists == null) {
 			m.addIndiv_Location(m.cleanString(location));
 			m.addDataPropLocation(location);
@@ -599,10 +600,10 @@ public class EditServlet extends HttpServlet {
 		String medPlantName = request.getParameter("medPlantName");
 
 		// Get the individual name of the MedicinalPlant
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		String medPlantIndiv = q.getMedPlantIndivName(medPlantName);
 		String locIndiv = q.getLocIndivName(location);
-		OntoMngr m = new OntoMngr();
+		OntoMngr m = new OntoMngr(owlPath);
 		m.removeObjectPropertyValue(medPlantIndiv, "isLocatedIn", locIndiv);
 
 		PrintWriter out = response.getWriter();
@@ -623,7 +624,7 @@ public class EditServlet extends HttpServlet {
 		String illnessVal = request.getParameter("illnessVal");
 		String medPlantName = request.getParameter("medPlantName");
 
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		List<String> prepList = q.getAllPreparations();
 		List<String> plantPartList = q.getAllPlantParts();
 		List<String> illList = q.getAllIllness();
@@ -632,7 +633,7 @@ public class EditServlet extends HttpServlet {
 		String checkIfIllIndivExists = q.getIllnessIndivName(illnessVal);
 		String checkIfPlantPartIndivExists = q.getIllnessIndivName(plantPartVal);
 
-		OntoMngr m = new OntoMngr();
+		OntoMngr m = new OntoMngr(owlPath);
 
 		try {
 			if (checkIfPrepIndivExists == null) {
@@ -732,13 +733,13 @@ public class EditServlet extends HttpServlet {
 		String illnessVal = request.getParameter("illnessVal");
 		String medPlantName = request.getParameter("medPlantName");
 
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 
 		String checkIfPrepIndivExists = q.getPrepIndivName(prepVal);
 		String checkIfIllIndivExists = q.getIllnessIndivName(illnessVal);
 		String checkIfPlantPartIndivExists = q.getIllnessIndivName(plantPartVal);
 
-		OntoMngr m = new OntoMngr();
+		OntoMngr m = new OntoMngr(owlPath);
 
 		String prepIndiv;
 		if (checkIfPrepIndivExists == null) {
@@ -797,8 +798,8 @@ public class EditServlet extends HttpServlet {
 		String chemCompVal = request.getParameter("chemCompVal");
 		String specieName = request.getParameter("specieName");
 
-		OntoQuery q = new OntoQuery();
-		OntoMngr m = new OntoMngr();
+		OntoQuery q = new OntoQuery(owlPath);
+		OntoMngr m = new OntoMngr(owlPath);
 
 		try {
 			String oldSpeciesPart = m.cleanString(specieName + " " + oldPlantPartCompVal);

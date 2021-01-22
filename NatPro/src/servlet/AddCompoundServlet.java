@@ -27,6 +27,7 @@ import service.OntoMngr;
 @WebServlet("/AddCompoundServlet")
 public class AddCompoundServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -44,7 +45,7 @@ public class AddCompoundServlet extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		try {
-			OntoMngr ontoMngr = new OntoMngr();
+			OntoMngr ontoMngr = new OntoMngr(owlPath);
 			
 			String compoundName = request.getParameter("compound");
 			

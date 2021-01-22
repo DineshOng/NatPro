@@ -24,7 +24,7 @@ import service.OntoQuery;
 @WebServlet("/ViewLocationServlet")
 public class ViewLocationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -68,7 +68,7 @@ public class ViewLocationServlet extends HttpServlet {
 			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		// TODO Auto-generated method stub
 		String location = request.getParameter("location");
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		List<String> plants = q.getLocationMP(location);
 		
 		request.setAttribute("medPlants", plants);

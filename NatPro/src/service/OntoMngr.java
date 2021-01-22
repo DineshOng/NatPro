@@ -86,20 +86,21 @@ public class OntoMngr {
 
 	private String owlPath;
 
-	public OntoMngr() throws OWLOntologyCreationException, OWLOntologyStorageException {
+	public OntoMngr(String owlPath) throws OWLOntologyCreationException, OWLOntologyStorageException {
 		// loadOntology();
 		owlManager = OWLManager.createOWLOntologyManager();
 
 //		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
 //		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl"); // user defined
 
-		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
-		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro.owl"); // user defined
+//		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
+//		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro.owl"); // user defined
 
+		
 //		owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
-
 //		owlFile = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl");
 
+		owlFile = new File(owlPath);
 		// load the ontology
 		owlOntology = owlManager.loadOntologyFromOntologyDocument(owlFile);
 		pm = new DefaultPrefixManager(base);
@@ -293,7 +294,7 @@ public class OntoMngr {
 	}
 
 	public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
-		OntoMngr m = new OntoMngr();
+//		OntoMngr m = new OntoMngr();
 	}
 
 	// ADD INDIVIDUALS

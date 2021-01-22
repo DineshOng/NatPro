@@ -27,6 +27,7 @@ import service.OntoQuery;
 @WebServlet({ "/SearchServlet", "/BrowseServlet" })
 public class SearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -102,7 +103,7 @@ public class SearchServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String searchKey = request.getParameter("searchKey").trim();
 		System.out.println("hehe" + request.getParameter("searchCategory"));
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		if (request.getParameter("searchCategory").equals("1")) {
 			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
 //			System.out.println(medPlants.get(0).getPreparations().get(0).getIllness());
@@ -143,7 +144,7 @@ public class SearchServlet extends HttpServlet {
 			throws OntologyLoadException, ServletException, IOException, SQWRLException {
 		String searchKey = "";
 		System.out.println("hehe" + request.getParameter("searchCategory"));
-		OntoQuery q = new OntoQuery();
+		OntoQuery q = new OntoQuery(owlPath);
 		if (request.getParameter("searchCategory").equals("1")) {
 			List<MedicinalPlant> medPlants = q.searchMedicinalPlant(searchKey);
 //			System.out.println(medPlants.get(0).getPreparations().get(0).getIllness());

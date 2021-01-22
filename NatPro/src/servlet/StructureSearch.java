@@ -21,7 +21,7 @@ import service.OntoQuery;
 @WebServlet("/StructureSearch_nix")
 public class StructureSearch extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -38,7 +38,7 @@ public class StructureSearch extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		OntoQuery q;
 		try {
-			q = new OntoQuery();
+			q = new OntoQuery(owlPath);
 			
 			List<Compound> data = q.getCompoundwStructure();
 			int size = data.size();
