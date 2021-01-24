@@ -5,6 +5,7 @@
   </Tag1>
   <Tag2>Compound<Name>omethylmacralstonine</Name>
     <Name>dichloromethane</Name>
+    <Name>dimethylsulfoxide</Name>
     <Name>16-hydroxy-n4-demethylalstophyllal</Name>
     <Name>brucine</Name>
     <Name>o-acetylmacralstonine</Name>
@@ -31,7 +32,6 @@
     <Name>ursolic acid</Name>
     <Name>beta-amyrin</Name>
     <Name>rauvomitin</Name>
-    <Name>sulforhodamine b</Name>
     <Name>1,1-diphenyl-2-picrylhydrazyl</Name>
     <Name>talcarpine</Name>
     <Name>acetylcholine</Name>
@@ -42,7 +42,6 @@
     <Name>campesterol</Name>
   </Tag2>
   <Relation>
-    <Pattern>done on</Pattern>
     <Pattern>extracted with</Pattern>
     <Pattern>followed by</Pattern>
     <Pattern>is used in</Pattern>
@@ -51,7 +50,6 @@
     <Pattern>soaking</Pattern>
     <Pattern>used in</Pattern>
     <Pattern>was measured by</Pattern>
-    <Pattern>were done on</Pattern>
     <Pattern>yielded</Pattern>
   </Relation>
 </Seed>

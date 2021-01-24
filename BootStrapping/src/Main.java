@@ -77,7 +77,10 @@ public class Main {
         long BStart = System.nanoTime();
 
 
+
         for(File xmlFile : listFiles) {
+
+            TreeSet<String> POSText = new TreeSet<String>();
 
             File seedFolder = new File("SeedsPossible/");
             File[] seedList = seedFolder.listFiles();
@@ -117,7 +120,7 @@ public class Main {
                 }
 
 
-                //System.out.println("Seeds retrieved: "+e1+" "+e2);
+                System.out.println("Seeds retrieved: "+e1+" "+e2);
 
                 //ArrayList<String> seedMap1 = new ArrayList<String>();//change to MultiMap
                 //ArrayList<String> seedMap2 = new ArrayList<String>();//change to MultiMap
@@ -161,7 +164,7 @@ public class Main {
                         class2 = class2.toLowerCase();
                         //System.out.println("I went here");
                         //System.out.println("Classes: "+ class1+" "+class2);
-                        //System.out.println(e1+": "+class1+";"+e2+": "+class2);
+                        System.out.println(e1+": "+class1+";"+e2+": "+class2);
                         for (String pLine : lines) {
                             pLine = pLine.toLowerCase();
                             addRelation(relation,pLine,class1,class2,e1,e2,ValidationMap,validation);
@@ -196,12 +199,12 @@ public class Main {
                         //System.out.println("relation: "+rLine+"located in: "+hashxml);
                         //System.out.println("I went here");
                     if(EntityCheck.contains("compound") || EntityCheck.contains("synonym+location") || EntityCheck.contains("cellline")){
-                        POSTagger(seedPatternV,seedPatternW,seedPatternP,rLine,V2,P,W,tagger,AV,ADJ,PN,DET,ADP,validation);
+                        POSTagger(seedPatternV,seedPatternW,seedPatternP,rLine,V2,P,W,tagger,AV,ADJ,PN,DET,ADP,validation,POSText);
                     }//else if(EntityCheck.contains("cellline")){
                        // POSTagger(seedPatternV,seedPatternW,seedPatternP,rLine,V,P,W2,tagger,AV,ADJ,PN2,DET,ADP,validation);
                    // }
                     else{
-                        POSTagger(seedPatternV,seedPatternW,seedPatternP,rLine,V,P,W,tagger,AV,ADJ,PN,DET,ADP,validation);
+                        POSTagger(seedPatternV,seedPatternW,seedPatternP,rLine,V,P,W,tagger,AV,ADJ,PN,DET,ADP,validation,POSText);
                     }
 
                 }
@@ -381,6 +384,7 @@ public class Main {
                 TreeSet<String> matches = new TreeSet<String>();
                //TreeSet<String> validation = new TreeSet<String>();
 
+
                 matches.addAll(list);
                 //CHECKS IF THE GENERATED XML FILE EXISTS
                 /*File seedOutput = new File("seedOutput/"+e1+"-"+e2+".xml");
@@ -534,6 +538,9 @@ public class Main {
                 }
                 //String deleteTest = "";//ADD THESE FOR THE DELETE FUNCTION
 
+                for(String matchesLog : matches){
+                    System.out.println("generated seed pattern: " + matchesLog);
+                }
 
 
 
@@ -734,7 +741,31 @@ public class Main {
             }//end of seeds loop
 
             System.out.println("Finish Reading document :"+ xmlFile.getName());
+            //create text file
+            String title = xmlFile.getName().replaceAll(".xml","");
+            File posfile = new File("POS Logs/"+title+" POSTagger Logs.txt");
+
+            try {
+                if(!posfile.exists()){
+                    posfile.createNewFile();
+                }
+
+                PrintWriter pw = new PrintWriter(posfile);
+                for(String TaggedPattern: POSText){
+                    pw.println(TaggedPattern);
+                    pw.println("");
+                }
+                pw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            POSText.clear();
         }//End of file[] Loop
+
+
+
+
+
         long BEnd = System.nanoTime();
         long BTime = BEnd-BStart;
         System.out.println("Bootstrapping Finished Elapsed Time: " + BTime);
@@ -787,6 +818,7 @@ public class Main {
             String class1 = classes[0];
             String class2 = classes[1];
             seedMap.put(class1,class2);
+            System.out.println(class1+" & "+class2+ "was added to seedmap");
         }else{
             System.out.println("ignoring line: " + i);
         }
@@ -810,10 +842,12 @@ public class Main {
                 if(e1.contains("preparation") && pLine.contains("<"+e2+">"+class2+"</"+e2+">")) {
                     ValidationMap.put(linetemp, class2 );
                     validation.add(linetemp);
+                    System.out.println(class2 + " & "+ linetemp+ " was added to validationmap");
                 }
                 else if(pLine.contains("<"+e1+">"+class1+"</"+e1+">") && e2.contains("preparation")){
                     ValidationMap.put(class1, linetemp);
                     validation.add(linetemp);
+                    System.out.println(class1 + " & "+ linetemp+ " was added to validationmap");
                 }
 
             }
@@ -825,6 +859,7 @@ public class Main {
             //}
 
             ValidationMap.put(class1,class2);
+            System.out.println(class1 + " & "+ class2+ " was added to validationmap");
 
 
             //System.out.println(e1+": "+class1+";"+e2+": "+class2);
@@ -840,6 +875,7 @@ public class Main {
                 temp = temp.replaceAll("<\\/["+e2+"]+>.+<["+e2+"]+>","");
                 temp = temp.replaceAll("<\\/?[a-z]+>", "");
                 relation.add(temp);
+                System.out.println(temp+ " was added to seedrelation");
 
                 //System.out.println(temp);
                 //System.out.println("This is "+ e1Name+" and "+e2Name);
@@ -851,6 +887,7 @@ public class Main {
                 //System.out.println("I went here");
                 temp = temp.replaceAll("<\\/?[a-z]+>", "");
                 relation.add(temp);
+                System.out.println(temp+ " was added to seedrelation");
 
                 //System.out.println(temp);
                 //System.out.println("This is "+ e1Name+" and "+e2Name);
@@ -897,6 +934,7 @@ public class Main {
                             if(!class1.contains(".") || !class2.contains(".")){
                                 seedMap.put(class1, class2);
                                 ValidationMap.put(class1, class2);
+                                System.out.println(class1 + class2 + " was added to validationmap");
                             }
                         }
                     }
@@ -909,6 +947,7 @@ public class Main {
                         temp = temp.replaceAll("<\\/["+e2+"]+>.+<["+e2+"]+>","");
                         temp = temp.replaceAll("<\\/?[a-z]+>", "");
                         relation.add(temp);
+                        System.out.println(temp+" was added to relation");
                         for (String delete : lines) {
                             String store = delete.toLowerCase();
                             if (pLine.equals(store)) {
@@ -1068,12 +1107,13 @@ public class Main {
     String ADP = "(.*)_[I][N][|RP]*(.*)"; //ADPronoun --P*/
     public static void POSTagger(TreeSet<String> seedPatternV,TreeSet<String> seedPatternW,TreeSet<String> seedPatternP,
                                  String rLine, String V, String P, String W, MaxentTagger tagger, String AV,String ADJ,
-                                 String PN, String DET, String ADP, TreeSet<String> validation){
+                                 String PN, String DET, String ADP, TreeSet<String> validation, TreeSet<String> POSText){
         //MaxentTagger tagger =  new MaxentTagger("models/english-left3words-distsim.tagger");
         String tagged = tagger.tagString(rLine);
-        if(tagged.contains("also known as")){
+        /*if(tagged.contains("also known as")){
             System.out.println(tagged);
-        }
+        }*/
+        POSText.add(tagged);
 
         String[] tLines= tagged.split(" ");
         //System.out.println("I went here");

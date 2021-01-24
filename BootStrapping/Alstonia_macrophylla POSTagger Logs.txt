@@ -1,0 +1,120 @@
+
+
+,_, 
+
+,_, and_CC a_DT majority_NN of_IN them_PRP were_VBD isolated_VBN from_IN the_DT 
+
+,_, specifically_RB betasitosterol_NN 
+
+,_, the_DT assessment_NN of_IN the_DT effectiveness_NN of_IN alstonia_NN macrophylla_NN on_IN the_DT four_CD immortalized_VBN cancer_NN cell_NN lines_NNS revealed_VBD that_IN the_DT integrity_NN of_IN mcf-7_NN 
+
+,_, was_VBD discovered_VBN to_TO impede_VB the_DT venom_NN of_IN 
+
+-LRB-_-LRB- ch2cl2_NN -RRB-_-RRB- extracts_NNS from_IN 
+
+-LRB-_-LRB- dpph_NN -RRB-_-RRB- -RRB-_-RRB- ,_, cytotoxic_JJ -LRB-_-LRB- ht-29_JJ ,_, h69pr_NN ,_, mcf-7_NN ,_, thp-1_NN immortalized_VBN cell_NN lines_NNS ,_, and_CC normal_JJ hdfn_NN primary_JJ culture_NN cells_NNS -RRB-_-RRB- ,_, and_CC antivenom_NN activities_NNS of_IN crude_NN 
+
+-LRB-_-LRB- m_NN =_JJ 32.31_CD ,_, sd_NN =_JJ 5.10_CD -RRB-_-RRB- and_CC for_IN 
+
+-LRB-_-LRB- m_NN =_JJ 49.16_CD ,_, sd_NN =_JJ 7.27_CD -RRB-_-RRB- and_CC mean_VB ic50_JJ values_NNS of_IN ht-29_JJ cells_NNS treated_VBN with_IN 
+
+-LRB-_-LRB- m_NN =_JJ 52.02_CD ,_, sd_NN =_JJ 5.44_CD -RRB-_-RRB- and_CC mean_VB values_NNS for_IN 
+
+-LRB-_-LRB- m_NN =_JJ 53.02_CD ,_, sd_NN =_JJ 5.71_CD -RRB-_-RRB- and_CC mean_VB values_NNS for_IN 
+
+-LRB-_-LRB- srb_NN -RRB-_-RRB- colorimetric_JJ assays_NNS for_IN cytotoxicity_NN screening_NN were_VBD done_VBN on_IN the_DT bark_NN or_CC outer_JJ covering_NN of_IN roots_NNS but_CC not_RB on_IN 
+
+added_VBN served_VBD as_IN negative_JJ untreated_JJ controls_NNS ,_, and_CC wells_NNS with_IN zeocin_NN 
+
+afforded_VBN steroid_NN alcohols_NNS ,_, isoprenoids_NNS ,_, hydroxylated_VBN polyphenolic_JJ compounds_NNS ,_, alkaloids_NNS ,_, tannic_JJ acids_NNS ,_, and_CC 
+
+agent_NN ,_, gave_VBD ic50_NN values_NNS of_IN 3.37_CD ,_, 3.83_CD ,_, 3.78_CD ,_, 3.59_CD ,_, and_CC 4.08_CD ppm_NN in_IN mcf-7_NN 
+
+alstonia_NN macrophylla_NN 
+
+alstonia_NN macrophylla_NN -RRB-_-RRB- ,_, also_RB known_VBN as_IN hard_JJ milkwood_NN or_CC batino_NN ,_, is_VBZ used_VBN in_IN wine_NN preparation_NN and_CC as_IN an_DT antipyretic_JJ ,_, traditional_JJ remedy_NN and_CC preventive_JJ concoction_NN ,_, medicine_NN for_IN dysentery_NN ,_, an_DT aid_NN in_IN the_DT menstrual_JJ cycle_NN ,_, treatment_NN in_IN alzheimer_NN 's_POS disease_NN through_IN down_JJ regulation_NN of_IN 
+
+alstonia_NN macrophylla_NN 6.34_CD 7.05_CD 9.10_CD 67.22_CD >_JJR 100_CD 
+
+alstonia_NN macrophylla_NN compound_NN rt_NN -LRB-_-LRB- min_NN -RRB-_-RRB- ria_CD %_NN peak_JJ area_NN functionality_NN 2-ethenyl_NN 
+
+alstonia_NN macrophylla_NN leaves_VBZ extracted_VBN with_IN 
+
+alstonia_NN macrophylla_NN on_IN the_DT four_CD immortalized_VBN cancer_NN cell_NN lines_NNS revealed_VBD that_IN the_DT integrity_NN of_IN mcf-7_NN ,_, h69pr_NN ,_, and_CC ht-29_NN consistently_RB decreased_VBD in_IN all_DT the_DT trials_NNS ,_, and_CC the_DT action_NN of_IN cytotoxicity_NN was_VBD analogous_JJ to_TO the_DT positive_JJ control_NN 
+
+alstonia_NN scholaris_NN were_VBD reported_VBN to_TO contain_VB echitovenidine_NN 
+
+and_CC 
+
+bark_NN 
+
+bark_NN maria_NN carmen_NNS s._VBP tan_NN ,_, *_SYM ,_, mary_JJ stephanie_NN s._NN carranza_NN ,_, virgilio_NN c._NN linis_NN ,_, raymond_NN s._NN malabed_VBD ,_, ,_, and_CC glenn_NN g._NN oyong_NN chemistry_NN department_NN ,_, biology_NN department_NN ,_, and_CC molecular_JJ science_NN unit_NN laboratory_NN center_NN for_IN natural_JJ sciences_NNS and_CC environmental_JJ research_NN ,_, de_FW la_FW salle_FW university_NN ,_, 2401_CD taft_NN avenue_NN 
+
+bark_NN using_VBG methanol_NN 
+
+barks_NNS containing_VBG omethylmacralstonine_NN 
+
+bypassed_VBN oxidative_JJ degradation_NN of_IN lipids_NNS and_CC 
+
+compound_NN rt_NN -LRB-_-LRB- min_NN -RRB-_-RRB- ria_CD %_NN peak_JJ area_NN functionality_NN 2,5-dimethyl-4-hydroxy-3_NN -LRB-_-LRB- 2h_NN -RRB-_-RRB- -_: furanone_NN 
+
+crude_JJ dichloromethane_NN 
+
+cytotoxic_JJ -LRB-_-LRB- ht-29_JJ 
+
+cytotoxic_JJ activity_NN was_VBD comparable_JJ to_TO 
+
+cytotoxic_JJ efficacy_NN toward_IN mcf-7_NN 
+
+dcm_NN dichloromethane_NN 
+
+extracted_VBN with_IN 
+
+extracts_NNS were_VBD composed_VBN primarily_RB of_IN alkaloids_NNS -LRB-_-LRB- table_NN 2_CD and_CC figure_NN 1_CD -RRB-_-RRB- :_: alstonerine_NN 
+
+extracts_NNS yielded_VBD 10_CD undiscovered_JJ indole_JJ alkaloids_NNS ,_, alstomaline_NN 
+
+fatty_JJ acids_NNS were_VBD the_DT entities_NNS that_WDT induced_VBD 
+
+homo_NN sapiens_JJ small_JJ cell_NN lung_NN carcinoma_NN thp-1_NN human_JJ acute_JJ monocytic_JJ leukemia_NN cell_NN line_NN hdfn_NN primary_JJ culture_NN of_IN normal_JJ human_JJ dermal_JJ fibroblast_NN neonatal_JJ meoh_NN 
+
+leaf_NN ,_, specifically_RB betasitosterol_NN 
+
+leaf_NN methanolic_JJ preparations_NNS was_VBD measured_VBN by_IN an_DT adapted_VBN dpph_NN -LRB-_-LRB- 
+
+methanolic_JJ preparations_NNS was_VBD measured_VBN by_IN an_DT adapted_VBN dpph_NN -LRB-_-LRB- 
+
+moderately_RB prevented_VBD the_DT hemorrhage_NN ,_, edema_NN ,_, procoagulant_NN ,_, and_CC myotoxic_JJ events_NNS caused_VBN by_IN 
+
+of_IN alstonia_NN macrophylla_NN -LRB-_-LRB- alstonia_NN macrophylla_NN -RRB-_-RRB- ,_, also_RB known_VBN as_IN hard_JJ milkwood_NN or_CC batino_NN ,_, is_VBZ used_VBN in_IN wine_NN preparation_NN and_CC as_IN an_DT antipyretic_JJ ,_, traditional_JJ remedy_NN and_CC preventive_JJ concoction_NN ,_, medicine_NN for_IN dysentery_NN ,_, an_DT aid_NN in_IN the_DT menstrual_JJ cycle_NN ,_, treatment_NN in_IN alzheimer_NN 's_POS disease_NN through_IN down_JJ regulation_NN of_IN 
+
+of_IN the_DT 
+
+sample_NN control_NN =_SYM -_: here_RB ,_, xcontrol_NN is_VBZ the_DT spla_NN activity_NN of_IN positive_JJ control_NN -LRB-_-LRB- 100_CD g/l_NN npv_NN -RRB-_-RRB- and_CC xsample_NN is_VBZ the_DT spla_NN activity_NN in_IN the_DT presence_NN of_IN inhibitor_NN -LRB-_-LRB- 
+
+showed_VBD that_IN the_DT alstonia_NN macrophylla_NN 
+
+tree_NN 
+
+trunks_NNS were_VBD gathered_VBN in_IN mariveles_NNS 
+
+using_VBG methanol_NN 
+
+venenatine_NN -LRB-_-LRB- an_DT indole_NN alkaloid_NN -RRB-_-RRB- ,_, and_CC 
+
+versus_CC 
+
+vipera_NN russelli_NNS venom_NN -LRB-_-LRB- vrv_NN -RRB-_-RRB- stimulating_VBG an_DT increase_NN in_IN serum_NN alanine_NN 
+
+was_VBD found_VBN to_TO be_VB rich_JJ in_IN 
+
+was_VBD ground_NN followed_VBN by_IN soaking_VBG 3.0_CD g_NN of_IN the_DT powdered_JJ biomass_NN in_IN 20_CD ml_NN of_IN 
+
+was_VBD prepared_VBN at_IN 4_CD mg_NN of_IN crude_JJ extract_NN in_IN 1_CD ml_NN of_IN 
+
+was_VBD tested_VBN on_IN the_DT succeeding_VBG immortalized_VBN cell_NN lines_NNS purchased_VBN from_IN atcc_NN ,_, manassas_NN 
+
+were_VBD reconstituted_VBN in_IN 
+
+were_VBD used_VBN in_IN the_DT 
+

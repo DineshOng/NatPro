@@ -3,7 +3,12 @@
   <Category>hasSynonymPlantPart</Category>
   <Tag1>Synonym<Name>grewia lasiocarpa</Name>
   </Tag1>
-  <Tag2>PlantPart<Name>bark</Name>
+  <Tag2>PlantPart<Name>trunks</Name>
+    <Name>roots</Name>
+    <Name>stem bark</Name>
+    <Name>leaf</Name>
+    <Name>leaves</Name>
+    <Name>bark</Name>
   </Tag2>
   <Relation>
     <Pattern>avenue</Pattern>

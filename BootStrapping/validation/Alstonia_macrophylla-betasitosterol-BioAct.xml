@@ -3,7 +3,8 @@
   <Category>hasBiologicalActivity</Category>
   <Tag1>Compound<Name>betasitosterol</Name>
   </Tag1>
-  <Tag2>BioAct<Name>antioxidant</Name>
+  <Tag2>BioAct<Name>anti-inflammatory</Name>
+    <Name>antioxidant</Name>
   </Tag2>
   <Relation>
     <Pattern>induced</Pattern>
