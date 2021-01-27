@@ -100,7 +100,7 @@ public class OntoMngr {
 //		owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 //		owlFile = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl");
 
-		owlFile = new File(owlPath);
+		owlFile = new File("C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Ontology\\\\OntoNatPro.owl");
 		// load the ontology
 		owlOntology = owlManager.loadOntologyFromOntologyDocument(owlFile);
 		pm = new DefaultPrefixManager(base);

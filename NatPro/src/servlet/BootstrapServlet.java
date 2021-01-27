@@ -48,13 +48,21 @@ import preprocessing.Tagger;
 @WebServlet("/BootstrapServlet")
 public class BootstrapServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
-	private static final String seedsPossibleFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\SeedsPossible\\";
-	private static final String seedOutputFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\seedOutput\\";
-	private static final String validationFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
-	private static final String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\models\\english-left3words-distsim.tagger";
-	private static final String filePropertiesXml = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\file_properties.xml";
-	private static final String processingTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\processing.txt";
+	private static final String taggedFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\TaggedBootstrap\\";
+	private static final String seedsPossibleFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\SeedsPossible\\";
+	private static final String seedOutputFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\seedOutput\\";
+	private static final String validationFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\validation\\";
+	private static final String englishTaggerFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\english-left3words-distsim.tagger";
+	private static final String filePropertiesXml = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\file_properties.xml";
+	private static final String processingTxtFile = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\processing.txt";
+	
+//	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
+//	private static final String seedsPossibleFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\SeedsPossible\\";
+//	private static final String seedOutputFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\seedOutput\\";
+//	private static final String validationFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
+//	private static final String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\models\\english-left3words-distsim.tagger";
+//	private static final String filePropertiesXml = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\file_properties.xml";
+//	private static final String processingTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\processing.txt";
 
 	/**
 	 * @see HttpServlet#HttpServlet()

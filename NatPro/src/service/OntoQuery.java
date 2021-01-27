@@ -36,7 +36,7 @@ public class OntoQuery {
 
 	public OntoQuery(String owlPath) throws OntologyLoadException {
 		/* Change local path */
-//		String owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
+		owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
 //		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro2.1.owl";
 //		String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
 		owlPath = owlPath.replace("\\", "/");
