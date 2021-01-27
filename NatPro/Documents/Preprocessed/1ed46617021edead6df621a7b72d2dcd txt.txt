@@ -1,0 +1,318 @@
+Available online on www.ijcpr.com  
+International Journal of Current Pharmaceutical Review and Research; 7(6); 334-336 
+ 
+ISSN: 0976 822X 
+Research Article 
+ 
+ 
+ 
+*Author for Correspondence: consolacion.ragasa@dlsu.edu.ph 
+Sterol and Lipid from Pleurotus eryngii (DC.) Quél. and Flammulina 
+velutipes (Cuttis) Singer 
+ 
+Consolacion Y Ragasa1,2*, Maria Carmen S Tan1, Robert Brkljača3, Sylvia Urban3 
+ 
+1Chemistry Department, De La Salle University, Taft Avenue, Manila, Philippines. 
+2Chemistry Department, De La Salle University Science & Technology Complex Leandro V. Locsin Campus, Biñan City, 
+Laguna, Philippines. 
+3School of Science (Discipline of Applied Chemistry and Environmental Science), RMIT University (City Campus), 
+Melbourne 3001, Victoria, Australia. 
+ 
+Available Online: 25th December, 2016 
+ 
+ABSTRACT 
+Chemical investigation of the dichloromethane extracts of the fruiting bodies of Pleurotus eryngii and Flammulina 
+velutipes led to the isolation of ergosterol (1).  P. eryngii also afforded trilinolein (2), while F. velutipes also yielded 
+triacylglycerol (3).  The structures of 1-3 were identified by comparison of their NMR data with literature data. 
+ 
+Keywords:  Pleurotus eryngii, Pleurotaceae, Flammulina velutipes, Physalacriaceae, ergosterol, trilinolein, triacylglycerol. 
+ 
+INTRODUCTION 
+Pleurotus eryngii, commonly known as king oyster 
+mushroom is sold in supermarkets throughout the 
+Philippines. A number of studies have been conducted on 
+the chemical constituents and biological activities of P. 
+eryngii.  The ethanol extract of P. eryngii afforded 
+ergosterol peroxide which is an inhibitor of osteoclast 
+differentiation. This sterol exhibited an inhibitory effect in 
+a dose-dependent manner with an inhibition rate of up to 
+62% with low cytotoxicity1. Activity-guided fractionations 
+led to the isolation of antitumor compound, ergosterol 
+peroxide from the fruiting body of P. eryngii. The IC50 of 
+ergosterol peroxide against human lung cancer cell line 
+(A549) and human ovarian cell line (SK-OV3) were 7 μM 
+and 14 μM, respectively. This sterol showed chromosomal 
+DNA fragmentation and arrests G1 phase of the cell 
+division cycle2. Another study reported the isolation of 
+5α,9α-epidioxy-8α,14α-epoxy-(22E)-ergosta-6,22-dien-
+3β-ol, 3β,5α-dihydroxyergost-7-en-6-one, 6β-acetoxy-
+(22E)-ergosta-7,22-diene-3β,5α-diol, 3β,5α-dihydroxy-
+(22E)-ergosta-7,22-dien-6-one, ergosterol peroxide, 
+2α,5α,9α–epidioxy-(22E)-ergosta-7,22-diene-3β,6β-diol, 
+5α,9α-epidioxy-3β-hydroxy-(22E)-ergosta-7,22-dien-6-
+one and 3β,5α,9α-trihydroxy-(22E)-ergosta-7,22-dien-6-
+one from P. eryngii (DC.: FR.)3.  In an additional study the 
+isolation of pleurone, ergosterol, (24E)-3β-
+hydroxycucurbita-5,24-diene-26-oic acid and nicotinic 
+acid were reported from P. eryngii var. ferulae4. 
+Flammulina velutipes, also known as Enoki mushroom are 
+sold in supermarkets throughout the Philippines.  Several 
+studies were conducted on the chemical constituents of this 
+mushroom. An earlier study reported that D-arabinitol, 
+9(Z) oleic acid, 9(Z),12(Z) linoleic acid, ergosta-5,7,22-
+trien-3β-ol, 5α,8α-epidioxy-ergosta-6,22-dien-3β-ol, 
+3β,5α,9α-trihydroxy-ergosta-7,22-dien-6-one, 5-
+hydroxymethyl-2-(1-methyl-ethenyl)-1-cyclohexanol, 
+1,3-dilinolein and hemisceramide were isolated from F. 
+velutipes5.  Furthermore, 5α,8α-epidioxy-(22E,24R)-
+ergost-6,22-dien-3β-ol, ergosta-4,6,8(14),22-tetraen-3-
+one, sterpuric acid, mannitol and ribitol were obtained 
+from this mushroom6. In another study, F. velutipes sterols 
+(FVS) which mainly consisted of ergosterol (54.78%), 
+22,23-dihydroergosterol (27.94%) and ergost-8(14)-ene-
+3β-ol were reported to exhibit cytotoxicity against U251 
+cells (IC50=23.42 μg/mL)7, This study is part of our 
+research on the chemical constituents of Philippine edible 
+mushrooms. We earlier reported the isolation of ergosterol, 
+triacylglycerols and fatty acid methyl esters from P. 
+djamor8 We also reported the isolation of ergosterol, 
+ergosterol peroxide, cerevisterol, palmitic acid, stearic 
+acid, linoleic acid, and oleic acid, and 
+dilinoleoyloleoylglycerol from P. florida9.  Furthermore, 
+we recently reported the isolation of ergosterol and 
+trilinolein from Lentinus edodes10. We report herein the 
+isolation of ergosterol (1) and trilinolein (2) from the 
+fruiting bodies of P. eryngii, while the fruiting bodies of F. 
+velutipes yielded 1 and triacylglycerols (3).  The structures 
+of 1-3 are presented in Fig. 1. 
+ 
+MATERIALS AND METHODS 
+General Experimental Procedure 
+1H (500 MHz) and 13C (125 MHz) NMR spectra were 
+acquired in CDCl3 on a 500 MHz Agilent DD2 NMR 
+spectrometer with referencing to solvent signals (δ 7.26 
+and 77.0 ppm). Column chromatography was performed 
+with silica gel 60 (70-230 mesh). Thin layer 
+chromatography was performed with plastic backed plates 
+coated with silica gel F254 and the plates were visualized  
+Consolacion et al. / Sterol and Lipid… 
+ 
+ 
+ IJCPR, Volume 7, Issue 5, November- December 2016   Page 335 
+by spraying with vanillin/H2SO4 solution followed by 
+warming. 
+Sample Collection 
+The samples werepurchased from a supermarket in Metro 
+Manila, Philippines in January 2016. They were 
+authenticated as Pleurotus eryngii (DC.) Quél. and 
+Flammulina velutipes (Curtis) Singer at the Botany 
+Division, Philippine National Museum. 
+General Isolation Procedure 
+A glass column 18 inches in height and 1.0 inch internal 
+diameter was packed with silica gel. The crude extracts 
+were fractionated by silica gel chromatography using 
+increasing proportions of acetone in CH2Cl2 
+(10%increment) as eluents. Fifty milliliter fractions were 
+collected. All fractions were monitored by thin layer 
+chromatography. Fractions with spots of the same Rf  
+values were combined and rechromatographed in 
+appropriate solvent systems until TLC pure isolates were 
+obtained. A glass column 12 inches in height and 0.5 inch 
+internal diameter was used for the rechromatography. Two 
+milliliter fractions were collected. Final purifications were 
+conducted using Pasteur pipettes as columns. One milliliter 
+fractions were collected. 
+Isolation of the chemical constituents of the fruiting bodies 
+of P. eryngii 
+The freeze-dried fruiting bodies of P. eryngii (580 g) were 
+ground in a blender, soaked in CH2Cl2 for 3 days and then 
+filtered. The solvent was evaporated under vacuum to 
+afford a crude extract (1.36 g) which was chromatographed 
+using increasing proportions of acetone in CH2Cl2 at 10% 
+increment. The CH2Cl2 fraction was rechromatographed (2 
+×) using 5% EtOAc in petroleum ether to afford 2 (6 mg). 
+The 30% acetone in CH2Cl2 fraction was 
+rechromatographed (2 ×) using 15% EtOAc in petroleum 
+ether to yield 1 (9 mg) after washing with petroleum ether.   
+Isolation of the chemical constituents of the fruiting bodies 
+of F. velutipes 
+The freeze-dried fruiting bodies of F. velutipes (300 g) 
+were ground in a blender, soaked in CH2Cl2 for 3 days and 
+then filtered. The solvent was evaporated under vacuum to 
+afford a crude extract (2.03 g) which was chromatographed 
+using increasing proportions of acetone in CH2Cl2 at 10% 
+increment.  The CH2Cl2 to 20% acetone in 
+dichloromethane fractions were combined and 
+rechromatographed (2 ×) using 5% EtOAc in petroleum  
+ether to afford 3 (7 mg). The 30% acetone in CH2Cl2  
+fraction was rechromatographed (3 ×) using 15% EtOAc 
+in petroleum ether to yield 1 (5 mg) after washing with 
+petroleum ether.   
+ 
+RESULTS AND DISCUSSION 
+Silica gel chromatography of the dichloromethane extracts 
+of the fruiting bodies of Pleurotus eryngii and Flammulina 
+velutipes led to the isolation of 1-3.  The NMR spectra of 
+1 are in accordance with data reported in the literature for 
+ergosterol11; 2 for trilinolein11; and 3 for triacylglycerol12.  
+The fatty acids attached to the glycerol in 3 of F. velutipes 
+were identified as linolenic acid, linoleic acid and oleic 
+acid based on resonance intensities for the  methyl triplet 
+at δ 0.96 (t, J = 7.8 Hz), the double allylic methylenes at δ 
+2.78 and the olefinic protons at δ 5.34 (m) for the linolenic 
+acid;  methyl triplet at δ 0.86 (t, J = 6.6 Hz), the double 
+allylic methylene at δ 2.80 and the olefinic protons at δ 
+5.34 (m) for the linoleic acid; and the methyl triplet at δ 
+0.86 (t, J = 6.6 Hz) and the olefinic protons at δ 5.34 (m) 
+for the oleic acid12. Literature search revealed that 1-3 
+exhibited diverse biological activities. A study reported 
+that ergosterol (1) provides significant protection against 
+the promotion of bladder tumor induced by many types of 
+promoters in the environment13. Moreover, the ergosterol 
+content of brown and white button mushrooms correlated 
+with their antioxidant activities14. In another study, 1 was 
+reported to have the capability to inhibit lipid 
+peroxidation15. Trilinolein (2) exhibits protective effects 
+against cardiovascular disorders17. It also inhibits 
+ischemia-induced ventricular arrhythmias and it exhibits 
+anti-oxidant effect18.  It was also reported to inhibit the 
+growth of human non-small cell lung carcinoma A549 and 
+induce apoptosis in a dose- and time- dependent manne19. 
+Another study reported that triglycerides showed a direct 
+relationship between toxicity and increasing unsaturation, 
+which in turn correlated with increasing susceptibility to 
+oxidation. Linoleic acid belongs to the omega-6 fatty acids. 
+It was reported be a strong anticarcinogen in a number of 
+animal models. It reduces risk of colon and breast cancer16 
+and lowers cardiovascular disease risk and 
+inflammations20. Triacylglycerols (3) exhibited 
+antimicrobial activity against S. aureus, P. aeruginosa, B. 
+subtilis, C. albicans, and T. mentagrophytes25. Another 
+study reported that triacylglycerols showed a direct 
+ 
+ 
+Figure 1: Chemical structures of ergosterol (1) and trilinolein (2) from P. eryngii and triacylglycerols (3) from F. 
+velutipes. 
+Consolacion et al. / Sterol and Lipid… 
+ 
+ 
+ IJCPR, Volume 7, Issue 5, November- December 2016   Page 336 
+relationship between toxicity and increasing unsaturation, 
+which in turn correlated with increasing susceptibility to 
+oxidation26.  Linoleic acid belongs to the omega-6 fatty 
+acids. It was reported to be a strong anticarcinogen in a 
+number of animal models. It reduces the risk of colon and 
+breast cancer27 and lowers cardiovascular disease risk and 
+inflammations28.  Linolenic and linoleic acids inhibited 
+parasites growth by 70% and 64% respectively, against P. 
+berghei using the 4-day suppressive test. The two 
+compounds, when used in combination, inhibited the 
+parasites by 96% on day 4 of treatment29.  
+ 
+ACKNOWLEDGEMENT 
+A research grant from the De La Salle University Science 
+Foundation through the University Research Coordination 
+Office is gratefully acknowledged. 
+ 
+REFERENCES 
+1. Yokoyama S, Bang TH, Shimizu K, Kondo R. 
+Osteoclastogenesis inhibitory effect of ergosterol 
+peroxide isolated from Pleurotus eryngii. Nat Prod 
+Commun 2012; 7(9):1163-1164. 
+2. Lee YH, Park KH, Lee BW, Cho YU, Choi YJ, Gal 
+SW. Antitumor sterol isolated from the fruiting body of 
+Pleurotus eryngii. The Life Science 2006; 16(2):282-
+288. 
+3. Yaoita Y, Yoshihara Y, Kakuda R, Machida K, 
+Kikuchi M.  New sterols from two edible mushrooms, 
+Pleurotus eryngii and Panellus serotinus. Chem Pharm 
+Bull 2002; 50(4): 551—553. 
+4. Lee I-S, Ryoo I-J, Kwon K-Y, Ahn JS, Yoo I-D. 
+Pleurone, a novel human neutrophil elastase inhibitor 
+from the fruiting bodies of the mushroom Pleurotus 
+eryngii var. ferulae. J Antibiot 2011; 64:587–589. 
+5. Cai H, Liu X, Chen Z, Liao S, Zou Y. Isolation, 
+purification and identification of nine chemical 
+compounds from Flammulina velutipes fruiting bodies. 
+Food Chem 2013; 141(3):2873-2879. 
+6. Kang J, Chen RY. Studies on chemical constituents in 
+the mycelia from fermented culture of Flammulina 
+velutipes. Zhongguo Zhong Yao Za Zhi. 2005; 
+30(3):193-195. 
+7. Yi C, Sun C, Tong S, Cao X, Feng Y, Firempong 
+CK, Jiang X, Xu X, Yu J.  Cytotoxic effect of novel 
+Flammulina velutipes sterols and its oral bioavailability 
+via mixed micellar nanoformulation. Int J Pharm 2013; 
+448(1):44-50. 
+8. Ragasa CY, Tan MCS, Ting J, Reyes RG, Brkljača R, 
+Urban S. Chemical Constituents of Pleurotus djamor. 
+Der Pharma Chemica 2016; 8(2):343–346. 
+9. Ragasa CY, Ebajo Jr. VD,  Reyes RG, Brkljača R, 
+Urban S. Sterols and Lipids from Pleurotus florida. Der 
+Pharma Chemica 2016; 7(10):331–336. 
+10. Resurreccion NGU, Shen C-C, Ragasa CY.  Chemical 
+constituents of Lentinus edodes.  Der Pharmacia Lettre 
+2016; 8(4):117–120. 
+11. Resurreccion NGU, Shen C-C, Ragasa CY.  Chemical 
+constituents of Lentinus edodes.  Der Pharmacia Lettre 
+2016; 8(4):117–120. 
+12. Ragasa CY, Ng VAS, Torres OB, Sevilla NSY, Uy 
+KVM, Tan MCS, Noel MG and Shen C-C. Sterols, 
+Triglycerides and essential fatty acid constituents of 
+Brassica oleracea varieties, Brassica juncea and 
+Raphanus sativus. J Chem Pharm Res 2013; 
+5(12):1237–1243. 
+13. Yazawa Y, Yokota M, Sugiyama K. Antitumor 
+promoting effect of an active component of Polyporus, 
+ergosterol and related compounds on rat urinary 
+bladder carcinogenesis in a short-term test with 
+concanavalin A. Biol. Pharm. Bull 2000; 23(11):1298–
+1302. 
+14. Shao S, Hernandez M,  Kramer JKG,  Rinker 
+DL,  Tsao R. Ergosterol profiles, fatty acid 
+composition, and antioxidant activities of button 
+mushrooms as affected by tissue part and 
+developmental stage. J Agric Food 
+Chem 2010; 58(22):11616–11625. 
+15. Dissanayake DP, Abeytunga DTU, Vasudewa NS, 
+Ratnasooriya WD. Inhibition of lipid peroxidation by 
+extracts of Pleurotus ostreatus. Phcog. Mag 2009; 
+5(19):266–271. 
+16. Sun Y,  Lin Y,  Cao X,  Xiang L, Qi J. Sterols 
+from Mytilidae show anti-aging and neuroprotective 
+effects via anti-oxidative activity. Int J Mol Sci 2014; 
+15(12):21660–21673. 
+17. Chan P, Thomas GN, Tomlinson B. Protective effects 
+of trilinolein extracted from Panax notoginseng against 
+cardiovascular disease. Acta Pharmacol Sin 2002; 
+23(12):1157–1162. 
+18. Chan P, Kao PF, Tomilson B. Cardiovascular effects of 
+trilinolein, a natural triglyceride isolated from the herb 
+sanchi (Panax notoginseng). Acta Cardio Sin 2005; 
+21:71–76. 
+19. Chou PY, Huang GJ, Pan CH, Chien YC, Chen YY, 
+Wu CH, Sheu MJ, Cheng HC. Trilinolein inhibits 
+proliferation of human non-small cell lung carcinoma 
+A549 through the modulation of PI3K/Akt pathway. 
+Amer J Chin Med 2011; 39(4):803–15. 
+20. Whelan J. The health implications of changing linoleic 
+acid intakes. Prostaglandins Leukot Essent Fatty Acids 
+2008; 79(3-5):165–167. 
+21. Ragasa CY, Lorena GS, Mandia EH, Raga DD, Shen 
+C-C. Chemical Constituents of Abrus precatorius 
+Amer J Essent Oils Nat Prod 2013; 1(2):7–10. 
+22. Ferruzzi MG, Blakeslee J. Digestion, absorption, and 
+cancer preventative activity of dietary chlorophyll 
+derivatives. Nutr Res 2007; 27:1–12. 
+23. Chan P, Thomas GN, Tomlinson B. Protective effects 
+of trilinolein extracted from Panax notoginseng against 
+cardiovascular disease. Acta Pharmacol Sin 2002; 
+23(12):1157-1162. 
+24. Whelan J. The health implications of changing linoleic 
+acid intakes. Prostaglandins Leukot Essent Fatty Acids 
+2008; 79(3-5):165-167. 
+25. Melariri P, Campbell W, Etusim P, Smith P. 
+In vitro and in vivo antimalarial activity of linolenic 
+and linoleic acids and their methyl esters. Adv Stud 
+Biol 2012; 4(7):333–349.
+ 
