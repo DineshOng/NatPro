@@ -38,7 +38,7 @@ public final class NatProDirectory {
 
 	public NatProDirectory() {
 		
-
+		//change this to the file path of directory.properties
         try (InputStream input = new FileInputStream("C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\directory.properties")) {
 
             Properties prop = new Properties();
@@ -48,7 +48,7 @@ public final class NatProDirectory {
             prop.load(input);
             props = new HashMap<String, String>();
             prop.forEach((key, value) -> props.put(key+"", value+""));
-            System.out.println(props);
+//            System.out.println(props);
 
         } catch (IOException ex) {
             ex.printStackTrace();

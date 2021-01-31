@@ -28,7 +28,7 @@ public class Tagger {
 			String bioActTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\bioact.txt";
 			String familyTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\family.txt";
 			String orgPartTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\orgpart.txt";
-			String clTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\cl.txt";
+			String clTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\cell-lines.txt";
 			String compoundClassTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\compound-class.txt";
 			String bodyPartTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\bodypart.txt";
 			String prepTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\prep.txt";
