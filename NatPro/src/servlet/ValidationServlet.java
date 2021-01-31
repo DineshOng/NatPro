@@ -44,6 +44,7 @@ import model.MedicinalPlant;
 import model.Species;
 import model.SpeciesPart;
 import model.Validation;
+import service.NatProDirectory;
 import service.OntoQuery;
 
 /**
@@ -52,14 +53,10 @@ import service.OntoQuery;
 @WebServlet({ "/ValidationServlet", "/GetPlantEntity" })
 public class ValidationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String taggedFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\TaggedBootstrap\\";
-	private static final String validationFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\validation\\";
-	private static final String owlPath = "C:\\\\\\\\Users\\\\\\\\Unknown\\\\\\\\eclipse-workspace-jee\\\\\\\\NatPro\\\\\\\\Ontology\\\\\\\\OntoNatPro.owl";
+	private static final String taggedFolder = new NatProDirectory().getProps().get("dir.boot.TaggedBootstrap");
+	private static final String validationFolder = new NatProDirectory().getProps().get("dir.validation");
+	private static final String owlPath = new NatProDirectory().getProps().get("file.ontology");
 	
-//	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
-//	private static final String validationFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
-//	private static final String owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
-
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */

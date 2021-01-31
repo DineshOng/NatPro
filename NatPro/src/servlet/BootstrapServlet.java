@@ -42,6 +42,7 @@ import net.didion.jwnl.data.Synset;
 import net.didion.jwnl.data.Word;
 import net.didion.jwnl.dictionary.Dictionary;
 import preprocessing.Tagger;
+import service.NatProDirectory;
 
 /**
  * Servlet implementation class BootstrapServlet
@@ -49,22 +50,15 @@ import preprocessing.Tagger;
 @WebServlet("/BootstrapServlet")
 public class BootstrapServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-//	private static final String taggedFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\TaggedBootstrap\\";
-//	private static final String seedsPossibleFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\SeedsPossible\\";
-//	private static final String seedOutputFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\seedOutput\\";
-//	private static final String validationFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\validation\\";
-//	private static final String englishTaggerFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\english-left3words-distsim.tagger";
-//	private static final String filePropertiesXml = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\file_properties.xml";
-//	private static final String processingTxtFile = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\\\processing.txt";
 	
-	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
-	private static final String seedsPossibleFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\SeedsPossible\\";
-	private static final String seedOutputFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\seedOutput\\";
-	private static final String validationFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\validation\\";
-	private static final String posLogsFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\POSLogs\\";
-	private static final String englishTaggerFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\english-left3words-distsim.tagger";
-	private static final String filePropertiesXml = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\file_properties.xml";
-	private static final String processingTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\processing.txt";
+	private static final String taggedFolder = new NatProDirectory().getProps().get("dir.boot.TaggedBootstrap");
+	private static final String seedsPossibleFolder = new NatProDirectory().getProps().get("dir.SeedsPossible");
+	private static final String seedOutputFolder = new NatProDirectory().getProps().get("dir.seedOutput");
+	private static final String validationFolder = new NatProDirectory().getProps().get("dir.validation");
+	private static final String posLogsFolder = new NatProDirectory().getProps().get("POSLogs");
+	private static final String englishTaggerFile = new NatProDirectory().getProps().get("dir.resources")+"\\english-left3words-distsim.tagger";
+	private static final String filePropertiesXml = new NatProDirectory().getProps().get("file.jwnl.props");
+	private static final String processingTxtFile = new NatProDirectory().getProps().get("file.pre.txt");
 
 	/**
 	 * @see HttpServlet#HttpServlet()

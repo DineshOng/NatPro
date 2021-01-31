@@ -32,8 +32,8 @@ public class REV2 {
 //	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations NEW\\validation 2nd\\";
 	
 	// 3rd run
-	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Tagged 3rd\\";
-	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Validations NEW\\validation 3rd\\";
+	private static String annFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Testing\\each\\pe\\tagged\\";
+	private static String validationFolder = "C:\\Users\\Unknown\\Documents\\GitHub\\NatPro\\BootStrapping\\Tagged Documents\\Testing\\each\\pe\\validation\\";
 		
 	public static HashSet<String> gold_rel_set;
 	private static HashMap<String, String> gold_entityType_map;
@@ -285,6 +285,7 @@ public class REV2 {
 									eval(res_rel_tp_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
 								}
 							}
+							System.out.println(ent1 + " : " + ent2 + " " + relType);
 						} //else if(!res_rel_tp_set.contains(ent1 + " : " + ent2) || !gold_rel_set.contains(ent1 + " : " + ent2)){
 							//System.out.println(ent1 + " : " + ent2 + " " + relType);
 						//}
@@ -299,7 +300,7 @@ public class REV2 {
 									eval(res_rel_map, gol_relType_map.get(ent1 + " : " + ent2), gold_entityType_map.get(ent1));
 								} else {
 									eval(res_rel_map, relType, entType1);
-									System.out.println(ent1 + " : " + ent2 + " (" + relType + ") == (" + xmlFile.getName().replaceAll("-\\w+\\.xml", "").replaceAll("-[^-]+", "") + ")");
+									System.err.println(ent1 + " : " + ent2 + " (" + relType + ") == (" + xmlFile.getName().replaceAll("-\\w+\\.xml", "").replaceAll("-[^-]+", "") + ")");
 								}
 							}
 			        		

@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 //import org.xml.sax.SAXException;
 import preprocessing.Tagger;
 import service.GenUniqueDocID;
+import service.NatProDirectory;
 import service.SaveFile;
 
 import java.io.Reader;
@@ -40,15 +41,10 @@ import javax.servlet.http.HttpServlet;
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static final String taggedFolder = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Documents\\TaggedBootstrap\\";
-	private	String uploadedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\UploadedDocuments\\";
-	private String taggedDocumentsFolderPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\Tagged\\";
-	private String processingTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Documents\\processing.txt";
-
-//	private static final String taggedFolder = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\TaggedBootstrap\\";
-//	private static String uploadedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\UploadedDocuments\\";
-//	private static String taggedDocumentsFolderPath = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\Tagged\\";
-//	private static String processingTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Documents\\processing.txt";
+	private static final String taggedFolder = new NatProDirectory().getProps().get("dir.boot.TaggedBootstrap");
+	private	String uploadedDocumentsFolderPath = new NatProDirectory().getProps().get("dir.docs");
+	private String taggedDocumentsFolderPath = new NatProDirectory().getProps().get("dir.pre.Tagged"); 
+	private String processingTxtFile = new NatProDirectory().getProps().get("file.pre.txt");
 
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {
