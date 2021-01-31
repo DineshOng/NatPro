@@ -37,8 +37,7 @@ public final class NatProDirectory {
 	}
 
 	public NatProDirectory() {
-		
-		//change this to the file path of directory.properties
+
         try (InputStream input = new FileInputStream("C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\directory.properties")) {
 
             Properties prop = new Properties();
