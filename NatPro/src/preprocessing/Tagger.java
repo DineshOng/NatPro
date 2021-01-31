@@ -27,7 +27,7 @@ public class Tagger {
 			String bioActTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bioact.txt";
 			String familyTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\family.txt";
 			String orgPartTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\orgpart.txt";
-			String clTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cl.txt";
+			String clTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\cell-lines.txt";
 			String compoundClassTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\compound-class.txt";
 			String bodyPartTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\bodypart.txt";
 			String prepTxtFile = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Resources\\prep.txt";
@@ -48,7 +48,7 @@ public class Tagger {
 //			String bioActTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\bioact.txt";
 //			String familyTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\family.txt";
 //			String orgPartTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\orgpart.txt";
-//			String clTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cl.txt";
+//			String clTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\cell-lines.txt";
 //			String compoundClassTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\compound-class.txt";
 //			String bodyPartTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\bodypart.txt";
 //			String prepTxtFile = "C:\\Users\\eduar\\Documents\\GitHub\\NatPro\\NatPro\\Resources\\prep.txt";
