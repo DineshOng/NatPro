@@ -11,6 +11,7 @@ import java.util.Properties;
 import java.util.Set;
 
 public final class NatProDirectory {
+	//change with your file path of directory.properties
 	public static final String filname = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\directory.properties";
 	public HashMap<String, String> props;
 
