@@ -87,23 +87,8 @@ public class OntoMngr {
 	private String owlPath;
 
 	public OntoMngr(String owlPath) throws OWLOntologyCreationException, OWLOntologyStorageException {
-		// loadOntology();
 		owlManager = OWLManager.createOWLOntologyManager();
-
-//		owlPath = "C:\\Users\\eduar\\Desktop\\OntoNatPro.owl";
-//		owlFile = new File("C:\\Users\\eduar\\Desktop\\OntoNatPro.owl"); // user defined
-
-		
-//		owlPath = "C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl";
-//		owlFile = new File("C:\\Users\\Unknown\\eclipse-workspace-jee\\NatPro\\Ontology\\OntoNatPro.owl");
-
-		this.owlPath = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Ontology\\\\OntoNatPro.owl";
-		owlFile = new File("C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\Ontology\\\\OntoNatPro.owl");
-		
-//		this.owlPath = owlPath;
-//		owlFile = new File(owlPath);
-		
-		// load the ontology
+		owlFile = new File(new NatProDirectory().getProps().get("file.ontology"));
 		owlOntology = owlManager.loadOntologyFromOntologyDocument(owlFile);
 		pm = new DefaultPrefixManager(base);
 		owlIRI = owlManager.getOntologyDocumentIRI(owlOntology);
@@ -111,13 +96,6 @@ public class OntoMngr {
 		datatypeString = owlFact.getOWLDatatype(OWL2Datatype.XSD_STRING.getIRI());
 
 		initializeClasses();
-
-		// addIndiv_Compound("nixon");
-		// addDataPropCompound("nixon");
-
-		// changeDataProperty(Compound.DP_Compound, "hi", "nic");
-		// removeDataPropertyValue(Compound.DP_Compound, "nixon");
-
 	}
 
 	public static String cleanString(String str) {
