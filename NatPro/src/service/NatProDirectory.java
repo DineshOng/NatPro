@@ -11,29 +11,50 @@ import java.util.Properties;
 import java.util.Set;
 
 public final class NatProDirectory {
-	//change with your file path of directory.properties
-	public static final String filname = "C:\\\\Users\\\\Unknown\\\\eclipse-workspace-jee\\\\NatPro\\\\directory.properties";
-	public HashMap<String, String> props;
-
-	public HashMap<String, String> getProps() {
-		return props;
+	// change with the file path of directory.properties in your workspace/machine
+	public static final String filname = "C:\\\\Users\\\\eduar\\\\Documents\\\\GitHub\\\\NatPro\\\\NatPro\\\\directory.properties";
+	
+//	public HashMap<String, String> props;
+//	
+//	public HashMap<String, String> getProps() {
+//		return props;
+//	}
+//
+//	public void setProps(HashMap<String, String> props) {
+//		this.props = props;
+//	}
+	
+	public String projectDir;
+	public String getProjectDir() {
+		return projectDir;
 	}
 
-	public void setProps(HashMap<String, String> props) {
-		this.props = props;
+	public void setProjectDir(String projectDir) {
+		this.projectDir = projectDir;
 	}
 
 	public NatProDirectory() {
 
-		try (InputStream input = new FileInputStream(filname)) {
+//		try (InputStream input = new FileInputStream(filname)) {
+//
+//			Properties prop = new Properties();
+//			prop.load(input);
+//			props = new HashMap<String, String>();
+//			prop.forEach((key, value) -> props.put(key + "", value + ""));
+//
+//		} catch (IOException ex) {
+//			ex.printStackTrace();
+//		}
 
+		try (InputStream input = new FileInputStream(filname)) {
 			Properties prop = new Properties();
 			prop.load(input);
-			props = new HashMap<String, String>();
-			prop.forEach((key, value) -> props.put(key + "", value + ""));
+			projectDir = prop.getProperty("dir.project");
 
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
 	}
+
+
 }

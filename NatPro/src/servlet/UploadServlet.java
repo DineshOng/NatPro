@@ -41,10 +41,10 @@ import javax.servlet.http.HttpServlet;
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static final String taggedFolder = new NatProDirectory().getProps().get("dir.boot.TaggedBootstrap");
-	private	String uploadedDocumentsFolderPath = new NatProDirectory().getProps().get("dir.docs");
-	private String taggedDocumentsFolderPath = new NatProDirectory().getProps().get("dir.pre.Tagged"); 
-	private String processingTxtFile = new NatProDirectory().getProps().get("file.pre.txt");
+	private static final String taggedFolder = new NatProDirectory().getProjectDir()+"\\Documents\\TaggedBootstrap\\";
+	private	String uploadedDocumentsFolderPath = new NatProDirectory().getProjectDir()+"\\Documents\\UploadedDocuments\\";
+	private String taggedDocumentsFolderPath = new NatProDirectory().getProjectDir()+"\\Documents\\Tagged\\";
+	private String processingTxtFile = new NatProDirectory().getProjectDir()+"\\Documents\\processing.txt";
 
 	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
 			throws ServletException, IOException {

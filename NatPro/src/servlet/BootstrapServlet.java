@@ -51,14 +51,14 @@ import service.NatProDirectory;
 public class BootstrapServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private static final String taggedFolder = new NatProDirectory().getProps().get("dir.boot.TaggedBootstrap");
-	private static final String seedsPossibleFolder = new NatProDirectory().getProps().get("dir.SeedsPossible");
-	private static final String seedOutputFolder = new NatProDirectory().getProps().get("dir.seedOutput");
-	private static final String validationFolder = new NatProDirectory().getProps().get("dir.validation");
-	private static final String posLogsFolder = new NatProDirectory().getProps().get("POSLogs");
-	private static final String englishTaggerFile = new NatProDirectory().getProps().get("dir.resources")+"\\english-left3words-distsim.tagger";
-	private static final String filePropertiesXml = new NatProDirectory().getProps().get("file.jwnl.props");
-	private static final String processingTxtFile = new NatProDirectory().getProps().get("file.pre.txt");
+	private static final String taggedFolder = new NatProDirectory().getProjectDir()+"\\Documents\\TaggedBootstrap\\";
+	private static final String seedsPossibleFolder = new NatProDirectory().getProjectDir()+"\\Documents\\SeedsPossible\\";
+	private static final String seedOutputFolder = new NatProDirectory().getProjectDir()+"\\Documents\\SeedOutput\\";
+	private static final String validationFolder = new NatProDirectory().getProjectDir()+"\\Documents\\Validation\\";
+	private static final String posLogsFolder = new NatProDirectory().getProjectDir()+"\\Documents\\POSLogs\\";
+	private static final String englishTaggerFile = new NatProDirectory().getProjectDir()+"\\Resources\\english-left3words-distsim.tagger";
+	private static final String filePropertiesXml = new NatProDirectory().getProjectDir()+"\\file_properties.xml";
+	private static final String processingTxtFile = new NatProDirectory().getProjectDir()+"\\Documents\\processing.txt";
 
 	/**
 	 * @see HttpServlet#HttpServlet()

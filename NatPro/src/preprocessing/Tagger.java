@@ -20,25 +20,45 @@ public class Tagger {
 	
 	public Tagger(String filename, String uniqueID) throws IOException, NoSuchAlgorithmException, ClassCastException, ClassNotFoundException{
 			//file paths
-			String preprocessedDocumentsFolderPath =  new NatProDirectory().getProps().get("dir.pre.Preprocessed");
-			String taggedDocumentsFolderPath =  new NatProDirectory().getProps().get("dir.pre.Tagged");
-			String taggedBootstrapFolderPath =  new NatProDirectory().getProps().get("dir.boot.TaggedBootstrap");
-			
-			String genusTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\genus.txt";
-			String bioActTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\bioact.txt";
-			String familyTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\family.txt";
-			String orgPartTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\orgpart.txt";
-			String clTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\cell-lines.txt";
-			String compoundClassTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\compound-class.txt";
-			String bodyPartTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\bodypart.txt";
-			String prepTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\prep.txt";
-			String illnessTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\illness.txt";
-			String compoundSuffixTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\compound-suffix.txt";
-			
-			String twentyKTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\google-20k.txt";
-			
-			String englishTaggerFile = new NatProDirectory().getProps().get("dir.resources")+"\\english-left3words-distsim.tagger";
-			String serializedClassifier = new NatProDirectory().getProps().get("dir.resources")+"\\english.all.3class.distsim.crf.ser.gz";
+		String preprocessedDocumentsFolderPath =  new NatProDirectory().getProjectDir()+"\\Documents\\Preprocessed\\";
+		String taggedDocumentsFolderPath =  new NatProDirectory().getProjectDir()+"\\Documents\\Tagged\\";
+		String taggedBootstrapFolderPath =  new NatProDirectory().getProjectDir()+"\\Documents\\TaggedBootstrap\\";
+		
+		String genusTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\genus.txt";
+		String bioActTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\bioact.txt";
+		String familyTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\family.txt";
+		String orgPartTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\orgpart.txt";
+		String clTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\cell-lines.txt";
+		String compoundClassTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\compound-class.txt";
+		String bodyPartTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\bodypart.txt";
+		String prepTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\prep.txt";
+		String illnessTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\illness.txt";
+		String compoundSuffixTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\compound-suffix.txt";
+		
+		String twentyKTxtFile = new NatProDirectory().getProjectDir()+"\\Resources\\google-20k.txt";
+		
+		String englishTaggerFile = new NatProDirectory().getProjectDir()+"\\Resources\\english-left3words-distsim.tagger";
+		String serializedClassifier = new NatProDirectory().getProjectDir()+"\\Resources\\english.all.3class.distsim.crf.ser.gz";
+		
+//			String preprocessedDocumentsFolderPath =  new NatProDirectory().getProps().get("dir.pre.Preprocessed");
+//			String taggedDocumentsFolderPath =  new NatProDirectory().getProps().get("dir.pre.Tagged");
+//			String taggedBootstrapFolderPath =  new NatProDirectory().getProps().get("dir.boot.TaggedBootstrap");
+//			
+//			String genusTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\genus.txt";
+//			String bioActTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\bioact.txt";
+//			String familyTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\family.txt";
+//			String orgPartTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\orgpart.txt";
+//			String clTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\cell-lines.txt";
+//			String compoundClassTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\compound-class.txt";
+//			String bodyPartTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\bodypart.txt";
+//			String prepTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\prep.txt";
+//			String illnessTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\illness.txt";
+//			String compoundSuffixTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\compound-suffix.txt";
+//			
+//			String twentyKTxtFile = new NatProDirectory().getProps().get("dir.resources")+"\\google-20k.txt";
+//			
+//			String englishTaggerFile = new NatProDirectory().getProps().get("dir.resources")+"\\english-left3words-distsim.tagger";
+//			String serializedClassifier = new NatProDirectory().getProps().get("dir.resources")+"\\english.all.3class.distsim.crf.ser.gz";
 			
         	String text = new PDFtoTXT(filename).getConvertedText();
             String cleanTxt = new TextCleaner(text).cleanText().getText();

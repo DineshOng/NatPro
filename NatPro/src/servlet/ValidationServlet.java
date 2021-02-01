@@ -53,9 +53,9 @@ import service.OntoQuery;
 @WebServlet({ "/ValidationServlet", "/GetPlantEntity" })
 public class ValidationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String taggedFolder = new NatProDirectory().getProps().get("dir.boot.TaggedBootstrap");
-	private static final String validationFolder = new NatProDirectory().getProps().get("dir.validation");
-	private static final String owlPath = new NatProDirectory().getProps().get("file.ontology");
+	private static final String taggedFolder = new NatProDirectory().getProjectDir()+"\\Documents\\TaggedBootstrap\\";
+	private static final String validationFolder = new NatProDirectory().getProjectDir()+"\\Documents\\Validation\\";
+	private static final String owlPath = new NatProDirectory().getProjectDir()+"\\Ontology\\OntoNatPro.owl";
 	
 	/**
 	 * @see HttpServlet#HttpServlet()

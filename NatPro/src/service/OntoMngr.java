@@ -88,7 +88,7 @@ public class OntoMngr {
 
 	public OntoMngr(String owlPath) throws OWLOntologyCreationException, OWLOntologyStorageException {
 		owlManager = OWLManager.createOWLOntologyManager();
-		owlFile = new File(new NatProDirectory().getProps().get("file.ontology"));
+		owlFile = new File(new NatProDirectory().getProjectDir()+"\\Ontology\\OntoNatPro.owl");
 		owlOntology = owlManager.loadOntologyFromOntologyDocument(owlFile);
 		pm = new DefaultPrefixManager(base);
 		owlIRI = owlManager.getOntologyDocumentIRI(owlOntology);
