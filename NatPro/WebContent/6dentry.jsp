@@ -697,6 +697,7 @@
 					document.getElementById("editMedPlantLogo").classList.remove("fa-check");
 					document.getElementById("editMedPlantLogo").classList.add("fa-pencil"); 
 					document.getElementById("cancelEditMedPlantBtn").style.display="none";
+					window.location.href = "ViewPlantServlet?medPlant="+newMedPlantNameVal; 
 				}else{
 					cancelEditMedPlant();
 				}
@@ -737,7 +738,8 @@
 		var newGenusVal = document.getElementById("genusInput").value;
 		var oldGenusVal = document.getElementById("genusName").innerHTML.trim();
 		var sciNameVal = document.getElementById("specieName").innerHTML.trim();
-	
+		var medPlantName = document.getElementById("medPlantName").innerHTML.trim();
+		
 		console.log(newGenusVal);
 		console.log(oldGenusVal);
  		$.ajax({
@@ -761,7 +763,7 @@
 					document.getElementById("editGenusLogo").classList.remove("fa-check");
 					document.getElementById("editGenusLogo").classList.add("fa-pencil"); 
 					document.getElementById("cancelEditGenusBtn").style.visibility="hidden";
-					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
+					window.location.href = "ViewPlantServlet?medPlant="+medPlantName; 
 				}else{
 					cancelEditGenus();
 				}
@@ -825,7 +827,7 @@
 					document.getElementById("editSpecieLogo").classList.remove("fa-check");
 					document.getElementById("editSpecieLogo").classList.add("fa-pencil"); 
 					document.getElementById("cancelEditSpecieBtn").style.display="none";
-					window.location.href = "ViewPlantServlet?medPlant=${medPlantsList.get(0).getMedicinalPlant()}"; 
+					window.location.href = "ViewPlantServlet?medPlant="+medPlantName; 
 				}else{
 					cancelEditSpecie();
 				}
